@@ -1,0 +1,68 @@
+---
+// The bar under the main navigation: upcoming deadlines (with a live countdown),
+// cost-pressure alerts and trending topics, all clickable.
+import events from '../data/events.json';
+import { categories, fmtPct } from '../data/costs';
+import { trending } from '../data/tags';
+import { getPosts } from '../data/posts';
+
+const posts = await getPosts();
+const today = new Date().toISOString().slice(0, 10);
+const upcoming = events.events.filter((e) => e.date >= today).sort((a, b) => a.date.localeCompare(b.date));
+const recent = events.events.filter((e) => e.date < today).sort((a, b) => b.date.localeCompare(a.date)).slice(0, 2);
+const hot = categories.filter((c) => c.status === 'rising-fast' || c.status === 'easing')
+  .sort((a, b) => Math.abs(b.y1) - Math.abs(a.y1)).slice(0, 4);
+const tags = trending(posts, 5);
+const short = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+---
+<div class="livebar" aria-label="What's moving in procurement">
+  <div class="wrap livebar-inner">
+    <button class="lb-arrow lb-prev" aria-label="Scroll back" hidden>‹</button>
+    <div class="lb-track">
+      {upcoming.length > 0 && <span class="lb-group">Coming up</span>}
+      {upcoming.map((e) => (
+        <a class="lb-item lb-deadline" href={e.href}>
+          <span class="lb-count" data-date={e.date}>{short(e.date)}</span>
+          <span>{e.label}</span>
+        </a>
+      ))}
+      {recent.map((e) => (
+        <a class="lb-item" href={e.href}><span class="lb-when">{short(e.date)}</span><span>{e.label}</span></a>
+      ))}
+      <span class="lb-group">Prices</span>
+      {hot.map((c) => (
+        <a class={`lb-item lb-price ${c.status}`} href={`/cost-monitor/${c.id}/`}>
+          <span>{c.name.split(' (')[0]}</span>
+          <span class="lb-move"><span aria-hidden="true">{c.y1 >= 0 ? '▲' : '▼'}</span> {fmtPct(c.y1)}<span class="sr"> over 12 months</span></span>
+        </a>
+      ))}
+      {tags.length > 0 && <span class="lb-group">Trending</span>}
+      {tags.map((t) => <a class="lb-item lb-tag" href={`/tags/${t.slug}/`}>{t.name}</a>)}
+    </div>
+    <button class="lb-arrow lb-next" aria-label="Scroll forward">›</button>
+  </div>
+</div>
+<script is:inline>
+  (() => {
+    const day = 864e5, now = new Date(); now.setHours(0, 0, 0, 0);
+    document.querySelectorAll('.lb-count').forEach((el) => {
+      const d = new Date(el.dataset.date + 'T00:00:00');
+      const n = Math.round((d - now) / day);
+      if (n > 1) el.textContent = `In ${n} days`;
+      else if (n === 1) el.textContent = 'Tomorrow';
+      else if (n === 0) el.textContent = 'Today';
+      if (n >= 0 && n <= 30) el.classList.add('soon');
+    });
+    const track = document.querySelector('.lb-track'), prev = document.querySelector('.lb-prev'), next = document.querySelector('.lb-next');
+    if (!track) return;
+    const sync = () => {
+      prev.hidden = track.scrollLeft < 8;
+      next.hidden = track.scrollLeft + track.clientWidth >= track.scrollWidth - 8;
+    };
+    prev.addEventListener('click', () => track.scrollBy({ left: -track.clientWidth * 0.8, behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: track.clientWidth * 0.8, behavior: 'smooth' }));
+    track.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    sync();
+  })();
+</script>

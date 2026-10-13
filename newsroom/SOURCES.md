@@ -45,18 +45,6 @@ Search widely each run. These are starting points, not limits. Prefer primary so
 - Company newsrooms and SEC filings (sec.gov/edgar)
 - PR Newswire / Business Wire (company announcements)
 
-## Ticker indicators (`src/data/signals.json`)
-
-Pick 4–6 you can verify with a current figure and date. Good candidates:
-- Brent crude ($/bbl) and weekly change
-- U.S. diesel (EIA weekly retail average)
-- Copper and aluminum (LME or COMEX)
-- Hot-rolled coil steel (U.S. HRC futures)
-- Drewry World Container Index ($/FEU)
-- ISM Manufacturing PMI (and Prices index)
-
-Format each item: `{ "label": "BRENT", "value": "$63.40", "change": "1.2%", "dir": "down" }`. `dir` is `up`, `down` or empty. Set `updated` to today.
-
 ## Skip
 
 Webinars, sponsored content, vendor "thought leadership", awards, minor feature updates, listicles, anything paywalled that you can't verify elsewhere.

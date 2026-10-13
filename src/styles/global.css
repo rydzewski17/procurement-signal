@@ -289,3 +289,24 @@ table.monitor { width: 100%; border-collapse: collapse; font-size: 15px; min-wid
   .posture-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 520px) { .tally { gap: 14px; flex-wrap: wrap; } .posture-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Live bar (under the main navigation) ---------- */
+.livebar { background: var(--band); border-bottom: 1px solid var(--rule); }
+.livebar-inner { position: relative; display: flex; align-items: center; }
+.lb-track { display: flex; align-items: center; gap: 8px; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none; padding: 9px 0; flex: 1; }
+.lb-track::-webkit-scrollbar { display: none; }
+.lb-group { font: 700 12px/1 var(--sans); color: var(--brand); white-space: nowrap; padding: 0 2px 0 10px; border-left: 1px solid var(--rule); }
+.lb-group:first-child { border-left: 0; padding-left: 0; }
+.lb-item { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; scroll-snap-align: start; font-size: 13.5px; background: var(--paper); border: 1px solid var(--rule); padding: 6px 10px; border-radius: 3px; color: var(--ink); }
+.lb-item:hover { border-color: var(--brand); }
+.lb-item:hover span:last-child { text-decoration: underline; text-underline-offset: 2px; }
+.lb-count, .lb-when { font-weight: 700; font-size: 12px; color: var(--muted); }
+.lb-count.soon { color: #fff; background: var(--st-hot); padding: 2px 6px; border-radius: 2px; }
+.lb-move { font-weight: 700; font-variant-numeric: tabular-nums; }
+.lb-price.rising-fast .lb-move { color: var(--st-hot); }
+.lb-price.easing .lb-move { color: var(--st-down); }
+.lb-tag { font-weight: 600; }
+.lb-arrow { flex: none; width: 30px; height: 30px; border: 1px solid var(--rule); background: var(--paper); color: var(--brand); font: 700 20px/1 var(--sans); cursor: pointer; border-radius: 50%; margin: 0 4px; }
+.lb-arrow:hover { background: var(--brand); color: #fff; }
+.lb-arrow[hidden] { display: none; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }

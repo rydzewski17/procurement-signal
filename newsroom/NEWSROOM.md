@@ -14,7 +14,7 @@ Publish the procurement stories that matter to CPOs, category managers and buyer
 4. **Research each story** from at least 2 independent sources, at least one primary where possible (government notice, company release, filing, official data).
 5. **Write each article** to the template below.
 6. **Update trackers** in `src/data/trackers/*.json` when a story adds or changes an entry. Update `updated` to today's date.
-7. **Update the ticker** in `src/data/signals.json` with 4–6 current indicators you verified this run (see SOURCES.md). If you can't verify a figure, drop it. Never guess.
+7. **Update the events bar** in `src/data/events.json`: add any new dated event a story covers (an effective date, deadline, expiry or vote) with `date` (YYYY-MM-DD), a short `label` (under 50 characters) and `href` to our story. Remove events more than 60 days old. The bar shows countdowns, price alerts and trending topics automatically.
 8. **Build to verify:** run `npm ci` (first time) then `npm run build`. Fix any errors. Never push a broken build.
 9. **Commit and push** to `main` with message `newsroom: <date> — <n> stories`. Cloudflare Pages deploys automatically.
 10. **Report:** end with a short summary listing stories published, trackers updated, and anything that failed.

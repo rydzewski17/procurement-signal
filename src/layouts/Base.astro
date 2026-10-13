@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import { SITE, TOPICS } from '../data/site';
-import signals from '../data/signals.json';
+import LiveBar from '../components/LiveBar.astro';
 
 interface Props { title?: string; description?: string; type?: 'website' | 'article'; jsonLd?: object; section?: string; }
 const { title, description = SITE.description, type = 'website', jsonLd, section } = Astro.props;
@@ -51,13 +51,7 @@ const navTopics = ['tariffs-trade', 'supplier-risk', 'commodities', 'proc-tech',
       <a href="/topics/">All topics</a>
     </div>
   </nav>
-  {signals.items.length > 0 && (
-    <div class="keydates" aria-label="Key dates">
-      <div class="wrap">
-        {signals.items.map((s) => <span><strong>{s.label}</strong>{s.value}{s.change && ` (${s.dir === 'up' ? '+' : s.dir === 'down' ? '−' : ''}${s.change})`}</span>)}
-      </div>
-    </div>
-  )}
+  <LiveBar />
   <main class="wrap"><slot /></main>
   <footer>
     <div class="wrap">
