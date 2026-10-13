@@ -1,20 +1,23 @@
 ---
-import { TOPICS, TYPE_LABEL } from '../data/site';
-import SignalDots from './SignalDots.astro';
-const { post, size = 'card' } = Astro.props;
+import { TOPICS } from '../data/site';
+const { post, size = 'river', showTopic = true } = Astro.props;
 const d = post.data;
-const date = d.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+const date = d.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+const href = `/articles/${post.id}/`;
 ---
-{size === 'mini' ? (
-  <article class="mini">
-    <div class="kicker">{TOPICS[d.topic].name}</div>
-    <h4><a href={`/articles/${post.id}/`}>{d.title}</a></h4>
+{size === 'title' ? (
+  <article><a href={href}><h4>{d.title}</h4></a></article>
+) : size === 'stack' ? (
+  <article>
+    {showTopic && <a class="topic" href={`/topics/${d.topic}/`}>{TOPICS[d.topic].name}</a>}
+    <a href={href}><h3>{d.title}</h3></a>
+    <div class="date">{date}</div>
   </article>
 ) : (
-  <article class="card">
-    <div class="kicker">{TOPICS[d.topic].name}{d.type !== 'news' && ` · ${TYPE_LABEL[d.type]}`}</div>
-    <h3><a href={`/articles/${post.id}/`}>{d.title}</a></h3>
+  <article>
+    {showTopic && <a class="topic" href={`/topics/${d.topic}/`}>{TOPICS[d.topic].name}</a>}
+    <a href={href}><h2>{d.title}</h2></a>
     <p>{d.dek}</p>
-    <div class="meta">{date} · <SignalDots level={d.signal} /></div>
+    <div class="date">{date}</div>
   </article>
 )}

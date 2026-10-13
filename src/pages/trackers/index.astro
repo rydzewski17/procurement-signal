@@ -2,19 +2,18 @@
 import Base from '../../layouts/Base.astro';
 import { trackers } from '../../data/trackers';
 ---
-<Base title="Procurement Trackers" description="Always-current trackers for tariffs, procurement technology deals, commodities and compliance deadlines.">
+<Base section="trackers" title="Procurement Trackers" description="Always-current trackers for tariffs, procurement technology deals, commodities and compliance deadlines.">
   <div class="page narrow">
     <div class="page-head">
-      <div class="kicker">Reference</div>
       <h1>Trackers</h1>
       <p>Living reference pages our newsroom keeps current. Bookmark them.</p>
     </div>
-    {trackers.map((t) => (
-      <article class="card">
-        <div class="kicker">Updated {t.updated}</div>
-        <h3><a href={`/trackers/${t.slug}/`}>{t.title}</a></h3>
+    <div class="river">{trackers.map((t) => (
+      <article>
+        <a href={`/trackers/${t.slug}/`}><h2>{t.title}</h2></a>
         <p>{t.description}</p>
+        <div class="date">Updated {t.updated}</div>
       </article>
-    ))}
+    ))}</div>
   </div>
 </Base>

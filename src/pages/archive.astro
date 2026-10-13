@@ -14,11 +14,11 @@ for (const p of posts) {
     <div class="page-head"><h1>Archive</h1><p>{posts.length} stories and counting.</p></div>
     {[...groups].map(([month, items]) => (
       <>
-        <div class="section-title">{month}</div>
+        <div class="month">{month}</div>
         {items.map((p) => (
-          <div class="data-row" style="font-family:var(--body);font-size:15px;gap:16px">
+          <div class="archive-row">
             <a href={`/articles/${p.id}/`}>{p.data.title}</a>
-            <span class="meta" style="white-space:nowrap">{TOPICS[p.data.topic].name}</span>
+            <span>{TOPICS[p.data.topic].name}</span>
           </div>
         ))}
       </>

@@ -11,13 +11,12 @@ export async function getStaticPaths() {
 const { topic, items } = Astro.props;
 const t = TOPICS[topic];
 ---
-<Base title={`${t.name} News`} description={t.blurb}>
+<Base title={`${t.name} News`} description={t.blurb} section={topic}>
   <div class="page narrow">
     <div class="page-head">
-      <div class="kicker">Topic</div>
       <h1>{t.name}</h1>
       <p>{t.blurb}</p>
     </div>
-    {items.length ? items.map((p) => <Card post={p} />) : <p class="meta" style="padding:20px 0">Coverage of this topic is coming soon.</p>}
+    <div class="river">{items.length ? items.map((p) => <Card post={p} showTopic={false} />) : <p class="meta" style="padding:20px 0">Coverage of this topic is coming soon.</p>}</div>
   </div>
 </Base>

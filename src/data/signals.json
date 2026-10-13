@@ -1,9 +1,8 @@
 {
   "updated": "2026-10-12",
   "items": [
-    { "label": "301 CHINA EXCL.", "value": "Expire Nov. 10", "change": "", "dir": "" },
-    { "label": "232 PHARMA", "value": "All importers since Sept. 29", "change": "", "dir": "" },
-    { "label": "301 FORCED LABOR", "value": "10–12.5% on 60 economies", "change": "", "dir": "" },
-    { "label": "232 METALS", "value": "Full-value basis", "change": "", "dir": "" }
+    { "label": "Nov. 10", "value": "Section 301 China exclusions expire", "change": "", "dir": "" },
+    { "label": "Sept. 29", "value": "Pharma tariff extended to all importers", "change": "", "dir": "" },
+    { "label": "In effect", "value": "Forced-labor tariffs on 60 economies", "change": "", "dir": "" }
   ]
 }

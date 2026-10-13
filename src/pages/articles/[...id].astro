@@ -1,8 +1,6 @@
 ---
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import Card from '../../components/Card.astro';
-import SignalDots from '../../components/SignalDots.astro';
 import { getPosts } from '../../data/posts';
 import { SITE, TOPICS, TYPE_LABEL } from '../../data/site';
 
@@ -16,6 +14,7 @@ const { Content } = await render(post);
 const fmt = (x: Date) => x.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 const related = posts.filter((p) => p.id !== post.id && p.data.topic === d.topic).slice(0, 4);
 const url = new URL(`/articles/${post.id}/`, Astro.site).toString();
+const enc = encodeURIComponent;
 const jsonLd = {
   '@context': 'https://schema.org', '@type': 'NewsArticle', headline: d.title, description: d.dek,
   datePublished: d.date.toISOString(), dateModified: (d.updated ?? d.date).toISOString(),
@@ -23,28 +22,33 @@ const jsonLd = {
   mainEntityOfPage: url, articleSection: TOPICS[d.topic].name, keywords: d.tags.join(', '),
 };
 ---
-<Base title={d.title} description={d.dek} type="article" jsonLd={jsonLd}>
+<Base title={d.title} description={d.dek} type="article" jsonLd={jsonLd} section={d.topic}>
   <article class="article">
-    <div class="kicker"><a href={`/topics/${d.topic}/`}>{TOPICS[d.topic].name}</a> · {TYPE_LABEL[d.type]}</div>
+    <div class="crumbs"><a href={`/topics/${d.topic}/`}>{TOPICS[d.topic].name}</a>{d.type !== 'news' && <>&ensp;/&ensp;{TYPE_LABEL[d.type]}</>}</div>
     <h1>{d.title}</h1>
     <p class="dek">{d.dek}</p>
     <div class="byline">
-      <span>By <strong>{d.author}</strong></span>
-      <span>{fmt(d.date)}</span>
-      {d.updated && <span>Updated {fmt(d.updated)}</span>}
-      <span>Signal <SignalDots level={d.signal} /></span>
+      <div>
+        <div class="who">By {d.author}</div>
+        <div class="when">Published {fmt(d.date)}{d.updated && <>. Updated {fmt(d.updated)}</>}</div>
+      </div>
+      <div class="share">
+        <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${enc(url)}`} target="_blank" rel="noopener">Share on LinkedIn</a>
+        <a href={`mailto:?subject=${enc(d.title)}&body=${enc(url)}`}>Email</a>
+      </div>
     </div>
     <div class="prose"><Content /></div>
     <section class="sources">
-      <h3>Sources</h3>
+      <h2>Sources</h2>
       <ol>{d.sources.map((s) => <li><a href={s.url} rel="noopener" target="_blank">{s.name}</a></li>)}</ol>
     </section>
-    {d.tags.length > 0 && <div class="tags">{d.tags.map((t) => <span class="tag">{t}</span>)}</div>}
     {related.length > 0 && (
-      <>
-        <div class="section-title">More in {TOPICS[d.topic].name}</div>
-        {related.map((p) => <Card post={p} />)}
-      </>
+      <section class="related">
+        <div class="block-head">More on {TOPICS[d.topic].name.toLowerCase()}</div>
+        {related.map((p) => (
+          <article><a href={`/articles/${p.id}/`}><h3>{p.data.title}</h3></a><div class="date">{fmt(p.data.date)}</div></article>
+        ))}
+      </section>
     )}
   </article>
 </Base>
