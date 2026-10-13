@@ -32,7 +32,10 @@ topic: tariffs-trade   # tariffs-trade | supplier-risk | proc-tech | commodities
 type: news             # news | signal | analysis
 signal: 4              # 1-5
 featured: false        # true only for the single most important story of the day
-tags: ["tariffs", "steel", "Section 232"]
+keyfacts:              # 2-4 key figures shown as a band at the top of the story. Short values, verified.
+  - value: "178"
+    label: "product exclusions still in force"
+tags: ["..."]          # 3-6 tags. Reuse existing tag names exactly (check recent articles) so tag pages and Trending topics group well.
 sources:
   - name: "Publisher — Article or document title"
     url: "https://..."
@@ -56,6 +59,10 @@ sources:
 ```
 
 Length: 450–800 words for news, 700–1,200 for signal reports and analysis.
+
+## Images
+
+Leave `image` out. The site draws original topic artwork for every story automatically. Only add an `image` if you have a photo that is clearly public domain or officially provided for press use (e.g., a U.S. government photo), with `src`, `alt` and `credit`. Never use copyrighted news or stock photos.
 
 ## Voice and style
 

@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import Card from '../../components/Card.astro';
+import Trending from '../../components/Trending.astro';
+import { getPosts } from '../../data/posts';
+import { slugify } from '../../data/tags';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  const tags = new Map<string, string>();
+  posts.forEach((p) => p.data.tags.forEach((t) => tags.set(slugify(t), t)));
+  return [...tags].map(([tag, name]) => ({ params: { tag }, props: { name, posts, items: posts.filter((p) => p.data.tags.some((t) => slugify(t) === tag)) } }));
+}
+const { name, items, posts } = Astro.props;
+---
+<Base title={`${name}: latest news and analysis`} description={`Procurement news and analysis on ${name}.`}>
+  <div class="page">
+    <div class="page-head narrow">
+      <div class="crumbs"><a href="/topics/">Topics</a></div>
+      <h1>{name}</h1>
+      <p>{items.length} {items.length === 1 ? 'story' : 'stories'} from our newsroom.</p>
+    </div>
+    <div class="with-rail">
+      <div class="river">{items.map((p) => <Card post={p} />)}</div>
+      <aside class="side"><Trending posts={posts} title="Other trending topics" /></aside>
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,10 @@
+---
+const { facts = [] } = Astro.props;
+---
+{facts.length > 0 && (
+  <dl class="keyfacts" style={`--n:${facts.length}`}>
+    {facts.map((f: { value: string; label: string }) => (
+      <div><dt>{f.value}</dt><dd>{f.label}</dd></div>
+    ))}
+  </dl>
+)}

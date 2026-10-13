@@ -1,22 +1,38 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Card from '../../components/Card.astro';
+import TopicArt from '../../components/TopicArt.astro';
+import Trending from '../../components/Trending.astro';
+import BrowseTopics from '../../components/BrowseTopics.astro';
 import { getPosts } from '../../data/posts';
 import { TOPICS } from '../../data/site';
 
 export async function getStaticPaths() {
   const posts = await getPosts();
-  return Object.keys(TOPICS).map((topic) => ({ params: { topic }, props: { topic, items: posts.filter((p) => p.data.topic === topic) } }));
+  return Object.keys(TOPICS).map((topic) => ({ params: { topic }, props: { topic, posts, items: posts.filter((p) => p.data.topic === topic) } }));
 }
-const { topic, items } = Astro.props;
+const { topic, items, posts } = Astro.props;
 const t = TOPICS[topic];
+const elsewhere = posts.filter((p) => p.data.topic !== topic).slice(0, 5);
 ---
 <Base title={`${t.name} News`} description={t.blurb} section={topic}>
-  <div class="page narrow">
-    <div class="page-head">
+  <div class="topic-hero">
+    <div>
+      <div class="crumbs"><a href="/topics/">Topics</a></div>
       <h1>{t.name}</h1>
       <p>{t.blurb}</p>
     </div>
-    <div class="river">{items.length ? items.map((p) => <Card post={p} showTopic={false} />) : <p class="meta" style="padding:20px 0">Coverage of this topic is coming soon.</p>}</div>
+    <TopicArt topic={topic} seed={`topic-${topic}`} ratio="card" label={t.name} />
   </div>
+  <div class="with-rail">
+    <div class="river">
+      {items.length ? items.map((p) => <Card post={p} showTopic={false} />) : <p class="meta" style="padding:20px 0">Our newsroom hasn't published on this topic yet. Stories appear here as soon as they do.</p>}
+    </div>
+    <aside class="side">
+      <h2 class="block-head">Elsewhere in the news</h2>
+      {elsewhere.map((p) => <Card post={p} size="thumb" />)}
+    </aside>
+  </div>
+  <Trending posts={posts} />
+  <BrowseTopics posts={posts} current={topic} />
 </Base>

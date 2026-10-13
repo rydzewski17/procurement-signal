@@ -6,6 +6,15 @@ topic: tariffs-trade
 type: news
 signal: 5
 featured: true
+keyfacts:
+  - value: "178"
+    label: "product exclusions still in force"
+  - value: "Nov. 10"
+    label: "first day the duty returns"
+  - value: "~25%"
+    label: "typical Section 301 rate on Lists 1–3"
+  - value: "0"
+    label: "days of grace for goods in transit"
 tags: ["Section 301", "China", "tariff exclusions", "USTR", "landed cost"]
 sources:
   - name: "USTR — USTR Extends Exclusions from China Section 301 Tariffs (Nov. 26, 2025)"

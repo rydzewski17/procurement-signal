@@ -1,23 +1,45 @@
 ---
 import { TOPICS } from '../data/site';
+import Media from './Media.astro';
 const { post, size = 'river', showTopic = true } = Astro.props;
 const d = post.data;
 const date = d.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 const href = `/articles/${post.id}/`;
+const topicName = TOPICS[d.topic].name;
+const topicHref = `/topics/${d.topic}/`;
 ---
 {size === 'title' ? (
   <article><a href={href}><h4>{d.title}</h4></a></article>
 ) : size === 'stack' ? (
   <article>
-    {showTopic && <a class="topic" href={`/topics/${d.topic}/`}>{TOPICS[d.topic].name}</a>}
+    {showTopic && <a class="topic" href={topicHref}>{topicName}</a>}
     <a href={href}><h3>{d.title}</h3></a>
     <div class="date">{date}</div>
   </article>
-) : (
-  <article>
-    {showTopic && <a class="topic" href={`/topics/${d.topic}/`}>{TOPICS[d.topic].name}</a>}
-    <a href={href}><h2>{d.title}</h2></a>
+) : size === 'feature' ? (
+  <article class="feature">
+    <a href={href} tabindex="-1" aria-hidden="true"><Media post={post} ratio="card" /></a>
+    {showTopic && <a class="topic" href={topicHref}>{topicName}</a>}
+    <a href={href}><h3>{d.title}</h3></a>
     <p>{d.dek}</p>
-    <div class="date">{date}</div>
+  </article>
+) : size === 'thumb' ? (
+  <article class="thumb">
+    <a href={href} tabindex="-1" aria-hidden="true"><Media post={post} ratio="square" /></a>
+    <div>
+      {showTopic && <a class="topic" href={topicHref}>{topicName}</a>}
+      <a href={href}><h4>{d.title}</h4></a>
+      <div class="date">{date}</div>
+    </div>
+  </article>
+) : (
+  <article class="river-item">
+    <div>
+      {showTopic && <a class="topic" href={topicHref}>{topicName}</a>}
+      <a href={href}><h2>{d.title}</h2></a>
+      <p>{d.dek}</p>
+      <div class="date">{date}</div>
+    </div>
+    <a href={href} tabindex="-1" aria-hidden="true"><Media post={post} ratio="card" /></a>
   </article>
 )}

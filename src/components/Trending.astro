@@ -1,0 +1,11 @@
+---
+import { trending } from '../data/tags';
+const { posts, title = 'Trending topics' } = Astro.props;
+const tags = trending(posts, 12);
+---
+{tags.length > 0 && (
+  <nav class="trending" aria-label={title}>
+    <span class="trending-label">{title}</span>
+    {tags.map((t) => <a href={`/tags/${t.slug}/`}>{t.name}</a>)}
+  </nav>
+)}

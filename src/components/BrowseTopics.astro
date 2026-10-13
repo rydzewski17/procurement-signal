@@ -1,0 +1,18 @@
+---
+import TopicArt from './TopicArt.astro';
+import { TOPICS } from '../data/site';
+const { posts, current } = Astro.props;
+const counts = Object.fromEntries(Object.keys(TOPICS).map((t) => [t, posts.filter((p: any) => p.data.topic === t).length]));
+---
+<section class="browse" aria-label="Browse by topic">
+  <div class="block-head">Browse by topic</div>
+  <div class="browse-grid">
+    {Object.entries(TOPICS).filter(([k]) => k !== current).map(([k, t]) => (
+      <a href={`/topics/${k}/`} class="browse-card">
+        <TopicArt topic={k} seed={`topic-${k}`} ratio="card" label={t.name} />
+        <span class="browse-name">{t.name}</span>
+        <span class="browse-count">{counts[k] ? `${counts[k]} ${counts[k] === 1 ? 'story' : 'stories'}` : 'Coming soon'}</span>
+      </a>
+    ))}
+  </div>
+</section>

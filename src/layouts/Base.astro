@@ -47,6 +47,7 @@ const navTopics = ['tariffs-trade', 'supplier-risk', 'commodities', 'proc-tech',
       <a href="/" aria-current={section === 'home' ? 'page' : undefined}>Latest</a>
       {navTopics.map((t) => <a href={`/topics/${t}/`} aria-current={section === t ? 'page' : undefined}>{TOPICS[t].name}</a>)}
       <a href="/trackers/" aria-current={section === 'trackers' ? 'page' : undefined}>Trackers</a>
+      <a href="/topics/">All topics</a>
     </div>
   </nav>
   {signals.items.length > 0 && (

@@ -5,6 +5,15 @@ date: 2026-10-12
 topic: tariffs-trade
 type: analysis
 signal: 4
+keyfacts:
+  - value: "60"
+    label: "economies covered"
+  - value: "10%"
+    label: "rate where import bans exist"
+  - value: "12.5%"
+    label: "rate for China, Vietnam and 36 more"
+  - value: "July 24"
+    label: "effective date"
 tags: ["Section 301", "forced labor", "Section 122", "tariff stack", "sourcing strategy"]
 sources:
   - name: "Holland & Knight — New Section 301 Forced-Labor Tariffs Imposed on 60 Countries"

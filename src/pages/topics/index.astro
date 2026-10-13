@@ -1,0 +1,14 @@
+---
+import Base from '../../layouts/Base.astro';
+import BrowseTopics from '../../components/BrowseTopics.astro';
+import Trending from '../../components/Trending.astro';
+import { getPosts } from '../../data/posts';
+const posts = await getPosts();
+---
+<Base title="All topics" description="Browse Procurement Signal coverage by topic.">
+  <div class="page">
+    <div class="page-head narrow"><h1>Topics</h1><p>Every beat we cover, plus the subjects trending in this month's coverage.</p></div>
+    <Trending posts={posts} />
+    <BrowseTopics posts={posts} />
+  </div>
+</Base>

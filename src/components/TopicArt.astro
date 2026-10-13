@@ -1,0 +1,108 @@
+---
+// Original illustrated artwork for each topic. A seed (the article id) varies
+// colors and composition so no two stories share the exact same image.
+interface Props { topic: string; seed?: string; ratio?: 'wide' | 'card' | 'square'; label?: string; }
+const { topic, seed = topic, ratio = 'wide', label } = Astro.props;
+
+let h = 2166136261;
+for (const c of seed) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); }
+const rand = () => { h ^= h << 13; h ^= h >>> 17; h ^= h << 5; return ((h >>> 0) % 1000) / 1000; };
+
+const palettes = [
+  { bg: '#0d2b4e', a: '#2f6db5', b: '#9fc0e6', c: '#e8b65a', d: '#f4f1ea' },
+  { bg: '#1f3a33', a: '#3f8a73', b: '#a9d3c2', c: '#e9c46a', d: '#f2f0e8' },
+  { bg: '#3a2c4a', a: '#7a5ea8', b: '#c6b5e3', c: '#f0a868', d: '#f5f1ea' },
+  { bg: '#2d3640', a: '#5b7a99', b: '#b7c7d8', c: '#e07a5f', d: '#f3f2ee' },
+  { bg: '#47331f', a: '#a8743b', b: '#e3c79c', c: '#6fa3c7', d: '#f6f1e8' },
+];
+const p = palettes[Math.floor(rand() * palettes.length)];
+const W = 800, H = ratio === 'square' ? 800 : ratio === 'card' ? 450 : 420;
+const r = (min: number, max: number) => min + rand() * (max - min);
+const pick = (arr: string[]) => arr[Math.floor(rand() * arr.length)];
+const fills = [p.a, p.b, p.c, p.d];
+
+let shapes = '';
+if (topic === 'tariffs-trade') {
+  // Stacked shipping containers on a quay
+  const cw = 150, ch = 62, rows = 4, x0 = r(40, 120);
+  for (let row = 0; row < rows; row++) {
+    const cols = 5 - (row > 1 ? Math.floor(rand() * 2) + 1 : 0);
+    for (let col = 0; col < cols; col++) {
+      if (rand() < 0.12) continue;
+      const x = x0 + col * (cw + 6) + (row % 2) * 30, y = H - 70 - (row + 1) * (ch + 6);
+      const f = pick(fills);
+      shapes += `<rect x="${x}" y="${y}" width="${cw}" height="${ch}" fill="${f}"/>`;
+      for (let k = 1; k < 9; k++) shapes += `<rect x="${x + k * (cw / 9)}" y="${y + 6}" width="3" height="${ch - 12}" fill="${p.bg}" opacity=".18"/>`;
+    }
+  }
+  shapes += `<rect x="0" y="${H - 70}" width="${W}" height="70" fill="${p.bg}" opacity=".6"/>`;
+  shapes += `<rect x="${r(560, 660)}" y="40" width="14" height="${H - 110}" fill="${p.d}"/><rect x="${r(380, 480)}" y="40" width="${300}" height="12" fill="${p.d}"/>`;
+} else if (topic === 'commodities') {
+  // Bars with a price line
+  const n = 14, bw = W / n;
+  let path = '';
+  let v = r(0.3, 0.6);
+  for (let i = 0; i < n; i++) {
+    v = Math.min(0.9, Math.max(0.15, v + r(-0.12, 0.14)));
+    const bh = v * (H - 120);
+    shapes += `<rect x="${i * bw + 8}" y="${H - 40 - bh}" width="${bw - 16}" height="${bh}" fill="${i % 3 === 0 ? p.a : p.b}" opacity=".85"/>`;
+    path += `${i ? 'L' : 'M'}${i * bw + bw / 2},${H - 70 - bh}`;
+  }
+  shapes += `<path d="${path}" stroke="${p.c}" stroke-width="7" fill="none" stroke-linejoin="round"/>`;
+  for (let g = 1; g < 5; g++) shapes += `<line x1="0" x2="${W}" y1="${g * H / 5}" y2="${g * H / 5}" stroke="${p.d}" opacity=".12"/>`;
+} else if (topic === 'supplier-risk') {
+  // Supply network with one broken link
+  const nodes = Array.from({ length: 9 }, () => [r(60, W - 60), r(60, H - 60)]);
+  nodes.forEach((n, i) => nodes.forEach((m, j) => {
+    if (j > i && Math.hypot(n[0] - m[0], n[1] - m[1]) < 330) shapes += `<line x1="${n[0]}" y1="${n[1]}" x2="${m[0]}" y2="${m[1]}" stroke="${p.b}" stroke-width="4" opacity=".6"/>`;
+  }));
+  const [bx, by] = nodes[0];
+  shapes += `<line x1="${bx}" y1="${by}" x2="${bx + 140}" y2="${by + 40}" stroke="${p.c}" stroke-width="6" stroke-dasharray="14 12"/>`;
+  nodes.forEach((n, i) => shapes += `<circle cx="${n[0]}" cy="${n[1]}" r="${i === 0 ? 34 : r(14, 26)}" fill="${i === 0 ? p.c : pick([p.a, p.d, p.b])}"/>`);
+} else if (topic === 'proc-tech') {
+  // Interface grid / dashboard tiles
+  const cols = 4, rows = 3, gw = (W - 100) / cols, gh = (H - 80) / rows;
+  for (let i = 0; i < cols; i++) for (let j = 0; j < rows; j++) {
+    if (rand() < 0.2) continue;
+    const x = 50 + i * gw, y = 40 + j * gh, f = pick(fills);
+    shapes += `<rect x="${x}" y="${y}" width="${gw - 16}" height="${gh - 16}" rx="6" fill="${f}" opacity="${f === p.d ? .9 : .8}"/>`;
+    shapes += `<rect x="${x + 16}" y="${y + 18}" width="${r(40, gw - 60)}" height="8" fill="${p.bg}" opacity=".35"/>`;
+    shapes += `<rect x="${x + 16}" y="${y + 36}" width="${r(30, gw - 80)}" height="8" fill="${p.bg}" opacity=".2"/>`;
+  }
+} else if (topic === 'ai-procurement') {
+  // Layered neural network
+  const layers = [3, 5, 5, 2], gap = (W - 160) / (layers.length - 1);
+  const pts = layers.map((n, li) => Array.from({ length: n }, (_, k) => [80 + li * gap, (H / (n + 1)) * (k + 1)]));
+  for (let li = 0; li < pts.length - 1; li++) for (const a of pts[li]) for (const b of pts[li + 1])
+    shapes += `<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="${rand() < .25 ? p.c : p.b}" stroke-width="${rand() < .25 ? 4 : 2}" opacity=".55"/>`;
+  pts.flat().forEach(([x, y]) => shapes += `<circle cx="${x}" cy="${y}" r="20" fill="${pick([p.a, p.d, p.c])}"/>`);
+} else if (topic === 'public-sector') {
+  // Civic building with columns
+  const cx = r(300, 500), bw = 420, cols = 6, base = H - 50;
+  shapes += `<polygon points="${cx - bw / 2 - 20},${base - 230} ${cx},${base - 320} ${cx + bw / 2 + 20},${base - 230}" fill="${p.d}"/>`;
+  shapes += `<rect x="${cx - bw / 2 - 20}" y="${base - 230}" width="${bw + 40}" height="22" fill="${p.b}"/>`;
+  for (let i = 0; i < cols; i++) shapes += `<rect x="${cx - bw / 2 + 12 + i * (bw / cols)}" y="${base - 200}" width="26" height="170" fill="${p.d}"/>`;
+  shapes += `<rect x="${cx - bw / 2 - 40}" y="${base - 30}" width="${bw + 80}" height="30" fill="${p.b}"/>`;
+  shapes += `<circle cx="${r(80, 160)}" cy="${r(70, 120)}" r="40" fill="${p.c}"/>`;
+} else if (topic === 'esg-regulation') {
+  // Leaf over a document with check marks
+  const x = r(120, 220);
+  shapes += `<rect x="${x}" y="50" width="300" height="${H - 100}" fill="${p.d}"/>`;
+  for (let i = 0; i < 5; i++) {
+    shapes += `<path d="M${x + 30},${100 + i * 52} l12,12 l22,-24" stroke="${p.a}" stroke-width="7" fill="none"/>`;
+    shapes += `<rect x="${x + 80}" y="${98 + i * 52}" width="${r(110, 180)}" height="10" fill="${p.bg}" opacity=".3"/>`;
+  }
+  const lx = x + 420, ly = H / 2;
+  shapes += `<path d="M${lx},${ly + 120} C${lx - 120},${ly} ${lx - 40},${ly - 140} ${lx + 120},${ly - 150} C${lx + 140},${ly} ${lx + 80},${ly + 100} ${lx},${ly + 120}Z" fill="${p.a}"/>`;
+  shapes += `<path d="M${lx},${ly + 120} Q${lx + 40},${ly} ${lx + 110},${ly - 140}" stroke="${p.d}" stroke-width="5" fill="none"/>`;
+} else {
+  // People: abstract figures
+  for (let i = 0; i < 6; i++) {
+    const x = 90 + i * 120 + r(-15, 15), s = r(0.8, 1.15), f = pick([p.a, p.b, p.d, p.c]);
+    shapes += `<circle cx="${x}" cy="${H - 230 * s}" r="${36 * s}" fill="${f}"/>`;
+    shapes += `<path d="M${x - 60 * s},${H} Q${x - 60 * s},${H - 170 * s} ${x},${H - 175 * s} Q${x + 60 * s},${H - 170 * s} ${x + 60 * s},${H}Z" fill="${f}"/>`;
+  }
+}
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${label ?? 'Illustration'}"><rect width="${W}" height="${H}" fill="${p.bg}"/>${shapes}</svg>`;
+---
+<div class={`art art-${ratio}`} set:html={svg} />

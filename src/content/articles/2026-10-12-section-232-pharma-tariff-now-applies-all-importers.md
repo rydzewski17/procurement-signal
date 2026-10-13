@@ -5,6 +5,15 @@ date: 2026-10-12
 topic: tariffs-trade
 type: news
 signal: 4
+keyfacts:
+  - value: "100%"
+    label: "default duty on patented drugs and APIs"
+  - value: "15%"
+    label: "rate for EU, Japan, Korea, Switzerland"
+  - value: "Sept. 29"
+    label: "phase-in reached all importers"
+  - value: "0%"
+    label: "generics and biosimilars, for now"
 tags: ["Section 232", "pharmaceuticals", "API", "healthcare procurement"]
 sources:
   - name: "Baker Donelson — Trump Overhauls Section 232 Tariffs: What Metals and Pharmaceutical Importers Need to Know"

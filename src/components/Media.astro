@@ -1,0 +1,16 @@
+---
+import TopicArt from './TopicArt.astro';
+const { post, ratio = 'card', caption = false } = Astro.props;
+const d = post.data;
+---
+{d.image ? (
+  <figure class={`media media-${ratio}`}>
+    <img src={d.image.src} alt={d.image.alt} loading="lazy" />
+    {caption && <figcaption>{d.image.alt}. <span>{d.image.credit}</span></figcaption>}
+  </figure>
+) : (
+  <figure class={`media media-${ratio}`}>
+    <TopicArt topic={d.topic} seed={post.id} ratio={ratio} label={`Illustration for ${d.title}`} />
+    {caption && <figcaption><span>Illustration: Procurement Signal</span></figcaption>}
+  </figure>
+)}

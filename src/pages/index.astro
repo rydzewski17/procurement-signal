@@ -1,6 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 import Card from '../components/Card.astro';
+import Media from '../components/Media.astro';
+import Trending from '../components/Trending.astro';
+import BrowseTopics from '../components/BrowseTopics.astro';
 import { getPosts } from '../data/posts';
 import { SITE, TOPICS } from '../data/site';
 import { trackers } from '../data/trackers';
@@ -10,8 +13,9 @@ const cutoff = posts[0] ? posts[0].data.date.valueOf() - 3 * 864e5 : 0;
 const pool = posts.slice(0, 30).filter((p) => p.data.date.valueOf() >= cutoff);
 const lead = pool.find((p) => p.data.featured) ?? [...pool].sort((a, b) => b.data.signal - a.data.signal)[0];
 const rest = posts.filter((p) => p !== lead);
-const stack = rest.slice(0, 6);
-const more = rest.slice(6, 14);
+const stack = rest.slice(0, 5);
+const analysis = posts.filter((p) => p.data.type !== 'news' && p !== lead).slice(0, 3);
+const more = rest.slice(5, 13);
 const byTopic = Object.keys(TOPICS)
   .map((t) => ({ t, items: posts.filter((p) => p.data.topic === t && p !== lead).slice(0, 4) }))
   .filter((g) => g.items.length);
@@ -22,8 +26,10 @@ const jsonLd = { '@context': 'https://schema.org', '@type': 'NewsMediaOrganizati
 <Base jsonLd={jsonLd} section="home">
   {!lead ? <p style="padding:40px 0">The first stories publish shortly.</p> : (
   <>
+    <Trending posts={posts} />
     <div class="front">
       <section class="lead" aria-label="Top story">
+        <a href={`/articles/${lead.id}/`} tabindex="-1" aria-hidden="true"><Media post={lead} ratio="wide" /></a>
         <a class="topic" href={`/topics/${lead.data.topic}/`}>{TOPICS[lead.data.topic].name}</a>
         <a href={`/articles/${lead.id}/`}><h2>{lead.data.title}</h2></a>
         <p class="dek">{lead.data.dek}</p>
@@ -31,13 +37,14 @@ const jsonLd = { '@context': 'https://schema.org', '@type': 'NewsMediaOrganizati
         {leadWhy && <div class="summary"><strong>Why it matters</strong>{leadWhy}</div>}
       </section>
       <section class="stack" aria-label="Latest stories">
-        {stack.map((p) => <Card post={p} size="stack" />)}
+        <h2 class="block-head">Latest</h2>
+        {stack.map((p) => <Card post={p} size="thumb" />)}
       </section>
       <aside class="rail">
         <div>
           <h2>Trackers</h2>
           <ul class="linklist">
-            {trackers.map((t) => <li><a href={`/trackers/${t.slug}/`}>{t.title}</a></li>)}
+            {trackers.map((t) => <li><a href={`/trackers/${t.slug}/`}>{t.title}</a><span class="date">Updated {t.updated}</span></li>)}
           </ul>
         </div>
         <div class="signup">
@@ -53,14 +60,25 @@ const jsonLd = { '@context': 'https://schema.org', '@type': 'NewsMediaOrganizati
         )}
       </aside>
     </div>
+
+    {analysis.length > 0 && (
+      <section class="band" aria-label="Analysis and signal reports">
+        <div class="block-head">Analysis and signal reports</div>
+        <div class="feature-row">{analysis.map((p) => <Card post={p} size="feature" />)}</div>
+      </section>
+    )}
+
     <div class="sections">
       {byTopic.map(({ t, items }) => (
         <section>
-          <div class="block-head"><a href={`/topics/${t}/`} style="color:var(--brand);font-size:15px;font-weight:700">{TOPICS[t].name}</a><a href={`/topics/${t}/`}>See all</a></div>
-          {items.map((p) => <Card post={p} size="title" />)}
+          <div class="block-head"><a href={`/topics/${t}/`} class="block-title">{TOPICS[t].name}</a><a href={`/topics/${t}/`}>See all</a></div>
+          <Card post={items[0]} size="feature" showTopic={false} />
+          {items.slice(1).map((p) => <Card post={p} size="title" />)}
         </section>
       ))}
     </div>
+
+    <BrowseTopics posts={posts} />
   </>
   )}
 </Base>

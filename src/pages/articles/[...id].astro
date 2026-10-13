@@ -1,7 +1,14 @@
 ---
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import Card from '../../components/Card.astro';
+import Media from '../../components/Media.astro';
+import KeyFacts from '../../components/KeyFacts.astro';
+import Trending from '../../components/Trending.astro';
+import BrowseTopics from '../../components/BrowseTopics.astro';
 import { getPosts } from '../../data/posts';
+import { slugify } from '../../data/tags';
+import { trackers } from '../../data/trackers';
 import { SITE, TOPICS, TYPE_LABEL } from '../../data/site';
 
 export async function getStaticPaths() {
@@ -12,7 +19,15 @@ const { post, posts } = Astro.props;
 const d = post.data;
 const { Content } = await render(post);
 const fmt = (x: Date) => x.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-const related = posts.filter((p) => p.id !== post.id && p.data.topic === d.topic).slice(0, 4);
+
+// Read next: score other stories by shared tags, same topic and recency.
+const myTags = new Set(d.tags.map(slugify));
+const scored = posts.filter((p) => p.id !== post.id).map((p) => ({
+  p, s: p.data.tags.filter((t) => myTags.has(slugify(t))).length * 3 + (p.data.topic === d.topic ? 2 : 0) + p.data.signal / 5,
+})).sort((a, b) => b.s - a.s);
+const readNext = scored.slice(0, 3).map((x) => x.p);
+const latest = posts.filter((p) => p.id !== post.id && !readNext.includes(p)).slice(0, 5);
+
 const url = new URL(`/articles/${post.id}/`, Astro.site).toString();
 const enc = encodeURIComponent;
 const jsonLd = {
@@ -23,32 +38,54 @@ const jsonLd = {
 };
 ---
 <Base title={d.title} description={d.dek} type="article" jsonLd={jsonLd} section={d.topic}>
-  <article class="article">
-    <div class="crumbs"><a href={`/topics/${d.topic}/`}>{TOPICS[d.topic].name}</a>{d.type !== 'news' && <>&ensp;/&ensp;{TYPE_LABEL[d.type]}</>}</div>
-    <h1>{d.title}</h1>
-    <p class="dek">{d.dek}</p>
-    <div class="byline">
-      <div>
-        <div class="who">By {d.author}</div>
-        <div class="when">Published {fmt(d.date)}{d.updated && <>. Updated {fmt(d.updated)}</>}</div>
+  <div class="article-layout">
+    <article class="article">
+      <div class="crumbs"><a href={`/topics/${d.topic}/`}>{TOPICS[d.topic].name}</a>{d.type !== 'news' && <>&ensp;/&ensp;{TYPE_LABEL[d.type]}</>}</div>
+      <h1>{d.title}</h1>
+      <p class="dek">{d.dek}</p>
+      <div class="byline">
+        <div>
+          <div class="who">By {d.author}</div>
+          <div class="when">Published {fmt(d.date)}{d.updated && <>. Updated {fmt(d.updated)}</>}</div>
+        </div>
+        <div class="share">
+          <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${enc(url)}`} target="_blank" rel="noopener">Share on LinkedIn</a>
+          <a href={`mailto:?subject=${enc(d.title)}&body=${enc(url)}`}>Email</a>
+        </div>
       </div>
-      <div class="share">
-        <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${enc(url)}`} target="_blank" rel="noopener">Share on LinkedIn</a>
-        <a href={`mailto:?subject=${enc(d.title)}&body=${enc(url)}`}>Email</a>
-      </div>
-    </div>
-    <div class="prose"><Content /></div>
-    <section class="sources">
-      <h2>Sources</h2>
-      <ol>{d.sources.map((s) => <li><a href={s.url} rel="noopener" target="_blank">{s.name}</a></li>)}</ol>
-    </section>
-    {related.length > 0 && (
-      <section class="related">
-        <div class="block-head">More on {TOPICS[d.topic].name.toLowerCase()}</div>
-        {related.map((p) => (
-          <article><a href={`/articles/${p.id}/`}><h3>{p.data.title}</h3></a><div class="date">{fmt(p.data.date)}</div></article>
-        ))}
+      <Media post={post} ratio="wide" caption />
+      <KeyFacts facts={d.keyfacts} />
+      <div class="prose"><Content /></div>
+
+      {d.tags.length > 0 && (
+        <div class="tagline">
+          <span>Topics in this story</span>
+          {d.tags.map((t) => <a href={`/tags/${slugify(t)}/`}>{t}</a>)}
+        </div>
+      )}
+
+      <section class="sources">
+        <h2>Sources</h2>
+        <ol>{d.sources.map((s) => <li><a href={s.url} rel="noopener" target="_blank">{s.name}</a></li>)}</ol>
       </section>
-    )}
-  </article>
+    </article>
+
+    <aside class="side">
+      <div class="sticky">
+        <h2 class="block-head">Latest headlines</h2>
+        {latest.map((p) => <Card post={p} size="thumb" />)}
+        <h2 class="block-head" style="margin-top:28px">Trackers</h2>
+        <ul class="linklist">{trackers.map((t) => <li><a href={`/trackers/${t.slug}/`}>{t.title}</a></li>)}</ul>
+      </div>
+    </aside>
+  </div>
+
+  {readNext.length > 0 && (
+    <section class="band" aria-label="Read next">
+      <div class="block-head">Read next</div>
+      <div class="feature-row">{readNext.map((p) => <Card post={p} size="feature" />)}</div>
+    </section>
+  )}
+  <Trending posts={posts} />
+  <BrowseTopics posts={posts} current={d.topic} />
 </Base>
