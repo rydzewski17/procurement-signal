@@ -53,7 +53,7 @@ const jsonLd = {
           <a href={`mailto:?subject=${enc(d.title)}&body=${enc(url)}`}>Email</a>
         </div>
       </div>
-      <Media post={post} ratio="wide" caption />
+      <Media post={post} ratio="wide" caption eager />
       <KeyFacts facts={d.keyfacts} />
       <div class="prose"><Content /></div>
 

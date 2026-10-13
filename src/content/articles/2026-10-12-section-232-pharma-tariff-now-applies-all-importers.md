@@ -5,6 +5,12 @@ date: 2026-10-12
 topic: tariffs-trade
 type: news
 signal: 4
+image:
+  src: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.1.0"
+  alt: "Blister pack of white and blue medication pills"
+  credit: "Christine Sandu"
+  creditUrl: "https://unsplash.com/photos/white-and-blue-medication-pill-blister-pack-jwWtZrm67VI"
+  license: "Unsplash"
 keyfacts:
   - value: "100%"
     label: "default duty on patented drugs and APIs"

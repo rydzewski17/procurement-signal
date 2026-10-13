@@ -62,7 +62,24 @@ Length: 450–800 words for news, 700–1,200 for signal reports and analysis.
 
 ## Images
 
-Leave `image` out. The site draws original topic artwork for every story automatically. Only add an `image` if you have a photo that is clearly public domain or officially provided for press use (e.g., a U.S. government photo), with `src`, `alt` and `credit`. Never use copyrighted news or stock photos.
+Every story needs a real photo with correct credit. Allowed sources only:
+
+1. **Unsplash (default).** Fetch `https://unsplash.com/napi/search/photos?query=<3-4 keywords>&per_page=10` and pick a result where `premium` is false (never `plus.unsplash.com` URLs). Use `src: https://images.unsplash.com/photo-...?ixlib=rb-4.1.0` (from `urls.raw`, without other params), `credit:` the photographer's name, `creditUrl:` the photo's `links.html`, `license: "Unsplash"`.
+2. **U.S. federal government photos** (public domain), e.g. CBP, DoD/DVIDS, NASA, USDA. Use `license: "Public domain (U.S. government)"` and credit the agency.
+3. **Company press/media kits** explicitly offered for editorial use. Use `license: "Courtesy of <Company>"`.
+
+Never use photos from news outlets, trade publications, Getty, AP, Reuters or any site that doesn't grant reuse, even with a credit line. A citation does not make an unlicensed photo legal.
+
+Pick photos that illustrate the subject literally (port and containers for tariffs, pills for pharma, a steel mill for steel). Avoid photos of identifiable people for negative stories (bankruptcies, forced labor, fraud), so no one is implied to be involved. If nothing suitable is found, omit `image`; the topic's default photo is used.
+
+```yaml
+image:
+  src: "https://images.unsplash.com/photo-1590496793907-4d66e2994b4d?ixlib=rb-4.1.0"
+  alt: "A container ship being loaded by cranes at an industrial port at dusk"
+  credit: "Timelab"
+  creditUrl: "https://unsplash.com/photos/container-ship-at-industrial-port-yx20mpDyr2I"
+  license: "Unsplash"
+```
 
 ## Voice and style
 
@@ -85,3 +102,17 @@ Leave `image` out. The site draws original topic artwork for every story automat
 
 - **Mondays:** publish one `type: analysis` piece: "The week ahead in procurement" (key deadlines, tariff dates, earnings, regulatory events), using the trackers.
 - **Fridays:** publish one `type: signal` report built from data (e.g., a commodity price roundup, week's major contract awards, proc-tech deal roundup).
+
+## Monthly: Cost Pressure Monitor update
+
+The monitor lives in `src/data/cost-monitor.json` (12 categories, 25 months of history each). The Bureau of Labor Statistics releases Producer Price Index data around mid-month.
+
+On the first run on or after the 15th of each month:
+
+1. For each category, fetch `https://fred.stlouisfed.org/data/<series>.txt` and read the latest observations.
+2. If a new month exists, append it to that category's `history` and drop the oldest month, so each series keeps exactly 25 points. BLS revises recent months, so also overwrite the previous four months with the current values.
+3. Set `dataThrough` to the new month (`YYYY-MM`) and `updated` to today.
+4. Build. The site recalculates the changes and pressure labels automatically.
+5. Publish one `type: signal` story on the month's readings: which categories changed label, the biggest movers, and what buyers should do. Use only numbers computed from the data file. Run `node -e` against the JSON to compute them rather than estimating.
+
+Never invent or estimate an index value. If FRED is unreachable, skip the update and say so in the run report.

@@ -236,3 +236,56 @@ footer .fine { border-top: 1px solid rgba(255,255,255,.18); margin-top: 26px; pa
   .keyfacts div:nth-child(3) { border-left: 0; padding-left: 0; }
   .keyfacts dt { font-size: 24px; }
 }
+
+/* ---------- Cost Pressure Monitor ---------- */
+:root { --st-hot: #a32020; --st-hot-bg: #fbeaea; --st-up: #8a5a00; --st-up-bg: #fdf3dc; --st-flat: #4a4f57; --st-flat-bg: #eef0f2; --st-down: #1d6b3c; --st-down-bg: #e5f4ea; }
+.status { display: inline-flex; align-items: center; gap: 5px; font: 600 12.5px/1 var(--sans); padding: 5px 8px; border-radius: 3px; white-space: nowrap; }
+.status-rising-fast { color: var(--st-hot); background: var(--st-hot-bg); }
+.status-rising { color: var(--st-up); background: var(--st-up-bg); }
+.status-stable { color: var(--st-flat); background: var(--st-flat-bg); }
+.status-easing { color: var(--st-down); background: var(--st-down-bg); }
+.monitor-head p { max-width: 720px; }
+.monitor-summary { display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--rule); }
+.tally { display: flex; gap: 22px; }
+.tally > div { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+.tally-n { font: 700 36px/1 var(--serif); color: var(--ink); }
+.monitor-lede { font: 18px/1.55 var(--serif); margin: 0; color: var(--ink-2); }
+.monitor-lede a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
+.monitor-group { margin-top: 30px; }
+.table-scroll { overflow-x: auto; }
+table.monitor { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 680px; }
+.monitor th, .monitor td { text-align: left; padding: 10px 14px 10px 0; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+.monitor thead th { font-size: 13px; font-weight: 700; color: var(--ink-2); border-bottom: 2px solid var(--ink); vertical-align: bottom; }
+.monitor tbody th { font: 600 16px/1.3 var(--serif); width: 30%; }
+.monitor tbody th a:hover { color: var(--link); text-decoration: underline; }
+.num { text-align: right !important; font-variant-numeric: tabular-nums; }
+.strong { font-weight: 700; }
+.th-note { display: block; font-weight: 400; color: var(--muted); font-size: 12px; }
+.tariff-flag { display: block; font: 600 12px/1.3 var(--sans); color: var(--muted); margin-top: 3px; }
+.spark { display: block; }
+.posture-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.posture-grid p { font: 15px/1.5 var(--serif); color: var(--ink-2); margin: 10px 0 0; }
+.monitor-postures { margin-top: 40px; }
+.method { margin-top: 40px; border-top: 1px solid var(--rule); padding-top: 10px; }
+.chart { margin: 0 0 32px; max-width: 900px; }
+.chart-title { font: 700 15px/1.3 var(--sans); margin-bottom: 10px; }
+.chart-title span { font-weight: 400; color: var(--muted); }
+.chart-wrap { position: relative; }
+.chart svg { width: 100%; height: auto; display: block; touch-action: none; }
+.chart .axis { font: 12px var(--sans); fill: var(--muted); }
+.tip { position: absolute; transform: translateX(-50%); background: var(--ink); color: #fff; font: 13px/1.35 var(--sans); padding: 7px 10px; pointer-events: none; white-space: nowrap; }
+.datatable { margin: 24px 0; font-size: 15px; }
+.datatable summary { cursor: pointer; font: 600 15px var(--sans); color: var(--link); }
+.datatable table { border-collapse: collapse; margin-top: 10px; min-width: 260px; font-family: var(--sans); }
+.datatable td, .datatable th { padding: 6px 18px 6px 0; border-bottom: 1px solid var(--rule); text-align: left; }
+.mini-monitor { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 10px; }
+.mini-monitor td { padding: 8px 0; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+.mini-monitor td:first-child { font-weight: 600; padding-right: 8px; }
+.mini-monitor td:first-child a:hover { color: var(--link); text-decoration: underline; }
+.rail .more { font-size: 14px; font-weight: 600; color: var(--link); }
+.nav a.nav-feature { background: rgba(255,255,255,.14); }
+@media (max-width: 860px) {
+  .monitor-summary { grid-template-columns: 1fr; gap: 16px; }
+  .posture-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) { .tally { gap: 14px; flex-wrap: wrap; } .posture-grid { grid-template-columns: 1fr; } }

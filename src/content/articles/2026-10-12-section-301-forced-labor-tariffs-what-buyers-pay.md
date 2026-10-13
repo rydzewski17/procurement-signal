@@ -5,6 +5,12 @@ date: 2026-10-12
 topic: tariffs-trade
 type: analysis
 signal: 4
+image:
+  src: "https://images.unsplash.com/photo-1606964212858-c215029db704?ixlib=rb-4.1.0"
+  alt: "Stacked red and blue cargo containers"
+  credit: "Barrett Ward"
+  creditUrl: "https://unsplash.com/photos/red-and-blue-cargo-containers-5WQJ_ejZ7y8"
+  license: "Unsplash"
 keyfacts:
   - value: "60"
     label: "economies covered"

@@ -1,0 +1,97 @@
+---
+import Base from '../../layouts/Base.astro';
+import Sparkline from '../../components/Sparkline.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import Trending from '../../components/Trending.astro';
+import { getPosts } from '../../data/posts';
+import { categories, groups, meta, monthLabel, fmtPct, STATUS, type Status } from '../../data/costs';
+
+const posts = await getPosts();
+const counts = (Object.keys(STATUS) as Status[]).map((s) => ({ s, n: categories.filter((c) => c.status === s).length }));
+const hottest = [...categories].sort((a, b) => b.m3ann - a.m3ann)[0];
+const coolest = [...categories].sort((a, b) => a.m3ann - b.m3ann)[0];
+const through = monthLabel(meta.dataThrough + '-01');
+const jsonLd = {
+  '@context': 'https://schema.org', '@type': 'Dataset', name: 'Procurement Signal Cost Pressure Monitor',
+  description: 'Monthly price-pressure readings for the categories procurement teams buy most, built from U.S. Producer Price Index data.',
+  creator: { '@type': 'Organization', name: 'Procurement Signal' }, isBasedOn: 'https://fred.stlouisfed.org/', temporalCoverage: `2024-08/${meta.dataThrough}`,
+};
+---
+<Base title="Cost Pressure Monitor: where input prices are heading" description="Which purchase categories are getting more expensive, how fast, and what buyers should do about it. Updated monthly from U.S. producer price data." section="cost-monitor" jsonLd={jsonLd}>
+  <div class="page">
+    <div class="page-head monitor-head">
+      <div class="crumbs">Data through {through}. Updated {meta.updated}.</div>
+      <h1>Cost Pressure Monitor</h1>
+      <p>Where the price of what you buy is heading, category by category, with a clear read on how to respond. Built from U.S. producer price data, updated every month.</p>
+    </div>
+
+    <section class="monitor-summary" aria-label="Summary">
+      <div class="tally">
+        {counts.map(({ s, n }) => (
+          <div><span class="tally-n">{n}</span><StatusBadge status={s} /></div>
+        ))}
+      </div>
+      <p class="monitor-lede">
+        Of the {categories.length} categories we track, <strong>{counts[0].n + counts[1].n} are rising</strong>.
+        {' '}<a href={`/cost-monitor/${hottest.id}/`}>{hottest.name}</a> shows the most pressure, up {fmtPct(hottest.m3ann)} at an annualized three-month pace;
+        {' '}<a href={`/cost-monitor/${coolest.id}/`}>{coolest.name.toLowerCase()}</a> is the softest at {fmtPct(coolest.m3ann)}.
+      </p>
+    </section>
+
+    {groups.map((g) => (
+      <section class="monitor-group">
+        <h2 class="block-head">{g}</h2>
+        <div class="table-scroll">
+          <table class="monitor">
+            <thead>
+              <tr>
+                <th scope="col">Category</th>
+                <th scope="col">24-month trend</th>
+                <th scope="col" class="num">Last month</th>
+                <th scope="col" class="num">3-mo pace<span class="th-note">annualized</span></th>
+                <th scope="col" class="num">12 months</th>
+                <th scope="col">Pressure</th>
+              </tr>
+            </thead>
+            <tbody>
+              {categories.filter((c) => c.group === g).map((c) => (
+                <tr>
+                  <th scope="row"><a href={`/cost-monitor/${c.id}/`}>{c.name}</a>{c.tariff && <span class="tariff-flag">Tariff exposure</span>}</th>
+                  <td><Sparkline history={c.history} label={c.name} /></td>
+                  <td class="num">{fmtPct(c.m1)}</td>
+                  <td class="num strong">{fmtPct(c.m3ann)}</td>
+                  <td class="num">{fmtPct(c.y1)}</td>
+                  <td><StatusBadge status={c.status} /></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    ))}
+
+    <section class="monitor-postures" aria-label="How to respond">
+      <h2 class="block-head">What each reading means for buyers</h2>
+      <div class="posture-grid">
+        {(Object.keys(STATUS) as Status[]).map((s) => (
+          <div><StatusBadge status={s} /><p>{STATUS[s].posture}</p></div>
+        ))}
+      </div>
+    </section>
+
+    <section class="method prose-page narrow" id="methodology">
+      <h2>How the monitor works</h2>
+      <p>Each category uses a U.S. Bureau of Labor Statistics Producer Price Index series, which tracks what domestic producers receive for their output. That makes it a good proxy for the prices buyers pay suppliers, before freight, tariffs and margin.</p>
+      <p><strong>Pressure</strong> is set mainly by the three-month pace, annualized, so it reacts to turns faster than the year-over-year number. A sharp move in the latest month can override it, so a rebound isn't labeled as easing:</p>
+      <ul>
+        <li><strong>Rising fast:</strong> pace of 15% or more; or prices already up 15% on the year and either an 8% pace or a 5% jump in the latest month.</li>
+        <li><strong>Rising:</strong> pace of 4% or more, or a 3% jump in the latest month.</li>
+        <li><strong>Easing:</strong> pace of −4% or lower, and no rebound (1% or more) in the latest month.</li>
+        <li><strong>Stable:</strong> everything else.</li>
+      </ul>
+      <p>Producer prices don't include import duties, so categories flagged for tariff exposure can cost importers more than the index shows. The guidance here is general market context, not advice for any specific contract.</p>
+      <p>Source: {meta.source}. Series IDs are listed on each category page.</p>
+    </section>
+  </div>
+  <Trending posts={posts} />
+</Base>

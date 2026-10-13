@@ -1,11 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Card from '../../components/Card.astro';
-import TopicArt from '../../components/TopicArt.astro';
+import Photo from '../../components/Photo.astro';
 import Trending from '../../components/Trending.astro';
 import BrowseTopics from '../../components/BrowseTopics.astro';
 import { getPosts } from '../../data/posts';
-import { TOPICS } from '../../data/site';
+import { TOPICS, TOPIC_PHOTOS } from '../../data/site';
 
 export async function getStaticPaths() {
   const posts = await getPosts();
@@ -22,7 +22,7 @@ const elsewhere = posts.filter((p) => p.data.topic !== topic).slice(0, 5);
       <h1>{t.name}</h1>
       <p>{t.blurb}</p>
     </div>
-    <TopicArt topic={topic} seed={`topic-${topic}`} ratio="card" label={t.name} />
+    <Photo photo={TOPIC_PHOTOS[topic]} ratio="card" caption eager />
   </div>
   <div class="with-rail">
     <div class="river">

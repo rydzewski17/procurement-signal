@@ -7,6 +7,9 @@ import BrowseTopics from '../components/BrowseTopics.astro';
 import { getPosts } from '../data/posts';
 import { SITE, TOPICS } from '../data/site';
 import { trackers } from '../data/trackers';
+import StatusBadge from '../components/StatusBadge.astro';
+import { categories, fmtPct } from '../data/costs';
+const movers = [...categories].sort((a, b) => b.m3ann - a.m3ann).slice(0, 5);
 
 const posts = await getPosts();
 const cutoff = posts[0] ? posts[0].data.date.valueOf() - 3 * 864e5 : 0;
@@ -29,7 +32,7 @@ const jsonLd = { '@context': 'https://schema.org', '@type': 'NewsMediaOrganizati
     <Trending posts={posts} />
     <div class="front">
       <section class="lead" aria-label="Top story">
-        <a href={`/articles/${lead.id}/`} tabindex="-1" aria-hidden="true"><Media post={lead} ratio="wide" /></a>
+        <a href={`/articles/${lead.id}/`} tabindex="-1" aria-hidden="true"><Media post={lead} ratio="wide" eager /></a>
         <a class="topic" href={`/topics/${lead.data.topic}/`}>{TOPICS[lead.data.topic].name}</a>
         <a href={`/articles/${lead.id}/`}><h2>{lead.data.title}</h2></a>
         <p class="dek">{lead.data.dek}</p>
@@ -42,6 +45,14 @@ const jsonLd = { '@context': 'https://schema.org', '@type': 'NewsMediaOrganizati
       </section>
       <aside class="rail">
         <div>
+          <h2>Cost Pressure Monitor</h2>
+          <table class="mini-monitor">
+            <tbody>{movers.map((c) => <tr><td><a href={`/cost-monitor/${c.id}/`}>{c.name}</a></td><td class="num">{fmtPct(c.y1)}</td><td class="num"><StatusBadge status={c.status} /></td></tr>)}</tbody>
+          </table>
+          <p class="meta" style="margin:0 0 6px">Biggest price pressure now. Change over 12 months.</p>
+          <a class="more" href="/cost-monitor/">All 12 categories</a>
+        </div>
+        <div style="margin-top:30px">
           <h2>Trackers</h2>
           <ul class="linklist">
             {trackers.map((t) => <li><a href={`/trackers/${t.slug}/`}>{t.title}</a><span class="date">Updated {t.updated}</span></li>)}

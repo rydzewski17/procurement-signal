@@ -1,0 +1,18 @@
+---
+import type { Photo as P } from '../data/site';
+interface Props { photo: P; ratio?: 'wide' | 'card' | 'square'; caption?: boolean; eager?: boolean; }
+const { photo, ratio = 'card', caption = false, eager = false } = Astro.props;
+const isUnsplash = photo.src.includes('images.unsplash.com');
+const sized = (w: number) => isUnsplash ? `${photo.src}${photo.src.includes('?') ? '&' : '?'}w=${w}&q=75&auto=format&fit=crop` : photo.src;
+const srcset = isUnsplash ? [400, 800, 1200, 1600].map((w) => `${sized(w)} ${w}w`).join(', ') : undefined;
+const sizes = ratio === 'square' ? '96px' : ratio === 'wide' ? '(max-width: 700px) 100vw, 760px' : '(max-width: 700px) 100vw, 380px';
+const licenseText = photo.license === 'Unsplash' ? 'Unsplash' : photo.license;
+---
+<figure class={`media media-${ratio}`}>
+  <img src={sized(ratio === 'square' ? 200 : ratio === 'wide' ? 1600 : 800)} srcset={srcset} sizes={sizes} alt={photo.alt} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+  {caption && (
+    <figcaption>
+      {photo.alt}. Photo: {photo.creditUrl ? <a href={photo.creditUrl} target="_blank" rel="noopener">{photo.credit}</a> : photo.credit}{licenseText && ` / ${licenseText}`}
+    </figcaption>
+  )}
+</figure>

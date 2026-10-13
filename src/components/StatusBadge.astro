@@ -1,0 +1,6 @@
+---
+import { STATUS, type Status } from '../data/costs';
+const { status } = Astro.props as { status: Status };
+const s = STATUS[status];
+---
+<span class={`status status-${status}`}><span aria-hidden="true">{s.icon}</span> {s.label}</span>

@@ -17,7 +17,7 @@ const articles = defineCollection({
     sources: z.array(z.object({ name: z.string(), url: z.string().url() })).min(1),
     featured: z.boolean().default(false),
     keyfacts: z.array(z.object({ value: z.string(), label: z.string() })).max(4).default([]),
-    image: z.object({ src: z.string().url(), alt: z.string(), credit: z.string() }).optional(),
+    image: z.object({ src: z.string().url(), alt: z.string(), credit: z.string(), creditUrl: z.string().url().optional(), license: z.string().default('Unsplash') }).optional(),
   }),
 });
 

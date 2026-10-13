@@ -6,6 +6,12 @@ topic: tariffs-trade
 type: news
 signal: 5
 featured: true
+image:
+  src: "https://images.unsplash.com/photo-1590496793907-4d66e2994b4d?ixlib=rb-4.1.0"
+  alt: "A container ship being loaded by cranes at an industrial port at dusk"
+  credit: "Timelab"
+  creditUrl: "https://unsplash.com/photos/container-ship-at-industrial-port-yx20mpDyr2I"
+  license: "Unsplash"
 keyfacts:
   - value: "178"
     label: "product exclusions still in force"
