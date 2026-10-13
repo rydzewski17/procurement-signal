@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://procurement-signal.pages.dev/sitemap-index.xml
+Sitemap: https://procurement-signal.rydzewski-jason.workers.dev/sitemap-index.xml
