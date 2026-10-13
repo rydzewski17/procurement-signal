@@ -1,0 +1,20 @@
+---
+import { TOPICS, TYPE_LABEL } from '../data/site';
+import SignalDots from './SignalDots.astro';
+const { post, size = 'card' } = Astro.props;
+const d = post.data;
+const date = d.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+---
+{size === 'mini' ? (
+  <article class="mini">
+    <div class="kicker">{TOPICS[d.topic].name}</div>
+    <h4><a href={`/articles/${post.id}/`}>{d.title}</a></h4>
+  </article>
+) : (
+  <article class="card">
+    <div class="kicker">{TOPICS[d.topic].name}{d.type !== 'news' && ` · ${TYPE_LABEL[d.type]}`}</div>
+    <h3><a href={`/articles/${post.id}/`}>{d.title}</a></h3>
+    <p>{d.dek}</p>
+    <div class="meta">{date} · <SignalDots level={d.signal} /></div>
+  </article>
+)}

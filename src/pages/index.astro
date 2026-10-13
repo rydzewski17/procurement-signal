@@ -1,0 +1,64 @@
+---
+import Base from '../layouts/Base.astro';
+import Card from '../components/Card.astro';
+import SignalDots from '../components/SignalDots.astro';
+import { getPosts } from '../data/posts';
+import { SITE, TOPICS } from '../data/site';
+import { trackers } from '../data/trackers';
+
+const posts = await getPosts();
+const recent = posts.slice(0, 30);
+// Lead: newest featured story from the last 3 days, else the highest-signal recent story.
+const cutoff = posts[0] ? posts[0].data.date.valueOf() - 3 * 864e5 : 0;
+const pool = recent.filter((p) => p.data.date.valueOf() >= cutoff);
+const lead = pool.find((p) => p.data.featured) ?? [...pool].sort((a, b) => b.data.signal - a.data.signal)[0];
+const rest = recent.filter((p) => p !== lead);
+const top = rest.slice(0, 8);
+const signalsList = posts.filter((p) => p.data.type !== 'news').slice(0, 5);
+const byTopic = Object.keys(TOPICS)
+  .map((t) => ({ t, items: posts.filter((p) => p.data.topic === t).slice(0, 3) }))
+  .filter((g) => g.items.length);
+const leadWhy = lead?.body?.match(/## Why it matters\s+([\s\S]*?)(\n## |$)/)?.[1]?.trim().split('\n')[0];
+const jsonLd = { '@context': 'https://schema.org', '@type': 'NewsMediaOrganization', name: SITE.name, url: Astro.site?.toString() };
+---
+<Base jsonLd={jsonLd}>
+  {!lead ? <p style="padding:40px 0">The newsroom is warming up. First stories coming soon.</p> : (
+  <div class="home-grid">
+    <div>
+      <section class="lead">
+        <div class="kicker">{TOPICS[lead.data.topic].name} · Top Signal</div>
+        <h2><a href={`/articles/${lead.id}/`}>{lead.data.title}</a></h2>
+        <p class="dek">{lead.data.dek}</p>
+        <div class="meta">{lead.data.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })} · <SignalDots level={lead.data.signal} /></div>
+        {leadWhy && <div class="why"><strong>Why it matters</strong>{leadWhy.replace(/[*_]/g, '')}</div>}
+      </section>
+      <div class="section-title">Latest</div>
+      {top.map((p) => <Card post={p} />)}
+      <div class="topic-grid">
+        {byTopic.map(({ t, items }) => (
+          <div>
+            <div class="section-title"><span>{TOPICS[t].name}</span><a href={`/topics/${t}/`}>More →</a></div>
+            {items.map((p) => <Card post={p} size="mini" />)}
+          </div>
+        ))}
+      </div>
+    </div>
+    <aside class="rail">
+      <div class="section-title">Signal Reports</div>
+      {signalsList.length ? signalsList.map((p) => <Card post={p} size="mini" />) : <p class="meta">Data-driven reports publish weekly.</p>}
+      <div class="box">
+        <h3>Trackers</h3>
+        <p>Always-current reference pages, updated by our newsroom.</p>
+        {trackers.map((t) => <div class="data-row"><a href={`/trackers/${t.slug}/`}>{t.title}</a><span>→</span></div>)}
+      </div>
+      <div class="box">
+        <h3>The daily briefing</h3>
+        <p>The five procurement signals that matter, every weekday morning. Newsletter launching soon.</p>
+        <a class="btn" href="/rss.xml">Follow via RSS</a>
+      </div>
+      <div class="section-title" style="margin-top:28px">Most Recent</div>
+      {rest.slice(8, 16).map((p) => <Card post={p} size="mini" />)}
+    </aside>
+  </div>
+  )}
+</Base>

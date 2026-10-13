@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import Card from '../../components/Card.astro';
+import { getPosts } from '../../data/posts';
+import { TOPICS } from '../../data/site';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return Object.keys(TOPICS).map((topic) => ({ params: { topic }, props: { topic, items: posts.filter((p) => p.data.topic === topic) } }));
+}
+const { topic, items } = Astro.props;
+const t = TOPICS[topic];
+---
+<Base title={`${t.name} News`} description={t.blurb}>
+  <div class="page narrow">
+    <div class="page-head">
+      <div class="kicker">Topic</div>
+      <h1>{t.name}</h1>
+      <p>{t.blurb}</p>
+    </div>
+    {items.length ? items.map((p) => <Card post={p} />) : <p class="meta" style="padding:20px 0">Coverage of this topic is coming soon.</p>}
+  </div>
+</Base>

@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../data/site';
+---
+<Base title="About" description="What Procurement Signal is and who it's for.">
+  <div class="page narrow">
+    <div class="page-head"><div class="kicker">About</div><h1>Procurement news, with the signal turned up.</h1></div>
+    <div class="prose">
+      <p>{SITE.name} is an independent publication for procurement and sourcing leaders: CPOs, category managers, buyers and the teams who support them.</p>
+      <p>Procurement news is scattered across trade publications, government notices, commodity markets, press wires and analyst blogs. We track all of it, connect the dots across sources, and publish what matters with a clear answer to the question every buyer asks: <em>what does this mean for me?</em></p>
+      <h2>What we publish</h2>
+      <ul>
+        <li><strong>News</strong>: significant developments, synthesized from multiple sources.</li>
+        <li><strong>Signal Reports</strong>: data-driven pieces built from tariff schedules, government contract data, commodity prices and deal activity.</li>
+        <li><strong>Analysis</strong>: weekly trend pieces on where the function is heading.</li>
+        <li><strong>Trackers</strong>: living reference pages for tariffs, proc-tech deals, compliance deadlines and more.</li>
+      </ul>
+      <h2>How we work</h2>
+      <p>Our newsroom uses AI-assisted research and drafting under published <a href="/editorial-standards/">editorial standards</a>. Every story links to its original sources. Editor: {SITE.editor}.</p>
+      <p>{SITE.name} is a personal, independent project. It is not affiliated with, sponsored by, or written on behalf of any employer or procurement vendor.</p>
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,91 @@
+---
+import '../styles/global.css';
+import { SITE, TOPICS } from '../data/site';
+import signals from '../data/signals.json';
+
+interface Props { title?: string; description?: string; type?: 'website' | 'article'; jsonLd?: object; }
+const { title, description = SITE.description, type = 'website', jsonLd } = Astro.props;
+const fullTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} — ${SITE.tagline}`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const today = new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+const navTopics = ['tariffs-trade', 'supplier-risk', 'commodities', 'proc-tech', 'ai-procurement', 'public-sector', 'esg-regulation'];
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta property="og:site_name" content={SITE.name} />
+  <meta property="og:title" content={title ?? SITE.name} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content={type} />
+  <meta property="og:url" content={canonical} />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/rss.xml" />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+  <script is:inline>
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <div class="ticker" aria-label="Market signals">
+    <div class="wrap">
+      {signals.items.map((s) => (
+        <span><b>{s.label}</b>{s.value} {s.change && <span class={s.dir}>{s.dir === 'up' ? '▲' : s.dir === 'down' ? '▼' : ''} {s.change}</span>}</span>
+      ))}
+    </div>
+  </div>
+  <header class="masthead">
+    <div class="wrap">
+      <a href="/" class="logo" aria-label={SITE.name}>
+        <svg class="mark" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="6" fill="var(--accent)"/><path d="M5 17h4l2-8 4 12 2-6h4" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        {SITE.name}
+      </a>
+      <div style="display:flex;align-items:center;gap:14px">
+        <span class="date">{today}</span>
+        <button class="theme-btn" id="theme" aria-label="Toggle dark mode">◐</button>
+      </div>
+    </div>
+  </header>
+  <nav class="nav" aria-label="Sections">
+    <div class="wrap">
+      <a href="/">Latest</a>
+      {navTopics.map((t) => <a href={`/topics/${t}/`}>{TOPICS[t].name}</a>)}
+      <a href="/trackers/">Trackers</a>
+    </div>
+  </nav>
+  <main class="wrap"><slot /></main>
+  <footer>
+    <div class="wrap cols">
+      <div>
+        <div class="logo">{SITE.name}</div>
+        <div>{SITE.tagline}</div>
+      </div>
+      <nav>
+        <a href="/about/">About</a>
+        <a href="/editorial-standards/">Editorial Standards</a>
+        <a href="/trackers/">Trackers</a>
+        <a href="/archive/">Archive</a>
+        <a href="/rss.xml">RSS</a>
+      </nav>
+    </div>
+    <div class="wrap" style="margin-top:18px">© {new Date().getFullYear()} {SITE.name}. Independent publication. Summaries link to original reporting.</div>
+  </footer>
+  <script is:inline>
+    document.getElementById('theme').addEventListener('click', () => {
+      const root = document.documentElement;
+      const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      root.dataset.theme = dark ? 'light' : 'dark';
+      try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

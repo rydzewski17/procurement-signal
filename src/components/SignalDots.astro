@@ -1,0 +1,6 @@
+---
+const { level = 3 } = Astro.props;
+---
+<span class="signal-dots" title={`Signal strength ${level}/5`} aria-label={`Signal strength ${level} of 5`}>
+  {[1, 2, 3, 4, 5].map((n) => <i class={n <= level ? 'on' : ''} />)}
+</span>

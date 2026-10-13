@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://procurement-signal.pages.dev/sitemap-index.xml

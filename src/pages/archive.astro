@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import { getPosts } from '../data/posts';
+import { TOPICS } from '../data/site';
+const posts = await getPosts();
+const groups = new Map<string, typeof posts>();
+for (const p of posts) {
+  const k = p.data.date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  groups.set(k, [...(groups.get(k) ?? []), p]);
+}
+---
+<Base title="Archive" description="Every story published by Procurement Signal.">
+  <div class="page narrow">
+    <div class="page-head"><h1>Archive</h1><p>{posts.length} stories and counting.</p></div>
+    {[...groups].map(([month, items]) => (
+      <>
+        <div class="section-title">{month}</div>
+        {items.map((p) => (
+          <div class="data-row" style="font-family:var(--body);font-size:15px;gap:16px">
+            <a href={`/articles/${p.id}/`}>{p.data.title}</a>
+            <span class="meta" style="white-space:nowrap">{TOPICS[p.data.topic].name}</span>
+          </div>
+        ))}
+      </>
+    ))}
+  </div>
+</Base>

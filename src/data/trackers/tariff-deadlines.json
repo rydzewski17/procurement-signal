@@ -1,0 +1,17 @@
+{
+  "title": "Tariff & Trade Deadline Tracker",
+  "description": "Upcoming and recent U.S. tariff effective dates, expirations and phase-ins that change landed cost.",
+  "intro": "Every date here changes what you pay for imported goods. We update this tracker with each newsroom run. Always confirm details with your customs broker and the official notice.",
+  "updated": "2026-10-12",
+  "columns": ["Date", "Action", "What changes", "Status"],
+  "rows": [
+    { "cells": ["Nov. 10, 2026", "Section 301 China exclusions expire", "178 product exclusions lapse; typically 25% Section 301 duty applies to entries from Nov. 10", "Upcoming — no extension notice as of mid-Sept."], "source": "https://ustr.gov/about/policy-offices/press-office/press-releases/2025/november/ustr-extends-exclusions-china-section-301-tariffs-related-forced-technology-transfer-investigation" },
+    { "cells": ["Sept. 29, 2026", "Section 232 pharma tariff, phase 2", "100% default duty on patented drugs and APIs extends to all importers; country and company reductions apply", "In effect"], "source": "https://www.bakerdonelson.com/trump-overhauls-section-232-tariffs-what-metals-and-pharmaceutical-importers-need-to-know" },
+    { "cells": ["July 31, 2026", "Section 232 pharma tariff, phase 1", "Duty applies to large companies listed in the proclamation annex", "In effect"], "source": "https://www.internationaltradeinsights.com/2026/04/president-trump-imposes-section-232-tariffs-on-patented-pharmaceuticals-and-active-pharmaceutical-ingredients/" },
+    { "cells": ["July 24, 2026", "Section 301 forced-labor tariffs", "10% or 12.5% additional duty on imports from 60 economies, with broad exemptions", "In effect"], "source": "https://www.hklaw.com/en/insights/publications/2026/07/and-the-tariff-beat-goes-on" },
+    { "cells": ["July 24, 2026", "Section 122 global surcharge expires", "10% global surcharge ends at its 150-day statutory limit", "Expired"], "source": "https://www.strixsmart.com/section-122-surcharge" },
+    { "cells": ["April 6, 2026", "Section 232 metals overhaul", "Steel, aluminum and copper duties (50% / 25% / 15% tiers) apply to full customs value, not metal content", "In effect"], "source": "https://www.bakerdonelson.com/trump-overhauls-section-232-tariffs-what-metals-and-pharmaceutical-importers-need-to-know" },
+    { "cells": ["Feb. 24, 2026", "Section 122 surcharge begins", "10% global surcharge after IEEPA tariffs struck down", "Ended July 24"], "source": "https://resources.altium.com/p/tariff-reset-pcb-workarounds" },
+    { "cells": ["Feb. 20, 2026", "Supreme Court strikes IEEPA tariffs", "Reciprocal tariffs invalidated; refunds processed through CBP and the Court of International Trade", "Refunds ongoing"], "source": "https://www.bdo.com/insights/tax/update-on-cbp-ieepa-refund-progress-and-new-orders-from-the-us-court-of-international-trade" }
+  ]
+}
