@@ -1,7 +1,7 @@
 export const SITE = {
   name: 'Procurement Signal',
   tagline: 'The intelligence feed for procurement leaders.',
-  description: 'Daily procurement news, supplier risk, tariffs, commodities and procurement technology — with what it means for buyers.',
+  description: 'B2B intelligence for procurement and supply chain professionals: tariffs, supplier risk, input costs and procurement technology, with what each development means for buyers.',
   editor: 'Jason Rydzewski',
 };
 

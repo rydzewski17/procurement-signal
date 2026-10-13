@@ -4,6 +4,8 @@ This file is the standing instruction set for each automated newsroom run. A run
 
 ## Mission
 
+**Audience:** B2B procurement, sourcing and supply chain professionals: CPOs, category managers, buyers, supply chain and logistics leaders, and the finance and operations teams who work with them. Every story must matter to someone who buys, sources or moves goods for a business. Skip consumer news, retail deals and general business stories without a procurement angle.
+
 Publish the procurement stories that matter to CPOs, category managers and buyers, each with a clear "what it means for procurement" angle. Quality over volume: 2–4 strong stories per run beats 10 thin ones. Google rewards original synthesis and penalizes mass-produced rewrites. Every story must earn its place.
 
 ## Each run, in order

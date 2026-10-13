@@ -1,0 +1,21 @@
+# Procurement Signal
+
+> Independent B2B intelligence for procurement and supply chain professionals. News, data and guides on U.S. tariffs, supplier risk, input-cost inflation and procurement technology, each with what it means for buyers.
+
+Every story cites its sources. Data pages use official U.S. government data (BLS Producer Price Index via FRED; Federal Register; USTR; CBP).
+
+## Data and tools
+- [Cost Pressure Monitor](https://procurement-signal.rydzewski-jason.workers.dev/cost-monitor/): monthly price-pressure readings (rising fast, rising, stable, easing) for 12 purchase categories including steel, aluminum, copper, plastic resins, diesel, ocean freight, trucking, semiconductors and packaging.
+- [Tariff & Trade Deadline Tracker](https://procurement-signal.rydzewski-jason.workers.dev/trackers/tariff-deadlines/): U.S. tariff effective dates and expirations.
+- [Industry Wire](https://procurement-signal.rydzewski-jason.workers.dev/wire/): daily procurement and supply chain headlines with links to original publishers.
+
+## Guides
+- [U.S. tariffs explained for procurement teams (2026)](https://procurement-signal.rydzewski-jason.workers.dev/guides/us-tariffs-explained-procurement/)
+- [Managing supplier price increases: cost inflation and price indexes](https://procurement-signal.rydzewski-jason.workers.dev/guides/procurement-cost-inflation-price-indexes/)
+- [Supplier risk management: a practical framework](https://procurement-signal.rydzewski-jason.workers.dev/guides/supplier-risk-management-framework/)
+- [Procurement and supply chain glossary](https://procurement-signal.rydzewski-jason.workers.dev/glossary/)
+
+## Coverage
+- [Latest news](https://procurement-signal.rydzewski-jason.workers.dev/)
+- [All topics](https://procurement-signal.rydzewski-jason.workers.dev/topics/)
+- [RSS feed](https://procurement-signal.rydzewski-jason.workers.dev/rss.xml)

@@ -310,3 +310,33 @@ table.monitor { width: 100%; border-collapse: collapse; font-size: 15px; min-wid
 .lb-arrow:hover { background: var(--brand); color: #fff; }
 .lb-arrow[hidden] { display: none; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+/* ---------- Guides & glossary ---------- */
+.takeaways { border: 1px solid var(--rule); border-top: 3px solid var(--brand); padding: 18px 20px 8px; margin: 0 0 26px; background: var(--paper); }
+.takeaways h2, .toc h2, .faq > h2 { font: 700 16px/1.2 var(--sans); color: var(--brand); margin: 0 0 10px; }
+.takeaways ul { margin: 0; padding-left: 20px; font: 17px/1.55 var(--serif); }
+.takeaways li { margin-bottom: 10px; }
+.toc { margin: 0 0 30px; padding: 0 0 16px; border-bottom: 1px solid var(--rule); }
+.toc ol { margin: 0; padding-left: 20px; font-size: 15px; columns: 2; column-gap: 32px; }
+.toc li { margin-bottom: 6px; break-inside: avoid; }
+.toc a { color: var(--link); }
+.toc a:hover { text-decoration: underline; }
+.faq { margin-top: 40px; border-top: 1px solid var(--ink); padding-top: 18px; }
+.faq details { border-bottom: 1px solid var(--rule); padding: 12px 0; }
+.faq summary { cursor: pointer; font: 700 17px/1.35 var(--serif); }
+.faq details p { font: 17px/1.6 var(--serif); color: var(--ink-2); margin: 10px 0 4px; }
+.prose blockquote { font-family: var(--sans); font-size: 16px; background: var(--band); padding: 12px 16px; }
+.letters { display: flex; flex-wrap: wrap; gap: 6px; margin: 18px 0 10px; }
+.letters a { font-weight: 700; color: var(--link); border: 1px solid var(--rule); padding: 4px 9px; }
+.term { padding: 14px 0; border-bottom: 1px solid var(--rule); scroll-margin-top: 16px; }
+.term h2 { font-size: 22px; }
+.term-short { font: 600 17px/1.5 var(--serif); margin: 6px 0; }
+.term .prose-page p { margin: 0 0 6px; font-size: 16px; color: var(--ink-2); }
+@media (max-width: 700px) { .toc ol { columns: 1; } }
+.wire-list { list-style: none; margin: 0 0 10px; padding: 0; }
+.wire-list li { display: flex; flex-direction: column; gap: 3px; padding: 11px 0; border-bottom: 1px solid var(--rule); }
+.wire-list li > a { font: 600 17px/1.35 var(--serif); }
+.wire-list li > a:hover { color: var(--link); text-decoration: underline; }
+.band .wire-list { columns: 2; column-gap: 36px; }
+.band .wire-list li { break-inside: avoid; }
+@media (max-width: 700px) { .band .wire-list { columns: 1; } }

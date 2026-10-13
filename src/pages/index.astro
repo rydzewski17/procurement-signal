@@ -7,6 +7,11 @@ import BrowseTopics from '../components/BrowseTopics.astro';
 import { getPosts } from '../data/posts';
 import { SITE, TOPICS } from '../data/site';
 import { trackers } from '../data/trackers';
+import { getCollection } from 'astro:content';
+import Photo from '../components/Photo.astro';
+import { TOPIC_PHOTOS } from '../data/site';
+import wire from '../data/wire.json';
+const guides = await getCollection('guides');
 import StatusBadge from '../components/StatusBadge.astro';
 import { categories, fmtPct } from '../data/costs';
 const movers = [...categories].sort((a, b) => b.m3ann - a.m3ann).slice(0, 5);
@@ -78,6 +83,24 @@ const jsonLd = { '@context': 'https://schema.org', '@type': 'NewsMediaOrganizati
         <div class="feature-row">{analysis.map((p) => <Card post={p} size="feature" />)}</div>
       </section>
     )}
+
+    {wire.items.length > 0 && (
+      <section class="band" aria-label="Industry wire">
+        <div class="block-head"><span>Industry wire</span><a href="/wire/">All headlines</a></div>
+        <ul class="wire-list">{wire.items.slice(0, 8).map((w) => <li><a href={w.url} target="_blank" rel="noopener">{w.title}</a><span class="date">{w.source}</span></li>)}</ul>
+      </section>
+    )}
+
+    <section class="band" aria-label="Guides">
+      <div class="block-head"><span>Guides for procurement professionals</span><a href="/guides/">All guides</a></div>
+      <div class="feature-row">{guides.map((g) => (
+        <article class="feature">
+          <a href={`/guides/${g.id}/`} tabindex="-1" aria-hidden="true"><Photo photo={TOPIC_PHOTOS[g.data.topic]} ratio="card" /></a>
+          <a href={`/guides/${g.id}/`}><h3>{g.data.title}</h3></a>
+          <p>{g.data.description}</p>
+        </article>
+      ))}</div>
+    </section>
 
     <div class="sections">
       {byTopic.map(({ t, items }) => (

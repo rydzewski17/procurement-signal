@@ -48,7 +48,8 @@ const navTopics = ['tariffs-trade', 'supplier-risk', 'commodities', 'proc-tech',
       {navTopics.map((t) => <a href={`/topics/${t}/`} aria-current={section === t ? 'page' : undefined}>{TOPICS[t].name}</a>)}
       <a href="/cost-monitor/" class="nav-feature" aria-current={section === 'cost-monitor' ? 'page' : undefined}>Cost Monitor</a>
       <a href="/trackers/" aria-current={section === 'trackers' ? 'page' : undefined}>Trackers</a>
-      <a href="/topics/">All topics</a>
+      <a href="/guides/" aria-current={section === 'guides' ? 'page' : undefined}>Guides</a>
+      <a href="/wire/" aria-current={section === 'wire' ? 'page' : undefined}>Industry Wire</a>
     </div>
   </nav>
   <LiveBar />
@@ -65,6 +66,9 @@ const navTopics = ['tariffs-trade', 'supplier-risk', 'commodities', 'proc-tech',
           <a href="/trackers/">Trackers</a>
           <a href="/cost-monitor/">Cost Pressure Monitor</a>
           <a href="/editorial-standards/">Editorial standards</a>
+          <a href="/guides/">Guides</a>
+          <a href="/glossary/">Glossary</a>
+          <a href="/wire/">Industry Wire</a>
           <a href="/archive/">Archive</a>
           <a href="/rss.xml">RSS feed</a>
           <a href="/sitemap-index.xml">Sitemap</a>

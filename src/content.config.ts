@@ -21,4 +21,23 @@ const articles = defineCollection({
   }),
 });
 
-export const collections = { articles };
+const guides = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/guides' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    updated: z.coerce.date(),
+    topic: z.string(),
+    takeaways: z.array(z.string()).min(3).max(6),
+    faqs: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
+    tags: z.array(z.string()).default([]),
+    sources: z.array(z.object({ name: z.string(), url: z.string().url() })).default([]),
+  }),
+});
+
+const glossary = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/glossary' }),
+  schema: z.object({ term: z.string(), short: z.string(), related: z.array(z.string()).default([]) }),
+});
+
+export const collections = { articles, guides, glossary };

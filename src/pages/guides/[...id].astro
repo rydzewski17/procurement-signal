@@ -1,0 +1,71 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Card from '../../components/Card.astro';
+import Photo from '../../components/Photo.astro';
+import { getPosts } from '../../data/posts';
+import { slugify } from '../../data/tags';
+import { SITE, TOPICS, TOPIC_PHOTOS } from '../../data/site';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides.map((g) => ({ params: { id: g.id }, props: { g, guides } }));
+}
+const { g, guides } = Astro.props;
+const d = g.data;
+const { Content, headings } = await render(g);
+const toc = headings.filter((h) => h.depth === 2);
+const posts = await getPosts();
+const myTags = new Set(d.tags.map(slugify));
+const related = posts.filter((p) => p.data.tags.some((t) => myTags.has(slugify(t))) || p.data.topic === d.topic).slice(0, 4);
+const otherGuides = guides.filter((o) => o.id !== g.id);
+const fmt = (x: Date) => x.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+const url = new URL(`/guides/${g.id}/`, Astro.site).toString();
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'Article', headline: d.title, description: d.description, dateModified: d.updated.toISOString(),
+    author: { '@type': 'Organization', name: `${SITE.name} Editors` }, publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: url },
+  ...(d.faqs.length ? [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: d.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []),
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Guides', item: new URL('/guides/', Astro.site).toString() },
+    { '@type': 'ListItem', position: 2, name: d.title, item: url } ] },
+];
+---
+<Base title={d.title} description={d.description} type="article" jsonLd={jsonLd} section="guides">
+  <div class="article-layout">
+    <article class="article guide">
+      <div class="crumbs"><a href="/guides/">Guides</a>&ensp;/&ensp;<a href={`/topics/${d.topic}/`}>{TOPICS[d.topic]?.name}</a></div>
+      <h1>{d.title}</h1>
+      <p class="dek">{d.description}</p>
+      <div class="byline"><div><div class="who">By {SITE.name} Editors</div><div class="when">Last reviewed {fmt(d.updated)}</div></div></div>
+      <Photo photo={TOPIC_PHOTOS[d.topic]} ratio="wide" caption eager />
+      <section class="takeaways" aria-label="Key takeaways">
+        <h2>Key takeaways</h2>
+        <ul>{d.takeaways.map((t) => <li>{t}</li>)}</ul>
+      </section>
+      {toc.length > 2 && (
+        <nav class="toc" aria-label="In this guide">
+          <h2>In this guide</h2>
+          <ol>{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+        </nav>
+      )}
+      <div class="prose"><Content /></div>
+      {d.faqs.length > 0 && (
+        <section class="faq" id="faq">
+          <h2>Frequently asked questions</h2>
+          {d.faqs.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}
+        </section>
+      )}
+      {d.sources.length > 0 && (
+        <section class="sources"><h2>Sources</h2><ol>{d.sources.map((s) => <li><a href={s.url} target="_blank" rel="noopener">{s.name}</a></li>)}</ol></section>
+      )}
+    </article>
+    <aside class="side">
+      <div class="sticky">
+        {related.length > 0 && <><h2 class="block-head">Latest on this topic</h2>{related.map((p) => <Card post={p} size="thumb" />)}</>}
+        <h2 class="block-head" style="margin-top:24px">More guides</h2>
+        <ul class="linklist">{otherGuides.map((o) => <li><a href={`/guides/${o.id}/`}>{o.data.title}</a></li>)}</ul>
+        <p class="meta"><a href="/glossary/" style="color:var(--link);font-weight:600">Procurement glossary</a></p>
+      </div>
+    </aside>
+  </div>
+</Base>

@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Photo from '../../components/Photo.astro';
+import { TOPICS, TOPIC_PHOTOS } from '../../data/site';
+const guides = (await getCollection('guides')).sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+<Base title="Procurement guides" description="In-depth, regularly reviewed guides for procurement and supply chain professionals: tariffs, cost inflation, supplier risk and more." section="guides">
+  <div class="page">
+    <div class="page-head narrow">
+      <h1>Guides</h1>
+      <p>Reference guides for procurement and supply chain professionals, reviewed as rules and markets change. Start here, then follow the news.</p>
+    </div>
+    <div class="feature-row" style="margin-top:24px">
+      {guides.map((g) => (
+        <article class="feature">
+          <a href={`/guides/${g.id}/`} tabindex="-1" aria-hidden="true"><Photo photo={TOPIC_PHOTOS[g.data.topic]} ratio="card" /></a>
+          <a class="topic" href={`/topics/${g.data.topic}/`}>{TOPICS[g.data.topic]?.name}</a>
+          <a href={`/guides/${g.id}/`}><h3>{g.data.title}</h3></a>
+          <p>{g.data.description}</p>
+        </article>
+      ))}
+    </div>
+    <p style="margin-top:30px"><a class="button" href="/glossary/">Browse the procurement glossary</a></p>
+  </div>
+</Base>
