@@ -4,6 +4,7 @@ import SoftwareWidget from '../SoftwareWidget.astro';
 import Line from './Line.astro';
 import { getCollection } from 'astro:content';
 import events from '../../data/events.json';
+import conferences from '../../data/conferences.json';
 import { categories, fmtPct, STATUS } from '../../data/costs';
 import { wireItems, ourItems } from '../../data/feed';
 
@@ -18,7 +19,12 @@ const wire = wireItems().filter((w) => !exclude.has(w.href));
 const announcements = wire.filter((w) => w.cats.some((c) => ['deals', 'proc-tech', 'talent'].includes(c))).slice(0, 4);
 const reading = wire.filter((w) => !announcements.includes(w)).slice(0, 5);
 const today = new Date().toISOString().slice(0, 10);
-const upcoming = events.events.filter((e) => e.date >= today).sort((a, b) => a.date.localeCompare(b.date)).slice(0, 4);
+const upcoming = events.events.filter((e) => e.date >= today).sort((a, b) => a.date.localeCompare(b.date)).slice(0, 3);
+const confs = conferences.events.filter((c) => c.end >= today).sort((a, b) => a.start.localeCompare(b.start)).slice(0, 3);
+const span = (a: string, b: string) => {
+  const f = (d: string, o: Intl.DateTimeFormatOptions) => new Date(d + 'T00:00:00Z').toLocaleDateString('en-US', { ...o, timeZone: 'UTC' });
+  return a.slice(0, 7) === b.slice(0, 7) ? `${f(a, { month: 'short', day: 'numeric' })}–${f(b, { day: 'numeric' })}, ${a.slice(0, 4)}` : `${f(a, { month: 'short', day: 'numeric' })}–${f(b, { month: 'short', day: 'numeric', year: 'numeric' })}`;
+};
 const days = (d: string) => Math.round((Date.parse(d + 'T00:00:00Z') - Date.parse(today + 'T00:00:00Z')) / DAY);
 const longDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'long', day: 'numeric', timeZone: 'UTC' });
 const movers = [...categories].sort((a, b) => Math.abs(b.m3ann) - Math.abs(a.m3ann)).slice(0, 5);
@@ -57,7 +63,7 @@ const on = (k: string) => show.includes(k);
     </section>
   )}
 
-  {on('events') && upcoming.length > 0 && (
+  {on('events') && (upcoming.length > 0 || confs.length > 0) && (
     <section class="rmod">
       <h2>Key dates and events</h2>
       <ul class="dates">
@@ -68,6 +74,11 @@ const on = (k: string) => show.includes(k);
           </li>
         ))}
       </ul>
+      {confs.length > 0 && (
+        <ul class="confs">
+          {confs.map((c) => <li><a href={c.url} target="_blank" rel="noopener">{c.name}</a><small>{span(c.start, c.end)}, {c.place}</small></li>)}
+        </ul>
+      )}
       <a class="rmore" href="/trackers/tariff-deadlines/">All tariff deadlines</a>
     </section>
   )}

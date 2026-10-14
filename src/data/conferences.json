@@ -1,0 +1,8 @@
+{
+  "note": "Industry conferences for the Key dates and events module. Add only dates confirmed on the organizer's own page, and record when you checked.",
+  "events": [
+    { "start": "2027-02-08", "end": "2027-02-10", "name": "Manifest Vegas 2027", "place": "Las Vegas", "url": "https://manife.st/", "checked": "2026-10-14" },
+    { "start": "2027-05-03", "end": "2027-05-05", "name": "Gartner Supply Chain Symposium/Xpo", "place": "Orlando, FL", "url": "https://www.gartner.com/en/conferences/na/supply-chain-us", "checked": "2026-10-14" },
+    { "start": "2027-05-16", "end": "2027-05-19", "name": "ISM World 2027", "place": "Washington, D.C.", "url": "https://www.ismworld.org/events/conferences-and-events/upcoming-events", "checked": "2026-10-14" }
+  ]
+}
