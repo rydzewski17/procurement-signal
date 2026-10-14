@@ -7,16 +7,17 @@ export interface Vendor {
   seller?: string | null; founded?: number | null; hq?: string | null;
   mix?: { small?: number; mid?: number; large?: number } | null;
   bestFor?: string; what?: string; likes?: string[]; flags?: string[];
-  scores?: Record<string, number> | null; affiliated?: boolean; note?: string | null;
+  scores?: Record<string, number> | null; affiliated?: boolean; note?: string | null; take?: string;
 }
 export interface SoftwareCategory {
   slug: string; name: string; short: string; accent: string; blurb: string; answer: string;
   g2: { category: string; url: string; products: number; avg: number | null; updated: string };
   scoreAvg: Record<string, number>; choose: [string, string][]; pricing: string; implementation: string;
   candidates: string[]; vendors: Vendor[];
+  market?: string; trends?: string[]; scenarios?: [string, string, string][];
 }
 
-export const SOFTWARE = raw as unknown as { updated: string; minReviews: number; rubric: { id: string; label: string }[]; method: string; disclosure: string; categories: SoftwareCategory[] };
+export const SOFTWARE = raw as unknown as { updated: string; analysisUpdated?: string; minReviews: number; rubric: { id: string; label: string }[]; method: string; disclosure: string; categories: SoftwareCategory[] };
 
 export const slugify = (s: string) => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
@@ -32,7 +33,7 @@ export function teamAverage(v: Vendor): number | null {
 
 export function rankTeam(c: SoftwareCategory) {
   const scored = c.vendors.map((v) => ({ v, avg: teamAverage(v) })).filter((x) => x.avg !== null)
-    .sort((a, b) => (b.avg! - a.avg!));
+    .sort((a, b) => (b.avg! - a.avg!) || ((b.v.g2.rating ?? 0) - (a.v.g2.rating ?? 0)) || (b.v.g2.reviews - a.v.g2.reviews));
   return { ranked: scored, pending: c.vendors.filter((v) => teamAverage(v) === null) };
 }
 

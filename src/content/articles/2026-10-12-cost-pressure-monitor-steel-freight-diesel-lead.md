@@ -26,6 +26,14 @@ sources:
     url: "https://fred.stlouisfed.org/"
   - name: "Baker Donelson — Trump Overhauls Section 232 Tariffs"
     url: "https://www.bakerdonelson.com/trump-overhauls-section-232-tariffs-what-metals-and-pharmaceutical-importers-need-to-know"
+categories: ["metals", "energy", "freight"]
+faqs:
+  - q: "Which input costs are rising fastest for procurement teams?"
+    a: "Steel mill products, deep-sea freight and No. 2 diesel are rising fastest in our Cost Pressure Monitor, based on U.S. producer price data through August 2026."
+  - q: "Which categories are easing?"
+    a: "Aluminum mill shapes, plastic resins, industrial chemicals and semiconductors are easing over three months, although aluminum is still well above a year ago."
+  - q: "How does the Cost Pressure Monitor classify categories?"
+    a: "It reads monthly U.S. producer price indexes for 12 categories and labels each rising fast, rising, stable or easing, based mainly on the annualized three-month pace of change."
 ---
 
 ## Why it matters
@@ -48,13 +56,19 @@ Procurement Signal's [Cost Pressure Monitor](/cost-monitor/) launches today. It 
 
 **Easing (4):** aluminum mill shapes (still up 27.3% on the year, but 5.9% below their June high), plastic resins, industrial chemicals and semiconductors. Semiconductor producer prices are down 3.1% over 12 months and are the only category below year-ago levels.
 
-## What buyers should do
+## What procurement teams should do
 
 - **Steel and freight:** extend fixed-price or capped terms where suppliers will agree, and push for index-linked escalation where they won't. Flat percentage increases tend to lag in a market moving this fast.
 - **Diesel-exposed spend:** review fuel surcharge tables in carrier and delivered-price contracts. Volatility makes surcharge mechanics matter more than the base rate.
 - **Aluminum and resins:** avoid committing to long fixed prices set at spring highs. Use the pullback to re-quote.
 - **Packaging:** corrugated pricing is accelerating from a low base. Check when your box contracts reset.
 - **Budgets:** set category-specific inflation assumptions for 2027 instead of a single rate.
+
+## What to watch next
+
+- **September producer price data.** The next monthly update will show whether steel's 40%-plus annualized pace is holding or whether August was the peak.
+- **Diesel volatility.** A 17.7% one-month jump after a spring decline means fuel surcharge tables will swing again; watch weekly EIA prices alongside the monthly index.
+- **Easing categories turning.** Aluminum, resins, chemicals and chips are easing now. If they flatten, the window to re-quote closes.
 
 ## The bigger picture
 

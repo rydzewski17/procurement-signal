@@ -6,18 +6,24 @@ import { getCollection } from 'astro:content';
 import events from '../../data/events.json';
 import conferences from '../../data/conferences.json';
 import { categories, fmtPct, STATUS } from '../../data/costs';
-import { wireItems, ourItems } from '../../data/feed';
+import { ourItems, feedFor } from '../../data/feed';
 
 interface Props { posts: any[]; show?: string[]; exclude?: Set<string> }
-const { posts, show = ['software', 'popular', 'guides', 'announcements', 'reading', 'events', 'outlook', 'ad'], exclude = new Set() } = Astro.props;
+const { posts, show = ['software', 'popular', 'analysis', 'moves', 'guides', 'events', 'outlook', 'ad'], exclude = new Set() } = Astro.props;
 const DAY = 864e5;
 const newest = posts[0]?.data.date.valueOf() ?? 0;
 // Most popular: until reader analytics are connected, ranked by our signal score and freshness.
-const popular = [...posts].sort((a, b) => (b.data.signal * 2 - (newest - b.data.date.valueOf()) / DAY) - (a.data.signal * 2 - (newest - a.data.date.valueOf()) / DAY)).slice(0, 5);
+const popPool = posts.filter((p) => !exclude.has(`/articles/${p.id}/`)).length >= 5 ? posts.filter((p) => !exclude.has(`/articles/${p.id}/`)) : posts;
+const popular = [...popPool].sort((a, b) => (b.data.signal * 2 - (newest - b.data.date.valueOf()) / DAY) - (a.data.signal * 2 - (newest - a.data.date.valueOf()) / DAY)).slice(0, 5);
 const guides = await getCollection('guides');
-const wire = wireItems().filter((w) => !exclude.has(w.href));
-const announcements = wire.filter((w) => w.cats.some((c) => ['deals', 'proc-tech', 'talent'].includes(c))).slice(0, 4);
-const reading = wire.filter((w) => !announcements.includes(w)).slice(0, 5);
+const popHrefs = new Set(popular.map((p) => `/articles/${p.id}/`));
+// Company moves: our stories on deals, investments and supplier news.
+const moves = feedFor(posts, ['deals'], new Set([...exclude, ...popHrefs])).slice(0, 4);
+const movesFill = moves.length >= 3 ? moves : feedFor(posts, ['deals'], popHrefs).slice(0, 4);
+// Analysis: our signal reports and analysis pieces.
+const analysisAll = ourItems(posts.filter((p) => p.data.type !== 'news')).filter((x) => !popHrefs.has(x.href) && !movesFill.some((m) => m.href === x.href));
+const analysisFresh = analysisAll.filter((x) => !exclude.has(x.href));
+const analysis = (analysisFresh.length >= 3 ? analysisFresh : analysisAll).slice(0, 4);
 const today = new Date().toISOString().slice(0, 10);
 const upcoming = events.events.filter((e) => e.date >= today).sort((a, b) => a.date.localeCompare(b.date)).slice(0, 3);
 const confs = conferences.events.filter((c) => c.end >= today).sort((a, b) => a.start.localeCompare(b.start)).slice(0, 3);
@@ -48,18 +54,19 @@ const on = (k: string) => show.includes(k);
     </section>
   )}
 
-  {on('announcements') && announcements.length > 0 && (
+  {on('analysis') && analysis.length > 0 && (
     <section class="rmod">
-      <h2>Company announcements</h2>
-      <ul class="lines">{announcements.map((w) => <Line item={w} />)}</ul>
+      <h2>Analysis and signal reports</h2>
+      <ul class="lines lines-thumb">{analysis.map((x) => <Line item={x} thumb />)}</ul>
+      <a class="rmore" href="/signals/">All signal reports</a>
     </section>
   )}
 
-  {on('reading') && reading.length > 0 && (
+  {on('moves') && movesFill.length > 0 && (
     <section class="rmod">
-      <h2>What we're reading</h2>
-      <ul class="lines">{reading.map((w) => <Line item={w} />)}</ul>
-      <a class="rmore" href="/wire/">All industry headlines</a>
+      <h2>Company moves</h2>
+      <ul class="lines lines-thumb">{movesFill.map((x) => <Line item={x} thumb />)}</ul>
+      <a class="rmore" href="/categories/deals/">More company news</a>
     </section>
   )}
 

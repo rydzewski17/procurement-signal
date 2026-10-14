@@ -5,10 +5,10 @@ import SignalMeter from './SignalMeter.astro';
 import Kicker from './Kicker.astro';
 const { post, compact = false } = Astro.props;
 const d = post.data;
-const fmt = (x: Date) => x.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'America/New_York' });
+const fmt = (x: Date) => x.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
 const why = post.body?.match(/## Why it matters\s+([\s\S]*?)(\n## |$)/)?.[1]?.trim().split('\n')[0]?.replace(/[*_]/g, '') ?? '';
 const act = (() => {
-  const m = post.body?.match(/## What buyers should do\s+([\s\S]*?)(\n## |$)/);
+  const m = post.body?.match(/## What (?:buyers|procurement teams) should do\s+([\s\S]*?)(\n## |$)/);
   const first = m?.[1]?.split('\n').find((l) => /^\s*[-*]\s+/.test(l));
   return first ? first.replace(/^\s*[-*]\s+/, '').replace(/[*_`]/g, '').trim() : '';
 })();

@@ -3,7 +3,7 @@ import { TOPICS } from '../data/site';
 import Media from './Media.astro';
 const { post, size = 'river', showTopic = true } = Astro.props;
 const d = post.data;
-const date = d.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+const date = d.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 const href = `/articles/${post.id}/`;
 const topicName = TOPICS[d.topic].name;
 const topicHref = `/topics/${d.topic}/`;

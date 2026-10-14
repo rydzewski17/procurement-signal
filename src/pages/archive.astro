@@ -1,27 +1,73 @@
 ---
+// Every Procurement Signal story, newest first, in the same rich list as the homepage.
 import Base from '../layouts/Base.astro';
+import Media from '../components/Media.astro';
+import Kicker from '../components/Kicker.astro';
+import Rail from '../components/v4/Rail.astro';
 import { getPosts } from '../data/posts';
-import { TOPICS } from '../data/site';
+import { TYPE_LABEL } from '../data/site';
+import { SECTIONS, categoryBySlug, sectionOf } from '../data/categories.mjs';
+import { ourItems } from '../data/feed';
+
 const posts = await getPosts();
-const groups = new Map<string, typeof posts>();
-for (const p of posts) {
-  const k = p.data.date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
-  groups.set(k, [...(groups.get(k) ?? []), p]);
+const items = ourItems(posts).sort((a, b) => b.t - a.t);
+const groups = new Map<string, typeof items>();
+for (const x of items) {
+  const k = new Date(x.t).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+  groups.set(k, [...(groups.get(k) ?? []), x]);
 }
+const secOf = (x: any) => sectionOf(x.cats).id;
 ---
-<Base title="Archive" description="Every story published by Procurement Signal.">
-  <div class="page narrow">
-    <div class="page-head"><h1>Archive</h1><p>{posts.length} stories and counting.</p></div>
-    {[...groups].map(([month, items]) => (
-      <>
-        <div class="month">{month}</div>
-        {items.map((p) => (
-          <div class="archive-row">
-            <a href={`/articles/${p.id}/`}>{p.data.title}</a>
-            <span>{TOPICS[p.data.topic].name}</span>
-          </div>
-        ))}
-      </>
-    ))}
+<Base title="All stories" description="Every Procurement Signal story and analysis, newest first: tariffs, freight, supplier risk, costs, procurement technology and company moves." section="archive">
+  <div class="sec-head">
+    <div class="crumbs"><a href="/">Home</a> / All stories</div>
+    <h1>All stories</h1>
+    <p>{items.length} stories and analyses from the Procurement Signal newsroom, newest first. Filter by section.</p>
+    <nav class="sec-chips arch-chips" aria-label="Filter by section">
+      <button type="button" class="on" data-s="all">All</button>
+      {SECTIONS.map((s) => <button type="button" data-s={s.id}>{s.name}</button>)}
+    </nav>
+  </div>
+  <div class="home-grid">
+    <div class="home-main">
+      {[...groups].map(([day, list]) => (
+        <section class="arch-day">
+          <h2 class="arch-date">{day}</h2>
+          {list.map((x) => (
+            <article class="lrow" data-s={secOf(x)}>
+              <a class="lthumb" href={x.href} tabindex="-1" aria-hidden="true"><Media post={x.post} ratio="card" /></a>
+              <div class="lbody">
+                <div class="lkick"><Kicker topic={x.post.data.topic} />{x.post.data.type !== 'news' && <span class="ltype">{TYPE_LABEL[x.post.data.type]}</span>}</div>
+                <h3><a href={x.href}>{x.title}</a></h3>
+                <p>{x.dek}</p>
+                {x.fact && <p class="lfact"><b>{x.fact.value}</b> {x.fact.label}</p>}
+                <span class="lmeta">{x.mins} min read{categoryBySlug[x.cats[0]] && <> · <a href={`/categories/${x.cats[0]}/`}>{categoryBySlug[x.cats[0]].name}</a></>}</span>
+              </div>
+            </article>
+          ))}
+        </section>
+      ))}
+    </div>
+    <Rail posts={posts} show={['popular', 'software', 'outlook', 'events', 'ad']} />
   </div>
 </Base>
+<script is:inline>
+  (() => {
+    const chips = [...document.querySelectorAll('.arch-chips button')];
+    chips.forEach((b) => b.addEventListener('click', () => {
+      chips.forEach((c) => c.classList.toggle('on', c === b));
+      document.querySelectorAll('.arch-day').forEach((day) => {
+        let n = 0;
+        day.querySelectorAll('.lrow').forEach((r) => { const ok = b.dataset.s === 'all' || r.dataset.s === b.dataset.s; r.hidden = !ok; if (ok) n++; });
+        day.hidden = n === 0;
+      });
+    }));
+  })();
+</script>
+<style>
+  .arch-chips button { font: 600 13.5px/1 var(--ui); color: var(--ink); background: var(--navy-tint); padding: 8px 12px; border: 0; cursor: pointer; }
+  .arch-chips button.on, .arch-chips button:hover { background: var(--navy); color: #fff; }
+  .arch-date { font: 600 13px/1 var(--ui); color: var(--teal); margin: 26px 0 0; padding-bottom: 8px; border-bottom: 3px solid var(--ink); }
+  .arch-day:first-child .arch-date { margin-top: 0; }
+  .lrow[hidden], .arch-day[hidden] { display: none; }
+</style>

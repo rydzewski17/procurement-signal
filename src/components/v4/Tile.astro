@@ -13,7 +13,7 @@ const ext = item.ext ? { target: '_blank', rel: 'noopener' } : {};
       <Kicker topic={item.post.data.topic} />
       <h3><a href={item.href}>{item.title}</a></h3>
       {showDek && item.dek && <p>{item.dek}</p>}
-      <span class="tile-meta">{shortDate(item.t)}</span>
+      <span class="tile-meta">{shortDate(item.t)}{item.mins && <> · {item.mins} min read</>}</span>
     </div>
   </article>
 ) : (

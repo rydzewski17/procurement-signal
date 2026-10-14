@@ -1,15 +1,14 @@
 ---
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import Card from '../../components/Card.astro';
+import Rail from '../../components/v4/Rail.astro';
 import Media from '../../components/Media.astro';
 import KeyFacts from '../../components/KeyFacts.astro';
 import Tile from '../../components/v4/Tile.astro';
-import { catsOf, feedFor, ourItems, wireItems, clip, shortDate } from '../../data/feed';
+import { catsOf, feedFor, ourItems, clip, shortDate } from '../../data/feed';
 import { sectionOf, categoryBySlug } from '../../data/categories.mjs';
 import { getPosts } from '../../data/posts';
 import { slugify } from '../../data/tags';
-import { trackers } from '../../data/trackers';
 import { SITE, TOPICS, TYPE_LABEL } from '../../data/site';
 
 export async function getStaticPaths() {
@@ -31,8 +30,9 @@ const textOf = (x: string) => x.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').tr
 const whyIdx = parts.findIndex((x) => headingOf(x) === 'why it matters');
 const why = whyIdx >= 0 ? textOf(parts[whyIdx].replace(/<h2[\s\S]*?<\/h2>/, '')) : '';
 if (whyIdx >= 0) parts.splice(whyIdx, 1);
-const doIdx = parts.findIndex((x) => headingOf(x).startsWith('what buyers should do'));
+const doIdx = parts.findIndex((x) => /^what (buyers|procurement teams) should do/.test(headingOf(x)));
 const actions = doIdx >= 0 ? [...parts[doIdx].matchAll(/<li>([\s\S]*?)<\/li>/g)].map((m) => textOf(m[1])).slice(0, 2) : [];
+if (doIdx >= 0) parts[doIdx] = parts[doIdx].replace('<h2', '<h2 class="do-head"').replace(/<ul>/, '<ul class="do-list">');
 const cut = Math.min(2, parts.length);
 const before = intro + parts.slice(0, cut).join('');
 const after = parts.slice(cut).join('');
@@ -42,13 +42,13 @@ const cats = catsOf(post).filter((c) => categoryBySlug[c]);
 const primary = cats[0];
 const sec = sectionOf(cats);
 const self = `/articles/${post.id}/`;
-const slider = primary ? feedFor(posts, [primary], new Set([self])).slice(0, 6) : [];
+const slider = primary ? feedFor(posts, [primary], new Set([self]), true).slice(0, 6) : [];
 const words = post.body ? post.body.split(/\s+/).length : 0;
 const mins = Math.max(1, Math.round(words / 230));
 const idx = posts.findIndex((p) => p.id === post.id);
 const newer = idx > 0 ? posts[idx - 1] : null;
 const older = idx >= 0 && idx < posts.length - 1 ? posts[idx + 1] : null;
-const fmt = (x: Date) => x.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+const fmt = (x: Date) => x.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 
 // Read next: score other stories by shared tags, same topic and recency.
 const myTags = new Set(d.tags.map(slugify));
@@ -56,25 +56,39 @@ const scored = posts.filter((p) => p.id !== post.id).map((p) => ({
   p, s: p.data.tags.filter((t) => myTags.has(slugify(t))).length * 3 + (p.data.topic === d.topic ? 2 : 0) + p.data.signal / 5,
 })).sort((a, b) => b.s - a.s);
 const readNext = scored.slice(0, 6).map((x) => x.p);
-const latest = posts.filter((p) => p.id !== post.id && !readNext.includes(p)).slice(0, 5);
-// Related: our closest stories, then headlines from the same or neighboring categories.
+// Related: our closest stories by tags, topic and category, not already in the slider.
 const relatedSeen = new Set([self, ...slider.map((x) => x.href)]);
-const related = [...ourItems(readNext), ...feedFor(posts, sec.slugs, relatedSeen).filter((x) => x.ext)]
-  .filter((x) => !relatedSeen.has(x.href)).slice(0, 6);
-// Top 10 this week: our stories by signal, then the newest industry headlines.
+const related = ourItems(scored.map((x) => x.p)).filter((x) => !relatedSeen.has(x.href)).slice(0, 6);
+// Top 10 this week: our stories ranked by signal and freshness.
 const DAY = 864e5;
 const newestT = posts[0]?.data.date.valueOf() ?? 0;
 const ranked = posts.filter((p) => p.id !== post.id).sort((a, b) => (b.data.signal * 2 - (newestT - b.data.date.valueOf()) / DAY) - (a.data.signal * 2 - (newestT - a.data.date.valueOf()) / DAY));
-const top10 = [...ourItems(ranked), ...wireItems()].slice(0, 10);
+const top10 = ourItems(ranked).slice(0, 10);
 
 const url = new URL(`/articles/${post.id}/`, Astro.site).toString();
 const enc = encodeURIComponent;
-const jsonLd = {
-  '@context': 'https://schema.org', '@type': 'NewsArticle', headline: d.title, description: d.dek,
-  datePublished: d.date.toISOString(), dateModified: (d.updated ?? d.date).toISOString(),
-  author: { '@type': 'Organization', name: d.author }, publisher: { '@type': 'Organization', name: SITE.name },
-  mainEntityOfPage: url, articleSection: TOPICS[d.topic].name, keywords: d.tags.join(', '),
-};
+const site = Astro.site?.toString() ?? '/';
+const imageUrl = d.image?.src ? `${d.image.src}${d.image.src.includes('?') ? '&' : '?'}w=1600&q=80` : undefined;
+const graph: any[] = [
+  {
+    '@type': 'NewsArticle', headline: d.title, description: d.dek, image: imageUrl ? [imageUrl] : undefined,
+    datePublished: d.date.toISOString(), dateModified: (d.updated ?? d.date).toISOString(),
+    author: { '@type': 'Organization', name: d.author, url: new URL('/about/', site).toString() },
+    publisher: { '@type': 'NewsMediaOrganization', name: SITE.name, url: site },
+    mainEntityOfPage: url, articleSection: sec.name, keywords: d.tags.join(', '), wordCount: words,
+    about: cats.map((c) => ({ '@type': 'Thing', name: categoryBySlug[c].name })),
+    citation: d.sources.map((x: any) => ({ '@type': 'CreativeWork', name: x.name, url: x.url })),
+  },
+  {
+    '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: site },
+      { '@type': 'ListItem', position: 2, name: sec.name, item: new URL(`/sections/${sec.id}/`, site).toString() },
+      ...(primary ? [{ '@type': 'ListItem', position: 3, name: categoryBySlug[primary].name, item: new URL(`/categories/${primary}/`, site).toString() }] : []),
+    ],
+  },
+];
+if (d.faqs?.length) graph.push({ '@type': 'FAQPage', mainEntity: d.faqs.map((f: any) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
+const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
 ---
 <Base title={d.title} description={d.dek} type="article" jsonLd={jsonLd} section={d.topic}>
   <div class="article-layout">
@@ -129,6 +143,25 @@ const jsonLd = {
 
       <div class="prose" set:html={after} />
 
+      {d.faqs?.length > 0 && (
+        <section class="faq4" aria-labelledby="faq-h">
+          <h2 id="faq-h">Questions procurement teams are asking</h2>
+          {d.faqs.map((f: any, i: number) => (
+            <details open={i === 0}>
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))}
+        </section>
+      )}
+
+      {cats.length > 0 && (
+        <div class="filed">
+          <span>Filed under</span>
+          {cats.map((c) => <a href={`/categories/${c}/`}>{categoryBySlug[c].name}</a>)}
+        </div>
+      )}
+
       {d.tags.length > 0 && (
         <div class="tagline">
           <span>Topics in this story</span>
@@ -143,24 +176,32 @@ const jsonLd = {
         </nav>
       )}
 
+      <section class="method">
+        <h2>How we reported this</h2>
+        <p>This {d.type === 'news' ? 'story' : TYPE_LABEL[d.type].toLowerCase()} draws on {d.sources.length} {d.sources.length === 1 ? 'source' : 'sources'}, listed below, and reflects figures as reported on {fmt(d.date)}. The sections on why it matters and what procurement teams should do are Procurement Signal analysis. It is not legal or financial advice. See our <a href="/editorial-standards/">editorial standards</a>.</p>
+      </section>
+
       <section class="sources">
         <h2>Sources</h2>
         <ol>{d.sources.map((s) => <li><a href={s.url} rel="noopener" target="_blank">{s.name}</a></li>)}</ol>
       </section>
     </article>
 
-    <aside class="side">
-      <div class="sticky">
-        {tocItems.length > 0 && (
-          <nav class="toc" aria-label="On this page">
-            <h2>On this page</h2>
-            <ol>{tocItems.map((h) => <li><a href={`#${h.slug}`} data-toc={h.slug}>{h.text}</a></li>)}</ol>
-          </nav>
-        )}
-        {latest.length > 0 && <h2 class="block-head">Latest headlines</h2>}
-        {latest.map((p) => <Card post={p} size="thumb" />)}
-        <h2 class="block-head" style="margin-top:28px">Trackers</h2>
-        <ul class="linklist">{trackers.map((t) => <li><a href={`/trackers/${t.slug}/`}>{t.title}</a></li>)}</ul>
+    <aside class="side side4">
+      {tocItems.length > 0 && (
+        <nav class="toc toc4" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>{tocItems.map((h) => <li><a href={`#${h.slug}`} data-toc={h.slug}>{h.text}</a></li>)}</ol>
+        </nav>
+      )}
+      <Rail posts={posts.filter((p) => p.id !== post.id)} show={['popular', 'software', 'analysis', 'outlook', 'events']} exclude={new Set([self])} />
+      <div class="side-sticky">
+        <section class="side-nl">
+          <h2>Get the morning brief</h2>
+          <p>The procurement stories that matter and what they mean for your categories, every weekday.</p>
+          <a class="nl-btn" href="#newsletter">Sign up free</a>
+        </section>
+        <div class="ad-slot">Advertisement</div>
       </div>
     </aside>
   </div>
@@ -202,8 +243,8 @@ const jsonLd = {
       <ol>
         {top10.map((x) => (
           <li>
-            <a href={x.href} target={x.ext ? '_blank' : undefined} rel={x.ext ? 'noopener' : undefined}>{clip(x.title, 120)}</a>
-            <span>{x.ext ? x.source : 'Procurement Signal'}, {shortDate(x.t)}</span>
+            <a href={x.href}>{clip(x.title, 120)}</a>
+            <span>{categoryBySlug[x.cats[0]]?.name ?? 'Procurement Signal'}, {shortDate(x.t)}</span>
           </li>
         ))}
       </ol>

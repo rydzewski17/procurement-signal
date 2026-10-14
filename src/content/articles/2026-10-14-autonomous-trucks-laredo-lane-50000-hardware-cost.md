@@ -1,0 +1,64 @@
+---
+title: "Autonomous trucks reach the Laredo border lane as hardware costs fall toward $50,000 a truck"
+dek: "Kodiak and Charger Logistics are running a 435-mile Dallas–Laredo lane with safety drivers ahead of driverless operation, while Bot Auto targets a $50,000 autonomy kit. Shippers on Texas lanes should start asking carriers about it."
+date: 2026-10-14
+topic: ai-procurement
+type: news
+signal: 3
+categories: ["ai", "freight"]
+keyfacts:
+  - value: "435 miles"
+    label: "Dallas to Laredo autonomous lane"
+  - value: "~$50,000"
+    label: "Bot Auto's target hardware cost per truck"
+  - value: "96%"
+    label: "Kodiak's long-haul safety-case readiness score, end of September"
+  - value: "$350B+"
+    label: "trade through the Port of Laredo in 2025"
+tags: ["autonomous trucks", "freight technology", "Texas", "Mexico trade", "capacity"]
+image:
+  src: "https://images.unsplash.com/photo-1786081061738-ed1e6abd3ac5?ixlib=rb-4.1.0"
+  alt: "A white semi-truck driving along a highway beside a concrete retaining wall"
+  credit: "Nishat Samadzai"
+  creditUrl: "https://unsplash.com/photos/white-semi-truck-on-highway-9rgdubqB9vY"
+  license: "Unsplash"
+sources:
+  - name: "FreightWaves — Kodiak, Charger launch autonomous Dallas–Laredo lane"
+    url: "https://www.freightwaves.com/news/kodiak-charger-autonomous-trucks-dallas-laredo"
+  - name: "FreightWaves — Bot Auto taps Lenovo, Nvidia, pegs autonomy hardware at $50,000"
+    url: "https://www.freightwaves.com/news/bot-auto-lenovo-ad1-nvidia-driverless-trucks"
+faqs:
+  - q: "Are driverless trucks hauling commercial freight in Texas?"
+    a: "Yes, on limited lanes. Kodiak has run driverless trucks in the Permian Basin since December 2024, and Bot Auto completed a fully driverless commercial run from Houston to the Dallas area in April. The new Dallas–Laredo lane still carries a safety driver."
+  - q: "How should shippers contract for autonomous freight?"
+    a: "Through carriers. Models vary: Kodiak supplies its driver system to carriers that own the trucks, while other providers hold the operating authority and insurance themselves. Ask who carries liability and insurance before tendering freight."
+---
+
+## Why it matters
+
+Autonomous trucking is moving from pilots to scheduled commercial lanes, starting with Texas corridors that matter to cross-border supply chains. Lower hardware costs are what turn it from a demonstration into a capacity option, which matters in a market where carriers are leaving and contract rates are rising.
+
+## The details
+
+**Dallas–Laredo.** Kodiak AI and Charger Logistics, an asset-based U.S. and Mexico carrier, are running autonomous trucks between Charger's Dallas and Laredo terminals, 435 miles apart. The first delivery ran Sept. 8. The trucks haul refrigerated and dry van loads for consumer packaged goods and food and beverage customers, with a safety driver aboard until Kodiak completes its safety case. Kodiak's readiness measure reached 96% at the end of September, and it plans driverless long-haul service on its Dallas–Houston lane by year-end. Laredo handled more than $350 billion in trade in 2025, nearly 40% of U.S. trade with Mexico, per Kodiak.
+
+Kodiak supplies its system as a service on trucks the carrier owns and operates. Charger also has a separate deal with Aurora on the same lane, in which Aurora holds the operating authority, controls the truck and carries the insurance.
+
+**Hardware costs.** Houston-based Bot Auto says its full autonomy hardware, including compute and sensors, will cost about $50,000 per truck using a Lenovo controller built on Nvidia's platform, starting in the first quarter of 2027. Bot Auto says that is three to eight times less than other systems, based on industry estimates of $150,000 to $400,000 for autonomy alone. The company runs about 350 loads a month in Texas and completed a fully driverless 231-mile commercial run from Houston to the Dallas area in April.
+
+## What procurement teams should do
+
+- **Ask your Texas carriers about autonomy.** For Dallas, Houston and Laredo lanes, ask whether they are testing autonomous capacity and on what terms.
+- **Clarify liability before tendering.** Contract structures differ: some providers carry the operating authority and insurance, others supply technology to a carrier that does. Your terms should state who is responsible.
+- **Start with dull, steady lanes.** Autonomy works best on predictable, high-frequency lanes between terminals. Those are the lanes to pilot.
+- **Track service, not novelty.** Measure on-time performance, claims and cost per mile against conventional capacity on the same lane.
+
+## What to watch next
+
+- **Driverless operation.** Kodiak plans driverless long-haul on Dallas–Houston by year-end; Laredo would follow once its safety case is complete.
+- **Bot Auto's 2027 hardware.** If the $50,000 kit ships in the first quarter of 2027, autonomy economics change for mid-size carriers, not just the largest fleets.
+- **Insurance and liability terms.** Different models (Kodiak as a service, Aurora holding operating authority) put liability in different places; watch how carriers price it.
+
+## The bigger picture
+
+Autonomy won't fix this year's capacity squeeze, but it is becoming a credible piece of long-term freight sourcing on specific corridors. With truckload contract rates at a [52-week high](/articles/2026-10-14-truckload-contract-rates-52-week-high-bid-season/) and cross-border driver supply under pressure, new capacity models deserve a place in multi-year freight strategy.

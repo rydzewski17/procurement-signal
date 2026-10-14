@@ -4,20 +4,20 @@ This file is the standing instruction set for each automated newsroom run. A run
 
 ## Mission
 
-**Audience:** B2B procurement, sourcing and supply chain professionals: CPOs, category managers, buyers, supply chain and logistics leaders, and the finance and operations teams who work with them. Every story must matter to someone who buys, sources or moves goods for a business. Skip consumer news, retail deals and general business stories without a procurement angle.
+**Audience:** B2B procurement, sourcing and supply chain professionals: CPOs, category managers, sourcing leads, supply chain and logistics leaders, and the finance and operations teams who work with them. Every story must matter to someone who buys, sources or moves goods for a business. Skip consumer news, retail deals and general business stories without a procurement angle.
 
-Publish the procurement stories that matter to CPOs, category managers and buyers, each with a clear "what it means for procurement" angle. Quality over volume: 2–4 strong stories per run beats 10 thin ones. Google rewards original synthesis and penalizes mass-produced rewrites. Every story must earn its place.
+Publish the procurement stories that matter to CPOs, category managers and sourcing teams, each with a clear "what it means for procurement" angle. Quality over volume: 2–4 strong stories per run beats 10 thin ones. Google rewards original synthesis and penalizes mass-produced rewrites. Every story must earn its place.
 
 ## Each run, in order
 
 1. **Check what's already published.** List `src/content/articles/` and read the frontmatter of the last ~40 files (title, date, tags). Never publish a story already covered unless there is material new information. If so, update the existing article (add `updated:` and a new section) instead of writing a new one.
 2. **Scan for news.** Run web searches across the beats in `SOURCES.md` for the last 24–48 hours. Use at least 12 distinct searches spanning all beats. Fetch the most promising articles and primary sources.
-3. **Select 2–4 stories.** Score candidates on: impact on buyers' cost/risk/operations (most important), recency, breadth (how many buyers it affects), and whether a primary source exists. Assign `signal` 1–5 (5 = every procurement leader needs to know today). Skip anything below 3. Skip pure vendor marketing, minor product updates, webinars and sponsored content.
+3. **Select 2–4 stories.** Score candidates on: impact on procurement teams' cost/risk/operations (most important), recency, breadth (how many procurement teams it affects), and whether a primary source exists. Assign `signal` 1–5 (5 = every procurement leader needs to know today). Skip anything below 3. Skip pure vendor marketing, minor product updates, webinars and sponsored content.
 4. **Research each story** from at least 2 independent sources, at least one primary where possible (government notice, company release, filing, official data).
 5. **Write each article** to the template below.
 6. **Update trackers** in `src/data/trackers/*.json` when a story adds or changes an entry. Update `updated` to today's date.
 7. **Update the events bar** in `src/data/events.json`: add any new dated event a story covers (an effective date, deadline, expiry or vote) with `date` (YYYY-MM-DD), a short `label` (under 50 characters) and `href` to our story. Remove events more than 60 days old. The bar shows countdowns, price alerts and trending topics automatically.
-8. **Update category analysis** in `src/data/category-impact.json` when a story or the monthly price data changes a category's picture. For each affected category, `now` must be factual and cite a source in `sources` (our article or the original publisher); `meaning` is our analysis of what it means for buyers and suppliers, in one or two sentences. Update `asOf` to today's date. Never state a figure that is not in a cited source.
+8. **Update category analysis** in `src/data/category-impact.json` when a story or the monthly price data changes a category's picture. For each affected category, `now` must be factual and cite a source in `sources` (our article or the original publisher); `meaning` is our analysis of what it means for category strategy and suppliers, in one or two sentences. Update `asOf` to today's date. Never state a figure that is not in a cited source.
 9. **Build to verify:** run `npm ci` (first time) then `npm run build`. Fix any errors. Never push a broken build.
 10. **Commit and push** to `main` with message `newsroom: <date> — <n> stories`. Cloudflare Pages deploys automatically.
 11. **Report:** end with a short summary listing stories published, trackers updated, and anything that failed.
@@ -28,20 +28,24 @@ File: `src/content/articles/YYYY-MM-DD-short-slug.md` (slug: 3–7 lowercase wor
 
 ```markdown
 ---
-title: "Headline: specific, factual, includes the key entity and number. Max ~90 chars."
+title: "Our own headline: specific, factual, includes the key entity and number and the procurement angle. Never copy the source headline. Max ~110 chars."
 dek: "One sentence, 20–35 words, that adds information beyond the headline."
 date: 2026-10-12
-topic: tariffs-trade   # tariffs-trade | supplier-risk | proc-tech | commodities | public-sector | esg-regulation | ai-procurement | people-moves
+topic: tariffs-trade   # tariffs-trade | supplier-risk | proc-tech | commodities | public-sector | esg-regulation | ai-procurement | people-moves | logistics | industry
 type: news             # news | signal | analysis
 signal: 4              # 1-5
 featured: false        # true only for the single most important story of the day
 keyfacts:              # 2-4 key figures shown as a band at the top of the story. Short values, verified.
   - value: "178"
     label: "product exclusions still in force"
+categories: ["freight", "contracts"]  # 1-3 slugs from src/data/categories.mjs, most important first (decides section and breadcrumb)
 tags: ["..."]          # 3-6 tags. Reuse existing tag names exactly (check recent articles) so tag pages and Trending topics group well.
 sources:
   - name: "Publisher — Article or document title"
     url: "https://..."
+faqs:                  # 2-3 questions procurement teams search for, answered in 1-2 factual sentences. Rendered on the page with FAQPage schema.
+  - q: "...?"
+    a: "..."
 ---
 
 ## Why it matters
@@ -52,9 +56,13 @@ sources:
 
 3–6 short paragraphs or bullets: who, what, when, how much. Specific numbers, dates, names. Attribute claims ("according to the Commerce Department notice...").
 
-## What buyers should do
+## What procurement teams should do
 
 3–5 concrete, practical bullets (e.g., "Review contracts with X-origin suppliers for tariff pass-through clauses"). General guidance, never legal advice.
+
+## What to watch next
+
+3 bullets: dated events, decisions or data releases that will change the picture, grounded in the sources.
 
 ## The bigger picture
 
@@ -84,12 +92,16 @@ image:
   license: "Unsplash"
 ```
 
+## Our pages only
+
+Every list on the site (homepage, sections, categories, article rails, related stories) shows only Procurement Signal articles. Trade-press headlines in `wire.json` are research input for the newsroom, never displayed. To cover a story you found there, write our own article: our headline, our analysis, the procurement angle, and link the original in `sources`. Write for procurement teams and category managers, not "buyers" as a generic audience.
+
 ## Voice and style
 
 - Smart, direct, scannable. Short paragraphs. Write for a busy CPO reading on a phone.
 - Specific beats vague: "$2.1B", "effective Nov. 1", "38 suppliers", not "significant" or "soon".
 - No hype words: game-changing, revolutionary, unprecedented, landscape, delve, navigate, in today's fast-paced world.
-- Neutral and fair. No promotion of any vendor. Vendor news is covered for its impact on buyers.
+- Neutral and fair. No promotion of any vendor. Vendor news is covered for its impact on procurement teams.
 - American English. Headlines in sentence case.
 
 ## Hard rules
@@ -116,6 +128,6 @@ On the first run on or after the 15th of each month:
 2. If a new month exists, append it to that category's `history` and drop the oldest month, so each series keeps exactly 25 points. BLS revises recent months, so also overwrite the previous four months with the current values.
 3. Set `dataThrough` to the new month (`YYYY-MM`) and `updated` to today.
 4. Build. The site recalculates the changes and pressure labels automatically.
-5. Publish one `type: signal` story on the month's readings: which categories changed label, the biggest movers, and what buyers should do. Use only numbers computed from the data file. Run `node -e` against the JSON to compute them rather than estimating.
+5. Publish one `type: signal` story on the month's readings: which categories changed label, the biggest movers, and what procurement teams should do. Use only numbers computed from the data file. Run `node -e` against the JSON to compute them rather than estimating.
 
 Never invent or estimate an index value. If FRED is unreachable, skip the update and say so in the run report.

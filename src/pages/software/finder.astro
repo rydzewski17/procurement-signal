@@ -1,69 +1,242 @@
 ---
+// Software finder: four quick questions, then a personalized shortlist built from our
+// analyst scores, G2 ratings and reviewer company size. Runs entirely in the browser.
 import Base from '../../layouts/Base.astro';
-import { NEEDS, SIZES } from '../../data/finder';
-import { SOFTWARE, status } from '../../data/software';
-const cats = Object.fromEntries(SOFTWARE.categories.map((c) => [c.slug, { name: c.name, status: status(c) }]));
-const needs = NEEDS.map((n) => ({ ...n, live: cats[n.category]?.status === 'ranked', name: cats[n.category]?.name ?? n.label }));
+import { NEEDS, SIZES, PRIORITIES, PLATFORMS } from '../../data/finder';
+import { SOFTWARE, teamAverage, rankTeam, mixOf, slugify } from '../../data/software';
+
+const cats = Object.fromEntries(SOFTWARE.categories.map((c) => [c.slug, {
+  slug: c.slug, name: c.name, accent: c.accent, answer: c.answer, choose: c.choose.slice(0, 4), pricing: c.pricing, implementation: c.implementation,
+  vendors: c.vendors.map((v) => ({
+    name: v.name, id: slugify(v.name), team: v.team, avg: teamAverage(v), g2: v.g2.rating, reviews: v.g2.reviews,
+    mix: mixOf(v), bestFor: v.bestFor ?? '', take: v.take ?? '',
+  })),
+  leader: rankTeam(c).ranked[0]?.v.name ?? null,
+}]));
+const platforms = PLATFORMS.map((p) => ({ id: p.id, label: p.label, re: p.match ? p.match.source : null }));
+const ICONS: Record<string, string> = {
+  cart: 'M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2M10 21a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm9 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z',
+  door: 'M4 21h16M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17M14 12h.01',
+  gavel: 'M14 13l-7.5 7.5a2.1 2.1 0 0 1-3-3L11 10M16 16l6-6M8 8l6-6M9 7l8 8M21 11l-8-8',
+  doc: 'M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5ZM14 3v5h5M9 13h6M9 17h6',
+  chart: 'M3 3v18h18M7 16v-5M12 16V8M17 16v-8',
+  shield: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z',
+  card: 'M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7ZM2 10h20M6 15h4',
+  check: 'M9 12l2 2 4-4M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10Z',
+};
+const jsonLd = { '@context': 'https://schema.org', '@type': 'WebApplication', name: 'Procurement software finder', applicationCategory: 'BusinessApplication', operatingSystem: 'Web', offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD' }, url: new URL('/software/finder/', Astro.site).toString() };
 ---
-<Base title="Software finder" description="Answer two questions to find the procurement software category and rankings that fit your team." section="software">
-  <div class="page">
-    <div class="crumbs"><a href="/software/">Software rankings</a> / Finder</div>
-    <div class="page-head"><h1>Software finder</h1><p>Answer two questions to find the category to start with. Results link to the current G2-based ranking where we have one.</p></div>
-
-    <form class="finder" id="finder" onsubmit="return false">
-      <fieldset>
-        <legend>1. What do you need to fix first?</legend>
-        {needs.map((n) => (
-          <label class="opt"><input type="radio" name="need" value={n.id} /> {n.label}</label>
-        ))}
-      </fieldset>
-      <fieldset>
-        <legend>2. How big is your company?</legend>
-        {SIZES.map((s) => (
-          <label class="opt"><input type="radio" name="size" value={s.id} /> {s.label}</label>
-        ))}
-      </fieldset>
-    </form>
-
-    <div class="result" id="result" aria-live="polite">
-      <p class="empty">Choose one option in each question to see your starting point.</p>
+<Base title="Procurement software finder: your shortlist in four questions" description="Answer four quick questions and get a shortlist of procurement software matched to your need, company size, priorities and platform, using our analyst scores and G2 ratings." section="software" jsonLd={jsonLd}>
+  <header class="fh">
+    <div class="fh-in">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/software/">Software rankings</a> <span>/</span> Finder</nav>
+      <h1>Find the right procurement software</h1>
+      <p>Four quick questions. You get a shortlist of three platforms matched to your team, with our analyst scores, G2 ratings and the questions to ask in demos. About 30 seconds, no sign-up.</p>
     </div>
+  </header>
+
+  <div class="fz" id="fz">
+    <div class="fz-top">
+      <div class="prog" aria-hidden="true"><i id="bar"></i></div>
+      <p class="step-n" id="stepn">Question 1 of 4</p>
+    </div>
+
+    <section class="q" data-q="need">
+      <h2>What do you need to fix first?</h2>
+      <div class="opts opts-need">
+        {NEEDS.map((n) => (
+          <button type="button" class="opt" data-v={n.id}>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d={ICONS[n.icon]} /></svg>
+            <span><strong>{n.label}</strong><small>{n.sub}</small></span>
+          </button>
+        ))}
+      </div>
+    </section>
+
+    <section class="q" data-q="size" hidden>
+      <h2>How big is your company?</h2>
+      <div class="opts opts-3">
+        {SIZES.map((s) => <button type="button" class="opt" data-v={s.id}><span><strong>{s.label}</strong><small>{s.sub}</small></span></button>)}
+      </div>
+    </section>
+
+    <section class="q" data-q="priority" hidden>
+      <h2>What matters most in your decision?</h2>
+      <div class="opts opts-3">
+        {PRIORITIES.map((p) => <button type="button" class="opt" data-v={p.id}><span><strong>{p.label}</strong><small>{p.sub}</small></span></button>)}
+      </div>
+    </section>
+
+    <section class="q" data-q="platform" hidden>
+      <h2>Do you run any of these platforms?</h2>
+      <p class="qhint">We give extra weight to tools built on or around the platform you already use.</p>
+      <div class="opts opts-3">
+        {platforms.map((p) => <button type="button" class="opt" data-v={p.id}><span><strong>{p.label}</strong></span></button>)}
+      </div>
+    </section>
+
+    <div class="nav-row">
+      <button type="button" class="back" id="back" hidden>← Back</button>
+    </div>
+
+    <section class="res" id="res" hidden aria-live="polite">
+      <div class="res-head">
+        <p class="res-k">Your starting point</p>
+        <h2 id="r-cat"></h2>
+        <p id="r-why"></p>
+        <div class="chips" id="r-chips"></div>
+      </div>
+      <h3 class="res-h">Your shortlist</h3>
+      <div class="cards" id="r-cards"></div>
+      <div class="res-grid">
+        <div class="box">
+          <h3>Questions to ask in demos</h3>
+          <ol id="r-ask"></ol>
+        </div>
+        <div class="box">
+          <h3>Budget and timeline</h3>
+          <p id="r-cost"></p>
+          <p id="r-impl"></p>
+        </div>
+      </div>
+      <div class="res-act">
+        <a class="go" id="r-go" href="#">See the full ranking and our analysis</a>
+        <button type="button" class="again" id="again">Start over</button>
+      </div>
+      <p class="fine">Fit scores combine our analyst scores (weighted toward your priority), how many G2 reviewers come from companies your size, G2 ratings and platform fit. They are a starting point for your own evaluation, not a recommendation to buy. No vendor pays to be listed.</p>
+    </section>
   </div>
 </Base>
 
 <style>
-  .crumbs { font-size: 13px; color: var(--muted); margin-top: 22px; }
-  .crumbs a { color: var(--accent); text-decoration: none; }
-  .finder { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 10px 0 30px; }
-  fieldset { border: 0; border-top: 2px solid #000; padding: 12px 0 0; margin: 0; display: grid; gap: 4px; }
-  legend { font: 800 13px/1.3 var(--sans); text-transform: uppercase; letter-spacing: .05em; padding-bottom: 10px; }
-  .opt { display: flex; gap: 10px; align-items: center; font-size: 15px; padding: 9px 0; border-bottom: 1px solid var(--rule); cursor: pointer; }
-  .result { border-top: 3px solid #000; padding-top: 18px; max-width: 760px; min-height: 80px; }
-  .result h2 { font: 800 22px/1.25 var(--sans); margin: 0 0 8px; }
-  .result p { font-size: 16px; line-height: 1.6; }
-  .result .empty { color: var(--muted); }
-  .result a.go { display: inline-block; margin-top: 10px; background: #000; color: #fff; padding: 11px 16px; text-decoration: none; font-weight: 600; font-size: 14px; border-radius: 4px; }
-  @media (max-width: 760px) { .finder { grid-template-columns: 1fr; } }
+  .fh { margin: 0 calc(50% - 50vw); background: linear-gradient(120deg, var(--navy) 0%, #12385e 60%, var(--teal) 150%); color: #fff; }
+  .fh-in { max-width: 900px; margin: 0 auto; padding: 26px 20px 120px; text-align: center; }
+  .crumbs { font: 500 13px/1 var(--ui); color: rgba(255,255,255,.8); margin: 0 0 22px; text-align: left; }
+  .crumbs a { color: #fff; } .crumbs span { opacity: .6; margin: 0 4px; }
+  .fh h1 { color: #fff; font: 700 clamp(30px, 5vw, 48px)/1.08 var(--head); margin: 0 0 12px; }
+  .fh p { font: 18px/1.5 var(--head); color: rgba(255,255,255,.9); margin: 0 auto; max-width: 660px; }
+  .fz { max-width: 900px; margin: -90px auto 0; background: #fff; border: 1px solid var(--rule); box-shadow: 0 20px 50px rgba(14,42,71,.16); padding: 26px 30px 30px; position: relative; }
+  .fz-top { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+  .prog { flex: 1; height: 6px; background: var(--rule); border-radius: 3px; overflow: hidden; }
+  .prog i { display: block; height: 100%; width: 25%; background: var(--teal); transition: width .3s; }
+  .step-n { font: 600 13px/1 var(--ui); color: var(--muted); margin: 0; white-space: nowrap; }
+  .q h2 { font: 700 26px/1.2 var(--head); margin: 0 0 16px; }
+  .qhint { margin: -8px 0 16px; color: var(--muted); font-size: 15px; }
+  .opts { display: grid; gap: 10px; }
+  .opts-need { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .opts-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .opt { display: flex; align-items: flex-start; gap: 12px; text-align: left; padding: 14px 16px; background: #fff; border: 1.5px solid #cfd8e3; border-radius: 6px; cursor: pointer; font: inherit; color: var(--ink); transition: border-color .15s, box-shadow .15s, transform .15s; }
+  .opt:hover, .opt:focus-visible { border-color: var(--teal); box-shadow: 0 6px 16px rgba(15,123,120,.14); transform: translateY(-1px); outline: none; }
+  .opt.on { border-color: var(--teal); background: var(--teal-tint); }
+  .opt svg { width: 26px; height: 26px; flex: none; fill: none; stroke: var(--teal); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; margin-top: 1px; }
+  .opt strong { display: block; font: 600 15.5px/1.3 var(--ui); }
+  .opt small { display: block; font: 13.5px/1.4 var(--ui); color: var(--muted); margin-top: 3px; }
+  .nav-row { margin-top: 14px; min-height: 20px; }
+  .back { background: none; border: 0; color: var(--teal); font: 600 14px var(--ui); cursor: pointer; padding: 0; }
+  .res-k { font: 600 12.5px/1 var(--ui); color: var(--teal); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 8px; }
+  .res-head h2 { font: 700 32px/1.1 var(--head); margin: 0 0 8px; }
+  .res-head p { font-size: 16px; line-height: 1.55; color: var(--ink-2); margin: 0 0 12px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chips :global(span) { font: 600 12.5px/1 var(--ui); background: var(--navy-tint); padding: 7px 10px; }
+  .res-h { font: 700 19px/1.2 var(--head); margin: 26px 0 12px; padding-bottom: 8px; border-bottom: 3px solid var(--ink); }
+  .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  :global(.vc) { border: 1px solid var(--rule); border-top: 4px solid var(--c, var(--teal)); padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+  :global(.vc .top) { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  :global(.vc .rk) { font: 600 12px/1 var(--ui); color: var(--muted); }
+  :global(.vc .fit) { font: 700 13px/1 var(--ui); color: #fff; background: var(--teal); padding: 6px 8px; border-radius: 3px; }
+  :global(.vc h4) { font: 700 21px/1.15 var(--head); margin: 0; }
+  :global(.vc .bf) { font: 14px/1.45 var(--ui); color: var(--ink-2); margin: 0; }
+  :global(.vc .tk) { font: 13.5px/1.5 var(--ui); color: var(--muted); margin: 0; flex: 1; }
+  :global(.vc .nums) { display: flex; gap: 14px; font: 13px/1.2 var(--ui); color: var(--muted); border-top: 1px solid var(--rule); padding-top: 8px; }
+  :global(.vc .nums b) { display: block; font: 700 18px/1 var(--head); color: var(--ink); }
+  :global(.vc a) { font: 600 13.5px/1 var(--ui); color: var(--teal); text-decoration: none; }
+  :global(.vc a:hover) { text-decoration: underline; }
+  .res-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 14px; margin-top: 18px; }
+  .box { background: var(--navy-tint); padding: 16px 18px; }
+  .box h3 { font: 700 15px/1.2 var(--ui); margin: 0 0 8px; }
+  .box ol { margin: 0; padding-left: 20px; font-size: 14.5px; line-height: 1.5; }
+  .box :global(li) { margin-bottom: 6px; }
+  .box p { font-size: 14.5px; line-height: 1.5; margin: 0 0 8px; }
+  .res-act { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 20px; }
+  .go { background: var(--teal); color: #fff; padding: 13px 18px; font: 600 15px/1 var(--ui); text-decoration: none; }
+  .go:hover { background: #12918d; }
+  .again { background: none; border: 1px solid var(--ink); padding: 12px 16px; font: 600 14px/1 var(--ui); cursor: pointer; color: var(--ink); }
+  .fine { font-size: 12.5px; color: var(--muted); margin: 16px 0 0; }
+  @media (max-width: 760px) {
+    .fz { padding: 20px 16px 22px; margin-top: -100px; }
+    .opts-need, .opts-3, .cards, .res-grid { grid-template-columns: 1fr; }
+    .q h2 { font-size: 22px; }
+  }
 </style>
 
-<script is:inline define:vars={{ needs, sizes: SIZES }}>
+<script is:inline define:vars={{ needs: NEEDS, sizes: SIZES, priorities: PRIORITIES, platforms, cats }}>
   (() => {
-    const result = document.getElementById('result');
-    const form = document.getElementById('finder');
-    const render = () => {
-      const need = form.querySelector('input[name="need"]:checked')?.value;
-      const size = form.querySelector('input[name="size"]:checked')?.value;
-      if (!need || !size) {
-        result.innerHTML = '<p class="empty">Choose one option in each question to see your starting point.</p>';
-        return;
-      }
-      const n = needs.find((x) => x.id === need);
-      const s = sizes.find((x) => x.id === size);
-      const link = n.live
-        ? `<a class="go" href="/software/${n.category}/">See the ${n.name} ranking →</a>`
-        : `<p>We're still gathering verified G2 data for <strong>${n.name}</strong>. <a href="/software/">Browse the rankings we have now</a>, or subscribe for the update.</p>`;
-      result.innerHTML = `<h2>Start with ${n.name}</h2><p>${s.note}</p>${link}`;
+    const root = document.getElementById('fz');
+    const order = ['need', 'size', 'priority', 'platform'];
+    const qs = Object.fromEntries(order.map((k) => [k, root.querySelector(`[data-q="${k}"]`)]));
+    const ans = {}; let step = 0;
+    const bar = document.getElementById('bar'), stepn = document.getElementById('stepn');
+    const back = document.getElementById('back'), res = document.getElementById('res');
+    const show = (i) => {
+      step = i;
+      order.forEach((k, j) => { qs[k].hidden = j !== i; });
+      res.hidden = i < order.length;
+      back.hidden = i === 0;
+      bar.style.width = `${Math.min(100, ((i + 1) / order.length) * 100)}%`;
+      stepn.textContent = i < order.length ? `Question ${i + 1} of ${order.length}` : 'Your shortlist';
+      const first = i < order.length ? qs[order[i]].querySelector('.opt') : res;
+      if (first && i > 0) first.focus({ preventScroll: true });
     };
-    form.addEventListener('change', render);
+    order.forEach((k, i) => qs[k].addEventListener('click', (e) => {
+      const b = e.target.closest('.opt'); if (!b) return;
+      qs[k].querySelectorAll('.opt').forEach((x) => x.classList.toggle('on', x === b));
+      ans[k] = b.dataset.v;
+      if (i === order.length - 1) { render(); show(order.length); root.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      else show(i + 1);
+    }));
+    back.addEventListener('click', () => show(Math.max(0, step - 1)));
+    document.getElementById('again').addEventListener('click', () => { Object.keys(ans).forEach((k) => delete ans[k]); root.querySelectorAll('.opt.on').forEach((x) => x.classList.remove('on')); show(0); });
+
+    const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+    function render() {
+      const need = needs.find((n) => n.id === ans.need), size = sizes.find((s) => s.id === ans.size);
+      const pri = priorities.find((p) => p.id === ans.priority), plat = platforms.find((p) => p.id === ans.platform);
+      const c = cats[need.category];
+      const re = plat?.re ? new RegExp(plat.re) : null;
+      const scored = c.vendors.filter((v) => v.team).map((v) => {
+        const keys = Object.keys(v.team);
+        const w = keys.reduce((s, k) => s + (k === pri.id ? 3 : 1), 0);
+        const team = keys.reduce((s, k) => s + v.team[k] * (k === pri.id ? 3 : 1), 0) / w;
+        const share = v.mix ? (v.mix[ans.size] ?? 0) / 100 : 0.33;
+        const g2 = v.g2 ? v.g2 / 5 : 0.8;
+        const native = re && re.test(v.name) ? 1 : 0;
+        const fit = (team / 5) * 0.62 + share * 0.2 + g2 * 0.12 + native * 0.08 + 0.02;
+        return { v, fit: Math.min(99, Math.round(fit * 100)), native, share };
+      }).sort((a, b) => b.fit - a.fit);
+      const top = scored.slice(0, 3);
+      document.getElementById('r-cat').textContent = c.name;
+      document.getElementById('r-why').textContent = `${c.answer} ${size.note}`;
+      document.getElementById('r-chips').innerHTML = [need.label, size.label, pri.label, plat.id === 'none' ? 'No platform preference' : `Runs ${plat.label}`].map((x) => `<span>${esc(x)}</span>`).join('');
+      document.getElementById('r-cards').innerHTML = top.map((x, i) => {
+        const why = [];
+        if (x.native) why.push(`Built on or around ${esc(plat.label)}.`);
+        if (x.share >= 0.4) why.push(`${Math.round(x.share * 100)}% of its G2 reviewers are at companies your size.`);
+        why.push(`Scores ${x.v.team[pri.id].toFixed(1)} of 5 on ${esc(pri.sub.toLowerCase())}.`);
+        return `<article class="vc" style="--c:${c.accent}">
+          <div class="top"><span class="rk">Match ${i + 1}</span><span class="fit">${x.fit}% fit</span></div>
+          <h4>${esc(x.v.name)}</h4>
+          <p class="bf">${esc(x.v.bestFor)}</p>
+          <p class="tk">${why.join(' ')}</p>
+          <div class="nums"><span><b>${x.v.avg != null ? x.v.avg.toFixed(2) : '–'}</b>Our score</span><span><b>${x.v.g2 != null ? x.v.g2.toFixed(1) : '–'}</b>G2 rating</span><span><b>${x.v.reviews.toLocaleString('en-US')}</b>G2 reviews</span></div>
+          <a href="/software/${c.slug}/#${x.v.id}">Our take on ${esc(x.v.name)} →</a>
+        </article>`;
+      }).join('');
+      document.getElementById('r-ask').innerHTML = c.choose.map(([t, d]) => `<li><strong>${esc(t)}.</strong> ${esc(d)}</li>`).join('');
+      document.getElementById('r-cost').textContent = c.pricing;
+      document.getElementById('r-impl').textContent = c.implementation;
+      document.getElementById('r-go').href = `/software/${c.slug}/`;
+      document.getElementById('r-go').textContent = `See the full ${c.name} ranking`;
+    }
+    show(0);
   })();
 </script>

@@ -9,7 +9,7 @@ const articles = defineCollection({
     dek: z.string(),
     date: z.coerce.date(),
     updated: z.coerce.date().optional(),
-    topic: z.enum(['tariffs-trade', 'supplier-risk', 'proc-tech', 'commodities', 'public-sector', 'esg-regulation', 'ai-procurement', 'people-moves']),
+    topic: z.enum(['tariffs-trade', 'supplier-risk', 'proc-tech', 'commodities', 'public-sector', 'esg-regulation', 'ai-procurement', 'people-moves', 'logistics', 'industry']),
     type: z.enum(['news', 'signal', 'analysis']).default('news'),
     signal: z.number().min(1).max(5).default(3),
     author: z.string().default('Procurement Signal Staff'),
@@ -18,6 +18,11 @@ const articles = defineCollection({
     featured: z.boolean().default(false),
     keyfacts: z.array(z.object({ value: z.string(), label: z.string() })).max(4).default([]),
     image: z.object({ src: z.string().url(), alt: z.string(), credit: z.string(), creditUrl: z.string().url().optional(), license: z.string().default('Unsplash') }).optional(),
+    // Optional: browse categories (see src/data/categories.mjs). The first one sets the
+    // article's section and breadcrumb. When omitted, categories are inferred from the text.
+    categories: z.array(z.string()).optional(),
+    // Optional: reader questions answered in the story; rendered as an FAQ and as FAQPage data.
+    faqs: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
   }),
 });
 

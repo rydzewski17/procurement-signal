@@ -2,6 +2,8 @@
 import Base from '../../layouts/Base.astro';
 import Subscribe from '../../components/Subscribe.astro';
 import { SOFTWARE, rankG2, rankTeam, g2Tiers, fmtDate, slugify, crossCategory, mixOf, TIE } from '../../data/software';
+const firstSentence = (t = '') => (t.match(/^.*?\.(\s|$)/)?.[0] ?? t).trim();
+const watching = SOFTWARE.categories.filter((c) => c.trends?.length).map((c) => ({ c, t: c.trends![0] })).slice(0, 6);
 
 const cats = SOFTWARE.categories;
 const n = (x: number) => x.toLocaleString('en-US');
@@ -30,7 +32,7 @@ const jsonLd = [
         <h1>The procurement software rankings</h1>
         <p class="dek">Every major platform for buying, paying, contracting and managing suppliers, compared side by side. Ranked on public G2 ratings and by our own analysts, with no paid placements.</p>
         <div class="acts">
-          <a class="btn" href="/software/finder/">Find your category in two questions</a>
+          <a class="btn" href="/software/finder/">Get your shortlist in four questions</a>
           <a class="lnk" href="#method">How we rank</a>
         </div>
       </div>
@@ -71,12 +73,32 @@ const jsonLd = [
               ))}
             </ol>
             <p class="tie">{lead.length > 1 ? `${lead.length} platforms are within ${TIE} points of the leader, so the top is effectively a tie.` : `${lead[0]?.name} leads by ${TIE} points or more.`}</p>
-            <p class="team">{team ? `Team pick: ${team.v.name}` : 'Team scores: in progress'}</p>
+            {team && (
+              <a class="our" href={`/software/${c.slug}/#${slugify(team.v.name)}`}>
+                <span class="our-l">Our analysts' pick</span>
+                <span class="our-n"><strong>{team.v.name}</strong><b>{team.avg?.toFixed(2)}</b></span>
+                {team.v.take && <span class="our-t">{firstSentence(team.v.take)}</span>}
+              </a>
+            )}
+            {c.market && <p class="mkt"><strong>Market view.</strong> {firstSentence(c.market)}</p>}
             <a class="go" href={`/software/${c.slug}/`}>Compare all {c.vendors.length} {c.short} platforms</a>
           </div>
         </article>
       );
     })}
+  </section>
+
+  <section class="watch-sw">
+    <h2>What we're watching in procurement software</h2>
+    <p class="note">Our analysts' read on the shifts that matter most when you evaluate tools this year.</p>
+    <div class="ws-grid">
+      {watching.map(({ c, t }) => (
+        <a class="ws" href={`/software/${c.slug}/#analysis`} style={`--c:${c.accent}`}>
+          <span>{c.name}</span>
+          <p>{t}</p>
+        </a>
+      ))}
+    </div>
   </section>
 
   <section class="matrix-wrap">
@@ -114,7 +136,7 @@ const jsonLd = [
   <section class="cta">
     <div>
       <h2>Not sure which category you need?</h2>
-      <p>Answer two questions about your company and the problem you need to fix first, and we will point you to the right ranking.</p>
+      <p>Answer four quick questions about the problem you need to fix, your company size, your priorities and your platforms. We match you to a category and a shortlist of three, with our scores and the questions to ask in demos.</p>
     </div>
     <a class="btn" href="/software/finder/">Open the shortlist finder</a>
   </section>
@@ -123,6 +145,23 @@ const jsonLd = [
 </Base>
 
 <style>
+  .our { display: block; margin: 12px 0 8px; padding: 12px 14px; background: var(--navy-tint); border-left: 4px solid var(--c); text-decoration: none; color: var(--ink); }
+  .our:hover { background: #e3e9f0; }
+  .our-l { display: block; font: 600 11.5px/1 var(--ui); color: var(--c); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
+  .our-n { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .our-n strong { font: 700 18px/1.2 var(--head); }
+  .our-n b { font: 700 18px/1 var(--head); color: var(--c); }
+  .our-t { display: block; font: 13.5px/1.45 var(--ui); color: var(--ink-2); margin-top: 6px; }
+  .mkt { font: 13.5px/1.5 var(--ui); color: var(--muted); margin: 0 0 10px; }
+  .mkt strong { color: var(--ink); }
+  .watch-sw { max-width: var(--max); margin: 46px auto 0; }
+  .watch-sw h2 { font: 700 28px/1.15 var(--head); margin: 0 0 6px; }
+  .ws-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 14px; }
+  .ws { display: block; padding: 16px 18px; border: 1px solid var(--rule); border-top: 4px solid var(--c); text-decoration: none; color: var(--ink); background: #fff; }
+  .ws:hover { box-shadow: 0 10px 24px rgba(14,42,71,.12); }
+  .ws span { font: 600 12px/1 var(--ui); color: var(--c); text-transform: uppercase; letter-spacing: .05em; }
+  .ws p { margin: 8px 0 0; font: 16px/1.5 var(--head); }
+  @media (max-width: 860px) { .ws-grid { grid-template-columns: 1fr; } }
   .hero { margin: 0 calc(50% - 50vw); background: var(--navy); color: #fff; position: relative; overflow: hidden; }
   .hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent 0 46px, rgba(255,255,255,.035) 46px 48px); }
   .hero-in { position: relative; max-width: var(--max); margin: 0 auto; padding: 40px 20px 30px; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 40px; align-items: end; }

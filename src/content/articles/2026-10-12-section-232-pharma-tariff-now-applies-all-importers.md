@@ -26,11 +26,19 @@ sources:
     url: "https://www.bakerdonelson.com/trump-overhauls-section-232-tariffs-what-metals-and-pharmaceutical-importers-need-to-know"
   - name: "International Trade Insights — Section 232 Tariffs on Patented Pharmaceuticals and APIs"
     url: "https://www.internationaltradeinsights.com/2026/04/president-trump-imposes-section-232-tariffs-on-patented-pharmaceuticals-and-active-pharmaceutical-ingredients/"
+categories: ["tariffs", "healthcare", "sourcing"]
+faqs:
+  - q: "Who pays the Section 232 pharmaceutical tariff?"
+    a: "Since Sept. 29, 2026, all importers of covered patented drugs and their active ingredients, not just the large companies named in July."
+  - q: "Are generic drugs covered by the pharma tariff?"
+    a: "No. Generics, biosimilars and their ingredients are excluded for now, and Commerce has said it will revisit that after a year."
+  - q: "Is the pharma tariff always 100%?"
+    a: "No. Rates are lower for the EU, Japan, South Korea, Switzerland and the UK, and for companies with approved onshoring commitments."
 ---
 
 ## Why it matters
 
-Healthcare systems, distributors and life-sciences buyers now face Section 232 duties on patented medicines from every supplier, not just the largest manufacturers. The effective rate ranges from 0% to 100%, depending on where the product is made and what deals its maker has struck with Washington.
+Healthcare systems, distributors and life-sciences procurement teams now face Section 232 duties on patented medicines from every supplier, not just the largest manufacturers. The effective rate ranges from 0% to 100%, depending on where the product is made and what deals its maker has struck with Washington.
 
 ## The details
 
@@ -51,13 +59,19 @@ The headline rate is 100% of value, but most trade will see something lower, acc
 
 **Excluded:** generic drugs, biosimilars and their ingredients (Commerce will revisit this after a year), plus orphan drugs, plasma-derived therapies, cell and gene therapies, antibody-drug conjugates, nuclear medicine, fertility treatments, medical countermeasures and animal health products, among others. U.S.-origin products aren't covered, and drawback is available.
 
-## What buyers should do
+## What procurement teams should do
 
 - **Map your formulary by origin and maker.** The same molecule can carry very different duties depending on the manufacturer's country and whether it holds an onshoring or pricing agreement.
 - **Ask suppliers directly** which rate applies to each product and whether they intend to pass it through. Get the answer in writing.
 - **Review GPO and distributor contracts** for price-adjustment clauses tied to duties or "changes in law."
 - **Model 2030.** Onshoring-based reductions step up to 100% in April 2030, so long-term contracts should account for that cliff.
 - **Don't assume generics stay exempt.** The exemption is subject to review in about a year.
+
+## What to watch next
+
+- **Generics review.** Commerce has said it will revisit the generics and biosimilars exclusion after a year, which would bring far more volume into scope.
+- **Onshoring deals.** More company-specific agreements like BD's could lower rates for individual suppliers; track which of your suppliers sign one.
+- **Pricing pass-through.** Watch for distributor surcharges and contract price adjustments tied to the tariff in Q4 renewals.
 
 ## The bigger picture
 

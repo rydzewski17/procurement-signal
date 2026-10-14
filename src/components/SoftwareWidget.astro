@@ -10,13 +10,21 @@ const items = SOFTWARE.categories.map((c) => ({
 <section class="sw" aria-label="Top software rankings">
   <div class="sw-head">
     <h2><a href="/software/">Top software</a></h2>
-    <p class="sw-intro">The top 5 in each category, by our team and G2 reviewers.</p>
+    <p class="sw-intro">Our analysts' top 5 in each category, with G2 ratings alongside. Scores out of 5.</p>
   </div>
   {items.map((it, i) => (
     <div class="sw-card" data-i={i} hidden={i !== 0}>
       <h3><a href={`/software/${it.slug}/`}>{it.name}</a></h3>
       <p class="sw-blurb">{it.blurb}</p>
-      {it.g2.length > 0 ? (
+      {it.team.length > 0 ? (
+        <>
+          <p class="sw-sub sw-cols"><span>Our top 5</span><span>Ours</span><span>G2</span></p>
+          <ol class="sw-list sw-list3">
+            {it.team.map((x) => <li><span>{x.v.name}</span><span class="sw-ours">{x.avg?.toFixed(1)}</span><span class="sw-g2">{x.v.g2.rating?.toFixed(1) ?? '–'}</span></li>)}
+          </ol>
+          {it.g2[0] && <p class="sw-team">Highest on G2: <strong>{it.g2[0].name}</strong>, {it.g2[0].g2.rating?.toFixed(1)} from {it.g2[0].g2.reviews.toLocaleString('en-US')} reviews.</p>}
+        </>
+      ) : it.g2.length > 0 ? (
         <>
           <p class="sw-sub">Highest on G2</p>
           <ol class="sw-list">
@@ -24,7 +32,6 @@ const items = SOFTWARE.categories.map((c) => ({
           </ol>
         </>
       ) : <p class="sw-pending">We're collecting verified G2 scores for this category.</p>}
-      <p class="sw-team">{it.team.length ? `Our team ranks ${it.team[0].v.name} first.` : 'Our analysts are scoring this category now.'}</p>
       <a class="sw-go" href={`/software/${it.slug}/`}>See the ranking and our analysis</a>
     </div>
   ))}
@@ -89,4 +96,12 @@ const items = SOFTWARE.categories.map((c) => ({
   .sw-switch .sw-nav { justify-content: space-between; }
   .sw-jump select { width: 100%; font: 14px var(--ui); padding: 8px; border: 1px solid #b7d3d1; background: #fff; }
   .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+</style>
+
+<style>
+  .sw-cols { display: grid; grid-template-columns: minmax(0, 1fr) 36px 30px; gap: 6px; padding-right: 12px; }
+  .sw-cols span:not(:first-child) { text-align: right; font-size: 11.5px; }
+  .sw .sw-list3 li { display: grid !important; grid-template-columns: 18px minmax(0, 1fr) 36px 30px !important; gap: 6px; align-items: baseline; }
+  .sw-ours { text-align: right; font-weight: 700; color: var(--teal); font-variant-numeric: tabular-nums; }
+  .sw-g2 { text-align: right; color: var(--ink-2); font-variant-numeric: tabular-nums; font-size: 13.5px; }
 </style>
