@@ -14,8 +14,13 @@ export function ourItems(posts: any[]): FeedItem[] {
   return posts.map((p) => ({ title: p.data.title, href: `/articles/${p.id}/`, ext: false, source: 'Procurement Signal', t: p.data.date.valueOf(), dek: p.data.dek, post: p, cats: catsOf(p) }));
 }
 
+// Headlines that aren't useful to buyers: accidents and crime reports, and
+// routine Federal Register paperwork notices.
+const NOISE = /\b(killed|dies|died|fatal|rollover|crash(es|ed)?|shooting|arrested|sentenced|pleads guilty)\b|^Foreign-Trade Zone|Notice of Institution|Agency Information Collection|Sunshine Act|Notice of Receipt of Complaint|Request for Comments? on Information Collection/i;
+export const isNoise = (title: string) => NOISE.test(title);
+
 export function wireItems(): FeedItem[] {
-  return (wire.items as any[]).map((i) => ({ title: i.title, href: i.url, ext: true, source: String(i.source).split(' · ')[0], t: new Date(i.date).valueOf(), cats: i.categories ?? [] }));
+  return (wire.items as any[]).filter((i) => !isNoise(i.title)).map((i) => ({ title: i.title, href: i.url, ext: true, source: String(i.source).split(' · ')[0], t: new Date(i.date).valueOf(), cats: i.categories ?? [] }));
 }
 
 // Items in any of the given categories: ours newest first, then headlines newest first.

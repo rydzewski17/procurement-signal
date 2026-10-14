@@ -48,13 +48,21 @@ const today = new Date().toLocaleDateString('en-US', { weekday: 'long', month: '
     <div class="wrap">
       <div><a href="/" class="wordmark"><span class="wm-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>{SITE.name}</a><span class="wm-tag">{SITE.tagline}</span></div>
       <div class="masthead-tools">
-        <a class="search" href="/signals/">Search briefings</a>
-        <a class="subscribe" href="/rss.xml">Get the newsletter</a>
+        <form class="msearch" action="/search/" method="get" role="search">
+          <label class="sr-only" for="q-top">Search Procurement Signal</label>
+          <input id="q-top" name="q" type="search" placeholder="Search stories, tariffs, software" />
+          <button type="submit" aria-label="Search"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></svg></button>
+        </form>
+        <a class="subscribe" href="#newsletter">Get the newsletter</a>
       </div>
     </div>
   </header>
   <nav class="nav" aria-label="Main">
     <div class="wrap">
+      <button class="mnav-btn" type="button" aria-expanded="false" aria-controls="mnav">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        Menu
+      </button>
       <a href="/" class="nav-link" aria-current={section === 'home' ? 'page' : undefined}>Home</a>
 
       <div class="dd">
@@ -102,10 +110,23 @@ const today = new Date().toLocaleDateString('en-US', { weekday: 'long', month: '
         </div>
       </div>
     </div>
+    <div class="mnav" id="mnav" hidden>
+      <div class="wrap">
+        <form action="/search/" method="get" role="search" class="mnav-search">
+          <label class="sr-only" for="q-m">Search Procurement Signal</label>
+          <input id="q-m" name="q" type="search" placeholder="Search stories" />
+          <button type="submit">Search</button>
+        </form>
+        <div class="mnav-group"><span>Sections</span>{SECTIONS.map((sx) => <a href={`/sections/${sx.id}/`}>{sx.name}</a>)}</div>
+        <div class="mnav-group"><span>Analysis</span><a href="/signals/">Buyer briefings</a><a href="/guides/">Guides</a><a href="/glossary/">Glossary</a></div>
+        <div class="mnav-group"><span>Prices and data</span><a href="/cost-monitor/">Price trends by category</a><a href="/trackers/tariff-deadlines/">Tariff deadlines</a><a href="/markets/">Prediction market odds</a><a href="/wire/">Industry headlines</a></div>
+        <div class="mnav-group"><span>Software</span><a href="/software/">Software rankings</a><a href="/software/finder/">Software finder</a></div>
+      </div>
+    </div>
   </nav>
   <LiveBar />
   <main class="wrap"><slot /></main>
-  <NewsletterBand />
+  <div id="newsletter"><NewsletterBand /></div>
   <footer>
     <div class="wrap">
       <div class="cols">
@@ -133,6 +154,10 @@ const today = new Date().toLocaleDateString('en-US', { weekday: 'long', month: '
     </div>
   </footer>
 <script is:inline>
+  (() => {
+    const b = document.querySelector('.mnav-btn'), m = document.getElementById('mnav');
+    if (b && m) b.addEventListener('click', () => { const open = b.getAttribute('aria-expanded') === 'true'; b.setAttribute('aria-expanded', String(!open)); m.hidden = open; });
+  })();
   (() => {
     const bar = document.querySelector('.progress');
     if (!bar) return;

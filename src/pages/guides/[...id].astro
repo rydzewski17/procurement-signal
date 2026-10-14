@@ -32,7 +32,7 @@ const jsonLd = [
 ---
 <Base title={d.title} description={d.description} type="article" jsonLd={jsonLd} section="guides">
   <div class="article-layout">
-    <article class="article guide">
+    <article class="article guide" data-pagefind-body>
       <div class="crumbs"><a href="/guides/">Guides</a>&ensp;/&ensp;<a href={`/topics/${d.topic}/`}>{TOPICS[d.topic]?.name}</a></div>
       <h1>{d.title}</h1>
       <p class="dek">{d.description}</p>

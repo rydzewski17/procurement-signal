@@ -215,3 +215,37 @@ footer { margin-top: 0 !important; }
 .block-body > .tile-text, .rel-grid > .tile-text, .grid11 > .tile-text { align-self: start; }
 .lead-meta { gap: 14px; }
 .rm-track, .lb-track, .nav .wrap { position: relative; }
+
+/* ---------- Header search and mobile menu ---------- */
+.msearch { display: flex; align-items: stretch; border: 1px solid #c5d0dc; background: #fff; }
+.msearch input { border: 0; padding: 10px 12px; font: 14.5px var(--ui); width: 240px; background: transparent; color: var(--ink); }
+.msearch input:focus { outline: none; }
+.msearch:focus-within { border-color: var(--teal); box-shadow: 0 0 0 2px rgba(15, 123, 120, .18); }
+.msearch button { border: 0; background: var(--navy-tint); color: var(--ink); padding: 0 12px; cursor: pointer; display: flex; align-items: center; }
+.msearch button:hover { background: #dfe6ee; }
+.masthead-tools { display: flex; align-items: center; gap: 10px; }
+.mnav-btn { display: none; align-items: center; gap: 8px; background: none; border: 0; color: #fff; font: 600 15px var(--ui); padding: 12px 0; cursor: pointer; }
+.mnav { background: var(--navy); border-top: 1px solid rgba(255,255,255,.14); }
+.mnav[hidden] { display: none; }
+.mnav .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; padding-top: 12px; padding-bottom: 18px; }
+.mnav-search { grid-column: 1 / -1; display: flex; margin-bottom: 8px; }
+.mnav-search input { flex: 1; min-width: 0; border: 0; padding: 11px 12px; font: 15px var(--ui); }
+.mnav-search button { border: 0; background: var(--teal); color: #fff; font: 600 14px var(--ui); padding: 0 16px; }
+.mnav-group { display: flex; flex-direction: column; }
+.mnav-group span { font: 600 12.5px var(--ui); color: #8fd3cf; margin: 10px 0 4px; }
+.mnav-group a { color: #fff; font: 500 15px var(--ui); padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.1); text-decoration: none; }
+.search4 { --pagefind-ui-primary: #0E2A47; --pagefind-ui-text: #0E2A47; --pagefind-ui-border: #c5d0dc; --pagefind-ui-tag: #EEF2F7; --pagefind-ui-border-radius: 0; --pagefind-ui-font: 'IBM Plex Sans', system-ui, sans-serif; margin-top: 10px; }
+.search4 .pagefind-ui__result-title { font-family: 'Newsreader', Georgia, serif; font-size: 20px; }
+.lead-meta { display: flex; align-items: center; gap: 14px; }
+.ad-slot.ad-inline { min-height: 110px; }
+@media (max-width: 900px) {
+  .msearch { display: none; }
+  .mnav-btn { display: inline-flex; }
+  .nav > .wrap > :not(.mnav-btn) { display: none; }
+  .nav > .wrap { display: flex; }
+}
+@media (max-width: 520px) {
+  .masthead .subscribe { display: none; }
+  .mnav .wrap { grid-template-columns: 1fr; }
+}
+.search4 mark { background: var(--teal-tint); color: inherit; padding: 0 2px; }

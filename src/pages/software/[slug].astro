@@ -101,7 +101,7 @@ const toc = [
       <ol>{toc.map(([id, t]) => <li><a href={`#${id}`}>{t}</a></li>)}</ol>
     </aside>
 
-    <article class="body" style={`--c:${c.accent}`}>
+    <article class="body" data-pagefind-body style={`--c:${c.accent}`}>
       <section id="answer" class="answer">
         <h2 class="sr">Short answer</h2>
         <p><strong>Short answer:</strong> {shortAnswer} {teamLine}</p>
