@@ -1,0 +1,9 @@
+---
+import { LEVERAGE, DIRECTION, RISK, type Outlook } from '../data/outlook';
+const { o, compact = false } = Astro.props as { o: Outlook; compact?: boolean };
+---
+<div class={`call-badges${compact ? ' compact' : ''}`}>
+  <span class={`lev lev-${o.leverage}`}>{LEVERAGE[o.leverage].label}</span>
+  <span class={`dir dir-${o.direction}`}><span aria-hidden="true">{DIRECTION[o.direction].icon}</span> {compact ? DIRECTION[o.direction].label : `Prices ${DIRECTION[o.direction].label.toLowerCase()}`}</span>
+  {!compact && <span class={`risk risk-${o.risk}`}>{RISK[o.risk]} supply risk</span>}
+</div>

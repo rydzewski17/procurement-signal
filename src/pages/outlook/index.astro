@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+import CallBadges from '../../components/CallBadges.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import Trending from '../../components/Trending.astro';
+import { getPosts } from '../../data/posts';
+import { outlooks, outlookDraft, LEVERAGE, type Leverage } from '../../data/outlook';
+import { groups, meta, monthLabel, fmtPct } from '../../data/costs';
+
+const posts = await getPosts();
+const tally = (Object.keys(LEVERAGE) as Leverage[]).map((l) => ({ l, n: outlooks.filter((o) => o.leverage === l).length }));
+const latestCall = outlooks.map((o) => o.calledOn).sort().at(-1)!;
+const fmt = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+---
+<Base title="Market Outlook: who has the leverage in what you buy" description="Our call on 12 major spend categories: buyer leverage, 90-day price direction, supply risk and what procurement teams should do now." section="outlook" noindex={outlookDraft}>
+  <div class="page">
+    <div class="page-head monitor-head">
+      <div class="crumbs">Our calls updated {fmt(latestCall)}. Price data through {monthLabel(meta.dataThrough + '-01')}.</div>
+      <h1>Market Outlook</h1>
+      <p>Our call on the categories procurement teams spend the most on: who has the leverage, where prices are heading over the next 90 days, how risky supply is, and what to do about it.</p>
+    </div>
+    {outlookDraft && <p class="draft-note"><strong>Draft outlook.</strong> These calls are under editorial review and may change before publication.</p>}
+
+    <section class="monitor-summary" aria-label="Summary">
+      <div class="tally">
+        {tally.map(({ l, n }) => <div><span class="tally-n">{n}</span><span class={`lev lev-${l}`}>{LEVERAGE[l].label}</span></div>)}
+      </div>
+      <p class="monitor-lede">Buyer leverage is our read on negotiating power right now. Price direction is our 90-day call. The live data beside each call comes from the <a href="/cost-monitor/">Cost Pressure Monitor</a>, and we flag any call the data has moved against.</p>
+    </section>
+
+    {groups.map((g) => (
+      <section class="monitor-group">
+        <h2 class="block-head">{g}</h2>
+        <div class="outlook-grid">
+          {outlooks.filter((o) => o.category.group === g).map((o) => (
+            <article class="outlook-card">
+              <h3><a href={`/cost-monitor/${o.id}/`}>{o.category.name}</a></h3>
+              <CallBadges o={o} />
+              <p>{o.view}</p>
+              <h4>What to do</h4>
+              <ul>{o.moves.map((m) => <li>{m}</li>)}</ul>
+              <div class="outlook-data">
+                <span>Live data</span><StatusBadge status={o.category.status} /><span class="meta">{fmtPct(o.category.y1)} over 12 months</span>
+              </div>
+              {o.review && <p class="review-flag">{o.review === 'against' ? 'The data has moved against this call. Review due.' : 'Latest data differs from this call. Under review.'}</p>}
+            </article>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <section class="method prose-page narrow">
+      <h2>How we make these calls</h2>
+      <p>Each call combines the monthly producer price data with tariff actions, supplier news and our own reporting. <strong>Buyer leverage</strong> reflects how much room buyers have to negotiate. <strong>Price direction</strong> is our expectation for the next 90 days, not a guarantee. <strong>Supply risk</strong> reflects disruption and tariff exposure.</p>
+      <p>The data updates automatically each month; our calls change when an editor reviews them. This is market context for procurement decisions, not financial or legal advice for any specific contract.</p>
+    </section>
+  </div>
+  <Trending posts={posts} />
+</Base>

@@ -13,3 +13,9 @@ Framework preset: Astro · Build command: `npm run build` · Output: `dist`
 - `src/data/trackers/*.json` — tracker pages
 - `src/data/signals.json` — top ticker
 - `newsroom/` — newsroom runbook and source list
+
+## Top Software and Market Outlook
+- `src/data/software.ts` — software rankings: our six criterion scores (1–10), analysis, and optional G2 ratings. Categories ship as `status: 'draft'` (noindexed, "Draft" label). Review, then set `status: 'published'` and `reviewed`. Add `g2` only from G2's own pages, with the date checked.
+- `src/data/outlook.ts` — our editorial call per Cost Monitor category (buyer leverage, 90-day price direction, supply risk, view, moves). The site flags calls the monthly data has moved against.
+- While these sections are draft they are also excluded from the sitemap (`astro.config.mjs`); remove the prefix there when publishing.
+- `/software/finder/` — the Software Finder quiz, matched in the browser from `software.ts`.

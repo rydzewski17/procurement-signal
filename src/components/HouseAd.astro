@@ -1,0 +1,15 @@
+---
+// Placeholder for paid placements. Until sponsors exist it promotes our own tools.
+const { variant = 'finder', wide = false } = Astro.props as { variant?: 'finder' | 'outlook'; wide?: boolean };
+const ads = {
+  finder: { kicker: 'Software Finder', title: 'Shortlist procurement software in four questions', cta: 'Build my shortlist', href: '/software/finder/' },
+  outlook: { kicker: 'Market Outlook', title: 'Who has the leverage in what you buy? Our call on 12 categories', cta: 'See the outlook', href: '/outlook/' },
+};
+const a = ads[variant];
+---
+<aside class={`house-ad${wide ? ' wide' : ''}`} aria-label="From Procurement Signal">
+  <span class="house-ad-label">From Procurement Signal</span>
+  <span class="house-ad-kicker">{a.kicker}</span>
+  <a href={a.href} class="house-ad-title">{a.title}</a>
+  <a href={a.href} class="button">{a.cta}</a>
+</aside>

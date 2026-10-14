@@ -1,0 +1,27 @@
+---
+import Base from '../../layouts/Base.astro';
+import { CRITERIA, softwareCategories } from '../../data/software';
+const allDraft = softwareCategories.every((c) => c.status === 'draft');
+import { SITE } from '../../data/site';
+---
+<Base title="How we score procurement software" description={`The criteria, weights and review process behind ${SITE.name}'s software rankings, and how we use G2 peer ratings.`} section="software" noindex={allDraft}>
+  <div class="page">
+    <div class="page-head narrow">
+      <div class="crumbs"><a href="/software/">Top Software</a></div>
+      <h1>How we score software</h1>
+      <p>Each product gets a score from 1 to 10 on six criteria. The overall score is the weighted average, rounded to one decimal.</p>
+    </div>
+    <div class="prose-page narrow">
+      <table class="monitor" style="min-width:0;margin:20px 0">
+        <thead><tr><th scope="col">Criterion</th><th scope="col" class="num">Weight</th><th scope="col">What we look at</th></tr></thead>
+        <tbody>{CRITERIA.map((c) => <tr><th scope="row">{c.name}</th><td class="num">{c.weight}%</td><td>{c.about}</td></tr>)}</tbody>
+      </table>
+      <h2>Two scores, kept separate</h2>
+      <p><strong>Our score</strong> is our analysts' judgment, based on product documentation, demonstrations, public customer evidence and conversations with practitioners. <strong>G2 ratings</strong> are peer reviews from G2. We show them with attribution, a link to G2 and the date we checked, and never blend them into our score.</p>
+      <h2>Independence</h2>
+      <p>Vendors cannot pay to be included or to change a ranking. Any future sponsorship will be labeled and kept apart from scores. If a reviewer has a professional relationship with a vendor in a category, another reviewer scores that category.</p>
+      <h2>Updates</h2>
+      <p>Each ranking shows the date it was last reviewed. We revisit categories at least twice a year and after major product or ownership changes. Vendors can request a correction through the contact on our <a href="/about/">About page</a>.</p>
+    </div>
+  </div>
+</Base>

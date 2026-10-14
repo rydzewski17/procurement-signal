@@ -4,11 +4,14 @@ import StatusBadge from '../../components/StatusBadge.astro';
 import Card from '../../components/Card.astro';
 import { getPosts } from '../../data/posts';
 import { categories, meta, monthLabel, fmtPct, STATUS } from '../../data/costs';
+import CallBadges from '../../components/CallBadges.astro';
+import { outlookFor } from '../../data/outlook';
 
 export function getStaticPaths() {
   return categories.map((c) => ({ params: { id: c.id }, props: { c } }));
 }
 const { c } = Astro.props;
+const call = outlookFor(c.id);
 const posts = await getPosts();
 const words = c.name.toLowerCase().split(/\W+/).filter((w) => w.length > 4);
 const related = posts.filter((p) => words.some((w) => (p.data.title + ' ' + p.data.tags.join(' ')).toLowerCase().includes(w))).slice(0, 3);
@@ -65,7 +68,17 @@ const through = monthLabel(meta.dataThrough + '-01');
 
     <div class="with-rail">
       <div class="prose-page">
-        <h2>What it means for buyers</h2>
+        {call && (
+          <section class="our-call">
+            <div class="our-call-head"><h2>Our call</h2><a href="/outlook/" class="link">Market Outlook</a></div>
+            {call.status === 'draft' && <p class="meta">Draft, under editorial review.</p>}
+            <CallBadges o={call} />
+            <p>{call.view}</p>
+            <ul>{call.moves.map((m) => <li>{m}</li>)}</ul>
+            {call.review && <p class="review-flag">{call.review === 'against' ? 'The data has moved against this call. Review due.' : 'Latest data differs from this call. Under review.'}</p>}
+          </section>
+        )}
+        <h2>What the data says</h2>
         <p>{STATUS[c.status].posture}</p>
         {c.tariff && <><h2>Tariff exposure</h2><p>{c.tariff}. Producer prices exclude import duties, so imported supply can cost more than this index shows. See the <a href="/trackers/tariff-deadlines/">Tariff &amp; Trade Deadline Tracker</a>.</p></>}
         <details class="datatable">

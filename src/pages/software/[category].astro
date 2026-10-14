@@ -1,0 +1,124 @@
+---
+import Base from '../../layouts/Base.astro';
+import { SITE } from '../../data/site';
+import { softwareCategories, CRITERIA, overall, g2Search, SIZE_LABEL, type SoftwareCategory } from '../../data/software';
+
+export function getStaticPaths() {
+  return softwareCategories.map((c) => ({ params: { category: c.id }, props: { cat: c } }));
+}
+const { cat } = Astro.props as { cat: SoftwareCategory };
+const draft = cat.status === 'draft';
+const lower = cat.name.charAt(0).toLowerCase() + cat.name.slice(1);
+const fmt = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const url = new URL(`/software/${cat.id}/`, Astro.site).toString();
+const jsonLd = [
+  {
+    '@context': 'https://schema.org', '@type': 'ItemList', name: `Best ${lower}`, url,
+    itemListElement: cat.products.map((p, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'SoftwareApplication', name: p.name, applicationCategory: 'BusinessApplication', publisher: { '@type': 'Organization', name: p.vendor } } })),
+  },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: cat.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+];
+---
+<Base title={`Best ${lower}: our ranking`} description={`${SITE.name} ranks the top ${cat.short.toLowerCase()} tools on functionality, ease of use, integrations, AI, value and time to value, with G2 peer reviews alongside.`} section="software" jsonLd={jsonLd} noindex={draft}>
+  <div class="page">
+    <div class="page-head">
+      <div class="crumbs"><a href="/software/">Top Software</a>&ensp;/&ensp;{cat.short}</div>
+      <h1>Best {lower}</h1>
+      <p>{cat.description}</p>
+      <p class="meta" style="margin-top:10px">Reviewed {fmt(cat.reviewed)}. <a href="/software/methodology/" class="link">How we score</a></p>
+    </div>
+
+    <nav class="sw-tabs" aria-label="Software categories">
+      {softwareCategories.map((c) => <a href={`/software/${c.id}/`} aria-current={c.id === cat.id ? 'page' : undefined}>{c.short}</a>)}
+    </nav>
+
+    {draft && <p class="draft-note"><strong>Draft ranking.</strong> Scores and analysis are under editorial review and may change before publication.</p>}
+
+    <div class="verdict">
+      <h2>Our verdict</h2>
+      <p>{cat.verdict}</p>
+    </div>
+
+    <div class="table-scroll">
+      <table class="monitor sw-table">
+        <thead><tr><th scope="col">#</th><th scope="col">Product</th><th scope="col" class="num">Our score</th><th scope="col">Best for</th><th scope="col">G2 rating</th></tr></thead>
+        <tbody>
+          {cat.products.map((p, i) => (
+            <tr>
+              <td class="rank">{i + 1}</td>
+              <th scope="row"><a href={`#${p.id}`}>{p.name}</a></th>
+              <td class="num"><span class="score-pill">{overall(p).toFixed(1)}</span></td>
+              <td>{p.bestFor}</td>
+              <td>{p.g2 ? <a href={p.g2.url} target="_blank" rel="noopener">{p.g2.rating.toFixed(1)}/5 ({p.g2.reviews.toLocaleString('en-US')})</a> : <a href={g2Search(p)} target="_blank" rel="noopener" class="link">See reviews</a>}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="with-rail" style="margin-top:20px">
+      <div>
+        {cat.products.map((p, i) => (
+          <article class="sw-entry" id={p.id}>
+            <header class="sw-entry-head">
+              <span class="sw-rank">{i + 1}</span>
+              <div>
+                <h2>{p.name}</h2>
+                <div class="meta">{p.vendor} · {p.sizes.map((s) => SIZE_LABEL[s]).join(', ')}</div>
+              </div>
+              <div class="sw-score"><span>{overall(p).toFixed(1)}</span><small>out of 10</small></div>
+            </header>
+            <p class="sw-best"><strong>Best for:</strong> {p.bestFor}</p>
+            <p class="sw-verdict">{p.verdict}</p>
+
+            <div class="sw-cols">
+              <div>
+                <h3>Strengths</h3>
+                <ul>{p.strengths.map((s) => <li>{s}</li>)}</ul>
+                <h3>Watch-outs</h3>
+                <ul>{p.watch.map((s) => <li>{s}</li>)}</ul>
+              </div>
+              <div>
+                <h3>Our scores</h3>
+                <dl class="bars">
+                  {CRITERIA.map((c) => (
+                    <div><dt>{c.name}</dt><dd><span class="bar"><span style={`width:${p.scores[c.id] * 10}%`}></span></span><b>{p.scores[c.id]}</b></dd></div>
+                  ))}
+                </dl>
+              </div>
+            </div>
+
+            <div class="sw-facts">
+              <div><span>Pricing</span>{p.pricing}</div>
+              <div>
+                <span>G2 peer rating</span>
+                {p.g2
+                  ? <><a href={p.g2.url} target="_blank" rel="noopener">{p.g2.rating.toFixed(1)} out of 5, {p.g2.reviews.toLocaleString('en-US')} reviews</a> <small>as of {fmt(p.g2.asOf)}</small></>
+                  : <a href={g2Search(p)} target="_blank" rel="noopener">Compare user reviews on G2</a>}
+              </div>
+              {p.url && <div><span>Vendor site</span><a href={p.url} target="_blank" rel="noopener nofollow">{new URL(p.url).hostname.replace(/^www\./, '')}</a></div>}
+            </div>
+          </article>
+        ))}
+
+        <section class="faq">
+          <h2>Frequently asked questions</h2>
+          {cat.faqs.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}
+        </section>
+      </div>
+
+      <aside class="side">
+        <div class="sticky">
+          <div class="cta-box">
+            <h2>Not sure where to start?</h2>
+            <p>Answer four questions and get a shortlist matched to your size, ERP and priorities.</p>
+            <a class="button" href="/software/finder/">Try the Software Finder</a>
+          </div>
+          <h2 class="block-head" style="margin-top:28px">Other rankings</h2>
+          <ul class="linklist">{softwareCategories.filter((c) => c.id !== cat.id).map((c) => <li><a href={`/software/${c.id}/`}>{c.name}</a><span class="date">Top pick: {c.products[0].name}</span></li>)}</ul>
+          <p class="meta">Scores reflect {SITE.name}'s independent analysis. Vendors cannot pay for placement. G2 ratings are shown with attribution and the date we checked them.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</Base>

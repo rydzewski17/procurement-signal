@@ -1,0 +1,79 @@
+---
+// Homepage module: top 5 tools per software category. Readers cycle categories
+// with the tabs or arrows (no auto-rotation). The last category viewed is
+// remembered in the browser.
+import { softwareCategories, overall, g2Search } from '../data/software';
+const draft = softwareCategories.some((c) => c.status === 'draft');
+---
+<section class="topsw" aria-label="Top software rankings" data-topsw>
+  <div class="topsw-head">
+    <div>
+      <h2>Top Software</h2>
+      <p>Our ranking of the tools procurement teams buy, with G2 peer reviews alongside.{draft && <span class="chip">Draft</span>}</p>
+    </div>
+    <div class="topsw-arrows">
+      <button type="button" class="lb-arrow" data-step="-1" aria-label="Previous category">‹</button>
+      <button type="button" class="lb-arrow" data-step="1" aria-label="Next category">›</button>
+    </div>
+  </div>
+  <div class="topsw-tabs" role="tablist" aria-label="Software categories">
+    {softwareCategories.map((c, i) => (
+      <button type="button" role="tab" id={`tsw-tab-${c.id}`} aria-controls={`tsw-${c.id}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} data-id={c.id}>{c.short}</button>
+    ))}
+  </div>
+  {softwareCategories.map((c, i) => (
+    <div class="topsw-panel" role="tabpanel" id={`tsw-${c.id}`} aria-labelledby={`tsw-tab-${c.id}`} hidden={i !== 0}>
+      <ol class="topsw-list">
+        {c.products.slice(0, 5).map((p, r) => (
+          <li>
+            <span class="sw-rank">{r + 1}</span>
+            <div class="topsw-name">
+              <a href={`/software/${c.id}/#${p.id}`}>{p.name}</a>
+              <span>Best for: {p.bestFor}</span>
+            </div>
+            <div class="topsw-score"><b>{overall(p).toFixed(1)}</b><span>Our score</span></div>
+            <div class="topsw-g2">
+              {p.g2 ? <a href={p.g2.url} target="_blank" rel="noopener"><b>{p.g2.rating.toFixed(1)}</b><span>G2, {p.g2.reviews.toLocaleString('en-US')} reviews</span></a>
+                    : <a href={g2Search(p)} target="_blank" rel="noopener"><b>G2</b><span>See reviews</span></a>}
+            </div>
+          </li>
+        ))}
+      </ol>
+      <div class="topsw-foot">
+        <a class="button" href={`/software/${c.id}/`}>See the full {c.short.toLowerCase()} ranking and our analysis</a>
+        <a class="link" href="/software/finder/">Not sure? Try the Software Finder</a>
+      </div>
+    </div>
+  ))}
+</section>
+<script is:inline>
+  document.querySelectorAll('[data-topsw]').forEach((root) => {
+    const tabs = [...root.querySelectorAll('[role=tab]')];
+    const show = (i, focus) => {
+      i = (i + tabs.length) % tabs.length;
+      tabs.forEach((t, k) => {
+        const on = k === i;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        root.querySelector('#' + t.getAttribute('aria-controls')).hidden = !on;
+      });
+      if (focus) tabs[i].focus();
+      tabs[i].scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      try { localStorage.setItem('ps-topsw', tabs[i].dataset.id); } catch (e) {}
+    };
+    const current = () => tabs.findIndex((t) => t.getAttribute('aria-selected') === 'true');
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => show(i));
+      t.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') { e.preventDefault(); show(i + 1, true); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); show(i - 1, true); }
+      });
+    });
+    root.querySelectorAll('[data-step]').forEach((b) => b.addEventListener('click', () => show(current() + Number(b.dataset.step))));
+    try {
+      const saved = localStorage.getItem('ps-topsw');
+      const i = tabs.findIndex((t) => t.dataset.id === saved);
+      if (i > 0) show(i);
+    } catch (e) {}
+  });
+</script>

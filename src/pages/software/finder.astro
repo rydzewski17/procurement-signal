@@ -1,0 +1,132 @@
+---
+import Base from '../../layouts/Base.astro';
+import { softwareCategories, overall, SIZE_LABEL } from '../../data/software';
+
+const data = softwareCategories.map((c) => ({
+  id: c.id, short: c.short, name: c.name,
+  products: c.products.map((p) => ({ id: p.id, name: p.name, vendor: p.vendor, sizes: p.sizes, erp: p.erp ?? null, bestFor: p.bestFor, verdict: p.verdict, scores: p.scores, overall: overall(p) })),
+}));
+const allDraft = softwareCategories.every((c) => c.status === 'draft');
+---
+<Base title="Software Finder: build a procurement software shortlist" description="Answer four questions about your needs, company size, ERP and priorities, and get a shortlist of procurement software matched from our rankings." section="software" noindex={allDraft}>
+  <div class="page">
+    <div class="page-head narrow">
+      <div class="crumbs"><a href="/software/">Top Software</a></div>
+      <h1>Software Finder</h1>
+      <p>Four questions. A shortlist of up to three tools from our rankings, with the reason each one fits.</p>
+    </div>
+
+    <form id="finder" class="finder narrow">
+      <fieldset>
+        <legend><span>1</span> What do you need to fix first? <small>Pick up to three</small></legend>
+        <div class="opts">
+          {softwareCategories.map((c) => <label><input type="checkbox" name="need" value={c.id} /> {c.need}</label>)}
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend><span>2</span> How large is your company?</legend>
+        <div class="opts">
+          <label><input type="radio" name="size" value="smb" /> Under 200 employees</label>
+          <label><input type="radio" name="size" value="mid" /> 200 to 2,000 employees</label>
+          <label><input type="radio" name="size" value="enterprise" /> More than 2,000 employees</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend><span>3</span> Which ERP do you run?</legend>
+        <div class="opts">
+          <label><input type="radio" name="erp" value="sap" /> SAP</label>
+          <label><input type="radio" name="erp" value="oracle" /> Oracle</label>
+          <label><input type="radio" name="erp" value="microsoft" /> Microsoft Dynamics</label>
+          <label><input type="radio" name="erp" value="netsuite" /> NetSuite</label>
+          <label><input type="radio" name="erp" value="other" /> Other or none</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend><span>4</span> What matters most?</legend>
+        <div class="opts">
+          <label><input type="radio" name="priority" value="ease" /> Adoption and ease of use</label>
+          <label><input type="radio" name="priority" value="functionality" /> Depth of functionality</label>
+          <label><input type="radio" name="priority" value="value" /> Lowest total cost</label>
+          <label><input type="radio" name="priority" value="ai" /> AI and automation</label>
+          <label><input type="radio" name="priority" value="implementation" /> Speed to go live</label>
+        </div>
+      </fieldset>
+      <p class="finder-error" role="alert" hidden>Pick at least one need to build your shortlist.</p>
+      <button class="button" type="submit">Show my shortlist</button>
+    </form>
+
+    <section id="results" class="finder-results narrow" aria-live="polite" hidden></section>
+    {allDraft && <p class="meta narrow" style="margin-top:20px">Matches are drawn from draft rankings under editorial review.</p>}
+  </div>
+
+  <script is:inline define:vars={{ data, sizeLabel: SIZE_LABEL }}>
+    const form = document.getElementById('finder'), out = document.getElementById('results'), err = form.querySelector('.finder-error');
+    const PRIORITY = { ease: 'ease of use', functionality: 'functionality', value: 'value', ai: 'AI and automation', implementation: 'time to value' };
+    const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+    function readForm() {
+      const fd = new FormData(form);
+      return { need: fd.getAll('need').slice(0, 3), size: fd.get('size'), erp: fd.get('erp'), priority: fd.get('priority') };
+    }
+    function shortlist(a) {
+      const picks = [];
+      for (const c of data.filter((c) => a.need.includes(c.id))) {
+        for (const p of c.products) {
+          let s = p.overall, why = [];
+          if (a.size) { if (p.sizes.includes(a.size)) { s += 1.5; why.push(`built for ${sizeLabel[a.size].toLowerCase()} teams`); } else s -= 2; }
+          if (a.erp && a.erp !== 'other' && p.erp) { if (p.erp === a.erp) { s += 1; why.push('native to your ERP'); } else s -= 1.5; }
+          if (a.priority) { s += (p.scores[a.priority] - 7) * 0.4; if (p.scores[a.priority] >= 8) why.push(`scores ${p.scores[a.priority]}/10 on ${PRIORITY[a.priority]}`); }
+          picks.push({ ...p, cat: c, s, why });
+        }
+      }
+      const seen = new Set();
+      return picks.sort((x, y) => y.s - x.s).filter((p) => (seen.has(p.name) ? false : seen.add(p.name))).slice(0, 3);
+    }
+    function render(a) {
+      const list = shortlist(a);
+      out.hidden = false;
+      out.innerHTML = '<h2 class="block-head">Your shortlist</h2>' + list.map((p, i) =>
+        `<article class="finder-pick"><span class="sw-rank">${i + 1}</span><div>` +
+        `<a class="topic" href="/software/${p.cat.id}/">${esc(p.cat.short)}</a>` +
+        `<h3><a href="/software/${p.cat.id}/#${p.id}">${esc(p.name)}</a></h3>` +
+        `<p>${esc(p.verdict)}</p>` +
+        `<p class="meta">Why it fits: ${esc(p.why.length ? p.why.join('; ') : 'a top-ranked option for this need')}. Our score ${p.overall.toFixed(1)}/10.</p>` +
+        `</div></article>`).join('') +
+        `<p class="finder-actions"><button type="button" class="button-ghost" id="copy">Copy link to this shortlist</button> <a class="link" href="/software/">Browse all rankings</a></p>`;
+      document.getElementById('copy').addEventListener('click', (e) => {
+        navigator.clipboard?.writeText(location.href).then(() => { e.target.textContent = 'Link copied'; }, () => {});
+      });
+      out.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    form.addEventListener('change', (e) => {
+      if (e.target.name === 'need') {
+        const boxes = [...form.querySelectorAll('input[name=need]')];
+        const n = boxes.filter((b) => b.checked).length;
+        boxes.forEach((b) => { b.disabled = !b.checked && n >= 3; });
+      }
+    });
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const a = readForm();
+      err.hidden = a.need.length > 0;
+      if (!a.need.length) return;
+      const q = new URLSearchParams();
+      q.set('need', a.need.join(','));
+      ['size', 'erp', 'priority'].forEach((k) => a[k] && q.set(k, a[k]));
+      history.replaceState(null, '', '?' + q);
+      render(a);
+    });
+
+    // Restore a shared shortlist from the URL.
+    const q = new URLSearchParams(location.search);
+    if (q.get('need')) {
+      const allowed = { size: ['smb', 'mid', 'enterprise'], erp: ['sap', 'oracle', 'microsoft', 'netsuite', 'other'], priority: Object.keys(PRIORITY) };
+      const pick = (k) => (allowed[k].includes(q.get(k)) ? q.get(k) : null);
+      const a = { need: q.get('need').split(',').filter((n) => data.some((c) => c.id === n)).slice(0, 3), size: pick('size'), erp: pick('erp'), priority: pick('priority') };
+      a.need.forEach((n) => { const b = form.querySelector(`input[name=need][value="${n}"]`); if (b) b.checked = true; });
+      ['size', 'erp', 'priority'].forEach((k) => { const r = a[k] && form.querySelector(`input[name=${k}][value="${a[k]}"]`); if (r) r.checked = true; });
+      if (a.need.length) render(a);
+    }
+  </script>
+</Base>

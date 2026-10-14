@@ -1,0 +1,20 @@
+---
+// Compact Market Outlook for the homepage rail: the categories with the
+// strongest calls (supplier's markets first, then buyer's markets).
+import { outlooks, outlookDraft, DIRECTION, LEVERAGE } from '../data/outlook';
+const order = { supplier: 0, buyer: 1, balanced: 2 } as const;
+const picks = [...outlooks].sort((a, b) => order[a.leverage] - order[b.leverage] || Math.abs(b.category.m3ann) - Math.abs(a.category.m3ann)).slice(0, 6);
+---
+<div class="rail-module">
+  <h2>Market Outlook{outlookDraft && <span class="chip">Draft</span>}</h2>
+  <ul class="outlook-mini">
+    {picks.map((o) => (
+      <li>
+        <a href={`/cost-monitor/${o.id}/`}>{o.category.name.split(' (')[0]}</a>
+        <span class={`lev lev-${o.leverage}`}>{LEVERAGE[o.leverage].label}</span>
+        <span class={`dir dir-${o.direction}`} title={`Prices ${DIRECTION[o.direction].label.toLowerCase()}, next 90 days`}><span aria-hidden="true">{DIRECTION[o.direction].icon}</span><span class="sr">Prices {DIRECTION[o.direction].label.toLowerCase()}</span></span>
+      </li>
+    ))}
+  </ul>
+  <a class="more" href="/outlook/">Our call on all {outlooks.length} categories</a>
+</div>
