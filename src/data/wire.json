@@ -1,6 +1,198 @@
 {
- "updated": "2026-10-13T17:34:00.368Z",
+ "updated": "2026-10-14T15:04:21.753Z",
  "items": [
+  {
+   "title": "Micron pledges $50M to support DOE’s Genesis Mission",
+   "url": "https://www.manufacturingdive.com/news/micron-doe-genesis-mission-graduate-fellowship-pilot-program/832895/",
+   "source": "Manufacturing Dive",
+   "date": "2026-10-14T14:52:34.000Z",
+   "topic": "ai-procurement",
+   "official": false
+  },
+  {
+   "title": "Best Buy pilots battery-powered vehicles at California distribution sites",
+   "url": "https://www.supplychaindive.com/news/best-buy-pilots-battery-powered-vehicles-at-california-distribution-sites/832802/",
+   "source": "Supply Chain Dive",
+   "date": "2026-10-14T14:32:12.000Z",
+   "topic": "esg-regulation",
+   "official": false
+  },
+  {
+   "title": "CBP eyes earlier filing deadlines for low-cost imports, postal changes",
+   "url": "https://www.supplychaindive.com/news/cbp-eyes-earlier-filing-deadlines-for-low-cost-imports-postal-changes/832877/",
+   "source": "Supply Chain Dive",
+   "date": "2026-10-14T13:49:47.000Z",
+   "topic": "tariffs-trade",
+   "official": false
+  },
+  {
+   "title": "Is UPS parcel pivot a strategic winner or a ‘Trojan horse’?",
+   "url": "https://www.freightwaves.com/news/is-ups-parcel-pivot-a-strategic-winner-or-a-trojan-horse",
+   "source": "FreightWaves",
+   "date": "2026-10-14T13:23:59.000Z",
+   "topic": "supplier-risk",
+   "official": false
+  },
+  {
+   "title": "Nebraska deputies recover $250K stolen copper load 50 miles past Iowa destination",
+   "url": "https://www.freightwaves.com/news/nebraska-deputies-recover-250k-stolen-copper-load-50-miles-past-iowa-destination",
+   "source": "FreightWaves",
+   "date": "2026-10-14T13:20:34.000Z",
+   "topic": "commodities",
+   "official": false
+  },
+  {
+   "title": "LTL rates hit new high in Q3, moving higher in Q4",
+   "url": "https://www.freightwaves.com/news/ltl-rates-hit-new-high-in-q3-moving-higher-in-q4",
+   "source": "FreightWaves",
+   "date": "2026-10-14T13:20:00.000Z",
+   "topic": "supplier-risk",
+   "official": false
+  },
+  {
+   "title": "Why Yum! Brands is deepening supplier relationships",
+   "url": "https://www.supplychaindive.com/news/why-yum-brands-is-deepening-supplier-relationships/832944/",
+   "source": "Supply Chain Dive",
+   "date": "2026-10-14T13:19:00.000Z",
+   "topic": "supplier-risk",
+   "official": false
+  },
+  {
+   "title": "Parcel shipping costs approach record high as extra charges stack up",
+   "url": "https://www.freightwaves.com/news/parcel-shipping-costs-approach-record-high-as-extra-charges-stack-up",
+   "source": "FreightWaves",
+   "date": "2026-10-14T12:33:00.000Z",
+   "topic": "supplier-risk",
+   "official": false
+  },
+  {
+   "title": "Certain Vertical Power Delivery Systems, Components Thereof, and Computing Systems Containing the Same; Notice of Institution of Investigation",
+   "url": "https://www.federalregister.gov/documents/2026/10/14/2026-20993/certain-vertical-power-delivery-systems-components-thereof-and-computing-systems-containing-the-same",
+   "source": "Federal Register · International Trade Commission",
+   "date": "2026-10-14T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "official": true
+  },
+  {
+   "title": "Trichloroethylene (TCE); Regulation Under the Toxic Substances Control Act (TSCA); Compliance Date Extensions",
+   "url": "https://www.federalregister.gov/documents/2026/10/14/2026-20964/trichloroethylene-tce-regulation-under-the-toxic-substances-control-act-tsca-compliance-date",
+   "source": "Federal Register · Environmental Protection Agency",
+   "date": "2026-10-14T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "official": true
+  },
+  {
+   "title": "Notice of Receipt of Complaint; Solicitation of Comments Relating to the Public Interest",
+   "url": "https://www.federalregister.gov/documents/2026/10/14/2026-20932/notice-of-receipt-of-complaint-solicitation-of-comments-relating-to-the-public-interest",
+   "source": "Federal Register · International Trade Commission",
+   "date": "2026-10-14T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "official": true
+  },
+  {
+   "title": "Certain Corrosion-Resistant Steel Products From Taiwan: Preliminary Results and Rescission, in Part, of Antidumping Duty Administrative Review; 2024-2025",
+   "url": "https://www.federalregister.gov/documents/2026/10/14/2026-20897/certain-corrosion-resistant-steel-products-from-taiwan-preliminary-results-and-rescission-in-part-of",
+   "source": "Federal Register · Commerce Department",
+   "date": "2026-10-14T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "official": true
+  },
+  {
+   "title": "Imposition and Collection of Civil Penalties for Certain Immigration-Related Violations",
+   "url": "https://www.federalregister.gov/documents/2026/10/14/2026-21024/imposition-and-collection-of-civil-penalties-for-certain-immigration-related-violations",
+   "source": "Federal Register · Homeland Security Department",
+   "date": "2026-10-14T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "official": true
+  },
+  {
+   "title": "Pilot, Tesla open first Megacharger site, 12 more underway",
+   "url": "https://www.freightwaves.com/news/pilot-tesla-megacharger-site-opens",
+   "source": "FreightWaves",
+   "date": "2026-10-14T11:30:00.000Z",
+   "topic": "tariffs-trade",
+   "official": false
+  },
+  {
+   "title": "Philadelphia ports sets $837 million expansion, first new berth in 50 years",
+   "url": "https://www.freightwaves.com/news/philadelphia-ports-sets-837-million-expansion-first-new-berth-in-50-years",
+   "source": "FreightWaves",
+   "date": "2026-10-14T10:05:00.000Z",
+   "topic": "supplier-risk",
+   "official": false
+  },
+  {
+   "title": "Top 5 ways to improve relationships with suppliers",
+   "url": "https://cpostrategy.media/blog/2026/10/14/top-5-ways-to-improve-relationships-with-suppliers/",
+   "source": "CPO Strategy",
+   "date": "2026-10-14T09:00:00.000Z",
+   "topic": "supplier-risk",
+   "official": false
+  },
+  {
+   "title": "Samsara makes AI agent platform generally available, reports 7x adoption growth",
+   "url": "https://www.freightwaves.com/news/samsara-makes-ai-agent-platform-generally-available-reports-7x-adoption-growth",
+   "source": "FreightWaves",
+   "date": "2026-10-13T19:30:38.000Z",
+   "topic": "ai-procurement",
+   "official": false
+  },
+  {
+   "title": "Despite new record, Port of LA chief warns of tariff-driven planning risk",
+   "url": "https://www.freightwaves.com/news/despite-new-record-port-of-la-chief-warns-of-tariff-driven-planning-risk",
+   "source": "FreightWaves",
+   "date": "2026-10-13T19:30:00.000Z",
+   "topic": "tariffs-trade",
+   "official": false
+  },
+  {
+   "title": "25,000 Drivers Lost: US-Mexico Border Crisis Explained",
+   "url": "https://www.freightwaves.com/news/25000-drivers-lost-us-mexico-border-crisis-explained",
+   "source": "FreightWaves",
+   "date": "2026-10-13T18:42:23.000Z",
+   "topic": "supplier-risk",
+   "official": false
+  },
+  {
+   "title": "Canada Tariffs Are Changing Freight Strategy Fast",
+   "url": "https://www.freightwaves.com/news/canada-tariffs-are-changing-freight-strategy-fast",
+   "source": "FreightWaves",
+   "date": "2026-10-13T18:41:13.000Z",
+   "topic": "tariffs-trade",
+   "official": false
+  },
+  {
+   "title": "Diesel Prices Surge 20 Cents: Why the Fuel Market is in Crisis",
+   "url": "https://www.freightwaves.com/news/diesel-prices-surge-20-cents-why-the-fuel-market-is-in-crisis",
+   "source": "FreightWaves",
+   "date": "2026-10-13T18:40:22.000Z",
+   "topic": "commodities",
+   "official": false
+  },
+  {
+   "title": "Mexico truck exports soar 145% as US demand accelerates",
+   "url": "https://www.freightwaves.com/news/mexico-truck-exports-soar-145-as-us-demand-accelerates",
+   "source": "FreightWaves",
+   "date": "2026-10-13T17:49:57.000Z",
+   "topic": "tariffs-trade",
+   "official": false
+  },
+  {
+   "title": "How National Debt Affects Freight Costs and Financing",
+   "url": "https://www.freightwaves.com/news/how-national-debt-affects-freight-costs-and-financing",
+   "source": "FreightWaves",
+   "date": "2026-10-13T17:46:25.000Z",
+   "topic": "supplier-risk",
+   "official": false
+  },
+  {
+   "title": "SONAR Pricing Power Index Slips to 70 as Intermodal Contract Rates Fall",
+   "url": "https://www.freightwaves.com/news/sonar-pricing-power-index-slips-to-70-as-intermodal-contract-rates-fall",
+   "source": "FreightWaves",
+   "date": "2026-10-13T17:34:52.000Z",
+   "topic": "supplier-risk",
+   "official": false
+  },
   {
    "title": "CCT Auto Trans expands car haul coverage map in Livingston VTS deal",
    "url": "https://www.freightwaves.com/news/cct-auto-trans-expands-car-haul-coverage-map-in-livingston-vts-deal",
@@ -26,7 +218,7 @@
    "official": false
   },
   {
-   "title": "GSK to invest $800M on Pennsylvania expansion",
+   "title": "GSK to invest $800M in Pennsylvania expansion",
    "url": "https://www.manufacturingdive.com/news/biopharma-gsk-invest-800m-pennsylvania-expansion-montgomery-county/832846/",
    "source": "Manufacturing Dive",
    "date": "2026-10-13T16:04:00.000Z",
@@ -42,7 +234,7 @@
    "official": false
   },
   {
-   "title": "Cass: TL linehaul rates up 10% in September, shipment counts remain positive",
+   "title": "TL linehaul rates up 10% in September, shipment counts remain positive",
    "url": "https://www.freightwaves.com/news/cass-tl-linehaul-rates-up-10-in-september-shipment-counts-remain-positive",
    "source": "FreightWaves",
    "date": "2026-10-13T15:03:35.000Z",
@@ -250,34 +442,10 @@
    "official": false
   },
   {
-   "title": "Levi’s to use part of $80M tariff refund for supply chain",
-   "url": "https://www.supplychaindive.com/news/levis-to-use-part-of-80m-tariff-refund-for-supply-chain/832562/",
-   "source": "Supply Chain Dive",
-   "date": "2026-10-12T11:39:00.000Z",
-   "topic": "tariffs-trade",
-   "official": false
-  },
-  {
    "title": "Penske request for en banc hearing gets pushback from victim’s estate",
    "url": "https://www.freightwaves.com/news/penske-request-for-en-banc-hearing-gets-pushback-from-victims-estate",
    "source": "FreightWaves",
    "date": "2026-10-12T11:00:00.000Z",
-   "topic": "supplier-risk",
-   "official": false
-  },
-  {
-   "title": "5 steps to a resilient supply chain",
-   "url": "https://www.supplychaindive.com/spons/5-steps-to-a-resilient-supply-chain/831849/",
-   "source": "Supply Chain Dive",
-   "date": "2026-10-12T09:00:00.000Z",
-   "topic": "supplier-risk",
-   "official": false
-  },
-  {
-   "title": "2026’s most overrated and underrated supply chain priorities",
-   "url": "https://www.supplychaindive.com/spons/2026s-most-overrated-and-underrated-supply-chain-priorities/832074/",
-   "source": "Supply Chain Dive",
-   "date": "2026-10-12T09:00:00.000Z",
    "topic": "supplier-risk",
    "official": false
   },
@@ -312,174 +480,6 @@
    "date": "2026-10-11T11:00:00.000Z",
    "topic": "tariffs-trade",
    "official": false
-  },
-  {
-   "title": "The two tightest regions tell two very different stories about the freight market",
-   "url": "https://www.freightwaves.com/news/the-two-tightest-regions-tell-two-very-different-stories-about-the-freight-market",
-   "source": "FreightWaves",
-   "date": "2026-10-11T00:30:00.000Z",
-   "topic": "supplier-risk",
-   "official": false
-  },
-  {
-   "title": "Texas trucking firm sued over age limits on drivers",
-   "url": "https://www.freightwaves.com/news/texas-trucking-firm-sued-over-age-limits-on-drivers",
-   "source": "FreightWaves",
-   "date": "2026-10-09T18:58:31.000Z",
-   "topic": "supplier-risk",
-   "official": false
-  },
-  {
-   "title": "Trucking Rates Spike: Contracts at 52-Week High",
-   "url": "https://www.freightwaves.com/news/trucking-rates-spike-contracts-at-52-week-high",
-   "source": "FreightWaves",
-   "date": "2026-10-09T18:26:42.000Z",
-   "topic": "commodities",
-   "official": false
-  },
-  {
-   "title": "Logistics AI: Getting a Return on Your Investment",
-   "url": "https://www.freightwaves.com/news/logistics-ai-getting-a-return-on-your-investment",
-   "source": "FreightWaves",
-   "date": "2026-10-09T18:25:50.000Z",
-   "topic": "ai-procurement",
-   "official": false
-  },
-  {
-   "title": "$185M Breakup Fee? Inside the CH Robinson-RXO Merger",
-   "url": "https://www.freightwaves.com/news/185m-breakup-fee-inside-the-ch-robinson-rxo-merger",
-   "source": "FreightWaves",
-   "date": "2026-10-09T18:24:40.000Z",
-   "topic": "tariffs-trade",
-   "official": false
-  },
-  {
-   "title": "Stord lands $400M Citi-led credit facility, adds CFO and CRO",
-   "url": "https://www.freightwaves.com/news/stord-400m-credit-facility-citi",
-   "source": "FreightWaves",
-   "date": "2026-10-09T16:16:03.000Z",
-   "topic": "supplier-risk",
-   "official": false
-  },
-  {
-   "title": "Kodiak AI, Charger Logistics launch autonomous Laredo lane",
-   "url": "https://www.freightwaves.com/news/kodiak-charger-autonomous-trucks-dallas-laredo",
-   "source": "FreightWaves",
-   "date": "2026-10-09T15:57:20.000Z",
-   "topic": "ai-procurement",
-   "official": false
-  },
-  {
-   "title": "Formal EO order on red dye diesel short on specifics",
-   "url": "https://www.freightwaves.com/news/formal-eo-order-on-red-dye-diesel-short-on-specifics",
-   "source": "FreightWaves",
-   "date": "2026-10-09T15:47:14.000Z",
-   "topic": "commodities",
-   "official": false
-  },
-  {
-   "title": "Blue Origin, PPG and more invest in manufacturing facilities",
-   "url": "https://www.manufacturingdive.com/news/blue-origin-ppg-cleveland-cliffs-more-facility-investments/832603/",
-   "source": "Manufacturing Dive",
-   "date": "2026-10-09T15:47:00.000Z",
-   "topic": "supplier-risk",
-   "official": false
-  },
-  {
-   "title": "Thousands of manufacturing layoffs announced in September",
-   "url": "https://www.manufacturingdive.com/news/manufacturing-layoffs-closures-warn-act-september-2026/832400/",
-   "source": "Manufacturing Dive",
-   "date": "2026-10-09T15:24:49.000Z",
-   "topic": "supplier-risk",
-   "official": false
-  },
-  {
-   "title": "Retailers say extended peak shipping season winding down",
-   "url": "https://www.freightwaves.com/news/retailers-say-extended-peak-shipping-season-winding-down",
-   "source": "FreightWaves",
-   "date": "2026-10-09T15:20:12.000Z",
-   "topic": "tariffs-trade",
-   "official": false
-  },
-  {
-   "title": "AI in procurement’s biggest barrier isn’t technology. It’s talent.",
-   "url": "https://cpostrategy.media/blog/2026/10/09/ai-in-procurements-biggest-barrier-isnt-technology-its-talent/",
-   "source": "CPO Strategy",
-   "date": "2026-10-09T14:33:57.000Z",
-   "topic": "ai-procurement",
-   "official": false
-  },
-  {
-   "title": "Walmart activates automated e-commerce logistics center in California",
-   "url": "https://www.freightwaves.com/news/walmart-activates-automated-e-commerce-logistics-center-in-california",
-   "source": "FreightWaves",
-   "date": "2026-10-09T13:41:49.000Z",
-   "topic": "ai-procurement",
-   "official": false
-  },
-  {
-   "title": "Fake freight broker redirects $273K seafood shipment in New Jersey cargo theft attempt",
-   "url": "https://www.freightwaves.com/news/fake-freight-broker-redirects-273k-seafood-shipment-in-new-jersey-cargo-theft-attempt",
-   "source": "FreightWaves",
-   "date": "2026-10-09T13:39:29.000Z",
-   "topic": "proc-tech",
-   "official": false
-  },
-  {
-   "title": "A Virtual Compliance Department for Every Fleet",
-   "url": "https://www.freightwaves.com/news/a-virtual-compliance-department-for-every-fleet",
-   "source": "FreightWaves",
-   "date": "2026-10-09T13:11:11.000Z",
-   "topic": "tariffs-trade",
-   "official": false
-  },
-  {
-   "title": "UPDATED: US West Coast container rates edge lower",
-   "url": "https://www.freightwaves.com/news/us-west-coast-container-rates-edge-lower",
-   "source": "FreightWaves",
-   "date": "2026-10-09T13:07:24.000Z",
-   "topic": "supplier-risk",
-   "official": false
-  },
-  {
-   "title": "Why Trucking Rates Are Rising Without More Freight",
-   "url": "https://www.freightwaves.com/news/why-trucking-rates-are-rising-without-more-freight",
-   "source": "FreightWaves",
-   "date": "2026-10-09T13:00:00.000Z",
-   "topic": "supplier-risk",
-   "official": false
-  },
-  {
-   "title": "Foreign-Trade Zone (FTZ) 50, Notification of Proposed Production Activity; Sanyo Denki America, Inc.; (Cooling, Servo, and Power Systems and Assemblies); Torrance, California",
-   "url": "https://www.federalregister.gov/documents/2026/10/09/2026-20776/foreign-trade-zone-ftz-50-notification-of-proposed-production-activity-sanyo-denki-america-inc",
-   "source": "Federal Register · Commerce Department",
-   "date": "2026-10-09T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "official": true
-  },
-  {
-   "title": "Foreign-Trade Zone (FTZ) 40, Notification of Proposed Production Activity; Norman Noble Company Inc.; (Implantable Medical Devices); Highland Heights, Ohio",
-   "url": "https://www.federalregister.gov/documents/2026/10/09/2026-20775/foreign-trade-zone-ftz-40-notification-of-proposed-production-activity-norman-noble-company-inc",
-   "source": "Federal Register · Commerce Department",
-   "date": "2026-10-09T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "official": true
-  },
-  {
-   "title": "Foreign-Trade Zone (FTZ) 16, Notification of Proposed Production Activity; Yazaki North America, Inc.; (Stamped Copper Terminals); Petoskey, Michigan",
-   "url": "https://www.federalregister.gov/documents/2026/10/09/2026-20774/foreign-trade-zone-ftz-16-notification-of-proposed-production-activity-yazaki-north-america-inc",
-   "source": "Federal Register · Commerce Department",
-   "date": "2026-10-09T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "official": true
-  },
-  {
-   "title": "Agency Information Collection Activities: Submission to OMB for Review and Approval; Public Comment Request; Applicant Organizational National Provider Identifiers and Centers for Medicare & Medicaid Services Certification Numbers Form",
-   "url": "https://www.federalregister.gov/documents/2026/10/09/2026-20731/agency-information-collection-activities-submission-to-omb-for-review-and-approval-public-comment",
-   "source": "Federal Register · Health and Human Services Department",
-   "date": "2026-10-09T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "official": true
   }
  ]
 }
