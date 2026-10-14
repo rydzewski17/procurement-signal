@@ -1,0 +1,125 @@
+---
+// "What's moving in your categories": price direction, what it is doing to the market,
+// what it means for buyers (our analysis), and the latest news. Six rows show by default.
+import { categoryWatch, impactAsOf } from '../data/watch';
+import { meta, monthLabel, fmtPct } from '../data/costs';
+const { posts } = Astro.props;
+const rows = categoryWatch(posts);
+const groups = [...new Set(rows.map((r) => r.group))];
+const through = monthLabel(meta.dataThrough + '-01');
+const asOf = new Date(impactAsOf + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'long', day: 'numeric', timeZone: 'UTC' });
+---
+<section class="watch" aria-labelledby="watch-h">
+  <div class="watch-head">
+    <h2 id="watch-h">What's moving in your categories</h2>
+    <p>Where prices are heading, how that is changing the market, and what it means for buyers. Prices are U.S. producer price data through {through}; analysis updated {asOf}.</p>
+    <div class="watch-filter" role="group" aria-label="Filter by category group">
+      <button type="button" class="wf on" data-g="all">All categories</button>
+      {groups.map((g) => <button type="button" class="wf" data-g={g}>{g}</button>)}
+    </div>
+  </div>
+
+  <div class="wl">
+    <div class="wl-head" aria-hidden="true"><span>Category</span><span>Price direction</span><span>What it means for buyers</span><span></span></div>
+    {rows.map((r, i) => (
+      <details class="wi" data-g={r.group} data-i={i}>
+        <summary>
+          <span class="wi-cat"><strong>{r.name}</strong><small>{r.group}</small></span>
+          <span class={`wi-dir ${r.status}`}><b>{r.statusLabel}</b><small>{fmtPct(r.m1)} last month, {fmtPct(r.m3)} over 3 months, {fmtPct(r.y1)} over 12 months</small></span>
+          <span class="wi-mean">{r.impact ? r.impact.meaning : r.posture}</span>
+          <span class="wi-toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="wi-body">
+          <div>
+            <h3>What's happening</h3>
+            <p>{r.impact?.now ?? 'No market summary yet for this category.'}</p>
+          </div>
+          <div>
+            <h3>Recommended stance</h3>
+            <p><strong>{r.stance}.</strong> {r.posture}</p>
+          </div>
+          <div>
+            <h3>Latest news</h3>
+            {r.latest
+              ? <p><a href={r.latest.href} target={r.latest.ext ? '_blank' : undefined} rel={r.latest.ext ? 'noopener' : undefined}>{r.latest.title}</a> <span class="src">{r.latest.source}</span></p>
+              : <p class="muted">No category news this week.</p>}
+          </div>
+          {r.impact?.sources?.length > 0 && (
+            <p class="wi-src">Sources: {r.impact.sources.map((s: any, k: number) => <>{k > 0 && '; '}<a href={s.url} target={s.url.startsWith('http') ? '_blank' : undefined} rel={s.url.startsWith('http') ? 'noopener' : undefined}>{s.name}</a></>)}. <a href={`/cost-monitor/${r.id}/`}>Price history for {r.name.toLowerCase()}</a>.</p>
+          )}
+        </div>
+      </details>
+    ))}
+  </div>
+  <button type="button" class="watch-all">Show all {rows.length} categories</button>
+</section>
+
+<script is:inline>
+  (() => {
+    const root = document.querySelector('.watch'); if (!root) return;
+    const items = [...root.querySelectorAll('.wi')];
+    const more = root.querySelector('.watch-all');
+    let group = 'all', expanded = false;
+    const apply = () => {
+      let shown = 0;
+      items.forEach((el) => {
+        const inGroup = group === 'all' || el.dataset.g === group;
+        const visible = inGroup && (expanded || group !== 'all' || shown < 6);
+        el.hidden = !visible; if (visible) shown++;
+      });
+      more.hidden = group !== 'all' || expanded;
+    };
+    root.querySelector('.watch-filter').addEventListener('click', (e) => {
+      const b = e.target.closest('.wf'); if (!b) return;
+      root.querySelectorAll('.wf').forEach((x) => x.classList.toggle('on', x === b));
+      group = b.dataset.g; apply();
+    });
+    more.addEventListener('click', () => { expanded = true; apply(); });
+    apply();
+  })();
+</script>
+
+<style>
+  .watch { margin: 40px 0 0; border-top: 3px solid var(--ink); }
+  .watch-head { padding: 14px 0 12px; }
+  .watch-head h2 { font: 700 26px/1.2 var(--head); margin: 0 0 6px; }
+  .watch-head p { font-size: 15px; color: var(--muted); margin: 0 0 12px; max-width: 72ch; }
+  .watch-filter { display: flex; flex-wrap: wrap; gap: 6px; }
+  .wf { font: 600 13px/1 var(--ui); padding: 8px 11px; border: 1px solid #b9c7d5; background: #fff; color: var(--ink); border-radius: 3px; cursor: pointer; }
+  .wf:hover { border-color: var(--ink); }
+  .wf.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .wl { border-top: 1px solid var(--rule); }
+  .wi { border-bottom: 1px solid var(--rule); }
+  .wl-head { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr) minmax(0, 2fr) 22px; gap: 18px; padding: 10px 0; font: 600 13px/1 var(--ui); color: var(--muted); border-bottom: 1px solid var(--rule); }
+  .wi[hidden] { display: none; }
+  .wi summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr) minmax(0, 2fr) 22px; gap: 18px; padding: 16px 0; align-items: start; }
+  .wi summary::-webkit-details-marker { display: none; }
+  .wi summary:hover .wi-cat strong { text-decoration: underline; text-underline-offset: 3px; }
+  .wi-cat strong { display: block; font: 700 17px/1.25 var(--head); color: var(--ink); }
+  .wi small { display: block; font: 400 12.5px/1.4 var(--ui); color: var(--muted); margin-top: 3px; }
+  .wi-dir b { font: 700 15px/1.2 var(--ui); }
+  .wi-dir.rising-fast b, .wi-dir.rising b { color: var(--red); }
+  .wi-dir.easing b { color: var(--teal); }
+  .wi-dir.stable b { color: var(--ink-2); }
+  .wi-mean { font: 16px/1.5 var(--head); color: var(--ink); }
+  .wi-toggle { width: 22px; height: 22px; border: 1px solid #b9c7d5; border-radius: 50%; position: relative; margin-top: 2px; }
+  .wi-toggle::before, .wi-toggle::after { content: ""; position: absolute; left: 50%; top: 50%; width: 10px; height: 2px; background: var(--ink); transform: translate(-50%, -50%); }
+  .wi-toggle::after { transform: translate(-50%, -50%) rotate(90deg); }
+  .wi[open] .wi-toggle::after { display: none; }
+  .wi-body { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; background: var(--navy-tint); padding: 16px 18px 18px; margin: 0 0 16px; }
+  .wi-body h3 { font: 600 13px/1 var(--ui); color: var(--teal); margin: 0 0 6px; }
+  .wi-body p { font-size: 15px; line-height: 1.5; margin: 0; color: var(--ink); }
+  .wi-body a { color: var(--link); }
+  .wi-body .src, .wi-body .muted { color: var(--muted); font-size: 13px; }
+  .wi-src { grid-column: 1 / -1; font-size: 13px !important; color: var(--muted) !important; }
+  .watch-all { margin-top: 14px; padding: 11px 16px; border: 1px solid var(--ink); background: #fff; color: var(--ink); font: 600 14px/1 var(--ui); cursor: pointer; }
+  .watch-all:hover { background: var(--ink); color: #fff; }
+  .watch-all[hidden] { display: none; }
+  @media (max-width: 760px) {
+    .wl-head { display: none; }
+    .wi summary { grid-template-columns: minmax(0, 1fr) 22px; gap: 8px 12px; }
+    .wi-cat { grid-column: 1; } .wi-toggle { grid-column: 2; grid-row: 1; }
+    .wi-dir, .wi-mean { grid-column: 1 / -1; }
+    .wi-body { grid-template-columns: 1fr; }
+  }
+</style>

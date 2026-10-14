@@ -5,4 +5,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://procurement-signal.rydzewski-jason.workers.dev',
   integrations: [sitemap()],
+  redirects: {
+    '/software/source-to-pay': '/software/procure-to-pay/',
+    '/simulator': '/software/',
+    '/tariffs': '/categories/',
+  },
 });

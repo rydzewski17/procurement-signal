@@ -1,0 +1,24 @@
+---
+// Renders only approved testimonials (src/data/testimonials.json). Hidden when empty.
+import { testimonials } from '../data/testimonials';
+---
+{testimonials.length > 0 && (
+  <section class="testimonials" aria-label="What buyers say">
+    <div class="band-title"><span>What buyers say</span></div>
+    <div class="quotes">
+      {testimonials.map((t) => (
+        <figure>
+          <blockquote>“{t.quote}”</blockquote>
+          <figcaption><strong>{t.name}</strong>, {t.role}, {t.company}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+)}
+<style>
+  .testimonials { margin: 36px 0; }
+  .band-title { font: 800 13px/1 var(--sans); text-transform: uppercase; letter-spacing: .06em; border-bottom: 2px solid #000; padding-bottom: 8px; margin-bottom: 14px; }
+  .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  blockquote { margin: 0; font: 500 16px/1.5 var(--sans); }
+  figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
+</style>

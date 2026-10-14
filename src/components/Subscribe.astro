@@ -1,0 +1,30 @@
+---
+// Newsletter sign-up. Shows a working form once SUBSCRIBE_ACTION is set; until then it
+// points readers to the RSS feed instead of showing a form that cannot save emails.
+import { SUBSCRIBE_ACTION } from '../data/site';
+const { title = 'The morning briefing', text = 'Procurement stories that matter, every weekday.' } = Astro.props;
+---
+<aside class="subscribe" aria-label="Newsletter sign-up">
+  <h3>{title}</h3>
+  <p>{text}</p>
+  {SUBSCRIBE_ACTION ? (
+    <form action={SUBSCRIBE_ACTION} method="post" class="sub-form">
+      <label class="sr-only" for="sub-email">Email address</label>
+      <input id="sub-email" type="email" name="email" required placeholder="you@company.com" autocomplete="email" />
+      <button type="submit">Subscribe</button>
+    </form>
+  ) : (
+    <p class="sub-fallback">Email sign-up is launching soon. <a href="/rss.xml">Follow by RSS</a> in the meantime.</p>
+  )}
+</aside>
+
+<style>
+  .subscribe { background: #f4f4f4; padding: 22px; margin: 30px 0; }
+  .subscribe h3 { font: 800 19px/1.2 var(--sans); margin: 0 0 6px; }
+  .subscribe p { font-size: 14px; color: var(--ink-2); margin: 0 0 12px; }
+  .sub-form { display: flex; gap: 8px; flex-wrap: wrap; }
+  .sub-form input { flex: 1 1 200px; font: 15px var(--sans); padding: 11px 12px; border: 1px solid #ccc; border-radius: 4px; }
+  .sub-form button { font: 600 14px var(--sans); background: #000; color: #fff; border: 0; padding: 11px 16px; border-radius: 4px; cursor: pointer; }
+  .sub-fallback a { color: var(--accent); font-weight: 600; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+</style>

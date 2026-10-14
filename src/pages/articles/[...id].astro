@@ -4,6 +4,7 @@ import Base from '../../layouts/Base.astro';
 import Card from '../../components/Card.astro';
 import Media from '../../components/Media.astro';
 import KeyFacts from '../../components/KeyFacts.astro';
+import Subscribe from '../../components/Subscribe.astro';
 import Trending from '../../components/Trending.astro';
 import BrowseTopics from '../../components/BrowseTopics.astro';
 import { getPosts } from '../../data/posts';
@@ -17,7 +18,13 @@ export async function getStaticPaths() {
 }
 const { post, posts } = Astro.props;
 const d = post.data;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
+const tocItems = headings.filter((h) => h.depth === 2);
+const words = post.body ? post.body.split(/\s+/).length : 0;
+const mins = Math.max(1, Math.round(words / 230));
+const idx = posts.findIndex((p) => p.id === post.id);
+const newer = idx > 0 ? posts[idx - 1] : null;
+const older = idx >= 0 && idx < posts.length - 1 ? posts[idx + 1] : null;
 const fmt = (x: Date) => x.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 
 // Read next: score other stories by shared tags, same topic and recency.
@@ -47,6 +54,7 @@ const jsonLd = {
         <div>
           <div class="who">By {d.author}</div>
           <div class="when">Published {fmt(d.date)}{d.updated && <>. Updated {fmt(d.updated)}</>}</div>
+          <div class="read-meta">{mins} min read · Signal {d.signal}/5</div>
         </div>
         <div class="share">
           <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${enc(url)}`} target="_blank" rel="noopener">Share on LinkedIn</a>
@@ -55,6 +63,12 @@ const jsonLd = {
       </div>
       <Media post={post} ratio="wide" caption eager />
       <KeyFacts facts={d.keyfacts} />
+      {tocItems.length > 0 && (
+        <details class="toc-mobile">
+          <summary>On this page</summary>
+          <ol>{tocItems.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+        </details>
+      )}
       <div class="prose"><Content /></div>
 
       {d.tags.length > 0 && (
@@ -64,6 +78,15 @@ const jsonLd = {
         </div>
       )}
 
+      {(newer || older) && (
+        <nav class="next-prev" aria-label="More stories">
+          {older ? <a href={`/articles/${older.id}/`}><span>Previous story</span><strong>{older.data.title}</strong></a> : <span />}
+          {newer ? <a href={`/articles/${newer.id}/`}><span>Next story</span><strong>{newer.data.title}</strong></a> : <span />}
+        </nav>
+      )}
+
+      <Subscribe />
+
       <section class="sources">
         <h2>Sources</h2>
         <ol>{d.sources.map((s) => <li><a href={s.url} rel="noopener" target="_blank">{s.name}</a></li>)}</ol>
@@ -72,13 +95,36 @@ const jsonLd = {
 
     <aside class="side">
       <div class="sticky">
-        <h2 class="block-head">Latest headlines</h2>
+        {tocItems.length > 0 && (
+          <nav class="toc" aria-label="On this page">
+            <h2>On this page</h2>
+            <ol>{tocItems.map((h) => <li><a href={`#${h.slug}`} data-toc={h.slug}>{h.text}</a></li>)}</ol>
+          </nav>
+        )}
+        {latest.length > 0 && <h2 class="block-head">Latest headlines</h2>}
         {latest.map((p) => <Card post={p} size="thumb" />)}
         <h2 class="block-head" style="margin-top:28px">Trackers</h2>
         <ul class="linklist">{trackers.map((t) => <li><a href={`/trackers/${t.slug}/`}>{t.title}</a></li>)}</ul>
       </div>
     </aside>
   </div>
+
+  <script is:inline>
+    (() => {
+      const links = [...document.querySelectorAll('[data-toc]')];
+      if (!links.length) return;
+      const map = new Map(links.map((a) => [a.dataset.toc, a]));
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            links.forEach((a) => a.classList.remove('active'));
+            map.get(e.target.id)?.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-20% 0px -70% 0px' });
+      map.forEach((_, id) => { const el = document.getElementById(id); if (el) obs.observe(el); });
+    })();
+  </script>
 
   {readNext.length > 0 && (
     <section class="band" aria-label="Read next">

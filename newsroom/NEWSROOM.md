@@ -17,9 +17,10 @@ Publish the procurement stories that matter to CPOs, category managers and buyer
 5. **Write each article** to the template below.
 6. **Update trackers** in `src/data/trackers/*.json` when a story adds or changes an entry. Update `updated` to today's date.
 7. **Update the events bar** in `src/data/events.json`: add any new dated event a story covers (an effective date, deadline, expiry or vote) with `date` (YYYY-MM-DD), a short `label` (under 50 characters) and `href` to our story. Remove events more than 60 days old. The bar shows countdowns, price alerts and trending topics automatically.
-8. **Build to verify:** run `npm ci` (first time) then `npm run build`. Fix any errors. Never push a broken build.
-9. **Commit and push** to `main` with message `newsroom: <date> — <n> stories`. Cloudflare Pages deploys automatically.
-10. **Report:** end with a short summary listing stories published, trackers updated, and anything that failed.
+8. **Update category analysis** in `src/data/category-impact.json` when a story or the monthly price data changes a category's picture. For each affected category, `now` must be factual and cite a source in `sources` (our article or the original publisher); `meaning` is our analysis of what it means for buyers and suppliers, in one or two sentences. Update `asOf` to today's date. Never state a figure that is not in a cited source.
+9. **Build to verify:** run `npm ci` (first time) then `npm run build`. Fix any errors. Never push a broken build.
+10. **Commit and push** to `main` with message `newsroom: <date> — <n> stories`. Cloudflare Pages deploys automatically.
+11. **Report:** end with a short summary listing stories published, trackers updated, and anything that failed.
 
 ## Article template
 

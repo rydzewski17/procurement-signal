@@ -3,6 +3,7 @@
 // Headlines and links only; readers click through to the original source.
 // Runs daily in GitHub Actions. No AI and no paid services involved.
 import fs from 'node:fs';
+import { categorize } from '../src/data/categories.mjs';
 
 const OUT = new URL('../src/data/wire.json', import.meta.url);
 const DAYS = 7;
@@ -85,7 +86,7 @@ async function main() {
         const t = new Date(it.date).getTime();
         if (!it.title || !it.url.startsWith('http') || !t || t < cutoff) continue;
         if (f.filter && !KEYWORDS.test(`${it.title} ${it.summary}`)) continue;
-        all.push({ title: it.title, url: it.url, source: f.source, date: new Date(t).toISOString(), topic: topicFor(`${it.title} ${it.summary}`), official: false });
+        all.push({ title: it.title, url: it.url, source: f.source, date: new Date(t).toISOString(), topic: topicFor(`${it.title} ${it.summary}`), categories: categorize(`${it.title} ${it.summary}`), official: false });
         kept++;
       }
       report.push(`${f.source}: ${kept}`);
@@ -99,7 +100,7 @@ async function main() {
       const data = JSON.parse(await get(q, 'application/json'));
       for (const d of data.results ?? []) {
         const agency = d.agencies?.[0]?.name ?? 'Federal Register';
-        all.push({ title: d.title, url: d.html_url, source: `Federal Register · ${agency}`, date: new Date(d.publication_date + 'T12:00:00Z').toISOString(), topic: topicFor(`${term} ${d.title}`), official: true });
+        all.push({ title: d.title, url: d.html_url, source: `Federal Register · ${agency}`, date: new Date(d.publication_date + 'T12:00:00Z').toISOString(), topic: topicFor(`${term} ${d.title}`), categories: categorize(`${term} ${d.title}`), official: true });
       }
       report.push(`Federal Register ${term}: ${data.results?.length ?? 0}`);
     } catch (e) { report.push(`Federal Register ${term}: failed (${e.message})`); }

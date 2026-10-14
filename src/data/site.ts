@@ -32,3 +32,6 @@ export const TOPIC_PHOTOS: Record<string, Photo> = {
   'esg-regulation': { src: u('photo-1762381157166-f51ac99ab412'), alt: 'Wind turbines and solar panels in a rural landscape', credit: 'Bernd Dittrich', creditUrl: 'https://unsplash.com/photos/wind-turbines-and-solar-panels-in-a-rural-landscape-gFud7-XmQvk', license: 'Unsplash' },
   'people-moves': { src: u('photo-1517048676732-d65bc937f952'), alt: 'Colleagues in a meeting around a table', credit: 'Dylan Gillis', creditUrl: 'https://unsplash.com/photos/people-sitting-on-chair-in-front-of-table-while-holding-pens-during-daytime-KdeqA3aTnBY', license: 'Unsplash' },
 };
+
+// Newsletter sign-up endpoint (for example, a Beehiiv or Mailchimp form action). Leave empty until an email provider is connected.
+export const SUBSCRIBE_ACTION = '';

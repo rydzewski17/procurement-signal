@@ -1,0 +1,22 @@
+---
+// Five-bar "signal strength" meter. Level 1-5 maps to how urgently buyers should act.
+const { level = 3, size = 'md', label = true } = Astro.props;
+const names: Record<number, string> = { 5: 'Critical', 4: 'High', 3: 'Watch', 2: 'Low', 1: 'Low' };
+const tone = level >= 5 ? 'crit' : level >= 4 ? 'high' : 'watch';
+---
+<span class={`meter ${tone} ${size}`} role="img" aria-label={`Signal strength ${level} of 5: ${names[level]}`}>
+  <span class="bars" aria-hidden="true">{[1, 2, 3, 4, 5].map((n) => <i class={n <= level ? 'on' : ''} style={`height:${30 + n * 14}%`}></i>)}</span>
+  {label && <span class="mname">{names[level]}</span>}
+</span>
+<style>
+  .meter { display: inline-flex; align-items: center; gap: 7px; vertical-align: middle; }
+  .bars { display: inline-flex; align-items: flex-end; gap: 2px; height: 14px; }
+  .md .bars { height: 16px; } .lg .bars { height: 22px; }
+  .bars i { display: block; width: 4px; background: #cfd6de; border-radius: 1px; }
+  .lg .bars i { width: 5px; }
+  .crit .bars i.on { background: var(--red); }
+  .high .bars i.on { background: var(--amber); }
+  .watch .bars i.on { background: var(--teal); }
+  .mname { font: 600 13px/1 var(--ui); }
+  .crit .mname { color: var(--red); } .high .mname { color: var(--amber); } .watch .mname { color: var(--teal); }
+</style>

@@ -1,0 +1,176 @@
+---
+import Base from '../../layouts/Base.astro';
+import wire from '../../data/wire.json';
+import { getPosts } from '../../data/posts';
+import { CATEGORIES, NEWS_GROUPS, categorize, categoryBySlug } from '../../data/categories.mjs';
+import { categoryWatch } from '../../data/watch';
+import { SOFTWARE } from '../../data/software';
+
+const posts = await getPosts();
+const clip = (t: string, n = 96) => (t.length > n ? t.slice(0, t.lastIndexOf(' ', n)) + '…' : t);
+const WEEK = 7 * 864e5;
+const newest = Math.max(...wire.items.map((i: any) => new Date(i.date).valueOf()), ...posts.map((p) => p.data.date.valueOf()));
+
+const topic = Object.fromEntries(CATEGORIES.map((c) => {
+  const items = [
+    ...posts.filter((p) => categorize(`${p.data.title} ${p.data.dek}`).includes(c.slug))
+      .map((p) => ({ title: p.data.title, href: `/articles/${p.id}/`, t: p.data.date.valueOf(), ext: false, src: 'Procurement Signal' })),
+    ...wire.items.filter((i: any) => (i.categories ?? []).includes(c.slug))
+      .map((i: any) => ({ title: i.title, href: i.url, t: new Date(i.date).valueOf(), ext: true, src: String(i.source).split(' · ')[0] })),
+  ].sort((a, b) => b.t - a.t);
+  return [c.slug, { ...c, items, total: items.length, week: items.filter((x) => newest - x.t < WEEK).length, ours: items.filter((x) => !x.ext).length }];
+}));
+
+// Price signals from our cost data, for topics that map to purchase categories.
+const watch = Object.fromEntries(categoryWatch(posts).map((w) => [w.id, w]));
+const PRICE: Record<string, string[]> = { metals: ['steel', 'aluminum', 'copper'], energy: ['diesel'], semis: ['semis'], freight: ['ocean', 'trucking'], manufacturing: ['electrical', 'resins', 'chemicals'], warehousing: ['paper', 'lumber'] };
+const SW: Record<string, string> = { contracts: 'contract-lifecycle', spend: 'spend-analytics', sourcing: 'strategic-sourcing', 'supplier-risk': 'supplier-risk', compliance: 'compliance-software', 'proc-tech': 'procurement-software' };
+const swName = (s: string) => SOFTWARE.categories.find((c) => c.slug === s)?.name;
+
+const GROUP: Record<string, { color: string; tint: string; text: string }> = {
+  trade: { color: 'var(--red)', tint: 'var(--red-tint)', text: 'Tariffs, regulation, public-sector buying and sustainability rules that change what you can buy and where.' },
+  supply: { color: 'var(--teal)', tint: 'var(--teal-tint)', text: 'Freight, supplier health, factories and warehouses: the physical flow of goods.' },
+  costs: { color: 'var(--amber)', tint: 'var(--amber-tint)', text: 'What you pay for metals, energy, chips, food and healthcare, with our price signal where we track one.' },
+  function: { color: 'var(--navy)', tint: 'var(--navy-tint)', text: 'How procurement teams source, contract, analyze spend, adopt technology and hire.' },
+};
+const leaders = Object.values(topic).sort((a: any, b: any) => b.week - a.week || b.total - a.total).slice(0, 6) as any[];
+const maxWeek = Math.max(1, ...leaders.map((l) => l.week));
+const groupOf = (slug: string) => NEWS_GROUPS.find((g) => g.slugs.includes(slug))?.id ?? 'function';
+const totalWeek = new Set(Object.values(topic).flatMap((t: any) => t.items.filter((x: any) => newest - x.t < WEEK).map((x: any) => x.href))).size;
+---
+<Base title="News by topic" description="Procurement news by topic: tariffs, freight, metals, energy, supplier risk, sourcing, contracts, procurement technology and more, with price signals and software rankings." section="categories">
+  <header class="hero">
+    <div class="hero-in">
+      <div>
+        <p class="eyebrow">News by topic</p>
+        <h1>Follow the parts of procurement you manage</h1>
+        <p class="dek">{CATEGORIES.length} topics in four areas. Headlines come from trade publications and official notices every morning and link to their original source. Where we track prices or rank software for a topic, you will see that too.</p>
+        <nav class="groups" aria-label="Topic areas">
+          {NEWS_GROUPS.map((g) => <a href={`#${g.id}`} style={`--g:${GROUP[g.id].color}`}><b>{g.name}</b><span>{g.slugs.length} topics</span></a>)}
+        </nav>
+      </div>
+      <aside class="board" aria-label="Most active topics this week">
+        <p class="bh">Most active this week <span>{totalWeek} headlines</span></p>
+        <ol>
+          {leaders.map((l) => (
+            <li style={`--g:${GROUP[groupOf(l.slug)].color}`}>
+              <a href={`/categories/${l.slug}/`}>{l.name}</a>
+              <span class="bar"><i style={`width:${(l.week / maxWeek) * 100}%`}></i></span>
+              <b>{l.week}</b>
+            </li>
+          ))}
+        </ol>
+      </aside>
+    </div>
+  </header>
+
+  {NEWS_GROUPS.map((g) => {
+    const G = GROUP[g.id];
+    return (
+      <section class="grp" id={g.id} style={`--g:${G.color};--gt:${G.tint}`}>
+        <div class="grp-head">
+          <h2>{g.name}</h2>
+          <p>{G.text}</p>
+        </div>
+        <div class={`cards n${g.slugs.length}`}>
+          {g.slugs.map((s: string) => {
+            const t: any = topic[s]; if (!t) return null;
+            const prices = (PRICE[s] ?? []).map((id) => watch[id]).filter(Boolean);
+            return (
+              <article class="card">
+                <div class="ch">
+                  <h3><a href={`/categories/${s}/`}>{t.name}</a></h3>
+                  <span class="cnt" title="Headlines in the last seven days">{t.week}<small>this week</small></span>
+                </div>
+                <p class="cb">{t.blurb}</p>
+                {prices.length > 0 && (
+                  <ul class="px">
+                    {prices.map((w: any) => <li class={w.status}><span>{w.name}</span><b>{w.y1 > 0 ? '+' : ''}{w.y1.toFixed(1)}% y/y</b><em>{w.statusLabel}</em></li>)}
+                  </ul>
+                )}
+                {t.items.length > 0 ? (
+                  <ul class="heads">
+                    {t.items.slice(0, 3).map((x: any) => (
+                      <li><a href={x.href} target={x.ext ? '_blank' : undefined} rel={x.ext ? 'noopener' : undefined}>{clip(x.title)}</a><span>{x.src}</span></li>
+                    ))}
+                  </ul>
+                ) : <p class="none">No headlines yet this week. Follow the topic to see the next one.</p>}
+                <div class="cf">
+                  <a class="more" href={`/categories/${s}/`}>All {t.name.toLowerCase()} news</a>
+                  {SW[s] && <a class="sw" href={`/software/${SW[s]}/`}>Ranking: {swName(SW[s])}</a>}
+                  {prices.length > 0 && <a class="sw" href="/cost-monitor/">Price trends</a>}
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+    );
+  })}
+</Base>
+
+<style>
+  .hero { margin: 0 calc(50% - 50vw); background: linear-gradient(120deg, var(--navy) 0%, #12385e 60%, var(--teal) 140%); color: #fff; }
+  .hero-in { max-width: var(--max); margin: 0 auto; padding: 38px 20px 34px; display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+  .eyebrow { font: 600 13px/1 var(--ui); color: #8fd3cf; margin: 0 0 12px; }
+  .hero h1 { color: #fff; font: 700 clamp(32px, 5vw, 52px)/1.05 var(--head); margin: 0 0 14px; }
+  .dek { font: 18px/1.5 var(--head); color: rgba(255,255,255,.9); margin: 0 0 22px; max-width: 660px; }
+  .groups { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+  .groups a { background: rgba(255,255,255,.08); border-top: 5px solid var(--g); padding: 12px; text-decoration: none; color: #fff; display: grid; gap: 4px; }
+  .groups a:hover { background: rgba(255,255,255,.16); }
+  .groups b { font: 600 14px/1.2 var(--ui); }
+  .groups span { font: 12px/1 var(--ui); color: rgba(255,255,255,.7); }
+  .board { background: #fff; color: var(--ink); padding: 18px 20px; box-shadow: 0 16px 40px rgba(0,0,0,.25); }
+  .bh { font: 700 20px/1.2 var(--head); margin: 0 0 10px; display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .bh span { font: 12px/1 var(--ui); color: var(--muted); }
+  .board ol { list-style: none; margin: 0; padding: 0; counter-reset: b; }
+  .board li { counter-increment: b; display: grid; grid-template-columns: 22px minmax(0, 1fr) 80px 22px; gap: 8px; align-items: center; padding: 8px 0; border-top: 1px solid var(--rule); font: 14px/1.2 var(--ui); }
+  .board li::before { content: counter(b); font: 700 15px/1 var(--head); color: var(--g); }
+  .board a { color: var(--ink); font-weight: 600; text-decoration: none; }
+  .board a:hover { text-decoration: underline; }
+  .board .bar { height: 8px; background: var(--rule); }
+  .board .bar i { display: block; height: 100%; background: var(--g); }
+  .board b { text-align: right; }
+
+  .grp { margin: 0 calc(50% - 50vw); padding: 34px 0 38px; }
+  .grp:nth-of-type(even) { background: var(--gt); }
+  .grp-head, .cards { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+  .grp-head { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; margin-bottom: 18px; }
+  .grp-head h2 { font: 700 30px/1.1 var(--head); margin: 0; padding-left: 14px; border-left: 7px solid var(--g); }
+  .grp-head p { margin: 0; font: 16px/1.45 var(--ui); color: var(--ink-2); flex: 1 1 360px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 16px; }
+  .card { background: #fff; border: 1px solid var(--rule); border-top: 4px solid var(--g); padding: 16px 18px; display: flex; flex-direction: column; transition: box-shadow .15s, transform .15s; }
+  .card:hover { box-shadow: 0 10px 26px rgba(14,42,71,.12); transform: translateY(-2px); }
+  .ch { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; }
+  .ch h3 { font: 700 21px/1.15 var(--head); margin: 0; min-width: 0; overflow-wrap: anywhere; }
+  .ch h3 a { color: var(--ink); text-decoration: none; }
+  .ch h3 a:hover { color: var(--g); text-decoration: underline; }
+  .cnt { font: 700 24px/1 var(--head); color: var(--g); text-align: right; min-width: 56px; flex-shrink: 0; }
+  .cnt small { white-space: nowrap; display: block; font: 11px/1 var(--ui); color: var(--muted); margin-top: 3px; }
+  .cb { font: 14px/1.45 var(--ui); color: var(--muted); margin: 6px 0 10px; }
+  .px { list-style: none; margin: 0 0 10px; padding: 0; display: grid; gap: 4px; }
+  .px li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: center; font: 13px/1.2 var(--ui); padding: 6px 8px; background: #f6f7f9; }
+  .px span { grid-column: 1 / -1; font-weight: 600; }
+  .px b { font-variant-numeric: tabular-nums; }
+  .px em { justify-self: end; }
+  .px em { font: normal 600 11px/1 var(--ui); padding: 3px 6px; }
+  .px .rising-fast em { background: var(--red); color: #fff; } .px .rising em { background: var(--red-tint); color: var(--red); }
+  .px .stable em { background: var(--navy-tint); color: var(--ink-2); } .px .easing em { background: var(--teal-tint); color: var(--teal); }
+  .heads { list-style: none; margin: 0 0 12px; padding: 0; }
+  .heads li { padding: 8px 0; border-top: 1px solid var(--rule); }
+  .heads a { font: 500 15px/1.35 var(--head); color: var(--ink); text-decoration: none; display: block; }
+  .heads a:hover { text-decoration: underline; color: var(--link); }
+  .heads span { font: 12px/1 var(--ui); color: var(--muted); }
+  .none { font: 14px/1.45 var(--ui); color: var(--muted); margin: 0 0 12px; }
+  .cf { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px 14px; padding-top: 10px; border-top: 1px solid var(--rule); }
+  .cf a { font: 600 13px/1.2 var(--ui); text-decoration: none; }
+  .more { color: var(--g); } .more::after { content: ' →'; }
+  .sw { color: var(--ink-2); background: var(--navy-tint); padding: 4px 8px; }
+  .cf a:hover { text-decoration: underline; }
+
+  @media (min-width: 1100px) { .cards.n5 { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+  @media (max-width: 900px) {
+    .hero-in { grid-template-columns: 1fr; gap: 24px; }
+    .groups { grid-template-columns: 1fr 1fr; }
+  }
+</style>
