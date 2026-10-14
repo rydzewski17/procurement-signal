@@ -43,3 +43,15 @@ export function categorize(text = '') {
   const hits = CATEGORIES.filter((c) => c.re.test(text)).map((c) => c.slug);
   return hits.length ? hits : [FALLBACK.slug];
 }
+
+// Homepage section blocks and /sections/ pages, in the order readers see them.
+export const SECTIONS = [
+  { id: 'procurement', name: 'Procurement', blurb: 'Sourcing strategy, contracts, spend, savings and the people leading procurement teams.', slugs: ['sourcing', 'contracts', 'spend', 'talent'] },
+  { id: 'digital-procurement', name: 'Digital procurement', blurb: 'Source-to-pay software, AI agents and the technology changing how teams buy.', slugs: ['proc-tech', 'ai'] },
+  { id: 'trade', name: 'Trade & policy', blurb: 'Tariffs, trade rules, compliance deadlines and government procurement.', slugs: ['tariffs', 'compliance', 'public-sector', 'sustainability'] },
+  { id: 'supply-chain', name: 'Supply chain & risk', blurb: 'Freight, warehousing, supplier failures and disruptions in the supply base.', slugs: ['freight', 'supplier-risk', 'warehousing', 'manufacturing'] },
+  { id: 'costs', name: 'Costs & commodities', blurb: 'Metals, energy, chips and the input costs behind supplier pricing.', slugs: ['metals', 'energy', 'semis', 'food-ag', 'healthcare'] },
+  { id: 'companies', name: 'Company moves', blurb: 'Acquisitions, earnings, funding and major supplier and buyer news.', slugs: ['deals'] },
+];
+export const sectionById = Object.fromEntries(SECTIONS.map((s) => [s.id, s]));
+export const sectionOf = (slugs = []) => SECTIONS.find((s) => s.slugs.some((x) => slugs.includes(x))) ?? SECTIONS[0];

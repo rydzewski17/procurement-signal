@@ -1,0 +1,12 @@
+---
+import SectionPage from '../../components/v4/SectionPage.astro';
+import { getPosts } from '../../data/posts';
+import { SECTIONS, categoryBySlug } from '../../data/categories.mjs';
+export function getStaticPaths() {
+  return SECTIONS.map((s) => ({ params: { id: s.id }, props: { s } }));
+}
+const { s } = Astro.props;
+const posts = await getPosts();
+const chips = s.slugs.map((sl: string) => ({ href: `/categories/${sl}/`, label: categoryBySlug[sl].name }));
+---
+<SectionPage title={s.name} blurb={s.blurb} slugs={s.slugs} posts={posts} chips={chips} crumb={{ href: '/categories/', label: 'News' }} sectionKey="categories" />

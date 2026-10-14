@@ -1,0 +1,25 @@
+---
+// Full-width newsletter band above the footer on every page. Shows a real form
+// once SUBSCRIBE_ACTION is set in src/data/site.ts; until then it offers RSS.
+import { SUBSCRIBE_ACTION } from '../../data/site';
+---
+<section class="nl-band" aria-label="Newsletter sign-up">
+  <div class="wrap">
+    <div class="nl-copy">
+      <h2>The morning briefing</h2>
+      <p>The procurement stories that matter and what they mean for buyers, every weekday morning.</p>
+    </div>
+    {SUBSCRIBE_ACTION ? (
+      <form action={SUBSCRIBE_ACTION} method="post" class="nl-form">
+        <label class="sr-only" for="nl-email">Work email</label>
+        <input id="nl-email" type="email" name="email" required placeholder="you@company.com" autocomplete="email" />
+        <button type="submit">Subscribe</button>
+      </form>
+    ) : (
+      <div class="nl-form">
+        <p class="nl-soon">Email sign-up opens soon.</p>
+        <a class="nl-btn" href="/rss.xml">Follow by RSS</a>
+      </div>
+    )}
+  </div>
+</section>

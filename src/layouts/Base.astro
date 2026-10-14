@@ -2,9 +2,11 @@
 import '../styles/global.css';
 import '../styles/modern.css';
 import '../styles/v3.css';
+import '../styles/v4.css';
+import NewsletterBand from '../components/v4/NewsletterBand.astro';
 import { SITE, TOPICS } from '../data/site';
 import LiveBar from '../components/LiveBar.astro';
-import { CATEGORIES, NEWS_GROUPS, categoryBySlug } from '../data/categories.mjs';
+import { CATEGORIES, NEWS_GROUPS, SECTIONS, categoryBySlug } from '../data/categories.mjs';
 import { SOFTWARE, status } from '../data/software';
 
 interface Props { title?: string; description?: string; type?: 'website' | 'article'; jsonLd?: object; section?: string; }
@@ -58,6 +60,10 @@ const today = new Date().toLocaleDateString('en-US', { weekday: 'long', month: '
       <div class="dd">
         <a class="dd-btn" href="/categories/" aria-haspopup="true" aria-current={section === 'categories' ? 'page' : undefined}>News<span class="caret" aria-hidden="true">▾</span></a>
         <div class="dd-menu dd-mega" role="menu">
+          <div class="dd-group">
+            <span class="dd-gname">Sections</span>
+            {SECTIONS.map((sx) => <a href={`/sections/${sx.id}/`} role="menuitem">{sx.name}</a>)}
+          </div>
           {NEWS_GROUPS.map((g) => (
             <div class="dd-group">
               <span class="dd-gname">{g.name}</span>
@@ -99,6 +105,7 @@ const today = new Date().toLocaleDateString('en-US', { weekday: 'long', month: '
   </nav>
   <LiveBar />
   <main class="wrap"><slot /></main>
+  <NewsletterBand />
   <footer>
     <div class="wrap">
       <div class="cols">

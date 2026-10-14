@@ -1,0 +1,100 @@
+---
+// The homepage right rail, in the agreed order. Pages can show a subset.
+import SoftwareWidget from '../SoftwareWidget.astro';
+import Line from './Line.astro';
+import { getCollection } from 'astro:content';
+import events from '../../data/events.json';
+import { categories, fmtPct, STATUS } from '../../data/costs';
+import { wireItems, ourItems } from '../../data/feed';
+
+interface Props { posts: any[]; show?: string[]; exclude?: Set<string> }
+const { posts, show = ['software', 'popular', 'guides', 'announcements', 'reading', 'events', 'outlook', 'ad'], exclude = new Set() } = Astro.props;
+const DAY = 864e5;
+const newest = posts[0]?.data.date.valueOf() ?? 0;
+// Most popular: until reader analytics are connected, ranked by our signal score and freshness.
+const popular = [...posts].sort((a, b) => (b.data.signal * 2 - (newest - b.data.date.valueOf()) / DAY) - (a.data.signal * 2 - (newest - a.data.date.valueOf()) / DAY)).slice(0, 5);
+const guides = await getCollection('guides');
+const wire = wireItems().filter((w) => !exclude.has(w.href));
+const announcements = wire.filter((w) => w.cats.some((c) => ['deals', 'proc-tech', 'talent'].includes(c))).slice(0, 4);
+const reading = wire.filter((w) => !announcements.includes(w)).slice(0, 5);
+const today = new Date().toISOString().slice(0, 10);
+const upcoming = events.events.filter((e) => e.date >= today).sort((a, b) => a.date.localeCompare(b.date)).slice(0, 4);
+const days = (d: string) => Math.round((Date.parse(d + 'T00:00:00Z') - Date.parse(today + 'T00:00:00Z')) / DAY);
+const longDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'long', day: 'numeric', timeZone: 'UTC' });
+const movers = [...categories].sort((a, b) => Math.abs(b.m3ann) - Math.abs(a.m3ann)).slice(0, 5);
+const on = (k: string) => show.includes(k);
+---
+<aside class="rail4" aria-label="More from Procurement Signal">
+  {on('software') && <SoftwareWidget />}
+
+  {on('popular') && popular.length > 0 && (
+    <section class="rmod">
+      <h2>Most popular</h2>
+      <ol class="pop">{popular.map((p) => <li><a href={`/articles/${p.id}/`}>{p.data.title}</a></li>)}</ol>
+    </section>
+  )}
+
+  {on('guides') && guides.length > 0 && (
+    <section class="rmod">
+      <h2>Guides and playbooks</h2>
+      <ul class="lines">{guides.map((g) => <li class="line own"><a href={`/guides/${g.id}/`}>{g.data.title}</a><span>Guide, updated {g.data.updated.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span></li>)}</ul>
+      <a class="rmore" href="/guides/">All guides and the glossary</a>
+    </section>
+  )}
+
+  {on('announcements') && announcements.length > 0 && (
+    <section class="rmod">
+      <h2>Company announcements</h2>
+      <ul class="lines">{announcements.map((w) => <Line item={w} />)}</ul>
+    </section>
+  )}
+
+  {on('reading') && reading.length > 0 && (
+    <section class="rmod">
+      <h2>What we're reading</h2>
+      <ul class="lines">{reading.map((w) => <Line item={w} />)}</ul>
+      <a class="rmore" href="/wire/">All industry headlines</a>
+    </section>
+  )}
+
+  {on('events') && upcoming.length > 0 && (
+    <section class="rmod">
+      <h2>Key dates and events</h2>
+      <ul class="dates">
+        {upcoming.map((e) => (
+          <li class={days(e.date) <= 30 ? 'soon' : ''}>
+            <span class="dnum" data-date={e.date}><b>{days(e.date)}</b><small>{days(e.date) === 1 ? 'day' : 'days'}</small></span>
+            <span><a href={e.href}>{e.label}</a><small>{longDate(e.date)}</small></span>
+          </li>
+        ))}
+      </ul>
+      <a class="rmore" href="/trackers/tariff-deadlines/">All tariff deadlines</a>
+    </section>
+  )}
+
+  {on('outlook') && (
+    <section class="rmod">
+      <h2>Market outlook</h2>
+      <ul class="outl">
+        {movers.map((c) => (
+          <li>
+            <a href={`/cost-monitor/${c.id}/`}>{c.name.split(' (')[0]}</a>
+            <span class={`st st-${c.status}`}>{STATUS[c.status].label}</span>
+            <span class="pct">{fmtPct(c.y1)}</span>
+          </li>
+        ))}
+      </ul>
+      <p class="rnote">Price change over 12 months, with our read on pressure.</p>
+      <a class="rmore" href="/cost-monitor/">What it means for each category</a>
+    </section>
+  )}
+
+  {on('ad') && <div class="ad-slot">Advertisement</div>}
+</aside>
+<script is:inline>
+  document.querySelectorAll('.dates .dnum[data-date]').forEach((el) => {
+    const now = new Date(); now.setHours(0, 0, 0, 0);
+    const n = Math.round((new Date(el.dataset.date + 'T00:00:00') - now) / 864e5);
+    if (n >= 0) { el.querySelector('b').textContent = n; el.querySelector('small').textContent = n === 1 ? 'day' : 'days'; }
+  });
+</script>

@@ -1,0 +1,9 @@
+---
+// A one-line story link for lists: headline plus source and date.
+import { shortDate, clip, type FeedItem } from '../../data/feed';
+const { item } = Astro.props as { item: FeedItem };
+---
+<li class={`line${item.ext ? '' : ' own'}`}>
+  <a href={item.href} target={item.ext ? '_blank' : undefined} rel={item.ext ? 'noopener' : undefined}>{clip(item.title, 120)}</a>
+  <span>{item.ext ? item.source : 'Procurement Signal'}, {shortDate(item.t)}{item.ext && <span class="ext-ico" aria-hidden="true"> ↗</span>}</span>
+</li>

@@ -1,151 +1,121 @@
 ---
 import Base from '../layouts/Base.astro';
 import Media from '../components/Media.astro';
-import Subscribe from '../components/Subscribe.astro';
-import SignalCard from '../components/SignalCard.astro';
-import SoftwareWidget from '../components/SoftwareWidget.astro';
 import CategoryWatch from '../components/CategoryWatch.astro';
-import SectionFronts from '../components/SectionFronts.astro';
 import SignalMeter from '../components/SignalMeter.astro';
 import Kicker from '../components/Kicker.astro';
+import Rail from '../components/v4/Rail.astro';
+import Tile from '../components/v4/Tile.astro';
+import Line from '../components/v4/Line.astro';
 import { getPosts } from '../data/posts';
-import { SITE, TOPICS } from '../data/site';
-import events from '../data/events.json';
-import { categories, fmtPct } from '../data/costs';
-import wire from '../data/wire.json';
-import { CATEGORIES, categorize } from '../data/categories.mjs';
+import { SITE } from '../data/site';
+import { SECTIONS } from '../data/categories.mjs';
+import { ourItems, wireItems, feedFor, shortDate } from '../data/feed';
 
 const posts = await getPosts();
-const today = new Date().toISOString().slice(0, 10);
-const upcoming = events.events.filter((e) => e.date >= today).sort((a, b) => a.date.localeCompare(b.date));
-const next = upcoming[0];
-const daysTo = next ? Math.round((new Date(next.date + 'T00:00:00Z').getTime() - new Date(today + 'T00:00:00Z').getTime()) / 864e5) : null;
-const movers = [...categories].sort((a, b) => Math.abs(b.y1) - Math.abs(a.y1)).slice(0, 5);
+const DAY = 864e5;
+const newest = posts[0]?.data.date.valueOf() ?? 0;
 
+// Hero: the featured story, then the top five by signal and freshness.
 const lead = posts.find((p) => p.data.featured) ?? posts[0];
-const rest = posts.filter((p) => p !== lead);
-const topStories = rest.slice(0, 5);
-const feed = rest.slice(5, 13);
-const popular = [...posts].sort((a, b) => b.data.signal - a.data.signal || b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 5);
-const signals = [...posts].sort((a, b) => b.data.signal - a.data.signal || b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 4);
+const rank = (p: any) => p.data.signal * 2 - (newest - p.data.date.valueOf()) / DAY;
+const topStories = posts.filter((p) => p !== lead).sort((a, b) => rank(b) - rank(a)).slice(0, 5);
+const shown = new Set<string>([lead, ...topStories].filter(Boolean).map((p) => `/articles/${p.id}/`));
 
-const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-const levelOf = (n: number) => (n >= 5 ? ['Critical', 'hot'] : n >= 4 ? ['High', 'warm'] : ['Watch', 'cool']) as [string, string];
-const action = (body: string | undefined) => {
-  const m = body?.match(/## What buyers should do\s+([\s\S]*?)(\n## |$)/);
-  const first = m?.[1]?.split('\n').find((l) => /^\s*[-*]\s+/.test(l));
-  return first ? first.replace(/^\s*[-*]\s+/, '').replace(/[*_`]/g, '').trim() : '';
-};
+// Latest news: our newer stories and the day's industry headlines, newest first.
+const latest = [...ourItems(posts).filter((x) => !shown.has(x.href)), ...wireItems()]
+  .sort((a, b) => b.t - a.t).slice(0, 10);
+latest.forEach((x) => shown.add(x.href));
+
+// Section blocks: a featured story plus four more per section, nothing repeated from above.
+const blocks = SECTIONS.map((s) => {
+  const items = feedFor(posts, s.slugs, shown).slice(0, 5);
+  items.forEach((x) => shown.add(x.href));
+  return { s, items };
+}).filter((b) => b.items.length);
+
 const leadWhy = lead?.body?.match(/## Why it matters\s+([\s\S]*?)(\n## |$)/)?.[1]?.trim().split('\n')[0]?.replace(/[*_]/g, '');
-// Category highlights: the busiest categories, each with its newest headlines (our stories first, then trade press).
-const shownTitles = new Set<string>();
-const categoryHighlights = CATEGORIES.map((c) => {
-  const ours = posts.filter((p) => categorize(`${p.data.title} ${p.data.dek}`).includes(c.slug))
-    .map((p) => ({ title: p.data.title, href: `/articles/${p.id}/`, meta: fmt(p.data.date), external: false, t: p.data.date.valueOf() }));
-  const theirs = wire.items.filter((i: any) => (i.categories ?? []).includes(c.slug))
-    .map((i: any) => ({ title: i.title, href: i.url, meta: i.source, external: true, t: new Date(i.date).valueOf() }));
-  const items = [...ours, ...theirs].sort((a, b) => b.t - a.t).filter((i) => !shownTitles.has(i.title)).slice(0, 3);
-  items.forEach((i) => shownTitles.add(i.title));
-  return { ...c, items, n: ours.length + theirs.length };
-}).filter((c) => c.items.length).sort((a, b) => b.n - a.n).slice(0, 6);
-const wireTop = wire.items.slice(0, 8);
-const wfmt = (d: string) => new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'America/New_York' });
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 const jsonLd = { '@context': 'https://schema.org', '@type': 'NewsMediaOrganization', name: SITE.name, url: Astro.site?.toString() };
 ---
 <Base jsonLd={jsonLd} section="home">
   {!lead ? <p style="padding:40px 0">The first stories publish shortly.</p> : (
-    <div class="front">
-      <div class="main-col">
-        <section class="top-row" aria-label="Top story">
-          <div class="lead">
+  <>
+    <div class="home-grid">
+      <div class="home-main">
+        <section class="hero4" aria-label="Top stories">
+          <div class="hero4-lead">
             <a href={`/articles/${lead.id}/`} tabindex="-1" aria-hidden="true"><Media post={lead} ratio="wide" eager /></a>
             <div class="lead-meta"><Kicker topic={lead.data.topic} /><SignalMeter level={lead.data.signal} /></div>
             <h2><a href={`/articles/${lead.id}/`}>{lead.data.title}</a></h2>
             <p class="dek">{lead.data.dek}</p>
-            {leadWhy && <p class="summary"><strong>Why it matters.</strong> {leadWhy}</p>}
+            {leadWhy && <p class="why"><strong>Why it matters.</strong> {leadWhy}</p>}
             <div class="byline-line">By {lead.data.author}, {fmt(lead.data.date)}</div>
           </div>
-          <div class="top-list">
-            <h2 class="ts-head">Top stories</h2>
-            <ul>
+          <div class="hero4-top">
+            <h2 class="h-rule">Top stories</h2>
+            <ol class="top5">
               {topStories.map((p) => (
                 <li>
-                  <a class="ts-thumb" href={`/articles/${p.id}/`} tabindex="-1" aria-hidden="true"><Media post={p} ratio="square" /></a>
                   <div>
                     <Kicker topic={p.data.topic} />
-                    <a class="ts-title" href={`/articles/${p.id}/`}>{p.data.title}</a>
+                    <a class="t5-title" href={`/articles/${p.id}/`}>{p.data.title}</a>
                     <time>{fmt(p.data.date)}</time>
                   </div>
+                  <a class="t5-thumb" href={`/articles/${p.id}/`} tabindex="-1" aria-hidden="true"><Media post={p} ratio="square" /></a>
                 </li>
               ))}
-            </ul>
+            </ol>
           </div>
         </section>
 
+        <section class="latest4" aria-label="Latest news">
+          <h2 class="h-rule">The latest</h2>
+          <div class="latest-list">
+            {latest.map((x, i) => (
+              <>
+                {i === 5 && <div class="ad-slot ad-inline">Advertisement</div>}
+                {x.post ? (
+                  <article class="lrow">
+                    <div>
+                      <Kicker topic={x.post.data.topic} />
+                      <h3><a href={x.href}>{x.title}</a></h3>
+                      <p>{x.dek}</p>
+                      <span class="lmeta">Procurement Signal, {shortDate(x.t)}</span>
+                    </div>
+                    <a class="lthumb" href={x.href} tabindex="-1" aria-hidden="true"><Media post={x.post} ratio="card" /></a>
+                  </article>
+                ) : (
+                  <article class="lrow lrow-ext">
+                    <div>
+                      <h3><a href={x.href} target="_blank" rel="noopener">{x.title}</a></h3>
+                      <span class="lmeta">{x.source}, {shortDate(x.t)} <span aria-hidden="true">↗</span></span>
+                    </div>
+                  </article>
+                )}
+              </>
+            ))}
+          </div>
+          <a class="more-btn" href="/wire/">More stories</a>
+        </section>
+
         <CategoryWatch posts={posts} />
-
-        {feed.length > 0 && (
-          <section class="sec-navy" aria-label="Latest" style="margin-top:34px">
-            <h2 class="feed-head">Latest</h2>
-            <div class="feed">
-              {feed.map((p) => (
-                <article class="row">
-                  <div>
-                    <Kicker topic={p.data.topic} />
-                    <h3><a href={`/articles/${p.id}/`}>{p.data.title}</a></h3>
-                    <p>{p.data.dek}</p>
-                    <div class="date"><SignalMeter level={p.data.signal} size="sm" /> {fmt(p.data.date)}</div>
-                  </div>
-                  <a class="thumb-wrap" href={`/articles/${p.id}/`} tabindex="-1" aria-hidden="true"><Media post={p} ratio="card" /></a>
-                </article>
-              ))}
-            </div>
-          </section>
-        )}
-
-
       </div>
 
-      <aside class="rail" aria-label="Sidebar">
-        <SoftwareWidget />
-
-
-
-        <Subscribe />
-
-
-        <div class="ad-slot">Sponsored</div>
-      </aside>
+      <Rail posts={posts} exclude={shown} />
     </div>
-  )}
-  {lead && <SectionFronts posts={posts} exclude={[`/articles/${lead.id}/`, ...topStories.map((p) => `/articles/${p.id}/`)]} />}
-</Base>
 
-<style>
-  .top-list { background: none !important; padding: 0 !important; }
-  .ts-head { font: 700 21px/1.2 var(--head); margin: 0 0 4px; padding-bottom: 10px; border-bottom: 3px solid var(--ink); }
-  .top-list ul { list-style: none; margin: 0; padding: 0; }
-  .top-list li { display: grid !important; grid-template-columns: 76px minmax(0,1fr) !important; gap: 14px; padding: 14px 0 !important; border-bottom: 1px solid var(--rule) !important; }
-  .top-list li:last-child { border-bottom: 0 !important; }
-  .ts-thumb img { width: 76px; height: 76px; object-fit: cover; display: block; }
-  .ts-title { display: block; font: 700 17px/1.3 var(--head) !important; color: var(--ink); text-decoration: none; margin: 4px 0 6px; }
-  .ts-title:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-  .top-list time { font-size: 13px; color: var(--muted); }
-  .briefing { margin: 40px 0 0; border-top: 3px solid var(--ink); }
-  .briefing-head { padding: 14px 0 6px; }
-  .briefing-head h2 { font: 700 26px/1.2 var(--head); margin: 0 0 4px; }
-  .briefing-head p { font-size: 15px; color: var(--muted); margin: 0; }
-  .briefing-more { display: inline-block; margin-top: 4px; padding: 11px 16px; border: 1px solid var(--ink); color: var(--ink); font: 600 14px/1 var(--ui); text-decoration: none; }
-  .briefing-more:hover { background: var(--ink); color: #fff; }
-  .lead-meta { display: flex; align-items: center; gap: 14px; margin: 14px 0 4px; }
-  .wire-band { margin-top: 34px; }
-  .wire-home { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
-  .wire-home li { padding: 12px 0; border-bottom: 1px solid var(--rule); display: grid; gap: 4px; }
-  .wire-home a { font: 600 16px/1.35 var(--head); color: var(--ink); text-decoration: none; }
-  .wire-home a:hover { text-decoration: underline; }
-  .wire-home span { font-size: 13px; color: var(--muted); }
-  .countdown .what { display: block; color: var(--ink); text-decoration: none; }
-  .countdown .what:hover { text-decoration: underline; }
-  .rail-more { font: 600 14px/1 var(--ui); color: var(--teal); text-decoration: none; display: inline-block; margin-top: 10px; }
-  @media (max-width: 700px) { .wire-home { grid-template-columns: 1fr; } }
-</style>
+    <section class="blocks" aria-label="News by section">
+      {blocks.map(({ s, items }) => (
+        <section class="block">
+          <div class="block-top"><h2><a href={`/sections/${s.id}/`}>{s.name}</a></h2><a class="view-all" href={`/sections/${s.id}/`}>View all</a></div>
+          <div class="block-body">
+            <Tile item={items[0]} size="md" showDek />
+            <ul class="lines">{items.slice(1).map((x) => <Line item={x} />)}</ul>
+          </div>
+        </section>
+      ))}
+    </section>
+  </>
+  )}
+</Base>

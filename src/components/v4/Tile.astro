@@ -1,0 +1,27 @@
+---
+// A story tile: our stories with their photo, trade-press headlines as text tiles.
+import Media from '../Media.astro';
+import Kicker from '../Kicker.astro';
+import { shortDate, clip, type FeedItem } from '../../data/feed';
+const { item, size = 'md', showDek = false } = Astro.props as { item: FeedItem; size?: 'lg' | 'md' | 'sm'; showDek?: boolean };
+const ext = item.ext ? { target: '_blank', rel: 'noopener' } : {};
+---
+{item.post ? (
+  <article class={`tile tile-${size}`}>
+    <a href={item.href} tabindex="-1" aria-hidden="true"><Media post={item.post} ratio={size === 'sm' ? 'square' : 'card'} /></a>
+    <div class="tile-body">
+      <Kicker topic={item.post.data.topic} />
+      <h3><a href={item.href}>{item.title}</a></h3>
+      {showDek && item.dek && <p>{item.dek}</p>}
+      <span class="tile-meta">{shortDate(item.t)}</span>
+    </div>
+  </article>
+) : (
+  <article class={`tile tile-${size} tile-text`}>
+    <div class="tile-body">
+      <span class="tile-src">{item.source}</span>
+      <h3><a href={item.href} {...ext}>{clip(item.title, size === 'lg' ? 140 : 110)}</a></h3>
+      <span class="tile-meta">{shortDate(item.t)} <span class="ext-ico" aria-hidden="true">↗</span><span class="sr-only">opens the publisher's site</span></span>
+    </div>
+  </article>
+)}
