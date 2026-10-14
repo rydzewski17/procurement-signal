@@ -363,3 +363,10 @@ footer { margin-top: 0 !important; }
 .toc4 li { align-items: baseline; border: 0; }
 .toc4 a { padding: 0 !important; border: 0 !important; display: inline !important; }
 .toc4 li + li { border-top: 1px solid var(--rule); }
+@media (max-width: 860px) {
+  .hero4 { grid-template-columns: 1fr; }
+  .blocks > .block:last-child:nth-child(odd) .block-body { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .blocks > .block:last-child:nth-child(odd) .lines-thumb { display: block; }
+}
