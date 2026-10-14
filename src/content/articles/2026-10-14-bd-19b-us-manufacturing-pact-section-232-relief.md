@@ -1,0 +1,72 @@
+---
+title: "BD's $19 billion U.S. manufacturing pact trades domestic production for relief from future medtech tariffs"
+dek: "The maker of syringes, needles and infusion pumps will expand U.S. output and use American steel for needles in exchange for conditional Section 232 relief. Hospital and health system buyers should expect more deals like it."
+date: 2026-10-14
+topic: tariffs-trade
+type: news
+signal: 4
+categories: ["tariffs", "healthcare", "sourcing"]
+keyfacts:
+  - value: "$19B"
+    label: "BD's planned U.S. investment over several years"
+  - value: "~80%"
+    label: "target share of BD's essential medtech supplied domestically"
+  - value: "~5B"
+    label: "additional essential medical consumables per year from U.S. sites"
+  - value: "Sept. 2025"
+    label: "when the Section 232 medtech inquiry opened"
+tags: ["Section 232", "medical devices", "reshoring", "healthcare supply chain", "tariffs"]
+image:
+  src: "https://images.unsplash.com/photo-1774456566981-8daf9252befb?ixlib=rb-4.1.0"
+  alt: "Medical supplies in an orange tray on a white surface"
+  credit: "Camila Mofsovich"
+  creditUrl: "https://unsplash.com/photos/medical-supplies-in-an-orange-tray-on-a-white-surface-bhyoOG-ToC8"
+  license: "Unsplash"
+sources:
+  - name: "BD — BD and U.S. government launch partnership to expand U.S. manufacturing (Oct. 6, 2026)"
+    url: "https://news.bd.com/2026-10-06-BD-and-U-S-Government-Launch-Landmark-Partnership-to-Expand-U-S-Manufacturing-and-Strengthen-Americas-Healthcare-Resilience"
+  - name: "Supply Chain Dive — BD strikes supply chain pact with Trump administration"
+    url: "https://www.supplychaindive.com/news/bd-strikes-supply-chain-pact-with-trump-administration/832653/"
+  - name: "MedTech Dive — US opens investigation into medical equipment, device imports"
+    url: "https://www.medtechdive.com/news/trump-tariffs-medical-devices-equipment-ppe-section-232-investigation/761118/"
+faqs:
+  - q: "Are there Section 232 tariffs on medical devices?"
+    a: "Not yet. The administration opened a Section 232 inquiry into medical devices and equipment in September 2025, but as of BD's announcement no device-specific tariffs had been set."
+  - q: "What does BD's deal mean for hospital procurement?"
+    a: "BD products are positioned for relief from future Section 232 tariffs if BD hits undisclosed milestones. Health systems should ask other medtech suppliers whether they are pursuing similar agreements and how tariffs would be passed through."
+---
+
+## Why it matters
+
+The Section 232 investigation into medical devices has not produced tariffs yet, but suppliers are already negotiating their way out of them. BD's agreement shows the template: invest in U.S. capacity, commit to domestic inputs, and receive conditional tariff relief. For health system procurement, supplier-specific deals will create uneven landed costs across otherwise similar products.
+
+## The details
+
+BD, which calls itself the largest U.S. manufacturer of essential medical consumables, announced a partnership with the administration on Oct. 6. Under it, BD will:
+
+- Invest a total of $19 billion in the U.S. over several years in manufacturing, innovation and production capabilities
+- Spend $3 billion expanding strategic production sites
+- Raise annual U.S. output by about 5 billion essential medical consumables
+- Make all U.S.-used needles with American-made steel
+- Increase its share of domestically supplied essential medical technology to about 80%
+
+In return, BD products receive relief from any future Section 232 tariffs, subject to undisclosed milestones. BD has not quantified the financial impact because final rates and covered products aren't set.
+
+BD's U.S. network includes sites in Columbus and Broken Bow, Nebraska; Canaan, Connecticut; Añasco, Puerto Rico; Sandy, Utah; El Paso, Texas; Covington, Georgia; and Sumter, South Carolina.
+
+## What procurement teams should do
+
+- **Ask every medtech supplier about Section 232.** Request their exposure by product and country of origin, any relief agreements, and how they would pass through tariffs.
+- **Review price-adjustment clauses.** Make sure tariff pass-throughs require documentation and apply only to affected products and origins.
+- **Factor domestic capacity into sourcing.** Suppliers with U.S. production and relief agreements may carry lower tariff risk. Weigh that alongside unit price in 2027 awards.
+- **Watch for the final rule.** When Section 232 device tariffs are announced, re-run landed-cost models for every category that relies on imported consumables.
+
+## What to watch next
+
+- **Section 232 on medical devices.** Final rates and covered products are not set; BD's relief depends on milestones that have not been disclosed.
+- **Copycat agreements.** Other medtech suppliers may negotiate similar deals, which would split the market into tariff-protected and exposed suppliers.
+- **Capacity timelines.** Ask when the extra 5 billion units a year actually reach your product lines.
+
+## The bigger picture
+
+The administration is using tariff threats and relief deals to pull production onshore, as it did in [pharmaceuticals](/articles/2026-10-12-section-232-pharma-tariff-now-applies-all-importers/). Medical consumables are next. Procurement teams in healthcare should expect a two-tier market: suppliers with relief deals and U.S. capacity, and those without, priced accordingly once tariffs land.

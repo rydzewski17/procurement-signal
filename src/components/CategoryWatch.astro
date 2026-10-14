@@ -1,6 +1,6 @@
 ---
 // "What's moving in your categories": price direction, what it is doing to the market,
-// what it means for buyers (our analysis), and the latest news. Six rows show by default.
+// the category strategy we recommend (our analysis), and our latest story. Six rows show by default.
 import { categoryWatch, impactAsOf } from '../data/watch';
 import { meta, monthLabel, fmtPct } from '../data/costs';
 const { posts } = Astro.props;
@@ -12,7 +12,7 @@ const asOf = new Date(impactAsOf + 'T00:00:00Z').toLocaleDateString('en-US', { m
 <section class="watch" aria-labelledby="watch-h">
   <div class="watch-head">
     <h2 id="watch-h">What's moving in your categories</h2>
-    <p>Where prices are heading, how that is changing the market, and what it means for buyers. Prices are U.S. producer price data through {through}; analysis updated {asOf}.</p>
+    <p>Where input prices are heading, how supplier markets are responding, and the category strategy we recommend for each. Prices are U.S. producer price data through {through}; analysis updated {asOf}.</p>
     <div class="watch-filter" role="group" aria-label="Filter by category group">
       <button type="button" class="wf on" data-g="all">All categories</button>
       {groups.map((g) => <button type="button" class="wf" data-g={g}>{g}</button>)}
@@ -20,7 +20,7 @@ const asOf = new Date(impactAsOf + 'T00:00:00Z').toLocaleDateString('en-US', { m
   </div>
 
   <div class="wl">
-    <div class="wl-head" aria-hidden="true"><span>Category</span><span>Price direction</span><span>What it means for buyers</span><span></span></div>
+    <div class="wl-head" aria-hidden="true"><span>Category</span><span>Price direction</span><span>What it means for your category</span><span></span></div>
     {rows.map((r, i) => (
       <details class="wi" data-g={r.group} data-i={i}>
         <summary>
@@ -31,18 +31,18 @@ const asOf = new Date(impactAsOf + 'T00:00:00Z').toLocaleDateString('en-US', { m
         </summary>
         <div class="wi-body">
           <div>
-            <h3>What's happening</h3>
+            <h3>Supplier market</h3>
             <p>{r.impact?.now ?? 'No market summary yet for this category.'}</p>
           </div>
           <div>
-            <h3>Recommended stance</h3>
+            <h3>Category strategy</h3>
             <p><strong>{r.stance}.</strong> {r.posture}</p>
           </div>
           <div>
-            <h3>Latest news</h3>
+            <h3>Our latest analysis</h3>
             {r.latest
-              ? <p><a href={r.latest.href} target={r.latest.ext ? '_blank' : undefined} rel={r.latest.ext ? 'noopener' : undefined}>{r.latest.title}</a> <span class="src">{r.latest.source}</span></p>
-              : <p class="muted">No category news this week.</p>}
+              ? <p><a href={r.latest.href}>{r.latest.title}</a></p>
+              : <p><a href={`/cost-monitor/${r.id}/`}>Price history and outlook for {r.name.toLowerCase()}</a></p>}
           </div>
           {r.impact?.sources?.length > 0 && (
             <p class="wi-src">Sources: {r.impact.sources.map((s: any, k: number) => <>{k > 0 && '; '}<a href={s.url} target={s.url.startsWith('http') ? '_blank' : undefined} rel={s.url.startsWith('http') ? 'noopener' : undefined}>{s.name}</a></>)}. <a href={`/cost-monitor/${r.id}/`}>Price history for {r.name.toLowerCase()}</a>.</p>

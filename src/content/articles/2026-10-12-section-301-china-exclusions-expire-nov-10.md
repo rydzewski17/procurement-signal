@@ -1,11 +1,10 @@
 ---
 title: "178 China tariff exclusions expire Nov. 10, and USTR hasn't signaled another extension"
-dek: "With four weeks to go and no Federal Register notice seeking comment, buyers of covered Chinese-origin goods should plan for the 25% Section 301 duty to return on entries filed Nov. 10."
+dek: "With four weeks to go and no Federal Register notice seeking comment, procurement teams sourcing covered Chinese-origin goods should plan for the 25% Section 301 duty to return on entries filed Nov. 10."
 date: 2026-10-12
 topic: tariffs-trade
 type: news
 signal: 5
-featured: true
 image:
   src: "https://images.unsplash.com/photo-1590496793907-4d66e2994b4d?ixlib=rb-4.1.0"
   alt: "A container ship being loaded by cranes at an industrial port at dusk"
@@ -31,6 +30,14 @@ sources:
     url: "https://greatlakescustomslaw.com/section-301-china-exclusions-in-2026-the-178-products-still-protected-and-who-actually-benefits/"
   - name: "Altium — The 2026 Tariff Reset"
     url: "https://resources.altium.com/p/tariff-reset-pcb-workarounds"
+categories: ["tariffs", "sourcing", "semis"]
+faqs:
+  - q: "When do the Section 301 China exclusions expire?"
+    a: "The remaining 178 exclusions run through 11:59 p.m. ET on Nov. 9, 2026. Entries filed on or after Nov. 10 pay the Section 301 duty unless USTR extends them."
+  - q: "What duty applies after the exclusions expire?"
+    a: "Typically 25% for goods on Section 301 Lists 1, 2 and 3, on top of MFN and any other duties."
+  - q: "Does an exclusion remove all tariffs?"
+    a: "No. It removes only the Section 301 layer. MFN duties, Section 232 tariffs and antidumping or countervailing duties still apply."
 ---
 
 ## Why it matters
@@ -49,15 +56,21 @@ Important limits on what an exclusion does:
 
 - It removes only the Section 301 layer. MFN duties, Section 232 tariffs and any antidumping/countervailing duties still apply.
 - It applies at the specific product description in the exclusion annex, not to a whole HTS heading. Many importers assume coverage they don't have.
-- Electronics buyers are among the most exposed. Bare printed circuit boards under HTSUS 8534.00.00 are on the list, and [Altium estimated](https://resources.altium.com/p/tariff-reset-pcb-workarounds) their duty could climb from 10% to a combined 35% if the exclusions lapse.
+- Electronics categories are among the most exposed. Bare printed circuit boards under HTSUS 8534.00.00 are on the list, and [Altium estimated](https://resources.altium.com/p/tariff-reset-pcb-workarounds) their duty could climb from 10% to a combined 35% if the exclusions lapse.
 
-## What buyers should do
+## What procurement teams should do
 
 - **Confirm exposure now.** Ask your customs broker or trade team to match your purchases against the exclusion annex at the 10-digit level, including the product description.
 - **Re-run landed cost without the exclusion** for every affected SKU so pricing, budgets and should-cost models reflect the worst case.
 - **Check contract terms.** Look for tariff pass-through, price adjustment or Incoterms language that decides who absorbs the increase.
 - **Weigh pull-forward buys carefully.** Goods must be *entered* by Nov. 9, not shipped. Transit times from China already make late-October bookings tight, and extra inventory carries its own cost.
 - **Watch the Federal Register.** A USTR notice is the only reliable signal of an extension. If none appears by late October, plan for the duty.
+
+## What to watch next
+
+- **A Federal Register notice.** Any extension would most likely appear as a USTR notice before Nov. 10. Its absence by early November is a strong signal the duty returns.
+- **The U.S.–China trade truce.** The broader arrangement expires Jan. 10, 2027, which could reshape China duties beyond the exclusions.
+- **Entry timing.** Watch in-transit shipments that could clear before or after Nov. 10 and coordinate with your broker on filing dates.
 
 ## The bigger picture
 

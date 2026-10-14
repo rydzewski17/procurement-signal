@@ -17,7 +17,7 @@ const jsonLd = {
   creator: { '@type': 'Organization', name: 'Procurement Signal' }, isBasedOn: 'https://fred.stlouisfed.org/', temporalCoverage: `2024-08/${meta.dataThrough}`,
 };
 ---
-<Base title="Price trends by category: where input prices are heading" description="Which purchase categories are getting more expensive, how fast, and what buyers should do about it. Updated monthly from U.S. producer price data." section="cost-monitor" jsonLd={jsonLd}>
+<Base title="Price trends by category: where input prices are heading" description="Which purchase categories are getting more expensive, how fast, and what procurement teams should do about it. Updated monthly from U.S. producer price data." section="cost-monitor" jsonLd={jsonLd}>
   <div class="page">
     <div class="page-head monitor-head">
       <div class="crumbs">Data through {through}. Updated {meta.updated}.</div>
@@ -71,7 +71,7 @@ const jsonLd = {
     ))}
 
     <section class="monitor-postures" aria-label="How to respond">
-      <h2 class="block-head">What each reading means for buyers</h2>
+      <h2 class="block-head">What each reading means for your category strategy</h2>
       <div class="posture-grid">
         {(Object.keys(STATUS) as Status[]).map((s) => (
           <div><StatusBadge status={s} /><p>{STATUS[s].posture}</p></div>
@@ -81,7 +81,7 @@ const jsonLd = {
 
     <section class="method prose-page narrow" id="methodology">
       <h2>How the monitor works</h2>
-      <p>Each category uses a U.S. Bureau of Labor Statistics Producer Price Index series, which tracks what domestic producers receive for their output. That makes it a good proxy for the prices buyers pay suppliers, before freight, tariffs and margin.</p>
+      <p>Each category uses a U.S. Bureau of Labor Statistics Producer Price Index series, which tracks what domestic producers receive for their output. That makes it a good proxy for the prices procurement teams pay suppliers, before freight, tariffs and margin.</p>
       <p><strong>Pressure</strong> is set mainly by the three-month pace, annualized, so it reacts to turns faster than the year-over-year number. A sharp move in the latest month can override it, so a rebound isn't labeled as easing:</p>
       <ul>
         <li><strong>Rising fast:</strong> pace of 15% or more; or prices already up 15% on the year and either an 8% pace or a 5% jump in the latest month.</li>

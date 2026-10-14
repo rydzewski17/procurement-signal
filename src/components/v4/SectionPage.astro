@@ -1,6 +1,7 @@
 ---
 // Section and category pages (procurementmag.com/news layout): three large
 // stories, a grid of eleven more, a Most popular rail, then a clean More news list.
+// Every item is our own reporting.
 import Base from '../../layouts/Base.astro';
 import Tile from './Tile.astro';
 import Rail from './Rail.astro';
@@ -13,6 +14,9 @@ const items = feedFor(posts, slugs);
 const big = items.slice(0, 3);
 const grid = items.slice(3, 14);
 const more = items.slice(14, 40);
+// When a category is still building up, keep the page full with our other recent stories.
+const own = new Set(items.map((x) => x.href));
+const elsewhere = items.length < 9 ? feedFor(posts, [], own, true).slice(0, items.length ? 6 : 9) : [];
 ---
 <Base title={`${title}: news and analysis`} description={blurb} section={sectionKey}>
   <div class="sec-head">
@@ -23,15 +27,22 @@ const more = items.slice(14, 40);
     {chips.length > 0 && <nav class="sec-chips" aria-label="Topics in this section">{chips.map((c) => <a href={c.href}>{c.label}</a>)}</nav>}
   </div>
 
-  {items.length === 0 ? <p class="empty">No stories here yet this week. Check back after the morning update.</p> : (
+  {(
     <div class="home-grid">
       <div class="home-main">
+        {items.length === 0 && <p class="empty">We haven't published a story in this category yet. Here is our latest reporting from across procurement.</p>}
         <div class="big3">
           {big.map((x, i) => <Tile item={x} size={i === 0 ? 'lg' : 'md'} showDek={i === 0} />)}
         </div>
-        {grid.length > 0 && <div class="grid11">{grid.map((x) => <Tile item={x} size="sm" />)}</div>}
+        {grid.length > 0 && <div class="grid11">{grid.map((x) => <Tile item={x} size="sm" showDek />)}</div>}
+        {elsewhere.length > 0 && (
+          <section class="elsewhere" aria-label="More from Procurement Signal">
+            <h2 class="h-rule">More from Procurement Signal<a class="view-all" href="/archive/">All stories</a></h2>
+            <div class="grid11">{elsewhere.map((x) => <Tile item={x} size="sm" />)}</div>
+          </section>
+        )}
       </div>
-      <Rail posts={posts} show={['popular', 'software', 'events', 'ad']} />
+      <Rail posts={posts} show={['popular', 'software', 'analysis', 'events', 'outlook', 'ad']} exclude={new Set(items.map((x) => x.href))} />
     </div>
   )}
 
@@ -43,8 +54,8 @@ const more = items.slice(14, 40);
           <li>
             <time>{shortDate(x.t)}</time>
             <div>
-              <a href={x.href} target={x.ext ? '_blank' : undefined} rel={x.ext ? 'noopener' : undefined}>{clip(x.title, 140)}</a>
-              <span>{x.ext ? x.source : 'Procurement Signal'}{x.cats[0] && categoryBySlug[x.cats[0]] && <> in <a href={`/categories/${x.cats[0]}/`}>{categoryBySlug[x.cats[0]].name}</a></>}</span>
+              <a href={x.href}>{clip(x.title, 140)}</a>
+              <span>{x.mins} min read{x.cats[0] && categoryBySlug[x.cats[0]] && <> · <a href={`/categories/${x.cats[0]}/`}>{categoryBySlug[x.cats[0]].name}</a></>}</span>
             </div>
           </li>
         ))}

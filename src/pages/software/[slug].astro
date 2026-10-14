@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Subscribe from '../../components/Subscribe.astro';
 import FollowButton from '../../components/FollowButton.astro';
-import { SOFTWARE, allCategories, rankG2, rankTeam, fmtDate, slugify, mixOf, g2Tiers, quickPicks, headToHead, TIE, type Vendor } from '../../data/software';
+import { SOFTWARE, allCategories, rankG2, rankTeam, teamAverage, fmtDate, slugify, mixOf, g2Tiers, quickPicks, headToHead, TIE, type Vendor } from '../../data/software';
 
 export function getStaticPaths() {
   return allCategories().map((c) => ({ params: { slug: c.slug }, props: { c } }));
@@ -23,7 +23,7 @@ const rankOf = (v: Vendor) => g2.ranked.indexOf(v) + 1;
 const totalReviews = all.reduce((s, v) => s + v.g2.reviews, 0);
 const checked = fmtDate(SOFTWARE.updated);
 const scoreKeys = Object.keys(c.scoreAvg);
-const lc = (s = '') => (/^[A-Z][a-z]/.test(s) && !/^(SAP|Oracle|Microsoft|Salesforce|Workday|NetSuite|ServiceNow|Google|Slack|Unit4|European|Coupa|Ivalua|JAGGAER)\b/.test(s) ? s.charAt(0).toLowerCase() + s.slice(1) : s);
+const lc = (s = '') => (/^[A-Z][a-z]/.test(s) && !/^(SAP|Oracle|Microsoft|Salesforce|Workday|NetSuite|ServiceNow|Google|Slack|Unit4|European|Coupa|Ivalua)\b/.test(s) ? s.charAt(0).toLowerCase() + s.slice(1) : s);
 const list = (xs: string[]) => xs.length <= 1 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`;
 const lead = tiers[0];
 const leadNames = lead ? lead.vendors.map((v) => `${v.name} (${r1(v.g2.rating)})`) : [];
@@ -32,7 +32,10 @@ const shortAnswer = lead
       ? `On G2, the leading ${c.name} platforms with at least ${SOFTWARE.minReviews} reviews are ${list(leadNames)}. Their ratings are within ${TIE} points of each other, so we treat them as effectively tied.`
       : `On G2, ${lead.vendors[0].name} leads ${c.name} platforms with at least ${SOFTWARE.minReviews} reviews, at ${r1(lead.vendors[0].g2.rating)} out of 5 from ${n(lead.vendors[0].g2.reviews)} reviews.`)
   : `No ${c.name} platform has yet met our minimum of ${SOFTWARE.minReviews} G2 reviews.`;
-const teamLine = team.ranked.length ? `Our team ranks ${team.ranked[0].v.name} first (team score ${team.ranked[0].avg?.toFixed(2)} out of 5).` : `Our team's scoring for this category is in progress.`;
+const teamLine = team.ranked.length ? `Our analysts rank ${team.ranked[0].v.name} first (score ${team.ranked[0].avg?.toFixed(2)} out of 5)${team.ranked[1] ? `, followed by ${team.ranked[1].v.name} (${team.ranked[1].avg?.toFixed(2)})` : ''}.` : `Our team's scoring for this category is in progress.`;
+const teamRank = (v: Vendor) => team.ranked.findIndex((x) => x.v === v) + 1;
+const byName = (name: string) => all.find((v) => v.name === name);
+const crit = Object.fromEntries(SOFTWARE.rubric.map((r) => [r.id, r.label]));
 const mostReviewed = picks[1]?.v;
 
 const pairWho = (v: Vendor) => (v.bestFor ? lc(v.bestFor) : 'teams with its typical profile');
@@ -58,6 +61,8 @@ const faq = [
   { q: `How much does ${sw} software cost?`, a: c.pricing },
   { q: `How long does ${sw} software take to implement?`, a: c.implementation },
   { q: `What should I look for when choosing ${sw} software?`, a: c.choose.map(([t, d]) => `${t}: ${d}`).join(' ') },
+  ...(team.ranked.length ? [{ q: `Which ${sw} software does Procurement Signal rate highest?`, a: `${teamLine} ${team.ranked[0].v.take ?? ''}` }] : []),
+  ...(c.market ? [{ q: `How is the ${sw} software market changing?`, a: `${c.market} ${(c.trends ?? []).join(' ')}` }] : []),
   { q: `How does Procurement Signal rank ${sw} software?`, a: `${SOFTWARE.method} ${SOFTWARE.disclosure}` },
 ];
 
@@ -73,7 +78,7 @@ const jsonLd = [
 ];
 const others = allCategories().filter((x) => x.slug !== c.slug);
 const toc = [
-  ['answer', 'Short answer'], ['picks', 'Quick picks'], ['compare', 'Comparison table'], ['ranking', 'Rankings'],
+  ['answer', 'Short answer'], ...(c.market ? [['analysis', 'Our analysis']] : []), ['picks', 'Quick picks'], ['compare', 'Comparison table'], ['ranking', 'Rankings'],
   ['reviews', `All ${all.length} reviews`], ...(pairs.length ? [['versus', 'Head to head']] : []), ['choose', 'How to choose'],
   ['cost', 'Pricing and rollout'], ['faq', 'FAQ'], ['method', 'How we rank'],
 ];
@@ -109,6 +114,38 @@ const toc = [
         <p class="disc"><strong>Disclosure.</strong> {SOFTWARE.disclosure}</p>
       </section>
 
+      {c.market && (
+        <section id="analysis" class="ana">
+          <h2>Our analysis of the {sw} market</h2>
+          <p class="ana-lede">{c.market}</p>
+          {c.trends && c.trends.length > 0 && (
+            <div class="ana-trends">
+              <h3>What's changing</h3>
+              <ol>{c.trends.map((t) => <li>{t}</li>)}</ol>
+            </div>
+          )}
+          {c.scenarios && c.scenarios.length > 0 && (
+            <>
+              <h3 class="ana-h">Our shortlist by situation</h3>
+              <div class="scen">
+                {c.scenarios.map(([label, name, why]) => {
+                  const v = byName(name); const avg = v ? teamAverage(v) : null;
+                  return (
+                    <a class="scen-c" href={`#${slugify(name)}`}>
+                      <span class="scen-l">{label}</span>
+                      <strong>{name}</strong>
+                      <span class="scen-w">{why}</span>
+                      <span class="scen-s">{avg !== null && <>Our score <b>{avg.toFixed(2)}</b></>}{v?.g2.rating && <> · G2 {r1(v.g2.rating)}</>}</span>
+                    </a>
+                  );
+                })}
+              </div>
+            </>
+          )}
+          <p class="note">Analysis by the Procurement Signal team, updated {fmtDate(SOFTWARE.analysisUpdated ?? SOFTWARE.updated)}. Scores are editorial assessments, not hands-on product tests.</p>
+        </section>
+      )}
+
       {picks.length > 0 && (
         <section id="picks">
           <h2>Quick picks</h2>
@@ -130,15 +167,16 @@ const toc = [
         <p class="note">Ratings and reviewer mix from G2, checked {checked}. Enterprise means more than 1,000 employees; small business means 50 or fewer.</p>
         <div class="tscroll" tabindex="0" role="region" aria-label="Comparison table">
           <table class="cmp">
-            <thead><tr><th>#</th><th>Platform</th><th>Best for</th><th>G2 rating</th><th>Reviews</th><th>Who reviews it</th><th>Founded · HQ</th></tr></thead>
+            <thead><tr><th>#</th><th>Platform</th><th>Best for</th><th>Our score</th><th>G2 rating</th><th>Reviews</th><th>Who reviews it</th><th>Founded · HQ</th></tr></thead>
             <tbody>
               {all.map((v) => {
                 const m = mixOf(v); const rk = rankOf(v);
                 return (
                   <tr class={rk ? '' : 'un'}>
                     <td class="rk">{rk || '–'}</td>
-                    <td><a href={`#${slugify(v.name)}`}><strong>{v.name}</strong></a>{v.seller && v.seller !== v.name && <span class="sm">{v.seller}</span>}{v.affiliated && <span class="flag">Disclosure</span>}</td>
+                    <td><a href={`#${slugify(v.name)}`}><strong>{v.name}</strong></a>{v.seller && v.seller !== v.name && <span class="sm">{v.seller}</span>}</td>
                     <td class="bf">{v.bestFor}</td>
+                    <td class="num">{teamAverage(v) !== null ? <strong class="ours">{teamAverage(v)!.toFixed(2)}</strong> : '–'}{teamRank(v) > 0 && <span class="sm">#{teamRank(v)} by our team</span>}</td>
                     <td><span class="stars" style={`--w:${((v.g2.rating ?? 0) / 5) * 100}%`}>{r1(v.g2.rating)}</span></td>
                     <td class="num">{n(v.g2.reviews)}{!rk && <span class="sm">Below {SOFTWARE.minReviews}</span>}</td>
                     <td>{m ? <span class="mix" title={`Small ${m.small}% · Mid-market ${m.mid}% · Enterprise ${m.large}%`}><i class="s" style={`width:${m.small}%`}></i><i class="m" style={`width:${m.mid}%`}></i><i class="l" style={`width:${m.large}%`}></i></span> : <span class="sm">n/a</span>}</td>
@@ -172,14 +210,15 @@ const toc = [
             {g2.unranked.length > 0 && <p class="note">Listed but not ranked (fewer than {SOFTWARE.minReviews} reviews): {g2.unranked.map((v) => `${v.name} (${n(v.g2.reviews)})`).join(', ')}.</p>}
           </div>
           <div class="rbox team">
-            <h3>Our team's ranking</h3>
+            <h3>Our analysts' ranking</h3>
             {team.ranked.length ? (
-              <ol>{team.ranked.map((x) => <li><a href={`#${slugify(x.v.name)}`}>{x.v.name}</a><b>{x.avg?.toFixed(2)}</b></li>)}</ol>
+              <ol class="tr">{team.ranked.map((x) => <li><a href={`#${slugify(x.v.name)}`}>{x.v.name}</a><span class="bar"><i style={`width:${((x.avg! - 2) / 3) * 100}%`}></i></span><b>{x.avg?.toFixed(2)}</b></li>)}</ol>
             ) : (
               <p class="pending">Our analysts are scoring this category now. Each platform gets a 1 to 5 score on the five criteria below, and the ranking is the average.</p>
             )}
+            <p class="note">Average of five 1 to 5 scores:</p>
             <ol class="crit">{SOFTWARE.rubric.map((r) => <li>{r.label}</li>)}</ol>
-            <p class="note">JAGGAER is excluded from team scoring because our founder works there.</p>
+            <p class="note">Editorial assessments based on documented capabilities, G2 review themes and implementation reports. Not hands-on tests.</p>
           </div>
         </div>
       </section>
@@ -201,9 +240,22 @@ const toc = [
                   <strong>{r1(v.g2.rating)}</strong><span>G2 · {n(v.g2.reviews)} reviews</span>
                 </div>
               </header>
-              {v.affiliated && <p class="aff">Disclosure: Procurement Signal's founder works for {v.name}. It is shown with its public G2 data and excluded from our team scoring.</p>}
               {v.bestFor && <p class="best"><span>Best for</span> {v.bestFor}</p>}
               {v.what && <p>{v.what}</p>}
+              {v.take && (
+                <div class="take">
+                  <div class="take-t">
+                    <h4>Our take</h4>
+                    <p>{v.take}</p>
+                  </div>
+                  {v.team && teamAverage(v) !== null && (
+                    <div class="take-s">
+                      <p class="take-avg"><b>{teamAverage(v)!.toFixed(2)}</b><span>Our score{teamRank(v) > 0 && <>, #{teamRank(v)} of {team.ranked.length}</>}</span></p>
+                      <ul>{SOFTWARE.rubric.map((r) => <li><span>{crit[r.id]}</span><span class="tb"><i style={`width:${(v.team![r.id] / 5) * 100}%`}></i></span><em>{v.team![r.id].toFixed(1)}</em></li>)}</ul>
+                    </div>
+                  )}
+                </div>
+              )}
               <div class="pc">
                 {v.likes && v.likes.length > 0 && <div class="pros"><h4>What reviewers like</h4><ul>{v.likes.map((x) => <li>{x}</li>)}</ul></div>}
                 {v.flags && v.flags.length > 0 && <div class="cons"><h4>Common complaints</h4><ul>{v.flags.map((x) => <li>{x}</li>)}</ul></div>}
@@ -234,7 +286,7 @@ const toc = [
       {pairs.length > 0 && (
         <section id="versus">
           <h2>Head to head</h2>
-          <p class="note">The comparisons buyers ask about most in this category, built from the same G2 data.</p>
+          <p class="note">The comparisons procurement teams ask about most in this category, built from the same G2 data.</p>
           {pairs.map(([a, b]) => (
             <div class="vs">
               <h3>{a.name} vs {b.name}</h3>
@@ -309,6 +361,37 @@ const toc = [
 </Base>
 
 <style>
+  .ana { background: #fff; border: 1px solid var(--rule); border-top: 5px solid var(--c); padding: 22px 24px 18px; }
+  .ana h2 { margin-top: 0 !important; }
+  .ana-lede { font: 18px/1.55 var(--head); color: var(--ink); margin: 0 0 16px; }
+  .ana-trends { background: var(--navy-tint); padding: 14px 18px 6px; margin: 0 0 18px; }
+  .ana-trends h3, .ana-h { font: 700 15px/1.2 var(--ui); color: var(--ink); margin: 0 0 8px; }
+  .ana-trends ol { margin: 0; padding-left: 20px; }
+  .ana-trends li { margin-bottom: 8px; font-size: 15.5px; line-height: 1.5; }
+  .scen { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 10px 0 14px; }
+  .scen-c { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border: 1px solid var(--rule); border-left: 4px solid var(--c); text-decoration: none; color: var(--ink); background: #fff; transition: box-shadow .15s; }
+  .scen-c:hover { box-shadow: 0 8px 22px rgba(14,42,71,.12); }
+  .scen-l { font: 600 12px/1.2 var(--ui); color: var(--c); text-transform: uppercase; letter-spacing: .04em; }
+  .scen-c strong { font: 700 19px/1.2 var(--head); }
+  .scen-w { font: 14px/1.45 var(--ui); color: var(--ink-2); flex: 1; }
+  .scen-s { font: 13px/1 var(--ui); color: var(--muted); }
+  .scen-s b { color: var(--ink); }
+  .ours { font: 700 16px/1 var(--head); color: var(--c); }
+  .tr li { display: grid !important; grid-template-columns: minmax(0, 1fr) 70px 40px; gap: 8px; align-items: center; }
+  .tr .bar { height: 7px; background: var(--rule); display: block; }
+  .tr .bar i { display: block; height: 100%; background: var(--c, var(--teal)); }
+  .take { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 20px; background: var(--navy-tint); border-left: 4px solid var(--c); padding: 14px 18px; margin: 12px 0; }
+  .take h4 { font: 700 14px/1.2 var(--ui); color: var(--c); margin: 0 0 6px; }
+  .take p { margin: 0; font-size: 15.5px; line-height: 1.55; }
+  .take-avg { display: flex; align-items: baseline; gap: 8px; margin: 0 0 6px !important; }
+  .take-avg b { font: 700 28px/1 var(--head); color: var(--ink); }
+  .take-avg span { font: 12.5px/1.2 var(--ui); color: var(--muted); }
+  .take-s ul { list-style: none; margin: 0; padding: 0; }
+  .take-s li { display: grid; grid-template-columns: minmax(0, 1fr) 60px 26px; gap: 6px; align-items: center; font: 12.5px/1.3 var(--ui); padding: 3px 0; }
+  .take-s .tb { height: 6px; background: #d5dde7; display: block; }
+  .take-s .tb i { display: block; height: 100%; background: var(--c); }
+  .take-s em { font-style: normal; font-weight: 600; text-align: right; }
+  @media (max-width: 760px) { .scen, .take { grid-template-columns: 1fr; } }
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .hero { margin: 0 calc(50% - 50vw); background: var(--c); color: #fff; position: relative; overflow: hidden; }
   .hero::after { content: ''; position: absolute; right: -80px; top: -60px; width: 420px; height: 420px; border-radius: 50%; background: rgba(255,255,255,.07); }

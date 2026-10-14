@@ -78,14 +78,14 @@ const today = new Date().toLocaleDateString('en-US', { weekday: 'long', month: '
               {g.slugs.map((sl) => <a href={`/categories/${sl}/`} role="menuitem">{categoryBySlug[sl].name}</a>)}
             </div>
           ))}
-          <div class="dd-foot"><a href="/" role="menuitem">Latest news</a><a href="/wire/" role="menuitem">All industry headlines</a><a href="/categories/" role="menuitem">Every topic</a></div>
+          <div class="dd-foot"><a href="/" role="menuitem">Latest news</a><a href="/archive/" role="menuitem">All stories</a><a href="/categories/" role="menuitem">Every topic</a></div>
         </div>
       </div>
 
       <div class="dd">
         <a class="dd-btn" href="/signals/" aria-haspopup="true" aria-current={section === 'signals' || section === 'guides' ? 'page' : undefined}>Analysis<span class="caret" aria-hidden="true">▾</span></a>
         <div class="dd-menu dd-desc" role="menu">
-          <a href="/signals/" role="menuitem"><b>Buyer briefings</b><span>What changed this week and what to do about it</span></a>
+          <a href="/signals/" role="menuitem"><b>Procurement briefings</b><span>What changed this week and what to do about it</span></a>
           <a href="/guides/" role="menuitem"><b>Guides</b><span>How tariffs, price indexes and supplier risk work</span></a>
           <a href="/glossary/" role="menuitem"><b>Glossary</b><span>Procurement and trade terms in plain language</span></a>
         </div>
@@ -97,7 +97,7 @@ const today = new Date().toLocaleDateString('en-US', { weekday: 'long', month: '
           <a href="/cost-monitor/" role="menuitem"><b>Price trends by category</b><span>Monthly prices for steel, freight, resins and 9 more</span></a>
           <a href="/trackers/tariff-deadlines/" role="menuitem"><b>Tariff deadlines</b><span>Dates when duties start, change or expire</span></a>
           <a href="/markets/" role="menuitem"><b>Prediction market odds</b><span>What traders expect on tariffs, rates and fuel</span></a>
-          <a href="/wire/" role="menuitem"><b>Industry headlines</b><span>Today's procurement news from the trade press</span></a>
+          <a href="/signals/" role="menuitem"><b>Procurement briefings</b><span>Our signal reports, rated by urgency</span></a>
         </div>
       </div>
 
@@ -118,8 +118,8 @@ const today = new Date().toLocaleDateString('en-US', { weekday: 'long', month: '
           <button type="submit">Search</button>
         </form>
         <div class="mnav-group"><span>Sections</span>{SECTIONS.map((sx) => <a href={`/sections/${sx.id}/`}>{sx.name}</a>)}</div>
-        <div class="mnav-group"><span>Analysis</span><a href="/signals/">Buyer briefings</a><a href="/guides/">Guides</a><a href="/glossary/">Glossary</a></div>
-        <div class="mnav-group"><span>Prices and data</span><a href="/cost-monitor/">Price trends by category</a><a href="/trackers/tariff-deadlines/">Tariff deadlines</a><a href="/markets/">Prediction market odds</a><a href="/wire/">Industry headlines</a></div>
+        <div class="mnav-group"><span>Analysis</span><a href="/signals/">Procurement briefings</a><a href="/guides/">Guides</a><a href="/glossary/">Glossary</a></div>
+        <div class="mnav-group"><span>Prices and data</span><a href="/cost-monitor/">Price trends by category</a><a href="/trackers/tariff-deadlines/">Tariff deadlines</a><a href="/markets/">Prediction market odds</a></div>
         <div class="mnav-group"><span>Software</span><a href="/software/">Software rankings</a><a href="/software/finder/">Software finder</a></div>
       </div>
     </div>
@@ -144,7 +144,6 @@ const today = new Date().toLocaleDateString('en-US', { weekday: 'long', month: '
           <a href="/editorial-standards/">Editorial standards</a>
           <a href="/guides/">Guides</a>
           <a href="/glossary/">Glossary</a>
-          <a href="/wire/">Industry headlines</a>
           <a href="/archive/">Archive</a>
           <a href="/rss.xml">RSS feed</a>
           <a href="/sitemap-index.xml">Sitemap</a>

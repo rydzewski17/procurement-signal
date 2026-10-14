@@ -1,24 +1,22 @@
 ---
 import Base from '../../layouts/Base.astro';
-import wire from '../../data/wire.json';
+import Media from '../../components/Media.astro';
 import { getPosts } from '../../data/posts';
-import { CATEGORIES, NEWS_GROUPS, categorize, categoryBySlug } from '../../data/categories.mjs';
+import { CATEGORIES, NEWS_GROUPS } from '../../data/categories.mjs';
+import { catsOf } from '../../data/feed';
 import { categoryWatch } from '../../data/watch';
 import { SOFTWARE } from '../../data/software';
 
 const posts = await getPosts();
 const clip = (t: string, n = 96) => (t.length > n ? t.slice(0, t.lastIndexOf(' ', n)) + '…' : t);
 const WEEK = 7 * 864e5;
-const newest = Math.max(...wire.items.map((i: any) => new Date(i.date).valueOf()), ...posts.map((p) => p.data.date.valueOf()));
+const newest = Math.max(...posts.map((p) => p.data.date.valueOf()));
 
 const topic = Object.fromEntries(CATEGORIES.map((c) => {
-  const items = [
-    ...posts.filter((p) => categorize(`${p.data.title} ${p.data.dek}`).includes(c.slug))
-      .map((p) => ({ title: p.data.title, href: `/articles/${p.id}/`, t: p.data.date.valueOf(), ext: false, src: 'Procurement Signal' })),
-    ...wire.items.filter((i: any) => (i.categories ?? []).includes(c.slug))
-      .map((i: any) => ({ title: i.title, href: i.url, t: new Date(i.date).valueOf(), ext: true, src: String(i.source).split(' · ')[0] })),
-  ].sort((a, b) => b.t - a.t);
-  return [c.slug, { ...c, items, total: items.length, week: items.filter((x) => newest - x.t < WEEK).length, ours: items.filter((x) => !x.ext).length }];
+  const items = posts.filter((p) => catsOf(p).includes(c.slug))
+    .map((p) => ({ title: p.data.title, href: `/articles/${p.id}/`, t: p.data.date.valueOf(), post: p, src: p.data.type === 'news' ? 'News' : p.data.type === 'signal' ? 'Signal report' : 'Analysis' }))
+    .sort((a, b) => b.t - a.t);
+  return [c.slug, { ...c, items, total: items.length, week: items.filter((x) => newest - x.t < WEEK).length }];
 }));
 
 // Price signals from our cost data, for topics that map to purchase categories.
@@ -44,13 +42,13 @@ const totalWeek = new Set(Object.values(topic).flatMap((t: any) => t.items.filte
       <div>
         <p class="eyebrow">News by topic</p>
         <h1>Follow the parts of procurement you manage</h1>
-        <p class="dek">{CATEGORIES.length} topics in four areas. Headlines come from trade publications and official notices every morning and link to their original source. Where we track prices or rank software for a topic, you will see that too.</p>
+        <p class="dek">{CATEGORIES.length} topics in four areas. Every story is our own reporting and analysis, with what it means for your category and the sources behind it. Where we track prices or rank software for a topic, you will see that too.</p>
         <nav class="groups" aria-label="Topic areas">
           {NEWS_GROUPS.map((g) => <a href={`#${g.id}`} style={`--g:${GROUP[g.id].color}`}><b>{g.name}</b><span>{g.slugs.length} topics</span></a>)}
         </nav>
       </div>
       <aside class="board" aria-label="Most active topics this week">
-        <p class="bh">Most active this week <span>{totalWeek} headlines</span></p>
+        <p class="bh">Most active this week <span>{totalWeek} stories</span></p>
         <ol>
           {leaders.map((l) => (
             <li style={`--g:${GROUP[groupOf(l.slug)].color}`}>
@@ -80,7 +78,7 @@ const totalWeek = new Set(Object.values(topic).flatMap((t: any) => t.items.filte
               <article class="card">
                 <div class="ch">
                   <h3><a href={`/categories/${s}/`}>{t.name}</a></h3>
-                  <span class="cnt" title="Headlines in the last seven days">{t.week}<small>this week</small></span>
+                  <span class="cnt" title="Our stories in the last seven days">{t.total}<small>{t.total === 1 ? 'story' : 'stories'}</small></span>
                 </div>
                 <p class="cb">{t.blurb}</p>
                 {prices.length > 0 && (
@@ -89,12 +87,20 @@ const totalWeek = new Set(Object.values(topic).flatMap((t: any) => t.items.filte
                   </ul>
                 )}
                 {t.items.length > 0 ? (
-                  <ul class="heads">
-                    {t.items.slice(0, 3).map((x: any) => (
-                      <li><a href={x.href} target={x.ext ? '_blank' : undefined} rel={x.ext ? 'noopener' : undefined}>{clip(x.title)}</a><span>{x.src}</span></li>
-                    ))}
-                  </ul>
-                ) : <p class="none">No headlines yet this week. Follow the topic to see the next one.</p>}
+                  <>
+                    <a class="lead" href={t.items[0].href}>
+                      <Media post={t.items[0].post} ratio="card" />
+                      <span class="lt">{clip(t.items[0].title, 110)}</span>
+                    </a>
+                    {t.items.length > 1 && (
+                      <ul class="heads">
+                        {t.items.slice(1, 3).map((x: any) => (
+                          <li><a href={x.href}>{clip(x.title)}</a><span>{x.src}</span></li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                ) : <p class="none">No stories in this topic yet. Our newsroom publishes every weekday morning.</p>}
                 <div class="cf">
                   <a class="more" href={`/categories/${s}/`}>All {t.name.toLowerCase()} news</a>
                   {SW[s] && <a class="sw" href={`/software/${SW[s]}/`}>Ranking: {swName(SW[s])}</a>}
@@ -156,6 +162,12 @@ const totalWeek = new Set(Object.values(topic).flatMap((t: any) => t.items.filte
   .px em { font: normal 600 11px/1 var(--ui); padding: 3px 6px; }
   .px .rising-fast em { background: var(--red); color: #fff; } .px .rising em { background: var(--red-tint); color: var(--red); }
   .px .stable em { background: var(--navy-tint); color: var(--ink-2); } .px .easing em { background: var(--teal-tint); color: var(--teal); }
+  .lead { display: block; text-decoration: none; color: var(--ink); margin: 0 0 8px; }
+  .lead :global(img) { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+  .lead :global(figure), .lead :global(.media) { margin: 0 0 8px; }
+  .lead :global(figcaption) { display: none; }
+  .lt { display: block; font: 700 16px/1.3 var(--head); }
+  .lead:hover .lt { text-decoration: underline; color: var(--link); }
   .heads { list-style: none; margin: 0 0 12px; padding: 0; }
   .heads li { padding: 8px 0; border-top: 1px solid var(--rule); }
   .heads a { font: 500 15px/1.35 var(--head); color: var(--ink); text-decoration: none; display: block; }

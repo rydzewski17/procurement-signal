@@ -27,7 +27,7 @@ const xTicks = c.history.map((h, i) => ({ i, h })).filter(({ i }) => i % 6 === 0
 const points = c.history.map((h, i) => ({ x: x(i), y: y(h.value), label: monthLabel(h.date), value: h.value.toFixed(1) }));
 const through = monthLabel(meta.dataThrough + '-01');
 ---
-<Base title={`${c.name} prices: trend and buyer outlook`} description={`${c.name} producer prices are ${STATUS[c.status].label.toLowerCase()}: ${fmtPct(c.y1)} over 12 months. Trend, data and what procurement teams should do.`} section="cost-monitor">
+<Base title={`${c.name} prices: trend and category outlook`} description={`${c.name} producer prices are ${STATUS[c.status].label.toLowerCase()}: ${fmtPct(c.y1)} over 12 months. Trend, data and what procurement teams should do.`} section="cost-monitor">
   <div class="page">
     <div class="page-head narrow">
       <div class="crumbs"><a href="/cost-monitor/">Price trends by category</a>&ensp;/&ensp;{c.group}</div>
@@ -65,7 +65,7 @@ const through = monthLabel(meta.dataThrough + '-01');
 
     <div class="with-rail">
       <div class="prose-page">
-        <h2>What it means for buyers</h2>
+        <h2>What it means for your category strategy</h2>
         <p>{STATUS[c.status].posture}</p>
         {c.tariff && <><h2>Tariff exposure</h2><p>{c.tariff}. Producer prices exclude import duties, so imported supply can cost more than this index shows. See the <a href="/trackers/tariff-deadlines/">Tariff &amp; Trade Deadline Tracker</a>.</p></>}
         <details class="datatable">

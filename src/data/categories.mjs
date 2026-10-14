@@ -21,7 +21,7 @@ export const CATEGORIES = [
   { slug: 'compliance', name: 'Compliance & regulation', blurb: 'Forced-labor rules, sanctions, due diligence and regulatory deadlines.', re: /forced labor|uyghur|sanction|due diligence|compliance|regulat|disclosure|csddd|csrd|uflpa|anti-corruption|fcpa/i },
   { slug: 'sustainability', name: 'Sustainability & decarbonization', blurb: 'Emissions targets, decarbonized freight, recycled content and ESG reporting.', re: /sustainab|decarbon|emission|carbon|esg|renewable|net zero|circular|recycl|climate/i },
   { slug: 'talent', name: 'Talent & careers', blurb: 'CPO appointments, team moves, hiring and the procurement job market.', re: /appoint|names .*chief|chief procurement|chief supply|chief operating|hires|named .*officer|layoff|job cuts|workforce|talent|retire|chief .*officer|\bcfo\b|\bceo\b/i },
-  { slug: 'deals', name: 'Company moves & M&A', blurb: 'Acquisitions, mergers, earnings signals and major supplier and buyer news.', re: /merger|acquires|acquisition|buyout|earnings|revenue|quarterly results|guidance|q[1-4] results|spin-?off|ipo|credit facility|lands \$|raises \$|invest/i },
+  { slug: 'deals', name: 'Company moves & M&A', blurb: 'Acquisitions, mergers, earnings signals and major supplier and customer news.', re: /merger|acquires|acquisition|buyout|earnings|revenue|quarterly results|guidance|q[1-4] results|spin-?off|ipo|credit facility|lands \$|raises \$|invest/i },
   { slug: 'food-ag', name: 'Food & agriculture', blurb: 'Food supply chains, agricultural inputs, egg, meat and produce sourcing.', re: /food|agricultur|grocer|produce|egg|meat|dairy|crop|fertilizer|cyclospora|beverage/i },
   { slug: 'healthcare', name: 'Healthcare supply', blurb: 'Medical consumables, pharmaceutical supply and health system procurement.', re: /pharma|medical|drug|hospital|healthcare|health system|medicine|tariff on drugs|patented/i },
 ];
@@ -51,7 +51,8 @@ export const SECTIONS = [
   { id: 'trade', name: 'Trade & policy', blurb: 'Tariffs, trade rules, compliance deadlines and government procurement.', slugs: ['tariffs', 'compliance', 'public-sector', 'sustainability'] },
   { id: 'supply-chain', name: 'Supply chain & risk', blurb: 'Freight, warehousing, supplier failures and disruptions in the supply base.', slugs: ['freight', 'supplier-risk', 'warehousing', 'manufacturing'] },
   { id: 'costs', name: 'Costs & commodities', blurb: 'Metals, energy, chips and the input costs behind supplier pricing.', slugs: ['metals', 'energy', 'semis', 'food-ag', 'healthcare'] },
-  { id: 'companies', name: 'Company moves', blurb: 'Acquisitions, earnings, funding and major supplier and buyer news.', slugs: ['deals'] },
+  { id: 'companies', name: 'Company moves', blurb: 'Acquisitions, earnings, funding and major supplier and customer news.', slugs: ['deals'] },
 ];
 export const sectionById = Object.fromEntries(SECTIONS.map((s) => [s.id, s]));
-export const sectionOf = (slugs = []) => SECTIONS.find((s) => s.slugs.some((x) => slugs.includes(x))) ?? SECTIONS[0];
+// The first category decides the section; later ones are only used if it has none.
+export const sectionOf = (slugs = []) => SECTIONS.find((s) => s.slugs.includes(slugs[0])) ?? SECTIONS.find((s) => s.slugs.some((x) => slugs.includes(x))) ?? SECTIONS[0];

@@ -7,11 +7,11 @@ const posts = await getPosts();
 const counts = { critical: posts.filter((p) => p.data.signal >= 5).length, high: posts.filter((p) => p.data.signal === 4).length, watch: posts.filter((p) => p.data.signal <= 3).length };
 const topics = Object.keys(TOPICS).filter((t) => posts.some((p) => p.data.topic === t));
 ---
-<Base title="Buyer briefings: what changed and what to do" description="Short briefings for procurement leaders: the figures, what changed, why it matters and the first action to take." section="signals">
+<Base title="Procurement briefings: what changed and what to do" description="Short briefings for procurement leaders: the figures, what changed, why it matters and the first action to take." section="signals">
   <div class="page">
     <div class="page-head">
-      <h1>Buyer briefings</h1>
-      <p>What changed this week, why it matters to buyers, and the first thing to do. Each briefing is rated by how urgently buyers should respond, from Watch to Critical.</p>
+      <h1>Procurement briefings</h1>
+      <p>What changed this week, why it matters to your categories and suppliers, and the first thing to do. Each briefing is rated by how urgently procurement teams should respond, from Watch to Critical.</p>
     </div>
 
     <div class="controls">

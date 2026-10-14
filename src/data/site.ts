@@ -1,7 +1,7 @@
 export const SITE = {
   name: 'Procurement Signal',
   tagline: 'The intelligence feed for procurement leaders.',
-  description: 'B2B intelligence for procurement and supply chain professionals: tariffs, supplier risk, input costs and procurement technology, with what each development means for buyers.',
+  description: 'B2B intelligence for procurement and supply chain professionals: tariffs, supplier risk, input costs and procurement technology, with what each development means for procurement teams.',
   editor: 'Jason Rydzewski',
 };
 
@@ -9,11 +9,13 @@ export const TOPICS: Record<string, { name: string; blurb: string }> = {
   'tariffs-trade': { name: 'Tariffs & Trade', blurb: 'Tariff actions, trade policy and customs changes that move landed cost.' },
   'supplier-risk': { name: 'Supplier Risk', blurb: 'Bankruptcies, disruptions, recalls and the suppliers to watch.' },
   'proc-tech': { name: 'Proc-Tech', blurb: 'Source-to-pay software: funding, M&A, launches and adoption.' },
-  'commodities': { name: 'Commodities & Pricing', blurb: 'Metals, energy, freight and input costs, with buyer guidance.' },
+  'commodities': { name: 'Commodities & Pricing', blurb: 'Metals, energy, freight and input costs, with category strategy for procurement teams.' },
   'public-sector': { name: 'Public Sector', blurb: 'Government procurement rules, major contract awards and policy.' },
   'esg-regulation': { name: 'ESG & Regulation', blurb: 'Supply chain due diligence, forced-labor rules and compliance deadlines.' },
   'ai-procurement': { name: 'AI in Procurement', blurb: 'Agents, autonomous sourcing and how AI is changing the function.' },
   'people-moves': { name: 'People & Careers', blurb: 'CPO appointments, team trends and the procurement talent market.' },
+  'logistics': { name: 'Freight & Logistics', blurb: 'Ocean, truck and cross-border capacity, rates and reliability, and what they mean for freight sourcing.' },
+  'industry': { name: 'Companies & Industry', blurb: 'Mergers, financing, plant investments and the supplier moves procurement teams should track.' },
 };
 
 export const TYPE_LABEL: Record<string, string> = { news: 'News', signal: 'Signal Report', analysis: 'Analysis' };
@@ -30,6 +32,8 @@ export const TOPIC_PHOTOS: Record<string, Photo> = {
   'ai-procurement': { src: u('photo-1675602488512-bdd631490fcb'), alt: 'Close-up of a computer chip on a circuit board', credit: 'Bermix Studio', creditUrl: 'https://unsplash.com/photos/a-close-up-of-a-computer-chip-on-a-printed-circuit-board-tTurhPw9bwQ', license: 'Unsplash' },
   'public-sector': { src: u('photo-1520525003249-2b9cdda513bc'), alt: 'The U.S. Capitol building against a blue sky', credit: 'Louis Velazquez', creditUrl: 'https://unsplash.com/photos/united-states-capitol-building-in-washington-XWW746i6WoM', license: 'Unsplash' },
   'esg-regulation': { src: u('photo-1762381157166-f51ac99ab412'), alt: 'Wind turbines and solar panels in a rural landscape', credit: 'Bernd Dittrich', creditUrl: 'https://unsplash.com/photos/wind-turbines-and-solar-panels-in-a-rural-landscape-gFud7-XmQvk', license: 'Unsplash' },
+  'logistics': { src: u('photo-1578575437130-527eed3abbec'), alt: 'Cargo ships docked at a pier', credit: 'Andy Li', creditUrl: 'https://unsplash.com/photos/cargo-ships-docked-at-the-pier-during-day-CpsTAUPoScw', license: 'Unsplash' },
+  'industry': { src: u('photo-1496247749665-49cf5b1022e9'), alt: 'Interior of a large industrial factory', credit: 'Ant Rozetsky', creditUrl: 'https://unsplash.com/photos/interior-of-large-industrial-factory-SLIFI67jv5k', license: 'Unsplash' },
   'people-moves': { src: u('photo-1517048676732-d65bc937f952'), alt: 'Colleagues in a meeting around a table', credit: 'Dylan Gillis', creditUrl: 'https://unsplash.com/photos/people-sitting-on-chair-in-front-of-table-while-holding-pens-during-daytime-KdeqA3aTnBY', license: 'Unsplash' },
 };
 

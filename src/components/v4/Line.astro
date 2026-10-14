@@ -1,9 +1,15 @@
 ---
-// A one-line story link for lists: headline plus source and date.
+// A one-line story link for lists: headline, category and date, with an optional thumbnail.
+import Media from '../Media.astro';
 import { shortDate, clip, type FeedItem } from '../../data/feed';
-const { item } = Astro.props as { item: FeedItem };
+import { categoryBySlug } from '../../data/categories.mjs';
+const { item, thumb = false } = Astro.props as { item: FeedItem; thumb?: boolean };
+const cat = categoryBySlug[item.cats?.[0]]?.name;
 ---
-<li class={`line${item.ext ? '' : ' own'}`}>
-  <a href={item.href} target={item.ext ? '_blank' : undefined} rel={item.ext ? 'noopener' : undefined}>{clip(item.title, 120)}</a>
-  <span>{item.ext ? item.source : 'Procurement Signal'}, {shortDate(item.t)}{item.ext && <span class="ext-ico" aria-hidden="true"> ↗</span>}</span>
+<li class={`line own${thumb && item.post ? ' line-thumb' : ''}`}>
+  {thumb && item.post && <a class="line-img" href={item.href} tabindex="-1" aria-hidden="true"><Media post={item.post} ratio="square" /></a>}
+  <div>
+    <a href={item.href}>{clip(item.title, 120)}</a>
+    <span>{cat ? `${cat}, ` : ''}{shortDate(item.t)}</span>
+  </div>
 </li>

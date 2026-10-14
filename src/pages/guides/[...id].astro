@@ -19,7 +19,7 @@ const posts = await getPosts();
 const myTags = new Set(d.tags.map(slugify));
 const related = posts.filter((p) => p.data.tags.some((t) => myTags.has(slugify(t))) || p.data.topic === d.topic).slice(0, 4);
 const otherGuides = guides.filter((o) => o.id !== g.id);
-const fmt = (x: Date) => x.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+const fmt = (x: Date) => x.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 const url = new URL(`/guides/${g.id}/`, Astro.site).toString();
 const jsonLd = [
   { '@context': 'https://schema.org', '@type': 'Article', headline: d.title, description: d.description, dateModified: d.updated.toISOString(),

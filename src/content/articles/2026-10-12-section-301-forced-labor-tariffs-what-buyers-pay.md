@@ -1,5 +1,5 @@
 ---
-title: "Forced-labor tariffs on 60 economies: what buyers are paying three months in"
+title: "Forced-labor tariffs on 60 economies: what importers are paying three months in"
 dek: "The Section 301 action that replaced the expired 10% global surcharge in July adds 10% or 12.5% to imports from most trading partners, with wide exemptions procurement teams should be using."
 date: 2026-10-12
 topic: tariffs-trade
@@ -30,6 +30,12 @@ sources:
     url: "https://www.strixsmart.com/section-122-surcharge"
   - name: "Altium — The 2026 Tariff Reset"
     url: "https://resources.altium.com/p/tariff-reset-pcb-workarounds"
+categories: ["tariffs", "compliance", "sourcing"]
+faqs:
+  - q: "What are the Section 301 forced-labor tariffs?"
+    a: "An action that took effect July 24, 2026, adding 10% or 12.5% to imports from 60 economies after the Section 122 global surcharge expired."
+  - q: "Which goods are exempt from the forced-labor tariffs?"
+    a: "Goods already covered by Section 232 tariffs and USMCA-qualifying imports, among other exemptions. Check the official USTR notice for your products."
 ---
 
 ## Why it matters
@@ -57,12 +63,18 @@ Note: Holland & Knight's country table shows 13% for some economies where its te
 
 **Not permanent by design.** A country's rate can fall from 12.5% to 10%, or be lifted, if USTR finds it is effectively enforcing a forced-labor import ban.
 
-## What buyers should do
+## What procurement teams should do
 
 - **Audit your exemption claims.** USMCA qualification and the U.S.-manufacturing-input exemption are the two most valuable carve-outs. Make sure your broker is claiming them where eligible.
 - **Compare like-for-like sourcing options.** A 2.5-point gap between, say, Vietnam and Malaysia can tip a sourcing decision at scale.
 - **Track country status changes.** When a supplier country moves to the 10% tier or off the list, your landed cost changes overnight. Build that into quarterly cost reviews.
 - **Stack carefully.** For China-origin goods, this layer sits on top of existing Section 301 China duties. The [expiring China exclusions](/articles/2026-10-12-section-301-china-exclusions-expire-nov-10/) make the stack heavier from Nov. 10.
+
+## What to watch next
+
+- **Official rate tables.** Confirm country rates in the USTR notice; summaries disagree for some economies.
+- **New forced-labor import bans.** Countries that adopt bans can move into the 10% group, which changes landed-cost comparisons between sourcing countries.
+- **Exemption audits.** Expect customs scrutiny of USMCA and Section 232 exemption claims; documentation will matter.
 
 ## The bigger picture
 

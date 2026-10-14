@@ -1,14 +1,13 @@
 // Category watch: joins each purchase category's price trend (cost monitor) with the
-// latest matching headline (our stories first, then the RSS wire) and a short buyer stance.
+// latest of our stories on it, and a recommended category strategy.
 import { categories, STATUS } from './costs';
-import wire from './wire.json';
 import impact from './category-impact.json';
 
 export const STANCE: Record<string, string> = {
-  'rising-fast': 'Lock in pricing',
-  'rising': 'Add index-linked escalators',
-  'stable': 'Good window to bid',
-  'easing': 'Renegotiate or re-bid',
+  'rising-fast': 'Secure supply and fix pricing',
+  'rising': 'Move to index-linked pricing',
+  'stable': 'Run a competitive sourcing event',
+  'easing': 'Re-bid or renegotiate now',
 };
 
 // Words that tie a headline to a purchase category.
@@ -41,9 +40,7 @@ export function categoryWatch(posts: any[]) {
     const re = MATCH[c.id];
     const ours = posts.filter((p) => re && re.test(`${p.data.title} ${p.data.dek}`))
       .map((p) => ({ title: p.data.title, href: `/articles/${p.id}/`, source: 'Procurement Signal', t: p.data.date.valueOf(), ext: false }));
-    const theirs = wire.items.filter((i: any) => re && re.test(i.title))
-      .map((i: any) => ({ title: i.title, href: i.url, source: i.source.split(' · ')[0], t: new Date(i.date).valueOf(), ext: true }));
-    const pick = [...ours, ...theirs].sort((a, b) => b.t - a.t).find((x) => !used.has(x.href)) ?? null;
+    const pick = ours.sort((a, b) => b.t - a.t).find((x) => !used.has(x.href)) ?? null;
     if (pick) used.add(pick.href);
     assigned.set(c.id, pick ? { ...pick, title: clip(pick.title) } : null);
   }
@@ -63,5 +60,5 @@ export function categoryWatch(posts: any[]) {
 
 function count(id: string, posts: any[]) {
   const re = MATCH[id];
-  return posts.filter((p) => re.test(`${p.data.title} ${p.data.dek}`)).length + wire.items.filter((i: any) => re.test(i.title)).length;
+  return posts.filter((p) => re.test(`${p.data.title} ${p.data.dek}`)).length;
 }

@@ -23,8 +23,8 @@
    "label": "Implementation and support"
   }
  ],
- "method": "Every category is ranked two ways. Our team scores each vendor from 1 to 5 on five criteria and ranks by the average. Separately, we rank vendors by their public G2 average rating, counting only products with at least 50 reviews. Ratings within 0.3 points are treated as tied. G2 data was checked on the date shown and changes as reviews are added.",
- "disclosure": "Procurement Signal's founder works for JAGGAER, a vendor listed in several categories. JAGGAER appears with its G2 data like every other vendor and is excluded from our team scoring. No vendor pays to be listed or ranked.",
+ "method": "Every category is ranked two ways. Our analysts score each vendor from 1 to 5 on five criteria (coverage of the category, ease of use, ERP and finance integration, total cost and value, and implementation and support) and rank by the average. Scores are editorial assessments based on documented product capabilities, recurring themes in G2 reviews and implementation reports; they are not hands-on tests. Separately, we rank vendors by their public G2 average rating, counting only products with at least 50 reviews. Ratings within 0.3 points are treated as tied. G2 data was checked on the date shown and changes as reviews are added.",
+ "disclosure": "No vendor pays to be listed or ranked, and we do not list vendors where our team has a conflict of interest.",
  "categories": [
   {
    "slug": "procure-to-pay",
@@ -43,7 +43,7 @@
     "Purchasing": 8.9,
     "Invoicing": 8.8
    },
-   "answer": "Procure-to-pay (P2P) software runs the buying process from purchase request to paid invoice: requisitions, approvals, purchase orders, receiving, invoice matching and supplier payment. Most buyers choose between an enterprise suite that also covers sourcing and contracts, and a lighter P2P tool that can go live in weeks.",
+   "answer": "Procure-to-pay (P2P) software runs the buying process from purchase request to paid invoice: requisitions, approvals, purchase orders, receiving, invoice matching and supplier payment. Most procurement teams choose between an enterprise suite that also covers sourcing and contracts, and a lighter P2P tool that can go live in weeks.",
    "choose": [
     [
      "ERP fit",
@@ -94,15 +94,21 @@
       "Purchasing": 8.6,
       "Invoicing": 8.6
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.5,
+      "usability": 2.5,
+      "integration": 4.5,
+      "value": 2.5,
+      "support": 3.0
+     },
      "g2": {
       "rating": 4.1,
       "reviews": 749,
       "url": "https://www.g2.com/products/sap-ariba/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "The default shortlist entry for SAP ERP shops, and the broadest supplier network in the market. The trade-off is effort: reviewers consistently describe a steep learning curve, and value depends on a strong implementation partner and a plan for supplier enablement."
     },
     {
      "name": "Stampli",
@@ -127,15 +133,21 @@
       "Purchasing": 8.5,
       "Invoicing": 9.4
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.5,
+      "integration": 4.5,
+      "value": 4.0,
+      "support": 4.5
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 2056,
       "url": "https://www.g2.com/products/stampli/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "An AP-first tool that sits on top of your ERP rather than replacing it, which is why it rolls out quickly. Strong for invoice coding and approvals; procurement teams needing sourcing or contract features will need other tools alongside it."
     },
     {
      "name": "Procurify",
@@ -160,15 +172,21 @@
       "Purchasing": 9.3,
       "Invoicing": 8.8
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 407,
       "url": "https://www.g2.com/products/procurify/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "A purchasing-control tool for mid-market teams that want requests, approvals and budgets live in weeks. It covers the core purchase-order workflow well; sourcing and supplier risk are light."
     },
     {
      "name": "Ramp",
@@ -193,15 +211,21 @@
       "Purchasing": 8.8,
       "Invoicing": 8.0
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 5.0,
+      "integration": 4.0,
+      "value": 4.5,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.8,
       "reviews": 2528,
       "url": "https://www.g2.com/products/ramp-financial-ramp/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "The highest-rated finance platform in several of our categories, built around cards, bill pay and a growing procurement module. Best where spend runs through Ramp itself; complex multi-ERP enterprises should test depth before committing."
     },
     {
      "name": "Precoro",
@@ -226,15 +250,21 @@
       "Purchasing": 9.4,
       "Invoicing": 9.2
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 4.5,
+      "support": 4.5
+     },
      "g2": {
       "rating": 4.7,
       "reviews": 219,
       "url": "https://www.g2.com/products/precoro/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "A strong value pick for growing companies that want POs, three-way matching and budgets in one tool. It stays deliberately simple, so very large or highly regulated organizations may outgrow it."
     },
     {
      "name": "Teampay (by Paystand)",
@@ -259,15 +289,21 @@
       "Purchasing": 9.3,
       "Invoicing": 8.9
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.0,
+      "usability": 4.0,
+      "integration": 3.5,
+      "value": 3.5,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.4,
       "reviews": 559,
       "url": "https://www.g2.com/products/teampay/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Pre-approved purchasing with virtual cards: requests are approved and coded before money is spent. Useful for decentralized spend; since the Paystand acquisition, confirm the roadmap during evaluation."
     },
     {
      "name": "Zip",
@@ -292,15 +328,21 @@
       "Purchasing": 9.1,
       "Invoicing": 8.7
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.5,
+      "integration": 4.5,
+      "value": 3.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 139,
       "url": "https://www.g2.com/products/zip-2024-02-26/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "The leading intake and orchestration layer: one front door that routes requests to procurement, legal, IT and security. It works on top of your ERP and P2P tools rather than replacing them, so budget for both."
     },
     {
      "name": "Payhawk",
@@ -322,15 +364,21 @@
       "Some ERP integration issues"
      ],
      "scores": {},
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.5,
       "reviews": 927,
       "url": "https://www.g2.com/products/payhawk/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Cards, bills and purchasing for multi-entity companies, with strength in European tax and currency handling. A good fit for mid-market groups operating across the EU and U.S."
     },
     {
      "name": "Basware",
@@ -355,15 +403,21 @@
       "Purchasing": 8.5,
       "Invoicing": 8.2
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 3.0,
+      "integration": 4.0,
+      "value": 3.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.1,
       "reviews": 134,
       "url": "https://www.g2.com/products/basware-basware/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Built for high invoice volumes and e-invoicing compliance across countries. The interface draws complaints, but few vendors match its coverage of mandated e-invoicing formats."
     },
     {
      "name": "Coupa",
@@ -385,15 +439,21 @@
       "Complex for some users"
      ],
      "scores": {},
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.5,
+      "usability": 3.5,
+      "integration": 4.0,
+      "value": 3.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.2,
       "reviews": 556,
       "url": "https://www.g2.com/products/coupa-software-coupa/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "A full spend management platform that works best when you use several modules together. It suits large companies standardizing procurement, AP and payments on one system; smaller teams may pay for breadth they won't use."
     },
     {
      "name": "Ivalua",
@@ -415,44 +475,45 @@
       "Performance lag in some environments"
      ],
      "scores": {},
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.5,
+      "usability": 3.0,
+      "integration": 4.0,
+      "value": 3.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.3,
       "reviews": 100,
       "url": "https://www.g2.com/products/ivalua/reviews",
       "checked": "2026-10-13"
-     }
-    },
-    {
-     "name": "JAGGAER",
-     "seller": "JAGGAER",
-     "founded": 1995,
-     "hq": "Morrisville, North Carolina",
-     "mix": {
-      "large": 57,
-      "mid": 30
      },
-     "bestFor": "Enterprises with direct and indirect spend, including higher education and manufacturing",
-     "what": "An enterprise source-to-pay suite covering sourcing, contracts, supplier management, purchasing and invoicing for direct and indirect spend.",
-     "likes": [
-      "Complete source-to-pay coverage"
-     ],
-     "flags": [
-      "G2's summary highlights reviewer complaints about transaction delays and slow updates"
-     ],
-     "scores": {},
-     "affiliated": true,
-     "note": "G2's AI summary for this product currently lists only complaints; individual reviews are mixed.",
-     "team": null,
-     "g2": {
-      "rating": 4.1,
-      "reviews": 85,
-      "url": "https://www.g2.com/products/jaggaer/reviews",
-      "checked": "2026-10-13"
-     }
+     "take": "The most configurable of the large suites, with a reputation for handling direct materials and unusual approval logic. That flexibility needs a capable internal admin team, and its review base skews heavily to large enterprises."
     }
+   ],
+   "market": "P2P is splitting into two markets. Enterprise suites (SAP Ariba, Coupa, Ivalua) sell breadth across sourcing, contracts and payments, with long implementations. Finance-led platforms (Ramp, Precoro, Procurify, Stampli) win on speed and usability and are moving up-market. Intake tools like Zip increasingly sit in front of both.",
+   "trends": [
+    "AI invoice coding and exception handling are now table stakes; differentiation is in how well tools handle the exceptions AI can't.",
+    "Card and bill-pay platforms are adding purchase orders and approvals, blurring the line between spend management and procurement.",
+    "Buyers increasingly separate intake from execution: one front door for requests, with P2P behind it."
+   ],
+   "scenarios": [
+    [
+     "Enterprise on SAP",
+     "SAP Ariba",
+     "Tightest SAP integration and the largest supplier network."
+    ],
+    [
+     "Mid-market, live in weeks",
+     "Precoro",
+     "POs, matching and budgets with strong value and support."
+    ],
+    [
+     "Finance-led spend control",
+     "Ramp",
+     "Cards, bill pay and purchasing in one highly rated platform."
+    ]
    ]
   },
   {
@@ -522,15 +583,21 @@
       "Accounting": 8.6,
       "Analysis": 7.7
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 4.5,
+      "integration": 4.0,
+      "value": 4.5,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.4,
       "reviews": 1785,
       "url": "https://www.g2.com/products/bill-ap-ar/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "The standard for small-business AP and AR, especially for companies working with outside accountants. Simple and well integrated with QuickBooks, Xero and NetSuite; larger teams may need stronger approval and PO controls."
     },
     {
      "name": "Stampli",
@@ -555,15 +622,21 @@
       "Accounting": 9.0,
       "Analysis": 8.3
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 4.5,
+      "integration": 4.5,
+      "value": 4.0,
+      "support": 4.5
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 2057,
       "url": "https://www.g2.com/products/stampli/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "An AP-first tool that sits on top of your ERP rather than replacing it, which is why it rolls out quickly. Strong for invoice coding and approvals; procurement teams needing sourcing or contract features will need other tools alongside it."
     },
     {
      "name": "Ramp",
@@ -588,15 +661,21 @@
       "Accounting": 9.1,
       "Analysis": 8.4
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.5,
+      "usability": 5.0,
+      "integration": 4.0,
+      "value": 4.5,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.8,
       "reviews": 2528,
       "url": "https://www.g2.com/products/ramp-financial-ramp/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "The highest-rated finance platform in several of our categories, built around cards, bill pay and a growing procurement module. Best where spend runs through Ramp itself; complex multi-ERP enterprises should test depth before committing."
     },
     {
      "name": "Tipalti",
@@ -621,15 +700,21 @@
       "Accounting": 8.2,
       "Analysis": 7.5
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.5,
+      "usability": 4.0,
+      "integration": 4.0,
+      "value": 3.5,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.5,
       "reviews": 419,
       "url": "https://www.g2.com/products/tipalti/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Global payables automation for companies paying many suppliers across countries and entities, with tax form collection built in. Strongest when supplier onboarding and cross-border payments are the bottleneck."
     },
     {
      "name": "Brex",
@@ -654,15 +739,21 @@
       "Accounting": 10.0,
       "Analysis": 9.8
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 4.5,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.8,
       "reviews": 1622,
       "url": "https://www.g2.com/products/brex/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Corporate cards, bill pay and expenses with tight controls, aimed at startups and growth companies. Procurement depth is limited; it competes on payments and spend control more than sourcing."
     },
     {
      "name": "AvidXchange",
@@ -684,15 +775,21 @@
       "Payment delays reported by some users"
      ],
      "scores": {},
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 3.5,
+      "integration": 4.0,
+      "value": 3.5,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.4,
       "reviews": 354,
       "url": "https://www.g2.com/products/avidxchange/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Outsourced AP and payments with deep roots in real estate and construction. Good for teams that want to hand off payment execution; review fees and supplier experience carefully."
     },
     {
      "name": "Corpay Spend Management",
@@ -714,15 +811,21 @@
       "Vendor management requires multiple logins"
      ],
      "scores": {},
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 4.0,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.5
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 397,
       "url": "https://www.g2.com/products/corpay-spend-management/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Managed AP with payment execution and supplier enrollment handled for you. Highly rated for service; best for teams that value outsourcing over in-house control."
     },
     {
      "name": "Paymode (Bottomline)",
@@ -747,15 +850,21 @@
       "Accounting": 8.8,
       "Analysis": 8.6
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 3.5,
+      "integration": 3.0,
+      "value": 4.5,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.1,
       "reviews": 359,
       "url": "https://www.g2.com/products/paymode/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "A bank-partnered payment network for moving suppliers from checks to ACH. Low cost for payers, but suppliers sometimes push back on network enrollment, so check acceptance in your supplier base."
     },
     {
      "name": "Payhawk",
@@ -780,15 +889,21 @@
       "Accounting": 8.8,
       "Analysis": 8.0
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.5,
       "reviews": 928,
       "url": "https://www.g2.com/products/payhawk/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Cards, bills and purchasing for multi-entity companies, with strength in European tax and currency handling. A good fit for mid-market groups operating across the EU and U.S."
     },
     {
      "name": "Rippling Finance",
@@ -813,15 +928,21 @@
       "Accounting": 8.8,
       "Analysis": 9.3
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.5,
+      "integration": 4.0,
+      "value": 4.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.7,
       "reviews": 1808,
       "url": "https://www.g2.com/products/rippling-finance/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Spend controls tied to employee data in Rippling HR. A natural add-on if you already run Rippling; less compelling as a standalone procurement tool."
     },
     {
      "name": "Quadient Accounts Payable",
@@ -846,15 +967,21 @@
       "Accounting": 8.6,
       "Analysis": 7.9
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.0,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.4,
       "reviews": 274,
       "url": "https://www.g2.com/products/quadient-accounts-payable/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "A practical step from paper invoices to digital capture and approvals for mid-size AP teams. Solid core features without the complexity of enterprise suites."
     },
     {
      "name": "Yooz",
@@ -879,15 +1006,21 @@
       "Accounting": 8.5,
       "Analysis": 8.3
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.0,
+      "integration": 4.0,
+      "value": 4.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.4,
       "reviews": 422,
       "url": "https://www.g2.com/products/yooz/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Invoice capture and matching that connects to many ERPs, with built-in fraud checks. Good for AP teams with mixed invoice formats and multiple systems."
     },
     {
      "name": "Basware",
@@ -912,15 +1045,21 @@
       "Accounting": 8.2,
       "Analysis": 7.4
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 3.0,
+      "integration": 4.0,
+      "value": 3.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.1,
       "reviews": 134,
       "url": "https://www.g2.com/products/basware-basware/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Built for high invoice volumes and e-invoicing compliance across countries. The interface draws complaints, but few vendors match its coverage of mandated e-invoicing formats."
     },
     {
      "name": "ApprovalMax",
@@ -945,15 +1084,21 @@
       "Accounting": 9.6,
       "Analysis": 7.3
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.0,
+      "usability": 4.5,
+      "integration": 4.0,
+      "value": 4.5,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 98,
       "url": "https://www.g2.com/products/approvalmax/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Enforceable multi-step approvals for small finance teams on Xero, QuickBooks Online or NetSuite. Narrow but very effective at what it does."
     },
     {
      "name": "WEX Business Payments",
@@ -975,16 +1120,45 @@
       "Too many clicks for simple tasks"
      ],
      "scores": {},
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.0,
+      "usability": 3.5,
+      "integration": 3.0,
+      "value": 4.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.3,
       "reviews": 33,
       "url": "https://www.g2.com/products/wex-business-payments/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Virtual card payments aimed at replacing checks and earning rebates. Limited review volume, so validate supplier acceptance before committing."
     }
+   ],
+   "market": "Payment software ranges from small-business bill pay (BILL, ApprovalMax) to global payables (Tipalti) and outsourced AP (Corpay, AvidXchange). For procurement, the key questions are supplier experience, payment fraud controls and whether rebates or network fees change the real cost.",
+   "trends": [
+    "Virtual card adoption is rising because payers earn rebates, but supplier acceptance fees can come back in price.",
+    "Payment fraud, including fake supplier bank-detail changes, is pushing vendors to add verification and anomaly checks.",
+    "Global payables tools are adding tax form collection and supplier onboarding, overlapping with procurement."
+   ],
+   "scenarios": [
+    [
+     "Small business with an accountant",
+     "BILL AP/AR",
+     "Simple AP with deep accounting integrations."
+    ],
+    [
+     "Many suppliers across countries",
+     "Tipalti",
+     "Global payments with tax and onboarding built in."
+    ],
+    [
+     "Outsource payment execution",
+     "Corpay Spend Management",
+     "Managed AP with strong service ratings."
+    ]
    ]
   },
   {
@@ -1048,15 +1222,21 @@
       "Limited admin controls"
      ],
      "scores": {},
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.5,
+      "usability": 4.5,
+      "integration": 4.5,
+      "value": 3.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 139,
       "url": "https://www.g2.com/products/zip-2024-02-26/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "The leading intake and orchestration layer: one front door that routes requests to procurement, legal, IT and security. It works on top of your ERP and P2P tools rather than replacing them, so budget for both."
     },
     {
      "name": "Omnea",
@@ -1078,15 +1258,21 @@
       "Some missing workflow features"
      ],
      "scores": {},
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 4.5,
+      "integration": 4.0,
+      "value": 3.5,
+      "support": 4.5
+     },
      "g2": {
       "rating": 4.7,
       "reviews": 70,
       "url": "https://www.g2.com/products/omnea-omnea/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "A newer intake-to-onboarding platform that bundles third-party risk into the request flow. Promising for enterprises with complex supplier onboarding; still a smaller review base than Zip."
     },
     {
      "name": "Vertice",
@@ -1099,15 +1285,21 @@
      "likes": [],
      "flags": [],
      "scores": {},
-     "affiliated": false,
      "note": "G2 ranks Vertice first in its procurement orchestration subcategory.",
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.5
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 262,
       "url": "https://www.g2.com/products/vertice/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Purpose-built for buying and renewing SaaS, with benchmark pricing data and negotiation support. Not a general procurement suite, but strong in its niche."
     },
     {
      "name": "Coupa",
@@ -1129,15 +1321,21 @@
       "Inconsistent documentation"
      ],
      "scores": {},
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.5,
+      "usability": 3.5,
+      "integration": 4.0,
+      "value": 3.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.2,
       "reviews": 556,
       "url": "https://www.g2.com/products/coupa-software-coupa/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "A full spend management platform that works best when you use several modules together. It suits large companies standardizing procurement, AP and payments on one system; smaller teams may pay for breadth they won't use."
     },
     {
      "name": "SAP Ariba",
@@ -1159,15 +1357,21 @@
       "Complex interface"
      ],
      "scores": {},
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.5,
+      "usability": 2.5,
+      "integration": 4.5,
+      "value": 2.5,
+      "support": 3.0
+     },
      "g2": {
       "rating": 4.1,
       "reviews": 749,
       "url": "https://www.g2.com/products/sap-ariba/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "The default shortlist entry for SAP ERP shops, and the broadest supplier network in the market. The trade-off is effort: reviewers consistently describe a steep learning curve, and value depends on a strong implementation partner and a plan for supplier enablement."
     },
     {
      "name": "Ivalua",
@@ -1189,43 +1393,21 @@
       "Performance lag"
      ],
      "scores": {},
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.5,
+      "usability": 3.0,
+      "integration": 4.0,
+      "value": 3.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.3,
       "reviews": 100,
       "url": "https://www.g2.com/products/ivalua/reviews",
       "checked": "2026-10-13"
-     }
-    },
-    {
-     "name": "JAGGAER",
-     "seller": "JAGGAER",
-     "founded": 1995,
-     "hq": "Morrisville, North Carolina",
-     "mix": {
-      "large": 57,
-      "mid": 30
      },
-     "bestFor": "Enterprises with direct and indirect spend, including higher education",
-     "what": "An enterprise source-to-pay suite for direct and indirect procurement.",
-     "likes": [
-      "Complete source-to-pay coverage"
-     ],
-     "flags": [
-      "G2's summary highlights complaints about transaction delays"
-     ],
-     "scores": {},
-     "affiliated": true,
-     "note": null,
-     "team": null,
-     "g2": {
-      "rating": 4.1,
-      "reviews": 85,
-      "url": "https://www.g2.com/products/jaggaer/reviews",
-      "checked": "2026-10-13"
-     }
+     "take": "The most configurable of the large suites, with a reputation for handling direct materials and unusual approval logic. That flexibility needs a capable internal admin team, and its review base skews heavily to large enterprises."
     },
     {
      "name": "Procurify",
@@ -1247,15 +1429,21 @@
       "No inventory module"
      ],
      "scores": {},
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 405,
       "url": "https://www.g2.com/products/procurify/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "A purchasing-control tool for mid-market teams that want requests, approvals and budgets live in weeks. It covers the core purchase-order workflow well; sourcing and supplier risk are light."
     },
     {
      "name": "Precoro",
@@ -1277,15 +1465,21 @@
       "Learning curve"
      ],
      "scores": {},
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 4.5,
+      "support": 4.5
+     },
      "g2": {
       "rating": 4.7,
       "reviews": 219,
       "url": "https://www.g2.com/products/precoro/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "A strong value pick for growing companies that want POs, three-way matching and budgets in one tool. It stays deliberately simple, so very large or highly regulated organizations may outgrow it."
     },
     {
      "name": "Tropic",
@@ -1307,15 +1501,21 @@
       "Limited filters and contract features"
      ],
      "scores": {},
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.5
+     },
      "g2": {
       "rating": 4.5,
       "reviews": 137,
       "url": "https://www.g2.com/products/tropic-tropic/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "SaaS and AI software procurement with renewal management and negotiation services. Compelling where software is your fastest-growing category; not built for direct or indirect goods."
     },
     {
      "name": "ServiceNow Source-to-Pay Operations",
@@ -1337,15 +1537,21 @@
       "Customization requires expertise"
      ],
      "scores": {},
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 3.5,
+      "integration": 4.0,
+      "value": 3.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.2,
       "reviews": 82,
       "url": "https://www.g2.com/products/servicenow-source-to-pay-operations/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Procurement workflows on the ServiceNow platform. Makes the most sense if IT and HR service workflows already run there; otherwise integration effort can outweigh the benefit."
     },
     {
      "name": "Teampay (by Paystand)",
@@ -1367,15 +1573,21 @@
       "Card acceptance limits"
      ],
      "scores": {},
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.0,
+      "usability": 4.0,
+      "integration": 3.5,
+      "value": 3.5,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.4,
       "reviews": 561,
       "url": "https://www.g2.com/products/teampay/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Pre-approved purchasing with virtual cards: requests are approved and coded before money is spent. Useful for decentralized spend; since the Paystand acquisition, confirm the roadmap during evaluation."
     },
     {
      "name": "Workday Strategic Sourcing",
@@ -1397,16 +1609,45 @@
       "Limited reporting"
      ],
      "scores": {},
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.0,
+      "integration": 4.0,
+      "value": 3.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.5,
       "reviews": 35,
       "url": "https://www.g2.com/products/workday-strategic-sourcing/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Formerly Scout RFP, now part of Workday: easy-to-run sourcing events and contracts for Workday customers. Review volume is small, so ask for references in your industry."
     }
+   ],
+   "market": "General procurement software now spans three layers: intake and orchestration (Zip, Omnea), full suites (Coupa, SAP Ariba, Ivalua) and specialist tools for SaaS buying (Vertice, Tropic). Most large companies end up with more than one layer, so integration matters more than feature lists.",
+   "trends": [
+    "Intake orchestration is the fastest-growing segment as companies try to get requests routed through procurement before spend happens.",
+    "SaaS and AI software is now a category of its own, with tools built to manage renewals and usage.",
+    "Third-party risk is moving into intake, so security and compliance reviews start with the request."
+   ],
+   "scenarios": [
+    [
+     "One front door for all requests",
+     "Zip",
+     "Leading intake layer across procurement, legal, IT and security."
+    ],
+    [
+     "Full suite for a large enterprise",
+     "Coupa",
+     "Broad platform covering requests, AP, suppliers and payments."
+    ],
+    [
+     "Controlling SaaS spend",
+     "Vertice",
+     "Benchmarks and negotiation support for software purchases."
+    ]
    ]
   },
   {
@@ -1478,15 +1719,21 @@
       "Centralized data": 8.7,
       "KPIs": 8.3
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.5,
+      "usability": 4.0,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.8,
       "reviews": 228,
       "url": "https://www.g2.com/products/descartes-denied-party-screening/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Sanctions and denied-party screening built for importers and exporters. The top-rated tool in our compliance ranking and a core control for trade compliance."
     },
     {
      "name": "osapiens",
@@ -1512,15 +1759,21 @@
       "Centralized data": 8.5,
       "KPIs": 7.6
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 3.5,
+      "integration": 3.5,
+      "value": 3.5,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.4,
       "reviews": 251,
       "url": "https://www.g2.com/products/osapiens/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Supply chain due diligence for EU rules, including deforestation and German supply chain law. Most relevant to companies selling into or sourcing for the EU."
     },
     {
      "name": "EcoVadis",
@@ -1531,7 +1784,7 @@
       "mid": 32,
       "small": 29
      },
-     "bestFor": "Buyers that need standardized sustainability ratings for suppliers",
+     "bestFor": "Teams that need standardized sustainability ratings for suppliers",
      "what": "Sustainability ratings and scorecards for suppliers across environment, labor, ethics and sustainable procurement, shared across customers.",
      "likes": [
       "Clear sustainability benchmarks",
@@ -1545,15 +1798,21 @@
       "Oversight": 7.7,
       "Centralized data": 8.3
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.0,
+      "integration": 3.0,
+      "value": 3.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.2,
       "reviews": 93,
       "url": "https://www.g2.com/products/ecovadis/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "The most widely recognized supplier sustainability rating. Useful for benchmarking and customer reporting; suppliers pay for assessments, which can slow participation."
     },
     {
      "name": "Vanta",
@@ -1579,15 +1838,21 @@
       "Centralized data": 8.7,
       "KPIs": 8.1
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.5,
+      "integration": 4.0,
+      "value": 3.5,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 2713,
       "url": "https://www.g2.com/products/vanta/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Security compliance automation that also handles vendor security reviews. Best for companies running their own SOC 2 or ISO program that want vendor risk in the same place."
     },
     {
      "name": "Secureframe",
@@ -1613,15 +1878,21 @@
       "Centralized data": 9.0,
       "KPIs": 8.7
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.0,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.5
+     },
      "g2": {
       "rating": 4.7,
       "reviews": 831,
       "url": "https://www.g2.com/products/secureframe/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Compliance automation with vendor questionnaires for small teams. A practical start for security-led vendor reviews, light on procurement workflow."
     },
     {
      "name": "Optro (formerly AuditBoard)",
@@ -1647,15 +1918,21 @@
       "Centralized data": 8.8,
       "KPIs": 8.4
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 4.0,
+      "integration": 3.5,
+      "value": 3.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 1614,
       "url": "https://www.g2.com/products/optro/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Audit, risk and compliance in one platform, including third-party risk. Suits enterprises connecting procurement risk to internal audit."
     },
     {
      "name": "IBM OpenPages",
@@ -1681,15 +1958,21 @@
       "Centralized data": 9.3,
       "KPIs": 9.8
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 2.5,
+      "integration": 3.5,
+      "value": 2.5,
+      "support": 3.0
+     },
      "g2": {
       "rating": 4.2,
       "reviews": 66,
       "url": "https://www.g2.com/products/ibm-openpages/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Enterprise governance, risk and compliance for large regulated organizations. Powerful but heavy; expect a significant implementation."
     },
     {
      "name": "Formalize",
@@ -1707,16 +1990,45 @@
      "scores": {
       "Centralized data": 10.0
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.0,
+      "usability": 4.5,
+      "integration": 3.0,
+      "value": 4.0,
+      "support": 4.5
+     },
      "g2": {
       "rating": 4.8,
       "reviews": 44,
       "url": "https://www.g2.com/products/formalize/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Compliance management for European regulations such as NIS2, ISO 27001 and DORA. Small review base but strong ratings among European mid-size companies."
     }
+   ],
+   "market": "Supplier compliance tools cover very different risks: sanctions screening (Descartes), EU due diligence and deforestation rules (osapiens), sustainability ratings (EcoVadis) and security compliance (Vanta, Secureframe). Start from the regulation or audit you must satisfy, not the vendor list.",
+   "trends": [
+    "EU due diligence and deforestation rules are driving demand for supply chain mapping beyond tier 1.",
+    "Forced-labor enforcement and tariff evasion scrutiny are making country-of-origin and denied-party checks routine.",
+    "Security compliance platforms are absorbing vendor security reviews, pulling them closer to procurement."
+   ],
+   "scenarios": [
+    [
+     "Sanctions and denied-party screening",
+     "Descartes Denied Party Screening",
+     "The highest-rated screening tool for trade compliance."
+    ],
+    [
+     "EU supply chain due diligence",
+     "osapiens",
+     "Built for German and EU due diligence rules."
+    ],
+    [
+     "Vendor security reviews",
+     "Vanta",
+     "Vendor risk alongside your own security program."
+    ]
    ]
   },
   {
@@ -1790,15 +2102,21 @@
       "Contract database": 8.7,
       "Contract creation": 8.7
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 3.5,
+      "integration": 4.0,
+      "value": 3.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.3,
       "reviews": 493,
       "url": "https://www.g2.com/products/docusign-clm/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Contract workflows built around Docusign e-signature. A natural choice if Docusign is already standard; reviewers note configuration takes effort."
     },
     {
      "name": "Conga CLM",
@@ -1825,15 +2143,21 @@
       "Contract database": 8.9,
       "Contract creation": 9.1
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 3.0,
+      "integration": 4.5,
+      "value": 3.0,
+      "support": 3.0
+     },
      "g2": {
       "rating": 4.3,
       "reviews": 597,
       "url": "https://www.g2.com/products/conga-conga-clm/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Strong for Salesforce-centric organizations managing both buy-side and sell-side contracts. Procurement teams outside Salesforce should check fit carefully."
     },
     {
      "name": "Ironclad",
@@ -1860,15 +2184,21 @@
       "Contract database": 8.2,
       "Contract creation": 9.1
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.5,
+      "usability": 4.0,
+      "integration": 4.0,
+      "value": 3.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.4,
       "reviews": 319,
       "url": "https://www.g2.com/products/ironclad/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "A leading configurable CLM with clear workflow and approval visibility. Well suited to legal and procurement teams that collaborate heavily on supplier contracts."
     },
     {
      "name": "LinkSquares",
@@ -1895,15 +2225,21 @@
       "Contract database": 9.3,
       "Contract creation": 8.9
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 3.5,
+      "support": 4.5
+     },
      "g2": {
       "rating": 4.7,
       "reviews": 437,
       "url": "https://www.g2.com/products/linksquares/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Excellent repository search and post-signature analysis. Strong for legal teams; procurement teams should confirm intake and approval workflows fit their process."
     },
     {
      "name": "Sirion CLM",
@@ -1930,15 +2266,21 @@
       "Contract database": 9.4,
       "Contract creation": 9.7
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.5,
+      "usability": 3.0,
+      "integration": 4.0,
+      "value": 3.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.5,
       "reviews": 60,
       "url": "https://www.g2.com/products/sirion-clm/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Enterprise CLM with strength in obligation and supplier performance management after signature. Best for large, complex supplier contract portfolios."
     },
     {
      "name": "Juro",
@@ -1965,15 +2307,21 @@
       "Contract database": 8.8,
       "Contract creation": 9.0
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.5
+     },
      "g2": {
       "rating": 4.5,
       "reviews": 244,
       "url": "https://www.g2.com/products/juro/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Browser-native contracting where business teams self-serve on templates. Quick to adopt for mid-size companies; less suited to heavy negotiated supplier agreements."
     },
     {
      "name": "Summize",
@@ -2000,15 +2348,21 @@
       "Contract database": 9.5,
       "Contract creation": 9.0
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.5,
+      "integration": 4.0,
+      "value": 4.0,
+      "support": 4.5
+     },
      "g2": {
       "rating": 4.7,
       "reviews": 114,
       "url": "https://www.g2.com/products/summize/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Contract review and requests inside Outlook, Teams, Slack and Word. Adoption is its strength because people don't have to learn a new tool."
     },
     {
      "name": "SpotDraft",
@@ -2035,15 +2389,21 @@
       "Contract database": 8.6,
       "Contract creation": 8.4
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.5,
       "reviews": 188,
       "url": "https://www.g2.com/products/spotdraft/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Structured contracting for mid-market teams without a heavy enterprise rollout. Good balance of control and simplicity."
     },
     {
      "name": "Lexion (Docusign)",
@@ -2070,15 +2430,21 @@
       "Contract database": 9.2,
       "Contract creation": 8.5
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 135,
       "url": "https://www.g2.com/products/lexion/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Email-driven contract intake and AI term extraction, now part of Docusign. Useful for operations teams; check roadmap alignment with Docusign CLM."
     },
     {
      "name": "LawVu",
@@ -2105,15 +2471,21 @@
       "Contract database": 8.5,
       "Contract creation": 8.5
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.0,
+      "integration": 3.5,
+      "value": 3.5,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.5,
       "reviews": 105,
       "url": "https://www.g2.com/products/lawvu/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Matters, contracts and legal spend in one system for in-house legal. More legal-ops than procurement-led."
     },
     {
      "name": "Salesforce Revenue Cloud",
@@ -2140,15 +2512,21 @@
       "Contract database": 8.0,
       "Contract creation": 8.3
      },
-     "affiliated": false,
      "note": "Sell-side focus.",
-     "team": null,
+     "team": {
+      "coverage": 2.0,
+      "usability": 3.0,
+      "integration": 4.5,
+      "value": 3.0,
+      "support": 3.0
+     },
      "g2": {
       "rating": 4.2,
       "reviews": 1565,
       "url": "https://www.g2.com/products/agentforce-revenue-management-formerly-salesforce-revenue-cloud/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Sell-side quoting and contracting on Salesforce. Listed because G2 includes it; not a procurement-first CLM."
     },
     {
      "name": "DealHub AI",
@@ -2175,15 +2553,21 @@
       "Contract database": 9.5,
       "Contract creation": 9.4
      },
-     "affiliated": false,
      "note": "Sell-side focus.",
-     "team": null,
+     "team": {
+      "coverage": 2.0,
+      "usability": 4.0,
+      "integration": 4.0,
+      "value": 3.5,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.7,
       "reviews": 852,
       "url": "https://www.g2.com/products/dealhub-ai/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Quoting and contracts for sales teams. Listed for completeness; procurement teams should look elsewhere."
     },
     {
      "name": "Legistify",
@@ -2210,15 +2594,21 @@
       "Contract database": 10.0,
       "Contract creation": 10.0
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.0,
+      "usability": 4.0,
+      "integration": 3.0,
+      "value": 4.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 5.0,
       "reviews": 296,
       "url": "https://www.g2.com/products/legistify-legistify/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Contracts, litigation and notices for legal teams in India. A regional specialist with very high ratings on a moderate review base."
     },
     {
      "name": "SAP Ariba",
@@ -2243,15 +2633,21 @@
       "Contract database": 8.6,
       "Contract creation": 8.7
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 2.5,
+      "integration": 4.5,
+      "value": 2.5,
+      "support": 3.0
+     },
      "g2": {
       "rating": 4.1,
       "reviews": 749,
       "url": "https://www.g2.com/products/sap-ariba/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "The default shortlist entry for SAP ERP shops, and the broadest supplier network in the market. The trade-off is effort: reviewers consistently describe a steep learning curve, and value depends on a strong implementation partner and a plan for supplier enablement."
     },
     {
      "name": "Workday Strategic Sourcing",
@@ -2276,16 +2672,45 @@
       "Contract database": 9.7,
       "Contract creation": 10.0
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.0,
+      "integration": 4.0,
+      "value": 3.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.5,
       "reviews": 35,
       "url": "https://www.g2.com/products/workday-strategic-sourcing/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Formerly Scout RFP, now part of Workday: easy-to-run sourcing events and contracts for Workday customers. Review volume is small, so ask for references in your industry."
     }
+   ],
+   "market": "CLM vendors either start from legal (Ironclad, LinkSquares, LawVu), from e-signature (Docusign), from sales (Conga, Salesforce, DealHub) or from procurement suites (SAP Ariba, Workday). Procurement teams should favor tools that handle supplier paper, obligation tracking and renewals well.",
+   "trends": [
+    "AI term extraction makes legacy contract repositories searchable, which is often the first measurable win.",
+    "Post-signature obligation and price-escalator tracking is becoming a procurement priority as cost pressures rise.",
+    "Contracting inside email, Word and chat tools is improving adoption by business users."
+   ],
+   "scenarios": [
+    [
+     "Procurement and legal collaborating",
+     "Ironclad",
+     "Configurable workflows with clear approval visibility."
+    ],
+    [
+     "Large supplier contract portfolios",
+     "Sirion CLM",
+     "Strong obligation and supplier performance tracking."
+    ],
+    [
+     "Fast adoption by business users",
+     "Summize",
+     "Contract work inside the tools people already use."
+    ]
    ]
   },
   {
@@ -2361,15 +2786,21 @@
       "Controls": 9.4,
       "Overpayments": 8.2
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 5.0,
+      "integration": 4.0,
+      "value": 4.5,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.8,
       "reviews": 2528,
       "url": "https://www.g2.com/products/ramp-financial-ramp/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "The highest-rated finance platform in several of our categories, built around cards, bill pay and a growing procurement module. Best where spend runs through Ramp itself; complex multi-ERP enterprises should test depth before committing."
     },
     {
      "name": "Rippling Finance",
@@ -2394,15 +2825,21 @@
       "Controls": 9.1,
       "Overpayments": 8.9
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.5,
+      "integration": 4.0,
+      "value": 4.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.7,
       "reviews": 1799,
       "url": "https://www.g2.com/products/rippling-finance/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Spend controls tied to employee data in Rippling HR. A natural add-on if you already run Rippling; less compelling as a standalone procurement tool."
     },
     {
      "name": "Stampli",
@@ -2426,15 +2863,21 @@
       "Controls": 9.0,
       "Overpayments": 8.7
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.0,
+      "usability": 4.5,
+      "integration": 4.5,
+      "value": 4.0,
+      "support": 4.5
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 2054,
       "url": "https://www.g2.com/products/stampli/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "An AP-first tool that sits on top of your ERP rather than replacing it, which is why it rolls out quickly. Strong for invoice coding and approvals; procurement teams needing sourcing or contract features will need other tools alongside it."
     },
     {
      "name": "Corpay Spend Management",
@@ -2459,15 +2902,21 @@
       "Controls": 9.8,
       "Overpayments": 9.6
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.0,
+      "usability": 4.0,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.5
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 397,
       "url": "https://www.g2.com/products/corpay-spend-management/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Managed AP with payment execution and supplier enrollment handled for you. Highly rated for service; best for teams that value outsourcing over in-house control."
     },
     {
      "name": "Precoro",
@@ -2491,15 +2940,21 @@
       "Controls": 9.2,
       "Overpayments": 8.9
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 4.5,
+      "support": 4.5
+     },
      "g2": {
       "rating": 4.7,
       "reviews": 219,
       "url": "https://www.g2.com/products/precoro/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "A strong value pick for growing companies that want POs, three-way matching and budgets in one tool. It stays deliberately simple, so very large or highly regulated organizations may outgrow it."
     },
     {
      "name": "AvidXchange",
@@ -2522,15 +2977,21 @@
       "Compliance": 10.0,
       "Controls": 10.0
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.0,
+      "usability": 3.5,
+      "integration": 4.0,
+      "value": 3.5,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.4,
       "reviews": 354,
       "url": "https://www.g2.com/products/avidxchange/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Outsourced AP and payments with deep roots in real estate and construction. Good for teams that want to hand off payment execution; review fees and supplier experience carefully."
     },
     {
      "name": "Tipalti",
@@ -2554,15 +3015,21 @@
       "Controls": 8.1,
       "Overpayments": 7.3
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.0,
+      "integration": 4.0,
+      "value": 3.5,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.5,
       "reviews": 419,
       "url": "https://www.g2.com/products/tipalti/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Global payables automation for companies paying many suppliers across countries and entities, with tax form collection built in. Strongest when supplier onboarding and cross-border payments are the bottleneck."
     },
     {
      "name": "SAP Ariba",
@@ -2586,15 +3053,21 @@
       "Controls": 8.7,
       "Overpayments": 8.3
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 2.5,
+      "integration": 4.5,
+      "value": 2.5,
+      "support": 3.0
+     },
      "g2": {
       "rating": 4.1,
       "reviews": 749,
       "url": "https://www.g2.com/products/sap-ariba/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "The default shortlist entry for SAP ERP shops, and the broadest supplier network in the market. The trade-off is effort: reviewers consistently describe a steep learning curve, and value depends on a strong implementation partner and a plan for supplier enablement."
     },
     {
      "name": "Agicap",
@@ -2619,15 +3092,21 @@
       "Controls": 6.7,
       "Overpayments": 5.8
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 2.5,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.4,
       "reviews": 377,
       "url": "https://www.g2.com/products/agicap/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Cash flow forecasting and payables timing for finance teams. More treasury than procurement; useful context for payment-term strategy."
     },
     {
      "name": "DualEntry",
@@ -2653,15 +3132,21 @@
       "Controls": 9.4,
       "Overpayments": 9.4
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 2.5,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.9,
       "reviews": 123,
       "url": "https://www.g2.com/products/dualentry/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "An AI-driven general ledger and ERP with spend reporting. Listed because G2 places it here; evaluate as an ERP decision, not a procurement one."
     },
     {
      "name": "ApprovalMax",
@@ -2685,15 +3170,21 @@
       "Controls": 9.3,
       "Overpayments": 5.0
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 2.5,
+      "usability": 4.5,
+      "integration": 4.0,
+      "value": 4.5,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 98,
       "url": "https://www.g2.com/products/approvalmax/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Enforceable multi-step approvals for small finance teams on Xero, QuickBooks Online or NetSuite. Narrow but very effective at what it does."
     },
     {
      "name": "Zip",
@@ -2717,16 +3208,45 @@
       "Controls": 7.8,
       "Overpayments": 7.3
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.0,
+      "usability": 4.5,
+      "integration": 4.5,
+      "value": 3.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 139,
       "url": "https://www.g2.com/products/zip-2024-02-26/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "The leading intake and orchestration layer: one front door that routes requests to procurement, legal, IT and security. It works on top of your ERP and P2P tools rather than replacing them, so budget for both."
     }
+   ],
+   "market": "G2's spend analytics category is dominated by finance platforms that report on their own transactions. Dedicated procurement spend analytics vendors such as Sievo and SpendHQ, which classify spend across all ERPs, have too few public reviews to rank. Know which kind you need before you shortlist.",
+   "trends": [
+    "AI classification is improving, but supplier master data quality still limits results.",
+    "Finance platforms are adding procurement analytics, while dedicated tools add savings tracking and forecasting.",
+    "Tariff exposure analysis by country of origin is a new requirement for spend cubes."
+   ],
+   "scenarios": [
+    [
+     "Card and bill-pay spend",
+     "Ramp",
+     "Real-time visibility on spend that runs through the platform."
+    ],
+    [
+     "Purchasing-led analytics, mid-market",
+     "Precoro",
+     "Budgets and analytics from purchase order data."
+    ],
+    [
+     "SAP-centric enterprises",
+     "SAP Ariba",
+     "Procurement spend reporting inside the SAP suite."
+    ]
    ]
   },
   {
@@ -2801,15 +3321,21 @@
       "Oversight": 7.9,
       "Centralized data": 4.2
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.0,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.5,
       "reviews": 342,
       "url": "https://www.g2.com/products/creditsafe/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Supplier financial health and credit monitoring across many countries. A cost-effective way to add financial risk signals to supplier onboarding."
     },
     {
      "name": "UpGuard Vendor Risk",
@@ -2835,15 +3361,21 @@
       "Centralized data": 8.4,
       "KPIs": 8.1
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 3.5,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.5,
       "reviews": 759,
       "url": "https://www.g2.com/products/upguard-vendor-risk/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Continuous cyber risk monitoring for vendors with questionnaires built in. Strong for security-led third-party risk programs."
     },
     {
      "name": "Bitsight",
@@ -2869,15 +3401,21 @@
       "Centralized data": 7.5,
       "KPIs": 8.7
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 3.5,
+      "integration": 3.5,
+      "value": 3.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.5,
       "reviews": 76,
       "url": "https://www.g2.com/products/bitsight/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Security ratings for reporting vendor cyber risk to leadership and boards. Enterprise-focused, with a smaller review base."
     },
     {
      "name": "D&B Risk Analytics",
@@ -2903,15 +3441,21 @@
       "Centralized data": 8.2,
       "KPIs": 8.4
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 3.5,
+      "integration": 4.0,
+      "value": 3.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.4,
       "reviews": 68,
       "url": "https://www.g2.com/products/d-b-risk-analytics/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Supplier screening and monitoring on Dun & Bradstreet data, covering financial, compliance and ESG signals. Strong data breadth for procurement-led risk programs."
     },
     {
      "name": "Whistic",
@@ -2937,15 +3481,21 @@
       "Centralized data": 8.3,
       "KPIs": 7.6
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.0,
+      "usability": 4.0,
+      "integration": 3.5,
+      "value": 3.5,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 57,
       "url": "https://www.g2.com/products/whistic/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Vendor security assessments at scale, including a profile exchange that reduces repeated questionnaires. Security-team centric."
     },
     {
      "name": "Omnea",
@@ -2969,15 +3519,21 @@
       "Oversight": 8.9,
       "Centralized data": 8.3
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.5,
+      "integration": 4.0,
+      "value": 3.5,
+      "support": 4.5
+     },
      "g2": {
       "rating": 4.7,
       "reviews": 70,
       "url": "https://www.g2.com/products/omnea-omnea/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "A newer intake-to-onboarding platform that bundles third-party risk into the request flow. Promising for enterprises with complex supplier onboarding; still a smaller review base than Zip."
     },
     {
      "name": "osapiens",
@@ -3001,15 +3557,21 @@
       "Centralized data": 8.5,
       "KPIs": 7.6
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 3.5,
+      "integration": 3.5,
+      "value": 3.5,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.4,
       "reviews": 251,
       "url": "https://www.g2.com/products/osapiens/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Supply chain due diligence for EU rules, including deforestation and German supply chain law. Most relevant to companies selling into or sourcing for the EU."
     },
     {
      "name": "EcoVadis",
@@ -3033,15 +3595,21 @@
       "Oversight": 7.7,
       "Centralized data": 8.3
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.0,
+      "integration": 3.0,
+      "value": 3.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.2,
       "reviews": 93,
       "url": "https://www.g2.com/products/ecovadis/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "The most widely recognized supplier sustainability rating. Useful for benchmarking and customer reporting; suppliers pay for assessments, which can slow participation."
     },
     {
      "name": "SAP Ariba",
@@ -3065,16 +3633,45 @@
       "Centralized data": 8.3,
       "KPIs": 7.0
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 2.5,
+      "integration": 4.5,
+      "value": 2.5,
+      "support": 3.0
+     },
      "g2": {
       "rating": 4.1,
       "reviews": 749,
       "url": "https://www.g2.com/products/sap-ariba/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "The default shortlist entry for SAP ERP shops, and the broadest supplier network in the market. The trade-off is effort: reviewers consistently describe a steep learning curve, and value depends on a strong implementation partner and a plan for supplier enablement."
     }
+   ],
+   "market": "Supplier risk tools specialize by risk type: financial (Creditsafe, D&B), cyber (UpGuard, Bitsight, Whistic), sustainability and due diligence (EcoVadis, osapiens) and multi-tier disruption monitoring (Resilinc, Interos, Prewave, which lack enough public reviews to rank). Most programs combine two or three.",
+   "trends": [
+    "Disruption monitoring is moving from news alerts to sub-tier mapping and predicted impact on specific parts.",
+    "Freight fraud and identity theft are adding verification to carrier and supplier onboarding.",
+    "Procurement is embedding risk checks at intake so high-risk suppliers are flagged before contracts are signed."
+   ],
+   "scenarios": [
+    [
+     "Supplier financial health",
+     "Creditsafe",
+     "Cost-effective credit monitoring across many countries."
+    ],
+    [
+     "Vendor cyber risk",
+     "UpGuard Vendor Risk",
+     "Continuous monitoring with questionnaires built in."
+    ],
+    [
+     "Broad procurement-led screening",
+     "D&B Risk Analytics",
+     "Financial, compliance and ESG signals on D&B data."
+    ]
    ]
   },
   {
@@ -3146,15 +3743,21 @@
       "Catalog management": 8.4,
       "Negotiations": 8.2
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.5,
+      "usability": 2.5,
+      "integration": 4.5,
+      "value": 2.5,
+      "support": 3.0
+     },
      "g2": {
       "rating": 4.1,
       "reviews": 747,
       "url": "https://www.g2.com/products/sap-ariba/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "The default shortlist entry for SAP ERP shops, and the broadest supplier network in the market. The trade-off is effort: reviewers consistently describe a steep learning curve, and value depends on a strong implementation partner and a plan for supplier enablement."
     },
     {
      "name": "Ivalua",
@@ -3179,47 +3782,21 @@
       "Catalog management": 7.7,
       "Negotiations": 7.8
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.5,
+      "usability": 3.0,
+      "integration": 4.0,
+      "value": 3.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.3,
       "reviews": 100,
       "url": "https://www.g2.com/products/ivalua/reviews",
       "checked": "2026-10-13"
-     }
-    },
-    {
-     "name": "JAGGAER",
-     "seller": "JAGGAER",
-     "founded": 1995,
-     "hq": "Morrisville, North Carolina",
-     "mix": {
-      "large": 57,
-      "mid": 30
      },
-     "bestFor": "Enterprises sourcing complex direct and indirect categories",
-     "what": "Sourcing, auctions and supplier management in an enterprise source-to-pay suite.",
-     "likes": [
-      "Strong savings subscore on G2"
-     ],
-     "flags": [
-      "G2's summary highlights complaints about transaction delays"
-     ],
-     "scores": {
-      "Savings": 9.2,
-      "Catalog management": 6.7,
-      "Negotiations": 8.3
-     },
-     "affiliated": true,
-     "note": null,
-     "team": null,
-     "g2": {
-      "rating": 4.1,
-      "reviews": 85,
-      "url": "https://www.g2.com/products/jaggaer/reviews",
-      "checked": "2026-10-13"
-     }
+     "take": "The most configurable of the large suites, with a reputation for handling direct materials and unusual approval logic. That flexibility needs a capable internal admin team, and its review base skews heavily to large enterprises."
     },
     {
      "name": "Coupa",
@@ -3243,15 +3820,21 @@
       "Catalog management": 7.6,
       "Negotiations": 7.0
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 3.5,
+      "integration": 4.0,
+      "value": 3.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.2,
       "reviews": 556,
       "url": "https://www.g2.com/products/coupa-software-coupa/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "A full spend management platform that works best when you use several modules together. It suits large companies standardizing procurement, AP and payments on one system; smaller teams may pay for breadth they won't use."
     },
     {
      "name": "Tropic",
@@ -3277,15 +3860,21 @@
       "Catalog management": 7.8,
       "Negotiations": 9.9
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.0,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.5
+     },
      "g2": {
       "rating": 4.5,
       "reviews": 137,
       "url": "https://www.g2.com/products/tropic-tropic/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "SaaS and AI software procurement with renewal management and negotiation services. Compelling where software is your fastest-growing category; not built for direct or indirect goods."
     },
     {
      "name": "aPriori",
@@ -3311,15 +3900,21 @@
       "Catalog management": 7.7,
       "Negotiations": 8.0
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 3.0,
+      "integration": 3.5,
+      "value": 3.5,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.4,
       "reviews": 116,
       "url": "https://www.g2.com/products/apriori-manufacturing-intelligence-platform/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Should-cost modeling for manufactured parts. One of the few tools that helps direct-materials teams negotiate on cost structure rather than price alone."
     },
     {
      "name": "Procol",
@@ -3345,15 +3940,21 @@
       "Catalog management": 9.2,
       "Negotiations": 9.1
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.5,
+      "integration": 3.0,
+      "value": 4.5,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.8,
       "reviews": 52,
       "url": "https://www.g2.com/products/procol/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Simple e-sourcing to replace email and spreadsheet RFQs. A fast, affordable way to digitize sourcing events."
     },
     {
      "name": "ServiceNow Source-to-Pay Operations",
@@ -3377,15 +3978,21 @@
       "Catalog management": 8.3,
       "Negotiations": 6.7
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.0,
+      "usability": 3.5,
+      "integration": 4.0,
+      "value": 3.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.2,
       "reviews": 82,
       "url": "https://www.g2.com/products/servicenow-source-to-pay-operations/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Procurement workflows on the ServiceNow platform. Makes the most sense if IT and HR service workflows already run there; otherwise integration effort can outweigh the benefit."
     },
     {
      "name": "Zip",
@@ -3409,15 +4016,21 @@
       "Catalog management": 5.6,
       "Negotiations": 4.6
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 2.0,
+      "usability": 4.5,
+      "integration": 4.5,
+      "value": 3.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 138,
       "url": "https://www.g2.com/products/zip-2024-02-26/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "The leading intake and orchestration layer: one front door that routes requests to procurement, legal, IT and security. It works on top of your ERP and P2P tools rather than replacing them, so budget for both."
     },
     {
      "name": "Procurify",
@@ -3441,15 +4054,21 @@
       "Catalog management": 7.3,
       "Negotiations": 6.7
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 2.0,
+      "usability": 4.5,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.6,
       "reviews": 405,
       "url": "https://www.g2.com/products/procurify/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "A purchasing-control tool for mid-market teams that want requests, approvals and budgets live in weeks. It covers the core purchase-order workflow well; sourcing and supplier risk are light."
     },
     {
      "name": "Archlet",
@@ -3475,15 +4094,21 @@
       "Catalog management": 7.4,
       "Negotiations": 8.6
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 4.0,
+      "integration": 3.5,
+      "value": 3.5,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.7,
       "reviews": 48,
       "url": "https://www.g2.com/products/archlet/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Bid analysis and optimization for complex RFQs and auctions. Strong for large sourcing events with many lots and scenarios."
     },
     {
      "name": "Scanmarket (Unit4)",
@@ -3508,15 +4133,21 @@
       "Catalog management": 10.0,
       "Negotiations": 9.4
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 3.5,
+      "usability": 4.0,
+      "integration": 3.5,
+      "value": 4.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.2,
       "reviews": 26,
       "url": "https://www.g2.com/products/scanmarket/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Quick-to-deploy source-to-contract, now part of Unit4. A practical option for teams starting with e-sourcing."
     },
     {
      "name": "Field Materials",
@@ -3542,15 +4173,21 @@
       "Catalog management": 8.6,
       "Negotiations": 7.8
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 2.5,
+      "usability": 4.5,
+      "integration": 3.0,
+      "value": 4.0,
+      "support": 4.0
+     },
      "g2": {
       "rating": 4.7,
       "reviews": 38,
       "url": "https://www.g2.com/products/field-materials/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Materials and equipment purchasing for construction contractors. A vertical specialist rather than a general sourcing tool."
     },
     {
      "name": "Workday Strategic Sourcing",
@@ -3574,17 +4211,47 @@
       "Catalog management": 7.5,
       "Negotiations": 3.3
      },
-     "affiliated": false,
      "note": null,
-     "team": null,
+     "team": {
+      "coverage": 4.0,
+      "usability": 4.0,
+      "integration": 4.0,
+      "value": 3.0,
+      "support": 3.5
+     },
      "g2": {
       "rating": 4.5,
       "reviews": 35,
       "url": "https://www.g2.com/products/workday-strategic-sourcing/reviews",
       "checked": "2026-10-13"
-     }
+     },
+     "take": "Formerly Scout RFP, now part of Workday: easy-to-run sourcing events and contracts for Workday customers. Review volume is small, so ask for references in your industry."
     }
+   ],
+   "market": "Strategic sourcing spans e-sourcing events (Procol, Scanmarket), advanced bid analysis (Archlet), should-cost modeling (aPriori) and suite sourcing modules (SAP Ariba, Ivalua, Coupa, Workday). The biggest gap is usually bid analysis, not running the event.",
+   "trends": [
+    "Optimization and scenario analysis are moving from specialist consultants into software.",
+    "Should-cost models are gaining attention as tariffs and metals prices make price-only negotiation harder.",
+    "Fast, lightweight RFQ tools are replacing spreadsheets for tail and mid-value sourcing."
+   ],
+   "scenarios": [
+    [
+     "Complex RFQs and auctions",
+     "Archlet",
+     "Bid analysis and optimization across many lots."
+    ],
+    [
+     "Direct materials negotiation",
+     "aPriori",
+     "Should-cost models for manufactured parts."
+    ],
+    [
+     "Replace spreadsheet RFQs fast",
+     "Procol",
+     "Simple, affordable e-sourcing."
+    ]
    ]
   }
- ]
+ ],
+ "analysisUpdated": "2026-10-14"
 }
