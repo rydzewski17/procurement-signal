@@ -1,118 +1,121 @@
 ---
 import Base from '../layouts/Base.astro';
-import Card from '../components/Card.astro';
 import Media from '../components/Media.astro';
-import Trending from '../components/Trending.astro';
-import BrowseTopics from '../components/BrowseTopics.astro';
+import CategoryWatch from '../components/CategoryWatch.astro';
+import SignalMeter from '../components/SignalMeter.astro';
+import Kicker from '../components/Kicker.astro';
+import Rail from '../components/v4/Rail.astro';
+import Tile from '../components/v4/Tile.astro';
+import Line from '../components/v4/Line.astro';
 import { getPosts } from '../data/posts';
-import { SITE, TOPICS } from '../data/site';
-import { trackers } from '../data/trackers';
-import { getCollection } from 'astro:content';
-import Photo from '../components/Photo.astro';
-import { TOPIC_PHOTOS } from '../data/site';
-import wire from '../data/wire.json';
-const guides = await getCollection('guides');
-import StatusBadge from '../components/StatusBadge.astro';
-import { categories, fmtPct } from '../data/costs';
-const movers = [...categories].sort((a, b) => b.m3ann - a.m3ann).slice(0, 5);
+import { SITE } from '../data/site';
+import { SECTIONS } from '../data/categories.mjs';
+import { ourItems, wireItems, feedFor, shortDate } from '../data/feed';
 
 const posts = await getPosts();
-const cutoff = posts[0] ? posts[0].data.date.valueOf() - 3 * 864e5 : 0;
-const pool = posts.slice(0, 30).filter((p) => p.data.date.valueOf() >= cutoff);
-const lead = pool.find((p) => p.data.featured) ?? [...pool].sort((a, b) => b.data.signal - a.data.signal)[0];
-const rest = posts.filter((p) => p !== lead);
-const stack = rest.slice(0, 5);
-const analysis = posts.filter((p) => p.data.type !== 'news' && p !== lead).slice(0, 3);
-const more = rest.slice(5, 13);
-const byTopic = Object.keys(TOPICS)
-  .map((t) => ({ t, items: posts.filter((p) => p.data.topic === t && p !== lead).slice(0, 4) }))
-  .filter((g) => g.items.length);
+const DAY = 864e5;
+const newest = posts[0]?.data.date.valueOf() ?? 0;
+
+// Hero: the featured story, then the top five by signal and freshness.
+const lead = posts.find((p) => p.data.featured) ?? posts[0];
+const rank = (p: any) => p.data.signal * 2 - (newest - p.data.date.valueOf()) / DAY;
+const topStories = posts.filter((p) => p !== lead).sort((a, b) => rank(b) - rank(a)).slice(0, 5);
+const shown = new Set<string>([lead, ...topStories].filter(Boolean).map((p) => `/articles/${p.id}/`));
+
+// Latest news: our newer stories and the day's industry headlines, newest first.
+const latest = [...ourItems(posts).filter((x) => !shown.has(x.href)), ...wireItems()]
+  .sort((a, b) => b.t - a.t).slice(0, 10);
+latest.forEach((x) => shown.add(x.href));
+
+// Section blocks: a featured story plus four more per section, nothing repeated from above.
+const blocks = SECTIONS.map((s) => {
+  const items = feedFor(posts, s.slugs, shown).slice(0, 5);
+  items.forEach((x) => shown.add(x.href));
+  return { s, items };
+}).filter((b) => b.items.length);
+
 const leadWhy = lead?.body?.match(/## Why it matters\s+([\s\S]*?)(\n## |$)/)?.[1]?.trim().split('\n')[0]?.replace(/[*_]/g, '');
-const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 const jsonLd = { '@context': 'https://schema.org', '@type': 'NewsMediaOrganization', name: SITE.name, url: Astro.site?.toString() };
 ---
 <Base jsonLd={jsonLd} section="home">
   {!lead ? <p style="padding:40px 0">The first stories publish shortly.</p> : (
   <>
-    <Trending posts={posts} />
-    <div class="front">
-      <section class="lead" aria-label="Top story">
-        <a href={`/articles/${lead.id}/`} tabindex="-1" aria-hidden="true"><Media post={lead} ratio="wide" eager /></a>
-        <a class="topic" href={`/topics/${lead.data.topic}/`}>{TOPICS[lead.data.topic].name}</a>
-        <a href={`/articles/${lead.id}/`}><h2>{lead.data.title}</h2></a>
-        <p class="dek">{lead.data.dek}</p>
-        <div class="date">By {lead.data.author}, {fmt(lead.data.date)}</div>
-        {leadWhy && <div class="summary"><strong>Why it matters</strong>{leadWhy}</div>}
-      </section>
-      <section class="stack" aria-label="Latest stories">
-        <h2 class="block-head">Latest</h2>
-        {stack.map((p) => <Card post={p} size="thumb" />)}
-      </section>
-      <aside class="rail">
-        <div>
-          <h2>Cost Pressure Monitor</h2>
-          <table class="mini-monitor">
-            <tbody>{movers.map((c) => <tr><td><a href={`/cost-monitor/${c.id}/`}>{c.name}</a></td><td class="num">{fmtPct(c.y1)}</td><td class="num"><StatusBadge status={c.status} /></td></tr>)}</tbody>
-          </table>
-          <p class="meta" style="margin:0 0 6px">Biggest price pressure now. Change over 12 months.</p>
-          <a class="more" href="/cost-monitor/">All 12 categories</a>
-        </div>
-        <div style="margin-top:30px">
-          <h2>Trackers</h2>
-          <ul class="linklist">
-            {trackers.map((t) => <li><a href={`/trackers/${t.slug}/`}>{t.title}</a><span class="date">Updated {t.updated}</span></li>)}
-          </ul>
-        </div>
-        <div class="signup">
-          <h3>The morning briefing</h3>
-          <p>The procurement stories that matter, in your inbox every weekday. Launching soon; follow by RSS until then.</p>
-          <a class="button" href="/rss.xml">Get the RSS feed</a>
-        </div>
-        {more.length > 0 && (
-          <div>
-            <h2>More stories</h2>
-            <ul class="linklist">{more.map((p) => <li><a href={`/articles/${p.id}/`}>{p.data.title}</a></li>)}</ul>
+    <div class="home-grid">
+      <div class="home-main">
+        <section class="hero4" aria-label="Top stories">
+          <div class="hero4-lead">
+            <a href={`/articles/${lead.id}/`} tabindex="-1" aria-hidden="true"><Media post={lead} ratio="wide" eager /></a>
+            <div class="lead-meta"><Kicker topic={lead.data.topic} /><SignalMeter level={lead.data.signal} /></div>
+            <h2><a href={`/articles/${lead.id}/`}>{lead.data.title}</a></h2>
+            <p class="dek">{lead.data.dek}</p>
+            {leadWhy && <p class="why"><strong>Why it matters.</strong> {leadWhy}</p>}
+            <div class="byline-line">By {lead.data.author}, {fmt(lead.data.date)}</div>
           </div>
-        )}
-      </aside>
+          <div class="hero4-top">
+            <h2 class="h-rule">Top stories</h2>
+            <ol class="top5">
+              {topStories.map((p) => (
+                <li>
+                  <div>
+                    <Kicker topic={p.data.topic} />
+                    <a class="t5-title" href={`/articles/${p.id}/`}>{p.data.title}</a>
+                    <time>{fmt(p.data.date)}</time>
+                  </div>
+                  <a class="t5-thumb" href={`/articles/${p.id}/`} tabindex="-1" aria-hidden="true"><Media post={p} ratio="square" /></a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        <section class="latest4" aria-label="Latest news">
+          <h2 class="h-rule">The latest</h2>
+          <div class="latest-list">
+            {latest.map((x, i) => (
+              <>
+                {i === 5 && <div class="ad-slot ad-inline">Advertisement</div>}
+                {x.post ? (
+                  <article class="lrow">
+                    <div>
+                      <Kicker topic={x.post.data.topic} />
+                      <h3><a href={x.href}>{x.title}</a></h3>
+                      <p>{x.dek}</p>
+                      <span class="lmeta">Procurement Signal, {shortDate(x.t)}</span>
+                    </div>
+                    <a class="lthumb" href={x.href} tabindex="-1" aria-hidden="true"><Media post={x.post} ratio="card" /></a>
+                  </article>
+                ) : (
+                  <article class="lrow lrow-ext">
+                    <div>
+                      <h3><a href={x.href} target="_blank" rel="noopener">{x.title}</a></h3>
+                      <span class="lmeta">{x.source}, {shortDate(x.t)} <span aria-hidden="true">↗</span></span>
+                    </div>
+                  </article>
+                )}
+              </>
+            ))}
+          </div>
+          <a class="more-btn" href="/wire/">More stories</a>
+        </section>
+
+        <CategoryWatch posts={posts} />
+      </div>
+
+      <Rail posts={posts} exclude={shown} />
     </div>
 
-    {analysis.length > 0 && (
-      <section class="band" aria-label="Analysis and signal reports">
-        <div class="block-head">Analysis and signal reports</div>
-        <div class="feature-row">{analysis.map((p) => <Card post={p} size="feature" />)}</div>
-      </section>
-    )}
-
-    {wire.items.length > 0 && (
-      <section class="band" aria-label="Industry wire">
-        <div class="block-head"><span>Industry wire</span><a href="/wire/">All headlines</a></div>
-        <ul class="wire-list">{wire.items.slice(0, 8).map((w) => <li><a href={w.url} target="_blank" rel="noopener">{w.title}</a><span class="date">{w.source}</span></li>)}</ul>
-      </section>
-    )}
-
-    <section class="band" aria-label="Guides">
-      <div class="block-head"><span>Guides for procurement professionals</span><a href="/guides/">All guides</a></div>
-      <div class="feature-row">{guides.map((g) => (
-        <article class="feature">
-          <a href={`/guides/${g.id}/`} tabindex="-1" aria-hidden="true"><Photo photo={TOPIC_PHOTOS[g.data.topic]} ratio="card" /></a>
-          <a href={`/guides/${g.id}/`}><h3>{g.data.title}</h3></a>
-          <p>{g.data.description}</p>
-        </article>
-      ))}</div>
-    </section>
-
-    <div class="sections">
-      {byTopic.map(({ t, items }) => (
-        <section>
-          <div class="block-head"><a href={`/topics/${t}/`} class="block-title">{TOPICS[t].name}</a><a href={`/topics/${t}/`}>See all</a></div>
-          <Card post={items[0]} size="feature" showTopic={false} />
-          {items.slice(1).map((p) => <Card post={p} size="title" />)}
+    <section class="blocks" aria-label="News by section">
+      {blocks.map(({ s, items }) => (
+        <section class="block">
+          <div class="block-top"><h2><a href={`/sections/${s.id}/`}>{s.name}</a></h2><a class="view-all" href={`/sections/${s.id}/`}>View all</a></div>
+          <div class="block-body">
+            <Tile item={items[0]} size="md" showDek />
+            <ul class="lines">{items.slice(1).map((x) => <Line item={x} />)}</ul>
+          </div>
         </section>
       ))}
-    </div>
-
-    <BrowseTopics posts={posts} />
+    </section>
   </>
   )}
 </Base>

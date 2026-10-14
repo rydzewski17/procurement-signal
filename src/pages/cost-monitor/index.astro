@@ -12,16 +12,16 @@ const hottest = [...categories].sort((a, b) => b.m3ann - a.m3ann)[0];
 const coolest = [...categories].sort((a, b) => a.m3ann - b.m3ann)[0];
 const through = monthLabel(meta.dataThrough + '-01');
 const jsonLd = {
-  '@context': 'https://schema.org', '@type': 'Dataset', name: 'Procurement Signal Cost Pressure Monitor',
+  '@context': 'https://schema.org', '@type': 'Dataset', name: 'Procurement Signal Price trends by category',
   description: 'Monthly price-pressure readings for the categories procurement teams buy most, built from U.S. Producer Price Index data.',
   creator: { '@type': 'Organization', name: 'Procurement Signal' }, isBasedOn: 'https://fred.stlouisfed.org/', temporalCoverage: `2024-08/${meta.dataThrough}`,
 };
 ---
-<Base title="Cost Pressure Monitor: where input prices are heading" description="Which purchase categories are getting more expensive, how fast, and what buyers should do about it. Updated monthly from U.S. producer price data." section="cost-monitor" jsonLd={jsonLd}>
+<Base title="Price trends by category: where input prices are heading" description="Which purchase categories are getting more expensive, how fast, and what buyers should do about it. Updated monthly from U.S. producer price data." section="cost-monitor" jsonLd={jsonLd}>
   <div class="page">
     <div class="page-head monitor-head">
       <div class="crumbs">Data through {through}. Updated {meta.updated}.</div>
-      <h1>Cost Pressure Monitor</h1>
+      <h1>Price trends by category</h1>
       <p>Where the price of what you buy is heading, category by category, with a clear read on how to respond. Built from U.S. producer price data, updated every month.</p>
     </div>
 

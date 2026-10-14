@@ -1,0 +1,52 @@
+---
+// One signal as a briefing row: urgency on the left; topic, headline, why it matters
+// and the first action on the right. The full variant (Signals page) adds the dek and key figures.
+import SignalMeter from './SignalMeter.astro';
+import Kicker from './Kicker.astro';
+const { post, compact = false } = Astro.props;
+const d = post.data;
+const fmt = (x: Date) => x.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'America/New_York' });
+const why = post.body?.match(/## Why it matters\s+([\s\S]*?)(\n## |$)/)?.[1]?.trim().split('\n')[0]?.replace(/[*_]/g, '') ?? '';
+const act = (() => {
+  const m = post.body?.match(/## What buyers should do\s+([\s\S]*?)(\n## |$)/);
+  const first = m?.[1]?.split('\n').find((l) => /^\s*[-*]\s+/.test(l));
+  return first ? first.replace(/^\s*[-*]\s+/, '').replace(/[*_`]/g, '').trim() : '';
+})();
+const levelName = d.signal >= 5 ? 'critical' : d.signal >= 4 ? 'high' : 'watch';
+---
+<article class={`sig ${compact ? 'compact' : ''}`} data-level={levelName} data-topic={d.topic}>
+  <div class="sig-side">
+    <SignalMeter level={d.signal} size="lg" />
+    <time>{fmt(d.date)}</time>
+  </div>
+  <div class="sig-main">
+    <Kicker topic={d.topic} />
+    <h3><a href={`/articles/${post.id}/`}>{d.title}</a></h3>
+    {!compact && <p class="dek">{d.dek}</p>}
+    {!compact && d.keyfacts.length > 0 && (
+      <ul class="figs">{d.keyfacts.slice(0, 3).map((f) => <li><strong>{f.value}</strong> {f.label}</li>)}</ul>
+    )}
+    {why && <p class="why">{why}</p>}
+    {act && <p class="act"><span>What to do</span>{act}</p>}
+  </div>
+</article>
+
+<style>
+  .sig { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 22px; padding: 22px 0; border-top: 1px solid var(--rule); }
+  .sig-side { display: grid; gap: 8px; align-content: start; padding-top: 2px; }
+  .sig-side time { font-size: 13px; color: var(--muted); }
+  .sig h3 { font: 700 22px/1.25 var(--head); letter-spacing: -0.01em; margin: 6px 0 8px; }
+  .compact h3 { font-size: 20px; }
+  .sig h3 a { color: var(--ink); text-decoration: none; }
+  .sig h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .dek { font: 17px/1.5 var(--head); color: var(--ink-2); margin: 0 0 10px; }
+  .figs { list-style: none; margin: 0 0 10px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 14px; color: var(--ink-2); }
+  .figs strong { font: 700 17px/1 var(--head); color: var(--ink); margin-right: 4px; }
+  .why { font-size: 15px; line-height: 1.55; color: var(--ink-2); margin: 0 0 10px; max-width: 70ch; }
+  .act { font-size: 15px; line-height: 1.5; margin: 0; color: var(--ink); max-width: 70ch; }
+  .act span { display: block; font: 600 13px/1 var(--ui); color: var(--teal); margin-bottom: 4px; }
+  @media (max-width: 640px) {
+    .sig { grid-template-columns: 1fr; gap: 10px; }
+    .sig-side { grid-auto-flow: column; justify-content: start; gap: 14px; align-items: center; }
+  }
+</style>

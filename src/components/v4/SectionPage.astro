@@ -1,0 +1,54 @@
+---
+// Section and category pages (procurementmag.com/news layout): three large
+// stories, a grid of eleven more, a Most popular rail, then a clean More news list.
+import Base from '../../layouts/Base.astro';
+import Tile from './Tile.astro';
+import Rail from './Rail.astro';
+import { feedFor, shortDate, clip } from '../../data/feed';
+import { categoryBySlug } from '../../data/categories.mjs';
+
+interface Props { title: string; blurb: string; slugs: string[]; posts: any[]; crumb?: { href: string; label: string }; chips?: { href: string; label: string }[]; sectionKey?: string }
+const { title, blurb, slugs, posts, crumb, chips = [], sectionKey = 'categories' } = Astro.props;
+const items = feedFor(posts, slugs);
+const big = items.slice(0, 3);
+const grid = items.slice(3, 14);
+const more = items.slice(14, 40);
+---
+<Base title={`${title}: news and analysis`} description={blurb} section={sectionKey}>
+  <div class="sec-head">
+    <div class="crumbs"><a href="/">Home</a>{crumb && <> / <a href={crumb.href}>{crumb.label}</a></>} / {title}</div>
+    <h1>{title}</h1>
+    <p>{blurb}</p>
+    <slot name="head" />
+    {chips.length > 0 && <nav class="sec-chips" aria-label="Topics in this section">{chips.map((c) => <a href={c.href}>{c.label}</a>)}</nav>}
+  </div>
+
+  {items.length === 0 ? <p class="empty">No stories here yet this week. Check back after the morning update.</p> : (
+    <div class="home-grid">
+      <div class="home-main">
+        <div class="big3">
+          {big.map((x, i) => <Tile item={x} size={i === 0 ? 'lg' : 'md'} showDek={i === 0} />)}
+        </div>
+        {grid.length > 0 && <div class="grid11">{grid.map((x) => <Tile item={x} size="sm" />)}</div>}
+      </div>
+      <Rail posts={posts} show={['popular', 'software', 'events', 'ad']} />
+    </div>
+  )}
+
+  {more.length > 0 && (
+    <section class="more-news" aria-label="More news">
+      <h2 class="h-rule">More news</h2>
+      <ul>
+        {more.map((x) => (
+          <li>
+            <time>{shortDate(x.t)}</time>
+            <div>
+              <a href={x.href} target={x.ext ? '_blank' : undefined} rel={x.ext ? 'noopener' : undefined}>{clip(x.title, 140)}</a>
+              <span>{x.ext ? x.source : 'Procurement Signal'}{x.cats[0] && categoryBySlug[x.cats[0]] && <> in <a href={`/categories/${x.cats[0]}/`}>{categoryBySlug[x.cats[0]].name}</a></>}</span>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+</Base>

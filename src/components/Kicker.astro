@@ -1,0 +1,6 @@
+---
+// Topic label that is always a link and looks like one.
+import { TOPICS } from '../data/site';
+const { topic } = Astro.props;
+---
+<a class="kicker" href={`/topics/${topic}/`}>{TOPICS[topic]?.name ?? topic}</a>

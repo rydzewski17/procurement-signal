@@ -1,0 +1,66 @@
+---
+// Full-width homepage section fronts, one per reader-facing news group.
+// Each shows the newest headlines for that group (our stories first, then the trade press),
+// skipping anything already shown higher on the page.
+import wire from '../data/wire.json';
+import { NEWS_GROUPS, categoryBySlug, categorize } from '../data/categories.mjs';
+const { posts, exclude = [] } = Astro.props;
+const seen = new Set<string>(exclude);
+const clip = (t: string, n = 100) => (t.length > n ? t.slice(0, t.lastIndexOf(' ', n)) + '…' : t);
+const fmt = (t: number) => new Date(t).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'America/New_York' });
+const fronts = NEWS_GROUPS.map((g) => {
+  const inGroup = (cats: string[]) => cats.some((c) => g.slugs.includes(c));
+  const ours = posts.filter((p: any) => inGroup(categorize(`${p.data.title} ${p.data.dek}`)))
+    .map((p: any) => ({ title: p.data.title, href: `/articles/${p.id}/`, src: 'Procurement Signal analysis', t: p.data.date.valueOf(), ext: false, own: true }));
+  const theirs = wire.items.filter((i: any) => inGroup(i.categories ?? []))
+    .map((i: any) => ({ title: i.title, href: i.url, src: i.source.split(' · ')[0], t: new Date(i.date).valueOf(), ext: true, own: false }));
+  const items: any[] = [];
+  for (const x of [...ours, ...theirs.sort((a, b) => b.t - a.t)]) {
+    if (items.length >= 5) break;
+    if (seen.has(x.href)) continue;
+    seen.add(x.href); items.push({ ...x, title: clip(x.title) });
+  }
+  return { ...g, items };
+});
+---
+<section class="fronts" aria-label="News by section">
+  <div class="wrap">
+    <h2 class="fronts-title">News by section</h2>
+    <div class="fronts-grid">
+      {fronts.map((f) => (
+        <div class="front-col">
+          <h3>{f.name}</h3>
+          <ul>
+            {f.items.length === 0 && <li class="none">No new headlines this week.</li>}
+            {f.items.map((x) => (
+              <li class={x.own ? 'own' : ''}>
+                <a href={x.href} target={x.ext ? '_blank' : undefined} rel={x.ext ? 'noopener' : undefined}>{x.title}</a>
+                <span>{x.src}, {fmt(x.t)}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="more">More on {f.slugs.slice(0, 3).map((s: string, k: number) => <>{k > 0 && (k === Math.min(3, f.slugs.length) - 1 ? ' and ' : ', ')}<a href={`/categories/${s}/`}>{categoryBySlug[s].name.toLowerCase()}</a></>)}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .fronts { background: var(--navy-tint); margin-top: 48px; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); padding: 34px 0 30px; border-top: 4px solid var(--navy); }
+  .fronts-title { font: 700 28px/1.2 var(--head); margin: 0 0 20px; }
+  .fronts-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
+  .front-col h3 { font: 700 19px/1.2 var(--head); margin: 0 0 6px; padding-bottom: 8px; border-bottom: 3px solid var(--teal); }
+  .front-col ul { list-style: none; margin: 0; padding: 0; }
+  .front-col li { padding: 12px 0; border-bottom: 1px solid #d3dce6; display: grid; gap: 4px; }
+  .front-col li a { font: 600 16px/1.35 var(--head); color: var(--ink); text-decoration: none; }
+  .front-col li a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .front-col li.own a { font-weight: 700; }
+  .front-col li span { font-size: 12.5px; color: var(--muted); }
+  .front-col li.own span { color: var(--teal); font-weight: 600; }
+  .front-col .none { color: var(--muted); font-size: 14px; }
+  .more { font-size: 14px; color: var(--ink-2); margin: 12px 0 0; }
+  .more a { color: var(--teal); text-decoration: underline; text-underline-offset: 2px; }
+  @media (max-width: 1000px) { .fronts-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 640px) { .fronts-grid { grid-template-columns: 1fr; } }
+</style>

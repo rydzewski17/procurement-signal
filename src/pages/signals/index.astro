@@ -1,0 +1,78 @@
+---
+import Base from '../../layouts/Base.astro';
+import SignalCard from '../../components/SignalCard.astro';
+import { getPosts } from '../../data/posts';
+import { TOPICS } from '../../data/site';
+const posts = await getPosts();
+const counts = { critical: posts.filter((p) => p.data.signal >= 5).length, high: posts.filter((p) => p.data.signal === 4).length, watch: posts.filter((p) => p.data.signal <= 3).length };
+const topics = Object.keys(TOPICS).filter((t) => posts.some((p) => p.data.topic === t));
+---
+<Base title="Buyer briefings: what changed and what to do" description="Short briefings for procurement leaders: the figures, what changed, why it matters and the first action to take." section="signals">
+  <div class="page">
+    <div class="page-head">
+      <h1>Buyer briefings</h1>
+      <p>What changed this week, why it matters to buyers, and the first thing to do. Each briefing is rated by how urgently buyers should respond, from Watch to Critical.</p>
+    </div>
+
+    <div class="controls">
+      <input id="q" type="search" placeholder="Search briefings, suppliers, tariffs, freight" aria-label="Search briefings" />
+      <div class="chips" data-group="level">
+        <button class="chip on" data-v="all">All ({posts.length})</button>
+        <button class="chip" data-v="critical">Critical ({counts.critical})</button>
+        <button class="chip" data-v="high">High ({counts.high})</button>
+        <button class="chip" data-v="watch">Watch ({counts.watch})</button>
+      </div>
+      <div class="chips" data-group="topic">
+        <button class="chip on" data-v="all">All topics</button>
+        {topics.map((t) => <button class="chip" data-v={t}>{TOPICS[t].name}</button>)}
+      </div>
+    </div>
+
+    <p class="count" id="count">{posts.length} briefings</p>
+
+    <div class="list" id="list">
+      {[...posts].sort((a, b) => b.data.signal - a.data.signal || b.data.date.valueOf() - a.data.date.valueOf()).map((p) => <SignalCard post={p} />)}
+    </div>
+  </div>
+</Base>
+
+<style>
+  .controls { display: grid; gap: 12px; margin: 6px 0; }
+  #q { font: 16px var(--sans); padding: 12px 14px; border: 1px solid #bbb; width: 100%; max-width: 520px; border-radius: 4px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { font: 600 13px/1 var(--sans); padding: 9px 12px; border: 1px solid #bbb; background: #fff; color: var(--ink-2); cursor: pointer; border-radius: 4px; }
+  .chip:hover { border-color: #000; }
+  .chip.on { background: #000; color: #fff; border-color: #000; }
+  .count { font-size: 13px; color: var(--muted); margin: 16px 0 0; }
+  .list { margin-bottom: 40px; }
+  .list [hidden] { display: none; }
+</style>
+
+<script is:inline>
+  (() => {
+    const state = { level: 'all', topic: 'all', q: '' };
+    const cards = [...document.querySelectorAll('#list .sig')];
+    const count = document.getElementById('count');
+    const q = document.getElementById('q');
+    const text = cards.map((c) => c.textContent.toLowerCase());
+    const apply = () => {
+      let n = 0;
+      cards.forEach((el, k) => {
+        const ok = (state.level === 'all' || el.dataset.level === state.level)
+          && (state.topic === 'all' || el.dataset.topic === state.topic)
+          && (!state.q || text[k].includes(state.q));
+        el.hidden = !ok; if (ok) n++;
+      });
+      count.textContent = n + (n === 1 ? ' briefing' : ' briefings');
+    };
+    document.querySelectorAll('.chips').forEach((group) => {
+      group.addEventListener('click', (e) => {
+        const b = e.target.closest('.chip'); if (!b) return;
+        group.querySelectorAll('.chip').forEach((c) => c.classList.remove('on'));
+        b.classList.add('on');
+        state[group.dataset.group] = b.dataset.v; apply();
+      });
+    });
+    q.addEventListener('input', () => { state.q = q.value.trim().toLowerCase(); apply(); });
+  })();
+</script>

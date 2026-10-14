@@ -1,0 +1,92 @@
+---
+// Sidebar widget: step through software categories with previous/next.
+// Works without JavaScript (first category shows, with a link to all rankings).
+import { SOFTWARE, status, rankG2, rankTeam } from '../data/software';
+const items = SOFTWARE.categories.map((c) => ({
+  slug: c.slug, name: c.name, blurb: c.blurb, st: status(c),
+  g2: rankG2(c).ranked.slice(0, 5), team: rankTeam(c).ranked.slice(0, 5),
+}));
+---
+<section class="sw" aria-label="Top software rankings">
+  <div class="sw-head">
+    <h2><a href="/software/">Top software</a></h2>
+    <p class="sw-intro">The top 5 in each category, by our team and G2 reviewers.</p>
+  </div>
+  {items.map((it, i) => (
+    <div class="sw-card" data-i={i} hidden={i !== 0}>
+      <h3><a href={`/software/${it.slug}/`}>{it.name}</a></h3>
+      <p class="sw-blurb">{it.blurb}</p>
+      {it.g2.length > 0 ? (
+        <>
+          <p class="sw-sub">Highest on G2</p>
+          <ol class="sw-list">
+            {it.g2.map((v) => <li><span>{v.name}</span><span class="sw-score">{v.g2.rating?.toFixed(1)}<small> / {v.g2.reviews.toLocaleString('en-US')} reviews</small></span></li>)}
+          </ol>
+        </>
+      ) : <p class="sw-pending">We're collecting verified G2 scores for this category.</p>}
+      <p class="sw-team">{it.team.length ? `Our team ranks ${it.team[0].v.name} first.` : 'Our analysts are scoring this category now.'}</p>
+      <a class="sw-go" href={`/software/${it.slug}/`}>See the ranking and our analysis</a>
+    </div>
+  ))}
+  <div class="sw-switch">
+    <div class="sw-nav">
+      <button type="button" class="sw-prev" aria-label="Previous software type">‹</button>
+      <span class="sw-pos" aria-live="polite">1 of {items.length}</span>
+      <button type="button" class="sw-next" aria-label="Next software type">›</button>
+    </div>
+    <label class="sw-jump">
+      <span class="sr-only">Choose a software type</span>
+      <select>{items.map((it, i) => <option value={i}>{it.name}</option>)}</select>
+    </label>
+  </div>
+</section>
+
+<script is:inline>
+  (() => {
+    const root = document.querySelector('.sw'); if (!root) return;
+    const cards = [...root.querySelectorAll('.sw-card')];
+    const pos = root.querySelector('.sw-pos'), sel = root.querySelector('select');
+    let i = 0;
+    const show = (n) => {
+      i = (n + cards.length) % cards.length;
+      cards.forEach((c, k) => { c.hidden = k !== i; });
+      pos.textContent = `${i + 1} of ${cards.length}`; sel.value = String(i);
+    };
+    root.querySelector('.sw-prev').onclick = () => show(i - 1);
+    root.querySelector('.sw-next').onclick = () => show(i + 1);
+    sel.onchange = () => show(Number(sel.value));
+    root.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') show(i - 1); if (e.key === 'ArrowRight') show(i + 1); });
+  })();
+</script>
+
+<style>
+  .sw { background: var(--teal-tint); border-top: 4px solid var(--teal); padding: 18px 20px 20px; margin-bottom: 28px; }
+  .sw-head { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #c3dcda; }
+  .sw-head h2 { font: 700 20px/1.2 var(--head); margin: 0; border: 0; padding: 0; }
+  .sw-intro { margin: 4px 0 0; font-size: 13px; color: var(--ink-2); }
+  .sw-head h2 a { color: var(--ink); text-decoration: none; }
+  .sw-head h2 a:hover { text-decoration: underline; }
+  .sw-nav { display: flex; align-items: center; gap: 6px; }
+  .sw-nav button { width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--teal); background: #fff; color: var(--teal); font: 700 18px/1 var(--ui); cursor: pointer; }
+  .sw-nav button:hover { background: var(--teal); color: #fff; }
+  .sw-pos { font: 600 12px/1 var(--ui); color: var(--teal); min-width: 44px; text-align: center; font-variant-numeric: tabular-nums; }
+  .sw-card h3 { font: 700 22px/1.2 var(--head); margin: 2px 0 6px; }
+  .sw-card h3 a { color: var(--ink); text-decoration: none; }
+  .sw-card h3 a:hover { text-decoration: underline; }
+  .sw-blurb { font-size: 14px; color: var(--ink-2); margin: 0 0 12px; }
+  .sw-sub { font: 600 13px/1 var(--ui); color: var(--teal); margin: 0 0 6px; }
+  .sw-list { list-style: none; margin: 0 0 10px; padding: 0; background: #fff; }
+  .sw-list { counter-reset: swr; }
+  .sw-list li { display: grid; grid-template-columns: 18px minmax(0,1fr) auto; align-items: baseline; gap: 8px; padding: 9px 12px; margin: 0; border-bottom: 1px solid var(--teal-tint); font: 600 15px/1.3 var(--ui); counter-increment: swr; }
+  .sw-list li::before { content: counter(swr); font: 700 15px/1 var(--head); color: var(--teal); }
+  .sw-score { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .sw-score small { font-weight: 400; color: var(--muted); }
+  .sw-pending { font-size: 14px; background: #fff; padding: 10px 12px; margin: 0 0 10px; color: var(--ink-2); }
+  .sw-team { font-size: 13px; color: var(--muted); margin: 0 0 12px; }
+  .sw-go { display: block; text-align: center; background: var(--teal); color: #fff; font: 600 14px/1 var(--ui); padding: 10px 14px; text-decoration: none; }
+  .sw-go:hover { background: #0b5f5d; }
+  .sw-switch { display: grid; gap: 10px; margin-top: 16px; padding-top: 14px; border-top: 1px solid #c3dcda; }
+  .sw-switch .sw-nav { justify-content: space-between; }
+  .sw-jump select { width: 100%; font: 14px var(--ui); padding: 8px; border: 1px solid #b7d3d1; background: #fff; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+</style>

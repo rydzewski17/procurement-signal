@@ -30,7 +30,7 @@ const through = monthLabel(meta.dataThrough + '-01');
 <Base title={`${c.name} prices: trend and buyer outlook`} description={`${c.name} producer prices are ${STATUS[c.status].label.toLowerCase()}: ${fmtPct(c.y1)} over 12 months. Trend, data and what procurement teams should do.`} section="cost-monitor">
   <div class="page">
     <div class="page-head narrow">
-      <div class="crumbs"><a href="/cost-monitor/">Cost Pressure Monitor</a>&ensp;/&ensp;{c.group}</div>
+      <div class="crumbs"><a href="/cost-monitor/">Price trends by category</a>&ensp;/&ensp;{c.group}</div>
       <h1>{c.name}</h1>
       <p>Data through {through}. <StatusBadge status={c.status} /></p>
     </div>

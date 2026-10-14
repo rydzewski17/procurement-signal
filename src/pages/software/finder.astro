@@ -1,0 +1,69 @@
+---
+import Base from '../../layouts/Base.astro';
+import { NEEDS, SIZES } from '../../data/finder';
+import { SOFTWARE, status } from '../../data/software';
+const cats = Object.fromEntries(SOFTWARE.categories.map((c) => [c.slug, { name: c.name, status: status(c) }]));
+const needs = NEEDS.map((n) => ({ ...n, live: cats[n.category]?.status === 'ranked', name: cats[n.category]?.name ?? n.label }));
+---
+<Base title="Software finder" description="Answer two questions to find the procurement software category and rankings that fit your team." section="software">
+  <div class="page">
+    <div class="crumbs"><a href="/software/">Software rankings</a> / Finder</div>
+    <div class="page-head"><h1>Software finder</h1><p>Answer two questions to find the category to start with. Results link to the current G2-based ranking where we have one.</p></div>
+
+    <form class="finder" id="finder" onsubmit="return false">
+      <fieldset>
+        <legend>1. What do you need to fix first?</legend>
+        {needs.map((n) => (
+          <label class="opt"><input type="radio" name="need" value={n.id} /> {n.label}</label>
+        ))}
+      </fieldset>
+      <fieldset>
+        <legend>2. How big is your company?</legend>
+        {SIZES.map((s) => (
+          <label class="opt"><input type="radio" name="size" value={s.id} /> {s.label}</label>
+        ))}
+      </fieldset>
+    </form>
+
+    <div class="result" id="result" aria-live="polite">
+      <p class="empty">Choose one option in each question to see your starting point.</p>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .crumbs { font-size: 13px; color: var(--muted); margin-top: 22px; }
+  .crumbs a { color: var(--accent); text-decoration: none; }
+  .finder { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 10px 0 30px; }
+  fieldset { border: 0; border-top: 2px solid #000; padding: 12px 0 0; margin: 0; display: grid; gap: 4px; }
+  legend { font: 800 13px/1.3 var(--sans); text-transform: uppercase; letter-spacing: .05em; padding-bottom: 10px; }
+  .opt { display: flex; gap: 10px; align-items: center; font-size: 15px; padding: 9px 0; border-bottom: 1px solid var(--rule); cursor: pointer; }
+  .result { border-top: 3px solid #000; padding-top: 18px; max-width: 760px; min-height: 80px; }
+  .result h2 { font: 800 22px/1.25 var(--sans); margin: 0 0 8px; }
+  .result p { font-size: 16px; line-height: 1.6; }
+  .result .empty { color: var(--muted); }
+  .result a.go { display: inline-block; margin-top: 10px; background: #000; color: #fff; padding: 11px 16px; text-decoration: none; font-weight: 600; font-size: 14px; border-radius: 4px; }
+  @media (max-width: 760px) { .finder { grid-template-columns: 1fr; } }
+</style>
+
+<script is:inline define:vars={{ needs, sizes: SIZES }}>
+  (() => {
+    const result = document.getElementById('result');
+    const form = document.getElementById('finder');
+    const render = () => {
+      const need = form.querySelector('input[name="need"]:checked')?.value;
+      const size = form.querySelector('input[name="size"]:checked')?.value;
+      if (!need || !size) {
+        result.innerHTML = '<p class="empty">Choose one option in each question to see your starting point.</p>';
+        return;
+      }
+      const n = needs.find((x) => x.id === need);
+      const s = sizes.find((x) => x.id === size);
+      const link = n.live
+        ? `<a class="go" href="/software/${n.category}/">See the ${n.name} ranking →</a>`
+        : `<p>We're still gathering verified G2 data for <strong>${n.name}</strong>. <a href="/software/">Browse the rankings we have now</a>, or subscribe for the update.</p>`;
+      result.innerHTML = `<h2>Start with ${n.name}</h2><p>${s.note}</p>${link}`;
+    };
+    form.addEventListener('change', render);
+  })();
+</script>

@@ -1,13 +1,29 @@
 # Procurement Signal
 
-> Independent B2B intelligence for procurement and supply chain professionals. News, data and guides on U.S. tariffs, supplier risk, input-cost inflation and procurement technology, each with what it means for buyers.
+> Independent B2B intelligence for procurement and supply chain professionals. News, data, guides and software rankings on U.S. tariffs, supplier risk, input-cost inflation and procurement technology, each with what it means for buyers.
 
-Every story cites its sources. Data pages use official U.S. government data (BLS Producer Price Index via FRED; Federal Register; USTR; CBP).
+Every story cites its sources. Data pages use official U.S. government data (BLS Producer Price Index via FRED; Federal Register; USTR; CBP). Software rankings use public G2 review scores with the date each score was checked.
 
 ## Data and tools
-- [Cost Pressure Monitor](https://procurement-signal.rydzewski-jason.workers.dev/cost-monitor/): monthly price-pressure readings (rising fast, rising, stable, easing) for 12 purchase categories including steel, aluminum, copper, plastic resins, diesel, ocean freight, trucking, semiconductors and packaging.
+- [Price trends by category](https://procurement-signal.rydzewski-jason.workers.dev/cost-monitor/): monthly price-pressure readings for 12 purchase categories including steel, aluminum, copper, plastic resins, diesel, ocean freight, trucking, semiconductors and packaging.
 - [Tariff & Trade Deadline Tracker](https://procurement-signal.rydzewski-jason.workers.dev/trackers/tariff-deadlines/): U.S. tariff effective dates and expirations.
-- [Industry Wire](https://procurement-signal.rydzewski-jason.workers.dev/wire/): daily procurement and supply chain headlines with links to original publishers.
+- [Industry headlines](https://procurement-signal.rydzewski-jason.workers.dev/wire/): daily procurement and supply chain headlines with links to original publishers.
+- [Software finder](https://procurement-signal.rydzewski-jason.workers.dev/software/finder/): answers two questions and points to the right software category.
+
+## Analysis
+- [Buyer briefings](https://procurement-signal.rydzewski-jason.workers.dev/signals/): what changed this week, why it matters to buyers, and the first action to take.
+
+## Software rankings
+- [Procurement software rankings](https://procurement-signal.rydzewski-jason.workers.dev/software/): all 8 categories, platforms that span categories, and how we rank.
+- [Best Procure-to-pay (P2P) software](https://procurement-signal.rydzewski-jason.workers.dev/software/procure-to-pay/): 12 platforms compared on G2 rating, review count, reviewer company size, strengths, complaints and head-to-head comparisons. Requisition to purchase order, receipt, invoice and payment in one workflow.
+- [Best Payment and AP automation software](https://procurement-signal.rydzewski-jason.workers.dev/software/payment-software/): 15 platforms compared on G2 rating, review count, reviewer company size, strengths, complaints and head-to-head comparisons. Invoice capture, approvals, supplier payments by ACH, card or wire, and reconciliation.
+- [Best Procurement software](https://procurement-signal.rydzewski-jason.workers.dev/software/procurement-software/): 13 platforms compared on G2 rating, review count, reviewer company size, strengths, complaints and head-to-head comparisons. Intake, orchestration and full source-to-pay suites that govern how companies buy.
+- [Best Supplier compliance software](https://procurement-signal.rydzewski-jason.workers.dev/software/compliance-software/): 8 platforms compared on G2 rating, review count, reviewer company size, strengths, complaints and head-to-head comparisons. Sanctions and denied-party screening, due diligence, sustainability and security compliance for suppliers.
+- [Best Contract lifecycle management (CLM) software](https://procurement-signal.rydzewski-jason.workers.dev/software/contract-lifecycle/): 15 platforms compared on G2 rating, review count, reviewer company size, strengths, complaints and head-to-head comparisons. Drafting, negotiating, signing, renewing and tracking obligations across contracts.
+- [Best Spend analytics software](https://procurement-signal.rydzewski-jason.workers.dev/software/spend-analytics/): 12 platforms compared on G2 rating, review count, reviewer company size, strengths, complaints and head-to-head comparisons. Classifying and analyzing spend to find savings, enforce contracts and consolidate suppliers.
+- [Best Supplier risk monitoring software](https://procurement-signal.rydzewski-jason.workers.dev/software/supplier-risk/): 9 platforms compared on G2 rating, review count, reviewer company size, strengths, complaints and head-to-head comparisons. Monitoring supplier financial health, cyber posture, sanctions and disruption signals.
+- [Best Strategic sourcing and e-auction software](https://procurement-signal.rydzewski-jason.workers.dev/software/strategic-sourcing/): 14 platforms compared on G2 rating, review count, reviewer company size, strengths, complaints and head-to-head comparisons. RFIs, RFPs, RFQs, auctions and bid analysis for high-spend categories.
+- Ranking rules: platforms need at least 50 G2 reviews to be ranked; ratings within 0.3 points are grouped as a tier (effectively tied). Procurement Signal's founder works for JAGGAER, a vendor listed in several categories. JAGGAER appears with its G2 data like every other vendor and is excluded from our team scoring. No vendor pays to be listed or ranked.
 
 ## Guides
 - [U.S. tariffs explained for procurement teams (2026)](https://procurement-signal.rydzewski-jason.workers.dev/guides/us-tariffs-explained-procurement/)
@@ -17,5 +33,5 @@ Every story cites its sources. Data pages use official U.S. government data (BLS
 
 ## Coverage
 - [Latest news](https://procurement-signal.rydzewski-jason.workers.dev/)
-- [All topics](https://procurement-signal.rydzewski-jason.workers.dev/topics/)
+- [Categories](https://procurement-signal.rydzewski-jason.workers.dev/categories/): headlines grouped into about 20 procurement categories.
 - [RSS feed](https://procurement-signal.rydzewski-jason.workers.dev/rss.xml)

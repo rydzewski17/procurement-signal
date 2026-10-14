@@ -7,10 +7,10 @@ const days = new Map<string, typeof wire.items>();
 for (const i of wire.items) days.set(fmt(i.date), [...(days.get(fmt(i.date)) ?? []), i]);
 const sources = [...new Set(wire.items.map((i) => i.source.split(' · ')[0]))];
 ---
-<Base title="Industry Wire: procurement and supply chain headlines" description="The day's procurement, sourcing, trade and supply chain headlines from trade publications and official U.S. government notices, in one place." section="wire">
+<Base title="Industry headlines: procurement and supply chain news" description="The day's procurement, sourcing, trade and supply chain headlines from trade publications and official U.S. government notices, in one place." section="wire">
   <div class="page">
     <div class="page-head narrow">
-      <h1>Industry Wire</h1>
+      <h1>Industry headlines</h1>
       <p>Procurement and supply chain headlines from across the trade press and official government notices, updated every morning. Each headline links to the original publisher.</p>
     </div>
     <div class="with-rail">
@@ -35,7 +35,7 @@ const sources = [...new Set(wire.items.map((i) => i.source.split(' · ')[0]))];
         <p class="meta">Headlines are gathered automatically from publisher feeds and the Federal Register and filtered for procurement and supply chain relevance. Procurement Signal does not edit or endorse third-party headlines.</p>
         {sources.length > 0 && <><h2 class="block-head" style="margin-top:22px">Sources this week</h2><ul class="linklist">{sources.map((s) => <li>{s}</li>)}</ul></>}
         <h2 class="block-head" style="margin-top:22px">Our analysis</h2>
-        <ul class="linklist"><li><a href="/cost-monitor/">Cost Pressure Monitor</a></li><li><a href="/trackers/tariff-deadlines/">Tariff & Trade Deadline Tracker</a></li><li><a href="/guides/">Guides</a></li></ul>
+        <ul class="linklist"><li><a href="/cost-monitor/">Price trends by category</a></li><li><a href="/trackers/tariff-deadlines/">Tariff & Trade Deadline Tracker</a></li><li><a href="/guides/">Guides</a></li></ul>
       </aside>
     </div>
   </div>

@@ -1,0 +1,16 @@
+---
+import SectionPage from '../../components/v4/SectionPage.astro';
+import FollowButton from '../../components/FollowButton.astro';
+import { getPosts } from '../../data/posts';
+import { CATEGORIES, sectionOf, categoryBySlug } from '../../data/categories.mjs';
+export function getStaticPaths() {
+  return CATEGORIES.map((c) => ({ params: { slug: c.slug }, props: { c } }));
+}
+const { c } = Astro.props;
+const posts = await getPosts();
+const sec = sectionOf([c.slug]);
+const chips = sec.slugs.filter((sl: string) => sl !== c.slug).map((sl: string) => ({ href: `/categories/${sl}/`, label: categoryBySlug[sl].name }));
+---
+<SectionPage title={c.name} blurb={c.blurb} slugs={[c.slug]} posts={posts} chips={chips} crumb={{ href: `/sections/${sec.id}/`, label: sec.name }}>
+  <div slot="head" style="margin-top:14px"><FollowButton slug={c.slug} name={c.name} /></div>
+</SectionPage>

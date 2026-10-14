@@ -4,8 +4,9 @@ import Base from '../../layouts/Base.astro';
 import Card from '../../components/Card.astro';
 import Media from '../../components/Media.astro';
 import KeyFacts from '../../components/KeyFacts.astro';
-import Trending from '../../components/Trending.astro';
-import BrowseTopics from '../../components/BrowseTopics.astro';
+import Tile from '../../components/v4/Tile.astro';
+import { catsOf, feedFor, ourItems, wireItems, clip, shortDate } from '../../data/feed';
+import { sectionOf, categoryBySlug } from '../../data/categories.mjs';
 import { getPosts } from '../../data/posts';
 import { slugify } from '../../data/tags';
 import { trackers } from '../../data/trackers';
@@ -17,7 +18,36 @@ export async function getStaticPaths() {
 }
 const { post, posts } = Astro.props;
 const d = post.data;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
+const tocItems = headings.filter((h) => h.depth === 2 && h.text.toLowerCase() !== 'why it matters');
+
+// Lift "Why it matters" into the Article summary and split the story so the
+// "Read more in" slider sits mid-article.
+const html: string = post.rendered?.html ?? '';
+const parts = html.split(/(?=<h2[\s>])/);
+const intro = parts[0].startsWith('<h2') ? '' : parts.shift()!;
+const headingOf = (x: string) => x.match(/<h2[^>]*>([\s\S]*?)<\/h2>/)?.[1]?.replace(/<[^>]+>/g, '').trim().toLowerCase() ?? '';
+const textOf = (x: string) => x.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+const whyIdx = parts.findIndex((x) => headingOf(x) === 'why it matters');
+const why = whyIdx >= 0 ? textOf(parts[whyIdx].replace(/<h2[\s\S]*?<\/h2>/, '')) : '';
+if (whyIdx >= 0) parts.splice(whyIdx, 1);
+const doIdx = parts.findIndex((x) => headingOf(x).startsWith('what buyers should do'));
+const actions = doIdx >= 0 ? [...parts[doIdx].matchAll(/<li>([\s\S]*?)<\/li>/g)].map((m) => textOf(m[1])).slice(0, 2) : [];
+const cut = Math.min(2, parts.length);
+const before = intro + parts.slice(0, cut).join('');
+const after = parts.slice(cut).join('');
+
+// Category and section for the breadcrumb and the slider.
+const cats = catsOf(post).filter((c) => categoryBySlug[c]);
+const primary = cats[0];
+const sec = sectionOf(cats);
+const self = `/articles/${post.id}/`;
+const slider = primary ? feedFor(posts, [primary], new Set([self])).slice(0, 6) : [];
+const words = post.body ? post.body.split(/\s+/).length : 0;
+const mins = Math.max(1, Math.round(words / 230));
+const idx = posts.findIndex((p) => p.id === post.id);
+const newer = idx > 0 ? posts[idx - 1] : null;
+const older = idx >= 0 && idx < posts.length - 1 ? posts[idx + 1] : null;
 const fmt = (x: Date) => x.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 
 // Read next: score other stories by shared tags, same topic and recency.
@@ -25,8 +55,17 @@ const myTags = new Set(d.tags.map(slugify));
 const scored = posts.filter((p) => p.id !== post.id).map((p) => ({
   p, s: p.data.tags.filter((t) => myTags.has(slugify(t))).length * 3 + (p.data.topic === d.topic ? 2 : 0) + p.data.signal / 5,
 })).sort((a, b) => b.s - a.s);
-const readNext = scored.slice(0, 3).map((x) => x.p);
+const readNext = scored.slice(0, 6).map((x) => x.p);
 const latest = posts.filter((p) => p.id !== post.id && !readNext.includes(p)).slice(0, 5);
+// Related: our closest stories, then headlines from the same or neighboring categories.
+const relatedSeen = new Set([self, ...slider.map((x) => x.href)]);
+const related = [...ourItems(readNext), ...feedFor(posts, sec.slugs, relatedSeen).filter((x) => x.ext)]
+  .filter((x) => !relatedSeen.has(x.href)).slice(0, 6);
+// Top 10 this week: our stories by signal, then the newest industry headlines.
+const DAY = 864e5;
+const newestT = posts[0]?.data.date.valueOf() ?? 0;
+const ranked = posts.filter((p) => p.id !== post.id).sort((a, b) => (b.data.signal * 2 - (newestT - b.data.date.valueOf()) / DAY) - (a.data.signal * 2 - (newestT - a.data.date.valueOf()) / DAY));
+const top10 = [...ourItems(ranked), ...wireItems()].slice(0, 10);
 
 const url = new URL(`/articles/${post.id}/`, Astro.site).toString();
 const enc = encodeURIComponent;
@@ -39,29 +78,69 @@ const jsonLd = {
 ---
 <Base title={d.title} description={d.dek} type="article" jsonLd={jsonLd} section={d.topic}>
   <div class="article-layout">
-    <article class="article">
-      <div class="crumbs"><a href={`/topics/${d.topic}/`}>{TOPICS[d.topic].name}</a>{d.type !== 'news' && <>&ensp;/&ensp;{TYPE_LABEL[d.type]}</>}</div>
+    <article class="article" data-pagefind-body>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href={`/sections/${sec.id}/`}>{sec.name}</a>{primary && <> / <a href={`/categories/${primary}/`}>{categoryBySlug[primary].name}</a></>}{d.type !== 'news' && <> / {TYPE_LABEL[d.type]}</>}</nav>
       <h1>{d.title}</h1>
       <p class="dek">{d.dek}</p>
       <div class="byline">
         <div>
           <div class="who">By {d.author}</div>
           <div class="when">Published {fmt(d.date)}{d.updated && <>. Updated {fmt(d.updated)}</>}</div>
+          <div class="read-meta">{mins} min read · Signal {d.signal}/5</div>
         </div>
         <div class="share">
-          <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${enc(url)}`} target="_blank" rel="noopener">Share on LinkedIn</a>
+          <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${enc(url)}`} target="_blank" rel="noopener">LinkedIn</a>
+          <a href={`https://x.com/intent/post?url=${enc(url)}&text=${enc(d.title)}`} target="_blank" rel="noopener">X</a>
           <a href={`mailto:?subject=${enc(d.title)}&body=${enc(url)}`}>Email</a>
+          <button type="button" class="copy-link" data-url={url}>Copy link</button>
         </div>
       </div>
       <Media post={post} ratio="wide" caption eager />
+      {(why || actions.length > 0) && (
+        <section class="art-summary" aria-label="Article summary">
+          <h2>Article summary</h2>
+          <ul>
+            {why && <li><strong>Why it matters:</strong> {why}</li>}
+            {actions.map((a, i) => <li>{i === 0 && <strong>What to do first: </strong>}{a}</li>)}
+          </ul>
+        </section>
+      )}
       <KeyFacts facts={d.keyfacts} />
-      <div class="prose"><Content /></div>
+      {tocItems.length > 0 && (
+        <details class="toc-mobile">
+          <summary>On this page</summary>
+          <ol>{tocItems.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+        </details>
+      )}
+      <div class="prose" set:html={before} />
+
+      {slider.length > 1 && primary && (
+        <section class="readmore4" aria-label={`Read more in ${categoryBySlug[primary].name}`} data-slider>
+          <div class="rm-head">
+            <h2>Read more in <a href={`/categories/${primary}/`}>{categoryBySlug[primary].name}</a></h2>
+            <div class="rm-arrows">
+              <button type="button" data-dir="-1" aria-label="Previous stories">‹</button>
+              <button type="button" data-dir="1" aria-label="More stories">›</button>
+            </div>
+          </div>
+          <div class="rm-track">{slider.map((x) => <Tile item={x} size="md" />)}</div>
+        </section>
+      )}
+
+      <div class="prose" set:html={after} />
 
       {d.tags.length > 0 && (
         <div class="tagline">
           <span>Topics in this story</span>
           {d.tags.map((t) => <a href={`/tags/${slugify(t)}/`}>{t}</a>)}
         </div>
+      )}
+
+      {(newer || older) && (
+        <nav class="next-prev" aria-label="More stories">
+          {older ? <a href={`/articles/${older.id}/`}><span>Previous story</span><strong>{older.data.title}</strong></a> : <span />}
+          {newer ? <a href={`/articles/${newer.id}/`}><span>Next story</span><strong>{newer.data.title}</strong></a> : <span />}
+        </nav>
       )}
 
       <section class="sources">
@@ -72,7 +151,13 @@ const jsonLd = {
 
     <aside class="side">
       <div class="sticky">
-        <h2 class="block-head">Latest headlines</h2>
+        {tocItems.length > 0 && (
+          <nav class="toc" aria-label="On this page">
+            <h2>On this page</h2>
+            <ol>{tocItems.map((h) => <li><a href={`#${h.slug}`} data-toc={h.slug}>{h.text}</a></li>)}</ol>
+          </nav>
+        )}
+        {latest.length > 0 && <h2 class="block-head">Latest headlines</h2>}
         {latest.map((p) => <Card post={p} size="thumb" />)}
         <h2 class="block-head" style="margin-top:28px">Trackers</h2>
         <ul class="linklist">{trackers.map((t) => <li><a href={`/trackers/${t.slug}/`}>{t.title}</a></li>)}</ul>
@@ -80,12 +165,48 @@ const jsonLd = {
     </aside>
   </div>
 
-  {readNext.length > 0 && (
-    <section class="band" aria-label="Read next">
-      <div class="block-head">Read next</div>
-      <div class="feature-row">{readNext.map((p) => <Card post={p} size="feature" />)}</div>
+  <script is:inline>
+    document.querySelectorAll('[data-slider]').forEach((s) => {
+      const track = s.querySelector('.rm-track');
+      s.querySelectorAll('[data-dir]').forEach((b) => b.addEventListener('click', () => track.scrollBy({ left: Number(b.dataset.dir) * track.clientWidth * 0.8, behavior: 'smooth' })));
+    });
+    document.querySelectorAll('.copy-link').forEach((b) => b.addEventListener('click', () => {
+      navigator.clipboard?.writeText(b.dataset.url).then(() => { b.textContent = 'Link copied'; }, () => {});
+    }));
+    (() => {
+      const links = [...document.querySelectorAll('[data-toc]')];
+      if (!links.length) return;
+      const map = new Map(links.map((a) => [a.dataset.toc, a]));
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            links.forEach((a) => a.classList.remove('active'));
+            map.get(e.target.id)?.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-20% 0px -70% 0px' });
+      map.forEach((_, id) => { const el = document.getElementById(id); if (el) obs.observe(el); });
+    })();
+  </script>
+
+  {related.length > 0 && (
+    <section class="related4" aria-label="Related news">
+      <h2 class="h-rule">Related news{primary && <a class="view-all" href={`/categories/${primary}/`}>More in {categoryBySlug[primary].name}</a>}</h2>
+      <div class="rel-grid">{related.map((x) => <Tile item={x} size="md" />)}</div>
     </section>
   )}
-  <Trending posts={posts} />
-  <BrowseTopics posts={posts} current={d.topic} />
+
+  {top10.length > 0 && (
+    <section class="top10-4" aria-label="Top 10 this week">
+      <h2 class="h-rule">Top 10 this week</h2>
+      <ol>
+        {top10.map((x) => (
+          <li>
+            <a href={x.href} target={x.ext ? '_blank' : undefined} rel={x.ext ? 'noopener' : undefined}>{clip(x.title, 120)}</a>
+            <span>{x.ext ? x.source : 'Procurement Signal'}, {shortDate(x.t)}</span>
+          </li>
+        ))}
+      </ol>
+    </section>
+  )}
 </Base>

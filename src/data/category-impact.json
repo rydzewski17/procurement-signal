@@ -1,0 +1,69 @@
+{
+  "asOf": "2026-10-12",
+  "note": "Editorial file. 'now' must be factual and sourced; 'meaning' is Procurement Signal's analysis. Refresh each newsroom run when the cost monitor or category news changes.",
+  "items": {
+    "steel": {
+      "now": "Producer prices hit a new high in August, up 23.4% on the year. Importers also pay a 50% Section 232 duty on full customs value since April 6.",
+      "meaning": "Landed cost for imported steel is rising faster than the index shows. Suppliers have pricing power, so flat annual increases will lag the market.",
+      "sources": [{ "name": "Procurement Signal: input-cost pressure report", "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/" }]
+    },
+    "aluminum": {
+      "now": "Prices are 5.9% below their June high but still 27.3% above a year ago. Imports carry a 50% Section 232 duty on full value.",
+      "meaning": "Contracts priced at spring highs are now above market. The pullback is a window to re-quote, but the duty keeps imported landed cost elevated.",
+      "sources": [{ "name": "Procurement Signal: input-cost pressure report", "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/" }]
+    },
+    "copper": {
+      "now": "Copper and brass mill shapes are at a 12-month high, up 20.9% on the year. Copper and derivatives are covered by the April 2026 Section 232 metals proclamation.",
+      "meaning": "Wire, cable and copper-intensive component suppliers face higher input and duty costs. Expect pass-through requests and check which parts are copper-heavy.",
+      "sources": [{ "name": "Procurement Signal: input-cost pressure report", "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/" }]
+    },
+    "resins": {
+      "now": "Plastic resin prices have fallen 8.5% over three months and are among the categories that turned lower this year.",
+      "meaning": "Input costs for packaging and molded-part suppliers are falling. Buyers have leverage to re-quote rather than accept increases set earlier in the year.",
+      "sources": [{ "name": "Procurement Signal: input-cost pressure report", "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/" }]
+    },
+    "chemicals": {
+      "now": "Industrial chemical prices have eased over three months but remain 13.3% above a year ago.",
+      "meaning": "The direction has turned in buyers' favor. Before accepting increases, ask suppliers to show how lower input costs are reflected in their price.",
+      "sources": [{ "name": "Procurement Signal: input-cost pressure report", "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/" }]
+    },
+    "diesel": {
+      "now": "Diesel jumped 17.7% in August after easing from a May peak and is up 77.8% on the year.",
+      "meaning": "Volatility, not the base rate, is driving freight and delivered-price changes. Fuel surcharge tables in carrier and supplier contracts now matter more than the headline rate.",
+      "sources": [{ "name": "Procurement Signal: input-cost pressure report", "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/" }]
+    },
+    "ocean": {
+      "now": "Deep-sea freight is up 32.0% on the year and near its 24-month high. Shippers are shifting volume to the Port of Los Angeles as Panama Canal constraints persist.",
+      "meaning": "Routing changes add transit time and variability, so capacity and lead time are as much a risk as rate. Inventory buffers for ocean-dependent parts may need to grow.",
+      "sources": [
+        { "name": "Procurement Signal: input-cost pressure report", "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/" },
+        { "name": "Supply Chain Dive: Panama Canal challenges drive shippers to Port of Los Angeles", "url": "https://www.supplychaindive.com/news/panama-canal-challenges-drive-shippers-to-port-of-los-angeles/832748/" }
+      ]
+    },
+    "trucking": {
+      "now": "Truck transportation prices have been flat for three months in the government data, while Cass reported truckload linehaul rates up 10% in September.",
+      "meaning": "The official index lags the market. A September rise in linehaul rates suggests contract renewals will be tougher than the flat index implies.",
+      "sources": [{ "name": "FreightWaves: Cass TL linehaul rates up 10% in September", "url": "https://www.freightwaves.com/news/cass-tl-linehaul-rates-up-10-in-september-shipment-counts-remain-positive" }]
+    },
+    "semis": {
+      "now": "Semiconductors are the only tracked category below year-ago prices, down 3.1%. Section 232 tariffs on semiconductors are in effect.",
+      "meaning": "Supplier prices are softening even as duties apply to imports. Compare landed cost, not just quoted price, before renegotiating.",
+      "sources": [{ "name": "Procurement Signal: input-cost pressure report", "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/" }]
+    },
+    "electrical": {
+      "now": "Electrical machinery and equipment prices are up 13.5% on the year. Some metal-intensive grid equipment carries a 15% Section 232 rate through 2027.",
+      "meaning": "Metal costs and duties are both feeding into equipment pricing. Budget for landed cost above the index for imported electrical equipment.",
+      "sources": [{ "name": "Procurement Signal: input-cost pressure report", "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/" }]
+    },
+    "lumber": {
+      "now": "Lumber prices are up 7.6% on the year, and Section 232 tariffs on wood products are in effect.",
+      "meaning": "Pallet and crating costs follow lumber. Check how pallet and packaging suppliers price wood content in their contracts.",
+      "sources": [{ "name": "Procurement Signal: input-cost pressure report", "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/" }]
+    },
+    "paper": {
+      "now": "Converted paper and paperboard, including corrugated boxes, is up 4.4% on the year but accelerating to a 12.9% annualized pace.",
+      "meaning": "Box pricing is turning up from a low base. Check when corrugated contracts reset before increases arrive.",
+      "sources": [{ "name": "Procurement Signal: input-cost pressure report", "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/" }]
+    }
+  }
+}

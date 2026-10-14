@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Search" description="Search Procurement Signal stories, guides, glossary terms and software rankings.">
+  <div class="page narrow">
+    <div class="sec-head" style="border:0;padding-bottom:6px">
+      <h1>Search</h1>
+      <p>Stories, guides, glossary terms and software rankings.</p>
+    </div>
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+    <div id="search" class="search4"></div>
+    <noscript><p class="empty">Search needs JavaScript. Browse the <a href="/archive/">archive</a> instead.</p></noscript>
+  </div>
+  <script is:inline src="/pagefind/pagefind-ui.js"></script>
+  <script is:inline>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (!window.PagefindUI) { document.getElementById('search').innerHTML = '<p class="empty">Search loads on the published site. Browse the <a href="/archive/">archive</a> in the meantime.</p>'; return; }
+      const ui = new PagefindUI({ element: '#search', showSubResults: true, showImages: false, resetStyles: false, translations: { placeholder: 'Search stories, tariffs, software', zero_results: 'No results for [SEARCH_TERM]. Try a company, tariff or product category.' } });
+      const q = new URLSearchParams(location.search).get('q');
+      if (q) ui.triggerSearch(q);
+    });
+  </script>
+</Base>
