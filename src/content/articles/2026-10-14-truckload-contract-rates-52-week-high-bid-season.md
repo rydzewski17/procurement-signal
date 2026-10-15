@@ -5,7 +5,6 @@ date: 2026-10-14
 topic: logistics
 type: analysis
 signal: 5
-featured: true
 categories: ["contracts", "freight"]
 keyfacts:
   - value: "$2.72/mi"
