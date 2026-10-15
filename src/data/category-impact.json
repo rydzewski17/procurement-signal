@@ -193,11 +193,15 @@
         {
           "name": "Procurement Signal: September ISM report",
           "url": "/articles/2026-10-01-ism-september-prices-index-77-9-supplier-lead-times/"
+        },
+        {
+          "name": "Procurement Signal: China rare earth export pause ends Nov. 10",
+          "url": "/articles/2026-10-15-china-rare-earth-export-pause-expires-nov-10-magnets/"
         }
       ],
       "leverage": 2,
       "risk": "high",
-      "riskWhy": "The producer price index is down, but memory chips are on allocation as AI data centers absorb supply. ISM lists memory, circuit boards and electronic components as short.",
+      "riskWhy": "The producer price index is down, but memory chips are on allocation as AI data centers absorb supply. ISM lists memory, circuit boards and electronic components as short. China's suspension of wider rare earth and battery-material export controls ends Nov. 10 unless extended.",
       "move": "Treat memory separately: secure allocation and extend forecasts, then re-quote other components.",
       "when": "Before 2027 allocations are set",
       "label": "Semiconductors and memory"
@@ -217,11 +221,15 @@
         {
           "name": "Procurement Signal: September ISM report",
           "url": "/articles/2026-10-01-ism-september-prices-index-77-9-supplier-lead-times/"
+        },
+        {
+          "name": "Procurement Signal: China rare earth export pause ends Nov. 10",
+          "url": "/articles/2026-10-15-china-rare-earth-export-pause-expires-nov-10-magnets/"
         }
       ],
       "leverage": 2,
       "risk": "high",
-      "riskWhy": "ISM respondents report electrical components in short supply, and capital equipment lead times average 176 days. Some grid equipment carries a 15% Section 232 rate.",
+      "riskWhy": "ISM respondents report electrical components in short supply, and capital equipment lead times average 176 days. Some grid equipment carries a 15% Section 232 rate. China's pause on wider rare earth export controls, which cover magnets used in motors, ends Nov. 10 unless extended.",
       "move": "Order long-lead equipment early, fix price at order and qualify a second source for critical parts.",
       "when": "Plan 2027 projects now",
       "label": "Electrical equipment"

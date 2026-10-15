@@ -2,6 +2,7 @@
 title: "IEA says diesel stays tight well into 2027 as Houthi strikes on Aramco put the Gulf supply recovery at risk"
 dek: "The IEA does not expect distillate stocks to rebuild before the second half of 2027, and new missile strikes on Saudi energy sites threaten the Gulf export recovery that was easing prices, so fuel clauses in 2027 freight contracts need to hold up for another year."
 date: 2026-10-15
+updated: 2026-10-15
 topic: commodities
 type: news
 signal: 5
@@ -34,11 +35,19 @@ sources:
     url: "https://www.dtnpf.com/agriculture/web/ag/news/world-policy/article/2026/10/14/houthis-struck-saudi-oil-giant-say"
   - name: "FreightWaves — Houthi attacks add new geopolitical risk to softening container rates"
     url: "https://www.freightwaves.com/news/houthi-attacks-add-new-geopolitical-risk-to-softening-container-rates"
+  - name: "FinanceFeeds — Brent near $104 as Washington weighs easing tanker sanctions (Oct. 15, 2026)"
+    url: "https://financefeeds.com/brent-crude-oil-price-104-us-weighs-tanker-sanctions-easing-hormuz-sinking-bull-110-bear-98/"
+  - name: "Trading Economics via TradingView — Brent falls to $104"
+    url: "https://www.tradingview.com/news/te_news:592308:0-brent-falls-to-104/"
+  - name: "Fox News — Live updates on the U.S.–Iran war, Oct. 14, 2026"
+    url: "https://foxnews.com/live-news/us-iran-war-donald-trump-oil-nuclear-sites-hormuz-strait-october-14"
 faqs:
   - q: "How long will diesel prices stay high?"
     a: "The IEA's October Oil Market Report says the gasoil market will stay tight well into 2027. It expects gasoil to return to a small surplus in early 2027 but says stocks are unlikely to be rebuilt before the second half of 2027."
   - q: "Did the Houthi attack on Aramco cut Saudi oil output?"
     a: "Reuters sources said operations continued normally after the Oct. 13 strike on Aramco's Dhahran headquarters, and the Saudi energy ministry called it a limited fire. The IEA warns that renewed Gulf attacks make the supply recovery fragile."
+  - q: "Why did oil prices fall on Oct. 15 if the Gulf attacks continued?"
+    a: "Brent eased to about $104 a barrel on Oct. 15 from a $106.06 settlement, as traders weighed Hormuz shipping risk against weaker demand and a Reuters report that Washington may ease sanctions on some shadow-fleet tankers to bring down freight rates. No decision on the sanctions has been made."
   - q: "What should procurement teams change in 2027 freight contracts because of diesel?"
     a: "Tie fuel surcharges to the weekly DOE/EIA diesel index, agree the base price and miles-per-gallon in the table, and set a review point rather than accepting carriers' fixed all-in rates that price in today's peak."
 ---
@@ -65,6 +74,8 @@ The IEA said record diesel prices are raising the cost of goods and weighing on 
 **The new strikes.** Late on Oct. 13, a Houthi strike hit Aramco's headquarters complex in Dhahran, which houses an operations center overseeing rigs, pipelines, refineries and export terminals, Reuters reported. Three sources said a fire spread across several floors; the Saudi energy ministry called it a "limited fire," and two sources said operations continued normally. AP, citing regional officials, said the top three floors of a building used by senior executives were damaged, with no casualties reported.
 
 The Houthis said they also targeted Riyadh's King Khalid International Airport and an Aramco refinery in Riyadh, and urged shipping companies and workers to evacuate Saudi airports and oil facilities. Strikes on the airport have killed at least 18 people over the past week, according to AP. President Trump said he is evaluating whether the U.S. should join Saudi strikes on the Houthis, AP reported.
+
+**Update, Oct. 15.** Attacks on shipping near the Strait of Hormuz have picked up. The Singapore-flagged container ship GFS Pride sank after a projectile strike, with all 21 crew evacuated, and Fox News counted 10 attacks on ships in the week through Tuesday. Very large crude carrier rates from the Gulf to Asia reached about $36 a barrel, more than five times pre-war levels, the same report said. Brent settled at $106.06 on Oct. 14, then eased to about $104 on Thursday, according to [Trading Economics](https://www.tradingview.com/news/te_news:592308:0-brent-falls-to-104/), as traders weighed the shipping risk against weaker demand. [FinanceFeeds](https://financefeeds.com/brent-crude-oil-price-104-us-weighs-tanker-sanctions-easing-hormuz-sinking-bull-110-bear-98/), citing Reuters, reported that Washington is weighing easing sanctions on some "shadow fleet" tankers that have carried Venezuelan, Russian and Iranian oil to bring record freight rates down; shippers would have to apply to the Treasury, and no decision has been made.
 
 **Shipping.** The Houthis have tried since July to close the Bab el-Mandeb Strait to Saudi-linked traffic, FreightWaves reported, though no broad Red Sea closure has been confirmed. A Freightos analyst described the immediate effect as "uncertainty rather than a confirmed capacity shock."
 
@@ -93,6 +104,7 @@ The point for 2027 bids: an index-linked surcharge passes declines back to you a
 
 - **Saudi response and U.S. involvement.** Saudi Arabia has promised a serious response, and the White House is weighing joining strikes on the Houthis. A wider campaign raises the risk to Gulf exports and Red Sea shipping.
 - **Weekly DOE/EIA diesel prices.** The Monday release is the index most carrier surcharges follow; watch whether the recent easing reverses after the Aramco strike.
+- **U.S. tanker sanctions.** If Washington lets shippers apply to use some sanctioned tankers, crude and product freight rates could ease; watch for a Treasury announcement.
 - **The IEA's November Oil Market Report.** It will show whether Gulf product exports kept recovering in October or slipped back.
 
 ## The bigger picture
