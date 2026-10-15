@@ -50,6 +50,8 @@ The case landed days before the third annual Freight Fraud Awareness Day on Oct.
 
 Chuck Forsaith of the Pharmaceutical Cargo Security Coalition said pharmaceutical losses were once "almost exclusively what we would call straight theft" but now rely more on fraud, and that stolen drugs can re-enter legitimate commerce without required quality controls. Recent cases reported by FreightWaves include a cloned $60,000 shipment that redirected 41,000 pounds of glycerin in Illinois.
 
+**Sharing without exposing defenses.** Andrey Drotenko of Verified Carrier said the awareness day is a moment "to slow down, compare notes, and just act together," and that companies can discuss incidents without revealing the safeguards criminals might exploit, according to FreightWaves. Other cases FreightWaves has linked to the trend include a man sentenced to two years for a $3.5 million Amazon fraud using 23 trucking accounts, and $1 million of stolen BNSF and Union Pacific rail cargo found at a Los Angeles-area shoe retailer. GenLogs, FreightValidate and Freight Bites also support the campaign, which runs stopfreightfraud.com.
+
 ## Where fraud gets in
 
 | Stage | Common scheme | Control |

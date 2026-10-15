@@ -53,9 +53,11 @@ Cass noted that sequential growth slowed slightly because spot rates eased and f
 
 **Demand is improving, but modestly.** Cass described freight demand as "recovering," citing modest retail and industrial growth, restocking as container imports surge, a smaller private fleet and rising equipment sales. The ISM manufacturing index was 54.5 in September, its ninth straight month of expansion. High fuel prices are also pushing some freight from road to rail.
 
-**Regional spikes.** Weather can tighten local markets quickly. In early October, a Gulf Coast storm pushed tender rejections and spot rates noticeably higher in Mobile and Montgomery, Alabama, with inbound rejections climbing sharply relative to the national average, according to FreightWaves. Shippers with lanes in storm-prone regions should keep backup carriers and brokers qualified even when national conditions look stable.
+**Regional spikes.** Weather can tighten local markets quickly. In early October, Tropical Storm Isaías pushed tender rejections and spot rates noticeably higher in Mobile and Montgomery, Alabama, with inbound rejections climbing sharply relative to the national average, according to FreightWaves. Shippers with lanes in storm-prone regions should keep backup carriers and brokers qualified even when national conditions look stable.
 
 **Intermodal as a pressure valve.** With diesel high, some freight is moving from truck to rail, and FreightWaves' SONAR now benchmarks intermodal rates against van rates, including the nearest rail ramps for each lane. For long-haul, time-tolerant freight, an intermodal comparison belongs in every 2027 bid.
+
+**Spot is closing the gap.** Spot rates have risen faster than contract rates, and the narrowing gap between them gives carriers more leverage as annual bids renew, FreightWaves analyst Julie Van de Kamp said. Truckload demand rose about 1.25% week over week in early October, back to pre-Labor Day levels after a post-holiday dip. When spot sits close to contract, carriers have less reason to accept contracted loads at old rates, which is how tender rejections stay in the 13% to 14% range.
 
 ## The carrier cost math
 

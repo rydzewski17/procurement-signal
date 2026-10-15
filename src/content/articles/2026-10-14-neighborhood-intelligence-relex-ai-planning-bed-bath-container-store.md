@@ -54,6 +54,8 @@ The vendor's retail customer list has been growing. Dollar General said in Augus
 
 **Speed of rollout.** Doug Iverson, Relex's senior vice president for North America, said the company's implementation approach took planning teams from kickoff to key capabilities in "a matter of weeks." Relex says it serves more than 600 customers.
 
+**What the stated goals mean.** Neighborhood Intelligence framed the project around protecting in-stock rates, improving sell-through and speeding up decisions, according to Supply Chain Dive. Lowe's link to Relex builds on an existing partnership, and Dollar General's August announcement covered ordering schedules as well as replenishment and supplier coordination. For suppliers to these chains, the common thread is that ordering decisions are moving into the same system that sets store-level forecasts.
+
 ## What changes for suppliers when a retailer unifies planning
 
 When forecasting, replenishment, allocation and financial planning sit on one platform, purchase orders follow the forecast more closely and change more often. Based on how these platforms work, suppliers should expect changes like these:

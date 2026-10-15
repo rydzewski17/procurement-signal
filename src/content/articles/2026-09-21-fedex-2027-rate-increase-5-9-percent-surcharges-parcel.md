@@ -77,6 +77,8 @@ UPS had not announced its 2027 increase as of Sept. 21, though it has historical
 
 **Four years of compounding.** FedEx has now applied a 5.9% average increase four years running, for 2024, 2025, 2026 and 2027. Compounded, that is about 26% above 2023 list rates, by our calculation, before surcharges and before any contractual discounts.
 
+**Most services rise faster than the average.** Five of FedEx's seven major services rise by more than 5.9% on average, according to Loop's analysis reported by Supply Chain Dive. Ground packages of 1 to 5 pounds rise 6.49%, more than heavier weight brackets, which hits e-commerce shippers of light parcels hardest. The actual increase on any package depends on service, weight and distance. Supply Chain Dive noted that FedEx has de-emphasized general e-commerce volume in recent quarters and is pursuing more profitable segments such as healthcare and automotive, which helps explain why light residential packages see some of the steepest increases.
+
 ## What it means for your parcel spend
 
 The table below shows how the same 5.9% headline lands differently depending on your mix. These are illustrative profiles, not forecasts.

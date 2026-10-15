@@ -77,6 +77,8 @@ The headline rate is 100% of value, but most trade will see something lower, acc
 
 The Commerce Department and HHS have said they will offer pathways for more companies to sign onshoring and most-favored-nation pricing agreements, but have not published the approval criteria. That means a supplier's rate can change mid-contract when it signs a deal.
 
+**Two details that change which rate applies.** The phase-in dates were set at 120 and 180 days after the proclamation, according to International Trade Insights. And the 0% treatment for the specialty categories, such as orphan drugs and cell and gene therapies, applies only if the product comes from a jurisdiction with a recognized trade deal or meets an urgent public health need, so an exclusion on the list does not guarantee 0% for every source. The proclamation does not define "patented product," and the Annex I product list is where classification questions will be settled. The White House issued a fact sheet with rates, covered products and implementation details.
+
 ## One product, five possible rates
 
 The same patented product can carry very different duty depending on who makes it and where. On a shipment with a $1 million customs value:

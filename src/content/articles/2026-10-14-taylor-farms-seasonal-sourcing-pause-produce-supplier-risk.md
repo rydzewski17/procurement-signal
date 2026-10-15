@@ -65,6 +65,8 @@ Beyond the seasonal pause, Taylor says it will:
 - Invest in research on detecting and preventing Cyclospora
 - Join a public-private task force with the FDA, scientists and industry on prevention measures for growers
 
+**How the FDA described the evidence.** In closing its investigation, the FDA said it lacked enough evidence to determine how the contamination occurred, but cited "the strong epidemiological data and traceback convergence supporting the link" to Taylor Farms de Mexico, according to Supply Chain Dive. Supply Chain Dive reported in July that the FDA had found the lettuce sample did not contain the parasite after retesting. Taylor's task force will include the FDA, scientists, industry leaders and public health officials, with a mandate that includes prevention measures for fresh produce growers.
+
 ## Timeline
 
 | Date | Event |

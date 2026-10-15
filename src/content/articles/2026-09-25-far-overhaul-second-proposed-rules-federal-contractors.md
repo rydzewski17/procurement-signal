@@ -74,6 +74,10 @@ Wiley notes that the second-round proposals go further than the interim class de
 
 A final set of four notices covering the remaining FAR parts is expected in 2026. Those will also be proposals; no final rules have been issued yet.
 
+**How the overhaul started.** The Office of Management and Budget launched the Revolutionary FAR Overhaul on May 2, 2025 with memo M-25-25, implementing Executive Order 14275, "Restoring Common Sense to Federal Procurement," according to Sheppard Mullin. In the first phase, the FAR Council drafted model deviations for all 53 FAR parts, agencies adopted them through class deviations, and the Council received nearly 1,600 comments. The stated goals are to return the FAR to its statutory basis, rewrite it in plain language and remove most non-statutory rules. The Council plans 12 proposed rules in total, with Part 52 clauses updated as it goes.
+
+**What the first set changed.** The June proposals, which closed for comment on July 23, would cut about half of the information required for SAM.gov registration, raise sole-source approval authority to $10 million for Defense, NASA and Coast Guard contracting officers and to $900,000 elsewhere, and let agencies disclose redacted technical evaluations and source selection decisions in agency-level protests. They also proposed replacing mandatory audits of termination settlement proposals with a risk-based approach and shortening deadlines: settlement proposals would be due 90 days after termination rather than one year, and inventory schedules 60 days rather than 120. That change would not apply to commercial contracts under Part 12.
+
 ## Timeline so far
 
 | Date | Step |

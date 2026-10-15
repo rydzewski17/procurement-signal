@@ -66,6 +66,8 @@ Other companies are using refunds differently. McCormick received about $28 mill
 
 **What Levi's is buying.** Most of Levi's supply chain reinvestment falls in the current quarter. The company frames the refund as a chance to strengthen distribution and logistics while keeping its margin targets, rather than as a windfall to pass through to price.
 
+**How Levi's split the money.** Of the roughly $60 million Levi's plans to reinvest, a third goes to distribution and logistics and the rest is split equally between marketing and promotional activities, according to Supply Chain Dive. Most of the supply chain spending falls in the current quarter, which ends Nov. 29. Levi's did not name specific distribution centers or sourcing countries. E.l.f. Beauty said it would use its refund to cut prices and lift sales volume.
+
 ## The refunds in context
 
 By our calculation from White and Williams' figures, the $166 billion in IEEPA duties averages about $500,000 per importer and a little over $3,000 per entry, though the amounts are highly concentrated among large importers. Levi's $80 million and the other disclosed amounts are a small share of the total, which suggests many more refunds will appear in company results over the coming quarters as claims are processed.

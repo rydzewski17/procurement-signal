@@ -63,6 +63,8 @@ Over the first nine months of 2026, OOCL's liner revenue rose 18.9% to $7.96 bil
 
 **What the numbers imply.** Dividing revenue by volume, OOCL earned roughly $2,420 per TEU on the trans-Pacific in the third quarter, against about $1,590 a year earlier, a rise of about 52%. On Asia–Europe it earned roughly $1,740 per TEU. These are our calculations from OOCL's figures, and they include all contract and spot business, not just spot rates.
 
+**Capacity and load factors.** OOCL's figures come from an Oct. 9 operational update by its parent, Orient Overseas (International) Ltd. Loadable capacity grew 3.6% in the quarter while the overall load factor rose 4.2%, so ships were fuller as well as better paid. Over nine months, volume reached 6.25 million TEU, average revenue per TEU rose 11.6% and Asia–Europe revenue rose 19% to $1.70 billion. Trans-Pacific revenue was $837.9 million in the third quarter of 2025, on 526,032 TEU, the base behind the 71.8% jump.
+
 ## What the gap between lanes means for your budget
 
 Rate levels differ so much by lane that a single global ocean budget assumption is likely to be wrong in both directions. Using Xeneta's Oct. 7 averages:

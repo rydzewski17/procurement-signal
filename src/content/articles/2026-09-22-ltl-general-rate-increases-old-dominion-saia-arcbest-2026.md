@@ -63,6 +63,8 @@ A GRI is an expected average across lanes and weight classes, so individual lane
 
 **Why LTL pricing is sticky.** LTL networks depend on terminals, which are expensive and slow to build, so capacity can't be added quickly when demand recovers. Carriers also price to cover rising real estate, equipment, technology and labor costs, the reasons Old Dominion gave this year. When the industry entered past downturns, some carriers skipped increases or failed to make them stick; this cycle, they have kept raising rates and are now doing so earlier.
 
+**More context on the timing.** Old Dominion's 2025 increase also averaged 4.9%, so this year's change is about timing rather than size, according to FreightWaves. Old Dominion said the increase will also fund investment in its service network and technology. The August PMI reading of 54.6 was 100 basis points below a four-year high set in July, and the new orders subindex fell 3 points to 53.7 but stayed in growth territory. With tonnage lagging the PMI by about three months, carriers expect volumes to firm into the fourth quarter and early 2027, which is when shippers will negotiate many contract renewals.
+
 ## How GRIs reach your invoice
 
 | Contract structure | Effect of a GRI | What to negotiate |

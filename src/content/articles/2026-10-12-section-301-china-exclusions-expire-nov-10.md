@@ -43,6 +43,8 @@ faqs:
     a: "For unliquidated entries, a post-summary correction can change the Chapter 99 code. For entries liquidated in the past 180 days, a protest is the usual route. Finally liquidated entries are very hard to recover."
   - q: "Does an exclusion remove all tariffs?"
     a: "No. It removes only the Section 301 layer. MFN duties, Section 232 tariffs and antidumping or countervailing duties still apply."
+  - q: "How do I check whether my product is covered by a Section 301 China exclusion?"
+    a: "Match the product at the 10-digit HTSUS level, compare every technical parameter in the exclusion text in U.S. notes 20(vvv) and 20(www), document the match, and request a CBP binding ruling if the match is close. Partial matches are not covered."
 ---
 
 
@@ -74,6 +76,18 @@ The 178 exclusions fall under two codes, according to Great Lakes Customs Law:
 - It removes only the Section 301 layer. MFN duties, Section 232 tariffs and any antidumping or countervailing duties still apply.
 - It applies to the exact product description in the annex, at the 10-digit HTS level, including technical limits such as dimensions, power, materials and end use. A partial match is not covered.
 - The exclusion code replaces the underlying List code on the entry line. Reporting both can trigger a rejection or a later duty bill.
+
+## How to check whether a product is covered
+
+Great Lakes Customs Law sets out a five-step check:
+
+1. **Find the 10-digit HTSUS number** for the product. A mismatch at that level defeats the claim.
+2. **Pull the exclusion text** from U.S. notes 20(vvv)(i)–(iv) and 20(www) in the Federal Register notices.
+3. **Compare every technical parameter**, including dimensions, weight, power, materials, packaging and end use. Matching most of them is not enough.
+4. **Document the match in writing**, citing the note and notice and attaching product specifications.
+5. **Ask CBP for a binding ruling** when the match is close.
+
+The firm's example shows how narrow the descriptions are: an exclusion for rotary compressors rated above 746 watts and up to 2,238 watts, with 2.3 to 5.5 kilowatts of cooling capacity, would not cover a 750-watt unit with 6.0 kilowatts of cooling capacity. The solar equipment exclusions were added in September 2024 and applied retroactively to entries from Jan. 1, 2024, so importers of that equipment may also have refunds to check.
 
 ## What procurement teams should do
 

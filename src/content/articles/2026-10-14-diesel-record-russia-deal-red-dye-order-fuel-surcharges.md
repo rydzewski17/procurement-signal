@@ -63,6 +63,8 @@ Analysts doubt the volumes will show up or matter. S&P Global Energy CERA estima
 
 **Other factors.** Strategic stock releases by G7 and IEA members, continuing drone strikes on Russian refineries, talk of a possible U.S. export ban and uncertainty about flows through the Strait of Hormuz all add to volatility.
 
+**Freight demand is not the driver.** FreightWaves' Craig Fuller described diesel as dropping "a little bit, but not much" in October, with "not a whole lot of relief." He said truckload volumes have softened compared with recent years, partly because of weaker food and beverage freight, which he linked to inflation, reduced SNAP benefits and GLP-1 medications, and partly because of shifts in data center freight. Citing Arrive Logistics, he said capacity and the supply-demand balance, not demand, are setting the market. That means fuel costs are landing on a freight market where carriers already have pricing power, so surcharges are unlikely to be absorbed.
+
 ## What it means for your surcharges
 
 Most truckload fuel surcharges follow a simple formula: the weekly DOE/EIA price minus a base price, divided by an assumed fuel economy. The table below uses a $1.25 base and 6.5 miles per gallon, common contract assumptions. Your contracts may differ.

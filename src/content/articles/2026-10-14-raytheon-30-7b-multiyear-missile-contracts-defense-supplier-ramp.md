@@ -63,6 +63,8 @@ Other awards this year point to the same supplier pressure. In August, the Missi
 
 Raytheon says it has grown its workforce, built partnerships across the defense industrial base and automated production. "SM-6's multi-mission capability is vital to our customer, and Raytheon is intensely focused on meeting the demand," Raytheon President Phil Jasper said. The company did not name suppliers or provide current production rates. RTX reported 2025 sales above $88 billion and has more than 180,000 employees.
 
+**What the missiles do and who else is involved.** SM-6 engages air and surface threats and is integrated with the Army's Typhon launcher, the Navy's F/A-18 Super Hornet and Navy warships, according to Manufacturing Dive. SM-3 Block IB intercepts short- to intermediate-range ballistic missiles in midcourse flight; Raytheon says it was first used in combat in 2024. Boeing is a named partner on the separate SM-3 component work. Feinberg's August request asked contractors for production acceleration plans with delivery schedules, as the Pentagon tries to replenish depleted munitions stockpiles.
+
 ## The scale of this year's missile awards
 
 Adding the awards named above, Raytheon has received about $75 billion of missile production contracts in 2026: up to $24.4 billion for SM-6, $22.9 billion for Tomahawk, $20.7 billion for AMRAAM, $6.3 billion for SM-3 Block IB and $745 million for SM-3 Block IIA. That is our tally of the announced values, several of which are ceilings rather than guaranteed orders, and it runs over multiple years. For comparison, RTX reported total 2025 sales above $88 billion across all its businesses.

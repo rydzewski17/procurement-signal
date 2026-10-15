@@ -67,6 +67,8 @@ Plant announcements are early signals of where supplier capacity will loosen or 
 - **Re:Build, Rock Hill, South Carolina, $20 million:** tripling its local footprint for aerospace, defense, energy and robotics components, with 150 jobs by 2028
 - **Xingyu Automotive Lighting, Landis, North Carolina, $50 million:** its first U.S. plant, making injection-molded lighting components, with 300 to 500 jobs over several years
 
+**More detail on the incentives.** Blue Origin's $18.2 million Texas grant came with a $10,000 incentive tied to hiring veterans, and the Hutto campus sits in Constellation Park, according to Manufacturing Dive. Cleveland-Cliffs describes Butler Works as the only producer of grain-oriented electrical steel in the U.S.; its new induction reheat furnaces are also meant to improve quality, reduce slab losses and cut hot-rolling emissions. Accu-Precision's 110,000-square-foot facility, driven by new contracts from an undisclosed aerospace customer, qualifies for a $1.7 million job creation tax credit over eight years. Re:Build's 130,000-square-foot Rock Hill site will add a clean room for composite fabrication, a heat-treat oven, a quality lab and machining, with a $100,000 state grant. Xingyu's Landis plant will make injection-molded headlight and taillight components.
+
 ## The investments at a glance
 
 | Company | Location | Investment | Jobs | Product | Timing |

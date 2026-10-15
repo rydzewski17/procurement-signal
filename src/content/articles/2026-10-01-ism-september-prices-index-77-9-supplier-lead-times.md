@@ -75,6 +75,10 @@ A supplier deliveries reading above 50 means deliveries are slowing; they have s
 
 **Sentiment.** 60% of respondent comments were negative. Of those, 46% cited price volatility, 34% tariffs, 30% the war with Iran and 21% longer lead times.
 
+**Which industries are growing.** Twelve of 18 manufacturing industries grew in September, led by electrical equipment, appliances and components; nonmetallic mineral products; primary metals; plastics and rubber products; computer and electronic products; and fabricated metal products, according to Distribution Strategy Group's summary of the report. Transportation equipment, machinery and chemical products also expanded. Only printing and textile mills contracted. Five of the six largest industries reported new-order growth, and backlogs rose in computer and electronic products, transportation equipment, food and beverage, and machinery. The recovery follows a 10-month contraction that left the PMI at 47.9 at the end of 2025.
+
+**Customers are running lean.** ISM's customers' inventories index fell to 41.6 from 42.8, meaning manufacturers judge their customers' stock as too low. Eleven industries said so, including primary metals, computer and electronic products, electrical equipment, fabricated metals, plastics and rubber, machinery and wood products. Twelve industries reported slower supplier deliveries. Low customer inventories plus rising orders usually means restocking demand ahead, which keeps pressure on the same supply chains that are already slow.
+
 ## How to read the numbers
 
 ISM's indexes are diffusion indexes built from survey answers. A reading above 50 means more respondents reported an increase than a decrease. That makes them a measure of how widespread a change is, not how large it is:
