@@ -9,7 +9,7 @@ const cats = Object.fromEntries(SOFTWARE.categories.map((c) => [c.slug, {
   slug: c.slug, name: c.name, accent: c.accent, answer: c.answer, choose: c.choose.slice(0, 4), pricing: c.pricing, implementation: c.implementation,
   vendors: c.vendors.map((v) => ({
     name: v.name, id: slugify(v.name), team: v.team, avg: teamAverage(v), g2: v.g2.rating, reviews: v.g2.reviews,
-    mix: mixOf(v), bestFor: v.bestFor ?? '', take: v.take ?? '',
+    mix: mixOf(v), bestFor: v.bestFor ?? '', take: v.take ?? '', website: v.website ?? '',
   })),
   leader: rankTeam(c).ranked[0]?.v.name ?? null,
 }]));
@@ -151,6 +151,7 @@ const jsonLd = { '@context': 'https://schema.org', '@type': 'WebApplication', na
   :global(.vc .nums b) { display: block; font: 700 18px/1 var(--head); color: var(--ink); }
   :global(.vc a) { font: 600 13.5px/1 var(--ui); color: var(--teal); text-decoration: none; }
   :global(.vc a:hover) { text-decoration: underline; }
+  :global(.vc .vlinks) { display: flex; flex-wrap: wrap; gap: 6px 14px; }
   .res-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 14px; margin-top: 18px; }
   .box { background: var(--navy-tint); padding: 16px 18px; }
   .box h3 { font: 700 15px/1.2 var(--ui); margin: 0 0 8px; }
@@ -228,7 +229,7 @@ const jsonLd = { '@context': 'https://schema.org', '@type': 'WebApplication', na
           <p class="bf">${esc(x.v.bestFor)}</p>
           <p class="tk">${why.join(' ')}</p>
           <div class="nums"><span><b>${x.v.avg != null ? x.v.avg.toFixed(2) : '–'}</b>Our score</span><span><b>${x.v.g2 != null ? x.v.g2.toFixed(1) : '–'}</b>G2 rating</span><span><b>${x.v.reviews.toLocaleString('en-US')}</b>G2 reviews</span></div>
-          <a href="/software/${c.slug}/#${x.v.id}">Our take on ${esc(x.v.name)} →</a>
+          <div class="vlinks"><a href="/software/${c.slug}/#${x.v.id}">Our take on ${esc(x.v.name)} →</a>${x.v.website ? `<a href="${esc(x.v.website)}" target="_blank" rel="noopener nofollow">Visit site ↗</a>` : ''}</div>
         </article>`;
       }).join('');
       document.getElementById('r-ask').innerHTML = c.choose.map(([t, d]) => `<li><strong>${esc(t)}.</strong> ${esc(d)}</li>`).join('');

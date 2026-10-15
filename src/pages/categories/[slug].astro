@@ -11,6 +11,6 @@ const posts = await getPosts();
 const sec = sectionOf([c.slug]);
 const chips = sec.slugs.filter((sl: string) => sl !== c.slug).map((sl: string) => ({ href: `/categories/${sl}/`, label: categoryBySlug[sl].name }));
 ---
-<SectionPage title={c.name} blurb={c.blurb} slugs={[c.slug]} posts={posts} chips={chips} crumb={{ href: `/sections/${sec.id}/`, label: sec.name }}>
+<SectionPage title={c.name} blurb={c.blurb} slugs={[c.slug]} posts={posts} chips={chips} crumb={{ href: `/sections/${sec.id}/`, label: sec.name }} parent={{ id: sec.id, name: sec.name, slugs: sec.slugs }}>
   <div slot="head" style="margin-top:14px"><FollowButton slug={c.slug} name={c.name} /></div>
 </SectionPage>

@@ -1,7 +1,7 @@
 ---
 // Sidebar widget: step through software categories with previous/next.
 // Works without JavaScript (first category shows, with a link to all rankings).
-import { SOFTWARE, status, rankG2, rankTeam } from '../data/software';
+import { SOFTWARE, status, rankG2, rankTeam, slugify } from '../data/software';
 const items = SOFTWARE.categories.map((c) => ({
   slug: c.slug, name: c.name, blurb: c.blurb, st: status(c),
   g2: rankG2(c).ranked.slice(0, 5), team: rankTeam(c).ranked.slice(0, 5),
@@ -20,15 +20,15 @@ const items = SOFTWARE.categories.map((c) => ({
         <>
           <p class="sw-sub sw-cols"><span>Our top 5</span><span>Ours</span><span>G2</span></p>
           <ol class="sw-list sw-list3">
-            {it.team.map((x) => <li><span>{x.v.name}</span><span class="sw-ours">{x.avg?.toFixed(1)}</span><span class="sw-g2">{x.v.g2.rating?.toFixed(1) ?? '–'}</span></li>)}
+            {it.team.map((x) => <li><span class="sw-n"><a href={`/software/${it.slug}/#${slugify(x.v.name)}`}>{x.v.name}</a>{x.v.website && <a class="sw-ext" href={x.v.website} target="_blank" rel="noopener nofollow" aria-label={`${x.v.name} website`} title={`Visit ${x.v.name}`}>↗</a>}</span><span class="sw-ours">{x.avg?.toFixed(1)}</span><span class="sw-g2">{x.v.g2.rating?.toFixed(1) ?? '–'}</span></li>)}
           </ol>
-          {it.g2[0] && <p class="sw-team">Highest on G2: <strong>{it.g2[0].name}</strong>, {it.g2[0].g2.rating?.toFixed(1)} from {it.g2[0].g2.reviews.toLocaleString('en-US')} reviews.</p>}
+          {it.g2[0] && <p class="sw-team">Highest on G2: <strong><a href={`/software/${it.slug}/#${slugify(it.g2[0].name)}`}>{it.g2[0].name}</a></strong>, {it.g2[0].g2.rating?.toFixed(1)} from {it.g2[0].g2.reviews.toLocaleString('en-US')} reviews.</p>}
         </>
       ) : it.g2.length > 0 ? (
         <>
           <p class="sw-sub">Highest on G2</p>
           <ol class="sw-list">
-            {it.g2.map((v) => <li><span>{v.name}</span><span class="sw-score">{v.g2.rating?.toFixed(1)}<small> / {v.g2.reviews.toLocaleString('en-US')} reviews</small></span></li>)}
+            {it.g2.map((v) => <li><span class="sw-n"><a href={`/software/${it.slug}/#${slugify(v.name)}`}>{v.name}</a>{v.website && <a class="sw-ext" href={v.website} target="_blank" rel="noopener nofollow" aria-label={`${v.name} website`}>↗</a>}</span><span class="sw-score">{v.g2.rating?.toFixed(1)}<small> / {v.g2.reviews.toLocaleString('en-US')} reviews</small></span></li>)}
           </ol>
         </>
       ) : <p class="sw-pending">We're collecting verified G2 scores for this category.</p>}
@@ -96,6 +96,11 @@ const items = SOFTWARE.categories.map((c) => ({
   .sw-switch .sw-nav { justify-content: space-between; }
   .sw-jump select { width: 100%; font: 14px var(--ui); padding: 8px; border: 1px solid #b7d3d1; background: #fff; }
   .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .sw-n { display: flex; align-items: baseline; gap: 6px; min-width: 0; }
+  .sw-n a { color: var(--ink); text-decoration: none; }
+  .sw-n a:hover { color: var(--teal); text-decoration: underline; }
+  .sw-ext { font-size: 12px; color: var(--muted) !important; }
+  .sw-team a { color: var(--ink); }
 </style>
 
 <style>

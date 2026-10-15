@@ -1,22 +1,81 @@
 ---
-// Section and category pages (procurementmag.com/news layout): three large
-// stories, a grid of eleven more, a Most popular rail, then a clean More news list.
-// Every item is our own reporting.
+// Section and category pages: three lead stories, the latest in this topic with photos and
+// summaries, then guides, price signals and software rankings for the topic, and our
+// other recent reporting so even a young category reads like a full front page.
+import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Tile from './Tile.astro';
 import Rail from './Rail.astro';
+import Media from '../Media.astro';
+import Kicker from '../Kicker.astro';
 import { feedFor, shortDate, clip } from '../../data/feed';
 import { categoryBySlug } from '../../data/categories.mjs';
+import { categoryWatch } from '../../data/watch';
+import { fmtPct } from '../../data/costs';
+import { SOFTWARE, rankTeam, slugify } from '../../data/software';
+import { TYPE_LABEL } from '../../data/site';
 
-interface Props { title: string; blurb: string; slugs: string[]; posts: any[]; crumb?: { href: string; label: string }; chips?: { href: string; label: string }[]; sectionKey?: string }
-const { title, blurb, slugs, posts, crumb, chips = [], sectionKey = 'categories' } = Astro.props;
+interface Props {
+  title: string; blurb: string; slugs: string[]; posts: any[];
+  crumb?: { href: string; label: string }; chips?: { href: string; label: string }[]; sectionKey?: string;
+  parent?: { id: string; name: string; slugs: string[] };
+}
+const { title, blurb, slugs, posts, crumb, chips = [], sectionKey = 'categories', parent } = Astro.props;
+
 const items = feedFor(posts, slugs);
 const big = items.slice(0, 3);
-const grid = items.slice(3, 14);
-const more = items.slice(14, 40);
-// When a category is still building up, keep the page full with our other recent stories.
-const own = new Set(items.map((x) => x.href));
-const elsewhere = items.length < 9 ? feedFor(posts, [], own, true).slice(0, items.length ? 6 : 9) : [];
+const latest = items.slice(3, 15);
+const more = items.slice(15, 40);
+const shown = new Set(items.slice(0, 15).map((x) => x.href));
+
+// Stories from the parent section, then our other recent reporting, to keep the page full.
+const parentItems = parent ? feedFor(posts, parent.slugs, shown).slice(0, Math.max(0, 8 - latest.length)) : [];
+parentItems.forEach((x) => shown.add(x.href));
+const otherItems = items.length + parentItems.length < 12 ? feedFor(posts, [], shown, true).slice(0, 6) : [];
+
+// Guides, price signals and software rankings that relate to these categories.
+const GUIDES: Record<string, string[]> = {
+  tariffs: ['section-232-tariffs-explained-steel-aluminum-copper-pharma-semiconductors-wood', 'us-tariffs-explained-procurement', 'ieepa-tariff-refunds-cape-guide'],
+  compliance: ['us-tariffs-explained-procurement', 'section-232-tariffs-explained-steel-aluminum-copper-pharma-semiconductors-wood', 'supplier-risk-management-framework'],
+  'public-sector': ['supplier-bankruptcy-warning-signs-guide', 'us-tariffs-explained-procurement'],
+  sustainability: ['supplier-risk-management-framework'],
+  freight: ['truckload-freight-bid-rfp-guide', 'fuel-surcharge-guide-truckload-ltl-parcel', 'ocean-freight-contract-negotiation-guide', 'parcel-ltl-contract-negotiation-guide'],
+  warehousing: ['parcel-ltl-contract-negotiation-guide', 'supplier-bankruptcy-warning-signs-guide'],
+  'supplier-risk': ['supplier-risk-management-framework', 'supplier-bankruptcy-warning-signs-guide'],
+  manufacturing: ['section-232-tariffs-explained-steel-aluminum-copper-pharma-semiconductors-wood', 'procurement-cost-inflation-price-indexes'],
+  metals: ['section-232-tariffs-explained-steel-aluminum-copper-pharma-semiconductors-wood', 'procurement-cost-inflation-price-indexes'],
+  energy: ['fuel-surcharge-guide-truckload-ltl-parcel', 'procurement-cost-inflation-price-indexes'],
+  semis: ['section-232-tariffs-explained-steel-aluminum-copper-pharma-semiconductors-wood', 'supplier-risk-management-framework'],
+  'food-ag': ['supplier-risk-management-framework', 'procurement-cost-inflation-price-indexes'],
+  healthcare: ['section-232-tariffs-explained-steel-aluminum-copper-pharma-semiconductors-wood', 'supplier-risk-management-framework'],
+  sourcing: ['procurement-cost-inflation-price-indexes', 'supplier-risk-management-framework', 'us-tariffs-explained-procurement'],
+  contracts: ['procurement-cost-inflation-price-indexes', 'truckload-freight-bid-rfp-guide', 'fuel-surcharge-guide-truckload-ltl-parcel'],
+  spend: ['ai-in-procurement-guide-agents-governance-vendor-questions', 'procurement-cost-inflation-price-indexes'],
+  'proc-tech': ['ai-in-procurement-guide-agents-governance-vendor-questions'],
+  ai: ['ai-in-procurement-guide-agents-governance-vendor-questions'],
+  talent: ['ai-in-procurement-guide-agents-governance-vendor-questions'],
+  deals: ['supplier-bankruptcy-warning-signs-guide', 'supplier-risk-management-framework'],
+};
+const PRICE: Record<string, string[]> = {
+  metals: ['steel', 'aluminum', 'copper'], energy: ['diesel'], semis: ['semis', 'electrical'], freight: ['ocean', 'trucking', 'diesel'],
+  manufacturing: ['steel', 'electrical', 'resins', 'chemicals'], warehousing: ['paper', 'lumber'], tariffs: ['steel', 'aluminum', 'copper'],
+  contracts: ['steel', 'diesel', 'resins'], sourcing: ['steel', 'resins', 'paper'], 'supplier-risk': ['semis', 'electrical'],
+};
+const SW: Record<string, string[]> = {
+  contracts: ['contract-lifecycle'], spend: ['spend-analytics'], sourcing: ['strategic-sourcing'], 'supplier-risk': ['supplier-risk'],
+  compliance: ['compliance-software'], 'proc-tech': ['procurement-software', 'procure-to-pay'], ai: ['procurement-software'],
+  sustainability: ['compliance-software'], deals: ['procurement-software'], talent: ['procurement-software'], 'public-sector': ['compliance-software'],
+};
+const pick = <T,>(map: Record<string, T[]>) => [...new Set(slugs.flatMap((s) => map[s] ?? []))];
+const allGuides = await getCollection('guides');
+const guideIds = pick(GUIDES);
+const guides = (guideIds.length ? guideIds.map((id) => allGuides.find((g) => g.id === id)).filter(Boolean) : allGuides.slice(0, 3)).slice(0, 3) as any[];
+const watch = categoryWatch(posts);
+const priceIds = pick(PRICE);
+const prices = (priceIds.length ? priceIds.map((id) => watch.find((w) => w.id === id)).filter(Boolean) : watch.slice(0, 4)).slice(0, 4) as any[];
+const swSlugs = pick(SW);
+const swCats = (swSlugs.length ? swSlugs : ['procure-to-pay']).map((s) => SOFTWARE.categories.find((c) => c.slug === s)).filter(Boolean).slice(0, 2) as any[];
+const catLabel = (x: any) => categoryBySlug[x.cats[0]]?.name;
 ---
 <Base title={`${title}: news and analysis`} description={blurb} section={sectionKey}>
   <div class="sec-head">
@@ -24,27 +83,96 @@ const elsewhere = items.length < 9 ? feedFor(posts, [], own, true).slice(0, item
     <h1>{title}</h1>
     <p>{blurb}</p>
     <slot name="head" />
-    {chips.length > 0 && <nav class="sec-chips" aria-label="Topics in this section">{chips.map((c) => <a href={c.href}>{c.label}</a>)}</nav>}
+    {chips.length > 0 && <nav class="sec-chips" aria-label="Related topics">{chips.map((c) => <a href={c.href}>{c.label}</a>)}</nav>}
   </div>
 
-  {(
-    <div class="home-grid">
-      <div class="home-main">
-        {items.length === 0 && <p class="empty">We haven't published a story in this category yet. Here is our latest reporting from across procurement.</p>}
-        <div class="big3">
-          {big.map((x, i) => <Tile item={x} size={i === 0 ? 'lg' : 'md'} showDek={i === 0} />)}
-        </div>
-        {grid.length > 0 && <div class="grid11">{grid.map((x) => <Tile item={x} size="sm" showDek />)}</div>}
-        {elsewhere.length > 0 && (
-          <section class="elsewhere" aria-label="More from Procurement Signal">
-            <h2 class="h-rule">More from Procurement Signal<a class="view-all" href="/archive/">All stories</a></h2>
-            <div class="grid11">{elsewhere.map((x) => <Tile item={x} size="sm" />)}</div>
+  <div class="home-grid">
+    <div class="home-main">
+      {items.length === 0 && <p class="empty">We haven't published a story in this category yet. Here is related reporting and our latest analysis.</p>}
+      {big.length > 0 && <div class="big3">{big.map((x, i) => <Tile item={x} size={i === 0 ? 'lg' : 'md'} showDek={i === 0} />)}</div>}
+
+      {(latest.length > 0 || parentItems.length > 0) && (
+        <section class="latest4 sp-block" aria-label={`The latest in ${title}`}>
+          <h2 class="h-rule">The latest in {title}</h2>
+          {[...latest, ...parentItems].map((x, i) => (
+            <>
+              {i === latest.length && parentItems.length > 0 && parent && <p class="sp-sub">More in <a href={`/sections/${parent.id}/`}>{parent.name}</a></p>}
+              <article class="lrow">
+                <a class="lthumb" href={x.href} tabindex="-1" aria-hidden="true"><Media post={x.post} ratio="card" /></a>
+                <div class="lbody">
+                  <div class="lkick"><Kicker topic={x.post.data.topic} />{x.post.data.type !== 'news' && <span class="ltype">{TYPE_LABEL[x.post.data.type]}</span>}</div>
+                  <h3><a href={x.href}>{x.title}</a></h3>
+                  <p>{x.dek}</p>
+                  {x.fact && <p class="lfact"><b>{x.fact.value}</b> {x.fact.label}</p>}
+                  <span class="lmeta">{shortDate(x.t)} · {x.mins} min read{catLabel(x) && <> · <a href={`/categories/${x.cats[0]}/`}>{catLabel(x)}</a></>}</span>
+                </div>
+              </article>
+            </>
+          ))}
+        </section>
+      )}
+
+      <div class="sp-mods">
+        {guides.length > 0 && (
+          <section class="sp-mod" aria-label="Guides">
+            <h2 class="h-rule">Guides for {title.toLowerCase()}<a class="view-all" href="/guides/">All guides</a></h2>
+            <div class="sp-guides">
+              {guides.map((g: any) => (
+                <a class="sp-guide" href={`/guides/${g.id}/`}>
+                  <span class="sp-gk">Guide</span>
+                  <strong>{g.data.title}</strong>
+                  <span>{clip(g.data.description, 150)}</span>
+                </a>
+              ))}
+            </div>
           </section>
         )}
+
+        {prices.length > 0 && (
+          <section class="sp-mod" aria-label="Prices to watch">
+            <h2 class="h-rule">Prices to watch<a class="view-all" href="/cost-monitor/">All price trends</a></h2>
+            <div class="sp-prices">
+              {prices.map((p: any) => (
+                <a class={`sp-price ${p.status}`} href={`/cost-monitor/${p.id}/`}>
+                  <span class="sp-pn">{p.name}</span>
+                  <b>{fmtPct(p.y1)}</b>
+                  <span class="sp-ps">{p.statusLabel} · 12 months</span>
+                  <span class="sp-pm">{p.impact?.meaning ? clip(p.impact.meaning, 120) : p.posture}</span>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {swCats.map((c: any) => {
+          const top = rankTeam(c).ranked.slice(0, 5);
+          return top.length > 0 && (
+            <section class="sp-mod" aria-label={`${c.name} rankings`}>
+              <h2 class="h-rule">Top {c.name} software<a class="view-all" href={`/software/${c.slug}/`}>Full ranking</a></h2>
+              <ol class="sp-sw">
+                {top.map((x, i) => (
+                  <li>
+                    <span class="sp-rk">{i + 1}</span>
+                    <span class="sp-swn"><a href={`/software/${c.slug}/#${slugify(x.v.name)}`}>{x.v.name}</a>{x.v.website && <a class="sp-ext" href={x.v.website} target="_blank" rel="noopener nofollow" aria-label={`${x.v.name} website`}>↗</a>}<small>{x.v.bestFor}</small></span>
+                    <span class="sp-sc"><b>{x.avg?.toFixed(1)}</b><small>Ours</small></span>
+                    <span class="sp-sc"><b>{x.v.g2.rating?.toFixed(1) ?? '–'}</b><small>G2</small></span>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          );
+        })}
       </div>
-      <Rail posts={posts} show={['popular', 'software', 'analysis', 'events', 'outlook', 'ad']} exclude={new Set(items.map((x) => x.href))} />
+
+      {otherItems.length > 0 && (
+        <section class="elsewhere" aria-label="More from Procurement Signal">
+          <h2 class="h-rule">More from Procurement Signal<a class="view-all" href="/archive/">All stories</a></h2>
+          <div class="grid11">{otherItems.map((x) => <Tile item={x} size="sm" showDek />)}</div>
+        </section>
+      )}
     </div>
-  )}
+    <Rail posts={posts} show={['popular', 'software', 'analysis', 'events', 'outlook', 'ad']} exclude={new Set(items.map((x) => x.href))} />
+  </div>
 
   {more.length > 0 && (
     <section class="more-news" aria-label="More news">
@@ -63,3 +191,38 @@ const elsewhere = items.length < 9 ? feedFor(posts, [], own, true).slice(0, item
     </section>
   )}
 </Base>
+
+<style>
+  .sp-block { margin-top: 34px; }
+  .sp-sub { font: 600 13px/1 var(--ui); color: var(--muted); margin: 22px 0 0; padding-top: 14px; border-top: 3px solid var(--rule); }
+  .sp-sub a { color: var(--teal); }
+  .sp-mods { display: grid; gap: 34px; margin-top: 40px; }
+  .sp-guides { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 14px; }
+  .sp-guide { display: flex; flex-direction: column; gap: 6px; padding: 16px; background: var(--navy-tint); border-top: 4px solid var(--teal); text-decoration: none; color: var(--ink); }
+  .sp-guide:hover { background: #e3e9f0; }
+  .sp-gk { font: 600 11.5px/1 var(--ui); color: var(--teal); text-transform: uppercase; letter-spacing: .06em; }
+  .sp-guide strong { font: 700 17px/1.25 var(--head); }
+  .sp-guide span:last-child { font: 13.5px/1.45 var(--ui); color: var(--ink-2); }
+  .sp-prices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 14px; }
+  .sp-price { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; padding: 14px 16px; border: 1px solid var(--rule); border-left: 4px solid var(--ink-2); text-decoration: none; color: var(--ink); }
+  .sp-price.rising-fast, .sp-price.rising { border-left-color: var(--red); }
+  .sp-price.easing { border-left-color: var(--teal); }
+  .sp-price:hover { box-shadow: 0 6px 16px rgba(14,42,71,.1); }
+  .sp-pn { font: 700 16px/1.25 var(--head); }
+  .sp-price b { font: 700 18px/1 var(--head); text-align: right; }
+  .sp-ps { grid-column: 1 / -1; font: 600 12px/1 var(--ui); color: var(--muted); }
+  .sp-pm { grid-column: 1 / -1; font: 13.5px/1.45 var(--ui); color: var(--ink-2); }
+  .sp-sw { list-style: none; margin: 10px 0 0; padding: 0; }
+  .sp-sw li { display: grid; grid-template-columns: 26px minmax(0, 1fr) 48px 48px; gap: 10px; align-items: center; padding: 11px 0; border-bottom: 1px solid var(--rule); }
+  .sp-rk { font: 700 18px/1 var(--head); color: var(--teal); }
+  .sp-swn a { font: 700 16px/1.2 var(--head); color: var(--ink); text-decoration: none; }
+  .sp-swn a:hover { color: var(--teal); text-decoration: underline; }
+  .sp-swn .sp-ext { font: 12px/1 var(--ui); color: var(--muted); margin-left: 6px; }
+  .sp-swn small { display: block; font: 13px/1.4 var(--ui); color: var(--muted); margin-top: 3px; }
+  .sp-sc { text-align: center; }
+  .sp-sc b { display: block; font: 700 17px/1 var(--head); color: var(--ink); }
+  .sp-sc small { font: 11px/1 var(--ui); color: var(--muted); }
+  @media (max-width: 760px) {
+    .sp-guides, .sp-prices { grid-template-columns: 1fr; }
+  }
+</style>

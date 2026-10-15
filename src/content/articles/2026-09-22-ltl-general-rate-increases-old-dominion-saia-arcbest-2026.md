@@ -25,6 +25,8 @@ image:
 sources:
   - name: "FreightWaves \u2014 Old Dominion pulls forward 4.9% GRI as LTL carriers accelerate rate hikes"
     url: "https://www.freightwaves.com/news/old-dominion-pulls-forward-4-9-gri-as-ltl-carriers-accelerate-rate-hikes"
+  - name: "FreightWaves \u2014 LTL general rate increases buck pricing concerns for industry"
+    url: "https://www.freightwaves.com/news/ltl-general-rate-increases-buck-pricing-concerns-for-industry"
 faqs:
   - q: "What is an LTL general rate increase?"
     a: "A GRI is an increase in a carrier's base tariff rates, expressed as an expected average across lanes and weight classes. It applies to shippers on the carrier's tariff and to contracts priced off it, unless the contract says otherwise."
@@ -51,6 +53,10 @@ Other public LTL carriers have done the same:
 A GRI is an expected average across lanes and weight classes, so individual lanes can rise more or less.
 
 **Demand backdrop.** The ISM manufacturing index was 54.6 in August, its eighth straight month of expansion, and LTL tonnage typically lags the PMI by about three months. FreightWaves described the carriers' pricing outlook as intact, with rising costs as they enter a growth cycle.
+
+**How this compares with 2024.** Two years ago, carriers were still taking increases but on their usual calendar, according to FreightWaves' November 2024 coverage. Old Dominion took 4.9% on Dec. 2, 2024, matching 2023; ArcBest's ABF Freight took 5.9% on Sept. 9; Saia took 7.9% on Oct. 21; and FedEx Freight took 5.9% on the first Monday of the year. Contractual renewals at public carriers were running up mid- to high-single digits even then, during a long freight downturn, which shows how consistently LTL carriers have held pricing discipline.
+
+**Why LTL pricing is sticky.** LTL networks depend on terminals, which are expensive and slow to build, so capacity can't be added quickly when demand recovers. Carriers also price to cover rising real estate, equipment, technology and labor costs, the reasons Old Dominion gave this year. When the industry entered past downturns, some carriers skipped increases or failed to make them stick; this cycle, they have kept raising rates and are now doing so earlier.
 
 ## How GRIs reach your invoice
 

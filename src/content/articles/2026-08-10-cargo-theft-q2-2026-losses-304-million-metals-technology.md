@@ -56,6 +56,10 @@ Verisk CargoNet recorded 677 supply chain theft incidents across the U.S. and Ca
 
 **The longer trend.** A year earlier, in the third quarter of 2025, CargoNet recorded 772 incidents and record losses of $111.88 million, with an average of $336,787 per theft. Copper thefts rose nearly fivefold then, and CargoNet warned that criminals were impersonating carriers and brokers to get around anti-fraud tools focused on the tender stage.
 
+**Where theft concentrates.** CargoNet's third-quarter 2025 report showed the geographic pattern behind the losses: thefts rose 110% year over year in New Jersey, 33% in Pennsylvania, 12% in Texas and 11% in California. "The NYC metro area is emerging as both a primary location for theft activity and a destination for stolen goods," Lewis said then. Food and beverage led by count, with 170 events, followed by household goods with 92 and metals with 65; meat and seafood thefts nearly tripled.
+
+**Two playbooks.** CargoNet described organized groups splitting into two approaches. Some have dropped complex schemes in favor of stealing unattended loaded trailers, especially in Southern California, the Bay Area, Phoenix and Lake Tahoe. Others are refining social engineering, gathering details on assigned carriers and broker contacts and then impersonating them to get around anti-fraud tools that focus on the tender stage, including by using public load board data.
+
 ## Which purchases are most exposed
 
 | You buy | Why it's a target | Extra controls |

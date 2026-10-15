@@ -109,7 +109,8 @@
       "checked": "2026-10-13"
      },
      "take": "The default shortlist entry for SAP ERP shops, and the broadest supplier network in the market. The trade-off is effort: reviewers consistently describe a steep learning curve, and value depends on a strong implementation partner and a plan for supplier enablement.",
-     "web": "Named a Leader (as SAP) in Gartner's 2025 Magic Quadrant for Source-to-Pay Suites. SAP is now rebuilding Ariba around AI, with Joule agents shipping across Ariba and Fieldglass in 2026. Our view: the roadmap is credible, but existing customers should plan for migration effort, not a quick upgrade."
+     "web": "Named a Leader (as SAP) in Gartner's 2025 Magic Quadrant for Source-to-Pay Suites. SAP is now rebuilding Ariba around AI, with Joule agents shipping across Ariba and Fieldglass in 2026. Our view: the roadmap is credible, but existing customers should plan for migration effort, not a quick upgrade.",
+     "website": "https://www.sap.com/products/spend-management/ariba.html"
     },
     {
      "name": "Stampli",
@@ -149,7 +150,8 @@
       "checked": "2026-10-13"
      },
      "take": "An AP-first tool that sits on top of your ERP rather than replacing it, which is why it rolls out quickly. Strong for invoice coding and approvals; procurement teams needing sourcing or contract features will need other tools alongside it.",
-     "web": "Backed by Blackstone and Insight Partners, it is widely seen as an AP-first tool that is easy for approvers to adopt. Our view: a strong pick when invoice approval is the bottleneck, but not a substitute for sourcing or contract tools."
+     "web": "Backed by Blackstone and Insight Partners, it is widely seen as an AP-first tool that is easy for approvers to adopt. Our view: a strong pick when invoice approval is the bottleneck, but not a substitute for sourcing or contract tools.",
+     "website": "https://www.stampli.com"
     },
     {
      "name": "Procurify",
@@ -189,7 +191,8 @@
       "checked": "2026-10-13"
      },
      "take": "A purchasing-control tool for mid-market teams that want requests, approvals and budgets live in weeks. It covers the core purchase-order workflow well; sourcing and supplier risk are light.",
-     "web": "Consistently positioned as a mid-market purchasing tool focused on spend control. Our view: dependable for getting purchase requests under control fast, with less depth as needs grow into sourcing and supplier risk."
+     "web": "Consistently positioned as a mid-market purchasing tool focused on spend control. Our view: dependable for getting purchase requests under control fast, with less depth as needs grow into sourcing and supplier risk.",
+     "website": "https://www.procurify.com"
     },
     {
      "name": "Ramp",
@@ -229,7 +232,8 @@
       "checked": "2026-10-13"
      },
      "take": "The highest-rated finance platform in several of our categories, built around cards, bill pay and a growing procurement module. Best where spend runs through Ramp itself; complex multi-ERP enterprises should test depth before committing.",
-     "web": "Raised $750 million at a $44 billion valuation in June 2026 and reports about $1 billion in annualized revenue. It added purchase requests, vendor management and intake in 2023. Our view: the momentum is real and the product is well liked, but procurement depth still trails dedicated suites for complex, multi-ERP enterprises."
+     "web": "Raised $750 million at a $44 billion valuation in June 2026 and reports about $1 billion in annualized revenue. It added purchase requests, vendor management and intake in 2023. Our view: the momentum is real and the product is well liked, but procurement depth still trails dedicated suites for complex, multi-ERP enterprises.",
+     "website": "https://ramp.com"
     },
     {
      "name": "Precoro",
@@ -269,7 +273,8 @@
       "checked": "2026-10-13"
      },
      "take": "A strong value pick for growing companies that want POs, three-way matching and budgets in one tool. It stays deliberately simple, so very large or highly regulated organizations may outgrow it.",
-     "web": "Smaller and less marketed than its competitors, but its review scores are among the highest in the mid-market. Our view: one of the best value options for growing companies that want POs and three-way matching without a suite."
+     "web": "Smaller and less marketed than its competitors, but its review scores are among the highest in the mid-market. Our view: one of the best value options for growing companies that want POs and three-way matching without a suite.",
+     "website": "https://precoro.com"
     },
     {
      "name": "Teampay (by Paystand)",
@@ -309,7 +314,8 @@
       "checked": "2026-10-13"
      },
      "take": "Pre-approved purchasing with virtual cards: requests are approved and coded before money is spent. Useful for decentralized spend; since the Paystand acquisition, confirm the roadmap during evaluation.",
-     "web": "Acquired by Paystand in 2024 and now part of a broader B2B payments company. Our view: the pre-approval model is useful, but ask about roadmap and support commitments given the change of ownership."
+     "web": "Acquired by Paystand in 2024 and now part of a broader B2B payments company. Our view: the pre-approval model is useful, but ask about roadmap and support commitments given the change of ownership.",
+     "website": "https://www.paystand.com"
     },
     {
      "name": "Zip",
@@ -349,7 +355,8 @@
       "checked": "2026-10-13"
      },
      "take": "The leading intake and orchestration layer: one front door that routes requests to procurement, legal, IT and security. It works on top of your ERP and P2P tools rather than replacing them, so budget for both.",
-     "web": "Raised $190 million at a $2.2 billion valuation in October 2024, with customers including Snowflake, Discover and Sephora, and says more than $107 billion of spend has run through the platform. Our view: the clear leader in intake orchestration, though you will still need a P2P or ERP behind it."
+     "web": "Raised $190 million at a $2.2 billion valuation in October 2024, with customers including Snowflake, Discover and Sephora, and says more than $107 billion of spend has run through the platform. Our view: the clear leader in intake orchestration, though you will still need a P2P or ERP behind it.",
+     "website": "https://ziphq.com"
     },
     {
      "name": "Payhawk",
@@ -386,7 +393,8 @@
       "checked": "2026-10-13"
      },
      "take": "Cards, bills and purchasing for multi-entity companies, with strength in European tax and currency handling. A good fit for mid-market groups operating across the EU and U.S.",
-     "web": "One of Europe's better-funded spend management companies, with a strong multi-entity and multi-currency story. Our view: a good fit for groups operating across the EU and U.S., less proven in large U.S. enterprises."
+     "web": "One of Europe's better-funded spend management companies, with a strong multi-entity and multi-currency story. Our view: a good fit for groups operating across the EU and U.S., less proven in large U.S. enterprises.",
+     "website": "https://payhawk.com"
     },
     {
      "name": "Basware",
@@ -426,7 +434,8 @@
       "checked": "2026-10-13"
      },
      "take": "Built for high invoice volumes and e-invoicing compliance across countries. The interface draws complaints, but few vendors match its coverage of mandated e-invoicing formats.",
-     "web": "Taken private by Accel-KKR and partners in 2022, and named a Leader in Forrester's Q2 2026 AP invoice automation Wave. Our view: its e-invoicing compliance coverage is a real advantage for multinationals, even though users rate the interface below newer tools."
+     "web": "Taken private by Accel-KKR and partners in 2022, and named a Leader in Forrester's Q2 2026 AP invoice automation Wave. Our view: its e-invoicing compliance coverage is a real advantage for multinationals, even though users rate the interface below newer tools.",
+     "website": "https://www.basware.com"
     },
     {
      "name": "Coupa",
@@ -463,7 +472,8 @@
       "checked": "2026-10-13"
      },
      "take": "A full spend management platform that works best when you use several modules together. It suits large companies standardizing procurement, AP and payments on one system; smaller teams may pay for breadth they won't use.",
-     "web": "A Leader in Gartner's 2025 Source-to-Pay Magic Quadrant and in Forrester's Q2 2026 Wave for AP invoice automation. Privately owned by Thoma Bravo since 2023, it is betting heavily on agentic AI, unveiled at its Inspire 2026 conference. Our view: still the safest broad choice for large companies, though pricing and contract terms deserve hard negotiation."
+     "web": "A Leader in Gartner's 2025 Source-to-Pay Magic Quadrant and in Forrester's Q2 2026 Wave for AP invoice automation. Privately owned by Thoma Bravo since 2023, it is betting heavily on agentic AI, unveiled at its Inspire 2026 conference. Our view: still the safest broad choice for large companies, though pricing and contract terms deserve hard negotiation.",
+     "website": "https://www.coupa.com"
     },
     {
      "name": "Ivalua",
@@ -500,7 +510,8 @@
       "checked": "2026-10-13"
      },
      "take": "The most configurable of the large suites, with a reputation for handling direct materials and unusual approval logic. That flexibility needs a capable internal admin team, and its review base skews heavily to large enterprises.",
-     "web": "A Leader in both Gartner's 2025 Source-to-Pay Magic Quadrant and Forrester's Q2 2026 AP invoice automation Wave. Our view: the strongest option for complex and direct-materials procurement, if you have the internal team to configure it well."
+     "web": "A Leader in both Gartner's 2025 Source-to-Pay Magic Quadrant and Forrester's Q2 2026 AP invoice automation Wave. Our view: the strongest option for complex and direct-materials procurement, if you have the internal team to configure it well.",
+     "website": "https://www.ivalua.com"
     }
    ],
    "market": "P2P is splitting into two markets. Enterprise suites (SAP Ariba, Coupa, Ivalua) sell breadth across sourcing, contracts and payments, with long implementations. Finance-led platforms (Ramp, Precoro, Procurify, Stampli) win on speed and usability and are moving up-market. Intake tools like Zip increasingly sit in front of both.",
@@ -609,7 +620,8 @@
       "checked": "2026-10-13"
      },
      "take": "The standard for small-business AP and AR, especially for companies working with outside accountants. Simple and well integrated with QuickBooks, Xero and NetSuite; larger teams may need stronger approval and PO controls.",
-     "web": "Publicly traded and the default AP tool for many small businesses and accounting firms. Our view: excellent for simple AP, but growing companies often outgrow its approval and PO controls."
+     "web": "Publicly traded and the default AP tool for many small businesses and accounting firms. Our view: excellent for simple AP, but growing companies often outgrow its approval and PO controls.",
+     "website": "https://www.bill.com"
     },
     {
      "name": "Stampli",
@@ -649,7 +661,8 @@
       "checked": "2026-10-13"
      },
      "take": "An AP-first tool that sits on top of your ERP rather than replacing it, which is why it rolls out quickly. Strong for invoice coding and approvals; procurement teams needing sourcing or contract features will need other tools alongside it.",
-     "web": "Backed by Blackstone and Insight Partners, it is widely seen as an AP-first tool that is easy for approvers to adopt. Our view: a strong pick when invoice approval is the bottleneck, but not a substitute for sourcing or contract tools."
+     "web": "Backed by Blackstone and Insight Partners, it is widely seen as an AP-first tool that is easy for approvers to adopt. Our view: a strong pick when invoice approval is the bottleneck, but not a substitute for sourcing or contract tools.",
+     "website": "https://www.stampli.com"
     },
     {
      "name": "Ramp",
@@ -689,7 +702,8 @@
       "checked": "2026-10-13"
      },
      "take": "The highest-rated finance platform in several of our categories, built around cards, bill pay and a growing procurement module. Best where spend runs through Ramp itself; complex multi-ERP enterprises should test depth before committing.",
-     "web": "Raised $750 million at a $44 billion valuation in June 2026 and reports about $1 billion in annualized revenue. It added purchase requests, vendor management and intake in 2023. Our view: the momentum is real and the product is well liked, but procurement depth still trails dedicated suites for complex, multi-ERP enterprises."
+     "web": "Raised $750 million at a $44 billion valuation in June 2026 and reports about $1 billion in annualized revenue. It added purchase requests, vendor management and intake in 2023. Our view: the momentum is real and the product is well liked, but procurement depth still trails dedicated suites for complex, multi-ERP enterprises.",
+     "website": "https://ramp.com"
     },
     {
      "name": "Tipalti",
@@ -729,7 +743,8 @@
       "checked": "2026-10-13"
      },
      "take": "Global payables automation for companies paying many suppliers across countries and entities, with tax form collection built in. Strongest when supplier onboarding and cross-border payments are the bottleneck.",
-     "web": "Valued at $8.3 billion in its 2021 Series F, and widely used for global supplier and partner payouts. Our view: one of the strongest choices when cross-border payments and tax compliance are the main pain points."
+     "web": "Valued at $8.3 billion in its 2021 Series F, and widely used for global supplier and partner payouts. Our view: one of the strongest choices when cross-border payments and tax compliance are the main pain points.",
+     "website": "https://tipalti.com"
     },
     {
      "name": "Brex",
@@ -769,7 +784,8 @@
       "checked": "2026-10-13"
      },
      "take": "Corporate cards, bill pay and expenses with tight controls, aimed at startups and growth companies. Procurement depth is limited; it competes on payments and spend control more than sourcing.",
-     "web": "Capital One completed its acquisition of Brex on April 7, 2026, with Brex's CEO staying on. Our view: bank ownership could strengthen payments and credit, but watch whether product investment and pricing change as it is integrated."
+     "web": "Capital One completed its acquisition of Brex on April 7, 2026, with Brex's CEO staying on. Our view: bank ownership could strengthen payments and credit, but watch whether product investment and pricing change as it is integrated.",
+     "website": "https://www.brex.com"
     },
     {
      "name": "AvidXchange",
@@ -806,7 +822,8 @@
       "checked": "2026-10-13"
      },
      "take": "Outsourced AP and payments with deep roots in real estate and construction. Good for teams that want to hand off payment execution; review fees and supplier experience carefully.",
-     "web": "Taken private by TPG on Oct. 15, 2025, at about $2.2 billion, with Corpay as a minority investor. Our view: strong in real estate and construction AP; expect closer ties to Corpay's payment network over time."
+     "web": "Taken private by TPG on Oct. 15, 2025, at about $2.2 billion, with Corpay as a minority investor. Our view: strong in real estate and construction AP; expect closer ties to Corpay's payment network over time.",
+     "website": "https://www.avidxchange.com"
     },
     {
      "name": "Corpay Spend Management",
@@ -843,7 +860,8 @@
       "checked": "2026-10-13"
      },
      "take": "Managed AP with payment execution and supplier enrollment handled for you. Highly rated for service; best for teams that value outsourcing over in-house control.",
-     "web": "Part of Corpay, a large public payments company that also took a minority stake in AvidXchange in 2025. Our view: appealing for teams that want payment execution handled for them, with the usual trade-off of less direct control."
+     "web": "Part of Corpay, a large public payments company that also took a minority stake in AvidXchange in 2025. Our view: appealing for teams that want payment execution handled for them, with the usual trade-off of less direct control.",
+     "website": "https://www.corpay.com"
     },
     {
      "name": "Paymode (Bottomline)",
@@ -883,7 +901,8 @@
       "checked": "2026-10-13"
      },
      "take": "A bank-partnered payment network for moving suppliers from checks to ACH. Low cost for payers, but suppliers sometimes push back on network enrollment, so check acceptance in your supplier base.",
-     "web": "Part of Bottomline, a long-established business payments company. Our view: a practical route off checks, but test supplier enrollment and fees with your own vendors first."
+     "web": "Part of Bottomline, a long-established business payments company. Our view: a practical route off checks, but test supplier enrollment and fees with your own vendors first.",
+     "website": "https://www.paymode.com"
     },
     {
      "name": "Payhawk",
@@ -923,7 +942,8 @@
       "checked": "2026-10-13"
      },
      "take": "Cards, bills and purchasing for multi-entity companies, with strength in European tax and currency handling. A good fit for mid-market groups operating across the EU and U.S.",
-     "web": "One of Europe's better-funded spend management companies, with a strong multi-entity and multi-currency story. Our view: a good fit for groups operating across the EU and U.S., less proven in large U.S. enterprises."
+     "web": "One of Europe's better-funded spend management companies, with a strong multi-entity and multi-currency story. Our view: a good fit for groups operating across the EU and U.S., less proven in large U.S. enterprises.",
+     "website": "https://payhawk.com"
     },
     {
      "name": "Rippling Finance",
@@ -963,7 +983,8 @@
       "checked": "2026-10-13"
      },
      "take": "Spend controls tied to employee data in Rippling HR. A natural add-on if you already run Rippling; less compelling as a standalone procurement tool.",
-     "web": "Rippling continues to expand from HR into finance and spend. Our view: most compelling as an add-on for existing Rippling customers rather than a standalone procurement buy."
+     "web": "Rippling continues to expand from HR into finance and spend. Our view: most compelling as an add-on for existing Rippling customers rather than a standalone procurement buy.",
+     "website": "https://www.rippling.com"
     },
     {
      "name": "Quadient Accounts Payable",
@@ -1003,7 +1024,8 @@
       "checked": "2026-10-13"
      },
      "take": "A practical step from paper invoices to digital capture and approvals for mid-size AP teams. Solid core features without the complexity of enterprise suites.",
-     "web": "Part of Quadient, a large public company with roots in mail and document automation. Our view: a steady, low-risk choice for mid-size AP teams digitizing paper invoices."
+     "web": "Part of Quadient, a large public company with roots in mail and document automation. Our view: a steady, low-risk choice for mid-size AP teams digitizing paper invoices.",
+     "website": "https://www.quadient.com"
     },
     {
      "name": "Yooz",
@@ -1043,7 +1065,8 @@
       "checked": "2026-10-13"
      },
      "take": "Invoice capture and matching that connects to many ERPs, with built-in fraud checks. Good for AP teams with mixed invoice formats and multiple systems.",
-     "web": "A European-born AP automation vendor with a growing U.S. presence. Our view: good capture and fraud checks for teams with many invoice formats; confirm U.S. support coverage."
+     "web": "A European-born AP automation vendor with a growing U.S. presence. Our view: good capture and fraud checks for teams with many invoice formats; confirm U.S. support coverage.",
+     "website": "https://www.getyooz.com"
     },
     {
      "name": "Basware",
@@ -1083,7 +1106,8 @@
       "checked": "2026-10-13"
      },
      "take": "Built for high invoice volumes and e-invoicing compliance across countries. The interface draws complaints, but few vendors match its coverage of mandated e-invoicing formats.",
-     "web": "Taken private by Accel-KKR and partners in 2022, and named a Leader in Forrester's Q2 2026 AP invoice automation Wave. Our view: its e-invoicing compliance coverage is a real advantage for multinationals, even though users rate the interface below newer tools."
+     "web": "Taken private by Accel-KKR and partners in 2022, and named a Leader in Forrester's Q2 2026 AP invoice automation Wave. Our view: its e-invoicing compliance coverage is a real advantage for multinationals, even though users rate the interface below newer tools.",
+     "website": "https://www.basware.com"
     },
     {
      "name": "ApprovalMax",
@@ -1123,7 +1147,8 @@
       "checked": "2026-10-13"
      },
      "take": "Enforceable multi-step approvals for small finance teams on Xero, QuickBooks Online or NetSuite. Narrow but very effective at what it does.",
-     "web": "A focused approvals tool popular in the Xero and QuickBooks ecosystems. Our view: a cheap, effective control layer for small finance teams."
+     "web": "A focused approvals tool popular in the Xero and QuickBooks ecosystems. Our view: a cheap, effective control layer for small finance teams.",
+     "website": "https://approvalmax.com"
     },
     {
      "name": "WEX Business Payments",
@@ -1160,7 +1185,8 @@
       "checked": "2026-10-13"
      },
      "take": "Virtual card payments aimed at replacing checks and earning rebates. Limited review volume, so validate supplier acceptance before committing.",
-     "web": "Part of WEX, a large public payments company. Our view: worth evaluating for virtual card rebates, but its review base is thin."
+     "web": "Part of WEX, a large public payments company. Our view: worth evaluating for virtual card rebates, but its review base is thin.",
+     "website": "https://www.wexinc.com"
     }
    ],
    "market": "Payment software ranges from small-business bill pay (BILL, ApprovalMax) to global payables (Tipalti) and outsourced AP (Corpay, AvidXchange). For procurement, the key questions are supplier experience, payment fraud controls and whether rebates or network fees change the real cost.",
@@ -1263,7 +1289,8 @@
       "checked": "2026-10-13"
      },
      "take": "The leading intake and orchestration layer: one front door that routes requests to procurement, legal, IT and security. It works on top of your ERP and P2P tools rather than replacing them, so budget for both.",
-     "web": "Raised $190 million at a $2.2 billion valuation in October 2024, with customers including Snowflake, Discover and Sephora, and says more than $107 billion of spend has run through the platform. Our view: the clear leader in intake orchestration, though you will still need a P2P or ERP behind it."
+     "web": "Raised $190 million at a $2.2 billion valuation in October 2024, with customers including Snowflake, Discover and Sephora, and says more than $107 billion of spend has run through the platform. Our view: the clear leader in intake orchestration, though you will still need a P2P or ERP behind it.",
+     "website": "https://ziphq.com"
     },
     {
      "name": "Omnea",
@@ -1300,7 +1327,8 @@
       "checked": "2026-10-13"
      },
      "take": "A newer intake-to-onboarding platform that bundles third-party risk into the request flow. Promising for enterprises with complex supplier onboarding; still a smaller review base than Zip.",
-     "web": "Raised a $50 million Series B in September 2025, led by Insight Partners and Khosla Ventures, and names Spotify, Albertsons, Wise and MongoDB as customers. Our view: the most credible newer challenger to Zip, especially where supplier risk checks must happen at intake."
+     "web": "Raised a $50 million Series B in September 2025, led by Insight Partners and Khosla Ventures, and names Spotify, Albertsons, Wise and MongoDB as customers. Our view: the most credible newer challenger to Zip, especially where supplier risk checks must happen at intake.",
+     "website": "https://www.omnea.co"
     },
     {
      "name": "Vertice",
@@ -1328,7 +1356,8 @@
       "checked": "2026-10-13"
      },
      "take": "Purpose-built for buying and renewing SaaS, with benchmark pricing data and negotiation support. Not a general procurement suite, but strong in its niche.",
-     "web": "Focused on SaaS and software purchasing, where it competes with Tropic. Our view: worth it if software is a large, fast-growing share of spend; otherwise too narrow."
+     "web": "Focused on SaaS and software purchasing, where it competes with Tropic. Our view: worth it if software is a large, fast-growing share of spend; otherwise too narrow.",
+     "website": "https://www.vertice.one"
     },
     {
      "name": "Coupa",
@@ -1365,7 +1394,8 @@
       "checked": "2026-10-13"
      },
      "take": "A full spend management platform that works best when you use several modules together. It suits large companies standardizing procurement, AP and payments on one system; smaller teams may pay for breadth they won't use.",
-     "web": "A Leader in Gartner's 2025 Source-to-Pay Magic Quadrant and in Forrester's Q2 2026 Wave for AP invoice automation. Privately owned by Thoma Bravo since 2023, it is betting heavily on agentic AI, unveiled at its Inspire 2026 conference. Our view: still the safest broad choice for large companies, though pricing and contract terms deserve hard negotiation."
+     "web": "A Leader in Gartner's 2025 Source-to-Pay Magic Quadrant and in Forrester's Q2 2026 Wave for AP invoice automation. Privately owned by Thoma Bravo since 2023, it is betting heavily on agentic AI, unveiled at its Inspire 2026 conference. Our view: still the safest broad choice for large companies, though pricing and contract terms deserve hard negotiation.",
+     "website": "https://www.coupa.com"
     },
     {
      "name": "SAP Ariba",
@@ -1402,7 +1432,8 @@
       "checked": "2026-10-13"
      },
      "take": "The default shortlist entry for SAP ERP shops, and the broadest supplier network in the market. The trade-off is effort: reviewers consistently describe a steep learning curve, and value depends on a strong implementation partner and a plan for supplier enablement.",
-     "web": "Named a Leader (as SAP) in Gartner's 2025 Magic Quadrant for Source-to-Pay Suites. SAP is now rebuilding Ariba around AI, with Joule agents shipping across Ariba and Fieldglass in 2026. Our view: the roadmap is credible, but existing customers should plan for migration effort, not a quick upgrade."
+     "web": "Named a Leader (as SAP) in Gartner's 2025 Magic Quadrant for Source-to-Pay Suites. SAP is now rebuilding Ariba around AI, with Joule agents shipping across Ariba and Fieldglass in 2026. Our view: the roadmap is credible, but existing customers should plan for migration effort, not a quick upgrade.",
+     "website": "https://www.sap.com/products/spend-management/ariba.html"
     },
     {
      "name": "Ivalua",
@@ -1439,7 +1470,8 @@
       "checked": "2026-10-13"
      },
      "take": "The most configurable of the large suites, with a reputation for handling direct materials and unusual approval logic. That flexibility needs a capable internal admin team, and its review base skews heavily to large enterprises.",
-     "web": "A Leader in both Gartner's 2025 Source-to-Pay Magic Quadrant and Forrester's Q2 2026 AP invoice automation Wave. Our view: the strongest option for complex and direct-materials procurement, if you have the internal team to configure it well."
+     "web": "A Leader in both Gartner's 2025 Source-to-Pay Magic Quadrant and Forrester's Q2 2026 AP invoice automation Wave. Our view: the strongest option for complex and direct-materials procurement, if you have the internal team to configure it well.",
+     "website": "https://www.ivalua.com"
     },
     {
      "name": "Procurify",
@@ -1476,7 +1508,8 @@
       "checked": "2026-10-13"
      },
      "take": "A purchasing-control tool for mid-market teams that want requests, approvals and budgets live in weeks. It covers the core purchase-order workflow well; sourcing and supplier risk are light.",
-     "web": "Consistently positioned as a mid-market purchasing tool focused on spend control. Our view: dependable for getting purchase requests under control fast, with less depth as needs grow into sourcing and supplier risk."
+     "web": "Consistently positioned as a mid-market purchasing tool focused on spend control. Our view: dependable for getting purchase requests under control fast, with less depth as needs grow into sourcing and supplier risk.",
+     "website": "https://www.procurify.com"
     },
     {
      "name": "Precoro",
@@ -1513,7 +1546,8 @@
       "checked": "2026-10-13"
      },
      "take": "A strong value pick for growing companies that want POs, three-way matching and budgets in one tool. It stays deliberately simple, so very large or highly regulated organizations may outgrow it.",
-     "web": "Smaller and less marketed than its competitors, but its review scores are among the highest in the mid-market. Our view: one of the best value options for growing companies that want POs and three-way matching without a suite."
+     "web": "Smaller and less marketed than its competitors, but its review scores are among the highest in the mid-market. Our view: one of the best value options for growing companies that want POs and three-way matching without a suite.",
+     "website": "https://precoro.com"
     },
     {
      "name": "Tropic",
@@ -1550,7 +1584,8 @@
       "checked": "2026-10-13"
      },
      "take": "SaaS and AI software procurement with renewal management and negotiation services. Compelling where software is your fastest-growing category; not built for direct or indirect goods.",
-     "web": "A leading SaaS procurement specialist that pairs software with negotiation services. Our view: strong for companies with heavy SaaS and AI tool spend and little in-house negotiation capacity."
+     "web": "A leading SaaS procurement specialist that pairs software with negotiation services. Our view: strong for companies with heavy SaaS and AI tool spend and little in-house negotiation capacity.",
+     "website": "https://www.tropicapp.io"
     },
     {
      "name": "ServiceNow Source-to-Pay Operations",
@@ -1587,7 +1622,8 @@
       "checked": "2026-10-13"
      },
      "take": "Procurement workflows on the ServiceNow platform. Makes the most sense if IT and HR service workflows already run there; otherwise integration effort can outweigh the benefit.",
-     "web": "ServiceNow is pushing further into procurement workflows on its platform. Our view: logical if ServiceNow already runs IT and HR requests; not a reason to adopt ServiceNow on its own."
+     "web": "ServiceNow is pushing further into procurement workflows on its platform. Our view: logical if ServiceNow already runs IT and HR requests; not a reason to adopt ServiceNow on its own.",
+     "website": "https://www.servicenow.com"
     },
     {
      "name": "Teampay (by Paystand)",
@@ -1624,7 +1660,8 @@
       "checked": "2026-10-13"
      },
      "take": "Pre-approved purchasing with virtual cards: requests are approved and coded before money is spent. Useful for decentralized spend; since the Paystand acquisition, confirm the roadmap during evaluation.",
-     "web": "Acquired by Paystand in 2024 and now part of a broader B2B payments company. Our view: the pre-approval model is useful, but ask about roadmap and support commitments given the change of ownership."
+     "web": "Acquired by Paystand in 2024 and now part of a broader B2B payments company. Our view: the pre-approval model is useful, but ask about roadmap and support commitments given the change of ownership.",
+     "website": "https://www.paystand.com"
     },
     {
      "name": "Workday Strategic Sourcing",
@@ -1661,7 +1698,8 @@
       "checked": "2026-10-13"
      },
      "take": "Formerly Scout RFP, now part of Workday: easy-to-run sourcing events and contracts for Workday customers. Review volume is small, so ask for references in your industry.",
-     "web": "Built on Workday's 2019 acquisition of Scout RFP, and strengthened by its 2024 acquisition of contract AI company Evisort. Our view: a good fit for Workday shops that want easy sourcing events, with a small public review base."
+     "web": "Built on Workday's 2019 acquisition of Scout RFP, and strengthened by its 2024 acquisition of contract AI company Evisort. Our view: a good fit for Workday shops that want easy sourcing events, with a small public review base.",
+     "website": "https://www.workday.com"
     }
    ],
    "market": "General procurement software now spans three layers: intake and orchestration (Zip, Omnea), full suites (Coupa, SAP Ariba, Ivalua) and specialist tools for SaaS buying (Vertice, Tropic). Most large companies end up with more than one layer, so integration matters more than feature lists.",
@@ -1772,7 +1810,8 @@
       "checked": "2026-10-13"
      },
      "take": "Sanctions and denied-party screening built for importers and exporters. The top-rated tool in our compliance ranking and a core control for trade compliance.",
-     "web": "Part of Descartes, a large public logistics software company. Our view: a dependable, highly rated control for sanctions and denied-party checks."
+     "web": "Part of Descartes, a large public logistics software company. Our view: a dependable, highly rated control for sanctions and denied-party checks.",
+     "website": "https://www.descartes.com"
     },
     {
      "name": "osapiens",
@@ -1813,7 +1852,8 @@
       "checked": "2026-10-13"
      },
      "take": "Supply chain due diligence for EU rules, including deforestation and German supply chain law. Most relevant to companies selling into or sourcing for the EU.",
-     "web": "One of the faster-growing EU due diligence platforms as deforestation and supply chain laws take effect. Our view: relevant mainly to companies selling into or sourcing for the EU."
+     "web": "One of the faster-growing EU due diligence platforms as deforestation and supply chain laws take effect. Our view: relevant mainly to companies selling into or sourcing for the EU.",
+     "website": "https://www.osapiens.com"
     },
     {
      "name": "EcoVadis",
@@ -1853,7 +1893,8 @@
       "checked": "2026-10-13"
      },
      "take": "The most widely recognized supplier sustainability rating. Useful for benchmarking and customer reporting; suppliers pay for assessments, which can slow participation.",
-     "web": "The most widely used supplier sustainability rating. Our view: useful for benchmarking and customer reporting, but supplier assessment fees can slow participation."
+     "web": "The most widely used supplier sustainability rating. Our view: useful for benchmarking and customer reporting, but supplier assessment fees can slow participation.",
+     "website": "https://ecovadis.com"
     },
     {
      "name": "Vanta",
@@ -1894,7 +1935,8 @@
       "checked": "2026-10-13"
      },
      "take": "Security compliance automation that also handles vendor security reviews. Best for companies running their own SOC 2 or ISO program that want vendor risk in the same place.",
-     "web": "One of the best-funded security compliance platforms. Our view: strong if security owns vendor reviews; procurement may still need a separate intake and risk workflow."
+     "web": "One of the best-funded security compliance platforms. Our view: strong if security owns vendor reviews; procurement may still need a separate intake and risk workflow.",
+     "website": "https://www.vanta.com"
     },
     {
      "name": "Secureframe",
@@ -1935,7 +1977,8 @@
       "checked": "2026-10-13"
      },
      "take": "Compliance automation with vendor questionnaires for small teams. A practical start for security-led vendor reviews, light on procurement workflow.",
-     "web": "A smaller Vanta competitor with very high service ratings. Our view: a good value for small teams starting security-led vendor reviews."
+     "web": "A smaller Vanta competitor with very high service ratings. Our view: a good value for small teams starting security-led vendor reviews.",
+     "website": "https://secureframe.com"
     },
     {
      "name": "Optro (formerly AuditBoard)",
@@ -1976,7 +2019,8 @@
       "checked": "2026-10-13"
      },
      "take": "Audit, risk and compliance in one platform, including third-party risk. Suits enterprises connecting procurement risk to internal audit.",
-     "web": "AuditBoard renamed itself Optro in March 2026 as it leaned into AI for governance, risk and compliance. Our view: a strong platform for linking third-party risk to audit and compliance in larger companies."
+     "web": "AuditBoard renamed itself Optro in March 2026 as it leaned into AI for governance, risk and compliance. Our view: a strong platform for linking third-party risk to audit and compliance in larger companies.",
+     "website": "https://optro.ai"
     },
     {
      "name": "IBM OpenPages",
@@ -2017,7 +2061,8 @@
       "checked": "2026-10-13"
      },
      "take": "Enterprise governance, risk and compliance for large regulated organizations. Powerful but heavy; expect a significant implementation.",
-     "web": "Long established in enterprise GRC. Our view: powerful but heavy; best for large regulated organizations with existing IBM relationships."
+     "web": "Long established in enterprise GRC. Our view: powerful but heavy; best for large regulated organizations with existing IBM relationships.",
+     "website": "https://www.ibm.com/products/openpages"
     },
     {
      "name": "Formalize",
@@ -2050,7 +2095,8 @@
       "checked": "2026-10-13"
      },
      "take": "Compliance management for European regulations such as NIS2, ISO 27001 and DORA. Small review base but strong ratings among European mid-size companies.",
-     "web": "A small European compliance platform. Our view: promising for EU-focused mid-size companies, but still early in scale."
+     "web": "A small European compliance platform. Our view: promising for EU-focused mid-size companies, but still early in scale.",
+     "website": "https://formalize.com"
     }
    ],
    "market": "Supplier compliance tools cover very different risks: sanctions screening (Descartes), EU due diligence and deforestation rules (osapiens), sustainability ratings (EcoVadis) and security compliance (Vanta, Secureframe). Start from the regulation or audit you must satisfy, not the vendor list.",
@@ -2163,7 +2209,8 @@
       "checked": "2026-10-13"
      },
      "take": "Contract workflows built around Docusign e-signature. A natural choice if Docusign is already standard; reviewers note configuration takes effort.",
-     "web": "Named a Leader in Gartner's 2025 Magic Quadrant for Contract Life Cycle Management, and it acquired Lexion in 2024. Our view: a safe choice when Docusign is already standard, though configuration takes real effort."
+     "web": "Named a Leader in Gartner's 2025 Magic Quadrant for Contract Life Cycle Management, and it acquired Lexion in 2024. Our view: a safe choice when Docusign is already standard, though configuration takes real effort.",
+     "website": "https://www.docusign.com"
     },
     {
      "name": "Conga CLM",
@@ -2205,7 +2252,8 @@
       "checked": "2026-10-13"
      },
      "take": "Strong for Salesforce-centric organizations managing both buy-side and sell-side contracts. Procurement teams outside Salesforce should check fit carefully.",
-     "web": "Deeply tied to the Salesforce ecosystem. Our view: best for sales-led contracting; procurement teams outside Salesforce should check fit carefully."
+     "web": "Deeply tied to the Salesforce ecosystem. Our view: best for sales-led contracting; procurement teams outside Salesforce should check fit carefully.",
+     "website": "https://conga.com"
     },
     {
      "name": "Ironclad",
@@ -2247,7 +2295,8 @@
       "checked": "2026-10-13"
      },
      "take": "A leading configurable CLM with clear workflow and approval visibility. Well suited to legal and procurement teams that collaborate heavily on supplier contracts.",
-     "web": "A Leader in Gartner's 2025 CLM Magic Quadrant and one of the best-known AI-driven CLM vendors. Our view: a strong, modern choice when legal and procurement share contract work."
+     "web": "A Leader in Gartner's 2025 CLM Magic Quadrant and one of the best-known AI-driven CLM vendors. Our view: a strong, modern choice when legal and procurement share contract work.",
+     "website": "https://ironcladapp.com"
     },
     {
      "name": "LinkSquares",
@@ -2289,7 +2338,8 @@
       "checked": "2026-10-13"
      },
      "take": "Excellent repository search and post-signature analysis. Strong for legal teams; procurement teams should confirm intake and approval workflows fit their process.",
-     "web": "Well regarded for contract analytics and repository search. Our view: a strong legal-team tool; test procurement intake and approval workflows before choosing it as your main CLM."
+     "web": "Well regarded for contract analytics and repository search. Our view: a strong legal-team tool; test procurement intake and approval workflows before choosing it as your main CLM.",
+     "website": "https://linksquares.com"
     },
     {
      "name": "Sirion CLM",
@@ -2331,7 +2381,8 @@
       "checked": "2026-10-13"
      },
      "take": "Enterprise CLM with strength in obligation and supplier performance management after signature. Best for large, complex supplier contract portfolios.",
-     "web": "A Leader in Gartner's 2025 CLM Magic Quadrant, with strength in post-signature obligation and performance management. Our view: one of the best fits for large supplier contract portfolios."
+     "web": "A Leader in Gartner's 2025 CLM Magic Quadrant, with strength in post-signature obligation and performance management. Our view: one of the best fits for large supplier contract portfolios.",
+     "website": "https://www.sirion.ai"
     },
     {
      "name": "Juro",
@@ -2373,7 +2424,8 @@
       "checked": "2026-10-13"
      },
      "take": "Browser-native contracting where business teams self-serve on templates. Quick to adopt for mid-size companies; less suited to heavy negotiated supplier agreements.",
-     "web": "A UK-based CLM popular with fast-growing companies. Our view: quick to adopt for standard agreements, lighter for heavily negotiated supplier contracts."
+     "web": "A UK-based CLM popular with fast-growing companies. Our view: quick to adopt for standard agreements, lighter for heavily negotiated supplier contracts.",
+     "website": "https://juro.com"
     },
     {
      "name": "Summize",
@@ -2415,7 +2467,8 @@
       "checked": "2026-10-13"
      },
      "take": "Contract review and requests inside Outlook, Teams, Slack and Word. Adoption is its strength because people don't have to learn a new tool.",
-     "web": "A UK-based CLM built into Outlook, Teams, Slack and Word. Our view: wins on adoption, which is often the biggest CLM failure point."
+     "web": "A UK-based CLM built into Outlook, Teams, Slack and Word. Our view: wins on adoption, which is often the biggest CLM failure point.",
+     "website": "https://www.summize.com"
     },
     {
      "name": "SpotDraft",
@@ -2457,7 +2510,8 @@
       "checked": "2026-10-13"
      },
      "take": "Structured contracting for mid-market teams without a heavy enterprise rollout. Good balance of control and simplicity.",
-     "web": "A fast-growing mid-market CLM. Our view: a sensible middle ground between lightweight tools and enterprise CLM."
+     "web": "A fast-growing mid-market CLM. Our view: a sensible middle ground between lightweight tools and enterprise CLM.",
+     "website": "https://www.spotdraft.com"
     },
     {
      "name": "Lexion (Docusign)",
@@ -2499,7 +2553,8 @@
       "checked": "2026-10-13"
      },
      "take": "Email-driven contract intake and AI term extraction, now part of Docusign. Useful for operations teams; check roadmap alignment with Docusign CLM.",
-     "web": "Acquired by Docusign in 2024. Our view: good AI intake and extraction, but confirm how it will sit alongside Docusign CLM before committing."
+     "web": "Acquired by Docusign in 2024. Our view: good AI intake and extraction, but confirm how it will sit alongside Docusign CLM before committing.",
+     "website": "https://www.docusign.com"
     },
     {
      "name": "LawVu",
@@ -2541,7 +2596,8 @@
       "checked": "2026-10-13"
      },
      "take": "Matters, contracts and legal spend in one system for in-house legal. More legal-ops than procurement-led.",
-     "web": "A legal workspace for in-house teams. Our view: better for legal operations than procurement-led contracting."
+     "web": "A legal workspace for in-house teams. Our view: better for legal operations than procurement-led contracting.",
+     "website": "https://lawvu.com"
     },
     {
      "name": "Salesforce Revenue Cloud",
@@ -2583,7 +2639,8 @@
       "checked": "2026-10-13"
      },
      "take": "Sell-side quoting and contracting on Salesforce. Listed because G2 includes it; not a procurement-first CLM.",
-     "web": "A sell-side tool included because G2 lists it in CLM. Our view: not a procurement choice."
+     "web": "A sell-side tool included because G2 lists it in CLM. Our view: not a procurement choice.",
+     "website": "https://www.salesforce.com"
     },
     {
      "name": "DealHub AI",
@@ -2625,7 +2682,8 @@
       "checked": "2026-10-13"
      },
      "take": "Quoting and contracts for sales teams. Listed for completeness; procurement teams should look elsewhere.",
-     "web": "A sell-side quoting and contracting tool. Our view: not a procurement choice."
+     "web": "A sell-side quoting and contracting tool. Our view: not a procurement choice.",
+     "website": "https://dealhub.io"
     },
     {
      "name": "Legistify",
@@ -2667,7 +2725,8 @@
       "checked": "2026-10-13"
      },
      "take": "Contracts, litigation and notices for legal teams in India. A regional specialist with very high ratings on a moderate review base.",
-     "web": "A regional legal operations specialist in India. Our view: relevant for India-based legal teams, less so for global procurement."
+     "web": "A regional legal operations specialist in India. Our view: relevant for India-based legal teams, less so for global procurement.",
+     "website": "https://legistify.com"
     },
     {
      "name": "SAP Ariba",
@@ -2707,7 +2766,8 @@
       "checked": "2026-10-13"
      },
      "take": "The default shortlist entry for SAP ERP shops, and the broadest supplier network in the market. The trade-off is effort: reviewers consistently describe a steep learning curve, and value depends on a strong implementation partner and a plan for supplier enablement.",
-     "web": "Named a Leader (as SAP) in Gartner's 2025 Magic Quadrant for Source-to-Pay Suites. SAP is now rebuilding Ariba around AI, with Joule agents shipping across Ariba and Fieldglass in 2026. Our view: the roadmap is credible, but existing customers should plan for migration effort, not a quick upgrade."
+     "web": "Named a Leader (as SAP) in Gartner's 2025 Magic Quadrant for Source-to-Pay Suites. SAP is now rebuilding Ariba around AI, with Joule agents shipping across Ariba and Fieldglass in 2026. Our view: the roadmap is credible, but existing customers should plan for migration effort, not a quick upgrade.",
+     "website": "https://www.sap.com/products/spend-management/ariba.html"
     },
     {
      "name": "Workday Strategic Sourcing",
@@ -2747,7 +2807,8 @@
       "checked": "2026-10-13"
      },
      "take": "Formerly Scout RFP, now part of Workday: easy-to-run sourcing events and contracts for Workday customers. Review volume is small, so ask for references in your industry.",
-     "web": "Built on Workday's 2019 acquisition of Scout RFP, and strengthened by its 2024 acquisition of contract AI company Evisort. Our view: a good fit for Workday shops that want easy sourcing events, with a small public review base."
+     "web": "Built on Workday's 2019 acquisition of Scout RFP, and strengthened by its 2024 acquisition of contract AI company Evisort. Our view: a good fit for Workday shops that want easy sourcing events, with a small public review base.",
+     "website": "https://www.workday.com"
     }
    ],
    "market": "CLM vendors either start from legal (Ironclad, LinkSquares, LawVu), from e-signature (Docusign), from sales (Conga, Salesforce, DealHub) or from procurement suites (SAP Ariba, Workday). Procurement teams should favor tools that handle supplier paper, obligation tracking and renewals well.",
@@ -2862,7 +2923,8 @@
       "checked": "2026-10-13"
      },
      "take": "The highest-rated finance platform in several of our categories, built around cards, bill pay and a growing procurement module. Best where spend runs through Ramp itself; complex multi-ERP enterprises should test depth before committing.",
-     "web": "Raised $750 million at a $44 billion valuation in June 2026 and reports about $1 billion in annualized revenue. It added purchase requests, vendor management and intake in 2023. Our view: the momentum is real and the product is well liked, but procurement depth still trails dedicated suites for complex, multi-ERP enterprises."
+     "web": "Raised $750 million at a $44 billion valuation in June 2026 and reports about $1 billion in annualized revenue. It added purchase requests, vendor management and intake in 2023. Our view: the momentum is real and the product is well liked, but procurement depth still trails dedicated suites for complex, multi-ERP enterprises.",
+     "website": "https://ramp.com"
     },
     {
      "name": "Rippling Finance",
@@ -2902,7 +2964,8 @@
       "checked": "2026-10-13"
      },
      "take": "Spend controls tied to employee data in Rippling HR. A natural add-on if you already run Rippling; less compelling as a standalone procurement tool.",
-     "web": "Rippling continues to expand from HR into finance and spend. Our view: most compelling as an add-on for existing Rippling customers rather than a standalone procurement buy."
+     "web": "Rippling continues to expand from HR into finance and spend. Our view: most compelling as an add-on for existing Rippling customers rather than a standalone procurement buy.",
+     "website": "https://www.rippling.com"
     },
     {
      "name": "Stampli",
@@ -2941,7 +3004,8 @@
       "checked": "2026-10-13"
      },
      "take": "An AP-first tool that sits on top of your ERP rather than replacing it, which is why it rolls out quickly. Strong for invoice coding and approvals; procurement teams needing sourcing or contract features will need other tools alongside it.",
-     "web": "Backed by Blackstone and Insight Partners, it is widely seen as an AP-first tool that is easy for approvers to adopt. Our view: a strong pick when invoice approval is the bottleneck, but not a substitute for sourcing or contract tools."
+     "web": "Backed by Blackstone and Insight Partners, it is widely seen as an AP-first tool that is easy for approvers to adopt. Our view: a strong pick when invoice approval is the bottleneck, but not a substitute for sourcing or contract tools.",
+     "website": "https://www.stampli.com"
     },
     {
      "name": "Corpay Spend Management",
@@ -2981,7 +3045,8 @@
       "checked": "2026-10-13"
      },
      "take": "Managed AP with payment execution and supplier enrollment handled for you. Highly rated for service; best for teams that value outsourcing over in-house control.",
-     "web": "Part of Corpay, a large public payments company that also took a minority stake in AvidXchange in 2025. Our view: appealing for teams that want payment execution handled for them, with the usual trade-off of less direct control."
+     "web": "Part of Corpay, a large public payments company that also took a minority stake in AvidXchange in 2025. Our view: appealing for teams that want payment execution handled for them, with the usual trade-off of less direct control.",
+     "website": "https://www.corpay.com"
     },
     {
      "name": "Precoro",
@@ -3020,7 +3085,8 @@
       "checked": "2026-10-13"
      },
      "take": "A strong value pick for growing companies that want POs, three-way matching and budgets in one tool. It stays deliberately simple, so very large or highly regulated organizations may outgrow it.",
-     "web": "Smaller and less marketed than its competitors, but its review scores are among the highest in the mid-market. Our view: one of the best value options for growing companies that want POs and three-way matching without a suite."
+     "web": "Smaller and less marketed than its competitors, but its review scores are among the highest in the mid-market. Our view: one of the best value options for growing companies that want POs and three-way matching without a suite.",
+     "website": "https://precoro.com"
     },
     {
      "name": "AvidXchange",
@@ -3058,7 +3124,8 @@
       "checked": "2026-10-13"
      },
      "take": "Outsourced AP and payments with deep roots in real estate and construction. Good for teams that want to hand off payment execution; review fees and supplier experience carefully.",
-     "web": "Taken private by TPG on Oct. 15, 2025, at about $2.2 billion, with Corpay as a minority investor. Our view: strong in real estate and construction AP; expect closer ties to Corpay's payment network over time."
+     "web": "Taken private by TPG on Oct. 15, 2025, at about $2.2 billion, with Corpay as a minority investor. Our view: strong in real estate and construction AP; expect closer ties to Corpay's payment network over time.",
+     "website": "https://www.avidxchange.com"
     },
     {
      "name": "Tipalti",
@@ -3097,7 +3164,8 @@
       "checked": "2026-10-13"
      },
      "take": "Global payables automation for companies paying many suppliers across countries and entities, with tax form collection built in. Strongest when supplier onboarding and cross-border payments are the bottleneck.",
-     "web": "Valued at $8.3 billion in its 2021 Series F, and widely used for global supplier and partner payouts. Our view: one of the strongest choices when cross-border payments and tax compliance are the main pain points."
+     "web": "Valued at $8.3 billion in its 2021 Series F, and widely used for global supplier and partner payouts. Our view: one of the strongest choices when cross-border payments and tax compliance are the main pain points.",
+     "website": "https://tipalti.com"
     },
     {
      "name": "SAP Ariba",
@@ -3136,7 +3204,8 @@
       "checked": "2026-10-13"
      },
      "take": "The default shortlist entry for SAP ERP shops, and the broadest supplier network in the market. The trade-off is effort: reviewers consistently describe a steep learning curve, and value depends on a strong implementation partner and a plan for supplier enablement.",
-     "web": "Named a Leader (as SAP) in Gartner's 2025 Magic Quadrant for Source-to-Pay Suites. SAP is now rebuilding Ariba around AI, with Joule agents shipping across Ariba and Fieldglass in 2026. Our view: the roadmap is credible, but existing customers should plan for migration effort, not a quick upgrade."
+     "web": "Named a Leader (as SAP) in Gartner's 2025 Magic Quadrant for Source-to-Pay Suites. SAP is now rebuilding Ariba around AI, with Joule agents shipping across Ariba and Fieldglass in 2026. Our view: the roadmap is credible, but existing customers should plan for migration effort, not a quick upgrade.",
+     "website": "https://www.sap.com/products/spend-management/ariba.html"
     },
     {
      "name": "Agicap",
@@ -3176,7 +3245,8 @@
       "checked": "2026-10-13"
      },
      "take": "Cash flow forecasting and payables timing for finance teams. More treasury than procurement; useful context for payment-term strategy.",
-     "web": "A European cash-flow forecasting company. Our view: a treasury tool, useful context for payment-term decisions but not a procurement analytics platform."
+     "web": "A European cash-flow forecasting company. Our view: a treasury tool, useful context for payment-term decisions but not a procurement analytics platform.",
+     "website": "https://agicap.com"
     },
     {
      "name": "DualEntry",
@@ -3217,7 +3287,8 @@
       "checked": "2026-10-13"
      },
      "take": "An AI-driven general ledger and ERP with spend reporting. Listed because G2 places it here; evaluate as an ERP decision, not a procurement one.",
-     "web": "A newer AI-driven ERP and general ledger. Our view: evaluate it as an ERP decision, not a spend analytics one."
+     "web": "A newer AI-driven ERP and general ledger. Our view: evaluate it as an ERP decision, not a spend analytics one.",
+     "website": "https://www.dualentry.com"
     },
     {
      "name": "ApprovalMax",
@@ -3256,7 +3327,8 @@
       "checked": "2026-10-13"
      },
      "take": "Enforceable multi-step approvals for small finance teams on Xero, QuickBooks Online or NetSuite. Narrow but very effective at what it does.",
-     "web": "A focused approvals tool popular in the Xero and QuickBooks ecosystems. Our view: a cheap, effective control layer for small finance teams."
+     "web": "A focused approvals tool popular in the Xero and QuickBooks ecosystems. Our view: a cheap, effective control layer for small finance teams.",
+     "website": "https://approvalmax.com"
     },
     {
      "name": "Zip",
@@ -3295,7 +3367,8 @@
       "checked": "2026-10-13"
      },
      "take": "The leading intake and orchestration layer: one front door that routes requests to procurement, legal, IT and security. It works on top of your ERP and P2P tools rather than replacing them, so budget for both.",
-     "web": "Raised $190 million at a $2.2 billion valuation in October 2024, with customers including Snowflake, Discover and Sephora, and says more than $107 billion of spend has run through the platform. Our view: the clear leader in intake orchestration, though you will still need a P2P or ERP behind it."
+     "web": "Raised $190 million at a $2.2 billion valuation in October 2024, with customers including Snowflake, Discover and Sephora, and says more than $107 billion of spend has run through the platform. Our view: the clear leader in intake orchestration, though you will still need a P2P or ERP behind it.",
+     "website": "https://ziphq.com"
     }
    ],
    "market": "G2's spend analytics category is dominated by finance platforms that report on their own transactions. Dedicated procurement spend analytics vendors such as Sievo and SpendHQ, which classify spend across all ERPs, have too few public reviews to rank. Know which kind you need before you shortlist.",
@@ -3409,7 +3482,8 @@
       "checked": "2026-10-13"
      },
      "take": "Supplier financial health and credit monitoring across many countries. A cost-effective way to add financial risk signals to supplier onboarding.",
-     "web": "A large business credit data provider. Our view: an affordable way to add financial risk signals to supplier onboarding."
+     "web": "A large business credit data provider. Our view: an affordable way to add financial risk signals to supplier onboarding.",
+     "website": "https://www.creditsafe.com"
     },
     {
      "name": "UpGuard Vendor Risk",
@@ -3450,7 +3524,8 @@
       "checked": "2026-10-13"
      },
      "take": "Continuous cyber risk monitoring for vendors with questionnaires built in. Strong for security-led third-party risk programs.",
-     "web": "A well-known cyber risk monitoring tool. Our view: strong for security-led third-party risk programs."
+     "web": "A well-known cyber risk monitoring tool. Our view: strong for security-led third-party risk programs.",
+     "website": "https://www.upguard.com"
     },
     {
      "name": "Bitsight",
@@ -3491,7 +3566,8 @@
       "checked": "2026-10-13"
      },
      "take": "Security ratings for reporting vendor cyber risk to leadership and boards. Enterprise-focused, with a smaller review base.",
-     "web": "One of the two best-known security ratings providers. Our view: useful for board reporting on vendor cyber risk; less so for day-to-day procurement."
+     "web": "One of the two best-known security ratings providers. Our view: useful for board reporting on vendor cyber risk; less so for day-to-day procurement.",
+     "website": "https://www.bitsight.com"
     },
     {
      "name": "D&B Risk Analytics",
@@ -3532,7 +3608,8 @@
       "checked": "2026-10-13"
      },
      "take": "Supplier screening and monitoring on Dun & Bradstreet data, covering financial, compliance and ESG signals. Strong data breadth for procurement-led risk programs.",
-     "web": "Dun & Bradstreet was taken private by Clearlake Capital in 2025, in a $7.7 billion deal. Our view: its data breadth is unmatched for supplier screening; watch pricing under new ownership."
+     "web": "Dun & Bradstreet was taken private by Clearlake Capital in 2025, in a $7.7 billion deal. Our view: its data breadth is unmatched for supplier screening; watch pricing under new ownership.",
+     "website": "https://www.dnb.com"
     },
     {
      "name": "Whistic",
@@ -3573,7 +3650,8 @@
       "checked": "2026-10-13"
      },
      "take": "Vendor security assessments at scale, including a profile exchange that reduces repeated questionnaires. Security-team centric.",
-     "web": "A security assessment platform with a profile exchange that reduces repeat questionnaires. Our view: helpful for security teams, light on procurement workflow."
+     "web": "A security assessment platform with a profile exchange that reduces repeat questionnaires. Our view: helpful for security teams, light on procurement workflow.",
+     "website": "https://www.whistic.com"
     },
     {
      "name": "Omnea",
@@ -3612,7 +3690,8 @@
       "checked": "2026-10-13"
      },
      "take": "A newer intake-to-onboarding platform that bundles third-party risk into the request flow. Promising for enterprises with complex supplier onboarding; still a smaller review base than Zip.",
-     "web": "Raised a $50 million Series B in September 2025, led by Insight Partners and Khosla Ventures, and names Spotify, Albertsons, Wise and MongoDB as customers. Our view: the most credible newer challenger to Zip, especially where supplier risk checks must happen at intake."
+     "web": "Raised a $50 million Series B in September 2025, led by Insight Partners and Khosla Ventures, and names Spotify, Albertsons, Wise and MongoDB as customers. Our view: the most credible newer challenger to Zip, especially where supplier risk checks must happen at intake.",
+     "website": "https://www.omnea.co"
     },
     {
      "name": "osapiens",
@@ -3651,7 +3730,8 @@
       "checked": "2026-10-13"
      },
      "take": "Supply chain due diligence for EU rules, including deforestation and German supply chain law. Most relevant to companies selling into or sourcing for the EU.",
-     "web": "One of the faster-growing EU due diligence platforms as deforestation and supply chain laws take effect. Our view: relevant mainly to companies selling into or sourcing for the EU."
+     "web": "One of the faster-growing EU due diligence platforms as deforestation and supply chain laws take effect. Our view: relevant mainly to companies selling into or sourcing for the EU.",
+     "website": "https://www.osapiens.com"
     },
     {
      "name": "EcoVadis",
@@ -3690,7 +3770,8 @@
       "checked": "2026-10-13"
      },
      "take": "The most widely recognized supplier sustainability rating. Useful for benchmarking and customer reporting; suppliers pay for assessments, which can slow participation.",
-     "web": "The most widely used supplier sustainability rating. Our view: useful for benchmarking and customer reporting, but supplier assessment fees can slow participation."
+     "web": "The most widely used supplier sustainability rating. Our view: useful for benchmarking and customer reporting, but supplier assessment fees can slow participation.",
+     "website": "https://ecovadis.com"
     },
     {
      "name": "SAP Ariba",
@@ -3729,7 +3810,8 @@
       "checked": "2026-10-13"
      },
      "take": "The default shortlist entry for SAP ERP shops, and the broadest supplier network in the market. The trade-off is effort: reviewers consistently describe a steep learning curve, and value depends on a strong implementation partner and a plan for supplier enablement.",
-     "web": "Named a Leader (as SAP) in Gartner's 2025 Magic Quadrant for Source-to-Pay Suites. SAP is now rebuilding Ariba around AI, with Joule agents shipping across Ariba and Fieldglass in 2026. Our view: the roadmap is credible, but existing customers should plan for migration effort, not a quick upgrade."
+     "web": "Named a Leader (as SAP) in Gartner's 2025 Magic Quadrant for Source-to-Pay Suites. SAP is now rebuilding Ariba around AI, with Joule agents shipping across Ariba and Fieldglass in 2026. Our view: the roadmap is credible, but existing customers should plan for migration effort, not a quick upgrade.",
+     "website": "https://www.sap.com/products/spend-management/ariba.html"
     }
    ],
    "market": "Supplier risk tools specialize by risk type: financial (Creditsafe, D&B), cyber (UpGuard, Bitsight, Whistic), sustainability and due diligence (EcoVadis, osapiens) and multi-tier disruption monitoring (Resilinc, Interos, Prewave, which lack enough public reviews to rank). Most programs combine two or three.",
@@ -3840,7 +3922,8 @@
       "checked": "2026-10-13"
      },
      "take": "The default shortlist entry for SAP ERP shops, and the broadest supplier network in the market. The trade-off is effort: reviewers consistently describe a steep learning curve, and value depends on a strong implementation partner and a plan for supplier enablement.",
-     "web": "Named a Leader (as SAP) in Gartner's 2025 Magic Quadrant for Source-to-Pay Suites. SAP is now rebuilding Ariba around AI, with Joule agents shipping across Ariba and Fieldglass in 2026. Our view: the roadmap is credible, but existing customers should plan for migration effort, not a quick upgrade."
+     "web": "Named a Leader (as SAP) in Gartner's 2025 Magic Quadrant for Source-to-Pay Suites. SAP is now rebuilding Ariba around AI, with Joule agents shipping across Ariba and Fieldglass in 2026. Our view: the roadmap is credible, but existing customers should plan for migration effort, not a quick upgrade.",
+     "website": "https://www.sap.com/products/spend-management/ariba.html"
     },
     {
      "name": "Ivalua",
@@ -3880,7 +3963,8 @@
       "checked": "2026-10-13"
      },
      "take": "The most configurable of the large suites, with a reputation for handling direct materials and unusual approval logic. That flexibility needs a capable internal admin team, and its review base skews heavily to large enterprises.",
-     "web": "A Leader in both Gartner's 2025 Source-to-Pay Magic Quadrant and Forrester's Q2 2026 AP invoice automation Wave. Our view: the strongest option for complex and direct-materials procurement, if you have the internal team to configure it well."
+     "web": "A Leader in both Gartner's 2025 Source-to-Pay Magic Quadrant and Forrester's Q2 2026 AP invoice automation Wave. Our view: the strongest option for complex and direct-materials procurement, if you have the internal team to configure it well.",
+     "website": "https://www.ivalua.com"
     },
     {
      "name": "Coupa",
@@ -3919,7 +4003,8 @@
       "checked": "2026-10-13"
      },
      "take": "A full spend management platform that works best when you use several modules together. It suits large companies standardizing procurement, AP and payments on one system; smaller teams may pay for breadth they won't use.",
-     "web": "A Leader in Gartner's 2025 Source-to-Pay Magic Quadrant and in Forrester's Q2 2026 Wave for AP invoice automation. Privately owned by Thoma Bravo since 2023, it is betting heavily on agentic AI, unveiled at its Inspire 2026 conference. Our view: still the safest broad choice for large companies, though pricing and contract terms deserve hard negotiation."
+     "web": "A Leader in Gartner's 2025 Source-to-Pay Magic Quadrant and in Forrester's Q2 2026 Wave for AP invoice automation. Privately owned by Thoma Bravo since 2023, it is betting heavily on agentic AI, unveiled at its Inspire 2026 conference. Our view: still the safest broad choice for large companies, though pricing and contract terms deserve hard negotiation.",
+     "website": "https://www.coupa.com"
     },
     {
      "name": "Tropic",
@@ -3960,7 +4045,8 @@
       "checked": "2026-10-13"
      },
      "take": "SaaS and AI software procurement with renewal management and negotiation services. Compelling where software is your fastest-growing category; not built for direct or indirect goods.",
-     "web": "A leading SaaS procurement specialist that pairs software with negotiation services. Our view: strong for companies with heavy SaaS and AI tool spend and little in-house negotiation capacity."
+     "web": "A leading SaaS procurement specialist that pairs software with negotiation services. Our view: strong for companies with heavy SaaS and AI tool spend and little in-house negotiation capacity.",
+     "website": "https://www.tropicapp.io"
     },
     {
      "name": "aPriori",
@@ -4001,7 +4087,8 @@
       "checked": "2026-10-13"
      },
      "take": "Should-cost modeling for manufactured parts. One of the few tools that helps direct-materials teams negotiate on cost structure rather than price alone.",
-     "web": "A long-standing should-cost modeling vendor for manufacturers. Our view: one of the few tools that gives direct-materials teams real cost leverage, especially as tariffs and metals prices rise."
+     "web": "A long-standing should-cost modeling vendor for manufacturers. Our view: one of the few tools that gives direct-materials teams real cost leverage, especially as tariffs and metals prices rise.",
+     "website": "https://www.apriori.com"
     },
     {
      "name": "Procol",
@@ -4042,7 +4129,8 @@
       "checked": "2026-10-13"
      },
      "take": "Simple e-sourcing to replace email and spreadsheet RFQs. A fast, affordable way to digitize sourcing events.",
-     "web": "A newer, fast-growing e-sourcing tool. Our view: an affordable way to move RFQs off email and spreadsheets."
+     "web": "A newer, fast-growing e-sourcing tool. Our view: an affordable way to move RFQs off email and spreadsheets.",
+     "website": "https://www.procol.ai"
     },
     {
      "name": "ServiceNow Source-to-Pay Operations",
@@ -4081,7 +4169,8 @@
       "checked": "2026-10-13"
      },
      "take": "Procurement workflows on the ServiceNow platform. Makes the most sense if IT and HR service workflows already run there; otherwise integration effort can outweigh the benefit.",
-     "web": "ServiceNow is pushing further into procurement workflows on its platform. Our view: logical if ServiceNow already runs IT and HR requests; not a reason to adopt ServiceNow on its own."
+     "web": "ServiceNow is pushing further into procurement workflows on its platform. Our view: logical if ServiceNow already runs IT and HR requests; not a reason to adopt ServiceNow on its own.",
+     "website": "https://www.servicenow.com"
     },
     {
      "name": "Zip",
@@ -4120,7 +4209,8 @@
       "checked": "2026-10-13"
      },
      "take": "The leading intake and orchestration layer: one front door that routes requests to procurement, legal, IT and security. It works on top of your ERP and P2P tools rather than replacing them, so budget for both.",
-     "web": "Raised $190 million at a $2.2 billion valuation in October 2024, with customers including Snowflake, Discover and Sephora, and says more than $107 billion of spend has run through the platform. Our view: the clear leader in intake orchestration, though you will still need a P2P or ERP behind it."
+     "web": "Raised $190 million at a $2.2 billion valuation in October 2024, with customers including Snowflake, Discover and Sephora, and says more than $107 billion of spend has run through the platform. Our view: the clear leader in intake orchestration, though you will still need a P2P or ERP behind it.",
+     "website": "https://ziphq.com"
     },
     {
      "name": "Procurify",
@@ -4159,7 +4249,8 @@
       "checked": "2026-10-13"
      },
      "take": "A purchasing-control tool for mid-market teams that want requests, approvals and budgets live in weeks. It covers the core purchase-order workflow well; sourcing and supplier risk are light.",
-     "web": "Consistently positioned as a mid-market purchasing tool focused on spend control. Our view: dependable for getting purchase requests under control fast, with less depth as needs grow into sourcing and supplier risk."
+     "web": "Consistently positioned as a mid-market purchasing tool focused on spend control. Our view: dependable for getting purchase requests under control fast, with less depth as needs grow into sourcing and supplier risk.",
+     "website": "https://www.procurify.com"
     },
     {
      "name": "Archlet",
@@ -4200,7 +4291,8 @@
       "checked": "2026-10-13"
      },
      "take": "Bid analysis and optimization for complex RFQs and auctions. Strong for large sourcing events with many lots and scenarios.",
-     "web": "A Swiss bid-analysis specialist. Our view: excellent for complex sourcing events; it usually complements a suite rather than replacing it."
+     "web": "A Swiss bid-analysis specialist. Our view: excellent for complex sourcing events; it usually complements a suite rather than replacing it.",
+     "website": "https://www.archlet.com"
     },
     {
      "name": "Scanmarket (Unit4)",
@@ -4240,7 +4332,8 @@
       "checked": "2026-10-13"
      },
      "take": "Quick-to-deploy source-to-contract, now part of Unit4. A practical option for teams starting with e-sourcing.",
-     "web": "Owned by Unit4 since 2021. Our view: a quick-to-deploy sourcing tool, with less momentum than newer competitors."
+     "web": "Owned by Unit4 since 2021. Our view: a quick-to-deploy sourcing tool, with less momentum than newer competitors.",
+     "website": "https://www.scanmarket.com"
     },
     {
      "name": "Field Materials",
@@ -4281,7 +4374,8 @@
       "checked": "2026-10-13"
      },
      "take": "Materials and equipment purchasing for construction contractors. A vertical specialist rather than a general sourcing tool.",
-     "web": "A construction-focused procurement startup. Our view: a strong vertical option for contractors, not a general sourcing tool."
+     "web": "A construction-focused procurement startup. Our view: a strong vertical option for contractors, not a general sourcing tool.",
+     "website": "https://www.fieldmaterials.com"
     },
     {
      "name": "Workday Strategic Sourcing",
@@ -4320,7 +4414,8 @@
       "checked": "2026-10-13"
      },
      "take": "Formerly Scout RFP, now part of Workday: easy-to-run sourcing events and contracts for Workday customers. Review volume is small, so ask for references in your industry.",
-     "web": "Built on Workday's 2019 acquisition of Scout RFP, and strengthened by its 2024 acquisition of contract AI company Evisort. Our view: a good fit for Workday shops that want easy sourcing events, with a small public review base."
+     "web": "Built on Workday's 2019 acquisition of Scout RFP, and strengthened by its 2024 acquisition of contract AI company Evisort. Our view: a good fit for Workday shops that want easy sourcing events, with a small public review base.",
+     "website": "https://www.workday.com"
     }
    ],
    "market": "Strategic sourcing spans e-sourcing events (Procol, Scanmarket), advanced bid analysis (Archlet), should-cost modeling (aPriori) and suite sourcing modules (SAP Ariba, Ivalua, Coupa, Workday). The biggest gap is usually bid analysis, not running the event.",

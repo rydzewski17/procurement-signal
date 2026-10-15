@@ -53,6 +53,10 @@ Cass noted that sequential growth slowed slightly because spot rates eased and f
 
 **Demand is improving, but modestly.** Cass described freight demand as "recovering," citing modest retail and industrial growth, restocking as container imports surge, a smaller private fleet and rising equipment sales. The ISM manufacturing index was 54.5 in September, its ninth straight month of expansion. High fuel prices are also pushing some freight from road to rail.
 
+**Regional spikes.** Weather can tighten local markets quickly. In early October, a Gulf Coast storm pushed tender rejections and spot rates noticeably higher in Mobile and Montgomery, Alabama, with inbound rejections climbing sharply relative to the national average, according to FreightWaves. Shippers with lanes in storm-prone regions should keep backup carriers and brokers qualified even when national conditions look stable.
+
+**Intermodal as a pressure valve.** With diesel high, some freight is moving from truck to rail, and FreightWaves' SONAR now benchmarks intermodal rates against van rates, including the nearest rail ramps for each lane. For long-haul, time-tolerant freight, an intermodal comparison belongs in every 2027 bid.
+
 ## The carrier cost math
 
 SONAR's latest market analysis, "The Repricing Isn't Finished," argues that "capacity is leaving faster than freight." Its numbers explain why carriers are holding firm:

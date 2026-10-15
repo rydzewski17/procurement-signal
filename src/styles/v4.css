@@ -370,3 +370,16 @@ footer { margin-top: 0 !important; }
 @media (max-width: 640px) {
   .blocks > .block:last-child:nth-child(odd) .lines-thumb { display: block; }
 }
+
+/* ---------- Tables inside articles and guides: full width, readable ---------- */
+.article .prose table { width: 100%; border-collapse: collapse; margin: 22px 0 26px; font: 15px/1.45 var(--ui); display: table; }
+.article .prose thead th { text-align: left; font: 600 13px/1.3 var(--ui); color: var(--ink); background: var(--navy-tint); padding: 10px 12px; border-bottom: 2px solid var(--ink); }
+.article .prose td { padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; color: var(--ink-2); }
+.article .prose tbody tr:nth-child(even) td { background: #fafbfc; }
+.article .prose td:first-child { font-weight: 600; color: var(--ink); }
+@media (max-width: 640px) {
+  .article .prose table { display: block; overflow-x: auto; white-space: normal; }
+  .article .prose td, .article .prose thead th { min-width: 130px; }
+}
+.vlink { color: var(--link); text-decoration: underline; text-decoration-color: rgba(15,123,120,.4); text-underline-offset: 3px; }
+.article .prose p, .article .prose li { color: var(--ink); }

@@ -29,6 +29,8 @@ sources:
     url: "https://www.supplychaindive.com/news/levis-to-use-part-of-80m-tariff-refund-for-supply-chain/832562/"
   - name: "Supply Chain Dive — Supreme Court invalidates Trump tariffs based on emergency powers"
     url: "https://www.supplychaindive.com/news/supreme-court-invalidates-trump-tariffs-based-on-emergency-powers/809114/"
+  - name: "White and Williams \u2014 IEEPA tariff refunds: CBP launches CAPE process"
+    url: "https://www.whiteandwilliams.com/resources-alerts-IEEPA-Tariff-Refunds-CBP-Launches-CAPE-Process"
 faqs:
   - q: "Why are companies getting tariff refunds?"
     a: "The Supreme Court in February 2026 nullified the country-specific tariffs imposed under emergency powers, so duties paid under them are being refunded to importers."
@@ -55,6 +57,10 @@ Levi's plans to reinvest about three-quarters, roughly $60 million:
 Net tariff recovery is expected to add about 80 basis points to Levi's projected gross margin of roughly 63% for the year ending Nov. 29. The fourth-quarter reinvestment trims that quarter's gross margin by about 10 basis points, to a projected 61.8%. "We believe this balanced approach strengthens our competitive position, supports near-term growth," Singh said. Levi's says the plan keeps it on track for mid-single-digit revenue growth and a path to 15% operating margins.
 
 Other companies are using refunds differently. McCormick received about $28 million and Kimberly-Clark about $45 million, both to offset higher input costs. E.l.f. Beauty expects about $58.5 million and plans to fund price cuts.
+
+**The scale of refunds.** About 330,000 importers paid an estimated $166 billion in IEEPA duties across more than 53 million entries before the Supreme Court ruling, and U.S. Customs and Border Protection began processing refunds through an electronic tool called CAPE in April 2026, according to law firm White and Williams. Only the importer of record can claim, which is why it matters whether your company or your supplier imported the goods. See our [guide to IEEPA refunds](/guides/ieepa-tariff-refunds-cape-guide/).
+
+**What Levi's is buying.** Most of Levi's supply chain reinvestment falls in the current quarter. The company frames the refund as a chance to strengthen distribution and logistics while keeping its margin targets, rather than as a windfall to pass through to price.
 
 ## Three ways companies are using refunds
 

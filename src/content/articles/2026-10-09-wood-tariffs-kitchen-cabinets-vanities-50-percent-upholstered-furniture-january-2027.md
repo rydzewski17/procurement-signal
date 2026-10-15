@@ -50,6 +50,12 @@ Section 232 tariffs on wood products took effect Oct. 14, 2025, under Proclamati
 
 The increases were originally due on Jan. 1, 2026. A proclamation issued Dec. 31, 2025 delayed them by one year, citing "productive negotiations of agreements with multiple countries," according to a Troutman Pepper Locke analysis. It left room for different treatment for countries that reach agreements addressing the national security concern. The delay did not reduce current rates.
 
+**How the rates were set.** The underlying action, Proclamation 10976, was signed Sept. 29, 2025 after a Section 232 investigation into timber, lumber and wood products, according to KPMG. It imposed 10% on certain softwood timber and lumber, 25% on certain upholstered wooden products and 25% on kitchen cabinets and vanities, with the higher rates originally scheduled for Jan. 1, 2026. The White House posted the delay on Dec. 31, 2025, and the 25% rates have stayed in place since.
+
+**Why the delay may or may not repeat.** The administration tied the postponement to "productive negotiations of agreements with multiple countries." That suggests any further relief is more likely to come through country agreements, with different rates by origin, than through a blanket delay. Importers should track which supplier countries reach agreements before year-end.
+
+**What's covered.** The tariffs apply to specific product descriptions in the proclamation's annex, not to all wood products. Confirm classifications for each cabinet, vanity and upholstered item with your customs broker; finished furniture that isn't upholstered, for example, may be treated differently.
+
 ## What it means for landed cost
 
 For a cabinet order with a $200,000 customs value, the duty would rise from $50,000 at 25% to $100,000 at 50%, before freight and normal duties, by our calculation. For $200,000 of upholstered furniture, it would rise from $50,000 to $60,000.

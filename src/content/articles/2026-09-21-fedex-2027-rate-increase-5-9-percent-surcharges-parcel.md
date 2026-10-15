@@ -68,6 +68,10 @@ Loop advised shippers with transit-tolerant freight on 2Day to "model the Expres
 
 UPS had not announced its 2027 increase as of Sept. 21, though it has historically matched FedEx closely.
 
+**Surcharges are rising faster than the headline.** By our calculation, several 2027 surcharges rise more than the 5.9% average: international dimension-based additional handling by 9.3%, U.S. weight-based additional handling by 7.6% and the residential delivery-area surcharge by 6.1%. The residential delivery surcharge rises 5.8%, oversize charges for Home Delivery 5.5% and the International Ground inbound processing fee 5.7%. For shippers with heavy, bulky or residential volume, surcharges can push the effective increase above the average.
+
+**Four years of compounding.** FedEx has now applied a 5.9% average increase four years running, for 2024, 2025, 2026 and 2027. Compounded, that is about 26% above 2023 list rates, by our calculation, before surcharges and before any contractual discounts.
+
 ## What it means for your parcel spend
 
 The table below shows how the same 5.9% headline lands differently depending on your mix. These are illustrative profiles, not forecasts.

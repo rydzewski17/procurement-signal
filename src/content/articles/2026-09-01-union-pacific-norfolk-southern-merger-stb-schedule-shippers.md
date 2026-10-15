@@ -67,6 +67,12 @@ The Surface Transportation Board adopted a procedural schedule on Aug. 18, takin
 
 The Board extended the notice-of-intent deadline at the National League of Cities' request, calling it "reasonable" given the transaction's scope.
 
+**What the Board will weigh.** Major rail mergers need STB approval, and the Board will consider the transaction's effect on competition, service and the public interest, including any conditions that could address harms, through the comment and hearing process laid out in the schedule. Environmental review runs in parallel. The Justice Department and the Transportation Department can file their own views, with preliminary comments due Dec. 3.
+
+**A related decision.** The Board declined the railroads' request to speed up a separate proceeding on divesting control of the Terminal Railroad Association of St. Louis, which handles interchange traffic at one of the country's key rail gateways. Shippers that route through St. Louis should watch that proceeding alongside the merger itself.
+
+**Why the schedule matters for contracts.** A final decision isn't expected until well into 2027, and integration would follow. Rail contracts signed for 2027 and 2028 should anticipate the possibility of a combined railroad, with terms covering service levels, routing and assignment if the deal is approved.
+
 ## What to put in a request for conditions
 
 Shippers that depend on either railroad can ask the Board to attach conditions. Common asks include:

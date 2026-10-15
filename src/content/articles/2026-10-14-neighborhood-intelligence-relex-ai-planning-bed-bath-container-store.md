@@ -46,6 +46,10 @@ The company expects better in-stock rates, improved sell-through and faster deci
 
 The vendor's retail customer list has been growing. Dollar General said in August it would use the platform for store replenishment, supplier coordination and ordering. Lowe's connected its in-house supply chain technology to Relex forecasting, replenishment and allocation. Lowe's described the move as part of using one AI-driven platform to read demand trends and manage inventory positions. Guitar Center uses selected Relex models to manage its distribution network, and United Natural Foods and Wawa also use it.
 
+**The full portfolio.** According to Relex's announcement, Nashville-based Neighborhood Intelligence's brands include Bed Bath & Beyond, The Container Store, Kirkland's, buybuy BABY and Overstock, covering home furnishings, household goods and baby gear. The platform is foundational to what Prado called the company's "Everything Home strategy." Modules include forecasting, replenishment, allocation, merchandise financial planning, open-to-buy and Relex Diagnostics.
+
+**Speed of rollout.** Doug Iverson, Relex's senior vice president for North America, said the company's implementation approach took planning teams from kickoff to key capabilities in "a matter of weeks." Relex says it serves more than 600 customers.
+
 ## What changes for suppliers when a retailer unifies planning
 
 When forecasting, replenishment, allocation and financial planning sit on one platform, purchase orders follow the forecast more closely and change more often. Based on how these platforms work, suppliers should expect changes like these:

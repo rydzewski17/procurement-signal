@@ -25,6 +25,8 @@ image:
 sources:
   - name: "FreightWaves \u2014 Trans-Pacific spot rates reach new highs on resilient demand, port congestion"
     url: "https://www.freightwaves.com/news/trans-pacific-spot-rates-reach-new-highs-on-resilient-demand-port-congestion"
+  - name: "FreightWaves \u2014 Shippers waiting an extra week for US-bound containers (Xeneta)"
+    url: "https://www.freightwaves.com/news/shippers-waiting-an-extra-week-for-us-bound-containers"
 faqs:
   - q: "Why are trans-Pacific container rates rising in 2026?"
     a: "Peak-season demand started early, in May, and stayed firm. Freightos cited no new tariff increases in July, more ocean shipments of data center hardware and tariff refunds that let some retailers cut prices. Typhoon disruptions at Chinese ports also reduced effective capacity."
@@ -47,6 +49,10 @@ Trans-Pacific rates hit new highs in the last week of August, according to Freig
 **Capacity and surcharges.** Carriers added some trans-Pacific capacity for September ahead of Golden Week blank sailings, but planned withdrawals later in the month may limit space again. Some carriers are considering Panama Canal low-water surcharges, which would raise East Coast rates.
 
 **Elsewhere.** Asia–North Europe rates are down more than $1,000 per FEU from their July peak and Mediterranean rates more than $2,000, but both remain roughly 40% to 70% above pre-peak May levels. Trans-Atlantic rates rose about $400 per FEU over two weeks as carriers cut capacity.
+
+**How far rates have moved in a year.** For context, Xeneta put the China–U.S. West Coast spot average at $1,778 per FEU in September 2025. The late-August 2026 Freightos reading of $7,621 for Asia–U.S. West Coast is more than four times that level, by our comparison of the two indexes, which measure slightly different things. By early October, Xeneta's Far East–U.S. West Coast average had risen further, to $8,336.
+
+**Why spot rates matter even if you have a contract.** In a rising market, carriers can roll contract cargo when a sailing is full, pushing shippers to book at spot rates or wait. Contracted space is only as good as the allocation behind it, which is why allocation and blank-sailing terms matter as much as the rate itself.
 
 ## What it means for landed cost
 
