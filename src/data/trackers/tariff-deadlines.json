@@ -17,7 +17,16 @@
         "Upholstered wooden furniture rises from 25% to 30%; kitchen cabinets and vanities from 25% to 50%, unless country agreements apply",
         "Upcoming"
       ],
-      "source": "https://www.troutman.com/insights/white-house-delays-planned-tariff-increases-on-wood-products"
+      "source": "https://www.troutman.com/insights/white-house-delays-planned-tariff-increases-on-wood-products",
+      "date": "2027-01-01",
+      "authority": "Section 232",
+      "kind": "increase",
+      "article": "/articles/2026-10-09-wood-tariffs-kitchen-cabinets-vanities-50-percent-upholstered-furniture-january-2027/",
+      "affects": [
+        "Furniture",
+        "Cabinets",
+        "Wood"
+      ]
     },
     {
       "cells": [
@@ -26,7 +35,19 @@
         "Medium and large companies must file due diligence statements for cattle, cocoa, coffee, palm oil, rubber, soy and wood products sold in the EU",
         "Upcoming"
       ],
-      "source": "https://www.forvismazars.com/nl/en/who-we-are/news-events-and-publications/news/eudr-update"
+      "source": "https://www.forvismazars.com/nl/en/who-we-are/news-events-and-publications/news/eudr-update",
+      "date": "2026-12-30",
+      "authority": "EU rules",
+      "kind": "compliance",
+      "article": "/articles/2026-10-07-eudr-deforestation-regulation-december-30-2026-deadline-suppliers/",
+      "affects": [
+        "Cocoa",
+        "Coffee",
+        "Wood",
+        "Rubber",
+        "Soy",
+        "Palm oil"
+      ]
     },
     {
       "cells": [
@@ -35,7 +56,17 @@
         "178 product exclusions lapse; typically 25% Section 301 duty applies to entries from Nov. 10",
         "Upcoming — no extension notice found as of mid-Oct."
       ],
-      "source": "https://ustr.gov/about/policy-offices/press-office/press-releases/2025/november/ustr-extends-exclusions-china-section-301-tariffs-related-forced-technology-transfer-investigation"
+      "source": "https://ustr.gov/about/policy-offices/press-office/press-releases/2025/november/ustr-extends-exclusions-china-section-301-tariffs-related-forced-technology-transfer-investigation",
+      "date": "2026-11-10",
+      "authority": "Section 301",
+      "kind": "increase",
+      "article": "/articles/2026-10-12-section-301-china-exclusions-expire-nov-10/",
+      "affects": [
+        "Machinery",
+        "Solar equipment",
+        "Medical",
+        "Chemicals"
+      ]
     },
     {
       "cells": [
@@ -44,7 +75,14 @@
         "100% default duty on patented drugs and APIs extends to all importers; country and company reductions apply",
         "In effect"
       ],
-      "source": "https://www.bakerdonelson.com/trump-overhauls-section-232-tariffs-what-metals-and-pharmaceutical-importers-need-to-know"
+      "source": "https://www.bakerdonelson.com/trump-overhauls-section-232-tariffs-what-metals-and-pharmaceutical-importers-need-to-know",
+      "date": "2026-09-29",
+      "authority": "Section 232",
+      "kind": "start",
+      "article": "/articles/2026-10-12-section-232-pharma-tariff-now-applies-all-importers/",
+      "affects": [
+        "Pharmaceuticals"
+      ]
     },
     {
       "cells": [
@@ -53,7 +91,16 @@
         "Each side to cut tariffs on about $30 billion of goods once domestic legal steps are complete",
         "Announced, not yet in effect"
       ],
-      "source": "https://www.farmprogress.com/marketing/us-china-to-cut-tariffs-on-60-billion-of-non-sensitive-goods"
+      "source": "https://www.farmprogress.com/marketing/us-china-to-cut-tariffs-on-60-billion-of-non-sensitive-goods",
+      "date": "2026-09-28",
+      "authority": "Trade deal",
+      "kind": "decrease",
+      "article": "/articles/2026-09-28-us-china-60-billion-tariff-cuts-30-for-30-framework/",
+      "affects": [
+        "Housewares",
+        "Toys",
+        "Sporting goods"
+      ]
     },
     {
       "cells": [
@@ -62,7 +109,14 @@
         "Duty applies to large companies listed in the proclamation annex",
         "In effect"
       ],
-      "source": "https://www.internationaltradeinsights.com/2026/04/president-trump-imposes-section-232-tariffs-on-patented-pharmaceuticals-and-active-pharmaceutical-ingredients/"
+      "source": "https://www.internationaltradeinsights.com/2026/04/president-trump-imposes-section-232-tariffs-on-patented-pharmaceuticals-and-active-pharmaceutical-ingredients/",
+      "date": "2026-07-31",
+      "authority": "Section 232",
+      "kind": "start",
+      "article": "/articles/2026-10-12-section-232-pharma-tariff-now-applies-all-importers/",
+      "affects": [
+        "Pharmaceuticals"
+      ]
     },
     {
       "cells": [
@@ -71,7 +125,14 @@
         "10% or 12.5% additional duty on imports from 60 economies, with broad exemptions",
         "In effect"
       ],
-      "source": "https://www.hklaw.com/en/insights/publications/2026/07/and-the-tariff-beat-goes-on"
+      "source": "https://www.hklaw.com/en/insights/publications/2026/07/and-the-tariff-beat-goes-on",
+      "date": "2026-07-24",
+      "authority": "Section 301",
+      "kind": "start",
+      "article": "/articles/2026-10-12-section-301-forced-labor-tariffs-what-buyers-pay/",
+      "affects": [
+        "60 economies"
+      ]
     },
     {
       "cells": [
@@ -80,7 +141,14 @@
         "10% global surcharge ends at its 150-day statutory limit",
         "Expired"
       ],
-      "source": "https://www.strixsmart.com/section-122-surcharge"
+      "source": "https://www.strixsmart.com/section-122-surcharge",
+      "date": "2026-07-24",
+      "authority": "Section 122",
+      "kind": "end",
+      "article": "/articles/2026-10-12-section-301-forced-labor-tariffs-what-buyers-pay/",
+      "affects": [
+        "All imports"
+      ]
     },
     {
       "cells": [
@@ -89,7 +157,15 @@
         "U.S. declined to extend; annual reviews now run through 2036",
         "Agreement in force to 2036"
       ],
-      "source": "https://www.iisd.org/itn/2026/09/09/united-states-declines-to-renew-usmca-at-first-joint-review-triggering-annual-reviews/"
+      "source": "https://www.iisd.org/itn/2026/09/09/united-states-declines-to-renew-usmca-at-first-joint-review-triggering-annual-reviews/",
+      "date": "2026-07-01",
+      "authority": "USMCA",
+      "kind": "review",
+      "article": "/articles/2026-09-10-usmca-not-renewed-annual-reviews-north-america-sourcing/",
+      "affects": [
+        "Mexico",
+        "Canada"
+      ]
     },
     {
       "cells": [
@@ -98,7 +174,14 @@
         "Phase 1 of IEEPA tariff refunds for unliquidated and recently liquidated entries",
         "Open"
       ],
-      "source": "https://www.whiteandwilliams.com/resources-alerts-IEEPA-Tariff-Refunds-CBP-Launches-CAPE-Process"
+      "source": "https://www.whiteandwilliams.com/resources-alerts-IEEPA-Tariff-Refunds-CBP-Launches-CAPE-Process",
+      "date": "2026-04-20",
+      "authority": "IEEPA",
+      "kind": "refund",
+      "article": "/guides/ieepa-tariff-refunds-cape-guide/",
+      "affects": [
+        "Refunds"
+      ]
     },
     {
       "cells": [
@@ -107,7 +190,16 @@
         "Steel, aluminum and copper duties (50% / 25% / 15% tiers) apply to full customs value, not metal content",
         "In effect"
       ],
-      "source": "https://www.bakerdonelson.com/trump-overhauls-section-232-tariffs-what-metals-and-pharmaceutical-importers-need-to-know"
+      "source": "https://www.bakerdonelson.com/trump-overhauls-section-232-tariffs-what-metals-and-pharmaceutical-importers-need-to-know",
+      "date": "2026-04-06",
+      "authority": "Section 232",
+      "kind": "increase",
+      "article": "/guides/section-232-tariffs-explained-steel-aluminum-copper-pharma-semiconductors-wood/",
+      "affects": [
+        "Steel",
+        "Aluminum",
+        "Copper"
+      ]
     },
     {
       "cells": [
@@ -116,7 +208,14 @@
         "10% global surcharge after IEEPA tariffs struck down",
         "Ended July 24"
       ],
-      "source": "https://resources.altium.com/p/tariff-reset-pcb-workarounds"
+      "source": "https://resources.altium.com/p/tariff-reset-pcb-workarounds",
+      "date": "2026-02-24",
+      "authority": "Section 122",
+      "kind": "start",
+      "article": "/articles/2026-10-12-section-301-forced-labor-tariffs-what-buyers-pay/",
+      "affects": [
+        "All imports"
+      ]
     },
     {
       "cells": [
@@ -125,7 +224,14 @@
         "Reciprocal tariffs invalidated; refunds processed through CBP and the Court of International Trade",
         "Refunds ongoing"
       ],
-      "source": "https://www.bdo.com/insights/tax/update-on-cbp-ieepa-refund-progress-and-new-orders-from-the-us-court-of-international-trade"
+      "source": "https://www.bdo.com/insights/tax/update-on-cbp-ieepa-refund-progress-and-new-orders-from-the-us-court-of-international-trade",
+      "date": "2026-02-20",
+      "authority": "IEEPA",
+      "kind": "end",
+      "article": "/articles/2026-10-14-tariff-refunds-levis-80m-how-companies-reinvest/",
+      "affects": [
+        "All imports"
+      ]
     },
     {
       "cells": [
@@ -134,7 +240,15 @@
         "25% on certain advanced logic chips, with broad U.S. end-use exemptions",
         "In effect"
       ],
-      "source": "https://taxnews.ey.com/news/2026-0209-us-section-232-proclamation-imposes-25-percent-tariff-on-certain-semiconductors"
+      "source": "https://taxnews.ey.com/news/2026-0209-us-section-232-proclamation-imposes-25-percent-tariff-on-certain-semiconductors",
+      "date": "2026-01-15",
+      "authority": "Section 232",
+      "kind": "start",
+      "article": "/guides/section-232-tariffs-explained-steel-aluminum-copper-pharma-semiconductors-wood/",
+      "affects": [
+        "Semiconductors"
+      ]
     }
-  ]
+  ],
+  "note": "Rows need date (ISO), authority, kind (start, increase, decrease, end, review, refund, compliance), article (our coverage) and affects (short labels) for the visual tracker."
 }

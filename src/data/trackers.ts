@@ -5,7 +5,7 @@ export interface Tracker {
   intro: string;
   updated: string;
   columns: string[];
-  rows: { cells: string[]; source?: string }[];
+  rows: { cells: string[]; source?: string; date?: string; authority?: string; kind?: string; article?: string; affects?: string[] }[];
 }
 
 const files = import.meta.glob<{ default: Omit<Tracker, 'slug'> }>('./trackers/*.json', { eager: true });
