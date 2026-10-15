@@ -17,7 +17,7 @@ Publish the procurement stories that matter to CPOs, category managers and sourc
 5. **Write each article** to the template below.
 6. **Update trackers** in `src/data/trackers/*.json` when a story adds or changes an entry. Update `updated` to today's date.
 7. **Update the events bar** in `src/data/events.json`: add any new dated event a story covers (an effective date, deadline, expiry or vote) with `date` (YYYY-MM-DD), a short `label` (under 50 characters) and `href` to our story. Remove events more than 60 days old. The bar shows countdowns, price alerts and trending topics automatically.
-8. **Update category analysis** in `src/data/category-impact.json` when a story or the monthly price data changes a category's picture. For each affected category, `now` must be factual and cite a source in `sources` (our article or the original publisher); `meaning` is our analysis of what it means for category strategy and suppliers, in one or two sentences. Update `asOf` to today's date. Never state a figure that is not in a cited source.
+8. **Update category analysis** in `src/data/category-impact.json` when a story or the monthly price data changes a category's picture. For each affected category, `now` must be factual and cite a source in `sources` (our article or the original publisher); `meaning` is our analysis of what it means for category strategy and suppliers, in one or two sentences. Also keep our assessment fields current: `leverage` (1 = suppliers hold it, 5 = procurement teams hold it), `risk` (low, elevated or high), `riskWhy` (factual, sourced), `move` (the first action we recommend) and `when` (the window to act). Price direction is one input, not the verdict. Update `asOf` to today's date. Never state a figure that is not in a cited source.
 9. **Build to verify:** run `npm ci` (first time) then `npm run build`. Fix any errors. Never push a broken build.
 10. **Commit and deploy.** Commit on a branch with message `newsroom: <date> — <n> stories`, push it, then open a pull request to `main` and squash-merge it with the GitHub REST API (`gh api`), not GraphQL. If a direct push to `main` is allowed, that is fine too. Cloudflare deploys from `main` automatically; confirm the "Workers Builds" check on the merge commit succeeded.
 11. **Report:** end with a short summary listing stories published, trackers updated, and anything that failed.
@@ -37,9 +37,8 @@ Publish the procurement stories that matter to CPOs, category managers and sourc
 ## Interactive features and how they stay current
 
 - **Cost Pressure Monitor and Market outlook:** refreshed by the daily GitHub Action from producer price data. When a new month's data lands, publish the monthly signal story described below.
-- **Prediction market odds:** refreshed by the daily GitHub Action.
 - **Most popular / Top stories / Trending:** computed at build time from `signal` and freshness, so accurate `signal` scores matter.
-- **What's moving in your categories:** reads `category-impact.json`; keep it current as described in step 8.
+- **Category outlook** (homepage "Your categories this quarter", `/outlook/`, section pages and the rail): reads `category-impact.json`; keep it current as described in step 8.
 - **Software rankings, widget and Finder:** read `software.json`; refreshed on Mondays.
 
 ## Article template
@@ -89,7 +88,7 @@ faqs:                  # 2-3 questions procurement teams search for, answered in
 1–2 paragraphs of context: how this connects to trends, prior events, or other stories. Link to related Procurement Signal articles where relevant, using `/articles/<slug>/`.
 ```
 
-Length: 450–800 words for news, 700–1,200 for signal reports and analysis.
+Length: 900–1,400 words for news, 1,200–1,800 for signal reports and analysis. "The details" should carry most of the length: the numbers, the background, how it compares with prior years, who is affected and what the original reporting and primary documents say, each point sourced. Every article also needs a table or framework, "What procurement teams should do", "What to watch next" and 3–5 FAQs.
 
 ## Images
 

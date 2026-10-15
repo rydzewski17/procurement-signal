@@ -7,6 +7,7 @@ import events from '../../data/events.json';
 import conferences from '../../data/conferences.json';
 import { categories, fmtPct, STATUS } from '../../data/costs';
 import { ourItems, feedFor } from '../../data/feed';
+import { categoryOutlook, LEVERAGE } from '../../data/watch';
 
 interface Props { posts: any[]; show?: string[]; exclude?: Set<string> }
 const { posts, show = ['software', 'popular', 'analysis', 'moves', 'guides', 'events', 'outlook', 'ad'], exclude = new Set() } = Astro.props;
@@ -33,7 +34,7 @@ const span = (a: string, b: string) => {
 };
 const days = (d: string) => Math.round((Date.parse(d + 'T00:00:00Z') - Date.parse(today + 'T00:00:00Z')) / DAY);
 const longDate = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'long', day: 'numeric', timeZone: 'UTC' });
-const movers = [...categories].sort((a, b) => Math.abs(b.m3ann) - Math.abs(a.m3ann)).slice(0, 5);
+const outlook = categoryOutlook(posts).slice(0, 5);
 const on = (k: string) => show.includes(k);
 ---
 <aside class="rail4" aria-label="More from Procurement Signal">
@@ -92,18 +93,18 @@ const on = (k: string) => show.includes(k);
 
   {on('outlook') && (
     <section class="rmod">
-      <h2>Market outlook</h2>
-      <ul class="outl">
-        {movers.map((c) => (
+      <h2>Category outlook</h2>
+      <ul class="outl outl2">
+        {outlook.map((c) => (
           <li>
-            <a href={`/cost-monitor/${c.id}/`}>{c.name.split(' (')[0]}</a>
-            <span class={`st st-${c.status}`}>{STATUS[c.status].label}</span>
-            <span class="pct">{fmtPct(c.y1)}</span>
+            <a href={`/outlook/#${c.id}`}>{c.name}</a>
+            <span class={`st lv-${c.leverage <= 2 ? 'sup' : c.leverage >= 4 ? 'proc' : 'bal'}`}>{LEVERAGE[c.leverage].short}</span>
+            <small>{c.impact?.when}</small>
           </li>
         ))}
       </ul>
-      <p class="rnote">Price change over 12 months, with our read on pressure.</p>
-      <a class="rmore" href="/cost-monitor/">What it means for each category</a>
+      <p class="rnote">Who holds negotiating leverage, and when to act. Our assessment.</p>
+      <a class="rmore" href="/outlook/">Leverage, risk and our move in 12 categories</a>
     </section>
   )}
 

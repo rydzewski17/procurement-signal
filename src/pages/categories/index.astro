@@ -4,7 +4,7 @@ import Media from '../../components/Media.astro';
 import { getPosts } from '../../data/posts';
 import { CATEGORIES, NEWS_GROUPS } from '../../data/categories.mjs';
 import { catsOf } from '../../data/feed';
-import { categoryWatch } from '../../data/watch';
+import { categoryWatch, LEVERAGE } from '../../data/watch';
 import { SOFTWARE } from '../../data/software';
 
 const posts = await getPosts();
@@ -83,7 +83,7 @@ const totalWeek = new Set(Object.values(topic).flatMap((t: any) => t.items.filte
                 <p class="cb">{t.blurb}</p>
                 {prices.length > 0 && (
                   <ul class="px">
-                    {prices.map((w: any) => <li class={w.status}><span>{w.name}</span><b>{w.y1 > 0 ? '+' : ''}{w.y1.toFixed(1)}% y/y</b><em>{w.statusLabel}</em></li>)}
+                    {prices.map((w: any) => <li class={({ high: 'rising-fast', elevated: 'rising', low: 'easing' } as any)[w.risk]}><a href={`/outlook/#${w.id}`}>{w.name}</a><b>{LEVERAGE[w.leverage].short}</b><em>{w.risk} risk</em></li>)}
                   </ul>
                 )}
                 {t.items.length > 0 ? (

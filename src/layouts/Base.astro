@@ -8,6 +8,11 @@ import { SITE, TOPICS } from '../data/site';
 import LiveBar from '../components/LiveBar.astro';
 import { CATEGORIES, NEWS_GROUPS, SECTIONS, categoryBySlug } from '../data/categories.mjs';
 import { SOFTWARE, status } from '../data/software';
+import { getPosts } from '../data/posts';
+
+const LABELS: Record<string, string> = { procurement: 'Procurement', 'digital-procurement': 'Tech & AI', trade: 'Trade & policy', 'supply-chain': 'Supply chain', costs: 'Costs', companies: 'Companies' };
+const allPosts = await getPosts();
+const navSections = SECTIONS.map((sx) => ({ s: sx, label: LABELS[sx.id] ?? sx.name, latest: allPosts.filter((p: any) => sx.slugs.includes(p.data.categories?.[0])).slice(0, 3) }));
 
 interface Props { title?: string; description?: string; type?: 'website' | 'article'; jsonLd?: object; section?: string; }
 const { title, description = SITE.description, type = 'website', jsonLd, section } = Astro.props;
@@ -57,57 +62,61 @@ const today = new Date().toLocaleDateString('en-US', { weekday: 'long', month: '
       </div>
     </div>
   </header>
-  <nav class="nav" aria-label="Main">
-    <div class="wrap">
+  <nav class="nav5" aria-label="Main">
+    <div class="wrap n5-bar">
+      <a href="/" class="n5-mark" aria-label={`${SITE.name} home`}><span class="wm-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span></a>
       <button class="mnav-btn" type="button" aria-expanded="false" aria-controls="mnav">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
         Menu
       </button>
-      <a href="/" class="nav-link" aria-current={section === 'home' ? 'page' : undefined}>Home</a>
-
-      <div class="dd">
-        <a class="dd-btn" href="/categories/" aria-haspopup="true" aria-current={section === 'categories' ? 'page' : undefined}>News<span class="caret" aria-hidden="true">▾</span></a>
-        <div class="dd-menu dd-mega" role="menu">
-          <div class="dd-group">
-            <span class="dd-gname">Sections</span>
-            {SECTIONS.map((sx) => <a href={`/sections/${sx.id}/`} role="menuitem">{sx.name}</a>)}
-          </div>
-          {NEWS_GROUPS.map((g) => (
-            <div class="dd-group">
-              <span class="dd-gname">{g.name}</span>
-              {g.slugs.map((sl) => <a href={`/categories/${sl}/`} role="menuitem">{categoryBySlug[sl].name}</a>)}
+      <ul class="n5-main">
+        {navSections.map((n, i) => (
+          <li class={`n5-item${i >= navSections.length - 2 ? ' n5-r' : ''}`}>
+            <a class="n5-btn" href={`/sections/${n.s.id}/`} aria-current={section === n.s.id ? 'page' : undefined}>{n.label}</a>
+            <div class="n5-panel">
+              <div class="n5-col">
+                <span class="n5-h">{n.s.name}</span>
+                {n.s.slugs.map((sl: string) => <a href={`/categories/${sl}/`}>{categoryBySlug[sl].name}</a>)}
+                <a class="n5-all" href={`/sections/${n.s.id}/`}>All {n.s.name.toLowerCase()} news →</a>
+              </div>
+              {n.latest.length > 0 && (
+                <div class="n5-col n5-latest">
+                  <span class="n5-h">Latest</span>
+                  {n.latest.map((p: any) => <a href={`/articles/${p.id}/`}>{p.data.title}</a>)}
+                </div>
+              )}
             </div>
-          ))}
-          <div class="dd-foot"><a href="/" role="menuitem">Latest news</a><a href="/archive/" role="menuitem">All stories</a><a href="/categories/" role="menuitem">Every topic</a></div>
+          </li>
+        ))}
+        <li class="n5-item n5-r">
+          <a class="n5-btn" href="/signals/" aria-current={['signals', 'guides'].includes(section ?? '') ? 'page' : undefined}>Analysis</a>
+          <div class="n5-panel n5-desc">
+            <a href="/signals/"><b>Procurement briefings</b><span>What changed, rated by urgency, with the first action to take</span></a>
+            <a href="/guides/"><b>Guides</b><span>Tariffs, freight bids, fuel surcharges, AI and supplier risk</span></a>
+            <a href="/glossary/"><b>Glossary</b><span>Procurement and trade terms in plain language</span></a>
+            <a href="/archive/"><b>All stories</b><span>Every article, newest first</span></a>
+          </div>
+        </li>
+        <li class="n5-item n5-r">
+          <a class="n5-btn" href="/outlook/" aria-current={['cost-monitor', 'outlook', 'trackers'].includes(section ?? '') ? 'page' : undefined}>Data &amp; tools</a>
+          <div class="n5-panel n5-desc">
+            <a href="/outlook/"><b>Category outlook</b><span>Negotiating leverage, supply risk and our move in 12 categories</span></a>
+            <a href="/cost-monitor/"><b>Price trends</b><span>Monthly producer prices for steel, freight, resins and more</span></a>
+            <a href="/trackers/tariff-deadlines/"><b>Tariff deadlines</b><span>Dates when duties start, change or expire</span></a>
+            <a href="/software/finder/"><b>Software finder</b><span>Four questions to a procurement software shortlist</span></a>
+          </div>
+        </li>
+      </ul>
+      <div class="n5-right">
+        <div class="n5-item n5-r n5-sw">
+          <a class="n5-btn" href="/software/" aria-current={section === 'software' ? 'page' : undefined}>Software rankings</a>
+          <div class="n5-panel n5-swp">
+            <span class="n5-h">Ranked by our analysts, with G2 ratings</span>
+            {SOFTWARE.categories.map((c) => <a href={`/software/${c.slug}/`}>{c.name}<span class={`dd-st ${status(c)}`}>{status(c) === 'ranked' ? 'Ranked' : 'Coming soon'}</span></a>)}
+            <a class="n5-all" href="/software/finder/">Not sure what you need? Use the software finder →</a>
+          </div>
         </div>
-      </div>
-
-      <div class="dd">
-        <a class="dd-btn" href="/signals/" aria-haspopup="true" aria-current={section === 'signals' || section === 'guides' ? 'page' : undefined}>Analysis<span class="caret" aria-hidden="true">▾</span></a>
-        <div class="dd-menu dd-desc" role="menu">
-          <a href="/signals/" role="menuitem"><b>Procurement briefings</b><span>What changed this week and what to do about it</span></a>
-          <a href="/guides/" role="menuitem"><b>Guides</b><span>How tariffs, price indexes and supplier risk work</span></a>
-          <a href="/glossary/" role="menuitem"><b>Glossary</b><span>Procurement and trade terms in plain language</span></a>
-        </div>
-      </div>
-
-      <div class="dd">
-        <a class="dd-btn" href="/cost-monitor/" aria-haspopup="true" aria-current={['cost-monitor', 'markets', 'trackers', 'wire'].includes(section ?? '') ? 'page' : undefined}>Prices &amp; data<span class="caret" aria-hidden="true">▾</span></a>
-        <div class="dd-menu dd-desc" role="menu">
-          <a href="/cost-monitor/" role="menuitem"><b>Price trends by category</b><span>Monthly prices for steel, freight, resins and 9 more</span></a>
-          <a href="/trackers/tariff-deadlines/" role="menuitem"><b>Tariff deadlines</b><span>Dates when duties start, change or expire</span></a>
-          <a href="/markets/" role="menuitem"><b>Prediction market odds</b><span>What traders expect on tariffs, rates and fuel</span></a>
-          <a href="/signals/" role="menuitem"><b>Procurement briefings</b><span>Our signal reports, rated by urgency</span></a>
-        </div>
-      </div>
-
-      <div class="dd dd-feature">
-        <a class="dd-btn" href="/software/" aria-haspopup="true" aria-current={section === 'software' ? 'page' : undefined}>Software rankings<span class="caret" aria-hidden="true">▾</span></a>
-        <div class="dd-menu" role="menu">
-          <span class="dd-head">Ranked by our team and by G2</span>
-          {SOFTWARE.categories.map((c) => <a href={`/software/${c.slug}/`} role="menuitem">{c.name}<span class={`dd-st ${status(c)}`}>{status(c) === 'ranked' ? 'Ranked' : 'Coming soon'}</span></a>)}
-          <a class="dd-all" href="/software/finder/" role="menuitem">Not sure what you need? Use the software finder</a>
-        </div>
+        <a class="n5-search" href="/search/" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></svg></a>
       </div>
     </div>
     <div class="mnav" id="mnav" hidden>
@@ -119,7 +128,7 @@ const today = new Date().toLocaleDateString('en-US', { weekday: 'long', month: '
         </form>
         <div class="mnav-group"><span>Sections</span>{SECTIONS.map((sx) => <a href={`/sections/${sx.id}/`}>{sx.name}</a>)}</div>
         <div class="mnav-group"><span>Analysis</span><a href="/signals/">Procurement briefings</a><a href="/guides/">Guides</a><a href="/glossary/">Glossary</a></div>
-        <div class="mnav-group"><span>Prices and data</span><a href="/cost-monitor/">Price trends by category</a><a href="/trackers/tariff-deadlines/">Tariff deadlines</a><a href="/markets/">Prediction market odds</a></div>
+        <div class="mnav-group"><span>Data and tools</span><a href="/cost-monitor/">Price trends by category</a><a href="/trackers/tariff-deadlines/">Tariff deadlines</a><a href="/outlook/">Category outlook</a></div>
         <div class="mnav-group"><span>Software</span><a href="/software/">Software rankings</a><a href="/software/finder/">Software finder</a></div>
       </div>
     </div>
@@ -156,6 +165,11 @@ const today = new Date().toLocaleDateString('en-US', { weekday: 'long', month: '
   (() => {
     const b = document.querySelector('.mnav-btn'), m = document.getElementById('mnav');
     if (b && m) b.addEventListener('click', () => { const open = b.getAttribute('aria-expanded') === 'true'; b.setAttribute('aria-expanded', String(!open)); m.hidden = open; });
+  })();
+  (() => {
+    const nav = document.querySelector('.nav5'); if (!nav) return;
+    const onScroll = () => nav.classList.toggle('stuck', scrollY > 170);
+    addEventListener('scroll', onScroll, { passive: true }); onScroll();
   })();
   (() => {
     const bar = document.querySelector('.progress');
