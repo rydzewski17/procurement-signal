@@ -10,7 +10,7 @@ import Media from '../Media.astro';
 import Kicker from '../Kicker.astro';
 import { feedFor, shortDate, clip } from '../../data/feed';
 import { categoryBySlug } from '../../data/categories.mjs';
-import { categoryWatch } from '../../data/watch';
+import { categoryWatch, LEVERAGE, RISK } from '../../data/watch';
 import { fmtPct } from '../../data/costs';
 import { SOFTWARE, rankTeam, slugify } from '../../data/software';
 import { TYPE_LABEL } from '../../data/site';
@@ -129,15 +129,15 @@ const catLabel = (x: any) => categoryBySlug[x.cats[0]]?.name;
         )}
 
         {prices.length > 0 && (
-          <section class="sp-mod" aria-label="Prices to watch">
-            <h2 class="h-rule">Prices to watch<a class="view-all" href="/cost-monitor/">All price trends</a></h2>
+          <section class="sp-mod" aria-label="Category outlook">
+            <h2 class="h-rule">Category outlook<a class="view-all" href="/outlook/">All 12 categories</a></h2>
             <div class="sp-prices">
               {prices.map((p: any) => (
-                <a class={`sp-price ${p.status}`} href={`/cost-monitor/${p.id}/`}>
+                <a class={`sp-price lv${p.leverage}`} href={`/outlook/#${p.id}`}>
                   <span class="sp-pn">{p.name}</span>
-                  <b>{fmtPct(p.y1)}</b>
-                  <span class="sp-ps">{p.statusLabel} · 12 months</span>
-                  <span class="sp-pm">{p.impact?.meaning ? clip(p.impact.meaning, 120) : p.posture}</span>
+                  <span class={`sp-risk r-${p.risk}`}>{RISK[p.risk]}</span>
+                  <span class="sp-ps">{LEVERAGE[p.leverage].label}{p.impact?.when && <> · {p.impact.when}</>}</span>
+                  <span class="sp-pm"><b>Our move:</b> {p.impact?.move ?? p.posture}</span>
                 </a>
               ))}
             </div>
@@ -205,11 +205,14 @@ const catLabel = (x: any) => categoryBySlug[x.cats[0]]?.name;
   .sp-guide span:last-child { font: 13.5px/1.45 var(--ui); color: var(--ink-2); }
   .sp-prices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 14px; }
   .sp-price { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; padding: 14px 16px; border: 1px solid var(--rule); border-left: 4px solid var(--ink-2); text-decoration: none; color: var(--ink); }
-  .sp-price.rising-fast, .sp-price.rising { border-left-color: var(--red); }
-  .sp-price.easing { border-left-color: var(--teal); }
+  .sp-price.lv1, .sp-price.lv2 { border-left-color: var(--red); }
+  .sp-price.lv4, .sp-price.lv5 { border-left-color: var(--teal); }
+  .sp-risk { font: 600 11.5px/1 var(--ui); padding: 5px 7px; white-space: nowrap; align-self: start; }
+  .r-high { background: #fbe9e7; color: #a3261b; } .r-elevated { background: #fff4dc; color: #8a5a00; } .r-low { background: #e3f4f1; color: #0b6b5f; }
   .sp-price:hover { box-shadow: 0 6px 16px rgba(14,42,71,.1); }
   .sp-pn { font: 700 16px/1.25 var(--head); }
-  .sp-price b { font: 700 18px/1 var(--head); text-align: right; }
+  .sp-pm b { font-weight: 600; color: var(--ink); }
+  .sp-ps { line-height: 1.35 !important; }
   .sp-ps { grid-column: 1 / -1; font: 600 12px/1 var(--ui); color: var(--muted); }
   .sp-pm { grid-column: 1 / -1; font: 13.5px/1.45 var(--ui); color: var(--ink-2); }
   .sp-sw { list-style: none; margin: 10px 0 0; padding: 0; }

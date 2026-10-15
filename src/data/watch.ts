@@ -29,6 +29,17 @@ const MATCH: Record<string, RegExp> = {
 const clip = (t: string, n = 110) => (t.length > n ? t.slice(0, t.lastIndexOf(' ', n)) + '…' : t);
 
 export const impactAsOf = impact.asOf;
+
+// Our assessment of who holds negotiating leverage (1 = suppliers, 5 = procurement teams).
+export const LEVERAGE: Record<number, { label: string; short: string }> = {
+  1: { label: 'Suppliers hold the leverage', short: 'Suppliers' },
+  2: { label: 'Suppliers have the edge', short: 'Leaning suppliers' },
+  3: { label: 'Balanced', short: 'Balanced' },
+  4: { label: 'Procurement has the edge', short: 'Leaning procurement' },
+  5: { label: 'Procurement holds the leverage', short: 'Procurement' },
+};
+export const RISK: Record<string, string> = { high: 'High supply risk', elevated: 'Elevated supply risk', low: 'Low supply risk' };
+const RISK_ORDER: Record<string, number> = { high: 0, elevated: 1, low: 2 };
 const ORDER: Record<string, number> = { 'rising-fast': 0, 'rising': 1, 'easing': 2, 'stable': 3 };
 
 export function categoryWatch(posts: any[]) {
@@ -55,10 +66,23 @@ export function categoryWatch(posts: any[]) {
       stance: STANCE[c.status], posture: STATUS[c.status].posture, latest,
       impact: (impact.items as any)[c.id] ?? null,
     };
-  });
+  }).map((r) => ({ ...r, latest: pickRead(r, posts), name: r.impact?.label ?? r.name, leverage: r.impact?.leverage ?? 3, risk: r.impact?.risk ?? 'elevated' }));
+}
+
+// Ordered for action: highest supply risk first, then where suppliers hold the most leverage.
+export function categoryOutlook(posts: any[]) {
+  return categoryWatch(posts).sort((a, b) => RISK_ORDER[a.risk] - RISK_ORDER[b.risk] || a.leverage - b.leverage);
 }
 
 function count(id: string, posts: any[]) {
   const re = MATCH[id];
   return posts.filter((p) => re.test(`${p.data.title} ${p.data.dek}`)).length;
+}
+
+// Prefer the most relevant story cited on the card over a keyword match.
+function pickRead(r: any, posts: any[]) {
+  const cited = (r.impact?.sources ?? []).map((x: any) => x.url).filter((u: string) => u.startsWith('/articles/') && !u.includes('cost-pressure-monitor'));
+  const post = cited.map((u: string) => posts.find((p) => `/articles/${p.id}/` === u)).filter(Boolean)
+    .sort((a: any, b: any) => b.data.date.valueOf() - a.data.date.valueOf())[0];
+  return post ? { title: clip(post.data.title), href: `/articles/${post.id}/` } : r.latest;
 }

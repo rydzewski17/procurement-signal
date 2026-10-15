@@ -1,6 +1,6 @@
 {
   "asOf": "2026-10-14",
-  "note": "Editorial file. 'now' must be factual and sourced; 'meaning' is Procurement Signal's analysis. Refresh each newsroom run when the cost monitor or category news changes.",
+  "note": "Editorial file. 'now' must be factual and sourced; 'meaning' is Procurement Signal's analysis. Refresh each newsroom run when the cost monitor or category news changes. 'leverage' (1 = suppliers hold it, 5 = procurement holds it), 'risk', 'riskWhy', 'move' and 'when' are Procurement Signal's assessment, built from the cited sources.",
   "items": {
     "steel": {
       "now": "Producer prices hit a new high in August, up 23.4% on the year. Importers also pay a 50% Section 232 duty on full customs value since April 6.",
@@ -9,8 +9,18 @@
         {
           "name": "Procurement Signal: input-cost pressure report",
           "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/"
+        },
+        {
+          "name": "Procurement Signal: September ISM report",
+          "url": "/articles/2026-10-01-ism-september-prices-index-77-9-supplier-lead-times/"
         }
-      ]
+      ],
+      "leverage": 1,
+      "risk": "high",
+      "riskWhy": "ISM respondents report several steel grades in short supply, and AI and data center demand is stretching domestic mill capacity. Imports carry a 50% duty on full value.",
+      "move": "Lock supply on critical grades with domestic mills and index the rest to a published steel price.",
+      "when": "Before 2027 contracts renew",
+      "label": "Steel"
     },
     "aluminum": {
       "now": "Prices are 5.9% below their June high but still 27.3% above a year ago. Imports carry a 50% Section 232 duty on full value.",
@@ -19,8 +29,18 @@
         {
           "name": "Procurement Signal: input-cost pressure report",
           "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/"
+        },
+        {
+          "name": "Procurement Signal: September ISM report",
+          "url": "/articles/2026-10-01-ism-september-prices-index-77-9-supplier-lead-times/"
         }
-      ]
+      ],
+      "leverage": 3,
+      "risk": "elevated",
+      "riskWhy": "Prices are below the June high, but the 50% Section 232 duty keeps imported landed cost high and ISM still lists aluminum as rising.",
+      "move": "Re-quote contracts priced at the spring peak and ask for index-linked terms going forward.",
+      "when": "Now, while prices sit below the June high",
+      "label": "Aluminum"
     },
     "copper": {
       "now": "Copper and brass mill shapes are at a 12-month high, up 20.9% on the year. Copper and derivatives are covered by the April 2026 Section 232 metals proclamation.",
@@ -29,8 +49,18 @@
         {
           "name": "Procurement Signal: input-cost pressure report",
           "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/"
+        },
+        {
+          "name": "Procurement Signal: September ISM report",
+          "url": "/articles/2026-10-01-ism-september-prices-index-77-9-supplier-lead-times/"
         }
-      ]
+      ],
+      "leverage": 2,
+      "risk": "elevated",
+      "riskWhy": "Mill shapes are at a 12-month high, and copper derivatives now fall under Section 232. Wire, cable and motor suppliers are passing costs through.",
+      "move": "Map copper-heavy parts and require a cost breakdown with every pass-through request.",
+      "when": "Before first-quarter price letters",
+      "label": "Copper and brass"
     },
     "resins": {
       "now": "Plastic resin prices have fallen 8.5% over three months and are among the categories that turned lower this year.",
@@ -39,8 +69,18 @@
         {
           "name": "Procurement Signal: input-cost pressure report",
           "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/"
+        },
+        {
+          "name": "Procurement Signal: September ISM report",
+          "url": "/articles/2026-10-01-ism-september-prices-index-77-9-supplier-lead-times/"
         }
-      ]
+      ],
+      "leverage": 4,
+      "risk": "low",
+      "riskWhy": "Producer prices fell 8.5% over three months through August and supply is available, although ISM respondents reported resin prices rising again in September.",
+      "move": "Re-bid packaging and molded parts, and ask for decreases tied to a resin index.",
+      "when": "Next 60 days",
+      "label": "Plastic resins"
     },
     "chemicals": {
       "now": "Industrial chemical prices have eased over three months but remain 13.3% above a year ago.",
@@ -49,8 +89,18 @@
         {
           "name": "Procurement Signal: input-cost pressure report",
           "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/"
+        },
+        {
+          "name": "Procurement Signal: six months into the U.S.–Iran war",
+          "url": "/articles/2026-08-28-us-iran-war-six-months-hormuz-tanker-rates-diesel-jet-fuel/"
         }
-      ]
+      ],
+      "leverage": 4,
+      "risk": "elevated",
+      "riskWhy": "Prices have eased over three months, but petroleum-based feedstocks remain exposed to the war with Iran and Strait of Hormuz disruption.",
+      "move": "Ask suppliers to show how lower input costs are reflected before accepting any increase.",
+      "when": "At the next price review",
+      "label": "Industrial chemicals"
     },
     "diesel": {
       "now": "Diesel jumped 17.7% in August after easing from a May peak and is up 77.8% on the year.",
@@ -63,8 +113,18 @@
         {
           "name": "Procurement Signal: input-cost pressure report",
           "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/"
+        },
+        {
+          "name": "Procurement Signal: six months into the U.S.–Iran war",
+          "url": "/articles/2026-08-28-us-iran-war-six-months-hormuz-tanker-rates-diesel-jet-fuel/"
         }
-      ]
+      ],
+      "leverage": 1,
+      "risk": "high",
+      "riskWhy": "Diesel is up 77.8% on the year, Hormuz crossings are down sharply and forecasters expect the supply deficit to last into 2027.",
+      "move": "Tie every fuel surcharge to the weekly DOE/EIA diesel index and audit carrier tables.",
+      "when": "Before 2027 carrier awards",
+      "label": "Diesel fuel"
     },
     "ocean": {
       "now": "Deep-sea freight is up 32.0% on the year. Trans-Pacific spot rates hold above $8,000 per FEU to the West Coast while Asia–Europe rates have fallen 34% since July, and only 27% of vessels arrive on schedule.",
@@ -82,7 +142,13 @@
           "name": "Procurement Signal: Port of Los Angeles record September",
           "url": "/articles/2026-10-14-port-of-los-angeles-record-september-canal-shift/"
         }
-      ]
+      ],
+      "leverage": 3,
+      "risk": "elevated",
+      "riskWhy": "Only 27% of vessels arrive on schedule, with delays averaging six days. Trans-Pacific rates are high while Asia–Europe rates have fallen 34% since July.",
+      "move": "Lock lower long-term rates on Asia–Europe and keep trans-Pacific terms short or index-linked.",
+      "when": "2027 contract season, now through Q1",
+      "label": "Ocean freight"
     },
     "trucking": {
       "now": "Government truck transportation prices have been flat for three months, but contract truckload rates hit a 52-week high in October as carriers exit the market faster than freight volumes fall.",
@@ -96,7 +162,13 @@
           "name": "Procurement Signal: C.H. Robinson–RXO merger",
           "url": "/articles/2026-10-14-ch-robinson-rxo-merger-what-shippers-should-do/"
         }
-      ]
+      ],
+      "leverage": 2,
+      "risk": "elevated",
+      "riskWhy": "Carriers are leaving the market faster than freight is falling, tender rejections are near 14% and broker consolidation is reducing options.",
+      "move": "Segment lanes, commit volume on core lanes and pay for capacity where service matters.",
+      "when": "2027 bid season, now",
+      "label": "Truckload freight"
     },
     "semis": {
       "now": "Semiconductors are the only tracked category below year-ago prices, down 3.1%. Section 232 tariffs on semiconductors are in effect.",
@@ -105,8 +177,22 @@
         {
           "name": "Procurement Signal: input-cost pressure report",
           "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/"
+        },
+        {
+          "name": "Procurement Signal: memory chip shortage",
+          "url": "/articles/2026-10-02-memory-chip-shortage-dram-prices-ai-data-centers-electronics-sourcing/"
+        },
+        {
+          "name": "Procurement Signal: September ISM report",
+          "url": "/articles/2026-10-01-ism-september-prices-index-77-9-supplier-lead-times/"
         }
-      ]
+      ],
+      "leverage": 2,
+      "risk": "high",
+      "riskWhy": "The producer price index is down, but memory chips are on allocation as AI data centers absorb supply. ISM lists memory, circuit boards and electronic components as short.",
+      "move": "Treat memory separately: secure allocation and extend forecasts, then re-quote other components.",
+      "when": "Before 2027 allocations are set",
+      "label": "Semiconductors and memory"
     },
     "electrical": {
       "now": "Electrical machinery and equipment prices are up 13.5% on the year. Some metal-intensive grid equipment carries a 15% Section 232 rate through 2027.",
@@ -119,8 +205,18 @@
         {
           "name": "Procurement Signal: October factory investments, incl. transformer steel",
           "url": "/articles/2026-10-14-us-factory-investments-blue-origin-cleveland-cliffs-saronic-shipyard/"
+        },
+        {
+          "name": "Procurement Signal: September ISM report",
+          "url": "/articles/2026-10-01-ism-september-prices-index-77-9-supplier-lead-times/"
         }
-      ]
+      ],
+      "leverage": 2,
+      "risk": "high",
+      "riskWhy": "ISM respondents report electrical components in short supply, and capital equipment lead times average 176 days. Some grid equipment carries a 15% Section 232 rate.",
+      "move": "Order long-lead equipment early, fix price at order and qualify a second source for critical parts.",
+      "when": "Plan 2027 projects now",
+      "label": "Electrical equipment"
     },
     "lumber": {
       "now": "Lumber prices are up 7.6% on the year, and Section 232 tariffs on wood products are in effect.",
@@ -129,8 +225,22 @@
         {
           "name": "Procurement Signal: input-cost pressure report",
           "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/"
+        },
+        {
+          "name": "Procurement Signal: wood and furniture tariffs",
+          "url": "/articles/2026-10-09-wood-tariffs-kitchen-cabinets-vanities-50-percent-upholstered-furniture-january-2027/"
+        },
+        {
+          "name": "Procurement Signal: EU deforestation rules",
+          "url": "/articles/2026-10-07-eudr-deforestation-regulation-december-30-2026-deadline-suppliers/"
         }
-      ]
+      ],
+      "leverage": 3,
+      "risk": "elevated",
+      "riskWhy": "Section 232 duties on wood are in effect, and cabinet, vanity and upholstered furniture rates rise on Jan. 1. EU deforestation rules start Dec. 30 for wood products.",
+      "move": "Check how pallet, crating and furniture suppliers price wood content and duty, and confirm country of origin.",
+      "when": "Before the Jan. 1 tariff increase",
+      "label": "Lumber and wood"
     },
     "paper": {
       "now": "Converted paper and paperboard, including corrugated boxes, is up 4.4% on the year but accelerating to a 12.9% annualized pace.",
@@ -140,7 +250,13 @@
           "name": "Procurement Signal: input-cost pressure report",
           "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/"
         }
-      ]
+      ],
+      "leverage": 3,
+      "risk": "low",
+      "riskWhy": "Supply is available, but corrugated and paperboard prices are turning up from a low base at a 12.9% annualized pace.",
+      "move": "Lock corrugated pricing before contracts reset and tie future changes to a published index.",
+      "when": "Before first-quarter resets",
+      "label": "Corrugated and paperboard"
     }
   }
 }

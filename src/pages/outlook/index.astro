@@ -1,0 +1,95 @@
+---
+import Base from '../../layouts/Base.astro';
+import CategoryWatch from '../../components/CategoryWatch.astro';
+import { getPosts } from '../../data/posts';
+import { categoryOutlook, impactAsOf, LEVERAGE } from '../../data/watch';
+import events from '../../data/events.json';
+const posts = await getPosts();
+const rows = categoryOutlook(posts);
+const asOf = new Date(impactAsOf + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const today = new Date().toISOString().slice(0, 10);
+const upcoming = events.events.filter((e) => e.date >= today).sort((a, b) => a.date.localeCompare(b.date)).slice(0, 6);
+const fmt = (d: string) => new Date(d + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const suppliers = rows.filter((r) => r.leverage <= 2), ours = rows.filter((r) => r.leverage >= 4);
+const faqs = [
+  { q: 'Which purchase categories give procurement teams the most negotiating leverage right now?', a: ours.length ? `In our assessment, procurement teams have the edge in ${ours.map((r) => r.name.toLowerCase()).join(' and ')}, where input prices have eased and supply is available. That is the time to re-bid or ask for decreases tied to an index.` : 'None of the 12 categories we track currently leans clearly toward procurement teams.' },
+  { q: 'Where do suppliers hold the leverage?', a: `In our assessment, suppliers have the edge in ${suppliers.map((r) => r.name.toLowerCase()).join(', ')}. In these categories, securing supply and building fair price mechanisms usually matter more than chasing the lowest quote.` },
+  { q: 'How does Procurement Signal assess leverage and supply risk?', a: 'We weigh four things: the direction of producer prices, supplier capacity and lead times, trade measures such as Section 232 and Section 301 duties, and disruption risks reported in our coverage. The assessment is editorial judgment, not a model, and each card links to the reporting behind it.' },
+];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'WebPage', name: 'Category outlook: negotiating leverage, supply risk and the move to make', dateModified: impactAsOf, description: 'Our assessment of negotiating leverage, supply risk and recommended actions for 12 purchase categories.' },
+    { '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+  ],
+};
+---
+<Base title="Category outlook: negotiating leverage, supply risk and the move to make" description="Who holds negotiating leverage, how exposed supply is, and what procurement teams should do now in steel, freight, chips, resins and eight more categories." section="outlook" jsonLd={jsonLd}>
+  <div class="page">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/cost-monitor/">Prices &amp; data</a> › Category outlook</nav>
+    <div class="ol-head">
+      <div>
+        <h1>Category outlook</h1>
+        <p class="ol-dek">Where procurement teams have negotiating leverage, where suppliers do, and the move we would make in each of 12 purchase categories this quarter.</p>
+        <p class="ol-stamp">Our assessment, updated {asOf}. Reviewed every weekday with the newsroom.</p>
+      </div>
+      <aside class="ol-key" aria-label="How to read this page">
+        <h2>How to read it</h2>
+        <dl>
+          <dt>Negotiating leverage</dt><dd>Five steps from {LEVERAGE[1].short.toLowerCase()} to {LEVERAGE[5].short.toLowerCase()}, based on prices, capacity and trade measures.</dd>
+          <dt>Supply risk</dt><dd>How likely you are to face shortages, allocation or delays, not just higher prices.</dd>
+          <dt>Our move</dt><dd>The one action we would take first, with the window to take it.</dd>
+        </dl>
+      </aside>
+    </div>
+
+    <CategoryWatch posts={posts} full />
+
+    <div class="ol-lower">
+      <section>
+        <h2 class="h-rule">Dates that could change the picture</h2>
+        <ul class="ol-dates">
+          {upcoming.map((e) => <li><span>{fmt(e.date)}</span><a href={e.href}>{e.label}</a></li>)}
+        </ul>
+        <a class="ol-more" href="/trackers/tariff-deadlines/">All tariff and trade deadlines</a>
+      </section>
+      <section>
+        <h2 class="h-rule">Questions procurement teams ask</h2>
+        {faqs.map((f) => <details class="ol-faq"><summary>{f.q}</summary><p>{f.a}</p></details>)}
+      </section>
+    </div>
+
+    <section class="ol-method">
+      <h2>How we assess categories</h2>
+      <p>Leverage, supply risk and the recommended move are Procurement Signal's editorial assessment. We start with U.S. producer price data from the Bureau of Labor Statistics and add what our reporting shows about supplier capacity, lead times, shortages and trade measures. Every card links to the stories and data behind it. Price movement is one input, not the verdict: a category can have falling prices and high supply risk at the same time, as memory chips do now.</p>
+      <p>This is general market analysis, not advice for a specific contract. Check it against your own supplier data, contract terms and volumes. See our <a href="/editorial-standards/">editorial standards</a>.</p>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .ol-head { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 36px; align-items: start; margin: 8px 0 6px; }
+  .ol-head h1 { font: 700 44px/1.08 var(--head); margin: 0 0 10px; color: var(--ink); }
+  .ol-dek { font: 20px/1.45 var(--head); color: var(--ink-2); margin: 0 0 10px; }
+  .ol-stamp { font: 13px var(--ui); color: var(--muted); margin: 0; }
+  .ol-key { background: var(--navy-tint); border-top: 3px solid var(--teal); padding: 14px 18px; }
+  .ol-key h2 { font: 600 13px/1 var(--ui); color: var(--teal); margin: 0 0 8px; }
+  .ol-key dl { margin: 0; font: 14px/1.45 var(--ui); }
+  .ol-key dt { font-weight: 600; color: var(--ink); margin-top: 8px; }
+  .ol-key dd { margin: 2px 0 0; color: var(--ink-2); }
+  .page :global(.cp-wrap) { margin-top: 18px; }
+  .page :global(.cp-head p) { display: none; }
+  .ol-lower { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 44px; }
+  .ol-dates { list-style: none; margin: 10px 0 0; padding: 0; }
+  .ol-dates li { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--rule); font: 15px/1.4 var(--ui); }
+  .ol-dates span { font-weight: 600; color: var(--teal); }
+  .ol-dates a { color: var(--ink); }
+  .ol-more { display: inline-block; margin-top: 12px; font: 600 14px var(--ui); color: var(--link); }
+  .ol-faq { border-bottom: 1px solid var(--rule); padding: 12px 0; }
+  .ol-faq summary { cursor: pointer; font: 600 16px/1.4 var(--head); color: var(--ink); }
+  .ol-faq p { font-size: 15.5px; color: var(--ink-2); margin: 8px 0 0; }
+  .ol-method { margin: 44px 0 20px; max-width: 760px; }
+  .ol-method h2 { font: 700 22px/1.25 var(--head); margin: 0 0 10px; }
+  .ol-method p { font-size: 16px; color: var(--ink-2); }
+  @media (max-width: 860px) { .ol-head, .ol-lower { grid-template-columns: 1fr; gap: 20px; } .ol-head h1 { font-size: 34px; } }
+</style>

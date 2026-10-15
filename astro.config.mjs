@@ -9,5 +9,6 @@ export default defineConfig({
     '/software/source-to-pay': '/software/procure-to-pay/',
     '/simulator': '/software/',
     '/tariffs': '/categories/',
+    '/markets': '/outlook/',
   },
 });

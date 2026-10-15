@@ -1,78 +1,207 @@
 ---
 import Base from '../../layouts/Base.astro';
-import SignalCard from '../../components/SignalCard.astro';
+import Media from '../../components/Media.astro';
+import Kicker from '../../components/Kicker.astro';
+import SignalMeter from '../../components/SignalMeter.astro';
+import Rail from '../../components/v4/Rail.astro';
 import { getPosts } from '../../data/posts';
 import { TOPICS } from '../../data/site';
+import { minsOf, whyOf } from '../../data/feed';
+
 const posts = await getPosts();
+const level = (s: number) => (s >= 5 ? 'critical' : s >= 4 ? 'high' : 'watch');
+const actOf = (p: any) => {
+  const m = p.body?.match(/## What (?:buyers|procurement teams) should do\s+([\s\S]*?)(\n## |$)/);
+  const first = m?.[1]?.split('\n').find((l: string) => /^\s*[-*]\s+/.test(l));
+  return first ? first.replace(/^\s*[-*]\s+/, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/[*_`]/g, '').trim() : '';
+};
+const sorted = [...posts].sort((a, b) => b.data.signal - a.data.signal || b.data.date.valueOf() - a.data.date.valueOf());
+const actNow = sorted.filter((p) => p.data.signal >= 5).slice(0, 3);
+const rest = sorted.filter((p) => !actNow.includes(p));
 const counts = { critical: posts.filter((p) => p.data.signal >= 5).length, high: posts.filter((p) => p.data.signal === 4).length, watch: posts.filter((p) => p.data.signal <= 3).length };
 const topics = Object.keys(TOPICS).filter((t) => posts.some((p) => p.data.topic === t));
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+const LEVELS = [
+  { id: 'critical', name: 'Critical', n: counts.critical, text: 'Act this week. Costs or supply change soon.' },
+  { id: 'high', name: 'High', n: counts.high, text: 'Plan a response this quarter.' },
+  { id: 'watch', name: 'Watch', n: counts.watch, text: 'Track it and brief stakeholders.' },
+];
+const jsonLd = { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Procurement briefings', description: 'Procurement briefings rated by urgency, with what changed and the first action to take.' };
 ---
-<Base title="Procurement briefings: what changed and what to do" description="Short briefings for procurement leaders: the figures, what changed, why it matters and the first action to take." section="signals">
-  <div class="page">
-    <div class="page-head">
+<Base title="Procurement briefings: what changed and what to do" description="Briefings for procurement teams rated by urgency: what changed, why it matters to your categories and suppliers, and the first action to take." section="signals" jsonLd={jsonLd}>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/signals/">Analysis</a> › Procurement briefings</nav>
+  <header class="br-head">
+    <div>
       <h1>Procurement briefings</h1>
-      <p>What changed this week, why it matters to your categories and suppliers, and the first thing to do. Each briefing is rated by how urgently procurement teams should respond, from Watch to Critical.</p>
+      <p>What changed, why it matters to your categories and suppliers, and the first thing to do. Every briefing is rated by how urgently procurement teams should respond.</p>
     </div>
+    <div class="br-levels" role="group" aria-label="Filter by urgency">
+      {LEVELS.map((l) => (
+        <button type="button" class={`br-lv lv-${l.id}`} data-v={l.id}>
+          <span class="br-lv-top"><SignalMeter level={l.id === 'critical' ? 5 : l.id === 'high' ? 4 : 3} label={false} /><b>{l.n}</b></span>
+          <span class="br-lv-name">{l.name}</span>
+          <span class="br-lv-text">{l.text}</span>
+        </button>
+      ))}
+    </div>
+  </header>
 
-    <div class="controls">
-      <input id="q" type="search" placeholder="Search briefings, suppliers, tariffs, freight" aria-label="Search briefings" />
-      <div class="chips" data-group="level">
-        <button class="chip on" data-v="all">All ({posts.length})</button>
-        <button class="chip" data-v="critical">Critical ({counts.critical})</button>
-        <button class="chip" data-v="high">High ({counts.high})</button>
-        <button class="chip" data-v="watch">Watch ({counts.watch})</button>
+  {actNow.length > 0 && (
+    <section class="br-now" aria-labelledby="now-h">
+      <h2 id="now-h" class="h-rule">Act now</h2>
+      <div class="br-now-grid">
+        {actNow.map((p) => (
+          <article class="br-card">
+            <a href={`/articles/${p.id}/`} tabindex="-1" aria-hidden="true"><Media post={p} ratio="card" /></a>
+            <div class="br-card-body">
+              <div class="br-meta"><Kicker topic={p.data.topic} /><SignalMeter level={p.data.signal} /></div>
+              <h3><a href={`/articles/${p.id}/`}>{p.data.title}</a></h3>
+              {p.data.keyfacts?.[0] && <p class="br-fact"><b>{p.data.keyfacts[0].value}</b> {p.data.keyfacts[0].label}</p>}
+              {actOf(p) && <p class="br-act"><span>First action</span>{actOf(p)}</p>}
+            </div>
+          </article>
+        ))}
       </div>
-      <div class="chips" data-group="topic">
-        <button class="chip on" data-v="all">All topics</button>
-        {topics.map((t) => <button class="chip" data-v={t}>{TOPICS[t].name}</button>)}
+    </section>
+  )}
+
+  <div class="home-grid br-grid">
+    <div class="br-main">
+      <h2 class="h-rule">All briefings</h2>
+      <div class="br-controls">
+        <label class="sr-only" for="bq">Search briefings</label>
+        <input id="bq" type="search" placeholder="Search briefings, suppliers, tariffs, freight" />
+        <div class="br-chips" data-group="level">
+          <button type="button" class="cpf on" data-v="all">All urgency</button>
+          {LEVELS.map((l) => <button type="button" class="cpf" data-v={l.id}>{l.name} ({l.n})</button>)}
+        </div>
+        <div class="br-chips" data-group="topic">
+          <button type="button" class="cpf on" data-v="all">All topics</button>
+          {topics.map((t) => <button type="button" class="cpf" data-v={t}>{TOPICS[t].name}</button>)}
+        </div>
+        <p class="br-count" id="bcount" aria-live="polite">{rest.length} more briefings</p>
+      </div>
+
+      <div class="br-list" id="blist">
+        {[...actNow, ...rest].map((p) => {
+          const act = actOf(p); const why = whyOf(p);
+          return (
+            <article class="br-row" data-now={actNow.includes(p) ? "y" : "n"} data-level={level(p.data.signal)} data-topic={p.data.topic}>
+              <div class="br-side">
+                <SignalMeter level={p.data.signal} size="lg" />
+                <time>{fmt(p.data.date)}</time>
+                <span>{minsOf(p)} min read</span>
+              </div>
+              <div class="br-body">
+                <Kicker topic={p.data.topic} />
+                <h3><a href={`/articles/${p.id}/`}>{p.data.title}</a></h3>
+                <div class="br-cols">
+                  <div><span class="br-lbl">What changed</span><p>{p.data.dek}</p></div>
+                  {why && <div><span class="br-lbl">Why it matters</span><p>{why}</p></div>}
+                </div>
+                {p.data.keyfacts?.length > 0 && <ul class="br-figs">{p.data.keyfacts.slice(0, 3).map((f: any) => <li><b>{f.value}</b> {f.label}</li>)}</ul>}
+                {act && <p class="br-act"><span>First action</span>{act}</p>}
+              </div>
+              <a class="br-thumb" href={`/articles/${p.id}/`} tabindex="-1" aria-hidden="true"><Media post={p} ratio="square" /></a>
+            </article>
+          );
+        })}
       </div>
     </div>
-
-    <p class="count" id="count">{posts.length} briefings</p>
-
-    <div class="list" id="list">
-      {[...posts].sort((a, b) => b.data.signal - a.data.signal || b.data.date.valueOf() - a.data.date.valueOf()).map((p) => <SignalCard post={p} />)}
-    </div>
+    <Rail posts={posts} show={['guides', 'events', 'outlook', 'software']} />
   </div>
 </Base>
 
 <style>
-  .controls { display: grid; gap: 12px; margin: 6px 0; }
-  #q { font: 16px var(--sans); padding: 12px 14px; border: 1px solid #bbb; width: 100%; max-width: 520px; border-radius: 4px; }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-  .chip { font: 600 13px/1 var(--sans); padding: 9px 12px; border: 1px solid #bbb; background: #fff; color: var(--ink-2); cursor: pointer; border-radius: 4px; }
-  .chip:hover { border-color: #000; }
-  .chip.on { background: #000; color: #fff; border-color: #000; }
-  .count { font-size: 13px; color: var(--muted); margin: 16px 0 0; }
-  .list { margin-bottom: 40px; }
-  .list [hidden] { display: none; }
+  .crumbs { margin-top: 18px; }
+  .br-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 36px; align-items: end; padding: 6px 0 24px; border-bottom: 1px solid var(--rule); }
+  .br-head h1 { font: 700 44px/1.08 var(--head); color: var(--ink); margin: 0 0 10px; }
+  .br-head p { font: 18px/1.5 var(--head); color: var(--ink-2); margin: 0; }
+  .br-levels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .br-lv { display: flex; flex-direction: column; gap: 4px; text-align: left; background: #fff; border: 1px solid var(--rule); border-top: 3px solid var(--ink-2); padding: 12px 14px; cursor: pointer; font: inherit; color: var(--ink); }
+  .br-lv:hover, .br-lv.on { box-shadow: 0 6px 18px rgba(14, 42, 71, .12); border-color: var(--ink); }
+  .lv-critical { border-top-color: var(--red); } .lv-high { border-top-color: var(--amber); } .lv-watch { border-top-color: var(--teal); }
+  .br-lv-top { display: flex; align-items: center; justify-content: space-between; }
+  .br-lv-top b { font: 700 28px/1 var(--head); }
+  .br-lv-name { font: 600 14.5px/1.2 var(--ui); }
+  .br-lv-text { font: 13px/1.35 var(--ui); color: var(--muted); }
+  .br-now { margin-top: 30px; }
+  .br-now-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 14px; }
+  .br-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--rule); }
+  .br-card-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; }
+  .br-meta { display: flex; align-items: center; gap: 12px; }
+  .br-card h3 { font: 700 19px/1.25 var(--head); margin: 0; }
+  .br-card h3 a, .br-row h3 a { color: var(--ink); text-decoration: none; }
+  .br-card h3 a:hover, .br-row h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .br-fact { font: 14px/1.4 var(--ui); color: var(--ink-2); margin: 0; }
+  .br-fact b { font: 700 18px/1 var(--head); color: var(--ink); margin-right: 4px; }
+  .br-act { background: var(--navy-tint); border-left: 3px solid var(--teal); padding: 9px 12px; font: 14.5px/1.45 var(--ui); color: var(--ink); margin: 0; }
+  .br-act span, .br-lbl { display: block; font: 600 12px/1 var(--ui); color: var(--teal); margin-bottom: 4px; }
+  .br-grid { margin-top: 40px; }
+  .br-main { min-width: 0; }
+  .br-controls { display: grid; gap: 10px; margin: 14px 0 6px; }
+  #bq { font: 15.5px var(--ui); padding: 11px 13px; border: 1px solid #b9c7d5; width: 100%; max-width: 520px; }
+  #bq:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 2px rgba(15, 123, 120, .18); }
+  .br-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .cpf { font: 600 13px/1 var(--ui); padding: 8px 11px; border: 1px solid #b9c7d5; background: #fff; color: var(--ink); cursor: pointer; }
+  .cpf:hover { border-color: var(--ink); }
+  .cpf.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .br-count { font: 13px var(--ui); color: var(--muted); margin: 4px 0 0; }
+  .br-row { display: grid; grid-template-columns: 92px minmax(0, 1fr) 120px; gap: 20px; padding: 22px 0; border-top: 1px solid var(--rule); }
+  .br-row[hidden] { display: none; }
+  .br-side { display: flex; flex-direction: column; gap: 6px; font: 12.5px/1.3 var(--ui); color: var(--muted); }
+  .br-side time { font-weight: 600; color: var(--ink-2); }
+  .br-row h3 { font: 700 22px/1.25 var(--head); margin: 6px 0 10px; }
+  .br-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 10px; }
+  .br-cols p { font: 15px/1.5 var(--ui); color: var(--ink-2); margin: 0; }
+  .br-figs { list-style: none; margin: 0 0 10px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 20px; font: 13.5px/1.35 var(--ui); color: var(--ink-2); }
+  .br-figs b { font: 700 16px/1 var(--head); color: var(--ink); margin-right: 3px; }
+  .br-thumb { display: block; }
+  @media (max-width: 1080px) { .br-now-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 860px) {
+    .br-head { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+    .br-head h1 { font-size: 34px; }
+    .br-row { grid-template-columns: minmax(0, 1fr) 84px; }
+    .br-side { grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 14px; }
+    .br-cols { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .br-levels { grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+    .br-lv-text { display: none; }
+    .br-lv { padding: 10px; min-width: 0; }
+    .br-lv-top b { font-size: 22px; }
+    .br-now-grid { grid-template-columns: 1fr; }
+    .br-cols > div:nth-child(2), .br-figs { display: none; }
+  }
 </style>
 
 <script is:inline>
   (() => {
     const state = { level: 'all', topic: 'all', q: '' };
-    const cards = [...document.querySelectorAll('#list .sig')];
-    const count = document.getElementById('count');
-    const q = document.getElementById('q');
-    const text = cards.map((c) => c.textContent.toLowerCase());
+    const rows = [...document.querySelectorAll('#blist .br-row')];
+    const text = rows.map((r) => r.textContent.toLowerCase());
+    const count = document.getElementById('bcount');
     const apply = () => {
       let n = 0;
-      cards.forEach((el, k) => {
-        const ok = (state.level === 'all' || el.dataset.level === state.level)
-          && (state.topic === 'all' || el.dataset.topic === state.topic)
-          && (!state.q || text[k].includes(state.q));
+      rows.forEach((el, k) => {
+        const dup = el.dataset.now === 'y' && state.level === 'all' && state.topic === 'all' && !state.q;
+        const ok = !dup && (state.level === 'all' || el.dataset.level === state.level) && (state.topic === 'all' || el.dataset.topic === state.topic) && (!state.q || text[k].includes(state.q));
         el.hidden = !ok; if (ok) n++;
       });
-      count.textContent = n + (n === 1 ? ' briefing' : ' briefings');
+      const def = state.level === 'all' && state.topic === 'all' && !state.q;
+      count.textContent = n + (def ? ' more briefings' : n === 1 ? ' briefing' : ' briefings');
+      document.querySelectorAll('.br-lv').forEach((b) => b.classList.toggle('on', b.dataset.v === state.level));
+      document.querySelectorAll('[data-group="level"] .cpf').forEach((b) => b.classList.toggle('on', b.dataset.v === state.level));
     };
-    document.querySelectorAll('.chips').forEach((group) => {
-      group.addEventListener('click', (e) => {
-        const b = e.target.closest('.chip'); if (!b) return;
-        group.querySelectorAll('.chip').forEach((c) => c.classList.remove('on'));
-        b.classList.add('on');
-        state[group.dataset.group] = b.dataset.v; apply();
-      });
-    });
-    q.addEventListener('input', () => { state.q = q.value.trim().toLowerCase(); apply(); });
+    document.querySelectorAll('.br-chips').forEach((g) => g.addEventListener('click', (e) => {
+      const b = e.target.closest('.cpf'); if (!b) return;
+      if (g.dataset.group === 'topic') g.querySelectorAll('.cpf').forEach((x) => x.classList.toggle('on', x === b));
+      state[g.dataset.group] = b.dataset.v; apply();
+    }));
+    document.querySelectorAll('.br-lv').forEach((b) => b.addEventListener('click', () => {
+      state.level = state.level === b.dataset.v ? 'all' : b.dataset.v; apply();
+      document.querySelector('.br-main').scrollIntoView({ behavior: 'smooth' });
+    }));
+    document.getElementById('bq').addEventListener('input', (e) => { state.q = e.target.value.trim().toLowerCase(); apply(); });
   })();
 </script>
