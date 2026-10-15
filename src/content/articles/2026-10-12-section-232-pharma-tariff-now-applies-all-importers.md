@@ -2,6 +2,7 @@
 title: "100% pharma tariff now covers all importers after Sept. 29 phase-in"
 dek: "The Section 232 duty on patented drugs and their ingredients, first applied to large companies in July, now reaches every importer. Generics are still exempt, but rates vary sharply by country and company."
 date: 2026-10-12
+updated: 2026-10-14
 topic: tariffs-trade
 type: news
 signal: 4
@@ -34,6 +35,8 @@ faqs:
     a: "No. Generics, biosimilars and their ingredients are excluded for now, and Commerce has said it will revisit that after a year."
   - q: "Is the pharma tariff always 100%?"
     a: "No. Rates are lower for the EU, Japan, South Korea, Switzerland and the UK, and for companies with approved onshoring commitments."
+  - q: "Why did the U.S. put tariffs on patented drugs?"
+    a: "The proclamation cites national security risk from foreign production: about 53% of patented pharmaceutical products and 85% of patented active ingredients, by volume, are made outside the U.S."
 ---
 
 ## Why it matters
@@ -42,7 +45,7 @@ Healthcare systems, distributors and life-sciences procurement teams now face Se
 
 ## The details
 
-The proclamation, issued April 2, 2026, phased in the tariff on patented pharmaceuticals and their associated active pharmaceutical ingredients (APIs):
+The proclamation, issued April 2, 2026 under Section 232 of the Trade Expansion Act, cites national security risk from reliance on foreign production: about 53% of patented pharmaceutical products and 85% of patented active ingredients, by volume, are made abroad. It phased in the tariff on patented pharmaceuticals and their associated active pharmaceutical ingredients (APIs):
 
 - **July 31, 2026:** Large companies named in the proclamation's annex.
 - **Sept. 29, 2026:** All other companies and importers.
@@ -58,6 +61,33 @@ The headline rate is 100% of value, but most trade will see something lower, acc
 | Onshoring commitment plus an HHS most-favored-nation pricing agreement | 0% through Jan. 20, 2029 |
 
 **Excluded:** generic drugs, biosimilars and their ingredients (Commerce will revisit this after a year), plus orphan drugs, plasma-derived therapies, cell and gene therapies, antibody-drug conjugates, nuclear medicine, fertility treatments, medical countermeasures and animal health products, among others. U.S.-origin products aren't covered, and drawback is available.
+
+**How the annexes work.** The proclamation's annexes decide which rate applies, so procurement teams need to know them:
+
+| Annex | What it contains | Effect |
+|---|---|---|
+| Annex I | Covered patented products and their APIs | Subject to the 100% baseline unless another rule applies |
+| Annex II | Companies with tariff agreements signed before the proclamation | 0% on their patented products and APIs |
+| Annex III | Large companies named for the earlier date | Duty applied from July 31, 2026 |
+| Annex IV | Products at 0% under this action | Also exempt from the earlier Section 122 surcharge; may be updated |
+
+The Commerce Department and HHS have said they will offer pathways for more companies to sign onshoring and most-favored-nation pricing agreements, but have not published the approval criteria. That means a supplier's rate can change mid-contract when it signs a deal.
+
+## Three dates to put in your contract calendar
+
+| Date | What changes |
+|---|---|
+| About April 2027 | Commerce reassesses the generics and biosimilars exemption |
+| Jan. 20, 2029 | The 0% rate for companies with both onshoring and pricing agreements ends |
+| April 2, 2030 | The 20% onshoring rate rises to 100% |
+
+## Questions to ask your pharmaceutical suppliers
+
+1. Which of your products we buy are on Annex I, and from which country of manufacture?
+2. Do you have, or are you negotiating, an onshoring or pricing agreement, and when would it change our rate?
+3. How will you pass through the duty: as a separate line, a list-price change or a contract adjustment?
+4. If your rate falls because of an agreement, will you pass the reduction back to us?
+5. Which U.S.-made alternatives do you offer for products we buy from overseas sites?
 
 ## What procurement teams should do
 

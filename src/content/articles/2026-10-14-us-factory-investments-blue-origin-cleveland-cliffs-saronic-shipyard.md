@@ -40,6 +40,8 @@ faqs:
     a: "It is the core material in power transformers. Supply has been tight, so added domestic capacity from early 2028 matters to utilities, data center builders and anyone buying transformers or switchgear."
   - q: "When will these new plants affect supply?"
     a: "Mostly from 2027 to 2028. Cleveland-Cliffs expects its expansion ready in early 2028, Re:Build targets 150 jobs by 2028, and the Saronic shipyard is being built in overlapping phases with no completion date given."
+  - q: "What is Saronic building in Brownsville?"
+    a: "Port Alpha, a shipyard for crewed, autonomy-capable and autonomous vessels, starting on 835 acres with an option to expand to nearly 4,400. The builders call it the first greenfield U.S. shipyard since World War II."
 ---
 
 ## Why it matters
@@ -48,11 +50,11 @@ Plant announcements are early signals of where supplier capacity will loosen or 
 
 ## The details
 
-**Cleveland-Cliffs, Butler Works (Lyndora, Pennsylvania): $200 million.** The expansion, backed by a $75 million Department of Energy grant, adds induction reheat furnaces to raise grain-oriented electrical steel output by up to 25%. The steel goes into transformers. Cliffs expects it to be ready in early 2028.
+**Cleveland-Cliffs, Butler Works (Lyndora, Pennsylvania): $200 million.** The expansion, backed by a $75 million Department of Energy grant, adds induction reheat furnaces to raise grain-oriented electrical steel output by up to 25%. The steel goes into transformers. The plant employs about 1,200 people, and Cliffs expects the project to be ready in early 2028.
 
 **Saronic Technologies, Port Alpha (Brownsville, Texas): over $3.2 billion.** A joint venture of JE Dunn and Alberici began construction on a shipyard for manned, autonomy-capable and autonomous vessels, starting on 835 acres with an option to expand to nearly 4,400. The builders call it the first greenfield shipyard in the U.S. since World War II. It is being built in overlapping phases using progressive design-build, with no completion date given.
 
-**Blue Origin, Hutto, Texas: more than $550 million.** A 1.3 million-square-foot campus will serve as the central production hub for satellite and communications programs, solar arrays, avionics and telecom hardware, with more than 2,000 jobs planned.
+**Blue Origin, Hutto, Texas: more than $550 million.** A 1.3 million-square-foot campus will serve as the central production hub for satellite and communications programs, solar arrays, avionics and telecom hardware, with more than 2,000 jobs planned. The production will include hardware for its TeraWave and Quartz networks. Texas awarded an $18.2 million grant for the project.
 
 **Smaller aerospace and industrial investments:**
 
@@ -60,6 +62,22 @@ Plant announcements are early signals of where supplier capacity will loosen or 
 - **Accu-Precision, Colorado Springs:** more than $68 million for aerospace parts, sheet metal and assemblies, with up to 133 jobs
 - **Re:Build, Rock Hill, South Carolina, $20 million:** tripling its local footprint for aerospace, defense, energy and robotics components, with 150 jobs by 2028
 - **Xingyu Automotive Lighting, Landis, North Carolina, $50 million:** its first U.S. plant, making injection-molded lighting components, with 300 to 500 jobs over several years
+
+## The investments at a glance
+
+| Company | Location | Investment | Jobs | Product | Timing |
+|---|---|---|---|---|---|
+| Saronic Technologies | Brownsville, Texas | $3.2B+ | Not disclosed | Autonomous and crewed vessels | Phased, no completion date |
+| Blue Origin | Hutto, Texas | $550M+ | 2,000+ | Satellite and communications hardware | Not disclosed |
+| Cleveland-Cliffs | Lyndora, Pennsylvania | $200M | Existing 1,200 | Electrical steel for transformers | Early 2028 |
+| PPG | Huntsville, Alabama | $70M | Not disclosed | Aircraft windows | Not disclosed |
+| Accu-Precision | Colorado Springs | $68M+ | Up to 133 | Aerospace parts and assemblies | Three phases |
+| Xingyu Automotive Lighting | Landis, North Carolina | $50M | 300 to 500 | Injection-molded lighting parts | Over several years |
+| Re:Build | Rock Hill, South Carolina | $20M | 150 by 2028 | Composites, machining, heat treating | By 2028 |
+
+## Why transformer steel matters beyond utilities
+
+Grain-oriented electrical steel is the core material in power and distribution transformers. Lead times for transformers have been long as utilities, data center builders and manufacturers expand power capacity. More domestic steel won't shorten lead times until 2028, but it gives transformer makers a second domestic option and may reduce exposure to [Section 232 tariffs on imported steel](/cost-monitor/steel/). Any company building new facilities, data centers or electrified production should track this.
 
 ## What procurement teams should do
 

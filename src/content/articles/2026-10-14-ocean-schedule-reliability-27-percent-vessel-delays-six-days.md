@@ -30,6 +30,8 @@ faqs:
     a: "In September 2026, only 27% of vessels arrived on time globally, according to Xeneta, with an average delay of six days. Asia–North America on-time performance was 20%, with delays averaging 6.9 days."
   - q: "What should shippers ask ocean carriers before 2027 tenders?"
     a: "Which services are protected from blank sailings, how port rotations and unscheduled calls will be managed, and what accountability applies when schedule reliability falls below agreed levels."
+  - q: "Which ocean carrier is most reliable right now?"
+    a: "Maersk was the most reliable carrier in Xeneta's September scorecard at 47% on time, though that was down from 51% in August. Every tracked carrier posted its longest average delay of the past 12 months."
 ---
 
 ## Why it matters
@@ -43,11 +45,15 @@ Xeneta's September Schedule Reliability Scorecard shows:
 - **Global on-time reliability of 27%**, down 2 points and the fourth straight monthly decline. The average delay across all arrivals reached six days, up 2.4 days since the start of the second quarter. Xeneta does not expect reliability to bottom out in October.
 - **Asia–North America:** 20% on time, unchanged, with an average delay of 6.9 days, up 0.8 days.
 - **Far East–Europe:** 4% on time with a 9.9-day average delay, the worst monthly result since September 2021.
-- **Carriers:** Every tracked carrier posted its highest average delay of the past 12 months. Maersk was the most reliable at 47%. The Gemini network of Maersk and Hapag-Lloyd fell from 70% on time in June to 40% in September.
+- **Carriers:** Every tracked carrier posted its highest average delay of the past 12 months. Maersk was the most reliable at 47%, down from 51%. Several carriers hit 12-month lows: Hapag-Lloyd 45%, CMA CGM 30%, Cosco 18% and Yang Ming 4%. The Gemini network of Maersk and Hapag-Lloyd fell from 70% on time in June to 40% in September, and weekly data showed 28% in early October.
 
-Causes cited include typhoons in Asia, bunker-cost pressure, strong peak-season demand and Chinese port congestion that is now causing berth delays in Europe and North America. Singapore's average daily queue nearly doubled to 22 ships.
+Causes cited include typhoons in Asia, bunker-cost pressure, strong peak-season demand and Chinese port congestion that is now causing berth delays in Europe and North America. Singapore's average daily queue nearly doubled to 22 ships, with the average wait rising from 1.9 to 3.1 days. Shanghai's anchorage queue shortened from 101 to 86 vessels, but waits lengthened from 1.9 to 2.7 days.
 
-Rates remain high. The China–U.S. West Coast spot average was $7,717 per FEU in early October, more than four times the $1,778 of September 2025. Long-term rates rose 26% month over month to $3,649 per FEU as of Oct. 1. Carriers are projected to blank at least 13% of planned Far East–North America capacity in October.
+Rates remain high. The China–U.S. West Coast spot average was $7,717 per FEU in early October, more than four times the $1,778 of September 2025. Long-term rates rose 26% month over month to $3,649 per FEU as of Oct. 1. Carriers blanked 8% of planned Far East–North America capacity in September and have announced at least 13% for October, along with 17% on Far East–Europe.
+
+## What six days of delay costs
+
+A six-day average delay is not just a planning nuisance. For a business importing $10 million of goods a month by ocean, an extra six days in transit ties up roughly $2 million more in inventory at any time, by our calculation. At a 10% annual carrying cost, that is about $200,000 a year, before any stockouts, expedited freight or detention charges. Your numbers will differ, but the math is worth running before you set 2027 safety stock.
 
 ## What procurement teams should do
 
@@ -56,6 +62,16 @@ Rates remain high. The China–U.S. West Coast spot average was $7,717 per FEU i
 - **Put reliability in the tender.** For 2027 contracts, include schedule reliability, port rotations and unscheduled calls in carrier accountability, not just rate.
 - **Spread allocations.** Split volume across carriers and alliances to limit exposure to a single network's delays.
 - **Review inventory policy.** For critical imported parts, recalculate safety stock using current delay variability, not last year's averages.
+
+## What to put in 2027 ocean contracts
+
+Xeneta advises shippers to make reliability, port rotations, unscheduled calls and capacity management central to carrier accountability ahead of 2027 tenders. In practice, that can mean:
+
+- **Service commitments by string.** Name the services and sailings your allocation depends on.
+- **Reliability reporting.** Monthly on-time data by service, not just a global figure.
+- **Blank sailing rules.** Notice periods and guaranteed space on the next sailing when one is cancelled.
+- **Port rotation changes.** Advance notice when a service drops or swaps a port that matters to you.
+- **Remedies.** Credits or volume flexibility when reliability falls below an agreed level.
 
 ## What to watch next
 

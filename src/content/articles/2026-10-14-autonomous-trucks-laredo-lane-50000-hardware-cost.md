@@ -32,6 +32,8 @@ faqs:
     a: "Yes, on limited lanes. Kodiak has run driverless trucks in the Permian Basin since December 2024, and Bot Auto completed a fully driverless commercial run from Houston to the Dallas area in April. The new Dallas–Laredo lane still carries a safety driver."
   - q: "How should shippers contract for autonomous freight?"
     a: "Through carriers. Models vary: Kodiak supplies its driver system to carriers that own the trucks, while other providers hold the operating authority and insurance themselves. Ask who carries liability and insurance before tendering freight."
+  - q: "How much does autonomous truck hardware cost?"
+    a: "Bot Auto says its full autonomy hardware will cost about $50,000 per truck from early 2027, compared with industry estimates of $150,000 to $400,000 for autonomy systems alone."
 ---
 
 ## Why it matters
@@ -44,7 +46,26 @@ Autonomous trucking is moving from pilots to scheduled commercial lanes, startin
 
 Kodiak supplies its system as a service on trucks the carrier owns and operates. Charger also has a separate deal with Aurora on the same lane, in which Aurora holds the operating authority, controls the truck and carries the insurance.
 
-**Hardware costs.** Houston-based Bot Auto says its full autonomy hardware, including compute and sensors, will cost about $50,000 per truck using a Lenovo controller built on Nvidia's platform, starting in the first quarter of 2027. Bot Auto says that is three to eight times less than other systems, based on industry estimates of $150,000 to $400,000 for autonomy alone. The company runs about 350 loads a month in Texas and completed a fully driverless 231-mile commercial run from Houston to the Dallas area in April.
+**Hardware costs.** Houston-based Bot Auto says its full autonomy hardware, including compute and sensors, will cost about $50,000 per truck using a Lenovo controller built on Nvidia's platform, starting in the first quarter of 2027. Bot Auto says that is three to eight times less than other systems: it cites estimates of $350,000 to $600,000 for a complete autonomous truck, implying $150,000 to $400,000 for autonomy alone. The Lenovo AD1 controller runs on Nvidia's DRIVE AGX Thor with redundant compute and power, and the companies plan to show it at CES in January. "We made a deliberate choice not to scale our fleet until the compute platform itself is scalable," CEO Xiaodi Hou said. Aurora, Einride, WeRide and Nuro are also building on Nvidia or Lenovo platforms. The company runs about 350 loads a month in Texas and completed a fully driverless 231-mile commercial run from Houston to the Dallas area in April.
+
+## Why the hardware price matters to shippers
+
+Autonomy changes freight costs only when trucks can run without a driver at scale, and that depends on hardware cost as much as on safety approval. A lower kit price lets more carriers, not just the largest fleets, buy driverless trucks, which would spread the technology to more lanes. Bot Auto, which moves about 350 loads a month in Texas and says revenue grew 270% from May to August, is targeting 1 billion autonomous miles by 2031.
+
+## Where autonomous freight is running in Texas
+
+| Lane | Operators | Status |
+|---|---|---|
+| Dallas–Laredo | Kodiak with Charger Logistics; Aurora with Charger | Safety driver aboard |
+| Dallas–Houston | Kodiak | Driverless long haul planned by year-end |
+| Houston–Hutchins (south of Dallas) | Bot Auto | Fully driverless commercial run completed in April |
+
+## Questions to ask carriers offering autonomous capacity
+
+1. Who holds the operating authority and insurance on autonomous loads?
+2. What happens to a load if the system disengages or a sensor fails mid-route?
+3. Are rates different from driven loads, and how will they change as driverless service begins?
+4. Which commodities and trailer types qualify, including refrigerated freight?
 
 ## What procurement teams should do
 

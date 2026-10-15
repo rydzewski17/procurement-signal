@@ -30,6 +30,8 @@ faqs:
     a: "Theft through deception rather than force: impersonating brokers or carriers, double brokering loads, stolen identities and fictitious pickups, often using information gathered online before the freight moves."
   - q: "How can shippers reduce freight fraud?"
     a: "Verify carriers and brokers before and after tender, confirm any change of delivery address through a known contact, restrict who can change routing, and require brokers to disclose the carrier actually hauling the load."
+  - q: "How are freight fraud schemes changing?"
+    a: "Security experts say cargo theft has shifted from physical break-ins to deception: stolen identities, double brokering, fake pickups and cyber-enabled schemes that identify valuable loads before pickup."
 ---
 
 ## Why it matters
@@ -40,7 +42,19 @@ The biggest cargo theft risk is no longer a stolen trailer in a parking lot. It'
 
 On Oct. 3, a truck driver hauling about 29,000 pounds of frozen seafood worth more than $273,000 received calls and texts from someone impersonating the legitimate freight broker. The sender told the driver to divert part of the load to North Arlington, New Jersey, for a supposed transfer. Police responding to a report of suspicious activity found pallets being moved from the refrigerated trailer into a 26-foot box truck. The entire shipment was recovered, and two people were arrested. Investigators found the person directing the diversion had no connection to the brokerage. How the scammers obtained shipment details is still under investigation.
 
-The case landed days before the third annual Freight Fraud Awareness Day on Oct. 14, supported by Verified Carrier, Truckstop, Northland Insurance, Travelers and others. Industry security experts quoted by FreightWaves describe a shift from physical theft to deception: stolen identities, double brokering, deceptive pickups and cyber-enabled schemes that let criminals identify valuable loads before pickup. The Pharmaceutical Cargo Security Coalition warns that stolen drugs can re-enter legitimate commerce without required quality controls.
+The case landed days before the third annual Freight Fraud Awareness Day on Oct. 14, supported by Verified Carrier, Truckstop, Northland Insurance, Travelers and others. Industry security experts quoted by FreightWaves describe a shift from physical theft to deception: stolen identities, double brokering, deceptive pickups and cyber-enabled schemes that let criminals identify valuable loads before pickup. Gary Thomas of SPG Cargo & Logistics said digital tools let criminals manipulate identities from almost anywhere: "We went from a traditional bad guy waiting at the truck stop." The FBI's Memphis Cargo Theft Task Force has described cyber-enabled schemes that identify valuable shipments before pickup. Retired Los Angeles County sheriff's detective Gerardo Pachuca said some offenders learn how legitimate operations work before exploiting their loopholes.
+
+Chuck Forsaith of the Pharmaceutical Cargo Security Coalition said pharmaceutical losses were once "almost exclusively what we would call straight theft" but now rely more on fraud, and that stolen drugs can re-enter legitimate commerce without required quality controls. Recent cases reported by FreightWaves include a cloned $60,000 shipment that redirected 41,000 pounds of glycerin in Illinois.
+
+## Where fraud gets in
+
+| Stage | Common scheme | Control |
+|---|---|---|
+| Carrier onboarding | Stolen or rented operating authority, look-alike companies | Identity verification beyond the authority number; check recent ownership and contact changes |
+| Load booking | Double brokering to an unknown carrier | Contract terms banning re-brokering; tracking that ties the truck to the booked carrier |
+| Before pickup | Spoofed emails or calls changing pickup details | Confirm changes through a known contact, never the incoming message |
+| In transit | Calls to the driver ordering a "transfer" or diversion | Drivers told that diversions require written confirmation from a named contact |
+| Delivery and payment | Fake invoices or changed bank details | Verify bank changes by phone with a known contact; dual approval |
 
 ## What procurement teams should do
 

@@ -36,6 +36,8 @@ faqs:
     a: "Continued disruption on the Suez and Panama routes, drought concerns at the Panama Canal and vessel fuel costs that have roughly doubled are pushing shippers toward shorter routes into Los Angeles, according to the port's executive director."
   - q: "Is the Panama Canal restricting traffic?"
     a: "It cut daily Neopanamax slots to nine from Sept. 3 because of El Niño-related water concerns, then raised them to 10 after rainfall. El Niño is expected to peak between October and December, followed by the 2027 dry season."
+  - q: "How many containers did the Port of Los Angeles handle in September 2026?"
+    a: "1,042,652 TEUs, the busiest month in the port's 118-year history. Loaded imports rose 19% from a year earlier to 545,696 TEUs."
 ---
 
 ## Why it matters
@@ -46,13 +48,23 @@ Routing decisions made at origin decide which ports, rail ramps and warehouses y
 
 The Port of Los Angeles moved 1,042,652 TEUs in September, the busiest month in its 118-year history and more than 20,000 TEUs above the previous record set in July 2025. Loaded imports rose 19% year over year to 545,696 TEUs, and loaded exports rose 10% to 125,751 TEUs. Empty containers reached 371,206 TEUs, also a record.
 
-The July–September quarter was the port's busiest, at nearly 3 million TEUs. Through nine months, the port handled nearly 8.1 million TEUs, more than 3% ahead of 2025.
+The July–September quarter was the port's busiest, at nearly 3 million TEUs, and June through September was its strongest four-month stretch on record, at nearly 4 million. Through nine months, the port handled nearly 8.1 million TEUs, more than 3% ahead of 2025.
 
-Executive Director Gene Seroka attributed the surge to resilient consumer demand, inventory replenishment and cargo shifting from other routes. He said continued disruption on the Suez and Panama routes is leading to roughly 5% more cargo being allocated to Los Angeles at origin. Vessel fuel prices have roughly doubled over eight months, so longer routes cost more and carriers are passing those costs on.
+Executive Director Gene Seroka attributed the surge to resilient consumer demand, inventory replenishment and cargo shifting from other routes. "Consumer demand remains resilient, importers are replenishing inventories," he said, adding that tariffs are lower than earlier in the year, which gives importers more certainty on costs. Harvard Business School professor Willy Shih, quoted in the port's release, said, "Companies are moving from purely optimizing for cost to optimizing for options." He said continued disruption on the Suez and Panama routes is leading to roughly 5% more cargo being allocated to Los Angeles at origin. Vessel fuel prices have roughly doubled over eight months, so longer routes cost more and carriers are passing those costs on.
 
 The Panama Canal cut daily Neopanamax slots to nine from Sept. 3 because of El Niño-related drought concerns, then raised them to 10 after rainfall, according to an Oct. 9 advisory. From January to late September, 69 container vessels waited more than 100 hours to transit, compared with 13 in the same period of 2025.
 
 Seroka expects another frontloading wave driven by an earlier Lunar New Year in the first week of February and the U.S.–China trade truce expiring Jan. 10.
+
+## Routing choices for 2027
+
+| Route to the U.S. East and Midwest | Advantages | Current risk |
+|---|---|---|
+| Asia to Los Angeles/Long Beach, then rail or truck inland | Shortest ocean leg, deep capacity, record throughput | Inland rail and drayage capacity during surges; higher [truckload rates](/articles/2026-10-14-truckload-contract-rates-52-week-high-bid-season/) |
+| Asia to the East Coast via the Panama Canal | All-water, fewer handoffs | Limited Neopanamax slots and long waits in a dry year |
+| Asia to the East Coast via Suez | Avoids the canal | Continued disruption and longer transits |
+
+Our read: diversifying across at least two gateways is the cheapest insurance. Pricing differences between routes have narrowed as fuel costs rose, so reliability and inland costs should weigh more heavily than ocean rate alone.
 
 ## What procurement teams should do
 

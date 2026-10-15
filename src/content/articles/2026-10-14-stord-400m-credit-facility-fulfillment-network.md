@@ -30,6 +30,8 @@ faqs:
     a: "Named service levels by site, change-of-control and assignment terms, data ownership and portability, transition support if you exit, and limits on moving your inventory to a different facility without approval."
   - q: "How big is Stord?"
     a: "Stord says it runs nearly 100 fulfillment locations, serves more than 1,000 brands, processes more than $15 billion in gross merchandise volume a year and is approaching a $1 billion revenue run-rate."
+  - q: "Which fulfillment networks has Stord acquired?"
+    a: "ProPack Logistics and Pitney Bowes' e-commerce fulfillment unit in 2024, Ware2Go from UPS in May 2025 with 21 warehouses, and Shipwire from Ceva Logistics, which added 12 fulfillment centers."
 ---
 
 ## Why it matters
@@ -40,9 +42,20 @@ Outsourced fulfillment providers are consolidating. Stord has acquired networks 
 
 Atlanta-based Stord closed a $400 million credit facility led by Citi on Oct. 8, with Morgan Stanley, JPMorgan, First Citizens, Citizens and KeyBank participating. It closed oversubscribed at nearly double its original target. Combined with a $250 million Series F in May that valued the company at $3 billion, Stord says it has $650 million in equity and credit capacity this year.
 
-The funding will expand the fulfillment network, accelerate robotics and fund AI development. Stord runs nearly 100 fulfillment locations, serves more than 1,000 brands and processes more than $15 billion in gross merchandise volume a year. It says revenue run-rate is approaching $1 billion.
+The funding will expand the fulfillment network, accelerate robotics and fund AI development. Stord runs nearly 100 fulfillment locations, serves more than 1,000 brands and processes more than $15 billion in gross merchandise volume a year. It says revenue run-rate is approaching $1 billion after growing tenfold in four years, and that its packages reach one in four U.S. households a year. The terms, pricing and maturity of the facility were not disclosed. CEO Sean Henry called the new lenders and executives "a vote of confidence in the foundation we've created at Stord."
 
-Its growth has come largely through acquisitions: ProPack Logistics and Pitney Bowes' e-commerce fulfillment unit in 2024, Ware2Go from UPS in May 2025 with 21 warehouses, and Shipwire from Ceva Logistics in January with 12 fulfillment centers. Stord also named Bill Zerella, previously CFO of ACV Auctions, as CFO, and Mark Wayland, previously CRO at Box, as chief revenue officer.
+Its growth has come largely through acquisitions: ProPack Logistics and Pitney Bowes' e-commerce fulfillment unit in 2024, Ware2Go from UPS in May 2025, adding 21 warehouses and about 2.5 million square feet of storage, and Shipwire from Ceva Logistics in January with 12 fulfillment centers. Stord also named Bill Zerella, previously CFO of ACV Auctions, as CFO, and Mark Wayland, previously CRO at Box, as chief revenue officer. Zerella has led finance at three public companies and took each public, including Fitbit in 2015. Hiring executives with public-company experience is often a step toward an IPO, though Stord has not announced one.
+
+## The 3PL market Stord is building into
+
+Fulfillment is consolidating around providers that combine a network of warehouses with their own software and automation. For shippers, that brings real benefits: more locations closer to customers, better technology and one contract instead of several. It also brings risks that procurement should manage directly:
+
+| Benefit | Risk | Contract protection |
+|---|---|---|
+| More sites, faster delivery | Inventory moved between sites to suit the provider | Named sites and approval for moves |
+| Shared robotics and AI | Your data used to train tools for everyone | Data ownership and use limits |
+| Scale pricing | Less leverage at renewal as alternatives shrink | Benchmarking rights and price caps |
+| Acquisition-driven growth | Integration disruption, systems changes | Service credits tied to KPIs during transitions |
 
 ## What procurement teams should do
 

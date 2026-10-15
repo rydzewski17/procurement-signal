@@ -28,6 +28,8 @@ faqs:
     a: "Beyond time saved, track risk reduction, such as fewer detention, demurrage and unexpected charges caught by reconciliation, and revenue effects, such as win rates by quote response time and margin by lane."
   - q: "What is 'shadow AI' in procurement and logistics?"
     a: "Employees using unapproved AI tools, such as general chatbots, to do work when the organization hasn't provided sanctioned ones. It creates data and accuracy risks that formal adoption can reduce."
+  - q: "What share of freight quotes still arrive by email?"
+    a: "Dan Bailey of Nexcade says about 90% of freight quote requests still arrive by email, which is why AI agents that read inboxes and stage quotes are seeing early adoption."
 ---
 
 ## Why it matters
@@ -38,14 +40,33 @@ Freight procurement still runs on email. When a forwarder or broker can price yo
 
 In a FreightWaves interview, Dan Bailey, co-founder and CEO of logistics AI company Nexcade, said about 90% of freight quote requests still arrive by email. His company's agents read inboxes, classify the freight, pull shipment details and run lookups against contract rates, spot markets and overseas agent portals. The goal is for an operator to start the day with 10 to 15 quotes ready for a pricing decision instead of working through each request by hand.
 
-Bailey said teams using the platform have doubled the number of files each person handles. About 75% of current volume is air and ocean, and 25% is road freight in the U.S. and Europe.
+Bailey said teams using the platform have doubled the number of files each person handles. Without it, each quote can mean four or five emails and several rate lookups. One customer now answers overseas agents' requests that arrive at 3 a.m., before competitors are awake. Nexcade tracks the public AI announcements of 40 to 50 leading forwarders and logistics providers, and Bailey called their volume over the past six to nine months "overwhelming." About 75% of current volume is air and ocean, and 25% is road freight in the U.S. and Europe.
 
 His view on where returns come from:
 
 - **Context is the hardest part.** Most of the value sits in tacit knowledge about lanes, customers and agents. Turning that into context the AI can use is the main obstacle.
 - **Risk reduction compounds.** Reconciliation and exception handling cut demurrage, detention and unexpected charges, with the effect becoming significant over 12 to 18 months.
 - **Speed shows up in revenue.** Win rates by response time and margin by lane quantify the commercial effect.
-- **Shadow AI is already happening.** Without approved tools, staff will use general chatbots anyway.
+- **Shadow AI is already happening.** "If you're not adopting it, I can guarantee you that your employees are in shadow capacity one way or another," Bailey said, pointing to widespread unsanctioned use of general chatbots.
+- **Run pilots from both ends.** He recommends identifying strategic workflows and building data foundations from the top, while letting willing teams run small pilots from the bottom, giving companies "three or four bites at the apple" before a major rollout.
+
+## How to measure AI value in freight
+
+| Measure | What to track | Where it shows up |
+|---|---|---|
+| Speed | Quote turnaround time, win rate by response time | Revenue for providers; faster awards for shippers |
+| Productivity | Files or shipments handled per person | Cost to serve |
+| Risk | Demurrage, detention and unexpected charges | Freight spend, over 12 to 18 months |
+| Accuracy | Invoice exceptions and billing disputes | AP effort and audit recoveries |
+| Margin | Margin by lane | Pricing discipline |
+
+## Questions to ask your forwarders and 3PLs about AI
+
+1. Which of your workflows serving us use AI today, and which are planned?
+2. How has quote turnaround and invoice accuracy on our account changed since you introduced it?
+3. What shipment data of ours do your AI tools use, and is it used to train models for other customers?
+4. Who reviews AI-generated quotes and bookings before they are sent?
+5. Will you share the measured results in our quarterly business reviews?
 
 ## What procurement teams should do
 

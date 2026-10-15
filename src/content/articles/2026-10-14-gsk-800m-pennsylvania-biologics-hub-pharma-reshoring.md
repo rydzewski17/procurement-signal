@@ -34,6 +34,8 @@ faqs:
     a: "A single-site hub with a commercial-scale biologics manufacturing facility for clinical and commercial supply, a quality control lab and a pilot plant for technology and process development."
   - q: "When will the new GSK capacity affect supply?"
     a: "Not soon. Construction begins in 2027, and biologics facilities typically take years to build and qualify, so near-term sourcing plans should not assume the new capacity."
+  - q: "How much has GSK committed to U.S. manufacturing?"
+    a: "GSK committed $30 billion in 2025 to U.S. supply chain infrastructure and R&D through 2030. That includes $800 million for Lancaster County, Pennsylvania, announced in 2024, and more than $800 million for Upper Merion, Pennsylvania, announced in October 2026."
 ---
 
 ## Why it matters
@@ -50,7 +52,19 @@ GSK will invest more than $800 million to expand its site in Upper Merion Townsh
 
 GSK expects to create more than 300 jobs over five years and retain 4,500 existing jobs. Construction begins in 2027. Regis Simard, GSK's global supply chain president, said the investment will help accelerate the development and supply of future medicines. The state says GSK is eligible for its manufacturing innovation deduction and manufacturing tax credit programs.
 
-The project is part of a $30 billion commitment GSK made in 2025 to expand U.S. supply chain infrastructure and R&D through 2030. GSK previously committed $800 million to a Lancaster County facility in 2024. Eli Lilly and Johnson & Johnson have also invested in Pennsylvania.
+The project is GSK's second $800 million Pennsylvania commitment in two years. In October 2024 it pledged the same amount to expand manufacturing and R&D in Lancaster County, creating 200 jobs; that was then its largest U.S. manufacturing investment. Both are part of a $30 billion commitment GSK made in 2025 to expand U.S. supply chain infrastructure and R&D through 2030. GSK previously committed $800 million to a Lancaster County facility in 2024. Eli Lilly and Johnson & Johnson have also invested in Pennsylvania as part of multibillion-dollar U.S. expansion plans. The administration has paired tariffs with targeted tax incentives to encourage this kind of reshoring, and Pennsylvania's own manufacturing tax programs add to the pull.
+
+## Why biologics capacity takes so long
+
+Biologics are made from living cells, so a new plant must be built, validated and approved before it can supply patients. Construction alone typically takes years, followed by process validation and regulatory inspection. Construction in Upper Merion starts in 2027, so supply from the site is unlikely before the end of the decade, in our assessment. Procurement teams should plan around today's supply network for at least the next several contract cycles.
+
+## How to factor reshoring into pharmaceutical sourcing
+
+| Time frame | What changes | What to do |
+|---|---|---|
+| 2026 to 2027 | [Section 232 tariffs](/articles/2026-10-12-section-232-pharma-tariff-now-applies-all-importers/) apply to patented imports; generics exempt for now | Map products by origin and supplier agreement |
+| 2027 to 2029 | New U.S. plants under construction; supplier tariff deals change rates | Add rate-change clauses; re-check supplier status quarterly |
+| 2029 onward | New capacity begins to qualify; some tariff discounts expire | Revisit dual sourcing and origin requirements in long-term contracts |
 
 ## What procurement teams should do
 

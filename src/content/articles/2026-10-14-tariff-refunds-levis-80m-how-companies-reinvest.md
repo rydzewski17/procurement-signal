@@ -34,6 +34,8 @@ faqs:
     a: "The Supreme Court in February 2026 nullified the country-specific tariffs imposed under emergency powers, so duties paid under them are being refunded to importers."
   - q: "Who should own tariff refund recovery inside a company?"
     a: "Usually trade compliance and finance, with procurement supplying the entry, supplier and pass-through data. Procurement should also check whether suppliers who raised prices for those tariffs owe credits."
+  - q: "Can procurement recover tariff surcharges from suppliers after the IEEPA refunds?"
+    a: "Possibly. If a supplier was the importer of record, passed the duty to you as a surcharge and now receives a refund, ask for a credit, especially where your contract requires duty savings to be passed back. Results depend on contract terms."
 ---
 
 ## Why it matters
@@ -50,9 +52,28 @@ Levi's plans to reinvest about three-quarters, roughly $60 million:
 - The rest is split between marketing and promotions, with a small portion for inventory clearance before the holidays
 - About $25 million was invested in the quarter that ended Aug. 30, and about $35 million is planned for the current quarter
 
-Net tariff recovery is expected to add about 80 basis points to Levi's projected gross margin of roughly 63% for the year ending Nov. 29.
+Net tariff recovery is expected to add about 80 basis points to Levi's projected gross margin of roughly 63% for the year ending Nov. 29. The fourth-quarter reinvestment trims that quarter's gross margin by about 10 basis points, to a projected 61.8%. "We believe this balanced approach strengthens our competitive position, supports near-term growth," Singh said. Levi's says the plan keeps it on track for mid-single-digit revenue growth and a path to 15% operating margins.
 
 Other companies are using refunds differently. McCormick received about $28 million and Kimberly-Clark about $45 million, both to offset higher input costs. E.l.f. Beauty expects about $58.5 million and plans to fund price cuts.
+
+## Three ways companies are using refunds
+
+| Approach | Example | What it means for procurement |
+|---|---|---|
+| Reinvest in operations | Levi's: a third of reinvestment to distribution and logistics | Budget may open for supply chain projects; make the case now |
+| Offset input costs | McCormick, Kimberly-Clark | Refunds absorb cost increases; supplier price talks stay tight |
+| Cut prices | E.l.f. Beauty | Margin pressure moves upstream; expect requests for supplier concessions |
+
+## The supplier side of refunds
+
+Many suppliers passed tariff costs to customers through surcharges or price increases in 2025. If those suppliers were the importers of record, they may now receive refunds for duties their customers effectively paid. Procurement teams should:
+
+1. List suppliers that added tariff surcharges or price increases tied to the struck-down duties.
+2. Ask whether they filed for refunds, and how much they expect.
+3. Check contracts for clauses that require passing back duty savings.
+4. Negotiate credits or price reductions where surcharges were separately itemized.
+
+Where your own company was the importer of record, work with finance and your customs broker to confirm refund claims are filed for every eligible entry.
 
 ## What procurement teams should do
 
