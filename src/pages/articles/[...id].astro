@@ -94,7 +94,6 @@ const graph: any[] = [
 if (d.faqs?.length) graph.push({ '@type': 'FAQPage', mainEntity: d.faqs.map((f: any) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
 const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
 ---
-import AdMesh from '../../components/AdMesh.astro';
 <Base title={d.title} description={d.dek} type="article" jsonLd={jsonLd} section={d.topic}>
   <div class="article-layout">
     <article class="article" data-pagefind-body>
