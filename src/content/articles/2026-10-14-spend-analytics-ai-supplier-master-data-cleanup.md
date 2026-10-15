@@ -32,6 +32,8 @@ faqs:
     a: "No. AI tools help categorize, match and flag anomalies, but they analyze the records underneath them. Duplicate suppliers, misread invoices and inconsistent coding produce wrong totals unless someone owns and checks the data."
   - q: "What is the first data fix procurement should make?"
     a: "Clean the supplier master: give it one owner and match suppliers on registration and tax numbers rather than names, so 'Acme Ltd' and 'ACME Limited' count as one supplier."
+  - q: "Why does spend analytics need clean supplier data?"
+    a: "Duplicate supplier records split spend across two entries, which understates your volume with a supplier and weakens negotiations. AI tools categorize faster, but they can't decide what a clean record is or who maintains it."
 ---
 
 ## Why it matters
@@ -40,7 +42,7 @@ Spend visibility is the starting point for every savings case, and AI tools are 
 
 ## The details
 
-In a CPOstrategy column, Harvey Dhillon, founder of UK accountancy firm Zmartly, argues that AI spend tools only reflect the finance records beneath them. Clean records come from ownership and routine checks agreed between procurement and finance, not from the software.
+In a CPOstrategy column, Harvey Dhillon, founder of UK accountancy firm Zmartly and a former investment banker, argues that AI spend tools only reflect the finance records beneath them. If the supplier list, invoices and codes are wrong, the dashboard is wrong too, he writes, just "faster and in better colours." Clean records come from ownership and routine checks agreed between procurement and finance, not from the software.
 
 His checklist translates into seven controls procurement teams can own or co-own:
 
@@ -53,6 +55,30 @@ His checklist translates into seven controls procurement teams can own or co-own
 7. **Monthly reconciliation.** Match every bank and card line to an invoice and a code. This is where card-bought software below approval limits shows up.
 
 The UK will require e-invoicing for all VAT invoices from April 2029, through the Peppol network. Structured invoices will improve capture accuracy, but as the column notes, they will not merge duplicate supplier records.
+
+## The most common duplicate-payment causes
+
+Dhillon lists the patterns finance teams see most often:
+
+- Paying both an invoice and the supplier's statement
+- Paying the same item by card and by invoice
+- Processing a payment reminder as a new bill
+- Having the same supplier on file twice, such as "Acme Ltd" and "ACME Limited"
+
+Each also risks claiming the same VAT twice. The UK will require e-invoicing for all VAT invoices from April 2029, using the Peppol network, but structured invoices won't merge duplicate supplier records on their own.
+
+## Who owns what
+
+| Control | Procurement | Finance |
+|---|---|---|
+| Supplier master and onboarding checks | Owns | Reviews |
+| Valid invoice as a condition of payment | Sets in contracts | Enforces at payment |
+| Category-to-ledger mapping | Co-owns | Co-owns |
+| Duplicate checks before payment runs | Supports | Owns |
+| Monthly bank and card reconciliation | Reviews tail spend | Owns |
+| Overseas supplier list for reverse charge | Maintains | Uses |
+
+This split is our framework based on the checklist; adapt it to your organization.
 
 ## What procurement teams should do
 

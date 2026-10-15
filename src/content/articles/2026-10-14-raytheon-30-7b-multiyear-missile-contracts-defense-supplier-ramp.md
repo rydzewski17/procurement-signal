@@ -36,6 +36,8 @@ faqs:
     a: "A contract that commits funding for production across several years, here a five-year base with an option to seven, which lets the prime contractor and its suppliers invest in capacity with more certainty."
   - q: "What does the Pentagon's Sept. 15 memo change for suppliers?"
     a: "It directs the department to remove accounting, audit and compliance barriers, including moving from Cost Accounting Standards toward generally accepted accounting principles, to make it easier for commercial companies to supply defense programs."
+  - q: "How much will SM-6 production increase?"
+    a: "Annual SM-6 production is set to rise above 500 interceptors under the multi-year contract, part of framework agreements calling for munitions output two to four times existing rates."
 ---
 
 ## Why it matters
@@ -53,7 +55,22 @@ Work is centered in Tucson, Arizona, and Huntsville, Alabama. The awards follow 
 
 Policy is pushing in the same direction. In August, Deputy Defense Secretary Steve Feinberg asked contractors for production acceleration plans within 21 days. A Sept. 15 memo directs the department to remove accounting, audit and compliance barriers that keep commercial companies out of defense work, including a shift from Cost Accounting Standards toward generally accepted accounting principles.
 
-Raytheon says it has grown its workforce, built partnerships across the defense industrial base and automated production. It did not name suppliers or provide updated production rates.
+Other awards this year point to the same supplier pressure. In August, the Missile Defense Agency awarded Raytheon $745 million to build SM-3 Block IIA rounds for the U.S. and Japan, and days later the Pentagon awarded Boeing and Raytheon contracts to increase SM-3 component production.
+
+Raytheon says it has grown its workforce, built partnerships across the defense industrial base and automated production. "SM-6's multi-mission capability is vital to our customer, and Raytheon is intensely focused on meeting the demand," Raytheon President Phil Jasper said. The company did not name suppliers or provide current production rates. RTX reported 2025 sales above $88 billion and has more than 180,000 employees.
+
+## Where the demand flows
+
+Missile production draws on suppliers that also serve commercial aerospace, automotive, electronics and industrial customers. Our read on where the overlap is likely to show up:
+
+| Input | Who else buys it | Likely effect |
+|---|---|---|
+| Electronic components and circuit boards | Industrial, medical and automotive customers | Longer lead times and allocation for military-grade and high-reliability parts |
+| Precision machining and castings | Commercial aerospace, energy | Shop capacity booked further out |
+| Specialty metals and alloys | Aerospace, energy | Firmer pricing, on top of [Section 232 metals tariffs](/cost-monitor/steel/) |
+| Skilled labor in Arizona and Alabama | Local manufacturers | Wage pressure near Tucson and Huntsville |
+
+Raytheon has not named suppliers, so this is our assessment of exposure, not reported data.
 
 ## What procurement teams should do
 

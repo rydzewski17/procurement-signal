@@ -30,6 +30,8 @@ faqs:
     a: "U.S. authorities have withdrawn visas from about 25,000 Mexican freight drivers, the driver pool is aging, and September restrictions on southbound empty trucks at Eagle Pass and Brownsville stranded equipment. Providers expect tightness into 2027."
   - q: "How can procurement protect nearshored supply from cross-border capacity problems?"
     a: "Contract committed cross-border capacity with carriers that hold U.S. operating authority, qualify more than one crossing, and build buffer time into plans for Mexican-sourced parts in the fourth quarter."
+  - q: "How long will cross-border trucking capacity stay tight?"
+    a: "TRAFFIX expects tight capacity on Mexico and Canada lanes through the end of 2026 and into 2027, driven by driver shortages, visa restrictions, higher costs and trade uncertainty."
 ---
 
 ## Why it matters
@@ -42,9 +44,13 @@ U.S. authorities have withdrawn visas from about 25,000 Mexican freight drivers,
 
 From Sept. 9 to 14, restrictions on southbound empty-truck crossings at Eagle Pass and Brownsville, Texas, reportedly cut daily commercial crossings from about 1,000 to 300–400 and left nearly 700 tractors stranded on the U.S. side. Some carriers rerouted through Laredo, adding miles, fuel and transit time.
 
-Market indicators are tightening. In Laredo, FreightWaves SONAR's outbound tender volume index rose from about 40 in mid-September to about 52, and the rejection index turned positive. TRAFFIX's October cross-border index reads 54 for Mexico and 57 for Canada, where readings above 50 signal tight conditions. Some Canadian corridors rose 25% to 35% in about six weeks, and some carriers are handing back contracted freight because earlier rates no longer cover costs.
+Market indicators are tightening. In Laredo, FreightWaves SONAR's outbound tender volume index rose from 39.95 in mid-September to 51.95 on Oct. 11, and its weighted rejection index moved from −0.74 to +0.65. TRAFFIX's October cross-border index reads 54 for Mexico and 57 for Canada, where readings above 50 signal tight conditions. Some Canadian corridors rose 25% to 35% in about six weeks, and some carriers are handing back contracted freight because earlier rates no longer cover costs.
 
-TRAFFIX expects tight capacity through the end of 2026 and into 2027.
+**Costs are rising for carriers, too.** Financing for trucks now costs 8% to 9%, against cheap pandemic-era loans, and carriers face higher driver wages, insurance and Mexican diesel costs.
+
+**Canada is tight as well.** TRAFFIX's Canada index reads 57. Inbound U.S.-to-Canada freight is scarce, so carriers struggle to find return loads; Florida-bound trucks can wait days for freight or run empty for hundreds of miles. Carriers are returning contract freight they can no longer haul at old rates, and transactional volume on the Canadian side has exceeded COVID-era levels, according to a TRAFFIX executive.
+
+TRAFFIX expects tight capacity through the end of 2026 and into 2027, and C.H. Robinson warned that qualified driver availability could tighten further as fourth-quarter volumes rise. The TRAFFIX index combines more than 10 indicators of cost, capacity, demand and trade policy, mostly from public government and trade data.
 
 ## What procurement teams should do
 
@@ -53,6 +59,17 @@ TRAFFIX expects tight capacity through the end of 2026 and into 2027.
 - **Qualify more than one crossing.** Laredo, Eagle Pass and Brownsville behave differently under restrictions. Pre-approve alternates.
 - **Add buffer for the fourth quarter.** C.H. Robinson warns driver availability could tighten further as fourth-quarter volumes rise.
 - **Review contract rates.** If carriers are returning freight, rates below market won't hold. Renegotiate before service fails.
+
+## Cross-border risk by lane
+
+| Lane | Current condition | What to do |
+|---|---|---|
+| Laredo crossings | Volume and rejections rising as freight reroutes | Confirm capacity commitments and transload partners |
+| Eagle Pass and Brownsville | Exposed to sudden crossing restrictions | Keep a reroute plan through Laredo with agreed costs |
+| U.S. to Canada | Few return loads, rates up sharply on some corridors | Accept that contract rates must reset; avoid rejected awards |
+| Florida-bound Canadian freight | Long waits and empty miles | Expect premiums; consolidate loads where possible |
+
+This is our assessment based on the reported market data.
 
 ## What to watch next
 

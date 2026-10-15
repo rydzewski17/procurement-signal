@@ -26,6 +26,8 @@ faqs:
     a: "Enough security literacy to spot risk, challenge unsupported AI outputs and know when to escalate to security specialists. Procurement does not need to become a cybersecurity function."
   - q: "What should procurement ask an AI vendor beyond a security questionnaire?"
     a: "What data and systems the AI can access, what permissions it holds, where its training and input data come from, how outputs are validated, and what happens if it is manipulated or behaves unexpectedly."
+  - q: "What questions should procurement ask AI vendors?"
+    a: "Ask what the AI can access and with what permissions, where its data comes from, how outputs are validated before actions, what happens if it is manipulated or misbehaves, and whether every action is logged."
 ---
 
 ## Why it matters
@@ -36,6 +38,8 @@ Procurement sits on both sides of the AI question. Teams use AI to analyze suppl
 
 In a CPOstrategy column, Nikos Fountas, chief operations officer at cybersecurity training company Hack The Box, argues that talent, not technology, is the main barrier to using AI well in procurement.
 
+He argues procurement needs two complementary capabilities: staff who can use AI securely in their own work, and access to specialists who can assess and secure the AI the business buys. Procurement staff don't need to become cybersecurity experts, he writes, but they need to know which questions to ask and when to bring security in. "Procurement can't be used as a substitute for the security team's involvement."
+
 His central point is that autonomy changes the stakes. A tool that writes a supplier summary is low risk. An agent that reads data and takes actions across systems is not, and the people supervising it need to understand its limits and failure modes. Procurement roles are shifting from doing tasks to supervising AI that does them.
 
 Three risks stand out for procurement leaders:
@@ -43,6 +47,28 @@ Three risks stand out for procurement leaders:
 - **Automation bias.** People accept plausible AI outputs without checking them.
 - **Vendor blind spots.** Certifications and questionnaires don't reveal what an AI agent can access or how it behaves if manipulated through techniques such as prompt injection or data poisoning.
 - **A thinning talent pipeline.** AI handles the routine, medium-complexity work that has always trained junior buyers. Without a plan, teams lose the path that builds future category managers.
+
+## The vendor questions questionnaires miss
+
+Fountas argues that standard security questionnaires and certifications don't reveal how an AI system behaves. When procurement evaluates AI tools for any part of the business, add these questions:
+
+1. **Access:** What data and systems can the AI reach, and with what permissions?
+2. **Sources:** Where does its data come from, and can outside content (emails, documents, websites) influence what it does?
+3. **Validation:** How are outputs checked before they trigger actions?
+4. **Failure:** What happens if it is manipulated, for example through prompt injection, or behaves unexpectedly? Who is alerted, and can actions be reversed?
+5. **Logging:** Can you see every action an agent took and why?
+
+## Who does what
+
+| Task | Procurement | Security team |
+|---|---|---|
+| Identify AI in a purchase and its level of autonomy | Owns | Advises |
+| Ask access, data and failure questions | Owns | Defines the question set |
+| Challenge unsupported vendor claims | Owns | Supports |
+| Technical testing and threat assessment | Escalates | Owns |
+| Contract terms on permissions, logging and liability | Owns, with legal | Advises |
+
+This split is our framework based on the column's argument; adapt it to your organization.
 
 ## What procurement teams should do
 

@@ -52,7 +52,28 @@ BD, which calls itself the largest U.S. manufacturer of essential medical consum
 
 In return, BD products receive relief from any future Section 232 tariffs, subject to undisclosed milestones. BD has not quantified the financial impact because final rates and covered products aren't set.
 
+The Section 232 investigation into medical equipment and device imports began in September 2025. More than a year later, no device-specific tariffs have been announced. BD said it will give more detail on the financial impact once rates are final. "The administration recognizes the importance of investing in a stronger, more secure healthcare supply chain," CEO Tom Polen said.
+
 BD's U.S. network includes sites in Columbus and Broken Bow, Nebraska; Canaan, Connecticut; Añasco, Puerto Rico; Sandy, Utah; El Paso, Texas; Covington, Georgia; and Sumter, South Carolina.
+
+## What it means by category
+
+| Category | Exposure | Our read |
+|---|---|---|
+| Syringes and needles | High volume, much imported | BD's relief and U.S. steel commitment favor it in 2027 awards if tariffs land |
+| Infusion pumps and sets | Mixed domestic and imported supply | Ask each supplier for origin by SKU |
+| Gloves, gowns and other PPE | Heavily imported | Likely most exposed if device tariffs include PPE |
+| Specialty devices | Smaller volumes, fewer suppliers | Fewer alternatives, so pass-through risk is higher |
+
+This is our assessment, not a forecast of final rates.
+
+## Questions to ask your medtech suppliers
+
+1. What share of the products we buy is made in the U.S., and where is the rest made?
+2. Are you negotiating a relief agreement, and what milestones would it require?
+3. If tariffs apply, which SKUs would be affected and by how much?
+4. Will you commit to documented, product-specific pass-through rather than across-the-board increases?
+5. What is your capacity plan if demand shifts to U.S.-made products?
 
 ## What procurement teams should do
 
@@ -69,4 +90,4 @@ BD's U.S. network includes sites in Columbus and Broken Bow, Nebraska; Canaan, C
 
 ## The bigger picture
 
-The administration is using tariff threats and relief deals to pull production onshore, as it did in [pharmaceuticals](/articles/2026-10-12-section-232-pharma-tariff-now-applies-all-importers/). Medical consumables are next. Procurement teams in healthcare should expect a two-tier market: suppliers with relief deals and U.S. capacity, and those without, priced accordingly once tariffs land.
+Health systems have been here before: PPE shortages in 2020 showed how concentrated sourcing for low-cost consumables can fail. The administration is using tariff threats and relief deals to pull production onshore, as it did in [pharmaceuticals](/articles/2026-10-12-section-232-pharma-tariff-now-applies-all-importers/). Medical consumables are next. Procurement teams in healthcare should expect a two-tier market: suppliers with relief deals and U.S. capacity, and those without, priced accordingly once tariffs land.

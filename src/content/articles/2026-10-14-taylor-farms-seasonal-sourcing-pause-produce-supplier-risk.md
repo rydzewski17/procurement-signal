@@ -34,6 +34,8 @@ faqs:
     a: "Every year during the CDC-defined Cyclospora season, May 1 through Aug. 31, which Taylor says mirrors the region's rainy season. The suspension is indefinite."
   - q: "What should procurement teams that buy fresh-cut produce do now?"
     a: "Confirm which items depend on central Mexico supply in those months, ask suppliers for their alternate growing regions and capacity, and build summer pricing and food-safety testing terms into next year's contracts."
+  - q: "How large was the 2026 Cyclospora lettuce outbreak?"
+    a: "The FDA counted 12,883 laboratory-confirmed illnesses, 570 hospitalizations and two deaths in 21 states, with illnesses from June 22 to Aug. 17. It closed its investigation on Oct. 2."
 ---
 
 ## Why it matters
@@ -44,7 +46,13 @@ If your food service, cafeteria or retail program buys Taylor Farms iceberg lett
 
 Taylor Farms founder and CEO Bruce Taylor said in an Oct. 8 letter that the company will suspend harvesting and processing lettuce in central Mexico for sale in the U.S. and Canada during the Cyclospora season the CDC defines as May 1 through Aug. 31. The pause is indefinite.
 
-The decision follows a summer cyclosporiasis outbreak that reached nearly 13,000 cases linked to Taco Bell or to lettuce recalled from Taylor Farms. The FDA first reported contamination in a sample from Taylor Farms de Mexico, then said that result was inaccurate after retesting. On Oct. 2 the agency closed its investigation without determining how contamination happened, but said Cyclospora was present where the lettuce was grown and processed and that epidemiological and traceback data pointed to recalled shredded iceberg from the Mexican operation.
+The decision follows a summer cyclosporiasis outbreak linked to Taco Bell and to lettuce recalled from Taylor Farms. As of the FDA's final update on Oct. 2, it counted 12,883 laboratory-confirmed illnesses, 570 hospitalizations and two deaths across 21 states. Illnesses began June 22, and the CDC declared the outbreak over on Sept. 11. The FDA first reported contamination in a sample from Taylor Farms de Mexico, then said that result was inaccurate after retesting. On Oct. 2 the agency closed its investigation without determining how contamination happened, but said Cyclospora was present where the lettuce was grown and processed and that epidemiological and traceback data pointed to recalled shredded iceberg from the Mexican operation.
+
+**What traceback found.** The FDA's traceback converged on a single supplier, Taylor Farms de Mexico, which supplied shredded iceberg lettuce to Taco Bell locations where people got sick. Investigators identified several farms and a processing facility. Two environmental samples tested positive for Cyclospora: one from a tank of outgoing wastewater at the processing plant and one from a drainage ditch at a grower. A positive product sample reported July 18 was ruled a false positive a day later.
+
+**How far the product went.** Recalled foodservice product was confirmed in 31 states, with possible further distribution to several more. Walmart's Marketside iceberg salad and shredded lettuce, with best-if-used-by dates from July 18 to Aug. 3, were sold in 15 states. Taco Bell said it stopped using lettuce from Taylor Farms de Mexico on July 17, the day Taylor removed central Mexico iceberg from the U.S. market.
+
+The pause covers May through August, which Taylor says mirrors central Mexico's rainy season. "This is personal to me and my family," Taylor wrote.
 
 Beyond the seasonal pause, Taylor says it will:
 
@@ -60,6 +68,14 @@ Beyond the seasonal pause, Taylor says it will:
 - **Revisit food-safety terms.** Specify testing frequency, traceability to field level, and recall cost allocation in supplier agreements, not only in quality manuals.
 - **Qualify a second source.** For high-volume items, a pre-approved backup supplier from a different region reduces the cost of the next single-region failure.
 - **Plan summer pricing.** Expect suppliers to price the seasonal shift into bids. Ask for transparency on freight and yield assumptions rather than accepting a flat increase.
+
+## Questions to ask your produce suppliers
+
+1. Which growing regions supply our product in each month, and what is the backup region for May to August?
+2. What irrigation water and environmental testing do your growers and processing plants run, and how often?
+3. How quickly can you trace a lot to the farm and field, and when did you last test that?
+4. What happens to price and allocation if a region is paused mid-contract?
+5. Will you share results from the FDA task force's prevention measures as they are adopted?
 
 ## What to watch next
 
