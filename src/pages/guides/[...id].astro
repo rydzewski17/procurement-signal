@@ -5,6 +5,8 @@ import Card from '../../components/Card.astro';
 import Photo from '../../components/Photo.astro';
 import { getPosts } from '../../data/posts';
 import { slugify } from '../../data/tags';
+import { linkInternal, linkSources } from '../../data/autolinks';
+import { linkVendors } from '../../data/vendorlinks';
 import { SITE, TOPICS, TOPIC_PHOTOS } from '../../data/site';
 
 export async function getStaticPaths() {
@@ -15,6 +17,7 @@ const { g, guides } = Astro.props;
 const d = g.data;
 const { Content, headings } = await render(g);
 const toc = headings.filter((h) => h.depth === 2);
+const bodyHtml = linkSources(linkInternal(linkVendors(g.rendered?.html ?? ''), `/guides/${g.id}/`), d.sources);
 const posts = await getPosts();
 const myTags = new Set(d.tags.map(slugify));
 const related = posts.filter((p) => p.data.tags.some((t) => myTags.has(slugify(t))) || p.data.topic === d.topic).slice(0, 4);
@@ -48,7 +51,7 @@ const jsonLd = [
           <ol>{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
         </nav>
       )}
-      <div class="prose"><Content /></div>
+      <div class="prose" set:html={bodyHtml} />
       {d.faqs.length > 0 && (
         <section class="faq" id="faq">
           <h2>Frequently asked questions</h2>

@@ -1,4 +1,5 @@
 ---
+import AdMesh from '../../components/AdMesh.astro';
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Rail from '../../components/v4/Rail.astro';
@@ -10,6 +11,7 @@ import { sectionOf, categoryBySlug } from '../../data/categories.mjs';
 import { getPosts } from '../../data/posts';
 import { slugify } from '../../data/tags';
 import { linkVendors } from '../../data/vendorlinks';
+import { linkInternal, linkSources } from '../../data/autolinks';
 import { SITE, TOPICS, TYPE_LABEL } from '../../data/site';
 
 export async function getStaticPaths() {
@@ -22,7 +24,7 @@ const { Content, headings } = await render(post);
 const tocItems = headings.filter((h) => h.depth === 2 && h.text.toLowerCase() !== 'why it matters');
 
 // Lift "Why it matters" into the Article summary and split the story so the
-// "Read more in" slider sits mid-article.
+// "Read more in" slider sits at the end of the article, after the sources.
 const html: string = post.rendered?.html ?? '';
 const parts = html.split(/(?=<h2[\s>])/);
 const intro = parts[0].startsWith('<h2') ? '' : parts.shift()!;
@@ -92,6 +94,7 @@ const graph: any[] = [
 if (d.faqs?.length) graph.push({ '@type': 'FAQPage', mainEntity: d.faqs.map((f: any) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
 const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
 ---
+import AdMesh from '../../components/AdMesh.astro';
 <Base title={d.title} description={d.dek} type="article" jsonLd={jsonLd} section={d.topic}>
   <div class="article-layout">
     <article class="article" data-pagefind-body>
@@ -128,22 +131,7 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
           <ol>{tocItems.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
         </details>
       )}
-      <div class="prose" set:html={before} />
-
-      {slider.length > 1 && primary && (
-        <section class="readmore4" aria-label={`Read more in ${categoryBySlug[primary].name}`} data-slider>
-          <div class="rm-head">
-            <h2>Read more in <a href={`/categories/${primary}/`}>{categoryBySlug[primary].name}</a></h2>
-            <div class="rm-arrows">
-              <button type="button" data-dir="-1" aria-label="Previous stories">‹</button>
-              <button type="button" data-dir="1" aria-label="More stories">›</button>
-            </div>
-          </div>
-          <div class="rm-track">{slider.map((x) => <Tile item={x} size="md" />)}</div>
-        </section>
-      )}
-
-      <div class="prose" set:html={after} />
+      <div class="prose" set:html={linkSources(linkInternal(before + after, `/articles/${post.id}/`), d.sources)} />
 
       {d.faqs?.length > 0 && (
         <section class="faq4" aria-labelledby="faq-h">
@@ -187,6 +175,21 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
         <h2>Sources</h2>
         <ol>{d.sources.map((s) => <li><a href={s.url} rel="noopener" target="_blank">{s.name}</a></li>)}</ol>
       </section>
+
+      <AdMesh variant="leader" placement="article-end" />
+
+      {slider.length > 1 && primary && (
+        <section class="readmore4" aria-label={`Read more in ${categoryBySlug[primary].name}`} data-slider>
+          <div class="rm-head">
+            <h2>Read more in <a href={`/categories/${primary}/`}>{categoryBySlug[primary].name}</a></h2>
+            <div class="rm-arrows">
+              <button type="button" data-dir="-1" aria-label="Previous stories">‹</button>
+              <button type="button" data-dir="1" aria-label="More stories">›</button>
+            </div>
+          </div>
+          <div class="rm-track">{slider.map((x) => <Tile item={x} size="md" />)}</div>
+        </section>
+      )}
     </article>
 
     <aside class="side side4">
@@ -203,7 +206,7 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
           <p>The procurement stories that matter and what they mean for your categories, every weekday.</p>
           <a class="nl-btn" href="#newsletter">Sign up free</a>
         </section>
-        <div class="ad-slot">Advertisement</div>
+        <AdMesh placement="article-side" />
       </div>
     </aside>
   </div>

@@ -1,0 +1,199 @@
+---
+// Category deep dive: the analysis behind one Category outlook card.
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Rail from '../../components/v4/Rail.astro';
+import { getPosts } from '../../data/posts';
+import { categoryOutlook, impactAsOf, LEVERAGE, RISK, MATCH } from '../../data/watch';
+import { categories, fmtPct, monthLabel, meta } from '../../data/costs';
+import { linkInternal } from '../../data/autolinks';
+import { linkVendors } from '../../data/vendorlinks';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('outlook');
+  return entries.map((e) => ({ params: { id: e.id }, props: { entry: e } }));
+}
+const { entry } = Astro.props;
+const bodyHtml = linkInternal(linkVendors(entry.rendered?.html ?? ''), `/outlook/${entry.id}/`);
+const posts = await getPosts();
+const all = categoryOutlook(posts);
+const r: any = all.find((x) => x.id === entry.id);
+const c: any = categories.find((x) => x.id === entry.id);
+const d = entry.data;
+const re = MATCH[entry.id];
+const related = posts.filter((p) => re && re.test(`${p.data.title} ${p.data.dek} ${p.data.tags.join(' ')}`)).slice(0, 6);
+const others = all.filter((x) => x.id !== entry.id);
+const fmt = (x: Date) => x.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const asOf = new Date(impactAsOf + 'T00:00:00Z');
+const through = monthLabel(meta.dataThrough + '-01');
+
+// 24-month price line
+const vals = c.history.map((h: any) => h.value);
+const W = 640, H = 170, L = 8, R = 8, T = 12, B = 22;
+const lo = Math.min(...vals), hi = Math.max(...vals), span = hi - lo || 1;
+const xs = (i: number) => L + (i * (W - L - R)) / (vals.length - 1);
+const ys = (v: number) => T + (1 - (v - (lo - span * 0.08)) / (span * 1.16)) * (H - T - B);
+const line = vals.map((v: number, i: number) => `${i ? 'L' : 'M'}${xs(i).toFixed(1)},${ys(v).toFixed(1)}`).join('');
+const area = `${line}L${xs(vals.length - 1).toFixed(1)},${H - B}L${xs(0).toFixed(1)},${H - B}Z`;
+const firstLbl = monthLabel(c.history[0].date), lastLbl = monthLabel(c.history[vals.length - 1].date);
+
+const sources = [
+  ...d.sources,
+  ...(r.impact?.sources ?? []).filter((s: any) => !d.sources.some((x) => x.url === s.url)),
+  { name: `U.S. Bureau of Labor Statistics via FRED — ${c.name} (${c.series})`, url: `https://fred.stlouisfed.org/series/${c.series}` },
+];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'Article', headline: d.title, description: d.description, dateModified: d.updated.toISOString(), author: { '@type': 'Organization', name: 'Procurement Signal' } },
+    { '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Category outlook', item: new URL('/outlook/', Astro.site).toString() },
+      { '@type': 'ListItem', position: 2, name: r.name, item: new URL(`/outlook/${entry.id}/`, Astro.site).toString() },
+    ] },
+    ...(d.faqs.length ? [{ '@type': 'FAQPage', mainEntity: d.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []),
+  ],
+};
+---
+<Base title={d.title} description={d.description} section="outlook" type="article" jsonLd={jsonLd}>
+  <nav class="crumbs dd-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/outlook/">Category outlook</a> › {r.name}</nav>
+  <div class="home-grid dd-grid">
+    <article class="dd-main">
+      <header class="dd-head">
+        <span class="dd-kicker">{r.group} · Category outlook</span>
+        <h1>{d.title}</h1>
+        <p class="dd-dek">{d.description}</p>
+        <p class="dd-meta">Procurement Signal analysis · Updated {fmt(d.updated > asOf ? d.updated : asOf)}</p>
+      </header>
+
+      <section class="dd-card" aria-label="Our assessment">
+        <div class="dd-cell">
+          <span class="dd-lbl">Supply risk</span>
+          <span class={`dd-risk r-${r.risk}`}>{RISK[r.risk]}</span>
+        </div>
+        <div class="dd-cell dd-lev">
+          <span class="dd-lbl">Negotiating leverage: <b>{LEVERAGE[r.leverage].label}</b></span>
+          <div class="dd-scale">{[1, 2, 3, 4, 5].map((n) => <i class={n === r.leverage ? 'on' : ''}></i>)}</div>
+          <div class="dd-ends"><span>Suppliers</span><span>Procurement</span></div>
+        </div>
+        <div class="dd-cell dd-move">
+          <span class="dd-lbl">Our move</span>
+          <p>{r.impact?.move}</p>
+          {r.impact?.when && <small>◷ {r.impact.when}</small>}
+        </div>
+      </section>
+
+      <section class="dd-take" aria-label="Key takeaways">
+        <h2>Key takeaways</h2>
+        <ul>{d.takeaways.map((t) => <li>{t}</li>)}</ul>
+      </section>
+
+      <div class="prose dd-prose" set:html={bodyHtml} />
+
+      <section class="dd-price" aria-labelledby="price-h">
+        <h2 id="price-h">Price trend</h2>
+        <div class="dd-stats">
+          <div><b>{fmtPct(c.y1)}</b><span>over 12 months</span></div>
+          <div><b>{fmtPct(c.m3ann)}</b><span>3-month pace, annualized</span></div>
+          <div><b>{fmtPct(c.m1)}</b><span>last month</span></div>
+          <div><b>{c.fromPeak > -0.05 ? 'At the high' : fmtPct(c.fromPeak)}</b><span>vs. 12-month high</span></div>
+        </div>
+        <svg class="dd-chart" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`${c.name} producer price index, ${firstLbl} to ${lastLbl}`}>
+          <path d={area} fill="rgba(15,123,120,.10)" />
+          <path d={line} fill="none" stroke="var(--teal)" stroke-width="2.4" stroke-linejoin="round" />
+          <text x={L} y={H - 6} class="dd-ax">{firstLbl}</text>
+          <text x={W - R} y={H - 6} class="dd-ax" text-anchor="end">{lastLbl}</text>
+        </svg>
+        <p class="dd-note">U.S. producer price index for {c.name.toLowerCase()} (BLS series {c.series}), data through {through}. {c.tariff && <>Tariff note: {c.tariff}.</>} <a href={`/cost-monitor/${c.id}/`}>Full price history</a>.</p>
+      </section>
+
+      {related.length > 0 && (
+        <section class="dd-rel" aria-labelledby="rel-h">
+          <h2 id="rel-h">Our coverage of {r.name.toLowerCase()}</h2>
+          <ul>{related.map((p) => <li><a href={`/articles/${p.id}/`}>{p.data.title}</a><span>{p.data.dek}</span></li>)}</ul>
+        </section>
+      )}
+
+      {d.faqs.length > 0 && (
+        <section class="dd-faq" aria-labelledby="faq-h">
+          <h2 id="faq-h">Questions procurement teams ask</h2>
+          {d.faqs.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}
+        </section>
+      )}
+
+      <section class="dd-src">
+        <h2>Sources</h2>
+        <ul>{sources.map((s) => <li><a href={s.url} target={s.url.startsWith('http') ? '_blank' : undefined} rel={s.url.startsWith('http') ? 'noopener' : undefined}>{s.name}</a></li>)}</ul>
+        <p>Leverage, supply risk and the recommended move are Procurement Signal's editorial assessment, built from the sources above. This is general market analysis, not advice on a specific contract. See our <a href="/editorial-standards/">editorial standards</a>.</p>
+      </section>
+
+      <section class="dd-others" aria-labelledby="oth-h">
+        <h2 id="oth-h">Other categories</h2>
+        <div class="dd-chips">{others.map((o) => <a href={`/outlook/${o.id}/`}><span class={`dot r-${o.risk}`}></span>{o.name}<small>{LEVERAGE[o.leverage].short}</small></a>)}</div>
+      </section>
+    </article>
+    <Rail posts={posts} show={['software', 'guides', 'events', 'ad']} />
+  </div>
+</Base>
+
+<style>
+  .dd-crumbs { margin-top: 18px; }
+  .dd-grid { margin-top: 8px; }
+  .dd-main { min-width: 0; }
+  .dd-kicker { font: 600 13px var(--ui); color: var(--teal); }
+  .dd-head h1 { font: 700 40px/1.12 var(--head); color: var(--ink); margin: 8px 0 12px; }
+  .dd-dek { font: 20px/1.45 var(--head); color: var(--ink-2); margin: 0 0 10px; }
+  .dd-meta { font: 13px var(--ui); color: var(--muted); margin: 0 0 20px; }
+  .dd-card { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr) minmax(0, 1.5fr); gap: 0; border: 1px solid var(--rule); border-top: 3px solid var(--navy); margin-bottom: 22px; }
+  .dd-cell { padding: 14px 16px; border-right: 1px solid var(--rule); display: flex; flex-direction: column; gap: 8px; }
+  .dd-cell:last-child { border-right: 0; }
+  .dd-lbl { font: 600 12.5px/1.3 var(--ui); color: var(--muted); }
+  .dd-lbl b { color: var(--ink); }
+  .dd-risk { align-self: flex-start; font: 600 13px/1 var(--ui); padding: 7px 9px; }
+  .r-high { background: #fbe9e7; color: #a3261b; } .r-elevated { background: #fff4dc; color: #8a5a00; } .r-low { background: #e3f4f1; color: #0b6b5f; }
+  .dd-scale { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px; }
+  .dd-scale i { height: 8px; } .dd-scale i:nth-child(1) { background: #f1c9c3; } .dd-scale i:nth-child(2) { background: #f6dccf; } .dd-scale i:nth-child(3) { background: #e3e8ee; } .dd-scale i:nth-child(4) { background: #cfe9e4; } .dd-scale i:nth-child(5) { background: #b6dfd7; }
+  .dd-scale i.on { background: var(--navy); height: 12px; margin-top: -2px; }
+  .dd-ends { display: flex; justify-content: space-between; font: 11.5px var(--ui); color: var(--muted); }
+  .dd-move { background: var(--navy-tint); }
+  .dd-move p { font: 600 15px/1.45 var(--ui); color: var(--ink); margin: 0; }
+  .dd-move small { font: 600 12.5px var(--ui); color: var(--ink-2); }
+  .dd-take { background: var(--navy-tint); border-left: 4px solid var(--teal); padding: 14px 20px 8px; margin-bottom: 10px; }
+  .dd-take h2 { font: 600 13px var(--ui); color: var(--teal); margin: 0 0 6px; }
+  .dd-take ul { margin: 0; padding-left: 18px; }
+  .dd-take li { font: 16px/1.5 var(--head); color: var(--ink); margin-bottom: 6px; }
+  .dd-prose :global(h2) { font: 700 24px/1.25 var(--head); color: var(--ink); margin: 34px 0 12px; }
+  .dd-prose :global(p), .dd-prose :global(li) { font: 18px/1.65 var(--head); color: var(--ink); }
+  .dd-price, .dd-rel, .dd-faq, .dd-src, .dd-others { margin-top: 40px; }
+  .dd-price h2, .dd-rel h2, .dd-faq h2, .dd-src h2, .dd-others h2 { font: 700 22px/1.25 var(--head); color: var(--ink); margin: 0 0 12px; padding-top: 10px; border-top: 3px solid var(--ink); }
+  .dd-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-bottom: 10px; }
+  .dd-stats div { border: 1px solid var(--rule); padding: 10px 12px; }
+  .dd-stats b { display: block; font: 700 22px/1.1 var(--head); color: var(--ink); }
+  .dd-stats span { font: 12.5px var(--ui); color: var(--muted); }
+  .dd-chart { width: 100%; height: auto; display: block; }
+  .dd-ax { font: 11px var(--ui); fill: var(--muted); }
+  .dd-note { font: 13px/1.5 var(--ui); color: var(--muted); }
+  .dd-note a { color: var(--link); }
+  .dd-rel ul { list-style: none; margin: 0; padding: 0; }
+  .dd-rel li { padding: 12px 0; border-bottom: 1px solid var(--rule); display: flex; flex-direction: column; gap: 4px; }
+  .dd-rel a { font: 700 17.5px/1.3 var(--head); color: var(--ink); text-decoration: none; }
+  .dd-rel a:hover { text-decoration: underline; }
+  .dd-rel span { font: 14px/1.45 var(--ui); color: var(--ink-2); }
+  .dd-faq details { border-bottom: 1px solid var(--rule); padding: 12px 0; }
+  .dd-faq summary { cursor: pointer; font: 600 16.5px/1.4 var(--head); color: var(--ink); }
+  .dd-faq p { font: 15.5px/1.55 var(--ui); color: var(--ink-2); margin: 8px 0 0; }
+  .dd-src ul { margin: 0 0 10px; padding-left: 18px; font: 14px/1.5 var(--ui); }
+  .dd-src a { color: var(--link); }
+  .dd-src p { font: 13px/1.5 var(--ui); color: var(--muted); }
+  .dd-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .dd-chips a { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--rule); padding: 8px 11px; font: 600 13.5px var(--ui); color: var(--ink); text-decoration: none; }
+  .dd-chips a:hover { border-color: var(--ink); }
+  .dd-chips small { font-weight: 400; color: var(--muted); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; padding: 0; }
+  .dot.r-high { background: #c0392b; } .dot.r-elevated { background: #d39b1b; } .dot.r-low { background: var(--teal); }
+  @media (max-width: 760px) {
+    .dd-card { grid-template-columns: 1fr; }
+    .dd-cell { border-right: 0; border-bottom: 1px solid var(--rule); }
+    .dd-stats { grid-template-columns: 1fr 1fr; }
+    .dd-head h1 { font-size: 30px; }
+  }
+</style>

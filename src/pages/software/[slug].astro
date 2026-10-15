@@ -165,9 +165,10 @@ const toc = [
       <section id="compare">
         <h2>{sw} software compared</h2>
         <p class="note">Ratings and reviewer mix from G2, checked {checked}. Enterprise means more than 1,000 employees; small business means 50 or fewer.</p>
+        <p class="legend legend-top"><b>Who reviews it</b> shows the size of the companies writing G2 reviews: <span><i class="s"></i>Small business</span><span><i class="m"></i>Mid-market</span><span><i class="l"></i>Enterprise</span></p>
         <div class="tscroll" tabindex="0" role="region" aria-label="Comparison table">
           <table class="cmp">
-            <thead><tr><th>#</th><th>Platform</th><th>Best for</th><th>Our score</th><th>G2 rating</th><th>Reviews</th><th>Who reviews it</th><th>Founded · HQ</th></tr></thead>
+            <thead><tr><th>#</th><th>Platform</th><th>Best for</th><th>Our score</th><th>G2 rating</th><th>Reviews</th><th class="th-mix">Who reviews it<span class="th-key" aria-hidden="true"><i class="s"></i>Small <i class="m"></i>Mid <i class="l"></i>Ent.</span></th><th>Founded · HQ</th></tr></thead>
             <tbody>
               {all.map((v) => {
                 const m = mixOf(v); const rk = rankOf(v);
@@ -188,7 +189,6 @@ const toc = [
           </table>
         </div>
         <p class="hint">Swipe the table sideways to see every column.</p>
-        <p class="legend"><span><i class="s"></i>Small business</span><span><i class="m"></i>Mid-market</span><span><i class="l"></i>Enterprise</span></p>
       </section>
 
       <section id="ranking">
@@ -442,7 +442,13 @@ const toc = [
   .pick strong { font: 700 20px/1.15 var(--head); }
   .ps { font: 13px/1.35 var(--ui); color: var(--muted); }
 
-  .tscroll { overflow-x: auto; border: 1px solid var(--rule); }
+  .tscroll { overflow: auto; max-height: min(78vh, 760px); border: 1px solid var(--rule); }
+  .cmp thead th { position: sticky; top: 0; z-index: 2; box-shadow: 0 2px 0 var(--teal); }
+  .th-key { display: flex; align-items: center; gap: 4px; margin-top: 5px; font: 500 10.5px/1 var(--ui); color: #c8d4e1; white-space: nowrap; }
+  .th-key i { display: inline-block; width: 9px; height: 9px; border-radius: 1px; margin-left: 4px; }
+  .th-key i:first-child { margin-left: 0; }
+  .th-key i.l { box-shadow: 0 0 0 1px rgba(255,255,255,.8); }
+  .legend-top { font-size: 13px !important; color: var(--ink-2) !important; margin: 0 0 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; }
   .cmp { width: 100%; min-width: 860px; border-collapse: collapse; font: 14px/1.4 var(--ui); }
   .cmp th { text-align: left; font: 600 12px/1.2 var(--ui); color: #fff; background: var(--navy); padding: 10px; }
   .cmp td { padding: 10px; border-top: 1px solid var(--rule); vertical-align: top; }
