@@ -55,6 +55,8 @@ Causes cited include typhoons in Asia, bunker-cost pressure, strong peak-season 
 
 Rates remain high. The China–U.S. West Coast spot average was $7,717 per FEU in early October, more than four times the $1,778 of September 2025. Long-term rates rose 26% month over month to $3,649 per FEU as of Oct. 1. Carriers blanked 8% of planned Far East–North America capacity in September and have announced at least 13% for October, along with 17% on Far East–Europe.
 
+**Where queues are longest.** Beyond Singapore and Shanghai, Xeneta's data shows Africa as the most congested region, with 32% of vessels waiting an average of 2.5 days, while 30% of vessels in Northeast Asia waited an average of 1.6 days, according to FreightWaves. The carrier performance spread narrowed to 43 points from 45. The China–U.S. West Coast spot average of $7,717 was 8% above early September. September's blank sailings, 6% on Far East–Europe and 8% on Far East–North America, were the third-lowest in 21 months, and planned Far East–Europe capacity for October is the highest in 22 months, leaving carriers little room to absorb delays by cancelling sailings.
+
 ## Reliability at a glance
 
 | Measure | September 2026 |

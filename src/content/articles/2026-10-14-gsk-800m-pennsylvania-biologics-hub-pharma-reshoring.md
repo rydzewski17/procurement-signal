@@ -62,6 +62,8 @@ The project is GSK's second $800 million Pennsylvania commitment in two years. I
 
 **Pennsylvania's pitch.** The state counts about 3,900 life sciences companies employing more than 110,000 people. Its 2026–27 budget includes $125 million for life sciences programs covering clinical trial infrastructure, workforce training and collaborative development grants. "GSK could have chosen anywhere in the world to expand production," Gov. Shapiro said.
 
+**The company behind it.** GSK, formed in 2000 from the merger of Glaxo Wellcome and SmithKline Beecham, rebranded in 2022 and spun off its consumer health business as Haleon, according to Manufacturing Dive. Its U.S. headquarters is in Philadelphia, and its portfolio includes medicines and vaccines for HIV, malaria and women's cancers. The Upper Merion expansion qualifies for Pennsylvania's Qualified Manufacturing Innovation and Reinvestment Deduction program and its Manufacturing Tax Credit program; the value of the incentives wasn't disclosed.
+
 ## Why biologics capacity takes so long
 
 Biologics are made from living cells, so a new plant must be built, validated and approved before it can supply patients. Construction alone typically takes years, followed by process validation and regulatory inspection. Construction in Upper Merion starts in 2027, so supply from the site is unlikely before the end of the decade, in our assessment. Procurement teams should plan around today's supply network for at least the next several contract cycles.

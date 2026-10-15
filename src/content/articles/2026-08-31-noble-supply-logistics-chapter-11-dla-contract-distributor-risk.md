@@ -58,6 +58,10 @@ The petition estimates assets of $100 million to $500 million and liabilities of
 
 Noble cut about $30 million of operating expenses and raised $25 million from subordinated noteholders in June 2025, but that wasn't enough. Talks with Bain Special Situations didn't produce a deal.
 
+**How the contract was structured.** The 2021 fastener and hardware award, known as the Federal Supply Group 53 contract, had a three-year base period, a one-year transition period and two three-year options, according to Distribution Strategy Group. When DLA said in December 2024 that it would not exercise the next option, it asked Noble for a two-year extension while it found another supplier. The $400 million termination on Aug. 27 came under a separate special operational equipment contract, according to a declaration by chief transformation officer Robert Albergotti.
+
+**What Noble tried before filing.** Its term loan agent allowed it to factor receivables for liquidity, and eight parties signed nondisclosure agreements to review the business. Bain Special Situations held investment talks, but concerns included expectations for future federal defense spending. Founder and CEO Tom Noble has run the business for more than 20 years.
+
 ## The numbers behind the failure
 
 By our calculation from Noble's filing, the DLA fastener contract was cut from an expected ten years to four, a 60% reduction in its expected life. Inventory and purchase obligations tied to that one contract, more than $70 million, made up most of the roughly $100 million Noble says it was left holding. Then the Aug. 27 termination removed about $400 million of orders under a second contract, three days before the filing. The pattern is common in distributor failures: the business looked healthy while its largest contract ran, and the cash tied up in inventory only became a problem when that contract ended.

@@ -58,6 +58,8 @@ Freight brokers are suppliers, and supplier consolidation changes your leverage.
 
 **Liabilities and the broker market.** All of RXO's legal liabilities transfer at close, including litigation tied to serious motor carrier accidents. Leffler described a market of rising insurance costs, a shrinking carrier pool and growing litigation exposure that is pushing mid-size brokers toward the exit. Panelists said brokers ranked roughly 20 to 50 by size could be the next to consolidate. Both companies also run pools of drop trailers, sometimes 3,000 to 4,000 units each, a service many shippers rely on.
 
+**More from the legal view.** Leffler said shareholder dissent is a more plausible threat to closing than regulators, though he considers it unlikely given the premium, according to FreightWaves. For comparison, the proposed Union Pacific–Norfolk Southern merger carries a breakup fee of roughly $2 billion. He pointed to rising broker liability after the Supreme Court's Montgomery decision, citing a trial-court finding in the Lupus Superior case that C.H. Robinson was a co-employer of a carrier's driver, and said he expects C.H. Robinson to move to dismiss a separate RICO lawsuit. On trailers, he noted that ITS Logistics, acquired by Echo Global Logistics, runs about 8,000, and that about 70% of unplanned maintenance events at transportation companies come from trailing equipment.
+
 ## The deal in numbers
 
 | Term | Figure |

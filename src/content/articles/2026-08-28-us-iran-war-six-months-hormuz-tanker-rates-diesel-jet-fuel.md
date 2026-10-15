@@ -67,6 +67,8 @@ Dubai crude peaked at $169.75 a barrel on March 23 when Hormuz traffic nearly st
 
 **Why shipping costs stay high.** With crossings through Hormuz down more than 80%, Gulf producers are sending cargoes by longer routes, which ties up more tankers per barrel delivered. S&P Global's Commodities at Sea analysts said restricted trading and differing risk appetite among shipowners have reduced fleet efficiency. Tighter tanker supply feeds through to freight costs for crude and refined products worldwide.
 
+**Why European diesel margins are so high.** Analysts and traders attribute the widest European diesel refining margins in at least 15 years to three things at once: the Middle East conflict, Russian export restrictions and upcoming U.S. refinery maintenance, according to S&P Global. Southeast Asian buyers are extending charters on vessels that can still reach Middle East Gulf export programs. Damage also reached gas-to-liquids production: Shell's Pearl plant at Ras Laffan was hit, and CEO Wael Sawan said on July 30 that repairs to its second train should be finished by the end of the first quarter of 2027.
+
 ## Where it shows up in procurement categories
 
 | Category | How energy flows through | What to expect |

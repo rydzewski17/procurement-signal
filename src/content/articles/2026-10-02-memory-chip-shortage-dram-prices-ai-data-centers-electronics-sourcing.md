@@ -59,6 +59,8 @@ Memory is in almost everything with a circuit board, and AI data centers are out
 
 **How long it could last.** Industry commentary cited by TechRadar suggested the shortage could persist well into 2027, because memory makers are prioritizing higher-margin AI data center products and new fabrication capacity takes years to build.
 
+**How big the market is.** The global DRAM market is expected to pass $100 billion this year, according to IBM, which invented DRAM in 1966, as cited by Supply Chain Connect. The coalition's letter warned of "significant, sustained near-term price increases" for U.S. households and said the effects on prices, telecom infrastructure costs and the production of cars and medical devices had already begun and could worsen quickly. The groups said they recognize AI's importance to U.S. technology leadership but that other industries must not be harmed by the disruption.
+
 ## Where the shortage reaches you
 
 | What you buy | How memory shows up | Risk |

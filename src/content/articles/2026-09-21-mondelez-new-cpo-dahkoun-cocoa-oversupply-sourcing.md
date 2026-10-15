@@ -55,6 +55,8 @@ He succeeds Thomas Gaengler, CPO for four years, who left to become chief operat
 
 **What the cocoa shift means for the role.** Dahkoun takes over as the company's most volatile input moves from shortage to surplus. Mondelēz shifted some of its product mix away from chocolate-heavy products when prices spiked; with supply recovering, the procurement question becomes how quickly to rebalance, and how to contract for cocoa so the company benefits from lower prices without locking in exposure if the market tightens again.
 
+**What Mondelēz has said about cocoa supply.** Zaramella told the Barclays Global Consumer Staples Conference that the market is now oversupplied because suppliers expanded production after years of volatility, and that production over the past couple of years has more than covered the deficit that drained stocks earlier, according to Supply Chain Dive. He described the 2027 Oreo overhaul as including "new formulas that will result in better labels." Supply Chain Dive reported in July that Mondelēz had shown uneven progress on its 2025 sustainable sourcing goals, another part of the cocoa portfolio Dahkoun inherits.
+
 ## Other procurement leadership moves in September
 
 | Company | Appointment | Background |

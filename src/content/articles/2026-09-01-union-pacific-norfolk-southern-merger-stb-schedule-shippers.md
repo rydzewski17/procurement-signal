@@ -78,6 +78,8 @@ The Board extended the notice-of-intent deadline at the National League of Citie
 
 **Why the schedule matters for contracts.** A final decision isn't expected until well into 2027, and integration would follow. Rail contracts signed for 2027 and 2028 should anticipate the possibility of a combined railroad, with terms covering service levels, routing and assignment if the deal is approved.
 
+**Smaller dates in the schedule.** The Board also required the railroads to refile unfiltered workpapers by Aug. 28, set Sept. 9 for descriptions of any anticipated responsive applications and Dec. 18 for a Federal Register notice of accepted responsive applications, according to Railway Age. The Board said the supplemental filings "ensured the Board had the information necessary to thoroughly evaluate the proposed transaction." The hearing date will be set in a later decision. Responsive applications are how other railroads or parties ask for rights such as trackage or line sales as a condition of approval, so the Dec. 18 notice will show whether any competitor is seeking access to UP or NS lines.
+
 ## How to map your rail exposure
 
 Before deciding whether to file, procurement and logistics teams need a lane-by-lane view. A simple table is enough to start:

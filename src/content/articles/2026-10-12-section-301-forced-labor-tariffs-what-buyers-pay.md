@@ -86,6 +86,8 @@ Note: Holland & Knight's country table shows 13% for some economies where its te
 
 **The exemption categories.** Beyond Section 232 goods, USTR exempted products in five policy groups: raw materials whose tariffs could cause U.S. shortages; products that could disrupt the wider economy; products not available in sufficient quantities from the U.S. or elsewhere; products where an exemption encourages countries to adopt forced-labor import bans; and products where a tariff would not address the practices at issue.
 
+**The in-transit rule and what else is excluded.** Goods loaded on a vessel and in transit before 12:01 a.m. on July 24 qualified for the old treatment if entered before 12:01 a.m. on July 28, according to EY. Informational materials, donations and accompanied baggage are also excluded. The final action followed USTR's June 2 determinations and proposed measures. EY's checklist for importers adds two steps beyond classification and origin: assess how the duty interacts with Section 232 and other Section 301 measures, and consider customs valuation planning and changes to the operating model to reduce exposure.
+
 ## A sourcing comparison, worked through
 
 Take a product with a 4% normal duty bought from Vietnam, Malaysia or Germany. The added forced-labor duty would be 12.5% from Vietnam (16.5% total), 10% from Malaysia (14% total) and 6% from Germany, since the EU combined rate is capped at 10%. On $1 million of annual purchases, that is a $25,000 a year swing between Vietnam and Malaysia and $65,000 between Vietnam and Germany, before freight and unit price. This is our illustrative calculation; check your classifications and any other duties that apply.

@@ -50,6 +50,8 @@ The funding will expand the fulfillment network, accelerate robotics and fund AI
 
 Its growth has come largely through acquisitions: ProPack Logistics and Pitney Bowes' e-commerce fulfillment unit in 2024, Ware2Go from UPS in May 2025, adding 21 warehouses and about 2.5 million square feet of storage, and Shipwire from Ceva Logistics in January with 12 fulfillment centers. Stord also named Bill Zerella, previously CFO of ACV Auctions, as CFO, and Mark Wayland, previously CRO at Box, as chief revenue officer. Zerella has led finance at three public companies and took each public, including Fitbit in 2015. Hiring executives with public-company experience is often a step toward an IPO, though Stord has not announced one.
 
+**Who is behind it.** Strike Capital led the $250 million Series F in May, according to FreightWaves. New chief revenue officer Mark Wayland was previously CRO at Tanium and spent more than a decade at Salesforce, rising to senior vice president of Marketing Cloud. CEO and co-founder Sean Henry said the facility "gives us the balance sheet to match the scale, potential, and impact of what we're building," and that Stord will "accelerate our deployment of robotics" and "invest aggressively in AI through Stord Labs." Stord is privately held and did not disclose revenue or profit.
+
 ## The 3PL market Stord is building into
 
 Fulfillment is consolidating around providers that combine a network of warehouses with their own software and automation. For shippers, that brings real benefits: more locations closer to customers, better technology and one contract instead of several. It also brings risks that procurement should manage directly:

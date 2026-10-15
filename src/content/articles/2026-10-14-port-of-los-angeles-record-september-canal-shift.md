@@ -60,6 +60,8 @@ The Panama Canal cut daily Neopanamax slots to nine from Sept. 3 because of El N
 
 Seroka expects another frontloading wave driven by an earlier Lunar New Year in the first week of February and the U.S.–China trade truce expiring Jan. 10.
 
+**What the port did not say.** The port's release gives no numeric forecast for the rest of the year and no year-over-year comparison for the record quarter. It also says nothing about rail operations or container dwell times, the two measures that decide whether a volume surge turns into delays for importers further inland. Mayor Karen Bass credited the ILWU workforce, and Seroka's stated focus was to "finish the year strong." Procurement teams that move freight through Los Angeles should ask their drayage providers and railroads for current dwell times rather than infer them from throughput.
+
 ## What the record means for inland costs
 
 By our calculation, a 19% rise to 545,696 loaded import TEUs means the port handled about 87,000 more loaded import containers in September than a year earlier, all of which needed drayage, rail or transload capacity inland. The record 371,206 empty containers, about three times loaded exports, show how one-sided the trade is: most boxes arrive full and leave empty. That imbalance is why inbound capacity, not the ship itself, tends to be the constraint during surges, and why chassis, drayage and transload rates in Southern California rise when volume spikes.

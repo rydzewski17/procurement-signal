@@ -65,6 +65,8 @@ Verisk CargoNet recorded 677 supply chain theft incidents across the U.S. and Ca
 
 **Two playbooks.** CargoNet described organized groups splitting into two approaches. Some have dropped complex schemes in favor of stealing unattended loaded trailers, especially in Southern California, the Bay Area, Phoenix and Lake Tahoe. Others are refining social engineering, gathering details on assigned carriers and broker contacts and then impersonating them to get around anti-fraud tools that focus on the tender stage, including by using public load board data.
 
+**What drove the average up.** CargoNet attributed the $564,009 average to several multimillion-dollar thefts of high-value shipments, according to FleetOwner. Lewis said organized cargo theft closely tracks "value, demand, and resale opportunity." Metal thefts rose about 48%, and copper led alongside aluminum, nickel and tungsten. Theft of protein products also declined. Verisk CargoNet supported a Manhattan District Attorney indictment in June in a $5 million cargo theft ring that impersonated legitimate companies, and Trucker Path added CargoNet's theft risk data to its navigation app so drivers can avoid high-risk areas.
+
 ## Fewer thefts, much bigger ones
 
 The figures imply a sharp change in what each theft is worth. A 26% drop to 677 incidents means about 915 in the second quarter of 2025, and $135.7 million across those works out to roughly $148,000 per incident. This year's average of $564,009 is close to four times that. Against the first quarter, a 14% decline implies about 787 incidents. These are our calculations from CargoNet's figures.

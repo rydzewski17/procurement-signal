@@ -62,6 +62,8 @@ About 90% of covered products would get most-favored-nation treatment, according
 
 **Side commitments.** Soybeans are excluded, but China committed to buy 25 million metric tons of U.S. soybeans a year through 2028 and at least 10 million metric tons of U.S. coal in 2027 and again in 2028, according to the White House. A new agricultural working group is due to meet by the end of 2026. Export controls and Taiwan remain unresolved.
 
+**What else was agreed, and the politics.** China has a goal of buying at least $17 billion of U.S. agricultural products a year through 2028, and progress has been slow, according to Farm Progress. Grains on China's list include wheat, corn and sorghum. Hutong Research's Feng Chucheng said keeping soybeans on a separate track gives Beijing leverage ahead of the November midterms, because purchases matter to farm states. Bloomberg Economics' Chang Shu said the goods are mostly agricultural and medical products on the U.S. export side and low-end consumer goods on the Chinese side. Chinese appliance makers Joyoung and Bear Electric Appliance rose sharply in Shenzhen on the news, a sign of which Chinese exporters expect to benefit. China's Commerce Ministry said the arrangement would "create favorable conditions" for those exports.
+
 ## How far the covered trade has already fallen
 
 By our calculation from the figures above, the Chinese goods on the U.S. list fell about 28% in value from 2024 to 2025, and the U.S. goods on China's list about 35%. Much of that trade had already moved to other sources or been priced out by duties. Lower tariffs won't automatically bring it back: suppliers who left China have built new capacity elsewhere, and buyers have qualified them.

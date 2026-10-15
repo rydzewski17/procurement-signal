@@ -59,6 +59,8 @@ Trans-Pacific rates hit new highs in the last week of August, according to Freig
 
 **Why spot rates matter even if you have a contract.** In a rising market, carriers can roll contract cargo when a sailing is full, pushing shippers to book at spot rates or wait. Contracted space is only as good as the allocation behind it, which is why allocation and blank-sailing terms matter as much as the rate itself.
 
+**What carriers are doing about congestion.** Freightos analyst Judah Levine said omitting port calls, rerouting cargo through transshipment hubs and changing rotations protects schedules in the short term but displaces cargo and compounds backlogs, according to FreightWaves. He said the extra September capacity offers only limited near-term relief. On Asia–Europe, port congestion and disruption at transshipment hubs are what is keeping rates from falling further. Carriers have announced more trans-Atlantic increases for September, but observers doubt they will fully stick because demand on that trade has been weaker than on the trans-Pacific.
+
 ## What the rate move means per unit
 
 Freight that looks small per container can change the cost of a low-value product sharply. Take a forty-foot container holding 4,000 units of a household product:

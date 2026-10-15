@@ -62,6 +62,8 @@ ORO Labs, founded by former SAP Ariba product leaders, names Coca-Cola, Pfizer, 
 
 **Why resell a partner at the same time.** The ORO extension targets customers whose procurement runs across many systems, not just Ariba. In practice, SAP customers now have two front-door options sold by SAP: its native intake agent for Ariba-centered processes, and ORO's orchestration layer for mixed landscapes. Expect SAP sales teams to position them by how much of a customer's process sits outside Ariba.
 
+**What SAPinsider suggests customers ask.** Because SAP sells and supports the extension, pricing and packaging questions go to the SAP account team, SAPinsider noted. It suggested customers in the middle of an Ariba migration confirm which Ariba generations are covered at launch, ask which Joule Work scenario applies to their landscape, and clarify where SAP Integration Suite fits alongside ORO's pre-built connectors. ORO says it will coordinate with Joule Work, including where Joule Work is the main way users engage. SAPinsider also flagged an open question for any agentic procurement deployment: who owns the governance and oversight controls.
+
 ## How this changes the intake decision
 
 | If you... | Options now | Questions to ask |

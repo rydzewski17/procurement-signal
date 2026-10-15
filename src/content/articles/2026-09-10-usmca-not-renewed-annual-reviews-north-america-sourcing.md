@@ -69,6 +69,8 @@ As of late July, no formal U.S.–Canada talks had been held.
 
 **Canada's position.** Canada signaled support for a 16-year renewal in a June 1 letter from minister Dominic LeBlanc. Its priority is U.S. sectoral tariffs on steel, aluminum, autos and lumber, and it had not begun substantive text-based negotiations with the U.S. by late July.
 
+**Why the investment chapter matters for sourcing.** Most bilateral investment treaties include a sunset period that keeps protecting existing investments for years after termination; USMCA's Chapter 14 does not, IISD notes. That matters for companies that have built or financed supplier plants in Mexico, and IISD links the investment stakes to critical minerals supply chains. Under Article 34.7.4, the extension can still be confirmed at any time before 2036.
+
 ## Timeline
 
 | Date | Event |
