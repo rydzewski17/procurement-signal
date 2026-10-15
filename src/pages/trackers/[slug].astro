@@ -1,28 +1,316 @@
 ---
+// Tracker page. Rows with ISO dates get the visual treatment: a countdown to the next
+// deadline, upcoming cards, a timeline and a filterable history.
 import Base from '../../layouts/Base.astro';
+import AdMesh from '../../components/AdMesh.astro';
 import { trackers } from '../../data/trackers';
 export function getStaticPaths() {
   return trackers.map((t) => ({ params: { slug: t.slug }, props: { t } }));
 }
 const { t } = Astro.props;
+const DAY = 864e5;
+const today = new Date().toISOString().slice(0, 10);
+const T = (s: string) => Date.parse(s + 'T00:00:00Z');
+const days = (s: string) => Math.round((T(s) - T(today)) / DAY);
+const fmt = (s: string, o: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric', year: 'numeric' }) => new Date(s + 'T00:00:00Z').toLocaleDateString('en-US', { ...o, timeZone: 'UTC' });
+
+const COLORS: Record<string, string> = { 'Section 232': '#0E2A47', 'Section 301': '#B3261E', 'Section 122': '#B7791F', IEEPA: '#6B4FA0', 'Trade deal': '#0F7B78', USMCA: '#2F7D32', 'EU rules': '#8A5A00' };
+const KIND: Record<string, { icon: string; label: string }> = {
+  start: { icon: '●', label: 'Takes effect' }, increase: { icon: '▲', label: 'Rate rises' }, decrease: { icon: '▼', label: 'Rate cut' },
+  end: { icon: '■', label: 'Ends' }, review: { icon: '↻', label: 'Review' }, refund: { icon: '$', label: 'Refunds' }, compliance: { icon: '✓', label: 'Compliance deadline' },
+};
+const rows = t.rows.filter((r) => r.date).map((r) => ({ ...r, d: days(r.date!), color: COLORS[r.authority ?? ''] ?? '#4A5B6E' }))
+  .sort((a, b) => a.date!.localeCompare(b.date!));
+const visual = rows.length > 0;
+const upcoming = rows.filter((r) => r.d >= 0);
+const past = rows.filter((r) => r.d < 0).reverse();
+const next = upcoming[0];
+const authorities = [...new Set(rows.map((r) => r.authority!))];
+
+// Timeline geometry
+const W = 1000, H = 150, PADL = 20, PADR = 20, AXIS = 96;
+const t0 = rows.length ? T(rows[0].date!) - 20 * DAY : 0;
+const t1 = rows.length ? T(rows[rows.length - 1].date!) + 45 * DAY : 1;
+const X = (ms: number) => PADL + ((ms - t0) / (t1 - t0)) * (W - PADL - PADR);
+const months: { x: number; label: string; year: boolean }[] = [];
+if (visual) {
+  const s = new Date(t0); let m = new Date(Date.UTC(s.getUTCFullYear(), s.getUTCMonth() + 1, 1));
+  while (m.valueOf() < t1) {
+    months.push({ x: X(m.valueOf()), label: m.getUTCMonth() === 0 ? `Jan ’${String(m.getUTCFullYear()).slice(2)}` : m.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }), year: m.getUTCMonth() === 0 });
+    m = new Date(Date.UTC(m.getUTCFullYear(), m.getUTCMonth() + 1, 1));
+  }
+}
+// Stack dots that fall within ~3% of each other.
+const placed: { x: number; lane: number }[] = [];
+const dots = rows.map((r) => {
+  const x = X(T(r.date!));
+  let lane = 0; while (placed.some((p) => Math.abs(p.x - x) < 26 && p.lane === lane)) lane++;
+  placed.push({ x, lane });
+  return { r, x, y: AXIS - 16 - lane * 22 };
+});
+const todayX = X(T(today));
+
+const LAYERS = [
+  { a: 'Section 232', name: 'Metals', rate: '50%', text: 'Most steel and aluminum articles, on full customs value since April 6, 2026. Copper and derivatives covered.', href: '/guides/section-232-tariffs-explained-steel-aluminum-copper-pharma-semiconductors-wood/' },
+  { a: 'Section 232', name: 'Patented pharmaceuticals', rate: '0–100%', text: 'Default 100%; 15% for the EU, Japan, South Korea and Switzerland; lower with company onshoring and pricing deals.', href: '/articles/2026-10-12-section-232-pharma-tariff-now-applies-all-importers/' },
+  { a: 'Section 232', name: 'Wood products', rate: '10–25%', text: 'About 10% on softwood lumber; 25% on cabinets, vanities and upholstered furniture, rising to 50% and 30% on Jan. 1.', href: '/articles/2026-10-09-wood-tariffs-kitchen-cabinets-vanities-50-percent-upholstered-furniture-january-2027/' },
+  { a: 'Section 301', name: 'Forced-labor action, 60 economies', rate: '10–12.5%', text: 'In effect since July 24, 2026. USMCA goods, Section 232 goods and U.S. manufacturing inputs are exempt.', href: '/articles/2026-10-12-section-301-forced-labor-tariffs-what-buyers-pay/' },
+  { a: 'Section 301', name: 'China, Lists 1–4A', rate: '7.5–25%', text: '178 product exclusions expire Nov. 10, 2026, with no extension notice found as of mid-October.', href: '/articles/2026-10-12-section-301-china-exclusions-expire-nov-10/' },
+];
 ---
 <Base title={t.title} description={t.description} section="trackers">
   <div class="page">
-    <div class="page-head narrow">
-      <div class="crumbs"><a href="/trackers/">Trackers</a>&ensp;/&ensp;Updated {t.updated}</div>
-      <h1>{t.title}</h1>
-      <p>{t.intro}</p>
-    </div>
-    <div class="prose" style="font-size:15px">
-      <table>
-        <thead><tr>{t.columns.map((c) => <th>{c}</th>)}<th>Source</th></tr></thead>
-        <tbody>
-          {t.rows.map((r) => (
-            <tr>{r.cells.map((c) => <td>{c}</td>)}<td>{r.source ? <a href={r.source} target="_blank" rel="noopener">Link</a> : '—'}</td></tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <p class="meta">Spot an error or a missing entry? Trackers are reviewed with every newsroom run.</p>
+    <nav class="crumbs tk-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/trackers/">Trackers</a> › {t.title}</nav>
+
+    {!visual ? (
+      <>
+        <div class="page-head narrow"><h1>{t.title}</h1><p>{t.intro}</p></div>
+        <div class="prose" style="font-size:15px">
+          <table>
+            <thead><tr>{t.columns.map((c) => <th>{c}</th>)}<th>Source</th></tr></thead>
+            <tbody>{t.rows.map((r) => <tr>{r.cells.map((c) => <td>{c}</td>)}<td>{r.source ? <a href={r.source} target="_blank" rel="noopener">Link</a> : '—'}</td></tr>)}</tbody>
+          </table>
+        </div>
+      </>
+    ) : (
+      <>
+        <header class="tk-hero">
+          <div class="tk-intro">
+            <span class="tk-kicker">Tracker · Updated {fmt(t.updated, { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+            <h1>{t.title}</h1>
+            <p>{t.intro}</p>
+            <div class="tk-stats">
+              <div><b>{upcoming.length}</b><span>upcoming deadlines</span></div>
+              <div><b>{rows.filter((r) => /^in effect/i.test(r.cells[3])).length}</b><span>actions in effect</span></div>
+              <div><b>{authorities.length}</b><span>legal authorities</span></div>
+            </div>
+          </div>
+          {next && (
+            <a class="tk-next" href={next.article ?? next.source} style={`--c:${next.color}`}>
+              <span class="tk-next-l">Next deadline</span>
+              <span class="tk-count"><b data-days={next.date}>{next.d}</b><span>{next.d === 1 ? 'day' : 'days'}</span></span>
+              <span class="tk-next-date">{fmt(next.date!, { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}</span>
+              <strong>{next.cells[1]}</strong>
+              <span class="tk-next-t">{next.cells[2]}</span>
+              <span class="tk-next-go">Read what to do →</span>
+            </a>
+          )}
+        </header>
+
+        <section class="tk-sec" aria-labelledby="tl-h">
+          <h2 id="tl-h" class="h-rule">The timeline</h2>
+          <div class="tk-legend">{authorities.map((a) => <span><i style={`background:${COLORS[a] ?? '#4A5B6E'}`}></i>{a}</span>)}</div>
+          <div class="tk-tl-wrap" data-today={(todayX / W).toFixed(3)}>
+            <svg class="tk-tl" viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Timeline of tariff and trade actions">
+              <line x1={PADL} x2={W - PADR} y1={AXIS} y2={AXIS} stroke="#C5D0DC" stroke-width="2" />
+              <rect x={PADL} y={AXIS - 3} width={Math.max(0, todayX - PADL)} height="6" fill="#0E2A47" opacity=".12" />
+              {months.map((m) => (
+                <g>
+                  <line x1={m.x} x2={m.x} y1={AXIS - 4} y2={AXIS + 4} stroke="#9FB0C2" />
+                  <text x={m.x} y={AXIS + 20} text-anchor="middle" class={m.year ? 'tk-ax tk-ax-y' : 'tk-ax'}>{m.label}</text>
+                </g>
+              ))}
+              <line x1={todayX} x2={todayX} y1="8" y2={AXIS + 30} stroke="#0F7B78" stroke-width="2" stroke-dasharray="4 3" />
+              <text x={todayX} y={AXIS + 44} text-anchor="middle" class="tk-today">Today</text>
+              {dots.map(({ r, x, y }) => (
+                <a href={`#e-${r.date}-${r.authority!.replace(/\W+/g, '')}`}>
+                  <line x1={x} x2={x} y1={y} y2={AXIS} stroke={r.color} stroke-width="1.5" opacity=".5" />
+                  <circle cx={x} cy={y} r={r.d >= 0 ? 9 : 7} fill={r.d >= 0 ? '#fff' : r.color} stroke={r.color} stroke-width="3"><title>{fmt(r.date!)}: {r.cells[1]}</title></circle>
+                </a>
+              ))}
+            </svg>
+          </div>
+          <p class="tk-hint">Hollow dots are upcoming; filled dots have already happened. Select a dot to jump to the details.</p>
+        </section>
+
+        {upcoming.length > 0 && (
+          <section class="tk-sec" aria-labelledby="up-h">
+            <h2 id="up-h" class="h-rule">Coming up</h2>
+            <div class="tk-up">
+              {upcoming.map((r) => (
+                <article class="tk-card" style={`--c:${r.color}`}>
+                  <div class="tk-card-top">
+                    <span class="tk-badge">{r.authority}</span>
+                    <span class="tk-kind">{KIND[r.kind!]?.icon} {KIND[r.kind!]?.label}</span>
+                  </div>
+                  <div class="tk-when"><b data-days={r.date}>{r.d}</b> days · {fmt(r.date!)}</div>
+                  <div class="tk-bar"><i style={`width:${Math.max(4, 100 - Math.min(100, (r.d / 120) * 100))}%`}></i></div>
+                  <h3>{r.cells[1]}</h3>
+                  <p>{r.cells[2]}</p>
+                  {r.affects && <div class="tk-chips">{r.affects.map((a) => <span>{a}</span>)}</div>}
+                  <div class="tk-links">
+                    {r.article && <a href={r.article}>Our analysis →</a>}
+                    {r.source && <a href={r.source} target="_blank" rel="noopener">Official or legal source ↗</a>}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <section class="tk-sec" aria-labelledby="layers-h">
+          <h2 id="layers-h" class="h-rule">The tariff layers in force now<a class="view-all" href="/guides/us-tariffs-explained-procurement/">How U.S. tariffs work</a></h2>
+          <div class="tk-layers">
+            {LAYERS.map((l) => (
+              <a class="tk-layer" href={l.href} style={`--c:${COLORS[l.a]}`}>
+                <span class="tk-badge">{l.a}</span>
+                <b>{l.rate}</b>
+                <strong>{l.name}</strong>
+                <span>{l.text}</span>
+              </a>
+            ))}
+          </div>
+          <p class="tk-hint">Rates stack in different ways and exemptions vary by product and origin. Confirm the rate for each entry with your customs broker.</p>
+        </section>
+
+        <AdMesh variant="leader" placement="tracker" />
+
+        <section class="tk-sec" aria-labelledby="all-h">
+          <h2 id="all-h" class="h-rule">Every date, newest first</h2>
+          <div class="tk-filter" role="group" aria-label="Filter">
+            <button type="button" class="cpf on" data-f="all">All ({rows.length})</button>
+            <button type="button" class="cpf" data-f="up">Upcoming ({upcoming.length})</button>
+            <button type="button" class="cpf" data-f="past">Already happened ({past.length})</button>
+            {authorities.map((a) => <button type="button" class="cpf" data-f={`a:${a}`}><i style={`background:${COLORS[a] ?? '#4A5B6E'}`}></i>{a}</button>)}
+          </div>
+          <ol class="tk-list">
+            {[...upcoming].reverse().concat(past).map((r) => (
+              <li class="tk-item" id={`e-${r.date}-${r.authority!.replace(/\W+/g, '')}`} data-a={r.authority} data-up={r.d >= 0 ? 'y' : 'n'} style={`--c:${r.color}`}>
+                <div class="tk-date">
+                  <span class="tk-m">{fmt(r.date!, { month: 'short' })}</span>
+                  <span class="tk-d">{fmt(r.date!, { day: 'numeric' })}</span>
+                  <span class="tk-y">{r.date!.slice(0, 4)}</span>
+                </div>
+                <div class="tk-body">
+                  <div class="tk-card-top">
+                    <span class="tk-badge">{r.authority}</span>
+                    <span class={`tk-status ${r.d >= 0 ? 's-up' : /^(in effect|open)/i.test(r.cells[3]) ? 's-on' : 's-off'}`}>{r.cells[3]}</span>
+                  </div>
+                  <h3>{r.cells[1]}</h3>
+                  <p>{r.cells[2]}</p>
+                  <div class="tk-links">
+                    {r.article && <a href={r.article}>Our analysis →</a>}
+                    {r.source && <a href={r.source} target="_blank" rel="noopener">Source ↗</a>}
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <p class="tk-foot">We update this tracker with every newsroom run. Spot an error or a missing date? Tell us through our <a href="/editorial-standards/">editorial standards</a> page. Key dates also appear in the bar under the menu on every page.</p>
+      </>
+    )}
   </div>
 </Base>
+
+<script is:inline>
+  (() => {
+    const now = new Date(); now.setHours(0, 0, 0, 0);
+    document.querySelectorAll('[data-days]').forEach((el) => {
+      const n = Math.round((new Date(el.dataset.days + 'T00:00:00') - now) / 864e5);
+      if (n >= 0) el.textContent = n;
+    });
+    const wrap = document.querySelector('.tk-tl-wrap');
+    if (wrap && wrap.scrollWidth > wrap.clientWidth) wrap.scrollLeft = wrap.scrollWidth * +wrap.dataset.today - wrap.clientWidth * 0.6;
+    const items = [...document.querySelectorAll('.tk-item')];
+    const f = document.querySelector('.tk-filter'); if (!f) return;
+    f.addEventListener('click', (e) => {
+      const b = e.target.closest('.cpf'); if (!b) return;
+      f.querySelectorAll('.cpf').forEach((x) => x.classList.toggle('on', x === b));
+      const v = b.dataset.f;
+      items.forEach((el) => {
+        el.hidden = !(v === 'all' || (v === 'up' && el.dataset.up === 'y') || (v === 'past' && el.dataset.up === 'n') || (v.startsWith('a:') && el.dataset.a === v.slice(2)));
+      });
+    });
+  })();
+</script>
+
+<style>
+  .tk-crumbs { margin: 6px 0 10px; }
+  .tk-hero { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 28px; align-items: stretch; padding-bottom: 8px; }
+  .tk-kicker { font: 600 13px var(--ui); color: var(--teal); }
+  .tk-intro h1 { font: 700 44px/1.08 var(--head); color: var(--ink); margin: 8px 0 12px; }
+  .tk-intro p { font: 18px/1.5 var(--head); color: var(--ink-2); margin: 0 0 18px; }
+  .tk-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .tk-stats div { border: 1px solid var(--rule); border-top: 3px solid var(--navy); padding: 10px 12px; }
+  .tk-stats b { display: block; font: 700 28px/1 var(--head); color: var(--ink); }
+  .tk-stats span { font: 13px var(--ui); color: var(--muted); }
+  .tk-next { display: flex; flex-direction: column; gap: 6px; background: var(--navy); color: #fff; padding: 22px 24px; text-decoration: none; border-top: 5px solid var(--c); position: relative; overflow: hidden; }
+  .tk-next::after { content: ''; position: absolute; right: -50px; top: -50px; width: 170px; height: 170px; border-radius: 50%; border: 22px solid rgba(255,255,255,.06); }
+  .tk-next-l { font: 600 13px var(--ui); color: #8fd3cf; }
+  .tk-count { display: flex; align-items: baseline; gap: 8px; }
+  .tk-count b { font: 700 72px/1 var(--head); }
+  .tk-count span { font: 600 18px var(--ui); color: #c8d4e1; }
+  .tk-next-date { font: 600 14px var(--ui); color: #c8d4e1; }
+  .tk-next strong { font: 700 22px/1.25 var(--head); margin-top: 6px; }
+  .tk-next-t { font: 15px/1.5 var(--ui); color: #dfe7ef; }
+  .tk-next-go { margin-top: auto; padding-top: 10px; font: 600 14px var(--ui); color: #8fd3cf; }
+  .tk-next:hover .tk-next-go { text-decoration: underline; }
+  .tk-sec { margin-top: 44px; }
+  .tk-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font: 13px var(--ui); color: var(--ink-2); margin: 12px 0 6px; }
+  .tk-legend i, .tk-filter i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+  .tk-tl-wrap { overflow-x: auto; border: 1px solid var(--rule); background: #fff; padding: 6px 4px 0; }
+  .tk-tl { display: block; width: 100%; min-width: 760px; height: auto; }
+  .tk-tl circle { cursor: pointer; transition: r .15s; }
+  .tk-tl a:hover circle { stroke-width: 5; }
+  .tk-ax { font: 11px var(--ui); fill: #6b7c8f; }
+  .tk-ax-y { font-weight: 700; fill: var(--ink); }
+  .tk-today { font: 700 11px var(--ui); fill: var(--teal); }
+  .tk-hint { font: 13px/1.5 var(--ui); color: var(--muted); margin: 8px 0 22px; }
+  .tk-up { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 16px; margin-top: 14px; }
+  .tk-card { display: flex; flex-direction: column; gap: 8px; background: #fff; border: 1px solid var(--rule); border-top: 4px solid var(--c); padding: 16px 18px; }
+  .tk-card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .tk-badge { font: 600 11.5px/1 var(--ui); color: #fff; background: var(--c); padding: 5px 7px; }
+  .tk-kind { font: 600 12.5px var(--ui); color: var(--c); }
+  .tk-when { font: 600 13.5px var(--ui); color: var(--ink-2); }
+  .tk-when b { font: 700 26px/1 var(--head); color: var(--ink); margin-right: 2px; }
+  .tk-bar { height: 5px; background: var(--rule); }
+  .tk-bar i { display: block; height: 100%; background: var(--c); }
+  .tk-card h3, .tk-item h3 { font: 700 18px/1.3 var(--head); color: var(--ink); margin: 2px 0 0; }
+  .tk-card p, .tk-item p { font: 15px/1.5 var(--ui); color: var(--ink-2); margin: 0; }
+  .tk-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+  .tk-chips span { font: 600 12px var(--ui); color: var(--ink); background: var(--navy-tint); padding: 4px 7px; }
+  .tk-links { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: auto; padding-top: 6px; }
+  .tk-links a { font: 600 13.5px var(--ui); color: var(--link); text-decoration: none; }
+  .tk-links a:hover { text-decoration: underline; }
+  .tk-layers { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: 14px; }
+  .tk-layer { display: flex; flex-direction: column; gap: 6px; border: 1px solid var(--rule); border-left: 4px solid var(--c); padding: 14px; text-decoration: none; color: var(--ink); background: #fff; }
+  .tk-layer:hover { box-shadow: 0 8px 20px rgba(14,42,71,.1); }
+  .tk-layer .tk-badge { align-self: flex-start; }
+  .tk-layer b { font: 700 30px/1 var(--head); color: var(--c); margin-top: 4px; }
+  .tk-layer strong { font: 700 15px/1.3 var(--ui); }
+  .tk-layer span:last-child { font: 13.5px/1.45 var(--ui); color: var(--ink-2); }
+  .tk-filter { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 6px; }
+  .cpf { font: 600 13px/1 var(--ui); padding: 8px 11px; border: 1px solid #b9c7d5; background: #fff; color: var(--ink); cursor: pointer; }
+  .cpf:hover { border-color: var(--ink); }
+  .cpf.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .tk-list { list-style: none; margin: 10px 0 0; padding: 0; position: relative; }
+  .tk-list::before { content: ''; position: absolute; left: 39px; top: 8px; bottom: 8px; width: 2px; background: var(--rule); }
+  .tk-item { display: grid; grid-template-columns: 80px minmax(0, 1fr); gap: 18px; padding: 12px 0; scroll-margin-top: 80px; }
+  .tk-item[hidden] { display: none; }
+  .tk-item:target .tk-body { box-shadow: 0 0 0 3px var(--c); }
+  .tk-date { position: relative; z-index: 1; align-self: start; display: flex; flex-direction: column; align-items: center; background: #fff; border: 2px solid var(--c); padding: 6px 0 7px; }
+  .tk-m { font: 700 11.5px/1 var(--ui); color: var(--c); text-transform: uppercase; letter-spacing: .04em; }
+  .tk-d { font: 700 26px/1.05 var(--head); color: var(--ink); }
+  .tk-y { font: 11px/1 var(--ui); color: var(--muted); }
+  .tk-body { display: flex; flex-direction: column; gap: 6px; background: #fff; border: 1px solid var(--rule); padding: 14px 16px; }
+  .tk-status { font: 600 12px/1 var(--ui); padding: 5px 8px; }
+  .s-up { background: #fff4dc; color: #8a5a00; }
+  .s-on { background: #e3f4f1; color: #0b6b5f; }
+  .s-off { background: var(--navy-tint); color: var(--ink-2); }
+  .tk-foot { font: 13.5px/1.5 var(--ui); color: var(--muted); margin: 30px 0 10px; }
+  .tk-foot a { color: var(--link); }
+  @media (max-width: 1080px) { .tk-layers { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (max-width: 860px) {
+    .tk-hero { grid-template-columns: 1fr; }
+    .tk-intro h1 { font-size: 34px; }
+    .tk-layers { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 560px) {
+    .tk-layers { grid-template-columns: 1fr; }
+    .tk-item { grid-template-columns: 62px minmax(0, 1fr); gap: 12px; }
+    .tk-list::before { left: 30px; }
+    .tk-count b { font-size: 56px; }
+  }
+</style>
