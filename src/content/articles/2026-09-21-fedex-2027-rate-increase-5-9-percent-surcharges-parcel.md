@@ -2,6 +2,7 @@
 title: "FedEx sets a 5.9% average rate increase for 2027, its fourth in a row, with higher residential and handling surcharges"
 dek: "Standard U.S. package rates rise an average of 5.9% on Jan. 4, 2027. Some services rise more than the average, residential and delivery-area fees go up, and new paper-document fees arrive. UPS hadn't announced its 2027 increase as of Sept. 21."
 date: 2026-09-21
+updated: 2026-10-14
 topic: logistics
 type: news
 signal: 3
@@ -30,6 +31,10 @@ faqs:
     a: "An average of 5.9% on standard U.S. package rates, including import and export, effective Jan. 4, 2027. It matches FedEx's increases in 2024, 2025 and 2026."
   - q: "Does the 5.9% apply evenly to every service?"
     a: "No. Analysis by Loop found First Overnight up 6.01%, 2Day A.M. 6.65%, Standard Overnight 5.16%, Express Saver 3.09% and FedEx Ground 1\u20135 lb packages 6.49%."
+  - q: "How much will FedEx raise rates in 2027?"
+    a: "FedEx will raise standard U.S. package rates by an average of 5.9% effective Jan. 4, 2027, with many surcharges rising the same day. Several surcharges rise faster than the average, including weight-based additional handling at 7.6%."
+  - q: "How much have FedEx rates risen since 2023?"
+    a: "FedEx has applied a 5.9% average increase four years in a row, for 2024 through 2027. Compounded, that is about 26% above 2023 list rates, by our calculation, before surcharges and discounts."
 ---
 
 ## Why it matters
@@ -82,6 +87,20 @@ The table below shows how the same 5.9% headline lands differently depending on 
 | B2B, commercial addresses, mixed express | Overnight and 2Day rates | Near the headline |
 | Heavy or oversized items | Handling and oversize surcharges | Above the headline |
 | Transit-tolerant, using Express Saver | Express Saver rate | Below the headline |
+
+## A worked example: residential surcharges alone
+
+Take a shipper sending 10,000 residential Ground packages a month, with 30% going to delivery-area ZIP codes. The residential delivery surcharge rises 40 cents, from $6.95 to $7.35, which adds $48,000 a year. The residential delivery-area surcharge also rises 40 cents, from $6.60 to $7.00, adding $14,400 a year on the 3,000 monthly packages it applies to. That is about $62,400 a year from two surcharges before any change in base rates. These are our calculations using list surcharges; your contract discounts change the totals.
+
+## Where to focus the negotiation
+
+1. **Surcharges you pay most.** Rank surcharges by your annual spend on each; the top three are usually worth more than an extra point of base discount.
+2. **Dimensional weight divisor.** A higher divisor lowers billed weight on light, bulky parcels.
+3. **Minimum charge.** Discounts often don't apply below a minimum, which matters for light packages.
+4. **Earned discounts and tiers.** Check whether your volume tiers still fit after any shift in your mix.
+5. **Service mapping.** Confirm transit-tolerant volume is on the cheapest service that meets your commitments.
+
+This is our guidance. Our [parcel and LTL contract guide](/guides/parcel-ltl-contract-negotiation-guide/) covers each in more detail.
 
 ## What procurement teams should do
 

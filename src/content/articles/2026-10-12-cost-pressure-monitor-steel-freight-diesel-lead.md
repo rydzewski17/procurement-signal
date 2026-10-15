@@ -37,6 +37,10 @@ faqs:
     a: "It reads monthly U.S. producer price indexes for 12 categories and labels each rising fast, rising, stable or easing, based mainly on the annualized three-month pace of change."
   - q: "Where can I see the price trend for each category?"
     a: "Each category in the Cost Pressure Monitor has its own page with 25 months of producer price history, the current label and our read on what it means for contracts."
+  - q: "Which producer price index should I use for steel escalation clauses?"
+    a: "Our Cost Pressure Monitor uses the BLS producer price index for steel mill products, series WPU1017 on FRED. For parts made from a specific grade, a market price for that grade may track cost more closely."
+  - q: "How should an index-linked price clause handle a supplier's labor and overhead?"
+    a: "Only the material share of the price should move with a material index. Labor, overhead and margin have different drivers and are usually handled with a separate index or a fixed annual review."
 ---
 
 ## Why it matters
@@ -86,6 +90,41 @@ The three-month annualized pace tells you where prices are heading now; the 12-m
 - **High 12-month change, now falling** (aluminum, chemicals, resins): your contract may be priced near the top. This is the moment to re-quote.
 - **Low 12-month change, accelerating** (corrugated): increases are coming. Lock terms before the next reset.
 - **Falling on both measures** (semiconductors): ask suppliers to share the decline, but check landed cost after duties.
+
+## Which index to write into a contract
+
+Each category in the monitor is built on a public U.S. producer price index series that anyone can look up on FRED. These are the series IDs. They are commonly used as the reference in escalation and de-escalation clauses because they are published monthly by the Bureau of Labor Statistics and are hard for either side to dispute:
+
+| Category | BLS series ID |
+|---|---|
+| Steel mill products | WPU1017 |
+| Aluminum mill shapes | WPU102501 |
+| Copper and brass mill shapes | WPU102502 |
+| Plastic resins and materials | WPU066 |
+| Industrial chemicals | WPU061 |
+| No. 2 diesel fuel | WPU057303 |
+| Deep-sea freight | PCU483111483111 |
+| Truck transportation | PCU484484 |
+| Semiconductors and related devices | PCU334413334413 |
+| Electrical machinery and equipment | WPU117 |
+| Lumber | WPU081 |
+| Converted paper and paperboard | WPU0915 |
+
+A broad producer index won't match every specification. For a part where one material dominates cost, a market price for that grade may track better. For mixed-material parts, a weighted basket of two or three indexes often works.
+
+## What a sound index clause covers
+
+- **The index and the month.** Name the series ID and which month's value applies, since producer price data is revised for several months after release.
+- **The share of price that moves.** Only the material share of the price should float; labor and overhead have their own drivers.
+- **A trigger band.** For example, adjust only when the index moves more than 3% from the base.
+- **Both directions.** Prices go down when the index falls, on the same formula.
+- **Timing.** How often prices reset, and how much notice each side gets.
+
+These are our suggestions, not legal advice. Have your legal team review clause wording.
+
+## A worked example
+
+Suppose a fabricated steel part costs $100, of which $40 is steel. If the steel index rises 23.4%, as it did over the 12 months to August, an index clause that floats only the steel share would raise the price by $9.36, to $109.36. A supplier asking for a flat 23% increase on the whole part would be asking for $23. These are our calculations; the gap is why procurement teams ask suppliers to show the material share of their price.
 
 ## What procurement teams should do
 

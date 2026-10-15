@@ -32,6 +32,10 @@ faqs:
     a: "Verify carriers and brokers before and after tender, confirm any change of delivery address through a known contact, restrict who can change routing, and require brokers to disclose the carrier actually hauling the load."
   - q: "How are freight fraud schemes changing?"
     a: "Security experts say cargo theft has shifted from physical break-ins to deception: stolen identities, double brokering, fake pickups and cyber-enabled schemes that identify valuable loads before pickup."
+  - q: "What is double brokering?"
+    a: "Double brokering is when a broker or carrier accepts a load and passes it to another carrier without the shipper's knowledge or consent. Fraudsters use it to take payment and disappear, or to steal the freight."
+  - q: "How can shippers prevent fraudulent load diversions?"
+    a: "Require any change to pickup, delivery or routing to be confirmed through a known contact at the booked broker or carrier, called back on a number already on file, and tell drivers that diversions need written confirmation."
 ---
 
 ## Why it matters
@@ -55,6 +59,30 @@ Chuck Forsaith of the Pharmaceutical Cargo Security Coalition said pharmaceutica
 | Before pickup | Spoofed emails or calls changing pickup details | Confirm changes through a known contact, never the incoming message |
 | In transit | Calls to the driver ordering a "transfer" or diversion | Drivers told that diversions require written confirmation from a named contact |
 | Delivery and payment | Fake invoices or changed bank details | Verify bank changes by phone with a known contact; dual approval |
+
+## A verification checklist for the shipping dock
+
+| Moment | Check |
+|---|---|
+| Booking | Carrier name, authority and insurance match the broker's confirmation |
+| Arrival at pickup | Driver ID, truck and trailer numbers match what the carrier gave you |
+| Before loading | The carrier's dispatcher confirms the driver by phone, using a number on file |
+| Any change after pickup | Confirmed in writing by a named contact at the booked broker, called back on a known number |
+| Delivery | Seal numbers and piece counts match the bill of lading |
+
+This checklist is our suggestion. Share it with shipping teams and your brokers so everyone applies the same rules.
+
+## What to put in broker contracts
+
+- **No re-brokering** without written consent, with the hauling carrier disclosed on every load.
+- **Carrier vetting standards** the broker must apply, including identity checks beyond authority numbers.
+- **Liability and insurance** that clearly covers theft by fraud, not only physical theft.
+- **Incident notice** within a set number of hours and cooperation with law enforcement.
+- **Audit rights** over the broker's carrier records for your loads.
+
+## Check your insurance
+
+Cargo policies and carrier liability terms don't always cover losses where a shipper or broker was tricked into releasing freight. Ask your risk team and insurer how a fraudulent pickup or diversion would be treated, and whether your broker's contingent cargo coverage applies.
 
 ## What procurement teams should do
 

@@ -38,6 +38,10 @@ faqs:
     a: "It directs the department to remove accounting, audit and compliance barriers, including moving from Cost Accounting Standards toward generally accepted accounting principles, to make it easier for commercial companies to supply defense programs."
   - q: "How much will SM-6 production increase?"
     a: "Annual SM-6 production is set to rise above 500 interceptors under the multi-year contract, part of framework agreements calling for munitions output two to four times existing rates."
+  - q: "How large are Raytheon's 2026 missile contracts?"
+    a: "By our tally of announced awards, about $75 billion in 2026, including up to $24.4 billion for SM-6, $22.9 billion for Tomahawk, $20.7 billion for AMRAAM and $6.3 billion for SM-3 Block IB. Several are ceilings and span multiple years."
+  - q: "Can defense orders take priority over commercial orders at shared suppliers?"
+    a: "Yes. Orders rated under the Defense Priorities and Allocations System must be accepted and performed ahead of unrated orders, which can push commercial orders back at suppliers serving both markets."
 ---
 
 ## Why it matters
@@ -59,6 +63,14 @@ Other awards this year point to the same supplier pressure. In August, the Missi
 
 Raytheon says it has grown its workforce, built partnerships across the defense industrial base and automated production. "SM-6's multi-mission capability is vital to our customer, and Raytheon is intensely focused on meeting the demand," Raytheon President Phil Jasper said. The company did not name suppliers or provide current production rates. RTX reported 2025 sales above $88 billion and has more than 180,000 employees.
 
+## The scale of this year's missile awards
+
+Adding the awards named above, Raytheon has received about $75 billion of missile production contracts in 2026: up to $24.4 billion for SM-6, $22.9 billion for Tomahawk, $20.7 billion for AMRAAM, $6.3 billion for SM-3 Block IB and $745 million for SM-3 Block IIA. That is our tally of the announced values, several of which are ceilings rather than guaranteed orders, and it runs over multiple years. For comparison, RTX reported total 2025 sales above $88 billion across all its businesses.
+
+## How a production ramp travels down the supply chain
+
+A prime contractor raising output two to four times needs every tier beneath it to do the same. The first tier, which makes major assemblies, usually gets advance notice and investment support. The bottlenecks tend to appear two or three tiers down, at castings, forgings, circuit boards, connectors and specialty materials, where suppliers are smaller, serve many industries and can't add capacity quickly. Multi-year contracts help because they give those suppliers enough certainty to invest, but new capacity still takes one to two years to come online. In the meantime, suppliers allocate what they have, and defense programs with priority ratings under the Defense Priorities and Allocations System can move ahead of commercial orders.
+
 ## Where the demand flows
 
 Missile production draws on suppliers that also serve commercial aerospace, automotive, electronics and industrial customers. Our read on where the overlap is likely to show up:
@@ -78,6 +90,14 @@ Raytheon has not named suppliers, so this is our assessment of exposure, not rep
 - **If you share suppliers with defense programs:** Ask key suppliers of electronics, castings, forgings and specialty metals whether defense demand will affect your lead times or allocations in 2027.
 - **Watch the compliance shift.** Lower accounting barriers may bring new commercial suppliers into defense, which can loosen some constrained categories over time.
 - **Build allocation clauses.** In constrained categories, secure priority and allocation terms now rather than during a shortage.
+
+## Questions to ask suppliers you share with defense programs
+
+1. What share of your capacity serves defense programs today, and how will that change in 2027?
+2. Do you receive rated orders that take priority over commercial work?
+3. Which of your inputs, such as castings, forgings or electronic components, are already on allocation?
+4. Are you investing in new capacity, and when will it be qualified?
+5. Will you commit to allocation or lead-time terms for our parts?
 
 ## What to watch next
 

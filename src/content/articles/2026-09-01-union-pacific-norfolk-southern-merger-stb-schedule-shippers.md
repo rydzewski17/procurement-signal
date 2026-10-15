@@ -2,6 +2,7 @@
 title: "Union Pacific\u2013Norfolk Southern merger moves to a full STB review: the dates rail shippers need to know"
 dek: "The Surface Transportation Board started its merits review of the proposed transcontinental railroad. Comments and requests for conditions are due Nov. 18, final briefs in May 2027, and a decision up to 90 days after the record closes."
 date: 2026-09-01
+updated: 2026-10-14
 topic: logistics
 type: analysis
 signal: 3
@@ -32,6 +33,10 @@ faqs:
     a: "Final briefs are due May 28, 2027. The Board will issue its final decision within 90 days after it closes the record, so a decision is likely in mid-to-late 2027."
   - q: "Can shippers comment on the UP\u2013NS merger?"
     a: "Yes. Comments, protests, requests for conditions and opposition are due Nov. 18, 2026. Notices of intent to participate were due Sept. 30."
+  - q: "When is the deadline for shippers to comment on the Union Pacific\u2013Norfolk Southern merger?"
+    a: "Comments, protests and requests for conditions are due at the Surface Transportation Board by Nov. 18, 2026. Responses and rebuttals follow on Feb. 16, 2027, and final briefs are due May 28, 2027."
+  - q: "When will the STB decide on the Union Pacific\u2013Norfolk Southern merger?"
+    a: "Under the schedule adopted on Aug. 18, final briefs are due May 28, 2027, and the Board will issue a final decision within 90 days after the record closes."
 ---
 
 ## Why it matters
@@ -72,6 +77,29 @@ The Board extended the notice-of-intent deadline at the National League of Citie
 **A related decision.** The Board declined the railroads' request to speed up a separate proceeding on divesting control of the Terminal Railroad Association of St. Louis, which handles interchange traffic at one of the country's key rail gateways. Shippers that route through St. Louis should watch that proceeding alongside the merger itself.
 
 **Why the schedule matters for contracts.** A final decision isn't expected until well into 2027, and integration would follow. Rail contracts signed for 2027 and 2028 should anticipate the possibility of a combined railroad, with terms covering service levels, routing and assignment if the deal is approved.
+
+## How to map your rail exposure
+
+Before deciding whether to file, procurement and logistics teams need a lane-by-lane view. A simple table is enough to start:
+
+| Field | Why it matters |
+|---|---|
+| Origin and destination | Shows whether the move touches UP, NS or both |
+| Railroads serving each end | Identifies captive locations served by only one railroad |
+| Interchange point | Lanes that interchange between UP and NS today would become single-line |
+| Annual carloads and spend | Sizes the exposure for internal decisions and any filing |
+| Contract expiry | Shows which rates renew during the review or integration |
+| Truck or intermodal alternative | Tells you how much leverage you have if service slips |
+
+**Who gains and who could lose.** Lanes that interchange between UP and NS today could benefit from single-line service, with fewer handoffs and potentially faster transit. Shippers whose competitive options depend on another railroad interchanging with UP or NS have the most to watch, because a combined railroad may prefer to keep traffic on its own network. This is our general read of how end-to-end rail mergers affect shippers, not a judgment on this deal.
+
+## Contract terms to review now
+
+- **Assignment and change of control.** Whether your contract transfers to the combined company unchanged.
+- **Service metrics.** Transit time, car order fulfillment and dwell, with remedies if they slip during integration.
+- **Rate protection.** How long current rates hold and how increases are calculated.
+- **Routing.** Whether the railroad can change routings or gateways without your agreement.
+- **Exit rights.** Whether you can terminate if service falls below agreed levels.
 
 ## What to put in a request for conditions
 

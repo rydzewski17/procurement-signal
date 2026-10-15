@@ -36,6 +36,10 @@ faqs:
     a: "Confirm which items depend on central Mexico supply in those months, ask suppliers for their alternate growing regions and capacity, and build summer pricing and food-safety testing terms into next year's contracts."
   - q: "How large was the 2026 Cyclospora lettuce outbreak?"
     a: "The FDA counted 12,883 laboratory-confirmed illnesses, 570 hospitalizations and two deaths in 21 states, with illnesses from June 22 to Aug. 17. It closed its investigation on Oct. 2."
+  - q: "Why is Taylor Farms pausing central Mexico lettuce?"
+    a: "After a 2026 cyclosporiasis outbreak linked to shredded iceberg lettuce from Taylor Farms de Mexico, the company said it will indefinitely suspend harvesting and processing lettuce there for the U.S. and Canada from May 1 to Aug. 31, the CDC's Cyclospora season."
+  - q: "How large was the 2026 Cyclospora outbreak linked to lettuce?"
+    a: "The FDA's final update on Oct. 2 counted 12,883 laboratory-confirmed illnesses, 570 hospitalizations and two deaths across 21 states."
 ---
 
 ## Why it matters
@@ -60,6 +64,24 @@ Beyond the seasonal pause, Taylor says it will:
 - Increase irrigation water and crop testing
 - Invest in research on detecting and preventing Cyclospora
 - Join a public-private task force with the FDA, scientists and industry on prevention measures for growers
+
+## Timeline
+
+| Date | Event |
+|---|---|
+| June 22, 2026 | First illnesses begin |
+| July 17 | Taylor removes central Mexico iceberg from the U.S. market; Taco Bell stops using it |
+| July 18–19 | A positive product sample is reported, then ruled a false positive |
+| Sept. 11 | CDC declares the outbreak over |
+| Oct. 2 | FDA closes its investigation; 12,883 confirmed illnesses, 570 hospitalizations, two deaths |
+| Oct. 8 | Taylor announces the indefinite seasonal pause |
+| May 1–Aug. 31, 2027 | First season without central Mexico lettuce from Taylor for the U.S. and Canada |
+
+**The scale.** About 4.4% of confirmed cases were hospitalized, by our calculation from the FDA's figures, and laboratory-confirmed counts typically understate total illnesses because many people never get tested. For a food business, an outbreak at this scale brings recall costs, lost sales and legal exposure well beyond the cost of the product itself, which is why food-safety terms in produce contracts deserve the same attention as price.
+
+## Planning around a known seasonal gap
+
+A planned gap is easier to manage than a surprise one, but only if contracts reflect it. For summer 2027, procurement teams buying iceberg lettuce, directly or through distributors, should agree the following before annual produce contracts are set: which growing regions will supply May through August, at what volume, with what quality specification, and how freight from more distant regions will be priced. If your menu or product depends on a specific cut or blend, check whether alternate regions can supply it at the same yield.
 
 ## What procurement teams should do
 

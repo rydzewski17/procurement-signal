@@ -34,6 +34,10 @@ faqs:
     a: "Not yet. The administration opened a Section 232 inquiry into medical devices and equipment in September 2025, but as of BD's announcement no device-specific tariffs had been set."
   - q: "What does BD's deal mean for hospital procurement?"
     a: "BD products are positioned for relief from future Section 232 tariffs if BD hits undisclosed milestones. Health systems should ask other medtech suppliers whether they are pursuing similar agreements and how tariffs would be passed through."
+  - q: "What did BD agree with the U.S. government?"
+    a: "BD will invest $19 billion in the U.S. over several years, including $3 billion to expand strategic production sites, raise U.S. output by about 5 billion consumables a year and use American-made steel for U.S. needles. In return, its products get relief from future Section 232 device tariffs, subject to milestones."
+  - q: "Are there Section 232 tariffs on medical devices?"
+    a: "Not yet. The investigation began in September 2025, and no device-specific rates or covered products had been announced as of October 2026."
 ---
 
 ## Why it matters
@@ -61,6 +65,29 @@ BD's U.S. network includes sites in Columbus and Broken Bow, Nebraska; Canaan, C
 **How the relief works.** Relief applies to covered BD products and inputs and depends on the final scope of any future Section 232 action and on BD meeting agreed milestones, according to the company's release. That means the value of the deal to BD, and to its customers, can't be calculated until the government sets device tariffs.
 
 **Track record.** BD points to its history in U.S. health care, including developing the first disposable syringe and delivering more than two billion additional devices during the pandemic.
+
+## How supplier-specific relief changes a bid evaluation
+
+When one supplier has tariff relief and another doesn't, the lowest quote may not be the lowest landed cost. Take two suppliers of the same consumable:
+
+| | Supplier A (U.S.-made, with relief) | Supplier B (imported) |
+|---|---|---|
+| Quoted price per case | $100 | $90 |
+| Landed cost with no device tariff | $100 | $90 |
+| Landed cost at a 10% tariff | $100 | $99 |
+| Landed cost at a 25% tariff | $100 | $112.50 |
+
+The tariff rates are hypothetical; no device rates have been set. By our calculation, Supplier B stays cheaper only while the tariff is below about 11%. Above that, the relief agreement is worth more than the 10% price gap. Health system teams awarding 2027 contracts can model this now and write award terms that let them shift volume if tariffs are announced mid-contract.
+
+## Where the device investigation stands
+
+| Date | Step |
+|---|---|
+| September 2025 | Section 232 investigation into medical equipment and device imports begins |
+| Oct. 6, 2026 | BD announces its partnership and conditional relief |
+| Not yet set | Final device tariff rates and covered products |
+
+Until rates are set, relief agreements like BD's are a promise about future cost, not a current saving.
 
 ## What it means by category
 

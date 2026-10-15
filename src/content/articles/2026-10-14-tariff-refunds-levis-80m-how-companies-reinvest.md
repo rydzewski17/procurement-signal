@@ -38,6 +38,10 @@ faqs:
     a: "Usually trade compliance and finance, with procurement supplying the entry, supplier and pass-through data. Procurement should also check whether suppliers who raised prices for those tariffs owe credits."
   - q: "Can procurement recover tariff surcharges from suppliers after the IEEPA refunds?"
     a: "Possibly. If a supplier was the importer of record, passed the duty to you as a surcharge and now receives a refund, ask for a credit, especially where your contract requires duty savings to be passed back. Results depend on contract terms."
+  - q: "How much did Levi's receive in tariff refunds?"
+    a: "About $80 million, recorded in its most recent quarter, CFO Harmit Singh said on the Oct. 7 earnings call. Levi's plans to reinvest about $60 million, including about $20 million in distribution and logistics."
+  - q: "Can customers recover tariff surcharges from suppliers that received IEEPA refunds?"
+    a: "Only the importer of record can claim the refund from CBP. Customers who paid separately itemized tariff surcharges to a supplier that was the importer may have a case for a credit, depending on the contract terms."
 ---
 
 ## Why it matters
@@ -62,6 +66,10 @@ Other companies are using refunds differently. McCormick received about $28 mill
 
 **What Levi's is buying.** Most of Levi's supply chain reinvestment falls in the current quarter. The company frames the refund as a chance to strengthen distribution and logistics while keeping its margin targets, rather than as a windfall to pass through to price.
 
+## The refunds in context
+
+By our calculation from White and Williams' figures, the $166 billion in IEEPA duties averages about $500,000 per importer and a little over $3,000 per entry, though the amounts are highly concentrated among large importers. Levi's $80 million and the other disclosed amounts are a small share of the total, which suggests many more refunds will appear in company results over the coming quarters as claims are processed.
+
 ## Three ways companies are using refunds
 
 | Approach | Example | What it means for procurement |
@@ -80,6 +88,10 @@ Many suppliers passed tariff costs to customers through surcharges or price incr
 4. Negotiate credits or price reductions where surcharges were separately itemized.
 
 Where your own company was the importer of record, work with finance and your customs broker to confirm refund claims are filed for every eligible entry.
+
+## A worked example: what a supplier might owe you
+
+Suppose a supplier added a 10% tariff surcharge to $2 million of your 2025 purchases, citing the IEEPA duties, and was the importer of record. That surcharge cost you $200,000. If the supplier now receives a refund of the duties it paid on those goods, you have a reasonable case for a credit. The size of the case depends on how the surcharge was documented: a separate line item tied to specific duties is far easier to claim than a general price increase. These figures are illustrative. Talk to legal before making a formal claim, and check whether your contract addresses duty refunds.
 
 ## What procurement teams should do
 

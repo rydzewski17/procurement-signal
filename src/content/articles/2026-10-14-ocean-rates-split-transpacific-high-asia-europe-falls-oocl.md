@@ -34,6 +34,10 @@ faqs:
     a: "On lanes where spot rates are falling, forwarders report better long-term deals. On the trans-Pacific, weigh a shorter term or index-linked pricing rather than locking in today's elevated levels for a full year."
   - q: "How much more are carriers earning per container on the trans-Pacific?"
     a: "By our calculation from OOCL's third-quarter update, trans-Pacific revenue per TEU was about $2,420, up roughly 52% from about $1,590 a year earlier."
+  - q: "Should importers sign a fixed ocean freight contract for 2027?"
+    a: "It depends on the lane. On Asia\u2013Europe, where rates have fallen 34% to 43% since July, locking a lower fixed rate now can make sense. On the trans-Pacific, where rates remain near $8,300 to $11,500 per FEU, shorter terms or index-linked pricing with a ceiling avoid locking in today's highs. This is our guidance."
+  - q: "How much more does it cost to ship from Asia to the U.S. East Coast than the West Coast?"
+    a: "On Xeneta's Oct. 7 data, Far East\u2013U.S. East Coast averaged $11,512 per FEU against $8,336 to the West Coast, a gap of about $3,176 per container by our calculation."
 ---
 
 ## Why it matters
@@ -58,6 +62,31 @@ Xeneta's Peter Sand said the decline has slowed but the trend is still down, and
 Over the first nine months of 2026, OOCL's liner revenue rose 18.9% to $7.96 billion on 6.5% more volume, and trans-Pacific revenue was up 27%. The update did not include costs or earnings, so profitability can't be judged from it.
 
 **What the numbers imply.** Dividing revenue by volume, OOCL earned roughly $2,420 per TEU on the trans-Pacific in the third quarter, against about $1,590 a year earlier, a rise of about 52%. On Asia–Europe it earned roughly $1,740 per TEU. These are our calculations from OOCL's figures, and they include all contract and spot business, not just spot rates.
+
+## What the gap between lanes means for your budget
+
+Rate levels differ so much by lane that a single global ocean budget assumption is likely to be wrong in both directions. Using Xeneta's Oct. 7 averages:
+
+| Lane | Spot rate per FEU | Cost of 500 FEU a year at that rate |
+|---|---|---|
+| Far East–U.S. West Coast | $8,336 | about $4.2 million |
+| Far East–U.S. East Coast | $11,512 | about $5.8 million |
+| Far East–North Europe | $3,645 | about $1.8 million |
+| Far East–Mediterranean | $4,007 | about $2.0 million |
+| North Europe–U.S. East Coast | $2,854 | about $1.4 million |
+
+These are our calculations at spot rates, before surcharges and before any contract discount. Two things stand out. First, the East Coast costs about $3,176 more per FEU than the West Coast, so importers who can route through the West Coast and move freight inland should price that option against inland trucking or rail costs. Second, every $500 per FEU you negotiate on 500 FEU is worth $250,000 a year, which is why benchmarking each lane matters more than a headline discount.
+
+## Fixed, index-linked or spot: choosing by lane
+
+| Lane | Market direction | Our suggested structure for 2027 |
+|---|---|---|
+| Asia–North Europe and Mediterranean | Falling since July | Push for a lower fixed rate now, with a mid-year review |
+| Trans-Pacific to U.S. West Coast | High, first signs of easing | Shorter fixed terms or index-linked rates with a ceiling |
+| Trans-Pacific to U.S. East Coast | Highest, still rising slightly | Index-linked with floor and ceiling; keep some volume on spot |
+| North Europe–U.S. East Coast | Easing | Fixed rate with a modest cut |
+
+This is our guidance, based on the rate data above. Your volumes, service needs and carrier relationships should decide the final mix.
 
 ## What procurement teams should do
 

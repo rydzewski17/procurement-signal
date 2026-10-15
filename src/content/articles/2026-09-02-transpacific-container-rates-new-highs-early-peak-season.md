@@ -2,6 +2,7 @@
 title: "Trans-Pacific container rates hit new highs as an early, firm peak season meets typhoon congestion"
 dek: "Asia\u2013U.S. West Coast spot rates rose to $7,621 per FEU and East Coast to $9,791. Typhoons have closed Shanghai and Ningbo, and some carriers are weighing Panama Canal low-water surcharges."
 date: 2026-09-02
+updated: 2026-10-14
 topic: logistics
 type: news
 signal: 3
@@ -32,6 +33,10 @@ faqs:
     a: "Peak-season demand started early, in May, and stayed firm. Freightos cited no new tariff increases in July, more ocean shipments of data center hardware and tariff refunds that let some retailers cut prices. Typhoon disruptions at Chinese ports also reduced effective capacity."
   - q: "Are Asia\u2013Europe ocean rates falling?"
     a: "Yes. Asia\u2013North Europe rates fell more than $1,000 per FEU from their July peak and Mediterranean rates more than $2,000, though both remained 40% to 70% above May levels in early September."
+  - q: "How much has trans-Pacific container freight risen in a year?"
+    a: "Freightos put Asia\u2013U.S. West Coast at $7,621 per FEU in late August 2026, more than four times Xeneta's September 2025 China\u2013U.S. West Coast average of $1,778, by our comparison of the two indexes."
+  - q: "How do ocean rate increases affect product cost?"
+    a: "Divide the container rate by the units per container. At 4,000 units per FEU, freight rose from about 44 cents a unit at $1,778 to about $2.08 at $8,336, by our calculation."
 ---
 
 ## Why it matters
@@ -53,6 +58,26 @@ Trans-Pacific rates hit new highs in the last week of August, according to Freig
 **How far rates have moved in a year.** For context, Xeneta put the China–U.S. West Coast spot average at $1,778 per FEU in September 2025. The late-August 2026 Freightos reading of $7,621 for Asia–U.S. West Coast is more than four times that level, by our comparison of the two indexes, which measure slightly different things. By early October, Xeneta's Far East–U.S. West Coast average had risen further, to $8,336.
 
 **Why spot rates matter even if you have a contract.** In a rising market, carriers can roll contract cargo when a sailing is full, pushing shippers to book at spot rates or wait. Contracted space is only as good as the allocation behind it, which is why allocation and blank-sailing terms matter as much as the rate itself.
+
+## What the rate move means per unit
+
+Freight that looks small per container can change the cost of a low-value product sharply. Take a forty-foot container holding 4,000 units of a household product:
+
+| Rate per FEU | Freight per unit |
+|---|---|
+| $1,778 (China–U.S. West Coast, September 2025, Xeneta) | $0.44 |
+| $7,621 (Asia–U.S. West Coast, late August 2026, Freightos) | $1.91 |
+| $8,336 (Far East–U.S. West Coast, Oct. 7, 2026, Xeneta) | $2.08 |
+
+These are our calculations; the unit count is illustrative. For a product that sells to you at $10, freight has gone from about 4% of the purchase price to about 20%. That is why landed-cost models built in the spring understate today's cost for Asia-sourced goods, and why higher-density packing and full container loads matter more than usual.
+
+## Allocation terms to put in writing
+
+- **Weekly or monthly allocation** by lane, with what happens to unused space.
+- **Roll protection:** how cargo is prioritized if a sailing is full, and any compensation if it is rolled.
+- **Blank sailing notice:** how much warning you get and which alternative sailing applies.
+- **Surcharge notice:** a minimum notice period for new surcharges such as low-water or congestion fees.
+- **Rate validity:** how long a quoted rate holds once space is confirmed.
 
 ## What it means for landed cost
 

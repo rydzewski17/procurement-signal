@@ -32,6 +32,10 @@ faqs:
     a: "Contract committed cross-border capacity with carriers that hold U.S. operating authority, qualify more than one crossing, and build buffer time into plans for Mexican-sourced parts in the fourth quarter."
   - q: "How long will cross-border trucking capacity stay tight?"
     a: "TRAFFIX expects tight capacity on Mexico and Canada lanes through the end of 2026 and into 2027, driven by driver shortages, visa restrictions, higher costs and trade uncertainty."
+  - q: "Why is cross-border trucking capacity between Mexico and the U.S. tight?"
+    a: "U.S. authorities have withdrawn visas from about 25,000 Mexican freight drivers, according to C.H. Robinson citing CANACAR, and there is a shortage of qualified B-1 visa drivers and U.S.-authorized trucks. Restrictions at Eagle Pass and Brownsville in September cut daily crossings sharply."
+  - q: "How long will cross-border trucking stay tight?"
+    a: "TRAFFIX expects tight capacity through the end of 2026 and into 2027, and C.H. Robinson warned driver availability could tighten further as fourth-quarter volumes rise."
 ---
 
 ## Why it matters
@@ -51,6 +55,22 @@ Market indicators are tightening. In Laredo, FreightWaves SONAR's outbound tende
 **Canada is tight as well.** TRAFFIX's Canada index reads 57. Inbound U.S.-to-Canada freight is scarce, so carriers struggle to find return loads; Florida-bound trucks can wait days for freight or run empty for hundreds of miles. Carriers are returning contract freight they can no longer haul at old rates, and transactional volume on the Canadian side has exceeded COVID-era levels, according to a TRAFFIX executive.
 
 TRAFFIX expects tight capacity through the end of 2026 and into 2027, and C.H. Robinson warned that qualified driver availability could tighten further as fourth-quarter volumes rise. The TRAFFIX index combines more than 10 indicators of cost, capacity, demand and trade policy, mostly from public government and trade data.
+
+## What the numbers mean
+
+By our calculation, cutting daily commercial crossings at Eagle Pass and Brownsville from about 1,000 to 300–400 removed 60% to 70% of crossing capacity at those ports for nearly a week. Laredo's outbound tender volume index rose about 30% between mid-September and Oct. 11, and its rejection index turning positive means carriers began turning down more contracted loads than before. Those are the conditions in which shippers relying on contract rates start paying spot premiums.
+
+## How a cross-border truck move usually works
+
+Most freight from Mexico doesn't travel on one truck from factory to destination. A Mexican carrier typically hauls the trailer to the border, a short-haul transfer carrier pulls it across and through customs, and a U.S. carrier takes it on from a yard on the U.S. side. Each handoff depends on drivers with the right credentials and trucks authorized for the U.S. When B-1 visas are withdrawn or crossing rules change, the transfer step is where loads back up. Through-trailer service with one carrier exists but relies on the same scarce drivers and authority.
+
+## Questions for cross-border carriers and brokers
+
+1. How many of your drivers hold valid B-1 visas, and how many trucks are authorized to operate in the U.S.?
+2. Which crossings do you use, and what is your reroute plan if one is restricted?
+3. Who are your transfer carriers, and are they committed to our volume?
+4. How will you handle our freight in the fourth quarter as volumes rise?
+5. What rate change would you need to keep our contracted loads, rather than returning them?
 
 ## What procurement teams should do
 

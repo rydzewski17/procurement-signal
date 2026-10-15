@@ -2,6 +2,7 @@
 title: "Cargo theft losses more than doubled to $304.6 million in the second quarter even as incidents fell 26%"
 dek: "Organized groups are stealing fewer loads but choosing more valuable ones, especially copper and other metals and enterprise technology. The average stolen load was worth $564,009, according to Verisk CargoNet."
 date: 2026-08-10
+updated: 2026-10-14
 topic: supplier-risk
 type: news
 signal: 3
@@ -32,6 +33,10 @@ faqs:
     a: "Verisk CargoNet recorded 677 theft incidents across the U.S. and Canada with $304.6 million in losses, up from $135.7 million a year earlier, even though incidents fell 26%."
   - q: "What cargo is most targeted by thieves in 2026?"
     a: "Metals, especially copper, along with aluminum, nickel and tungsten, and enterprise technology such as computer, networking and cryptocurrency mining equipment."
+  - q: "How much cargo was stolen in the U.S. and Canada in the second quarter of 2026?"
+    a: "Verisk CargoNet recorded 677 theft incidents with losses of $304.6 million, more than double the $135.7 million a year earlier, even though incidents fell 26%. The average reported loss was $564,009."
+  - q: "What goods are cargo thieves targeting in 2026?"
+    a: "Metals, especially copper, and enterprise technology such as computer, networking and crypto-mining equipment. Thefts of food and beverage, auto parts, tires, supplements and over-the-counter medicines declined."
 ---
 
 ## Why it matters
@@ -59,6 +64,22 @@ Verisk CargoNet recorded 677 supply chain theft incidents across the U.S. and Ca
 **Where theft concentrates.** CargoNet's third-quarter 2025 report showed the geographic pattern behind the losses: thefts rose 110% year over year in New Jersey, 33% in Pennsylvania, 12% in Texas and 11% in California. "The NYC metro area is emerging as both a primary location for theft activity and a destination for stolen goods," Lewis said then. Food and beverage led by count, with 170 events, followed by household goods with 92 and metals with 65; meat and seafood thefts nearly tripled.
 
 **Two playbooks.** CargoNet described organized groups splitting into two approaches. Some have dropped complex schemes in favor of stealing unattended loaded trailers, especially in Southern California, the Bay Area, Phoenix and Lake Tahoe. Others are refining social engineering, gathering details on assigned carriers and broker contacts and then impersonating them to get around anti-fraud tools that focus on the tender stage, including by using public load board data.
+
+## Fewer thefts, much bigger ones
+
+The figures imply a sharp change in what each theft is worth. A 26% drop to 677 incidents means about 915 in the second quarter of 2025, and $135.7 million across those works out to roughly $148,000 per incident. This year's average of $564,009 is close to four times that. Against the first quarter, a 14% decline implies about 787 incidents. These are our calculations from CargoNet's figures.
+
+For procurement teams, the shift matters more than the totals. A thief who steals fewer, more valuable loads is selecting shipments, and selection depends on information: what is on the truck, who is carrying it and when it moves. That makes shipment data and carrier identity, not parking-lot security, the main controls.
+
+## Security proportional to value
+
+| Load value | Suggested controls |
+|---|---|
+| Standard | Vetted carriers, confirmed pickup details, seal numbers on the bill of lading |
+| Elevated (for example above $100,000) | Approved-carrier list, real-time tracking, no unattended stops in the first few hundred miles |
+| High (for example above $250,000, or targeted goods such as copper or IT hardware) | Named carriers only, team drivers or secure parking, identity check at pickup, covert trackers |
+
+The thresholds are illustrative; set your own with your risk and insurance teams.
 
 ## Which purchases are most exposed
 

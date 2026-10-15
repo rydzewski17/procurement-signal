@@ -32,6 +32,10 @@ faqs:
     a: "Orders tend to become smaller and more frequent, with less tolerance for missed fill rates. Suppliers are increasingly asked to share capacity and lead-time data so the retailer's system can plan around it."
   - q: "Which retailers use Relex for supply chain planning?"
     a: "Retailers named as Relex users include Neighborhood Intelligence (Bed Bath & Beyond and The Container Store), Dollar General, Lowe's, Guitar Center, United Natural Foods and Wawa."
+  - q: "Which retailers use Relex for planning?"
+    a: "Neighborhood Intelligence, owner of Bed Bath & Beyond and The Container Store, is moving forecasting, replenishment, allocation and financial planning to Relex. Dollar General, Lowe's, Guitar Center, United Natural Foods and Wawa also use the platform. Relex says it has more than 600 customers."
+  - q: "What does unified retail planning mean for suppliers?"
+    a: "Expect smaller, more frequent orders tied to store-level demand, forecast sharing with expected commitments, tighter fill-rate scorecards and a need for accurate lead time, case-pack and ship-notice data."
 ---
 
 ## Why it matters
@@ -68,6 +72,25 @@ Use the change as a negotiation point. Ask for forecast visibility in exchange f
 ## If you are the retailer
 
 Make sure supplier constraints, not just demand, are in the plan. A forecast that ignores supplier lead times and minimums produces orders that can't be filled.
+
+## A supplier readiness checklist
+
+Retailers on unified planning platforms rely on supplier data being accurate and on time. Suppliers that want to be easy to work with should check:
+
+| Data | Why it matters |
+|---|---|
+| Lead times by item and ship point | The system plans orders around them |
+| Case packs, minimums and pallet configurations | Wrong data creates orders you can't ship efficiently |
+| Capacity limits by month | Lets the retailer plan around shortfalls instead of discovering them |
+| Order acknowledgments | Confirms what you will ship against each order |
+| Advance ship notices | Lets the retailer allocate inventory to stores before it arrives |
+| Forecast responses | Commits capacity against shared forecasts |
+
+In North American retail, order acknowledgments and advance ship notices usually move as EDI transactions (855 and 856), and some retailers share forecasts as EDI 830 planning schedules. This checklist is our guidance.
+
+## How retailers measure the results
+
+The business case for unified planning usually rests on a few measures: in-stock rate at the shelf, forecast accuracy, inventory turns, markdowns and the cost of expedited freight. Neighborhood Intelligence named in-stock rates, sell-through and decision speed. Procurement teams on the retail side should capture a baseline for each before rollout, so the improvement can be measured rather than claimed.
 
 ## What procurement teams should do
 

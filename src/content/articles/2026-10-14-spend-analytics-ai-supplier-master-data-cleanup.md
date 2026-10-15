@@ -34,6 +34,10 @@ faqs:
     a: "Clean the supplier master: give it one owner and match suppliers on registration and tax numbers rather than names, so 'Acme Ltd' and 'ACME Limited' count as one supplier."
   - q: "Why does spend analytics need clean supplier data?"
     a: "Duplicate supplier records split spend across two entries, which understates your volume with a supplier and weakens negotiations. AI tools categorize faster, but they can't decide what a clean record is or who maintains it."
+  - q: "How do duplicate supplier records affect procurement?"
+    a: "They split one supplier's spend across several records, which understates your leverage, can keep the supplier out of strategic reviews and risk monitoring, and raises the chance of paying the same invoice twice."
+  - q: "How should I test an AI spend classification tool?"
+    a: "Give the vendor a set of invoice lines your team has already classified, measure accuracy weighted by spend rather than by line, check how low-confidence results are flagged, and re-run the test after cleaning up duplicate suppliers."
 ---
 
 ## Why it matters
@@ -65,7 +69,32 @@ Dhillon lists the patterns finance teams see most often:
 - Processing a payment reminder as a new bill
 - Having the same supplier on file twice, such as "Acme Ltd" and "ACME Limited"
 
-Each also risks claiming the same VAT twice. The UK will require e-invoicing for all VAT invoices from April 2029, using the Peppol network, but structured invoices won't merge duplicate supplier records on their own.
+Each also risks claiming the same VAT twice.
+
+## How duplicate records hide leverage: an example
+
+Suppose one packaging supplier appears in your system three times, as "Acme Ltd," "ACME Limited" and "Acme Packaging," with $1.2 million, $800,000 and $500,000 of spend. If your policy sends suppliers above $1.5 million to a strategic review, none of the three records qualifies, and the dashboard shows a mid-sized supplier at most. Merged, it is a $2.5 million supplier, your negotiating position changes, and it may belong in a sourcing event. These figures are illustrative.
+
+The same problem works in reverse for risk. A supplier split across records looks less important than it is, so it may not get the financial monitoring or business continuity review it needs.
+
+## How to test an AI classification tool before you buy
+
+1. **Build a test set.** Take a few thousand invoice lines your team has already classified correctly, covering direct, indirect and tail spend.
+2. **Run it blind.** Have the vendor classify the set without seeing your answers.
+3. **Measure by spend, not lines.** A tool that is right on 95% of lines but wrong on your largest invoices is worse than it looks.
+4. **Check the low-confidence queue.** Ask how the tool flags uncertain classifications and who reviews them.
+5. **Re-run after cleanup.** Merge duplicate suppliers and re-run the test. The improvement tells you how much of the accuracy depends on your data rather than the model.
+
+This is our recommended approach.
+
+## A 30-day cleanup plan
+
+| Week | Focus |
+|---|---|
+| 1 | Agree owners for the supplier master, category map and fallback code with finance |
+| 2 | Group suppliers by tax or registration number; merge duplicates |
+| 3 | Clear the fallback "miscellaneous" code and fix the category-to-ledger map |
+| 4 | Sample-check captured invoices and set the monthly reconciliation routine |
 
 ## Who owns what
 

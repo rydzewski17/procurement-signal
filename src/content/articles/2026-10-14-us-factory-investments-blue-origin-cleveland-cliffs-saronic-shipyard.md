@@ -42,6 +42,10 @@ faqs:
     a: "Mostly from 2027 to 2028. Cleveland-Cliffs expects its expansion ready in early 2028, Re:Build targets 150 jobs by 2028, and the Saronic shipyard is being built in overlapping phases with no completion date given."
   - q: "What is Saronic building in Brownsville?"
     a: "Port Alpha, a shipyard for crewed, autonomy-capable and autonomous vessels, starting on 835 acres with an option to expand to nearly 4,400. The builders call it the first greenfield U.S. shipyard since World War II."
+  - q: "When will new U.S. electrical steel capacity help transformer lead times?"
+    a: "Cleveland-Cliffs expects its Butler Works expansion, which raises grain-oriented electrical steel output by up to 25%, to be ready in early 2028. Lead times are unlikely to benefit before then."
+  - q: "Do new factories help procurement teams right away?"
+    a: "Usually not. Engineered and regulated parts need qualification, audits and sample approval before production, so new capacity typically helps a year or more after a plant opens. Some projects, such as shipyards, add demand for steel and components first."
 ---
 
 ## Why it matters
@@ -78,6 +82,34 @@ Plant announcements are early signals of where supplier capacity will loosen or 
 ## Why transformer steel matters beyond utilities
 
 Grain-oriented electrical steel is the core material in power and distribution transformers. Lead times for transformers have been long as utilities, data center builders and manufacturers expand power capacity. More domestic steel won't shorten lead times until 2028, but it gives transformer makers a second domestic option and may reduce exposure to [Section 232 tariffs on imported steel](/cost-monitor/steel/). Any company building new facilities, data centers or electrified production should track this.
+
+## What it means by category
+
+| Category | Investments to watch | Effect on supply | When |
+|---|---|---|---|
+| Transformers and electrical equipment | Cleveland-Cliffs electrical steel | A second domestic source of transformer steel | Early 2028 |
+| Aerospace parts, assemblies and windows | Blue Origin, PPG, Accu-Precision, Re:Build | New sub-tier capacity, but most will serve the owner's own programs first | Phased through 2028 |
+| Vessels and marine components | Saronic shipyard | New demand for steel, propulsion and electronics suppliers before it adds supply | No completion date |
+| Automotive lighting and molded plastics | Xingyu | A new U.S. option for injection-molded parts | Over several years |
+| Skilled labor and services | All of the above | Tighter labor markets in Texas and the Southeast | Now |
+
+This mapping is our assessment.
+
+## How to turn new capacity into qualified supply
+
+New plants rarely help the first year they open. For regulated or engineered parts, a new supplier usually has to pass several steps before it can ship production parts:
+
+1. **Early conversation.** Contact the company's business development team while the plant is being built and share expected volumes.
+2. **Capability and quality review.** Confirm certifications the part needs, such as AS9100 for aerospace or IATF 16949 for automotive.
+3. **Site audit.** Visit once equipment is installed, not before.
+4. **First-article or sample approval.** Test parts from production tooling.
+5. **Ramp with a safety net.** Keep your current source for a set period until the new one proves delivery.
+
+This is general sourcing practice. Engineering and quality teams should set the requirements for each part.
+
+## Watch for demand, not just supply
+
+Some of these projects add demand before they add supply. A shipyard and a satellite campus will buy steel, electronics, machining and composites for years before their own output reaches the market. Procurement teams buying in the same supply base, especially in Texas, should expect more competition for sub-tier suppliers and skilled labor.
 
 ## What procurement teams should do
 

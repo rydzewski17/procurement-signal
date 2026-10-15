@@ -32,6 +32,10 @@ faqs:
     a: "Which services are protected from blank sailings, how port rotations and unscheduled calls will be managed, and what accountability applies when schedule reliability falls below agreed levels."
   - q: "Which ocean carrier is most reliable right now?"
     a: "Maersk was the most reliable carrier in Xeneta's September scorecard at 47% on time, though that was down from 51% in August. Every tracked carrier posted its longest average delay of the past 12 months."
+  - q: "How reliable are container shipping schedules in 2026?"
+    a: "Xeneta's September 2026 scorecard showed 27% of vessels arriving on time globally, the fourth straight monthly decline, with an average delay of six days. Asia\u2013North America was 20% on time and Far East\u2013Europe 4%."
+  - q: "Which container carrier is most reliable right now?"
+    a: "Maersk was the most reliable carrier in Xeneta's September 2026 data at 47% on time, down from 51%. Every tracked carrier posted its highest average delay of the past 12 months."
 ---
 
 ## Why it matters
@@ -51,6 +55,22 @@ Causes cited include typhoons in Asia, bunker-cost pressure, strong peak-season 
 
 Rates remain high. The China–U.S. West Coast spot average was $7,717 per FEU in early October, more than four times the $1,778 of September 2025. Long-term rates rose 26% month over month to $3,649 per FEU as of Oct. 1. Carriers blanked 8% of planned Far East–North America capacity in September and have announced at least 13% for October, along with 17% on Far East–Europe.
 
+## Reliability at a glance
+
+| Measure | September 2026 |
+|---|---|
+| Global on-time arrivals | 27% |
+| Global average delay | 6 days |
+| Asia–North America on time | 20%, with a 6.9-day average delay |
+| Far East–Europe on time | 4%, with a 9.9-day average delay |
+| Most reliable carrier | Maersk, 47% |
+| Gemini network (Maersk and Hapag-Lloyd) | 40%, down from 70% in June |
+| Far East–North America capacity blanked | 8% in September; at least 13% announced for October |
+
+Figures from Xeneta.
+
+**The gap between spot and contract.** At $7,717 per FEU, the China–U.S. West Coast spot average was a little over twice the $3,649 long-term average, by our calculation, a gap of about $4,068 per container. Shippers on long-term contracts are paying much less, but only for cargo that actually moves under the contract. When sailings are blanked or cargo is rolled, the overflow often moves at spot. That makes allocation and roll protection worth nearly as much as the contract rate itself.
+
 ## What six days of delay costs
 
 A six-day average delay is not just a planning nuisance. For a business importing $10 million of goods a month by ocean, an extra six days in transit ties up roughly $2 million more in inventory at any time, by our calculation. At a 10% annual carrying cost, that is about $200,000 a year, before any stockouts, expedited freight or detention charges. Your numbers will differ, but the math is worth running before you set 2027 safety stock.
@@ -62,6 +82,16 @@ A six-day average delay is not just a planning nuisance. For a business importin
 - **Put reliability in the tender.** For 2027 contracts, include schedule reliability, port rotations and unscheduled calls in carrier accountability, not just rate.
 - **Spread allocations.** Split volume across carriers and alliances to limit exposure to a single network's delays.
 - **Review inventory policy.** For critical imported parts, recalculate safety stock using current delay variability, not last year's averages.
+
+## Updating lead times in your planning system
+
+1. **Pull actual transit data** for the past three months by lane, from booking confirmation to arrival at your facility.
+2. **Use the spread, not just the average.** Set safety stock on the variability you are seeing; a six-day average can hide two-week delays.
+3. **Update planned lead times** in your ERP or planning tool so reorder points move.
+4. **Flag critical parts** where a stockout stops production, and set a higher service level for them.
+5. **Review monthly** until reliability recovers, then step buffers back down.
+
+This is our recommended approach.
 
 ## What to put in 2027 ocean contracts
 

@@ -39,6 +39,10 @@ faqs:
     a: "Goods already covered by Section 232 tariffs and USMCA-qualifying imports, among other exemptions. Check the official USTR notice for your products."
   - q: "How does the EU cap work under the forced-labor tariff?"
     a: "For the EU and Taiwan, the normal duty plus the Section 301 duty is capped at 10%, so a product with a 4% normal duty pays 6% extra and a product already at 10% or more pays nothing extra. Japan, South Korea and Switzerland work the same way with a 12.5% cap."
+  - q: "Does the Section 301 forced-labor tariff apply to USMCA goods?"
+    a: "No. USMCA-qualifying imports from Canada and Mexico are exempt, along with Section 232 goods, inputs used in U.S. manufacturing and several other categories."
+  - q: "How does the cap work for EU goods under the forced-labor tariff?"
+    a: "For EU and Taiwan goods, the normal duty plus the Section 301 duty stops at 10% combined. A product with a 4% normal duty pays 6% extra; one with a normal duty of 10% or more pays nothing extra."
 ---
 
 ## Why it matters
@@ -85,6 +89,28 @@ Note: Holland & Knight's country table shows 13% for some economies where its te
 ## A sourcing comparison, worked through
 
 Take a product with a 4% normal duty bought from Vietnam, Malaysia or Germany. The added forced-labor duty would be 12.5% from Vietnam (16.5% total), 10% from Malaysia (14% total) and 6% from Germany, since the EU combined rate is capped at 10%. On $1 million of annual purchases, that is a $25,000 a year swing between Vietnam and Malaysia and $65,000 between Vietnam and Germany, before freight and unit price. This is our illustrative calculation; check your classifications and any other duties that apply.
+
+## Total duty by normal rate and country group
+
+How much extra you pay depends on the product's normal (MFN) duty, because the capped groups net it out and the stacked groups add on top:
+
+| Normal duty | EU, Taiwan (capped at 10%) | Japan, South Korea, Switzerland (capped at 12.5%) | 10% stacked group (e.g. Mexico, India) | 12.5% stacked group (e.g. China, Vietnam) |
+|---|---|---|---|---|
+| 0% | 10% | 12.5% | 10% | 12.5% |
+| 2% | 10% | 12.5% | 12% | 14.5% |
+| 5% | 10% | 12.5% | 15% | 17.5% |
+| 8% | 10% | 12.5% | 18% | 20.5% |
+| 12% | 12% | 12.5% | 22% | 24.5% |
+
+These are our calculations before any exemption, and before other duties such as Section 301 China duties. USMCA-qualifying goods from Canada and Mexico pay none of the forced-labor duty. The pattern matters for sourcing: for products with a higher normal duty, Europe and Japan become relatively cheaper sources than the stacked groups.
+
+## An exemption checklist for your broker
+
+1. **Section 232 goods.** Are any of our products covered by a Section 232 action, and is that reflected on the entry?
+2. **USMCA.** Are qualifying Canadian and Mexican goods claimed as USMCA-originating?
+3. **U.S. manufacturing inputs.** Which of our imports are inputs to U.S. production, and are we claiming that exclusion with the right code?
+4. **Policy-group exclusions.** Do any products fall under the raw material, supply-constrained or other exclusion groups?
+5. **Exclusion codes.** Do our entries show a code in the 9903.05.85 to 9903.06.21 range where an exclusion applies?
 
 ## What procurement teams should do
 

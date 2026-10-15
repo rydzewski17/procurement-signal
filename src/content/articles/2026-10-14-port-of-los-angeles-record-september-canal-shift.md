@@ -38,6 +38,10 @@ faqs:
     a: "It cut daily Neopanamax slots to nine from Sept. 3 because of El Niño-related water concerns, then raised them to 10 after rainfall. El Niño is expected to peak between October and December, followed by the 2027 dry season."
   - q: "How many containers did the Port of Los Angeles handle in September 2026?"
     a: "1,042,652 TEUs, the busiest month in the port's 118-year history. Loaded imports rose 19% from a year earlier to 545,696 TEUs."
+  - q: "How busy was the Port of Los Angeles in September 2026?"
+    a: "It moved 1,042,652 TEUs, the busiest month in its 118-year history. Loaded imports rose 19% year over year to 545,696 TEUs, and the July\u2013September quarter was its busiest ever at nearly 3 million TEUs."
+  - q: "Why is more cargo going through Los Angeles?"
+    a: "The port cites resilient consumer demand, inventory replenishment and cargo shifting from other routes. Disruption on the Suez and Panama routes is leading to roughly 5% more cargo being allocated to Los Angeles at origin, according to Harvard Business School's Willy Shih."
 ---
 
 ## Why it matters
@@ -55,6 +59,22 @@ Executive Director Gene Seroka attributed the surge to resilient consumer demand
 The Panama Canal cut daily Neopanamax slots to nine from Sept. 3 because of El Niño-related drought concerns, then raised them to 10 after rainfall, according to an Oct. 9 advisory. From January to late September, 69 container vessels waited more than 100 hours to transit, compared with 13 in the same period of 2025.
 
 Seroka expects another frontloading wave driven by an earlier Lunar New Year in the first week of February and the U.S.–China trade truce expiring Jan. 10.
+
+## What the record means for inland costs
+
+By our calculation, a 19% rise to 545,696 loaded import TEUs means the port handled about 87,000 more loaded import containers in September than a year earlier, all of which needed drayage, rail or transload capacity inland. The record 371,206 empty containers, about three times loaded exports, show how one-sided the trade is: most boxes arrive full and leave empty. That imbalance is why inbound capacity, not the ship itself, tends to be the constraint during surges, and why chassis, drayage and transload rates in Southern California rise when volume spikes.
+
+## A first-quarter planning calendar
+
+| When | What to plan |
+|---|---|
+| Now through November | Confirm Q1 ocean allocations and West Coast drayage and transload contracts |
+| December | Expect frontloading ahead of the truce expiry and Lunar New Year |
+| Jan. 10, 2027 | U.S.–China trade truce expires unless extended |
+| First week of February 2027 | Lunar New Year; Asian factory output slows for several weeks around the holiday |
+| February–March | Post-holiday restart; watch for blank sailings and gaps in arrivals |
+
+This calendar is our planning guide built from the dates above.
 
 ## Routing choices for 2027
 

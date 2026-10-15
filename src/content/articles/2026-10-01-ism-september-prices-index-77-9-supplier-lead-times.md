@@ -2,6 +2,7 @@
 title: "Manufacturers' prices index jumps to 77.9 as steel, components and freight costs surge: what September's ISM report means for sourcing"
 dek: "The ISM manufacturing PMI held at 54.5 in September, but the prices index rose 6.8 points and 59% of respondents paid more. Electronic components, memory, circuit boards and several steel products are in short supply."
 date: 2026-10-01
+updated: 2026-10-14
 topic: commodities
 type: signal
 signal: 4
@@ -36,6 +37,10 @@ faqs:
     a: "ISM respondents reported shortages of electrical and electronic components, memory products, printed circuit boards and several categories of steel."
   - q: "What are manufacturing lead times now?"
     a: "Average lead times were 176 days for capital equipment, 84 days for production materials and 49 days for MRO supplies, according to ISM data reported by Distribution Strategy Group."
+  - q: "What does an ISM prices index of 77.9 mean?"
+    a: "It means a large majority of manufacturing purchasing managers reported paying higher prices in September than in August. ISM said 59% of respondents paid more. The index measures how widespread price increases are, not their size."
+  - q: "When should I order capital equipment given current lead times?"
+    a: "With ISM's September average lead time of 176 days for capital equipment, equipment needed by the end of June 2027 should be ordered by about the start of January, before allowing time for approvals and installation, by our calculation."
 ---
 
 ## Why it matters
@@ -70,6 +75,18 @@ A supplier deliveries reading above 50 means deliveries are slowing; they have s
 
 **Sentiment.** 60% of respondent comments were negative. Of those, 46% cited price volatility, 34% tariffs, 30% the war with Iran and 21% longer lead times.
 
+## How to read the numbers
+
+ISM's indexes are diffusion indexes built from survey answers. A reading above 50 means more respondents reported an increase than a decrease. That makes them a measure of how widespread a change is, not how large it is:
+
+- **Prices at 77.9** means a large majority of purchasing managers paid more in September than in August. It does not mean prices rose 77.9%.
+- **Supplier deliveries at 59.0** is read the other way around: above 50 means deliveries are getting slower, which usually signals tight supply.
+- **Inventories at 48.6** means more manufacturers cut stock than built it. Lean inventories plus slower deliveries is the combination that leads to shortages when demand picks up, and new orders and backlogs both rose in September.
+
+## What the lead times mean for ordering
+
+Lead times turn directly into order dates. Using ISM's September averages, a team that needs capital equipment installed by the end of June 2027 should have the order placed by about the start of January, 176 days earlier, before allowing any time for approvals, engineering or installation. Production materials at 84 days need about three months of cover, and MRO supplies at 49 days about seven weeks. These are our calculations from ISM's averages, and your suppliers' actual quotes may be longer.
+
 ## Where the pressure is, by category
 
 | Category | Price | Availability | Priority |
@@ -87,6 +104,18 @@ This is our read of ISM's lists combined with our Cost Pressure Monitor.
 - **Extend forecasts on short items.** For components, memory and PCBs, give suppliers longer visibility and confirm allocations.
 - **Re-check safety stock.** With capital equipment at 176 days, plan capex purchases earlier.
 - **Separate tariff from material cost.** Make suppliers show each component of an increase.
+
+## How to respond to a price increase letter
+
+Supplier letters citing "market conditions" will follow a report like this one. A consistent response keeps the conversation on cost drivers:
+
+1. **Acknowledge, don't accept.** Confirm receipt and ask for the supporting cost breakdown.
+2. **Ask for the drivers.** Which materials, by how much, and which published index or supplier quote shows it.
+3. **Check the share.** Only the share of price driven by that material should move.
+4. **Check the timing.** Has the supplier already passed through earlier increases, and are any inputs now easing?
+5. **Agree a mechanism.** Where the case is fair, convert the increase into an index-linked term that also comes down.
+
+This is our recommended approach. Our [Cost Pressure Monitor](/cost-monitor/) gives you the producer price trend for 12 categories to check claims against.
 
 ## What to watch next
 

@@ -2,6 +2,7 @@
 title: "SAP will sell ORO Labs' orchestration platform as an Ariba extension, conceding that procurement runs on more than one system"
 dek: "The deal brands ORO's intake and workflow layer as 'SAP Ariba Procurement Orchestration by ORO Labs,' with general availability planned for November. Customers named include Coca-Cola, Pfizer, Siemens Energy and Novartis."
 date: 2026-10-06
+updated: 2026-10-14
 topic: ai-procurement
 type: news
 signal: 3
@@ -32,6 +33,10 @@ faqs:
     a: "No. SAP will resell ORO Labs' platform as an SAP Solution Extension called SAP Ariba Procurement Orchestration by ORO Labs. SAP brands, sells and supports solution extensions, but ORO remains independent."
   - q: "What is procurement orchestration?"
     a: "Software that gives employees one place to start and track purchase requests, then routes them through the right approvals and systems, such as an ERP, sourcing tool, contract system or risk platform."
+  - q: "What is SAP Ariba Procurement Orchestration by ORO Labs?"
+    a: "It is ORO Labs' intake and orchestration platform resold by SAP through its Solution Extension program. It gives employees one place to start procurement requests and connects processes across SAP and non-SAP systems. General availability is planned for November 2026."
+  - q: "How is procurement orchestration different from a procurement suite?"
+    a: "An orchestration layer manages how requests are captured, routed and reviewed across teams and systems. A suite such as SAP Ariba executes the sourcing, contracting and purchasing transactions. Many large companies use both."
 ---
 
 ## Why it matters
@@ -64,6 +69,28 @@ ORO Labs, founded by former SAP Ariba product leaders, names Coca-Cola, Pfizer, 
 | Run Ariba plus other tools | SAP-sold ORO extension, or an independent intake vendor | Who supports integrations; how pricing compares |
 | Run Ariba only | Ariba's own intake and Joule agents | Whether you need a separate orchestration layer at all |
 | Don't use Ariba | Independent intake vendors | No change, but expect suites to compete harder |
+
+## What an intake and orchestration layer actually does
+
+Most procurement requests start outside procurement systems: an email, a chat message or a form. An intake and orchestration layer sits in front of the buying systems and handles four jobs:
+
+| Job | What happens | Why it matters |
+|---|---|---|
+| Capture | Employees describe what they need in one place | Fewer requests bypass procurement |
+| Triage | The request is routed by category, value and risk | Low-risk buys move fast; risky ones get review |
+| Coordinate | Legal, security, finance and the business review in the right order | Fewer stalled requests and email chains |
+| Hand off | The approved request goes to the system that executes it, such as Ariba | The transaction system stays the record of the purchase |
+
+This is our description of the category in general. Vendors differ in how much of each job they cover and how deep their integrations go.
+
+## Questions for an evaluation
+
+1. Which of our systems does the product connect to out of the box, and which need custom integration?
+2. Who maintains the connectors when SAP or another vendor changes its APIs?
+3. How do AI agent steps get approved, logged and reversed?
+4. What does a policy change cost in time and services: can our team change workflows without the vendor?
+5. How is the product priced: per user, per request or per module?
+6. For the SAP-resold extension, which company provides first-line support and who owns the roadmap?
 
 ## What procurement teams should do
 

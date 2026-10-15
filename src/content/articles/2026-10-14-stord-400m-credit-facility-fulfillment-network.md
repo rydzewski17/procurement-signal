@@ -32,6 +32,10 @@ faqs:
     a: "Stord says it runs nearly 100 fulfillment locations, serves more than 1,000 brands, processes more than $15 billion in gross merchandise volume a year and is approaching a $1 billion revenue run-rate."
   - q: "Which fulfillment networks has Stord acquired?"
     a: "ProPack Logistics and Pitney Bowes' e-commerce fulfillment unit in 2024, Ware2Go from UPS in May 2025 with 21 warehouses, and Shipwire from Ceva Logistics, which added 12 fulfillment centers."
+  - q: "What should shippers check when their 3PL is growing through acquisitions?"
+    a: "Which sites will serve you and when acquired sites move to the provider's main systems, recent service-level results for those sites, data ownership and portability, and what happens to your contract if the provider is acquired."
+  - q: "How big is Stord?"
+    a: "Stord says it runs nearly 100 fulfillment locations, serves more than 1,000 brands, processes more than $15 billion in gross merchandise volume a year and has a revenue run-rate approaching $1 billion."
 ---
 
 ## Why it matters
@@ -56,6 +60,24 @@ Fulfillment is consolidating around providers that combine a network of warehous
 | Shared robotics and AI | Your data used to train tools for everyone | Data ownership and use limits |
 | Scale pricing | Less leverage at renewal as alternatives shrink | Benchmarking rights and price caps |
 | Acquisition-driven growth | Integration disruption, systems changes | Service credits tied to KPIs during transitions |
+
+## Due diligence on a fast-growing 3PL
+
+Growth through acquisition means a provider may be running several warehouse systems, teams and processes at once. Before signing or renewing, ask:
+
+1. **Which sites will serve us,** and were they built by the provider or acquired? When will acquired sites move to the provider's main systems?
+2. **What service levels did those sites hit** over the past 12 months, measured by order accuracy, on-time shipping and inventory accuracy?
+3. **What changes when robotics arrives** at our sites, and how will the transition be managed during our peak season?
+4. **Who owns our order and inventory data,** and how would we get it out if we left?
+5. **How is the business funded,** and what happens to our contract if the company is acquired or restructured?
+
+## Planning an exit before you need one
+
+An exit plan doesn't signal distrust; it keeps pricing honest at renewal. A workable plan includes a data export format agreed in the contract, a transition-assistance clause with fixed rates, a notice period long enough to move inventory outside peak season, and at least one alternative provider you have priced recently. This is our guidance.
+
+## The scale in context
+
+Stord's figures imply an average of about $15 million of gross merchandise volume per brand, by our calculation from its more than $15 billion in GMV and more than 1,000 brands. That puts the typical customer in the mid-market, where switching providers is realistic but disruptive, and where contract terms matter more than they do for the largest shippers with dedicated sites.
 
 ## What procurement teams should do
 

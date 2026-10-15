@@ -37,6 +37,10 @@ faqs:
     a: "No. Rates are lower for the EU, Japan, South Korea, Switzerland and the UK, and for companies with approved onshoring commitments."
   - q: "Why did the U.S. put tariffs on patented drugs?"
     a: "The proclamation cites national security risk from foreign production: about 53% of patented pharmaceutical products and 85% of patented active ingredients, by volume, are made outside the U.S."
+  - q: "What tariff applies to patented pharmaceuticals imported into the U.S.?"
+    a: "Under the April 2, 2026 Section 232 proclamation, the default is 100%, but most trade pays less: generally 15% for the EU, Japan, South Korea and Switzerland, 10% for the UK, 20% for companies with approved onshoring commitments and 0% for those that also have an HHS pricing agreement."
+  - q: "Are generic drugs subject to the Section 232 pharmaceutical tariff?"
+    a: "Not for now. Generic drugs, biosimilars and their ingredients are excluded, but Commerce has said it will revisit the exemption after about a year."
 ---
 
 ## Why it matters
@@ -72,6 +76,20 @@ The headline rate is 100% of value, but most trade will see something lower, acc
 | Annex IV | Products at 0% under this action | Also exempt from the earlier Section 122 surcharge; may be updated |
 
 The Commerce Department and HHS have said they will offer pathways for more companies to sign onshoring and most-favored-nation pricing agreements, but have not published the approval criteria. That means a supplier's rate can change mid-contract when it signs a deal.
+
+## One product, five possible rates
+
+The same patented product can carry very different duty depending on who makes it and where. On a shipment with a $1 million customs value:
+
+| Situation | Rate | Duty |
+|---|---|---|
+| Default | 100% | $1,000,000 |
+| Onshoring commitment approved by Commerce | 20% | $200,000 |
+| Made in the EU, Japan, South Korea or Switzerland | 15% | $150,000 |
+| Made in the United Kingdom | 10% | $100,000 |
+| Onshoring commitment plus HHS pricing agreement | 0% | $0 |
+
+These are our calculations. In practice, most large manufacturers have either a country rate or a company agreement, so the 100% default mainly hits smaller suppliers without either. That is the group newly covered since Sept. 29, and the reason procurement teams should check rates supplier by supplier rather than assume a single figure.
 
 ## Three dates to put in your contract calendar
 

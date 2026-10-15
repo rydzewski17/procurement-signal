@@ -2,6 +2,7 @@
 title: "LTL carriers pull rate increases forward: Old Dominion 4.9%, Saia 7.1%, ArcBest 5.9%"
 dek: "Public less-than-truckload carriers are raising rates earlier than their usual annual cycle, citing real estate, equipment, technology and wage costs. With manufacturing demand recovering, carriers expect pricing power to hold."
 date: 2026-09-22
+updated: 2026-10-14
 topic: logistics
 type: news
 signal: 3
@@ -32,6 +33,10 @@ faqs:
     a: "A GRI is an increase in a carrier's base tariff rates, expressed as an expected average across lanes and weight classes. It applies to shippers on the carrier's tariff and to contracts priced off it, unless the contract says otherwise."
   - q: "Do LTL GRIs apply to contracted shippers?"
     a: "It depends on the contract. Many LTL contracts set discounts off the carrier's base tariff, so a GRI raises net cost unless the contract freezes the base or caps increases."
+  - q: "How much did LTL carriers raise rates in 2026?"
+    a: "Old Dominion took a 4.9% general rate increase effective Oct. 5, Saia 7.1% effective July 6 and ArcBest 5.9% effective June 22, all earlier than in previous years."
+  - q: "How can shippers limit the effect of LTL general rate increases?"
+    a: "Negotiate a cap on annual base tariff increases or a fixed base for the contract term, negotiate key accessorials explicitly, and audit freight class and density, which often saves more than the increase costs."
 ---
 
 ## Why it matters
@@ -66,6 +71,14 @@ A GRI is an expected average across lanes and weight classes, so individual lane
 | Fixed rates by lane | No change until renewal | Expect a larger reset at renewal |
 | Third-party base tariff (e.g. a neutral rating engine) | Depends on that base | Confirm how and when the base updates |
 | Accessorials | Often rise separately | Negotiate key accessorials explicitly |
+
+## A worked example: earlier increases in this year's budget
+
+Suppose you spend $2 million a year with one LTL carrier on a contract that floats with its base tariff. A 4.9% increase adds about $98,000 a year. Because Old Dominion's took effect Oct. 5 rather than in November or December, roughly a quarter of that, about $24,500, now falls in the 2026 calendar year. At Saia's 7.1% from July 6, about half the annual effect, roughly $71,000, lands in 2026. These are our calculations, assuming spend is spread evenly through the year.
+
+## Class and density: the savings most shippers miss
+
+LTL pricing depends on freight class as well as rate. The National Motor Freight Traffic Association moved much of the classification system toward density-based classes in 2025, so shipments that are packed more densely or described more accurately can move to a lower class. Re-weighing and re-classing charges are also a frequent source of invoice disputes. Before negotiating the next GRI, audit your top shipping commodities for class, density and packaging; the savings often exceed the increase.
 
 ## What procurement teams should do
 
