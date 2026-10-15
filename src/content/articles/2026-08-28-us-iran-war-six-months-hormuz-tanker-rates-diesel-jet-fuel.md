@@ -2,6 +2,7 @@
 title: "Six months into the U.S.\u2013Iran war, Hormuz crossings are down 80% and diesel and jet fuel cost far more than before it began"
 dek: "Middle East Gulf tanker rates hit a record, European diesel cargoes are up about 70% since February, and Morgan Stanley sees oil markets in deficit into early 2027. Here is what that means for freight, energy and petrochemical-based categories."
 date: 2026-08-28
+updated: 2026-10-14
 topic: commodities
 type: signal
 signal: 5
@@ -25,11 +26,17 @@ image:
 sources:
   - name: "S&P Global \u2014 US-Iran war six months on: tanker rates, fuel prices surge amid disruptions"
     url: "https://www.spglobal.com/energy/en/news-research/latest-news/crude-oil/082826-us-iran-war-six-months-on-tanker-rates-fuel-prices-surge-amid-disruptions"
+  - name: "FreightWaves \u2014 Why trucking rates are rising without more freight (ATRI cost data)"
+    url: "https://www.freightwaves.com/news/why-trucking-rates-are-rising-without-more-freight"
 faqs:
   - q: "How has the Iran war affected shipping through the Strait of Hormuz?"
     a: "S&P Global Commodities at Sea data shows ship crossings through Hormuz down more than 80% since the war began on Feb. 28, 2026. The strait normally carries about 20% of global seaborne oil and LNG."
   - q: "How much have diesel and jet fuel prices risen since the war began?"
     a: "Platts assessed Mediterranean diesel cargoes at $1,295.75 per metric ton on Aug. 26, against $762.75 on Feb. 27, and Northwest European jet fuel at $1,271.25 per ton on Aug. 27, against $831.25 before the war."
+  - q: "How much does a rise in diesel prices add to trucking costs?"
+    a: "Using ATRI's 2025 figures, fuel is roughly 21% of a truck's operating cost. A 70% rise in fuel would lift total cost per mile by about 14%, by our calculation, which carriers recover mainly through fuel surcharges."
+  - q: "Should procurement budget for oil prices falling in 2027?"
+    a: "Morgan Stanley expects the oil market to stay in deficit through the first quarter of 2027. Budgeting with fuel near current levels and stress-testing a spike is the more cautious approach."
 ---
 
 ## Why it matters
@@ -71,6 +78,30 @@ Dubai crude peaked at $169.75 a barrel on March 23 when Hormuz traffic nearly st
 | Chemicals and energy-intensive manufacturing | Natural gas and power | Higher costs, especially in Europe and Asia given LNG losses |
 
 This mapping is our assessment.
+
+## A worked example: how diesel flows into a freight bill
+
+ATRI's 2025 cost study put the average cost of running a truck at $2.336 per mile, or $1.854 excluding fuel. That makes fuel about $0.48 a mile, or roughly 21% of a carrier's total cost. If fuel costs rise 70%, in line with the move in Mediterranean diesel cargoes since February, the carrier's total cost per mile rises by about 14% with no change in any other cost. These are our calculations from ATRI's figures.
+
+That is why fuel surcharges, not base rates, have done most of the work in freight invoices this year. It is also why a surcharge table that resets weekly against a published diesel index protects both sides: when fuel eases, the surcharge falls automatically and you don't have to renegotiate.
+
+## Three scenarios for 2027 budgets
+
+| Scenario | What would have to happen | What it means for budgets |
+|---|---|---|
+| Prolonged disruption | Hormuz traffic stays restricted into 2027, in line with Morgan Stanley's view of a deficit through the first quarter | Fuel near current levels; elevated surcharges, tanker rates and petrochemical costs all year |
+| Gradual reopening | A ceasefire or safe-passage arrangement lets traffic recover through 2027 | Crude eases first; refined products and refining margins lag by months |
+| Escalation | Further damage to Gulf energy infrastructure or shipping | A spike like March, when Dubai crude reached $169.75 a barrel |
+
+These scenarios are our framework, not a forecast. Most procurement teams should budget on the first and stress-test against the third.
+
+## Clauses to check in energy-exposed contracts
+
+- **Surcharge formula.** Which index, which week, what base price and what increment per cent of change.
+- **Pass-through caps.** Whether energy surcharges can exceed a set percentage of the invoice.
+- **Downward adjustment.** Whether surcharges fall as fast as they rise.
+- **Force majeure.** Whether war or shipping disruption excuses performance, and what notice and mitigation the supplier owes you.
+- **Reopener clauses.** When either side can reopen price if energy moves beyond a band.
 
 ## What procurement teams should do
 

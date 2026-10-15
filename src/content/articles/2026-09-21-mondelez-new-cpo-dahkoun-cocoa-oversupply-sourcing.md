@@ -2,6 +2,7 @@
 title: "Mondel\u0113z promotes its cocoa chief to CPO as the cocoa market swings from shortage to surplus"
 dek: "Zakaria Dahkoun, who ran the snack maker's cocoa business, became chief procurement officer on Aug. 1. His predecessor left for chocolate supplier Barry Callebaut. The company says cocoa supply is now more than sufficient."
 date: 2026-09-21
+updated: 2026-10-14
 topic: people-moves
 type: news
 signal: 3
@@ -32,6 +33,10 @@ faqs:
     a: "Zakaria Dahkoun became chief procurement officer on Aug. 1, 2026. He previously led the company's cocoa business and global direct materials sourcing."
   - q: "Is the cocoa shortage over?"
     a: "Mondel\u0113z's chief operating officer said in September 2026 that cocoa supply is in a much better position and that recent production is more than sufficient to cover the earlier deficit. Supply Chain Dive described the market as oversupplied."
+  - q: "How should procurement teams contract for cocoa as prices ease?"
+    a: "Avoid long fixed prices set at the peak. Index-linked terms, collars with a floor and ceiling, or layered forward coverage let buyers capture lower prices while keeping some protection if the market tightens again."
+  - q: "Who is Mondel\u0113z's chief procurement officer?"
+    a: "Zakaria Dahkoun became CPO effective Aug. 1, 2026. He previously led Mondel\u0113z's cocoa enterprise and global direct materials sourcing, and succeeded Thomas Gaengler, who left to become COO of Barry Callebaut."
 ---
 
 ## Why it matters
@@ -58,6 +63,23 @@ He succeeds Thomas Gaengler, CPO for four years, who left to become chief operat
 | Veho | Ronak Patel, SVP of supply chain | Nearly nine years at Amazon, including leading a fleet of about 99,000 vehicles |
 | Ocean Spray | Brad Hartzell, chief supply chain officer | Appointed as the cranberry harvest began |
 | Spark Minda | Geetika Mishra, CPO | 18+ years at Motherson Group |
+
+## Contracting for a commodity as it turns
+
+When a commodity moves from shortage to surplus, the contract structure matters as much as the price. The common options, and when each fits:
+
+| Structure | How it works | When it fits |
+|---|---|---|
+| Fixed price | Price set for the term | Rarely in a falling market; locks in today's level |
+| Index-linked | Price moves with a published benchmark | When you want to follow the market down |
+| Collar | Index-linked between a floor and a ceiling | When you want some protection if prices rebound |
+| Layered coverage | Buy portions forward at different times | When you want to average into a falling market |
+
+This is general commodity-buying practice. Most food manufacturers combine several, and larger buyers hedge through futures, which needs treasury involvement and controls.
+
+## When a former customer's CPO joins your supplier
+
+Moves like Gaengler's are common in food and ingredients. For the company left behind, the practical steps are to refresh the relationship map with the supplier, confirm confidentiality obligations on both sides, and treat the next negotiation as a fresh one: the supplier now has insight into how you buy. For the supplier, the move can make relationships smoother, because its operations leader understands customer requirements well.
 
 ## What it means for procurement teams
 

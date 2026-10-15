@@ -2,6 +2,7 @@
 title: "Defense distributor Noble Supply & Logistics files for Chapter 11 after a shortened DLA contract left it holding $100 million of inventory"
 dek: "The Boston-based MRO and fastener distributor serves 4,000 government customers through 13,000 suppliers. Its filing shows how a customer's contract decision can break a distributor, and what that means for the suppliers and agencies that depend on it."
 date: 2026-08-31
+updated: 2026-10-14
 topic: supplier-risk
 type: news
 signal: 4
@@ -32,6 +33,10 @@ faqs:
     a: "Noble says the Defense Logistics Agency shortened an expected 10-year fastener contract to four years and did not complete an end-of-contract inventory buyback, leaving it with about $100 million of inventory and obligations. DLA also terminated about $400 million of orders under another contract on Aug. 27, 2026."
   - q: "Is Noble still operating?"
     a: "Yes. It filed Chapter 11 on Aug. 30, 2026, and planned to keep operating using cash collateral, with court approval sought to pay employees and critical vendors."
+  - q: "Why did Noble Supply & Logistics file for bankruptcy?"
+    a: "According to its filing, the Defense Logistics Agency declined to extend a large fastener contract, cutting it from an expected ten years to four, without an inventory buyback, leaving about $100 million of inventory and obligations. DLA then terminated about $400 million of orders under another contract."
+  - q: "How can procurement spot distributor financial risk early?"
+    a: "Watch for slower payments to the distributor's own suppliers, dependence on one large customer or contract, large inventory builds for specific programs, new subordinated debt or factoring, and failed sale or investment talks."
 ---
 
 ## Why it matters
@@ -52,6 +57,18 @@ The petition estimates assets of $100 million to $500 million and liabilities of
 - **Strained suppliers.** Liquidity problems forced Noble to delay vendor payments.
 
 Noble cut about $30 million of operating expenses and raised $25 million from subordinated noteholders in June 2025, but that wasn't enough. Talks with Bain Special Situations didn't produce a deal.
+
+## The numbers behind the failure
+
+By our calculation from Noble's filing, the DLA fastener contract was cut from an expected ten years to four, a 60% reduction in its expected life. Inventory and purchase obligations tied to that one contract, more than $70 million, made up most of the roughly $100 million Noble says it was left holding. Then the Aug. 27 termination removed about $400 million of orders under a second contract, three days before the filing. The pattern is common in distributor failures: the business looked healthy while its largest contract ran, and the cash tied up in inventory only became a problem when that contract ended.
+
+## What happens to customers and suppliers in a Chapter 11
+
+- **Customers** usually keep receiving goods while the company operates under court supervision, but service can slip as cash is tight. Contracts may be assumed by a buyer or rejected.
+- **Suppliers** with unpaid invoices from before the filing become creditors. Some may be paid early as critical vendors if the court approves; others wait for the outcome of the case.
+- **Suppliers who shipped in the 20 days before the filing** may have a priority claim for those goods under the Bankruptcy Code.
+
+This is a general description, not legal advice. Suppliers should get advice on their specific claims.
 
 ## Warning signs to watch in your own distributors
 

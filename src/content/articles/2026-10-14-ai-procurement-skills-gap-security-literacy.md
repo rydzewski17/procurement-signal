@@ -28,6 +28,10 @@ faqs:
     a: "What data and systems the AI can access, what permissions it holds, where its training and input data come from, how outputs are validated, and what happens if it is manipulated or behaves unexpectedly."
   - q: "What questions should procurement ask AI vendors?"
     a: "Ask what the AI can access and with what permissions, where its data comes from, how outputs are validated before actions, what happens if it is manipulated or misbehaves, and whether every action is logged."
+  - q: "What should procurement ask vendors selling AI agents?"
+    a: "Ask what data and systems the agent can reach and with what permissions, whether outside content can influence it, how outputs are validated before actions, what happens if it is manipulated, and whether every action is logged."
+  - q: "Do procurement staff need cybersecurity training to buy AI?"
+    a: "They don't need to become security experts, but they need to know which questions to ask and when to bring in the security team, according to Hack The Box's Nikos Fountas."
 ---
 
 ## Why it matters
@@ -73,6 +77,34 @@ Fountas argues that standard security questionnaires and certifications don't re
 | Contract terms on permissions, logging and liability | Owns, with legal | Advises |
 
 This split is our framework based on the column's argument; adapt it to your organization.
+
+## Match the review to the level of autonomy
+
+| What the AI does | Example | Review it needs |
+|---|---|---|
+| Drafts or summarizes | Supplier summary, first draft of an RFP | User checks it against source documents |
+| Recommends | Suggests a supplier shortlist or award | Buyer verifies the reasoning and data before acting |
+| Acts with approval | Prepares a purchase order a person approves | Approval step plus logging of what was proposed |
+| Acts on its own | Sends RFQs, updates records or pays invoices | Security review, limited permissions, full action logs and a way to reverse actions |
+
+This framework is ours, built on the column's point that autonomy changes the stakes. Most procurement teams are moving from the first row to the third; the fourth needs security involvement before it goes live.
+
+## Contract terms for AI purchases
+
+- **Permissions.** List the systems and data the AI may access, and require notice before that changes.
+- **Data use.** State whether your data can be used to train models for other customers.
+- **Logging.** Require logs of every action an agent takes, retained for a set period and available on request.
+- **Incident notice.** Require prompt notice if the AI is manipulated or acts outside its permissions.
+- **Liability.** Allocate responsibility for losses caused by incorrect AI actions.
+
+These are our suggestions for discussion with legal and security teams.
+
+## A practical training plan
+
+1. **Everyone:** how the team's approved AI tools work, how to verify outputs and what data must never be pasted into them.
+2. **Category managers:** how to evaluate AI in the products they buy, using the five vendor questions above.
+3. **Team leads:** how to supervise AI-assisted work and when to escalate to security.
+4. **New hires:** structured time doing core sourcing tasks by hand, then reviewing and correcting AI output, so they learn the fundamentals.
 
 ## What procurement teams should do
 

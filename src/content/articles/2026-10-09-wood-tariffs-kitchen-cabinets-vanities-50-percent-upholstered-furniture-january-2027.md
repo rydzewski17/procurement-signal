@@ -2,6 +2,7 @@
 title: "Kitchen cabinet and vanity tariffs are set to double to 50% on Jan. 1, with upholstered furniture rising to 30%"
 dek: "A one-year delay of the Section 232 wood products increases ends Dec. 31 unless more countries reach agreements. Procurement teams buying furniture, fixtures and cabinetry for 2027 projects should price the higher rates now."
 date: 2026-10-09
+updated: 2026-10-14
 topic: tariffs-trade
 type: analysis
 signal: 4
@@ -32,6 +33,10 @@ faqs:
     a: "Since Oct. 14, 2025, upholstered wooden furniture, kitchen cabinets and vanities carry 25%, and softwood timber and lumber about 10%. On Jan. 1, 2027, upholstered furniture is scheduled to rise to 30% and cabinets and vanities to 50%."
   - q: "Can the January 2027 increases be avoided?"
     a: "The proclamation allows for different treatment for countries that reach agreements addressing the national security concern. Monitor announcements for your supplier countries."
+  - q: "Should we import kitchen cabinets before January 1, 2027?"
+    a: "If you have the space and cash, entering cabinets before Jan. 1 saves 25 points of duty. On a $200,000 order that is $50,000, which outweighs holding costs for up to about a year at a 1.5% monthly holding rate, by our calculation."
+  - q: "Are U.S.-made cabinets competitive with imports at a 50% tariff?"
+    a: "At a 50% duty, an imported cabinet with a $100 customs value costs $150 plus freight. Domestic cabinets quoted up to about that level are competitive, by our calculation, so 2027 projects are worth re-quoting with domestic suppliers."
 ---
 
 ## Why it matters
@@ -60,6 +65,24 @@ The increases were originally due on Jan. 1, 2026. A proclamation issued Dec. 31
 
 For a cabinet order with a $200,000 customs value, the duty would rise from $50,000 at 25% to $100,000 at 50%, before freight and normal duties, by our calculation. For $200,000 of upholstered furniture, it would rise from $50,000 to $60,000.
 
+## Pull forward or wait? A break-even example
+
+Entering goods before Jan. 1 saves the difference between the current and scheduled rates, but you pay to hold the stock. For the $200,000 cabinet order above, entering early saves $50,000 in duty. Against that:
+
+| Months the stock sits before you need it | Holding cost at 1.5% a month (example) | Net saving from entering early |
+|---|---|---|
+| 3 | $9,000 | $41,000 |
+| 6 | $18,000 | $32,000 |
+| 12 | $36,000 | $14,000 |
+
+The 1.5% monthly holding rate is an illustrative assumption covering storage, capital and handling; use your own figure. These are our calculations. For cabinets, pulling forward pays in most cases where you have the space and the cash. For upholstered furniture, where the saving is only five points, it rarely pays to hold stock for more than a few months.
+
+## Imported versus domestic: where the break-even moves
+
+At 25%, an imported cabinet with a $100 customs value costs $125 plus freight and any other duties. At 50%, the same cabinet costs $150. A U.S.-made cabinet quoted at up to about $150, delivered on comparable terms, is now competitive before freight differences, by our calculation. Many buyers who ruled out domestic cabinetry on price should re-quote it for 2027 projects, and check domestic lead times and capacity before committing.
+
+**Selling into Europe?** EU deforestation rules take effect Dec. 30, 2026 and cover wood products, so companies that both import into the U.S. and export to the EU face two sets of documentation requirements at the same time. See our [EUDR coverage](/articles/2026-10-07-eudr-deforestation-regulation-december-30-2026-deadline-suppliers/).
+
 ## Who is most exposed
 
 | Buyer | Exposure | Our read |
@@ -76,6 +99,14 @@ For a cabinet order with a $200,000 customs value, the duty would rise from $50,
 - **Weigh pulling forward imports.** Entering goods before Jan. 1 locks in 25%, but adds inventory cost and storage.
 - **Ask domestic suppliers for quotes.** U.S.-made cabinets avoid the tariff and may be competitive at a 50% rate.
 - **Add tariff change clauses** to project contracts so increases are shared or passed through transparently.
+
+## Questions to ask your furniture and cabinet suppliers
+
+1. Which of the products you sell us are classified as kitchen cabinets, vanities or upholstered wooden furniture under the proclamation?
+2. What is the country of origin for each, and could origin change if a country reaches an agreement with the U.S.?
+3. How will your price change on Jan. 1, and will you show the duty separately from the product price?
+4. Can you ship 2027 project orders before year-end, and at what storage cost?
+5. Do you have a U.S.-made or alternative-origin option, and what are its lead times?
 
 ## What to watch next
 

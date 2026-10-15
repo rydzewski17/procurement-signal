@@ -2,6 +2,7 @@
 title: "USMCA wasn't renewed at its first review. Here's what annual reviews through 2036 mean for North American sourcing"
 dek: "The U.S. declined to extend the agreement on July 1, so the three countries now review it every year. The pact stays in force until 2036, but auto rules of origin, steel and aluminum are open for negotiation."
 date: 2026-09-10
+updated: 2026-10-14
 topic: tariffs-trade
 type: analysis
 signal: 4
@@ -34,6 +35,10 @@ faqs:
     a: "The three countries now hold annual reviews through 2036, and the U.S. is negotiating bilaterally, starting with Mexico, on topics including auto rules of origin and steel and aluminum."
   - q: "Should we still claim USMCA preference?"
     a: "Yes, where goods qualify. USMCA preference also exempts qualifying goods from some newer tariffs, such as the Section 301 forced-labor duty, so documentation matters more than ever."
+  - q: "When is the next USMCA review?"
+    a: "The parties review the agreement every year after the U.S. declined to confirm an extension on July 1, 2026. The next joint review falls on July 1, 2027, and an extension can be agreed at any review."
+  - q: "Do USMCA preferences still apply after the U.S. declined to renew?"
+    a: "Yes. Preferential tariffs, rules of origin, investment protections and dispute settlement all stay in force while the agreement is reviewed annually through 2036."
 ---
 
 ## Why it matters
@@ -64,6 +69,34 @@ As of late July, no formal U.S.–Canada talks had been held.
 
 **Canada's position.** Canada signaled support for a 16-year renewal in a June 1 letter from minister Dominic LeBlanc. Its priority is U.S. sectoral tariffs on steel, aluminum, autos and lumber, and it had not begun substantive text-based negotiations with the U.S. by late July.
 
+## Timeline
+
+| Date | Event |
+|---|---|
+| July 1, 2020 | USMCA enters into force with a 16-year term |
+| May 28–30, 2026 | First U.S.–Mexico round, Mexico City |
+| June 1, 2026 | Canada signals support for a 16-year renewal |
+| June 16–17, 2026 | Second U.S.–Mexico round, Washington |
+| July 1, 2026 | First joint review; the U.S. does not confirm an extension |
+| Late July 2026 | Third U.S.–Mexico round, Mexico City |
+| September 2026 | Fourth U.S.–Mexico round scheduled |
+| July 1, 2027 | Next annual joint review |
+| July 1, 2036 | Agreement expires unless extended |
+
+## Three scenarios for North American sourcing
+
+| Scenario | What changes | What it means for sourcing |
+|---|---|---|
+| Extension agreed at a future review | Term resets to 16 years | Nearshoring plans regain a long horizon |
+| Rolling reviews with targeted changes | Tighter auto rules of origin, metals terms or labor provisions | Some parts lose preference unless suppliers change inputs |
+| Breakdown of talks | Higher risk of withdrawal or loss of preference | Duty and investment risk on Mexican and Canadian supply |
+
+These scenarios are our framework. The second is the most likely near-term path given the bilateral talks under way.
+
+## What losing preference would cost
+
+USMCA preference means qualifying goods enter duty-free. A part that no longer qualifies pays the normal U.S. duty for its classification, and for many goods that now includes Section 232 or other duties layered on top. For a sourcing team, the useful exercise is to list your top Mexican and Canadian parts by spend, note the duty each would pay without preference, and multiply. That figure is the value at risk in each annual review, and the number to bring to suppliers when discussing origin compliance and contract terms.
+
 ## Exposure by category
 
 | Category | Why it's exposed | Our read |
@@ -79,6 +112,14 @@ As of late July, no formal U.S.–Canada talks had been held.
 - **Build change clauses into Mexican and Canadian supply agreements.** Spell out who absorbs cost if origin rules or duties change.
 - **Stress-test nearshoring business cases.** Run scenarios where preference is lost on key parts.
 - **Keep an eye on the border.** Separate from USMCA, [cross-border trucking capacity is tight](/articles/2026-10-14-mexico-cross-border-trucking-capacity-visa-restrictions/).
+
+## Questions to ask Mexican and Canadian suppliers
+
+1. Which of our parts do you certify as USMCA-originating, and under which rule of origin?
+2. For auto parts, what is the regional value content today, and how much room is there if the threshold rises?
+3. Which inputs come from outside North America, and could you switch them?
+4. Who bears the duty if a part loses preference after a review?
+5. How quickly can you produce origin documentation if U.S. Customs asks for it?
 
 ## What to watch next
 

@@ -34,6 +34,10 @@ faqs:
     a: "Through carriers. Models vary: Kodiak supplies its driver system to carriers that own the trucks, while other providers hold the operating authority and insurance themselves. Ask who carries liability and insurance before tendering freight."
   - q: "How much does autonomous truck hardware cost?"
     a: "Bot Auto says its full autonomy hardware will cost about $50,000 per truck from early 2027, compared with industry estimates of $150,000 to $400,000 for autonomy systems alone."
+  - q: "Where are autonomous trucks hauling freight in Texas?"
+    a: "Kodiak and Charger Logistics run Dallas\u2013Laredo with a safety driver aboard, Aurora also works with Charger on that lane, Kodiak plans driverless long haul on Dallas\u2013Houston by year-end, and Bot Auto completed a fully driverless run from Houston to the Dallas area in April."
+  - q: "How much does autonomous truck hardware cost?"
+    a: "Bot Auto says its full autonomy hardware will cost about $50,000 per truck from early 2027. It cites estimates implying $150,000 to $400,000 for autonomy hardware on other systems."
 ---
 
 ## Why it matters
@@ -51,6 +55,20 @@ Kodiak supplies its system as a service on trucks the carrier owns and operates.
 ## Why the hardware price matters to shippers
 
 Autonomy changes freight costs only when trucks can run without a driver at scale, and that depends on hardware cost as much as on safety approval. A lower kit price lets more carriers, not just the largest fleets, buy driverless trucks, which would spread the technology to more lanes. Bot Auto, which moves about 350 loads a month in Texas and says revenue grew 270% from May to August, is targeting 1 billion autonomous miles by 2031.
+
+## What the cost gap implies
+
+If Bot Auto's $50,000 kit ships as planned, it would cost $100,000 to $350,000 less per truck than the autonomy hardware implied by the estimates it cites, by our calculation. For a carrier converting a fleet of 50 trucks, that is a difference of $5 million to $17.5 million in upfront cost. Hardware isn't the only cost: software, mapping, remote assistance and insurance add to it, and those figures aren't public. But hardware has been the main barrier for mid-size carriers, which run much of the capacity procurement teams buy.
+
+## How to pilot autonomous capacity
+
+1. **Pick one lane** between two fixed terminals, with steady daily volume and freight that isn't time-critical.
+2. **Run it alongside driven capacity** for a set period, with the same service measures.
+3. **Agree liability in writing:** who holds operating authority, who insures the load and what happens on a disengagement.
+4. **Measure on-time delivery, claims, cost per mile and tender acceptance** against conventional carriers on the same lane.
+5. **Decide on scale** only after the provider moves from safety-driver to driverless operation on that lane.
+
+This is our suggested approach.
 
 ## Where autonomous freight is running in Texas
 

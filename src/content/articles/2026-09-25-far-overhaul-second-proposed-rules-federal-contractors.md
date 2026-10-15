@@ -2,6 +2,7 @@
 title: "The FAR overhaul's second round covers 16 more parts, including commercial items, competition and contract types"
 dek: "Proposed rules published Sept. 18 rewrite FAR parts that govern how agencies buy commercial products, run competitions and choose contract types. With 36 parts now proposed, contractors and federal buyers should review drafts during the 30-day comment window."
 date: 2026-09-25
+updated: 2026-10-14
 topic: public-sector
 type: news
 signal: 3
@@ -32,6 +33,10 @@ faqs:
     a: "An effort to rewrite the Federal Acquisition Regulation, the rules for how U.S. agencies buy goods and services. After interim class deviations, it entered formal notice-and-comment rulemaking in June 2026."
   - q: "Which FAR parts were in the September 2026 proposed rules?"
     a: "Parts 8, 9, 12, 13, 14, 15, 16, 17, 27, 28, 35, 36, 38, 44, 47 and 51, with associated Part 52 clauses, according to Wiley."
+  - q: "Which FAR parts are in the second set of proposed rules?"
+    a: "Parts 8, 9, 12, 13, 14, 15, 16, 17, 27, 28, 35, 36, 38, 44, 47 and 51, covering areas such as commercial acquisitions, simplified procedures, negotiated contracting, contract types, schedules and subcontracting."
+  - q: "Do FAR changes affect subcontractors?"
+    a: "Yes. Prime contractors flow many FAR clauses down to their suppliers, so changes to parts such as 44 on subcontracting policies can reach companies that never hold a federal contract directly."
 ---
 
 ## Why it matters
@@ -68,6 +73,30 @@ Part titles are the standard FAR part names.
 Wiley notes that the second-round proposals go further than the interim class deviation text agencies have been using, and some fold in other pending rulemakings. Related actions this summer included a proposed consolidated security and supply chain framework (Part 40), a revised framework for controlled unclassified information, and updated Part 16 deviation text implementing an executive order on preferring fixed-price contracts.
 
 A final set of four notices covering the remaining FAR parts is expected in 2026. Those will also be proposals; no final rules have been issued yet.
+
+## Timeline so far
+
+| Date | Step |
+|---|---|
+| June 23, 2026 | First set of proposed rules: 20 FAR parts and associated clauses |
+| Summer 2026 | Related proposals: Part 40 security and supply chain framework, controlled unclassified information, Part 16 fixed-price deviation text |
+| Sept. 18, 2026 | Second set of proposed rules: 16 FAR parts |
+| Later in 2026 | Final set of four notices covering the remaining parts |
+| After comments | Final rules, part by part |
+
+Each set carries a 30-day comment period. Check the docket for each notice for the exact closing date, since it runs from publication in the Federal Register.
+
+## Why the second set matters more to most suppliers
+
+The first set covered foundational parts of the regulation. The second reaches the parts most suppliers deal with every day. Part 12 governs how agencies buy commercial products and services, Part 13 covers the simplified procedures used for smaller purchases, Part 15 covers negotiated competitions, and Part 16 decides which contract types agencies use. Part 44 changes matter to anyone selling as a subcontractor, because primes pass FAR requirements down through their supply chains. Even companies that never hold a federal contract directly can feel these changes through flow-down clauses.
+
+## How to comment
+
+1. **Find the notice** for the FAR part you care about on regulations.gov.
+2. **Compare it with the current text** and the class deviation your agencies are using.
+3. **Explain the effect** with specifics: cost, time, number of contracts affected.
+4. **Propose wording.** Comments that suggest alternative text are easier for drafters to use.
+5. **Coordinate** with your trade association, which may file a combined comment.
 
 ## Who should pay attention
 

@@ -30,6 +30,10 @@ faqs:
     a: "Employees using unapproved AI tools, such as general chatbots, to do work when the organization hasn't provided sanctioned ones. It creates data and accuracy risks that formal adoption can reduce."
   - q: "What share of freight quotes still arrive by email?"
     a: "Dan Bailey of Nexcade says about 90% of freight quote requests still arrive by email, which is why AI agents that read inboxes and stage quotes are seeing early adoption."
+  - q: "How are most freight quotes requested today?"
+    a: "About 90% of freight quote requests still arrive by email, according to Nexcade CEO Dan Bailey, which is why AI tools that read inboxes and prepare quotes are drawing interest."
+  - q: "Where do AI tools in freight deliver measurable returns first?"
+    a: "Quoting speed and invoice reconciliation. Bailey said reductions in demurrage, detention and unexpected charges become significant over 12 to 18 months."
 ---
 
 ## Why it matters
@@ -49,6 +53,22 @@ His view on where returns come from:
 - **Speed shows up in revenue.** Win rates by response time and margin by lane quantify the commercial effect.
 - **Shadow AI is already happening.** "If you're not adopting it, I can guarantee you that your employees are in shadow capacity one way or another," Bailey said, pointing to widespread unsanctioned use of general chatbots.
 - **Run pilots from both ends.** He recommends identifying strategic workflows and building data foundations from the top, while letting willing teams run small pilots from the bottom, giving companies "three or four bites at the apple" before a major rollout.
+
+## Where AI fits in the freight buying cycle
+
+| Stage | What AI can do | What procurement should check |
+|---|---|---|
+| Quoting | Read emailed requests, pull rates and return quotes | Response time and quote accuracy |
+| Bids and RFPs | Clean lane data and compare carrier responses | Whether the tool normalizes accessorials and fuel |
+| Tendering and booking | Match loads to carriers and confirm bookings | Tender acceptance and exceptions |
+| Tracking | Flag delays and exceptions from carrier messages | How exceptions reach your team |
+| Freight audit | Reconcile invoices against contract rates | Recovered overcharges and disputed charges |
+
+This mapping is our framework. Bailey's comments focus on quoting and reconciliation, which is where measurable results usually appear first.
+
+## A simple business case
+
+Take a forwarder team of five handling 30 quote files each a day. If AI doubles files handled per person, as Bailey says customers have seen, the same team handles 300 files a day instead of 150, without adding staff. For a shipper, the same logic applies to freight audit: if accessorial and unplanned charges run at a few percent of a $20 million freight budget, recovering even a fraction is worth more than many software subscriptions. These figures are illustrative; build the case on your own invoice data.
 
 ## How to measure AI value in freight
 

@@ -2,6 +2,7 @@
 title: "EU deforestation rules apply Dec. 30: what U.S. companies selling into Europe need from suppliers of cocoa, coffee, soy, wood and rubber"
 dek: "Medium and large companies placing covered products on the EU market must show they are deforestation-free and legally produced, with geolocation data from origin. Recent changes put most of the burden on the first company to place goods on the market."
 date: 2026-10-07
+updated: 2026-10-14
 topic: esg-regulation
 type: analysis
 signal: 4
@@ -27,6 +28,8 @@ sources:
     url: "https://www.forvismazars.com/nl/en/who-we-are/news-events-and-publications/news/eudr-update"
   - name: "Mayer Brown \u2014 EU Regulation on deforestation-free products: what lies ahead in 2026"
     url: "https://www.mayerbrown.com/es/insights/publications/2026/02/eu-regulation-on-deforestation-free-products-eudr-what-lies-ahead-in-2026"
+  - name: "EUR-Lex \u2014 Regulation (EU) 2023/1115 on deforestation-free products"
+    url: "https://eur-lex.europa.eu/eli/reg/2023/1115/oj"
 faqs:
   - q: "When does the EU Deforestation Regulation apply?"
     a: "From Dec. 30, 2026, for medium and large companies. A simplified regime applies to certain micro and small primary operators."
@@ -34,6 +37,10 @@ faqs:
     a: "Cattle, cocoa, coffee, palm oil, rubber, soy and wood, plus derived products that contain, were fed with or were made using them, such as chocolate, leather, furniture, paper and tires."
   - q: "Does the EUDR apply to U.S. companies?"
     a: "It applies to any company placing covered products on the EU market, making them available there, or exporting them from the EU, including subsidiaries and importers of U.S. companies."
+  - q: "What information goes into an EUDR due diligence statement?"
+    a: "Annex II of the regulation lists the operator's details, the product's customs code, description and quantity, the country of production, geolocation of every plot where the commodity was produced, and a statement that due diligence found no or negligible risk."
+  - q: "What are the penalties for breaching the EU Deforestation Regulation?"
+    a: "Member states set penalties, but the regulation requires maximum fines of at least 4% of a company's total annual EU turnover, plus possible confiscation of products and revenue and temporary exclusion from public contracts."
 ---
 
 ## Why it matters
@@ -64,6 +71,20 @@ From Dec. 30, 2026, medium and large companies must ensure covered products plac
 
 **The legality requirement is the hardest part.** Products must comply with the laws of the country of production, and EU guidance covers eight legal areas, including land-use rights, labor rights, free prior and informed consent, and tax and customs rules. Mayer Brown's authors argue that, in practice, this requires regular audits of producers, which makes certification schemes essential.
 
+## What a due diligence statement contains
+
+Annex II of the regulation sets out what goes into a due diligence statement. In summary:
+
+- The operator's name, address and identifiers
+- The product's customs code, description and quantity
+- The country of production
+- Geolocation of every plot of land where the commodity was produced
+- A statement that due diligence was carried out and found no or only negligible risk
+
+The geolocation requirement is the one most suppliers struggle with. For larger plots, a polygon of the boundary is needed rather than a single point, under the regulation's rules.
+
+**Penalties.** Member states set penalties, but the regulation requires the maximum fine to be at least 4% of the company's total annual EU turnover, alongside confiscation of products and revenue and temporary exclusion from public procurement. Enforcement will vary by member state.
+
 ## What it means by category
 
 | Category | Typical derived products | Hardest data to get |
@@ -82,6 +103,18 @@ This is our assessment of where traceability is typically hardest.
 2. Can you provide plot-level geolocation data, or a DDS reference number from the operator who placed the product on the EU market?
 3. Who in your supply chain is the first operator, and have they started submitting statements?
 4. What is your plan if a source can't provide the data by Dec. 30?
+
+## A readiness plan for the last weeks before Dec. 30
+
+| When | What to do |
+|---|---|
+| Now | Confirm your role for each EU product line and list every SKU containing a covered commodity |
+| Next 2–4 weeks | Send supplier questionnaires and request geolocation data or DDS references |
+| Next 4–8 weeks | Escalate gaps; qualify alternative sources where suppliers can't provide data |
+| Before Dec. 30 | Test the EU information system with a sample statement; update contracts |
+| January 2027 | Review blocked or delayed shipments and fix data gaps |
+
+This plan is our suggestion and assumes you have not started. Teams further along should focus on the gaps.
 
 ## What procurement teams should do
 

@@ -38,6 +38,10 @@ faqs:
     a: "Probably not much. The announced 300,000 metric tons is about 2.2 million barrels, against U.S. non-jet distillate demand of about 3.65 million barrels a day, and analysts quoted by S&P Global expect little effect on U.S. prices."
   - q: "Can trucks use red-dye diesel on the road now?"
     a: "Not broadly. The executive order directs Treasury to consider deferring tax and waiving penalties, but many states prohibit dyed diesel on their roads, and most fuel networks don't stock it separately."
+  - q: "How is a truckload fuel surcharge calculated?"
+    a: "Most truckload contracts take the weekly DOE/EIA diesel price, subtract a base price written into the contract, and divide by an assumed fuel economy. With a $1.25 base and 6.5 mpg, a $6.18 diesel price works out to about 76 cents a mile, by our calculation."
+  - q: "How much does the base price in a fuel surcharge table matter?"
+    a: "A lot. On 1 million miles a year at $6.18 diesel, the difference between a $1.20 base at 6 mpg and a $1.50 base at 7 mpg is about $161,000, by our calculation."
 ---
 
 
@@ -70,6 +74,31 @@ Most truckload fuel surcharges follow a simple formula: the weekly DOE/EIA price
 | $6.50 (September record) | $0.81 | $808 |
 
 By our calculation, every 10-cent move in diesel changes the surcharge by about 1.5 cents a mile under these assumptions. That is why the surcharge table, not the headline price, decides what you pay.
+
+## Why two carriers can bill very different fuel at the same diesel price
+
+The base price and fuel economy written into a surcharge table matter as much as the diesel price itself. At the Oct. 12 price of $6.18 a gallon:
+
+| Base price | Fuel economy | Surcharge per mile | On 1 million miles a year |
+|---|---|---|---|
+| $1.20 | 6.0 mpg | $0.83 | about $830,000 |
+| $1.20 | 7.0 mpg | $0.71 | about $711,000 |
+| $1.50 | 6.0 mpg | $0.78 | about $780,000 |
+| $1.50 | 7.0 mpg | $0.67 | about $669,000 |
+
+These are our calculations. The spread between the highest and lowest table is about $161,000 a year on the same freight at the same fuel price. Normalizing base and fuel economy in your bid lets you compare carriers fairly, and lets you see which carriers are earning margin through the surcharge rather than the linehaul rate.
+
+**LTL and parcel work differently.** Less-than-truckload carriers and parcel carriers typically apply fuel surcharges as a percentage of the freight charge, set from a weekly table tied to the same DOE/EIA index. A percentage surcharge grows with every general rate increase, so check both the table and the base it applies to. See our [fuel surcharge guide](/guides/fuel-surcharge-guide-truckload-ltl-parcel/).
+
+## Building a 2027 fuel budget
+
+1. **Start from your miles or freight spend by mode**, not last year's surcharge total.
+2. **Pick a base case** near current prices, given that analysts expect refining constraints and the war with Iran to keep distillates tight into 2027.
+3. **Add a volatility band.** September's record above $6.50 and the spring swings show how far diesel moves within a quarter.
+4. **Apply each carrier's actual surcharge table** to the base case and the band.
+5. **Revisit quarterly** against weekly EIA prices.
+
+This is our method, and it works for any mode where the surcharge follows a published index.
 
 ## What procurement teams should do
 

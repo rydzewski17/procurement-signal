@@ -34,6 +34,10 @@ faqs:
     a: "Yes. It requires regulatory clearance and an RXO shareholder vote. MFN Partners, which owns about 17% of RXO, has agreed to vote in favor. Analysts quoted by FreightWaves see antitrust risk as minimal."
   - q: "When will the C.H. Robinson–RXO deal close?"
     a: "The companies expect it to close in the first half of 2027. RXO will be folded mainly into C.H. Robinson's North American Surface Transportation division."
+  - q: "When will C.H. Robinson's acquisition of RXO close?"
+    a: "The companies expect to close in the first half of 2027, subject to regulatory approval and an RXO shareholder vote. MFN Partners, which holds about 17% of RXO, has agreed to vote in favor."
+  - q: "How much of the brokered freight market would C.H. Robinson and RXO control?"
+    a: "About 20% of the brokered freight market, though C.H. Robinson says its share of the overall transportation market is in single digits."
 ---
 
 ## Why it matters
@@ -54,6 +58,22 @@ Freight brokers are suppliers, and supplier consolidation changes your leverage.
 
 **Liabilities and the broker market.** All of RXO's legal liabilities transfer at close, including litigation tied to serious motor carrier accidents. Leffler described a market of rising insurance costs, a shrinking carrier pool and growing litigation exposure that is pushing mid-size brokers toward the exit. Panelists said brokers ranked roughly 20 to 50 by size could be the next to consolidate. Both companies also run pools of drop trailers, sometimes 3,000 to 4,000 units each, a service many shippers rely on.
 
+## The deal in numbers
+
+| Term | Figure |
+|---|---|
+| Implied value | About $5.8 billion |
+| Price per RXO share | $30.25, a 29% premium |
+| Consideration | $17.25 cash plus 0.0856 C.H. Robinson shares, about 57% cash and 43% stock overall |
+| RXO holders' share of the combined company | About 11% |
+| Targeted net cost savings | About $300 million a year within two years |
+| Breakup fee | $185 million |
+| Expected close | First half of 2027 |
+
+By our calculation, the exchange terms imply a C.H. Robinson share price of about $152 at announcement, since $13 of the $30.25 price comes from 0.0856 shares.
+
+**Where the $300 million could come from.** The companies named cost-to-serve, operating efficiencies, shared services and third-party spend. For shippers, the parts to watch are cost-to-serve and operations, because those are where account teams, carrier sales and technology are combined. Savings there can mean fewer people on your account or a move to the acquirer's systems.
+
 ## What this means for shippers
 
 | If you... | Exposure | Priority |
@@ -71,6 +91,14 @@ Freight brokers are suppliers, and supplier consolidation changes your leverage.
 - **Watch performance during integration.** Track on-time pickup, tender acceptance and invoice accuracy monthly through the first year after close.
 - **Refresh your broker bench.** Qualify one or two alternative brokers or asset carriers on key lanes, especially if mid-size brokers you use are exit candidates.
 - **Check trailer pools.** Drop-trailer programs are a differentiator; confirm that capacity carries over.
+
+## Questions for your C.H. Robinson or RXO account team
+
+1. Will our account team, escalation contacts and service model change after close?
+2. Which technology platform will we tender and track loads on, and when would a change happen?
+3. Will our current rates and tender acceptance commitments carry over for the contract term?
+4. How will drop-trailer pools at our sites be handled?
+5. What share of our freight moves on the same carriers today, and will that carrier base change?
 
 ## What to watch next
 

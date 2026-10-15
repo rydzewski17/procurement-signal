@@ -2,6 +2,7 @@
 title: "U.S. and China agree to cut tariffs on about $60 billion of goods: what the '30-for-30' list means for sourcing"
 dek: "Each side will lower duties on roughly $30 billion of the other's goods, from household items and toys to U.S. farm products, coal and medical equipment. The cuts take effect only after domestic legal steps, and covered trade has already shrunk."
 date: 2026-09-28
+updated: 2026-10-14
 topic: tariffs-trade
 type: news
 signal: 4
@@ -34,6 +35,10 @@ faqs:
     a: "The U.S. list has 77 product entries, including fireworks, household goods, toys, kitchenware and sporting equipment. Check the final notice for exact tariff lines."
   - q: "Are soybeans included?"
     a: "No. Soybeans are excluded from the tariff cuts. China separately committed to buy 25 million metric tons of U.S. soybeans a year through 2028."
+  - q: "What products are covered by the U.S.\u2013China 30-for-30 tariff cuts?"
+    a: "The U.S. list has 77 product entries, including fireworks, household goods, toys, kitchenware and sporting equipment. China's list covers 1,619 items, including meat, seafood, dairy, grains, coal, timber and medical equipment."
+  - q: "Should we move sourcing back to China because of the tariff cuts?"
+    a: "Not yet for most categories. The cuts are narrow, start dates aren't set, other duties still apply and the truce runs only to January. Re-quoting China suppliers for listed products is a sensible first step."
 ---
 
 ## Why it matters
@@ -57,6 +62,21 @@ About 90% of covered products would get most-favored-nation treatment, according
 
 **Side commitments.** Soybeans are excluded, but China committed to buy 25 million metric tons of U.S. soybeans a year through 2028 and at least 10 million metric tons of U.S. coal in 2027 and again in 2028, according to the White House. A new agricultural working group is due to meet by the end of 2026. Export controls and Taiwan remain unresolved.
 
+## How far the covered trade has already fallen
+
+By our calculation from the figures above, the Chinese goods on the U.S. list fell about 28% in value from 2024 to 2025, and the U.S. goods on China's list about 35%. Much of that trade had already moved to other sources or been priced out by duties. Lower tariffs won't automatically bring it back: suppliers who left China have built new capacity elsewhere, and buyers have qualified them.
+
+## Timeline
+
+| Date | Event |
+|---|---|
+| May 2026 | President Trump visits Beijing; Board of Trade set up |
+| Sept. 25, 2026 | President Xi visits Washington |
+| Sept. 28, 2026 | China announces the "30-for-30" lists |
+| Nov. 10, 2026 | 178 Section 301 China exclusions expire |
+| End of 2026 | New agricultural working group due to meet |
+| January 2027 | Trade truce expires unless extended |
+
 ## What it means by category
 
 | Category | Likely effect | Our read |
@@ -72,6 +92,18 @@ About 90% of covered products would get most-favored-nation treatment, according
 - **Model landed cost both ways.** Compare China-origin cost with the cut against your diversified sources, including freight and lead time.
 - **Don't unwind diversification yet.** The cuts depend on legal steps not yet complete, and the truce runs only to January.
 - **Watch the expiring exclusions.** Separately, [178 Section 301 exclusions expire Nov. 10](/articles/2026-10-12-section-301-china-exclusions-expire-nov-10/), which can raise costs on other China-origin goods.
+
+## Questions to ask China-based suppliers
+
+1. Which of the products you sell us appear on the final U.S. list, at the 10-digit tariff line?
+2. When the cut takes effect, will you pass it through, and from which ship date?
+3. Which other duties will still apply, including Section 301 and the forced-labor tariff?
+4. How quickly could you increase volume if we moved some back?
+5. What happens to our pricing if the truce lapses in January?
+
+## When it makes sense to move volume back
+
+Moving volume back to China makes sense only where three things hold: the product is on the final list at the tariff-line level, the landed-cost saving survives the other duties that still apply, and the savings outweigh the cost of re-qualification and the risk of the truce lapsing. For most categories, a better first step is to re-quote existing China suppliers and use the result in negotiations with diversified sources. This is our view.
 
 ## What to watch next
 
