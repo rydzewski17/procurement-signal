@@ -83,7 +83,7 @@ const totalWeek = new Set(Object.values(topic).flatMap((t: any) => t.items.filte
                 <p class="cb">{t.blurb}</p>
                 {prices.length > 0 && (
                   <ul class="px">
-                    {prices.map((w: any) => <li class={({ high: 'rising-fast', elevated: 'rising', low: 'easing' } as any)[w.risk]}><a href={`/outlook/#${w.id}`}>{w.name}</a><b>{LEVERAGE[w.leverage].short}</b><em>{w.risk} risk</em></li>)}
+                    {prices.map((w: any) => <li class={({ high: 'rising-fast', elevated: 'rising', low: 'easing' } as any)[w.risk]}><a href={`/outlook/${w.id}/`}>{w.name}</a><b>{LEVERAGE[w.leverage].short}</b><em>{w.risk} risk</em></li>)}
                   </ul>
                 )}
                 {t.items.length > 0 ? (

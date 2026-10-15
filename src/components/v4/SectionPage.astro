@@ -133,7 +133,7 @@ const catLabel = (x: any) => categoryBySlug[x.cats[0]]?.name;
             <h2 class="h-rule">Category outlook<a class="view-all" href="/outlook/">All 12 categories</a></h2>
             <div class="sp-prices">
               {prices.map((p: any) => (
-                <a class={`sp-price lv${p.leverage}`} href={`/outlook/#${p.id}`}>
+                <a class={`sp-price lv${p.leverage}`} href={`/outlook/${p.id}/`}>
                   <span class="sp-pn">{p.name}</span>
                   <span class={`sp-risk r-${p.risk}`}>{RISK[p.risk]}</span>
                   <span class="sp-ps">{LEVERAGE[p.leverage].label}{p.impact?.when && <> · {p.impact.when}</>}</span>

@@ -1,0 +1,49 @@
+---
+// House ad: AdMesh, our first advertiser. Brand: Raleway, Royal Violet #3F037F on white, no gradients.
+// variant "box" fills rail slots (about 300×250); "leader" is a wide banner for inline slots.
+interface Props { variant?: 'box' | 'leader'; placement?: string }
+const { variant = 'box', placement = 'rail' } = Astro.props;
+const href = `https://www.useadmesh.com/?utm_source=procurementsignal&utm_medium=display&utm_campaign=launch&utm_content=${placement}`;
+---
+<aside class={`adm adm-${variant}`} aria-label="Advertisement">
+  <span class="adm-label">Advertisement</span>
+  <a class="adm-in" href={href} target="_blank" rel="sponsored noopener">
+    <span class="adm-logo">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true">
+        <g fill="none" stroke="#3F037F" stroke-width="2.2" stroke-linecap="round">
+          <path d="M6 24 L16 8 L26 24 Z" />
+          <path d="M11 16 L21 16 M16 8 L16 24" />
+        </g>
+        <g fill="#3F037F"><circle cx="6" cy="24" r="3.2" /><circle cx="16" cy="8" r="3.2" /><circle cx="26" cy="24" r="3.2" /><circle cx="16" cy="16" r="2.6" /></g>
+      </svg>
+      AdMesh
+    </span>
+    <span class="adm-head">Your buyers are asking AI platforms what to buy. <em>Be the answer.</em></span>
+    <span class="adm-sub">The first agentic ad network. Intent-driven ads inside AI conversations, priced on outcomes, not impressions.</span>
+    <span class="adm-cta">See how AdMesh works <span aria-hidden="true">→</span></span>
+  </a>
+</aside>
+
+<style>
+  .adm { margin-bottom: 28px; }
+  .adm-label { display: block; font: 600 11px/1 var(--ui); color: var(--muted); margin-bottom: 6px; letter-spacing: .02em; }
+  .adm-in { display: flex; flex-direction: column; gap: 12px; background: #fff; border: 1.5px solid #3F037F; padding: 20px 20px 18px; text-decoration: none; color: #3F037F; font-family: 'Raleway', var(--ui); transition: box-shadow .15s, transform .15s; }
+  .adm-in:hover { box-shadow: 0 10px 26px rgba(63, 3, 127, .16); transform: translateY(-1px); }
+  .adm-logo { display: inline-flex; align-items: center; gap: 8px; font: 800 20px/1 'Raleway', var(--ui); letter-spacing: -.01em; color: #3F037F; }
+  .adm-head { font: 800 22px/1.2 'Raleway', var(--ui); color: #3F037F; }
+  .adm-head em { font-style: normal; display: block; }
+  .adm-sub { font: 500 14.5px/1.45 'Raleway', var(--ui); color: #3F037F; }
+  .adm-cta { align-self: flex-start; background: #3F037F; color: #fff; font: 700 14px/1 'Raleway', var(--ui); padding: 11px 15px; }
+  .adm-in:hover .adm-cta { background: #2f0260; }
+  .adm-leader .adm-in { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "logo head cta" "logo sub cta"; align-items: center; gap: 4px 22px; padding: 18px 22px; }
+  .adm-leader .adm-logo { grid-area: logo; padding-right: 22px; border-right: 1.5px solid rgba(63, 3, 127, .25); align-self: stretch; }
+  .adm-leader .adm-head { grid-area: head; font-size: 19px; }
+  .adm-leader .adm-head em { display: inline; }
+  .adm-leader .adm-sub { grid-area: sub; font-size: 14px; }
+  .adm-leader .adm-cta { grid-area: cta; align-self: center; white-space: nowrap; }
+  @media (max-width: 760px) {
+    .adm-leader .adm-in { grid-template-columns: 1fr; grid-template-areas: "logo" "head" "sub" "cta"; gap: 10px; }
+    .adm-leader .adm-logo { border-right: 0; padding-right: 0; }
+    .adm-leader .adm-cta { justify-self: start; }
+  }
+</style>

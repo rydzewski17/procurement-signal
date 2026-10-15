@@ -181,13 +181,13 @@ const jsonLd = [
   .jump a:hover { background: var(--c); }
 
   .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin: 36px 0 10px; }
-  .tile { display: grid; grid-template-columns: 168px minmax(0, 1fr); background: #fff; border: 1px solid var(--rule); box-shadow: 0 1px 0 var(--rule); transition: box-shadow .15s; }
+  .tile { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; background: #fff; border: 1px solid var(--rule); box-shadow: 0 1px 0 var(--rule); transition: box-shadow .15s; }
   .tile:hover { box-shadow: 0 10px 28px rgba(14,42,71,.12); }
-  .tile-head { background: var(--c); color: #fff; padding: 18px 16px; text-decoration: none; display: flex; flex-direction: column; gap: 10px; position: relative; overflow: hidden; }
+  .tile-head { background: var(--c); color: #fff; padding: 14px 18px; text-decoration: none; display: flex; flex-direction: row; align-items: baseline; gap: 12px; position: relative; overflow: hidden; }
   .tile-head::after { content: ''; position: absolute; right: -40px; bottom: -40px; width: 120px; height: 120px; border-radius: 50%; border: 18px solid rgba(255,255,255,.1); }
-  .tag { font: 700 25px/1.05 var(--head); overflow-wrap: anywhere; }
-  .tile-head h2 { color: #fff; font: 600 15px/1.3 var(--ui); margin: 0; }
-  .count { margin-top: auto; font: 600 12px/1 var(--ui); background: rgba(255,255,255,.18); padding: 6px 8px; align-self: flex-start; }
+  .tag { font: 700 24px/1.1 var(--head); white-space: nowrap; flex: 0 0 auto; }
+  .tile-head h2 { color: rgba(255,255,255,.92); font: 600 14.5px/1.3 var(--ui); margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; flex: 1 1 auto; }
+  .count { margin-left: auto; font: 600 12px/1 var(--ui); background: rgba(255,255,255,.18); padding: 6px 8px; align-self: center; white-space: nowrap; flex: 0 0 auto; }
   .tile-body { padding: 16px 18px 16px; display: flex; flex-direction: column; min-width: 0; }
   .blurb { font: 15px/1.45 var(--head); color: var(--ink-2); margin: 0 0 12px; }
   .lbl { font: 600 12px/1 var(--ui); color: var(--c); margin: 0 0 6px; }
@@ -242,9 +242,8 @@ const jsonLd = [
   @media (max-width: 560px) {
     .stats dd { font-size: 30px; }
     .tile { grid-template-columns: 1fr; }
-    .tile-head { flex-direction: row; align-items: center; flex-wrap: wrap; gap: 8px 12px; padding: 14px 16px; }
-    .tile-head h2 { flex: 1 1 140px; }
-    .count { margin: 0; }
+    .tile-head { flex-wrap: wrap; gap: 4px 12px; }
+    .tile-head h2 { flex-basis: 100%; order: 3; white-space: normal; }
     .jump a { flex: 0 0 auto; }
   }
 </style>

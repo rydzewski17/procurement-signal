@@ -2,6 +2,7 @@
 // The homepage right rail, in the agreed order. Pages can show a subset.
 import SoftwareWidget from '../SoftwareWidget.astro';
 import Line from './Line.astro';
+import AdMesh from '../AdMesh.astro';
 import { getCollection } from 'astro:content';
 import events from '../../data/events.json';
 import conferences from '../../data/conferences.json';
@@ -97,7 +98,7 @@ const on = (k: string) => show.includes(k);
       <ul class="outl outl2">
         {outlook.map((c) => (
           <li>
-            <a href={`/outlook/#${c.id}`}>{c.name}</a>
+            <a href={`/outlook/${c.id}/`}>{c.name}</a>
             <span class={`st lv-${c.leverage <= 2 ? 'sup' : c.leverage >= 4 ? 'proc' : 'bal'}`}>{LEVERAGE[c.leverage].short}</span>
             <small>{c.impact?.when}</small>
           </li>
@@ -108,7 +109,7 @@ const on = (k: string) => show.includes(k);
     </section>
   )}
 
-  {on('ad') && <div class="ad-slot">Advertisement</div>}
+  {on('ad') && <AdMesh placement="rail" />}
 </aside>
 <script is:inline>
   document.querySelectorAll('.dates .dnum[data-date]').forEach((el) => {

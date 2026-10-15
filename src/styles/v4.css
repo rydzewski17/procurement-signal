@@ -434,3 +434,14 @@ footer { margin-top: 0 !important; }
   .n5-right { margin-left: auto; }
 }
 .n5-swp .dd-st { align-self: center; padding: 4px 6px; }
+.dd-prose > h2:first-child { font: 700 24px/1.25 var(--head) !important; color: var(--ink) !important; margin: 34px 0 12px !important; padding: 0 !important; border: 0 !important; }
+.dd-prose > h2:first-child + p { background: none; padding: 0; font: 18px/1.65 var(--head); border: 0; }
+
+.rail4 > .adm:last-child { position: sticky; top: 70px; }
+.side-sticky .adm { margin-top: 20px; }
+
+/* In-text links: internal (our pages) and external (cited sources) */
+.prose a.ilink { color: var(--link); text-decoration: underline; text-decoration-color: rgba(15,123,120,.45); text-underline-offset: 3px; }
+.prose a.ilink:hover { text-decoration-color: currentColor; }
+.prose a.xlink { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
+.prose a.xlink::after { content: "↗"; font-size: .75em; margin-left: 2px; vertical-align: super; text-decoration: none; display: inline-block; }

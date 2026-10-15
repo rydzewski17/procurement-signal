@@ -150,3 +150,10 @@ On the first run on or after the 15th of each month:
 5. Publish one `type: signal` story on the month's readings: which categories changed label, the biggest movers, and what procurement teams should do. Use only numbers computed from the data file. Run `node -e` against the JSON to compute them rather than estimating.
 
 Never invent or estimate an index value. If FRED is unreachable, skip the update and say so in the run report.
+
+
+## Category deep dives, links and ads
+
+- **Category deep dives** live in `src/content/outlook/{category}.md` and render at `/outlook/{category}/`. When `category-impact.json` changes a category's rating or move, update that file's takeaways and the "What is driving prices now" section, cite sources in frontmatter, and set `updated`. Educational sections (how the market works, how to buy it) change rarely.
+- **In-text links** are added automatically by `src/data/autolinks.ts`: first mentions of key terms link to our stories, guides, category analysis and glossary, and the first mention of each cited publisher links to its source. When you publish a story about a new company or topic, add a rule for it so other pages link to it. Still write 2–4 deliberate internal links into every new article.
+- **Ads**: the house advertiser is AdMesh (`src/components/AdMesh.astro`). Do not change ad copy or add advertisers without Jason's approval.

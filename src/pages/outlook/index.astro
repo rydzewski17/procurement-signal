@@ -33,15 +33,40 @@ const jsonLd = {
         <p class="ol-dek">Where procurement teams have negotiating leverage, where suppliers do, and the move we would make in each of 12 purchase categories this quarter.</p>
         <p class="ol-stamp">Our assessment, updated {asOf}. Reviewed every weekday with the newsroom.</p>
       </div>
-      <aside class="ol-key" aria-label="How to read this page">
-        <h2>How to read it</h2>
-        <dl>
-          <dt>Negotiating leverage</dt><dd>Five steps from {LEVERAGE[1].short.toLowerCase()} to {LEVERAGE[5].short.toLowerCase()}, based on prices, capacity and trade measures.</dd>
-          <dt>Supply risk</dt><dd>How likely you are to face shortages, allocation or delays, not just higher prices.</dd>
-          <dt>Our move</dt><dd>The one action we would take first, with the window to take it.</dd>
-        </dl>
-      </aside>
+
     </div>
+
+    <section class="ol-guide" aria-labelledby="guide-h">
+      <h2 id="guide-h">How to read each category card</h2>
+      <p class="ol-guide-intro">Every card answers three questions for a purchase category: <b>can you get it</b>, <b>who has the upper hand on price</b>, and <b>what should you do about it</b>. Here is what each part means, using diesel fuel as the example.</p>
+      <ol class="ol-steps">
+        <li>
+          <span class="ol-n">1</span>
+          <div class="ol-demo"><span class="ol-tag r-high">High supply risk</span></div>
+          <h3>Supply risk</h3>
+          <p>How likely you are to have trouble <em>getting</em> the product: shortages, allocation or delays. <b>Low</b> means buy as usual. <b>Elevated</b> means keep a backup. <b>High</b> means secure supply first and negotiate price second.</p>
+        </li>
+        <li>
+          <span class="ol-n">2</span>
+          <div class="ol-demo"><div class="ol-bar"><i class="on"></i><i></i><i></i><i></i><i></i></div><div class="ol-ends"><span>Suppliers</span><span>Procurement</span></div></div>
+          <h3>Negotiating leverage</h3>
+          <p>Who has the upper hand in price talks right now. The dark marker shows where the category sits. <b>Toward Suppliers</b>: expect increase requests and protect supply. <b>Toward Procurement</b>: prices or capacity favor you, so re-bid or ask for decreases.</p>
+        </li>
+        <li>
+          <span class="ol-n">3</span>
+          <div class="ol-demo ol-demo-text">“Diesel is up 77.8% on the year…”</div>
+          <h3>Why we rated it this way</h3>
+          <p>The facts behind the rating: price moves, capacity, shortages and trade measures, drawn from the reporting and data linked on the card.</p>
+        </li>
+        <li>
+          <span class="ol-n">4</span>
+          <div class="ol-demo ol-demo-move"><b>Our move</b><span>Tie fuel surcharges to the weekly index</span><small>◷ Before 2027 carrier awards</small></div>
+          <h3>Our move and the deadline</h3>
+          <p>The single action we would take first, and the window to take it. Click any card for the full analysis: how the market works, what is driving it and how to structure contracts.</p>
+        </li>
+      </ol>
+      <p class="ol-guide-note">Ratings are Procurement Signal's editorial assessment, updated as the news changes. The price line at the bottom of each card is the 12-month change in U.S. producer prices, shown for context: a category can have falling prices and high supply risk at the same time.</p>
+    </section>
 
     <CategoryWatch posts={posts} full />
 
@@ -68,10 +93,31 @@ const jsonLd = {
 </Base>
 
 <style>
-  .ol-head { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 36px; align-items: start; margin: 8px 0 6px; }
+  .ol-head { display: grid; grid-template-columns: minmax(0, 1fr); gap: 36px; align-items: start; margin: 8px 0 6px; }
   .ol-head h1 { font: 700 44px/1.08 var(--head); margin: 0 0 10px; color: var(--ink); }
   .ol-dek { font: 20px/1.45 var(--head); color: var(--ink-2); margin: 0 0 10px; }
   .ol-stamp { font: 13px var(--ui); color: var(--muted); margin: 0; }
+  .ol-guide { margin: 26px 0 8px; background: var(--navy-tint); border-top: 3px solid var(--teal); padding: 20px 22px; }
+  .ol-guide h2 { font: 700 22px/1.25 var(--head); margin: 0 0 6px; color: var(--ink); }
+  .ol-guide-intro { font: 16px/1.5 var(--ui); color: var(--ink-2); margin: 0 0 16px; max-width: 80ch; }
+  .ol-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+  .ol-steps li { position: relative; background: #fff; border: 1px solid var(--rule); padding: 14px 14px 12px; }
+  .ol-n { position: absolute; top: -10px; left: 12px; width: 22px; height: 22px; border-radius: 50%; background: var(--navy); color: #fff; font: 700 12px/22px var(--ui); text-align: center; }
+  .ol-steps h3 { font: 700 15.5px/1.25 var(--ui); color: var(--ink); margin: 10px 0 6px; }
+  .ol-steps p { font: 14px/1.5 var(--ui); color: var(--ink-2); margin: 0; }
+  .ol-demo { min-height: 44px; display: flex; flex-direction: column; justify-content: center; margin-top: 6px; }
+  .ol-tag { align-self: flex-start; font: 600 12px/1 var(--ui); padding: 6px 8px; }
+  .r-high { background: #fbe9e7; color: #a3261b; }
+  .ol-bar { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px; }
+  .ol-bar i { height: 8px; } .ol-bar i:nth-child(1) { background: #f1c9c3; } .ol-bar i:nth-child(2) { background: #f6dccf; } .ol-bar i:nth-child(3) { background: #e3e8ee; } .ol-bar i:nth-child(4) { background: #cfe9e4; } .ol-bar i:nth-child(5) { background: #b6dfd7; }
+  .ol-bar i.on { background: var(--navy); height: 12px; margin-top: -2px; }
+  .ol-ends { display: flex; justify-content: space-between; font: 11px var(--ui); color: var(--muted); margin-top: 4px; }
+  .ol-demo-text { font: italic 14px/1.4 var(--head); color: var(--ink); }
+  .ol-demo-move { background: var(--navy-tint); border-left: 3px solid var(--teal); padding: 6px 8px; font: 12px/1.35 var(--ui); }
+  .ol-demo-move b { color: var(--teal); font-weight: 600; } .ol-demo-move span { color: var(--ink); font-weight: 600; } .ol-demo-move small { color: var(--ink-2); }
+  .ol-guide-note { font: 13.5px/1.5 var(--ui); color: var(--muted); margin: 14px 0 0; }
+  @media (max-width: 960px) { .ol-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 20px; } }
+  @media (max-width: 560px) { .ol-steps { grid-template-columns: 1fr; } }
   .ol-key { background: var(--navy-tint); border-top: 3px solid var(--teal); padding: 14px 18px; }
   .ol-key h2 { font: 600 13px/1 var(--ui); color: var(--teal); margin: 0 0 8px; }
   .ol-key dl { margin: 0; font: 14px/1.45 var(--ui); }

@@ -11,7 +11,7 @@ export const STANCE: Record<string, string> = {
 };
 
 // Words that tie a headline to a purchase category.
-const MATCH: Record<string, RegExp> = {
+export const MATCH: Record<string, RegExp> = {
   steel: /\bsteel\b/i,
   aluminum: /alumin/i,
   copper: /\bcopper\b|\bbrass\b/i,

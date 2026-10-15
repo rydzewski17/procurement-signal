@@ -45,4 +45,17 @@ const glossary = defineCollection({
   schema: z.object({ term: z.string(), short: z.string(), related: z.array(z.string()).default([]) }),
 });
 
-export const collections = { articles, guides, glossary };
+// Category deep dives behind the Category outlook cards (/outlook/{category}/).
+const outlook = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/outlook' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    updated: z.coerce.date(),
+    takeaways: z.array(z.string()).min(3).max(6),
+    faqs: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
+    sources: z.array(z.object({ name: z.string(), url: z.string() })).default([]),
+  }),
+});
+
+export const collections = { articles, guides, glossary, outlook };

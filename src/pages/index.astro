@@ -7,6 +7,7 @@ import Kicker from '../components/Kicker.astro';
 import Rail from '../components/v4/Rail.astro';
 import Tile from '../components/v4/Tile.astro';
 import Line from '../components/v4/Line.astro';
+import AdMesh from '../components/AdMesh.astro';
 import { getPosts } from '../data/posts';
 import { SITE, TYPE_LABEL } from '../data/site';
 import { SECTIONS, categoryBySlug } from '../data/categories.mjs';
@@ -77,7 +78,7 @@ const jsonLd = { '@context': 'https://schema.org', '@type': 'NewsMediaOrganizati
           <div class="latest-list">
             {latest.map((x, i) => (
               <>
-                {i === 4 && <div class="ad-slot ad-inline">Advertisement</div>}
+                {i === 4 && <AdMesh variant="leader" placement="home-inline" />}
                 <article class="lrow">
                   <a class="lthumb" href={x.href} tabindex="-1" aria-hidden="true"><Media post={x.post} ratio="card" /></a>
                   <div class="lbody">

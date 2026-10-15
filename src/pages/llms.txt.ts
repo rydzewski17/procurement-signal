@@ -11,6 +11,7 @@ export async function GET(context: { site: URL }) {
   const posts = await getPosts();
   const guides = (await getCollection('guides')).sort((a, b) => a.data.title.localeCompare(b.data.title));
   const glossary = await getCollection('glossary');
+  const outlook = (await getCollection('outlook')).sort((a, b) => a.data.title.localeCompare(b.data.title));
   const lines: string[] = [
     `# ${SITE.name}`,
     '',
@@ -19,10 +20,15 @@ export async function GET(context: { site: URL }) {
     'Every article is original reporting and analysis that cites its sources, with sections on why it matters, the details, what procurement teams should do and what to watch next. Data pages use official U.S. government data (BLS Producer Price Index via FRED). Software rankings combine public G2 ratings with our analysts\' editorial scores; no vendor pays to be listed.',
     '',
     '## Data and tools',
+    `- [Category outlook](${u('/outlook/')}): who holds negotiating leverage, supply risk and the move to make in 12 categories.`,
     `- [Price trends by category](${u('/cost-monitor/')}): monthly price-pressure readings for 12 purchase categories, from steel and diesel to ocean freight and semiconductors.`,
     `- [Tariff and trade deadline tracker](${u('/trackers/tariff-deadlines/')}): U.S. tariff effective dates and expirations.`,
     `- [Software finder](${u('/software/finder/')}): four questions that produce a shortlist of procurement software.`,
     `- [Procurement briefings](${u('/signals/')}): signal reports rated by urgency.`,
+    '',
+    '## Category outlook',
+    `- [Category outlook](${u('/outlook/')}): negotiating leverage, supply risk and our recommended move for 12 purchase categories.`,
+    ...outlook.map((o) => `- [${o.data.title}](${u(`/outlook/${o.id}/`)}): ${o.data.description}`),
     '',
     '## Guides',
     ...guides.map((g) => `- [${g.data.title}](${u(`/guides/${g.id}/`)}): ${g.data.description}`),

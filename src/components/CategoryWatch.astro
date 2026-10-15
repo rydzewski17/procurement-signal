@@ -15,24 +15,25 @@ const counts = { suppliers: rows.filter((r) => r.leverage <= 2).length, procurem
     {full ? null : <h2 id="cp-h">Your categories this quarter<a class="view-all" href="/outlook/">Full category outlook</a></h2>}
     {full && <h2 id="cp-h" class="sr-only">Category outlook</h2>}
     <p>Who holds negotiating leverage, how exposed supply is, and the move we would make now in each category. Our assessment, updated {asOf}, built from the reporting and data linked on each card.</p>
-    <div class="cp-sum" aria-label="Summary">
-      <span><b>{counts.high}</b> categories with high supply risk</span>
-      <span><b>{counts.suppliers}</b> where suppliers have the edge</span>
-      <span><b>{counts.procurement}</b> where procurement has the edge</span>
+    <div class="cp-sum" role="group" aria-label="Filter by risk and leverage">
+      <button type="button" class="cps cps-high" data-g="risk-high"><b>{counts.high}</b><span>categories with high supply risk</span></button>
+      <button type="button" class="cps cps-sup" data-g="lev-sup"><b>{counts.suppliers}</b><span>where suppliers have the edge</span></button>
+      <button type="button" class="cps cps-proc" data-g="lev-proc"><b>{counts.procurement}</b><span>where procurement has the edge</span></button>
     </div>
     <div class="cp-filter" role="group" aria-label="Filter by category group">
       <button type="button" class="cpf on" data-g="all">All categories</button>
       {groups.map((g) => <button type="button" class="cpf" data-g={g}>{g}</button>)}
-      <button type="button" class="cpf" data-g="lev">Where we have leverage</button>
+      <button type="button" class="cpf" data-g="lev">Balanced or better for procurement</button>
     </div>
+    <p class="cp-showing" aria-live="polite"></p>
   </div>
 
   <div class="cp-grid">
     {rows.map((r) => (
-      <article class="cp" id={full ? r.id : undefined} data-g={r.group} data-lev={r.leverage >= 3 ? 'y' : 'n'}>
+      <article class="cp" id={full ? r.id : undefined} data-g={r.group} data-lev={r.leverage >= 3 ? 'y' : 'n'} data-tier={r.leverage <= 2 ? 'sup' : r.leverage >= 4 ? 'proc' : 'bal'} data-risk={r.risk} data-href={`/outlook/${r.id}/`}>
         <div class="cp-top">
           <div>
-            <h3><a href={`/outlook/#${r.id}`}>{r.name}</a></h3>
+            <h3><a href={`/outlook/${r.id}/`}>{r.name}</a></h3>
             <small>{r.group}</small>
           </div>
           <span class={`cp-risk r-${r.risk}`}>{RISK[r.risk]}</span>
@@ -57,6 +58,7 @@ const counts = { suppliers: rows.filter((r) => r.leverage <= 2).length, procurem
         <div class="cp-foot">
           <span>Price: <a href={`/cost-monitor/${r.id}/`}>{fmtPct(r.y1)} over 12 months</a></span>
           {r.latest && <span class="cp-read">Read: <a href={r.latest.href}>{r.latest.title}</a></span>}
+          <a class="cp-more" href={`/outlook/${r.id}/`}>Full {r.name.toLowerCase()} analysis <span aria-hidden="true">→</span></a>
           {full && r.impact?.sources?.length > 0 && (
             <span class="cp-src">Sources: {r.impact.sources.map((s: any, k: number) => <>{k > 0 && '; '}<a href={s.url}>{s.name.replace(/^Procurement Signal: /, '')}</a></>)}</span>
           )}
@@ -77,16 +79,30 @@ const counts = { suppliers: rows.filter((r) => r.leverage <= 2).length, procurem
       const apply = () => {
         let shown = 0;
         items.forEach((el) => {
-          const inGroup = group === 'all' || (group === 'lev' ? el.dataset.lev === 'y' : el.dataset.g === group);
+          const inGroup = group === 'all'
+            || (group === 'lev' ? el.dataset.lev === 'y'
+            : group === 'risk-high' ? el.dataset.risk === 'high'
+            : group === 'lev-sup' ? el.dataset.tier === 'sup'
+            : group === 'lev-proc' ? el.dataset.tier === 'proc'
+            : el.dataset.g === group);
           const visible = inGroup && (expanded || group !== 'all' || shown < limit);
           el.hidden = !visible; if (visible) shown++;
         });
         if (more) more.hidden = group !== 'all' || expanded || items.length <= limit;
+        const label = root.querySelector(`[data-g="${group}"]`);
+        if (showing) showing.innerHTML = group === 'all' ? '' : `Showing ${shown} of ${items.length} categories: <b>${label ? label.textContent.replace(/^\d+/, '').trim() : ''}</b>. <button type="button" class="cp-clear">Show all</button>`;
       };
-      root.querySelector('.cp-filter').addEventListener('click', (e) => {
-        const b = e.target.closest('.cpf'); if (!b) return;
-        root.querySelectorAll('.cpf').forEach((x) => x.classList.toggle('on', x === b));
-        group = b.dataset.g; apply();
+      const showing = root.querySelector('.cp-showing');
+      const pick = (g) => {
+        group = group === g && g !== 'all' ? 'all' : g;
+        root.querySelectorAll('.cpf, .cps').forEach((x) => x.classList.toggle('on', x.dataset.g === group));
+        apply();
+      };
+      root.addEventListener('click', (e) => {
+        const b = e.target.closest('.cpf, .cps'); if (b) { pick(b.dataset.g); return; }
+        if (e.target.closest('.cp-clear')) { pick('all'); return; }
+        const card = e.target.closest('.cp');
+        if (card && !e.target.closest('a, button')) location.href = card.dataset.href;
       });
       if (more) more.addEventListener('click', () => { expanded = true; apply(); });
       apply();
@@ -99,8 +115,21 @@ const counts = { suppliers: rows.filter((r) => r.leverage <= 2).length, procurem
   .cp-head h2 { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font: 700 26px/1.2 var(--head); margin: 0; padding: 12px 0 0; border-top: 3px solid var(--ink); }
   .cp-head h2 .view-all { font: 600 13.5px/1 var(--ui); color: var(--link); }
   .cp-head p { font-size: 15px; color: var(--muted); margin: 8px 0 14px; max-width: 74ch; }
-  .cp-sum { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 0 0 14px; font: 14px/1.3 var(--ui); color: var(--ink-2); }
-  .cp-sum b { font: 700 20px/1 var(--head); color: var(--ink); margin-right: 4px; }
+  .cp-sum { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 0 0 14px; }
+  .cps { display: flex; align-items: center; gap: 10px; text-align: left; background: #fff; border: 1px solid var(--rule); border-left: 4px solid var(--ink-2); padding: 10px 12px; cursor: pointer; font: 14px/1.3 var(--ui); color: var(--ink-2); }
+  .cps b { font: 700 26px/1 var(--head); color: var(--ink); }
+  .cps-high { border-left-color: #c0392b; } .cps-sup { border-left-color: #e08a6d; } .cps-proc { border-left-color: var(--teal); }
+  .cps:hover { border-color: var(--ink); box-shadow: 0 4px 12px rgba(14,42,71,.08); }
+  .cps.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .cps.on b { color: #fff; }
+  .cp-showing { font: 13.5px var(--ui); color: var(--ink-2); margin: -4px 0 12px; }
+  .cp-showing:empty { display: none; }
+  .cp-clear { background: none; border: 0; padding: 0; color: var(--link); font: 600 13.5px var(--ui); cursor: pointer; text-decoration: underline; }
+  .cp { cursor: pointer; transition: box-shadow .15s, border-color .15s; }
+  .cp:hover { box-shadow: 0 8px 22px rgba(14,42,71,.12); border-color: #b9c7d5; }
+  .cp-more { font: 600 13.5px var(--ui); color: var(--teal) !important; margin-top: 4px; text-decoration: none; }
+  .cp-more:hover { text-decoration: underline; }
+  @media (max-width: 680px) { .cp-sum { grid-template-columns: 1fr; } }
   .cp-filter { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
   .cpf { font: 600 13px/1 var(--ui); padding: 8px 11px; border: 1px solid #b9c7d5; background: #fff; color: var(--ink); cursor: pointer; }
   .cpf:hover { border-color: var(--ink); }
