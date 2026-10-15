@@ -19,8 +19,26 @@ Publish the procurement stories that matter to CPOs, category managers and sourc
 7. **Update the events bar** in `src/data/events.json`: add any new dated event a story covers (an effective date, deadline, expiry or vote) with `date` (YYYY-MM-DD), a short `label` (under 50 characters) and `href` to our story. Remove events more than 60 days old. The bar shows countdowns, price alerts and trending topics automatically.
 8. **Update category analysis** in `src/data/category-impact.json` when a story or the monthly price data changes a category's picture. For each affected category, `now` must be factual and cite a source in `sources` (our article or the original publisher); `meaning` is our analysis of what it means for category strategy and suppliers, in one or two sentences. Update `asOf` to today's date. Never state a figure that is not in a cited source.
 9. **Build to verify:** run `npm ci` (first time) then `npm run build`. Fix any errors. Never push a broken build.
-10. **Commit and push** to `main` with message `newsroom: <date> — <n> stories`. Cloudflare Pages deploys automatically.
+10. **Commit and deploy.** Commit on a branch with message `newsroom: <date> — <n> stories`, push it, then open a pull request to `main` and squash-merge it with the GitHub REST API (`gh api`), not GraphQL. If a direct push to `main` is allowed, that is fine too. Cloudflare deploys from `main` automatically; confirm the "Workers Builds" check on the merge commit succeeded.
 11. **Report:** end with a short summary listing stories published, trackers updated, and anything that failed.
+
+## Run types
+
+- **Morning run (weekdays):** the full run above, publishing 2–4 stories. The first story should be the day's most important development, written to lead the homepage (set `featured: true` on it and remove `featured` from the previous lead).
+- **Afternoon run (weekdays):** check for material developments since the morning. Publish 1–2 new stories only if they meet the signal bar; otherwise update existing articles with new facts (add `updated:` and revise the relevant sections and FAQs). Refresh `events.json` and `category-impact.json` if anything changed.
+- **Monday extras (morning run):**
+  - Re-check G2 ratings and review counts for every vendor in `src/data/software.json` (update `g2.rating`, `g2.reviews`, `g2.checked`, and the root `updated` date). Update a vendor's `web` market view when there is material news (funding, acquisition, analyst recognition, major launch), with the source added to `webSources`. Never add JAGGAER.
+  - Check `src/data/conferences.json` dates and add major procurement and supply chain events in the next 12 months with official links.
+  - Remove expired entries from trackers and `events.json`.
+  - Publish one `type: signal` weekly briefing on the week ahead: deadlines, data releases and what procurement teams should prepare for.
+
+## Interactive features and how they stay current
+
+- **Cost Pressure Monitor and Market outlook:** refreshed by the daily GitHub Action from producer price data. When a new month's data lands, publish the monthly signal story described below.
+- **Prediction market odds:** refreshed by the daily GitHub Action.
+- **Most popular / Top stories / Trending:** computed at build time from `signal` and freshness, so accurate `signal` scores matter.
+- **What's moving in your categories:** reads `category-impact.json`; keep it current as described in step 8.
+- **Software rankings, widget and Finder:** read `software.json`; refreshed on Mondays.
 
 ## Article template
 
