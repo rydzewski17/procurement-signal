@@ -174,7 +174,7 @@ const toc = [
                 return (
                   <tr class={rk ? '' : 'un'}>
                     <td class="rk">{rk || '–'}</td>
-                    <td><a href={`#${slugify(v.name)}`}><strong>{v.name}</strong></a>{v.seller && v.seller !== v.name && <span class="sm">{v.seller}</span>}</td>
+                    <td><a href={`#${slugify(v.name)}`}><strong>{v.name}</strong></a>{v.website && <a class="tsite" href={v.website} target="_blank" rel="noopener nofollow" aria-label={`${v.name} website`}>↗</a>}{v.seller && v.seller !== v.name && <span class="sm">{v.seller}</span>}</td>
                     <td class="bf">{v.bestFor}</td>
                     <td class="num">{teamAverage(v) !== null ? <strong class="ours">{teamAverage(v)!.toFixed(2)}</strong> : '–'}{teamRank(v) > 0 && <span class="sm">#{teamRank(v)} by our team</span>}</td>
                     <td><span class="stars" style={`--w:${((v.g2.rating ?? 0) / 5) * 100}%`}>{r1(v.g2.rating)}</span></td>
@@ -233,7 +233,7 @@ const toc = [
               <header class="vh">
                 <span class="vr">{rk ? `#${rk}` : 'Listed'}</span>
                 <div>
-                  <h3>{v.name}</h3>
+                  <h3>{v.name}{v.website && <a class="vsite" href={v.website} target="_blank" rel="noopener nofollow">Visit site ↗</a>}</h3>
                   <p class="vsub">{[v.seller && v.seller !== v.name ? v.seller : null, v.founded ? `founded ${v.founded}` : null, v.hq].filter(Boolean).join(' · ')}</p>
                 </div>
                 <div class="vg">
@@ -363,6 +363,9 @@ const toc = [
 </Base>
 
 <style>
+  .vsite { font: 600 13px/1 var(--ui); color: var(--teal); margin-left: 12px; text-decoration: none; vertical-align: middle; }
+  .vsite:hover { text-decoration: underline; }
+  .tsite { margin-left: 6px; font-size: 12px; color: var(--muted); text-decoration: none; }
   .ana { background: #fff; border: 1px solid var(--rule); border-top: 5px solid var(--c); padding: 22px 24px 18px; }
   .ana h2 { margin-top: 0 !important; }
   .ana-lede { font: 18px/1.55 var(--head); color: var(--ink); margin: 0 0 16px; }

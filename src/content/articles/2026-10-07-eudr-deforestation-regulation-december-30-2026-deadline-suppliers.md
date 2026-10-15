@@ -58,6 +58,12 @@ From Dec. 30, 2026, medium and large companies must ensure covered products plac
 
 **What the first operator must do:** collect supplier information, obtain geolocation data for production plots, assess risk, mitigate identified risks and keep supporting documents.
 
+**How the deadline moved.** The EU postponed the regulation for a second time through Regulation (EU) 2025/2650, setting the Dec. 30, 2026 date, according to a Mayer Brown analysis. Amendments introduced by the European Parliament in December 2025 substantially eased compliance for downstream companies and removed printed products such as books and newspapers from scope. Parliament also asked the European Commission for a simplification review by April 30, 2026; the Commission said it would make only "targeted tweaks to simplify implementation" rather than reopen the core text.
+
+**Scope changes under discussion.** A draft update to the list of covered products was expected to include exemptions for samples, packaging, accessory materials, used and second-hand products, and waste, and some reports suggested palm-oil soap and instant coffee could be added. Stakeholders continue to push to exclude leather. Check the final list for your products.
+
+**The legality requirement is the hardest part.** Products must comply with the laws of the country of production, and EU guidance covers eight legal areas, including land-use rights, labor rights, free prior and informed consent, and tax and customs rules. Mayer Brown's authors argue that, in practice, this requires regular audits of producers, which makes certification schemes essential.
+
 ## What it means by category
 
 | Category | Typical derived products | Hardest data to get |

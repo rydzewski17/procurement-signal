@@ -56,6 +56,12 @@ The Section 232 investigation into medical equipment and device imports began in
 
 BD's U.S. network includes sites in Columbus and Broken Bow, Nebraska; Canaan, Connecticut; Añasco, Puerto Rico; Sandy, Utah; El Paso, Texas; Covington, Georgia; and Sumter, South Carolina.
 
+**What the money covers.** BD said the $19 billion covers capital, operational and supply chain spending over several years; the $3 billion for strategic production sites is part of that total. It did not give a breakdown by site or job numbers. BD says the consumables involved are used in about 90% of U.S. hospital visits, and that it has more than 60,000 employees worldwide.
+
+**How the relief works.** Relief applies to covered BD products and inputs and depends on the final scope of any future Section 232 action and on BD meeting agreed milestones, according to the company's release. That means the value of the deal to BD, and to its customers, can't be calculated until the government sets device tariffs.
+
+**Track record.** BD points to its history in U.S. health care, including developing the first disposable syringe and delivering more than two billion additional devices during the pandemic.
+
 ## What it means by category
 
 | Category | Exposure | Our read |

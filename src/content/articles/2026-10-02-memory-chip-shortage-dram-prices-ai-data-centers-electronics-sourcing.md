@@ -27,6 +27,8 @@ sources:
     url: "https://supplychainconnect.com/news-trends/article/55382945/memory-chip-shortage-drives-up-electronics-prices"
   - name: "Distribution Strategy Group \u2014 Manufacturing demand holds as price pressures surge in September"
     url: "https://distributionstrategy.com/2026/10/manufacturing-demand-holds-as-price-pressures-surge-in-september/"
+  - name: "TechRadar \u2014 Experts warn PC prices could rise even more in 2026 as RAM costs soar"
+    url: "https://www.techradar.com/pro/experts-warn-pc-prices-could-rise-even-more-in-2026-as-ram-costs-set-to-soar-higher"
 faqs:
   - q: "Why are memory chip prices rising in 2026?"
     a: "Demand from AI data centers, including high-bandwidth memory for AI accelerators, is shifting DRAM wafer capacity toward AI servers and away from standard memory, according to Goldman Sachs."
@@ -47,6 +49,10 @@ Memory is in almost everything with a circuit board, and AI data centers are out
 **Who's affected.** Automakers, retailers, electronics companies and telecom groups have said the shortage is raising costs and threatening supply, according to Reuters. A coalition including NCTA, ACA Connects, the Medical Device Manufacturers Association and the Alliance for Automotive Innovation wrote to Treasury Secretary Scott Bessent and Commerce Secretary Howard Lutnick about "an urgent imbalance in the market for memory chips."
 
 **Still short in September.** The Institute for Supply Management's September survey listed electrical and electronic components, memory products, printed circuit boards and several steel products as in short supply, with semiconductors among commodities rising in price.
+
+**What device makers are saying.** In early 2026, PC makers including Lenovo, Dell, HP, Acer and Asus warned of 15% to 20% price increases from the second half of 2026, according to TechRadar. Research firm IDC modeled scenarios in which the smartphone market could shrink as much as 5.2% and the PC market 8.9% in 2026, noting memory makes up about 10% to 20% of a smartphone's build cost. PCs face extra pressure because newer AI PCs require at least 16 GB of memory. "The severity and duration of the shortage will be determined by how quickly production capacity can expand," IDC's Francisco Jeronimo said.
+
+**How long it could last.** Industry commentary cited by TechRadar suggested the shortage could persist well into 2027, because memory makers are prioritizing higher-margin AI data center products and new fabrication capacity takes years to build.
 
 ## Where the shortage reaches you
 

@@ -7,7 +7,7 @@ export interface Vendor {
   seller?: string | null; founded?: number | null; hq?: string | null;
   mix?: { small?: number; mid?: number; large?: number } | null;
   bestFor?: string; what?: string; likes?: string[]; flags?: string[];
-  scores?: Record<string, number> | null; affiliated?: boolean; note?: string | null; take?: string; web?: string;
+  scores?: Record<string, number> | null; affiliated?: boolean; note?: string | null; take?: string; web?: string; website?: string;
 }
 export interface SoftwareCategory {
   slug: string; name: string; short: string; accent: string; blurb: string; answer: string;

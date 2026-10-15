@@ -48,6 +48,10 @@ Three risks stand out for procurement leaders:
 - **Vendor blind spots.** Certifications and questionnaires don't reveal what an AI agent can access or how it behaves if manipulated through techniques such as prompt injection or data poisoning.
 - **A thinning talent pipeline.** AI handles the routine, medium-complexity work that has always trained junior buyers. Without a plan, teams lose the path that builds future category managers.
 
+**What security teams need, too.** Fountas argues the gap runs both ways. Penetration testers need to assess AI applications and agents, security operations analysts need to check AI-generated analysis independently, and security architects need to understand how AI changes data flows, permissions and trust boundaries. Training should be hands-on, with people working with AI in realistic environments and seeing how attackers could exploit it. "Capability needs to be developed, practised and demonstrated," he writes; it can't be assumed.
+
+**Prompting isn't the skill.** He also argues these capabilities can't be built by teaching better prompt writing. They come from understanding how AI behaves, where its limits are and how it fails, which is why procurement staff need to know when to challenge or verify an output and when to bring in security.
+
 ## The vendor questions questionnaires miss
 
 Fountas argues that standard security questionnaires and certifications don't reveal how an AI system behaves. When procurement evaluates AI tools for any part of the business, add these questions:

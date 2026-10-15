@@ -46,6 +46,10 @@ He succeeds Thomas Gaengler, CPO for four years, who left to become chief operat
 
 **The cocoa backdrop.** Years of volatile cocoa prices pushed Mondelēz to shift some of its product mix toward items less reliant on chocolate. Now, after producers expanded output, the market is oversupplied, according to Supply Chain Dive. "I think cocoa in terms of supply and demand for the years to come is in a much different situation and a much better one," chief operating officer Luca Zaramella said at a Barclays investor conference in September, adding that recent production "is more than sufficient to cover the deficit." He also said Mondelēz plans a major Oreo overhaul in 2027 with new formulas.
 
+**Why the predecessor's move matters.** Thomas Gaengler's move from Mondelēz CPO to chief operating officer at Barry Callebaut, one of the world's largest cocoa and chocolate suppliers, is a reminder that procurement leaders often cross to the supplier side. For companies that buy from Barry Callebaut, it means the supplier's operations are now led by someone who knows a major customer's procurement strategy from the inside.
+
+**What the cocoa shift means for the role.** Dahkoun takes over as the company's most volatile input moves from shortage to surplus. Mondelēz shifted some of its product mix away from chocolate-heavy products when prices spiked; with supply recovering, the procurement question becomes how quickly to rebalance, and how to contract for cocoa so the company benefits from lower prices without locking in exposure if the market tightens again.
+
 ## Other procurement leadership moves in September
 
 | Company | Appointment | Background |

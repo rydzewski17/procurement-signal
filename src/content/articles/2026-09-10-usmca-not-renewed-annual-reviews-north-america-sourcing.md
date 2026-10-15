@@ -58,6 +58,12 @@ As of late July, no formal U.S.–Canada talks had been held.
 
 **Investment protections.** The investment chapter has no general survival clause after termination, according to IISD's analysis, so a future U.S. withdrawal could end protections for existing investments.
 
+**How the extension clause works.** Article 34.7 gives the agreement a 16-year term from its 2020 entry into force and requires a joint review at the six-year mark, according to a White & Case analysis. If all three countries confirm in writing that they want another 16 years, the term resets without renegotiation. Because the U.S. didn't confirm, the agreement now gets a joint review every year until 2036, and each one is a fresh chance to extend. Current rights stay in force throughout: preferential tariffs, rules of origin, investment protections and dispute settlement.
+
+**What the rounds have covered.** The first U.S.–Mexico round, in Mexico City on May 28–30, covered auto rules of origin, steel and aluminum and economic security. The second, in Washington on June 16–17, advanced rules of origin for certain industrial goods and began conceptual talks on agriculture, labor, environment, steel, aluminum and autos. A third round followed in Mexico City in late July.
+
+**Canada's position.** Canada signaled support for a 16-year renewal in a June 1 letter from minister Dominic LeBlanc. Its priority is U.S. sectoral tariffs on steel, aluminum, autos and lumber, and it had not begun substantive text-based negotiations with the U.S. by late July.
+
 ## Exposure by category
 
 | Category | Why it's exposed | Our read |

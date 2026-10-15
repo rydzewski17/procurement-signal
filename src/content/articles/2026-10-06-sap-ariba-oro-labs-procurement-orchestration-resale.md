@@ -25,6 +25,8 @@ image:
 sources:
   - name: "SAPinsider \u2014 Orchestration extended: SAP to sell ORO Labs platform"
     url: "https://sapinsider.org/blogs/orchestration-extended-sap-to-sell-oro-labs-platform/"
+  - name: "SAPinsider \u2014 SAP delivers Joule agents across Ariba and Fieldglass"
+    url: "https://sapinsider.org/blogs/sap-delivers-joule-agents-across-ariba-and-fieldglass-in-june-2026/"
 faqs:
   - q: "Did SAP acquire ORO Labs?"
     a: "No. SAP will resell ORO Labs' platform as an SAP Solution Extension called SAP Ariba Procurement Orchestration by ORO Labs. SAP brands, sells and supports solution extensions, but ORO remains independent."
@@ -50,6 +52,10 @@ ORO Labs announced on Oct. 5, a day before SAP Connect 2026 in Las Vegas, that S
 ORO Labs, founded by former SAP Ariba product leaders, names Coca-Cola, Pfizer, Siemens Energy and Novartis as customers. It says it will work alongside SAP's Joule assistant, though the companies didn't explain how. Pricing wasn't disclosed.
 
 "Procurement transformation happens across the entire technology landscape," said Manoj Swaminathan, president and chief product officer of SAP Autonomous Suite. ORO CEO Sudhir Bhojwani said enterprises want value from agentic AI now "while building on the technology investments they already trust."
+
+**How it fits SAP's own roadmap.** SAP is also building its own intake tools. Its Ariba Intake Management agent, planned for general availability in June 2026, offers conversational intake through chat, email and Microsoft Teams, routes requests across SAP and non-SAP systems and checks policy at intake, according to SAPinsider. It runs on next-generation SAP Ariba, generally available since March 2026, and is part of a rollout of 11 Joule agents across Ariba and Fieldglass, five in June and six in September. SAP said its Joule agent runtime is free to current Ariba and Fieldglass customers through Dec. 31, 2026.
+
+**Why resell a partner at the same time.** The ORO extension targets customers whose procurement runs across many systems, not just Ariba. In practice, SAP customers now have two front-door options sold by SAP: its native intake agent for Ariba-centered processes, and ORO's orchestration layer for mixed landscapes. Expect SAP sales teams to position them by how much of a customer's process sits outside Ariba.
 
 ## How this changes the intake decision
 

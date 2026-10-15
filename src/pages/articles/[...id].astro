@@ -9,6 +9,7 @@ import { catsOf, feedFor, ourItems, clip, shortDate } from '../../data/feed';
 import { sectionOf, categoryBySlug } from '../../data/categories.mjs';
 import { getPosts } from '../../data/posts';
 import { slugify } from '../../data/tags';
+import { linkVendors } from '../../data/vendorlinks';
 import { SITE, TOPICS, TYPE_LABEL } from '../../data/site';
 
 export async function getStaticPaths() {
@@ -34,8 +35,9 @@ const doIdx = parts.findIndex((x) => /^what (buyers|procurement teams) should do
 const actions = doIdx >= 0 ? [...parts[doIdx].matchAll(/<li>([\s\S]*?)<\/li>/g)].map((m) => textOf(m[1])).slice(0, 2) : [];
 if (doIdx >= 0) parts[doIdx] = parts[doIdx].replace('<h2', '<h2 class="do-head"').replace(/<ul>/, '<ul class="do-list">');
 const cut = Math.min(2, parts.length);
-const before = intro + parts.slice(0, cut).join('');
-const after = parts.slice(cut).join('');
+const linked = new Set<string>();
+const before = linkVendors(intro + parts.slice(0, cut).join(''), linked);
+const after = linkVendors(parts.slice(cut).join(''), linked);
 
 // Category and section for the breadcrumb and the slider.
 const cats = catsOf(post).filter((c) => categoryBySlug[c]);
@@ -230,13 +232,6 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
     })();
   </script>
 
-  {related.length > 0 && (
-    <section class="related4" aria-label="Related news">
-      <h2 class="h-rule">Related news{primary && <a class="view-all" href={`/categories/${primary}/`}>More in {categoryBySlug[primary].name}</a>}</h2>
-      <div class="rel-grid">{related.map((x) => <Tile item={x} size="md" />)}</div>
-    </section>
-  )}
-
   {top10.length > 0 && (
     <section class="top10-4" aria-label="Top 10 this week">
       <h2 class="h-rule">Top 10 this week</h2>
@@ -250,4 +245,11 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
       </ol>
     </section>
   )}
+  {related.length > 0 && (
+    <section class="related4" aria-label="Related news">
+      <h2 class="h-rule">Related news{primary && <a class="view-all" href={`/categories/${primary}/`}>More in {categoryBySlug[primary].name}</a>}</h2>
+      <div class="rel-grid">{related.map((x) => <Tile item={x} size="md" />)}</div>
+    </section>
+  )}
+
 </Base>

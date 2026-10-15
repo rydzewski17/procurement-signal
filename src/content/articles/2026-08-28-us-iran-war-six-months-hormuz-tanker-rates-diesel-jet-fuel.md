@@ -56,6 +56,10 @@ Dubai crude peaked at $169.75 a barrel on March 23 when Hormuz traffic nearly st
 
 **Outlook.** Morgan Stanley expects the oil market to stay in deficit through the fourth quarter of 2026 and the first quarter of 2027, with Brent peaking around $100 a barrel in the fourth quarter, and said the chance of a near-term resolution is diminishing.
 
+**The size of the moves.** By our calculation from the Platts assessments, Mediterranean diesel cargoes were about 70% above their pre-war level in late August and Northwest European jet fuel about 53% higher. Dubai crude, after spiking to nearly $170 a barrel in March, had eased to about 27% above its pre-war level. Refined products have stayed elevated longer than crude because refinery margins, especially for diesel, have widened sharply.
+
+**Why shipping costs stay high.** With crossings through Hormuz down more than 80%, Gulf producers are sending cargoes by longer routes, which ties up more tankers per barrel delivered. S&P Global's Commodities at Sea analysts said restricted trading and differing risk appetite among shipowners have reduced fleet efficiency. Tighter tanker supply feeds through to freight costs for crude and refined products worldwide.
+
 ## Where it shows up in procurement categories
 
 | Category | How energy flows through | What to expect |
