@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-14",
+  "asOf": "2026-10-15",
   "note": "Editorial file. 'now' must be factual and sourced; 'meaning' is Procurement Signal's analysis. Refresh each newsroom run when the cost monitor or category news changes. 'leverage' (1 = suppliers hold it, 5 = procurement holds it), 'risk', 'riskWhy', 'move' and 'when' are Procurement Signal's assessment, built from the cited sources.",
   "items": {
     "steel": {
@@ -103,9 +103,17 @@
       "label": "Industrial chemicals"
     },
     "diesel": {
-      "now": "Diesel jumped 17.7% in August after easing from a May peak and is up 77.8% on the year.",
-      "meaning": "Volatility, not the base rate, is driving freight and delivered-price changes. Fuel surcharge tables in carrier and supplier contracts now matter more than the headline rate.",
+      "now": "Diesel jumped 17.7% in August and is up 77.8% on the year. The IEA says diesel hit records near $220 a barrel in September and the market will stay tight well into 2027, with stocks unlikely to rebuild before the second half of 2027.",
+      "meaning": "Plan for a long plateau, not a winter spike. Fuel surcharge tables in carrier and supplier contracts will matter for the whole 2027 contract term, and indexed fuel passes any relief back faster than fixed all-in rates.",
       "sources": [
+        {
+          "name": "Procurement Signal: IEA sees diesel tight into 2027",
+          "url": "/articles/2026-10-15-diesel-tight-into-2027-iea-houthi-aramco-strikes/"
+        },
+        {
+          "name": "IEA — Oil Market Report, October 2026",
+          "url": "https://www.iea.org/reports/oil-market-report-october-2026"
+        },
         {
           "name": "Procurement Signal: diesel at a record and fuel surcharges",
           "url": "/articles/2026-10-14-diesel-record-russia-deal-red-dye-order-fuel-surcharges/"
@@ -121,8 +129,8 @@
       ],
       "leverage": 1,
       "risk": "high",
-      "riskWhy": "Diesel is up 77.8% on the year, Hormuz crossings are down sharply and forecasters expect the supply deficit to last into 2027.",
-      "move": "Tie every fuel surcharge to the weekly DOE/EIA diesel index and audit carrier tables.",
+      "riskWhy": "The IEA expects gasoil to stay tight well into 2027 and calls the Gulf supply recovery fragile; Houthi strikes hit Aramco's Dhahran headquarters on Oct. 13.",
+      "move": "Keep fuel separate from linehaul in 2027 awards and tie every surcharge to the weekly DOE/EIA diesel index.",
       "when": "Before 2027 carrier awards",
       "label": "Diesel fuel"
     },
