@@ -24,6 +24,7 @@ const RULES: [string, string][] = [
   ['(?:EU )?[Dd]eforestation (?:[Rr]egulation|rules)', A('2026-10-07-eudr-deforestation-regulation-december-30-2026-deadline-suppliers')],
   ['EUDR', A('2026-10-07-eudr-deforestation-regulation-december-30-2026-deadline-suppliers')],
   ['Taylor Farms', A('2026-10-14-taylor-farms-seasonal-sourcing-pause-produce-supplier-risk')],
+  ['[Rr]are earth export controls', A('2026-10-15-china-rare-earth-export-pause-expires-nov-10-magnets')],
   ['Noble Supply', A('2026-08-31-noble-supply-logistics-chapter-11-dla-contract-distributor-risk')],
   ['(?:memory chips?|DRAM)', A('2026-10-02-memory-chip-shortage-dram-prices-ai-data-centers-electronics-sourcing')],
   ['Port of Los Angeles', A('2026-10-14-port-of-los-angeles-record-september-canal-shift')],

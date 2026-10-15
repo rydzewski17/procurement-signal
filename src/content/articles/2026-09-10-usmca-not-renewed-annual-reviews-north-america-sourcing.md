@@ -2,7 +2,7 @@
 title: "USMCA wasn't renewed at its first review. Here's what annual reviews through 2036 mean for North American sourcing"
 dek: "The U.S. declined to extend the agreement on July 1, so the three countries now review it every year. The pact stays in force until 2036, but auto rules of origin, steel and aluminum are open for negotiation."
 date: 2026-09-10
-updated: 2026-10-14
+updated: 2026-10-15
 topic: tariffs-trade
 type: analysis
 signal: 4
@@ -24,6 +24,8 @@ image:
   creditUrl: "https://unsplash.com/photos/white-truck-driving-on-a-road-through-fields-LhgEKILDWTg"
   license: "Unsplash"
 sources:
+  - name: "USTR — USTR seeks public comment on the 2027 joint review of USMCA (Oct. 2, 2026)"
+    url: "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/ustr-seeks-public-comment-2027-joint-review-usmca"
   - name: "IISD \u2014 United States declines to renew USMCA at first joint review, triggering annual reviews"
     url: "https://www.iisd.org/itn/2026/09/09/united-states-declines-to-renew-usmca-at-first-joint-review-triggering-annual-reviews/"
   - name: "White & Case \u2014 USMCA 2026 joint review: United States declines to extend agreement"
@@ -127,6 +129,7 @@ USMCA preference means qualifying goods enter duty-free. A part that no longer q
 
 - **The fourth U.S.–Mexico round** and any agreed changes to auto rules of origin.
 - **U.S.–Canada talks**, which had not formally started by late July.
+- **Jan. 12, 2027 comment deadline.** USTR opened public comments on the operation of the agreement ahead of the 2027 joint review (Federal Register document 2026-20341, docket USTR-2026-0595). Comments and requests to testify at a public hearing are due by 11:59 p.m. EST on Jan. 12, 2027; USTR will post the hearing date on its website. Companies with North American supply chains can put their rules-of-origin and cost data on the record.
 - **The 2027 annual review**, the next chance to confirm an extension.
 
 ## The bigger picture

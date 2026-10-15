@@ -2,7 +2,7 @@
 title: "178 China tariff exclusions expire Nov. 10, and USTR hasn't signaled another extension"
 dek: "With four weeks to go and no Federal Register notice seeking comment, procurement teams sourcing covered Chinese-origin goods should plan for the 25% Section 301 duty to return on entries filed Nov. 10."
 date: 2026-10-12
-updated: 2026-10-14
+updated: 2026-10-15
 topic: tariffs-trade
 type: news
 signal: 5
@@ -31,10 +31,16 @@ sources:
     url: "https://greatlakescustomslaw.com/section-301-china-exclusions-in-2026-the-178-products-still-protected-and-who-actually-benefits/"
   - name: "Altium — The 2026 Tariff Reset"
     url: "https://resources.altium.com/p/tariff-reset-pcb-workarounds"
+  - name: "USTR via KPMG — USTR continues China Section 301 actions, makes conforming amendment to product exclusion"
+    url: "https://kpmg.com/us/en/taxnewsflash/news/2026/10/ustr-china-section-301-actions-product-exclusion.html"
+  - name: "ST&R — Section 301 tariffs on imports from China officially continued (Oct. 8, 2026)"
+    url: "https://www.strtrade.com/trade-news-resources/str-trade-report/trade-report/october/section-301-tariffs-on-imports-from-china-officially-continued"
 categories: ["tariffs", "sourcing", "semis"]
 faqs:
   - q: "When do the Section 301 China exclusions expire?"
     a: "The remaining 178 exclusions run through 11:59 p.m. ET on Nov. 9, 2026. Entries filed on or after Nov. 10 pay the Section 301 duty unless USTR extends them."
+  - q: "Are the Section 301 China tariffs ending?"
+    a: "No. USTR said in October 2026 that the 2018 actions remain in effect after it received requests to continue them, and that a second statutory four-year review will follow with a public comment process."
   - q: "What duty applies after the exclusions expire?"
     a: "Typically 25% for goods on Section 301 Lists 1, 2 and 3, on top of MFN and any other duties."
   - q: "Which products are still covered by Section 301 China exclusions?"
@@ -59,6 +65,8 @@ If you buy any of the 178 Chinese-origin products still excluded from Section 30
 Entries filed on or after Nov. 10 pay the underlying Section 301 duty: typically 25% for goods on Lists 1, 2 and 3, and 7.5% for List 4A, on top of normal duties. "No grace period," Coppersmith Brockelman wrote in a September analysis.
 
 **The silence.** USTR usually opens a public comment window 60 to 90 days before deciding on an extension; the last cycle had a comment notice in September 2025. As of mid-October 2026, we have found no comparable notice, which trade counsel read as a warning sign. USTR has also described the exclusions as a temporary bridge to help importers move sourcing away from China, not a permanent feature. An extension is still possible, but the window for a normal process is nearly closed.
+
+**Update, Oct. 15: the tariffs stay, the exclusions still have no extension.** USTR announced in early October that the two 2018 Section 301 actions on China will remain in effect, after domestic industries asked it to continue them (Federal Register document 2026-20510). The tariffs cover about $370 billion of imports across Lists 1 through 4A at 7.5% to 25%, according to ST&R. USTR will run a second statutory four-year review and publish a separate notice inviting comments on whether the tariffs work and how they affect the U.S. economy. A companion notice (2026-20511) made a conforming amendment to one product exclusion to reflect HTSUS statistical changes from July 1, 2026, keeping its coverage unchanged. Neither notice extends the 178 exclusions, which ST&R says remain valid through Nov. 9.
 
 ## What is still covered
 
@@ -104,6 +112,7 @@ For a product with a $100,000 customs value and a 3% MFN duty, the duty bill ris
 
 ## What to watch next
 
+- **The four-year review notice.** USTR's notice opening the second four-year review will set the comment window; procurement teams with China-origin exposure can file data on cost and sourcing effects.
 - **A Federal Register notice.** Any extension would most likely appear as a USTR notice before Nov. 10. Its absence by early November is a strong signal the duty returns.
 - **The U.S.–China trade truce.** The broader arrangement expires Jan. 10, 2027, which could reshape China duties beyond the exclusions.
 - **Entry timing.** Watch in-transit shipments that could clear before or after Nov. 10 and coordinate with your broker on filing dates.

@@ -2,7 +2,7 @@
   "title": "Tariff & Trade Deadline Tracker",
   "description": "Upcoming and recent U.S. tariff effective dates, expirations and phase-ins that change landed cost.",
   "intro": "Every date here changes what you pay for imported goods. We update this tracker with each newsroom run. Always confirm details with your customs broker and the official notice.",
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "columns": [
     "Date",
     "Action",
@@ -10,6 +10,24 @@
     "Status"
   ],
   "rows": [
+    {
+      "cells": [
+        "July 1, 2027",
+        "De minimis ends by statute",
+        "One Big Beautiful Bill Act ends the de minimis exemption; it has been suspended for all countries since Aug. 29, 2025",
+        "Upcoming"
+      ],
+      "source": "https://customsandinternationaltradelaw.com/2026/10/09/cbp-informal-entry-bond-rule/"
+    },
+    {
+      "cells": [
+        "Jan. 12, 2027",
+        "USMCA joint review comments due",
+        "Comments and hearing requests on the operation of USMCA ahead of the 2027 joint review (docket USTR-2026-0595)",
+        "Open for comment"
+      ],
+      "source": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/ustr-seeks-public-comment-2027-joint-review-usmca"
+    },
     {
       "cells": [
         "Jan. 1, 2027",
@@ -51,10 +69,19 @@
     },
     {
       "cells": [
+        "Dec. 7, 2026",
+        "CBP low-value shipment rule comments due",
+        "Proposed bond on every informal entry under $2,500, filing on or before importation and a new Type 13 mail entry (docket USCBP-2026-0298)",
+        "Proposed"
+      ],
+      "source": "https://public-inspection.federalregister.gov/2026-20650.pdf"
+    },
+    {
+      "cells": [
         "Nov. 10, 2026",
         "Section 301 China exclusions expire",
         "178 product exclusions lapse; typically 25% Section 301 duty applies to entries from Nov. 10",
-        "Upcoming — no extension notice found as of mid-Oct."
+        "Upcoming — USTR kept the tariffs in Oct. but has not extended the exclusions"
       ],
       "source": "https://ustr.gov/about/policy-offices/press-office/press-releases/2025/november/ustr-extends-exclusions-china-section-301-tariffs-related-forced-technology-transfer-investigation",
       "date": "2026-11-10",

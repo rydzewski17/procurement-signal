@@ -1,15 +1,15 @@
 {
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "events": [
-    {
-      "date": "2026-07-24",
-      "label": "Forced-labor tariffs on 60 economies took effect",
-      "href": "/articles/2026-10-12-section-301-forced-labor-tariffs-what-buyers-pay/"
-    },
     {
       "date": "2026-09-29",
       "label": "Pharma tariff now covers all importers",
       "href": "/articles/2026-10-12-section-232-pharma-tariff-now-applies-all-importers/"
+    },
+    {
+      "date": "2026-10-17",
+      "label": "Riyadh airport closure set to end",
+      "href": "/articles/2026-10-15-saudi-air-cargo-capacity-riyadh-airport-closure-houthi-strikes/"
     },
     {
       "date": "2026-11-10",
@@ -17,9 +17,19 @@
       "href": "/articles/2026-10-12-section-301-china-exclusions-expire-nov-10/"
     },
     {
+      "date": "2026-11-10",
+      "label": "China rare earth export pause ends",
+      "href": "/articles/2026-10-15-china-rare-earth-export-pause-expires-nov-10-magnets/"
+    },
+    {
       "date": "2026-11-18",
       "label": "UP–NS merger comments due at STB",
       "href": "/articles/2026-09-01-union-pacific-norfolk-southern-merger-stb-schedule-shippers/"
+    },
+    {
+      "date": "2026-12-07",
+      "label": "CBP low-value shipment rule comments due",
+      "href": "/articles/2026-10-15-cbp-low-value-shipments-bond-rule-2500-informal-entry/"
     },
     {
       "date": "2026-12-30",
@@ -32,9 +42,24 @@
       "href": "/articles/2026-10-09-wood-tariffs-kitchen-cabinets-vanities-50-percent-upholstered-furniture-january-2027/"
     },
     {
+      "date": "2027-01-01",
+      "label": "DFARS magnet rule reaches mining, refining",
+      "href": "/articles/2026-10-15-china-rare-earth-export-pause-expires-nov-10-magnets/"
+    },
+    {
       "date": "2027-01-04",
       "label": "FedEx 2027 rate increase",
       "href": "/articles/2026-09-21-fedex-2027-rate-increase-5-9-percent-surcharges-parcel/"
+    },
+    {
+      "date": "2027-01-10",
+      "label": "U.S.–China trade truce expires",
+      "href": "/articles/2026-10-15-china-rare-earth-export-pause-expires-nov-10-magnets/"
+    },
+    {
+      "date": "2027-01-12",
+      "label": "USMCA joint review comments due",
+      "href": "/articles/2026-09-10-usmca-not-renewed-annual-reviews-north-america-sourcing/"
     }
   ]
 }
