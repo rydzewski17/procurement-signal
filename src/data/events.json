@@ -1,8 +1,40 @@
 {
-  "updated": "2026-10-12",
+  "updated": "2026-10-14",
   "events": [
-    { "date": "2026-11-10", "label": "Section 301 China exclusions expire", "href": "/articles/2026-10-12-section-301-china-exclusions-expire-nov-10/" },
-    { "date": "2026-09-29", "label": "Pharma tariff now covers all importers", "href": "/articles/2026-10-12-section-232-pharma-tariff-now-applies-all-importers/" },
-    { "date": "2026-07-24", "label": "Forced-labor tariffs on 60 economies took effect", "href": "/articles/2026-10-12-section-301-forced-labor-tariffs-what-buyers-pay/" }
+    {
+      "date": "2026-07-24",
+      "label": "Forced-labor tariffs on 60 economies took effect",
+      "href": "/articles/2026-10-12-section-301-forced-labor-tariffs-what-buyers-pay/"
+    },
+    {
+      "date": "2026-09-29",
+      "label": "Pharma tariff now covers all importers",
+      "href": "/articles/2026-10-12-section-232-pharma-tariff-now-applies-all-importers/"
+    },
+    {
+      "date": "2026-11-10",
+      "label": "Section 301 China exclusions expire",
+      "href": "/articles/2026-10-12-section-301-china-exclusions-expire-nov-10/"
+    },
+    {
+      "date": "2026-11-18",
+      "label": "UP–NS merger comments due at STB",
+      "href": "/articles/2026-09-01-union-pacific-norfolk-southern-merger-stb-schedule-shippers/"
+    },
+    {
+      "date": "2026-12-30",
+      "label": "EU deforestation rules take effect",
+      "href": "/articles/2026-10-07-eudr-deforestation-regulation-december-30-2026-deadline-suppliers/"
+    },
+    {
+      "date": "2027-01-01",
+      "label": "Cabinet and furniture tariffs rise",
+      "href": "/articles/2026-10-09-wood-tariffs-kitchen-cabinets-vanities-50-percent-upholstered-furniture-january-2027/"
+    },
+    {
+      "date": "2027-01-04",
+      "label": "FedEx 2027 rate increase",
+      "href": "/articles/2026-09-21-fedex-2027-rate-increase-5-9-percent-surcharges-parcel/"
+    }
   ]
 }

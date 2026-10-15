@@ -31,6 +31,8 @@ Publish the procurement stories that matter to CPOs, category managers and sourc
   - Check `src/data/conferences.json` dates and add major procurement and supply chain events in the next 12 months with official links.
   - Remove expired entries from trackers and `events.json`.
   - Publish one `type: signal` weekly briefing on the week ahead: deadlines, data releases and what procurement teams should prepare for.
+  - Publish or refresh one evergreen guide in `src/content/guides/` (title, description, updated, topic, 3–6 takeaways, 3–5 FAQs, sources), 1,000+ words, targeting a question procurement teams search for. Link it from related articles and add related glossary terms in `src/content/glossary/`.
+  - Add any new dated deadlines to `src/data/trackers/tariff-deadlines.json` (rows sorted newest first).
 
 ## Interactive features and how they stay current
 

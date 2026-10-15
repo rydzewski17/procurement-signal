@@ -15,7 +15,7 @@ const newest = posts[0]?.data.date.valueOf() ?? 0;
 // Most popular: until reader analytics are connected, ranked by our signal score and freshness.
 const popPool = posts.filter((p) => !exclude.has(`/articles/${p.id}/`)).length >= 5 ? posts.filter((p) => !exclude.has(`/articles/${p.id}/`)) : posts;
 const popular = [...popPool].sort((a, b) => (b.data.signal * 2 - (newest - b.data.date.valueOf()) / DAY) - (a.data.signal * 2 - (newest - a.data.date.valueOf()) / DAY)).slice(0, 5);
-const guides = await getCollection('guides');
+const guides = (await getCollection('guides')).sort((a, b) => b.data.updated.valueOf() - a.data.updated.valueOf()).slice(0, 6);
 const popHrefs = new Set(popular.map((p) => `/articles/${p.id}/`));
 // Company moves: our stories on deals, investments and supplier news.
 const moves = feedFor(posts, ['deals'], new Set([...exclude, ...popHrefs])).slice(0, 4);

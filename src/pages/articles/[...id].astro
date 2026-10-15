@@ -194,7 +194,7 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
           <ol>{tocItems.map((h) => <li><a href={`#${h.slug}`} data-toc={h.slug}>{h.text}</a></li>)}</ol>
         </nav>
       )}
-      <Rail posts={posts.filter((p) => p.id !== post.id)} show={['popular', 'software', 'analysis', 'outlook', 'events']} exclude={new Set([self])} />
+      <Rail posts={posts.filter((p) => p.id !== post.id)} show={['popular', 'software', 'analysis', 'guides', 'outlook', 'events']} exclude={new Set([self])} />
       <div class="side-sticky">
         <section class="side-nl">
           <h2>Get the morning brief</h2>

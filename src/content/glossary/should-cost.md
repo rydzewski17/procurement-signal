@@ -4,4 +4,4 @@ short: "An estimate of what a product ought to cost, built from its materials, l
 related: ["Landed cost", "Producer Price Index (PPI)"]
 ---
 
-Should-cost models give buyers an independent benchmark to test supplier quotes and price-increase requests.
+Should-cost models give procurement teams an independent benchmark to test supplier quotes and price-increase requests.
