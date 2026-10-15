@@ -1,19 +1,127 @@
 ---
+// Trackers hub: every living reference page in one place, led by the next deadline.
 import Base from '../../layouts/Base.astro';
 import { trackers } from '../../data/trackers';
+import events from '../../data/events.json';
+import conferences from '../../data/conferences.json';
+import { getPosts } from '../../data/posts';
+import { categoryOutlook, LEVERAGE, RISK } from '../../data/watch';
+
+const posts = await getPosts();
+const outlook = categoryOutlook(posts);
+const today = new Date().toISOString().slice(0, 10);
+const DAY = 864e5;
+const days = (s: string) => Math.round((Date.parse(s + 'T00:00:00Z') - Date.parse(today + 'T00:00:00Z')) / DAY);
+const fmt = (s: string) => new Date(s + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const dates = events.events.filter((e) => e.date >= today).sort((a, b) => a.date.localeCompare(b.date));
+const confs = conferences.events.filter((c: any) => c.end >= today).sort((a: any, b: any) => a.start.localeCompare(b.start)).slice(0, 5);
+const tariff = trackers.find((t) => t.slug === 'tariff-deadlines');
+const tariffUp = (tariff?.rows ?? []).filter((r) => r.date && r.date >= today).length;
+const high = outlook.filter((o) => o.risk === 'high');
 ---
-<Base section="trackers" title="Tariff deadlines and trackers" description="Always-current trackers for tariffs, procurement technology deals, commodities and compliance deadlines.">
-  <div class="page narrow">
-    <div class="page-head">
-      <h1>Deadlines and trackers</h1>
-      <p>Living reference pages our newsroom keeps current. Bookmark them.</p>
+<Base section="trackers" title="Trackers: tariff deadlines, key dates and category risk" description="Living reference pages our newsroom keeps current: tariff and trade deadlines, key procurement dates, category outlook and price trends.">
+  <div class="page">
+    <nav class="crumbs th-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › Trackers</nav>
+    <header class="th-head">
+      <h1>Trackers</h1>
+      <p>Living reference pages our newsroom updates every weekday. Bookmark them: each one answers a question procurement teams ask every week.</p>
+    </header>
+
+    <div class="th-grid">
+      <a class="th-card th-main" href="/trackers/tariff-deadlines/">
+        <span class="th-k">Tariffs and trade</span>
+        <h2>Tariff &amp; Trade Deadline Tracker</h2>
+        <p>Every date that changes landed cost: effective dates, step-ups, expirations and reviews, with a timeline and a countdown.</p>
+        {dates[0] && <span class="th-next"><b data-days={dates[0].date}>{days(dates[0].date)}</b> days to the next deadline: {dates[0].label}</span>}
+        <span class="th-meta">{tariffUp} upcoming deadlines · Updated {tariff ? fmt(tariff.updated) : ''}</span>
+        <span class="th-go">Open the tracker →</span>
+      </a>
+      <a class="th-card" href="/outlook/">
+        <span class="th-k">Category risk</span>
+        <h2>Category outlook</h2>
+        <p>Negotiating leverage, supply risk and our recommended move in 12 purchase categories.</p>
+        <span class="th-lbl">High supply risk now</span><span class="th-list">{high.map((o) => <span><i></i>{o.name}<small>{LEVERAGE[o.leverage].short}</small></span>)}</span>
+        <span class="th-go">See all 12 categories →</span>
+      </a>
+      <a class="th-card" href="/cost-monitor/">
+        <span class="th-k">Prices</span>
+        <h2>Price trends by category</h2>
+        <p>Monthly U.S. producer prices for steel, freight, resins, chips and eight more, with 24-month charts.</p>
+        <span class="th-go">See price trends →</span>
+      </a>
     </div>
-    <div class="river">{trackers.map((t) => (
-      <article>
-        <a href={`/trackers/${t.slug}/`}><h2>{t.title}</h2></a>
-        <p>{t.description}</p>
-        <div class="date">Updated {t.updated}</div>
-      </article>
-    ))}</div>
+
+    <div class="th-two">
+      <section>
+        <h2 class="h-rule">Key dates coming up</h2>
+        <ol class="th-dates">
+          {dates.map((e) => (
+            <li>
+              <span class="th-d"><b data-days={e.date}>{days(e.date)}</b><small>days</small></span>
+              <div><a href={e.href}>{e.label}</a><span>{fmt(e.date)}</span></div>
+            </li>
+          ))}
+        </ol>
+      </section>
+      <section>
+        <h2 class="h-rule">Procurement conferences</h2>
+        <ol class="th-confs">
+          {confs.map((c: any) => (
+            <li>
+              <a href={c.url} target="_blank" rel="noopener">{c.name}</a>
+              <span>{fmt(c.start)}{c.end !== c.start && ` – ${fmt(c.end)}`}{c.place && ` · ${c.place}`}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+    </div>
   </div>
 </Base>
+
+<script is:inline>
+  (() => {
+    const now = new Date(); now.setHours(0, 0, 0, 0);
+    document.querySelectorAll('[data-days]').forEach((el) => {
+      const n = Math.round((new Date(el.dataset.days + 'T00:00:00') - now) / 864e5);
+      if (n >= 0) el.textContent = n;
+    });
+  })();
+</script>
+
+<style>
+  .th-crumbs { margin: 6px 0 10px; }
+  .th-head h1 { font: 700 44px/1.08 var(--head); color: var(--ink); margin: 0 0 10px; }
+  .th-head p { font: 18px/1.5 var(--head); color: var(--ink-2); margin: 0 0 24px; max-width: 70ch; }
+  .th-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+  .th-card { display: flex; flex-direction: column; gap: 8px; border: 1px solid var(--rule); border-top: 4px solid var(--teal); background: #fff; padding: 18px 20px; text-decoration: none; color: var(--ink); }
+  .th-card:hover { box-shadow: 0 10px 26px rgba(14,42,71,.12); }
+  .th-main { background: var(--navy); color: #fff; border-top-color: #B3261E; }
+  .th-k { font: 600 12.5px var(--ui); color: var(--teal); }
+  .th-main .th-k { color: #8fd3cf; }
+  .th-card h2 { font: 700 22px/1.2 var(--head); margin: 0; color: var(--ink); }
+  .th-main h2 { color: #fff; font-size: 28px; }
+  .th-lbl { font: 600 12px var(--ui); color: #a3261b; margin-top: 4px; }
+  .th-card p { font: 15px/1.5 var(--ui); color: var(--ink-2); margin: 0; }
+  .th-main p { color: #dfe7ef; }
+  .th-next { font: 600 15px var(--ui); color: #fff; margin-top: 6px; }
+  .th-next b { font: 700 46px/1 var(--head); margin-right: 6px; }
+  .th-meta { font: 13px var(--ui); color: #c8d4e1; }
+  .th-go { margin-top: auto; padding-top: 8px; font: 600 14px var(--ui); color: var(--link); }
+  .th-main .th-go { color: #8fd3cf; }
+  .th-list { display: flex; flex-direction: column; gap: 4px; margin-top: 4px; }
+  .th-list span { display: flex; align-items: center; gap: 8px; font: 600 14px var(--ui); }
+  .th-list i { width: 8px; height: 8px; border-radius: 50%; background: #c0392b; }
+  .th-list small { font-weight: 400; color: var(--muted); margin-left: auto; }
+  .th-two { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 44px; }
+  .th-dates, .th-confs { list-style: none; margin: 12px 0 0; padding: 0; }
+  .th-dates li { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 14px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+  .th-d { display: flex; flex-direction: column; align-items: center; background: var(--navy-tint); padding: 6px 0; }
+  .th-d b { font: 700 22px/1 var(--head); color: var(--ink); }
+  .th-d small { font: 11px var(--ui); color: var(--muted); }
+  .th-dates a, .th-confs a { display: block; font: 600 15.5px/1.35 var(--ui); color: var(--ink); text-decoration: none; }
+  .th-dates a:hover, .th-confs a:hover { text-decoration: underline; }
+  .th-dates span, .th-confs span { font: 13px var(--ui); color: var(--muted); }
+  .th-confs li { padding: 11px 0; border-bottom: 1px solid var(--rule); }
+  @media (max-width: 960px) { .th-grid { grid-template-columns: 1fr 1fr; } .th-main { grid-column: 1 / -1; } }
+  @media (max-width: 640px) { .th-grid, .th-two { grid-template-columns: 1fr; } .th-head h1 { font-size: 34px; } }
+</style>
