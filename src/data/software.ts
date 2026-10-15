@@ -7,7 +7,7 @@ export interface Vendor {
   seller?: string | null; founded?: number | null; hq?: string | null;
   mix?: { small?: number; mid?: number; large?: number } | null;
   bestFor?: string; what?: string; likes?: string[]; flags?: string[];
-  scores?: Record<string, number> | null; affiliated?: boolean; note?: string | null; take?: string;
+  scores?: Record<string, number> | null; affiliated?: boolean; note?: string | null; take?: string; web?: string;
 }
 export interface SoftwareCategory {
   slug: string; name: string; short: string; accent: string; blurb: string; answer: string;
@@ -17,7 +17,7 @@ export interface SoftwareCategory {
   market?: string; trends?: string[]; scenarios?: [string, string, string][];
 }
 
-export const SOFTWARE = raw as unknown as { updated: string; analysisUpdated?: string; minReviews: number; rubric: { id: string; label: string }[]; method: string; disclosure: string; categories: SoftwareCategory[] };
+export const SOFTWARE = raw as unknown as { updated: string; analysisUpdated?: string; webSources?: { name: string; url: string }[]; minReviews: number; rubric: { id: string; label: string }[]; method: string; disclosure: string; categories: SoftwareCategory[] };
 
 export const slugify = (s: string) => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 

@@ -247,6 +247,7 @@ const toc = [
                   <div class="take-t">
                     <h4>Our take</h4>
                     <p>{v.take}</p>
+                    {v.web && <><h4 class="mkt-h">What the market says</h4><p>{v.web}</p></>}
                   </div>
                   {v.team && teamAverage(v) !== null && (
                     <div class="take-s">
@@ -343,6 +344,7 @@ const toc = [
         <ul>
           <li><a href={c.g2.url} target="_blank" rel="noopener">G2: {c.g2.category} category ({n(c.g2.products)} products listed)</a></li>
           {all.map((v) => <li><a href={v.g2.url} target="_blank" rel="noopener">G2: {v.name} reviews</a>, checked {fmtDate(v.g2.checked)}</li>)}
+          {(SOFTWARE.webSources ?? []).map((x) => <li><a href={x.url} target="_blank" rel="noopener">{x.name}</a></li>)}
         </ul>
       </section>
     </article>
@@ -382,6 +384,7 @@ const toc = [
   .tr .bar i { display: block; height: 100%; background: var(--c, var(--teal)); }
   .take { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 20px; background: var(--navy-tint); border-left: 4px solid var(--c); padding: 14px 18px; margin: 12px 0; }
   .take h4 { font: 700 14px/1.2 var(--ui); color: var(--c); margin: 0 0 6px; }
+  .take .mkt-h { margin-top: 12px; }
   .take p { margin: 0; font-size: 15.5px; line-height: 1.55; }
   .take-avg { display: flex; align-items: baseline; gap: 8px; margin: 0 0 6px !important; }
   .take-avg b { font: 700 28px/1 var(--head); color: var(--ink); }
