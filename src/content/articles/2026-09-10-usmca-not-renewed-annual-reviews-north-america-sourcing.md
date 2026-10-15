@@ -1,0 +1,85 @@
+---
+title: "USMCA wasn't renewed at its first review. Here's what annual reviews through 2036 mean for North American sourcing"
+dek: "The U.S. declined to extend the agreement on July 1, so the three countries now review it every year. The pact stays in force until 2036, but auto rules of origin, steel and aluminum are open for negotiation."
+date: 2026-09-10
+topic: tariffs-trade
+type: analysis
+signal: 4
+categories: ["tariffs", "sourcing", "compliance"]
+keyfacts:
+  - value: "July 1, 2026"
+    label: "first six-year joint review"
+  - value: "2036"
+    label: "agreement stays in force until July 1, 2036"
+  - value: "Annual"
+    label: "reviews now required each year"
+  - value: "3"
+    label: "U.S.\u2013Mexico negotiating rounds held by late July"
+tags: ["USMCA", "nearshoring", "Mexico", "Canada", "rules of origin"]
+image:
+  src: "https://images.unsplash.com/photo-1761133381018-aed5063d22fe?ixlib=rb-4.1.0"
+  alt: "White truck driving on a road through fields"
+  credit: "MAVIC 101"
+  creditUrl: "https://unsplash.com/photos/white-truck-driving-on-a-road-through-fields-LhgEKILDWTg"
+  license: "Unsplash"
+sources:
+  - name: "IISD \u2014 United States declines to renew USMCA at first joint review, triggering annual reviews"
+    url: "https://www.iisd.org/itn/2026/09/09/united-states-declines-to-renew-usmca-at-first-joint-review-triggering-annual-reviews/"
+  - name: "White & Case \u2014 USMCA 2026 joint review: United States declines to extend agreement"
+    url: "https://www.whitecase.com/insight-alert/usmca-2026-joint-review-united-states-declines-extend-agreement-triggering-annual"
+faqs:
+  - q: "Is USMCA still in force?"
+    a: "Yes. The agreement remains fully in force until July 1, 2036. The parties can still agree to extend it at any annual review."
+  - q: "What happens after the U.S. declined to renew USMCA?"
+    a: "The three countries now hold annual reviews through 2036, and the U.S. is negotiating bilaterally, starting with Mexico, on topics including auto rules of origin and steel and aluminum."
+  - q: "Should we still claim USMCA preference?"
+    a: "Yes, where goods qualify. USMCA preference also exempts qualifying goods from some newer tariffs, such as the Section 301 forced-labor duty, so documentation matters more than ever."
+---
+
+## Why it matters
+
+Nearshoring to Mexico rests on USMCA. The agreement hasn't ended, but it is no longer a settled 16-year framework. Annual reviews and bilateral talks mean rules of origin, metals measures and other terms could change before 2036, and procurement plans built on Mexican or Canadian supply should account for that.
+
+## The details
+
+The USMCA Free Trade Commission held the agreement's first six-year joint review on July 1, 2026. U.S. Trade Representative Jamieson Greer said the United States "did not agree to renew the USMCA in its current form." Mexico and Canada both supported a 16-year extension.
+
+Because the U.S. did not confirm an extension, the parties now review the agreement every year through July 1, 2036, when it would expire. They can still agree to extend it at any point.
+
+**Bilateral talks instead.** The U.S. chose separate negotiations with each partner. With Mexico, three rounds were completed by late July, with a fourth scheduled for September. Topics include:
+
+- Automotive rules of origin and automobiles
+- Steel, aluminum and derivative products
+- Economic security
+- Labor and environment
+- Electronic payment services, regulatory compatibility and agriculture
+
+As of late July, no formal U.S.–Canada talks had been held.
+
+**Investment protections.** The investment chapter has no general survival clause after termination, according to IISD's analysis, so a future U.S. withdrawal could end protections for existing investments.
+
+## Exposure by category
+
+| Category | Why it's exposed | Our read |
+|---|---|---|
+| Automotive parts | Rules of origin are under negotiation | Highest risk of rule changes; track every round |
+| Steel and aluminum products | Active negotiation topic, plus [Section 232 duties](/cost-monitor/steel/) | Expect continued volatility in landed cost |
+| Electronics and electrical assembly | Heavy Mexico assembly; origin rules matter | Keep certificates of origin current |
+| Agriculture and food | On the agenda | Watch for changes to market access |
+
+## What procurement teams should do
+
+- **Audit USMCA claims.** Make sure certificates of origin are current and that suppliers can support them. Preference also shields qualifying goods from the [Section 301 forced-labor tariff](/articles/2026-10-12-section-301-forced-labor-tariffs-what-buyers-pay/).
+- **Build change clauses into Mexican and Canadian supply agreements.** Spell out who absorbs cost if origin rules or duties change.
+- **Stress-test nearshoring business cases.** Run scenarios where preference is lost on key parts.
+- **Keep an eye on the border.** Separate from USMCA, [cross-border trucking capacity is tight](/articles/2026-10-14-mexico-cross-border-trucking-capacity-visa-restrictions/).
+
+## What to watch next
+
+- **The fourth U.S.–Mexico round** and any agreed changes to auto rules of origin.
+- **U.S.–Canada talks**, which had not formally started by late July.
+- **The 2027 annual review**, the next chance to confirm an extension.
+
+## The bigger picture
+
+USMCA has moved from a long-term framework to a rolling negotiation. That doesn't make Mexico or Canada less attractive for sourcing, but it raises the value of flexibility: dual sourcing, documented origin and contracts that anticipate rule changes.

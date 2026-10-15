@@ -1,6 +1,6 @@
 ---
 title: "U.S. tariffs explained for procurement teams (2026 guide)"
-description: "How Section 232, Section 301, the forced-labor tariffs and the expired IEEPA and Section 122 duties work, how they stack, and what buyers should do to control landed cost."
+description: "How Section 232, Section 301, the forced-labor tariffs and the expired IEEPA and Section 122 duties work, how they stack, and what procurement teams should do to control landed cost."
 updated: 2026-10-12
 topic: tariffs-trade
 tags: ["Section 232", "Section 301", "tariffs", "landed cost", "tariff exclusions", "forced labor"]
@@ -60,7 +60,7 @@ Section 232 of the Trade Expansion Act of 1962 lets the president restrict impor
 
 As of October 2026, Section 232 duties cover steel, aluminum, copper, autos and parts, wood products, semiconductors, medium- and heavy-duty vehicles and patented pharmaceuticals.
 
-Two changes in 2026 matter most to buyers:
+Two changes in 2026 matter most to procurement teams:
 
 - **Metals on full value.** Since April 6, 2026, steel, aluminum and copper duties apply to the full customs value of derivative products, not just their metal content. Rates are tiered at 50%, 25% and 15% depending on the product annex. Products with 15% or less metal by weight are excluded.
 - **Pharmaceuticals.** A default 100% duty applies to patented drugs and their active ingredients, with lower rates for the EU, Japan, South Korea, Switzerland and the UK, and for companies with U.S. onshoring or pricing agreements. Generics are exempt for now. See our [pharma tariff coverage](/articles/2026-10-12-section-232-pharma-tariff-now-applies-all-importers/).
@@ -70,7 +70,7 @@ Two changes in 2026 matter most to buyers:
 Section 301 of the Trade Act of 1974 lets the U.S. Trade Representative (USTR) respond to another country's unfair trade practices. It is applied **by country**.
 
 - **China tariffs (since 2018).** Duties of typically 25% on goods on Lists 1–3 remain in force. A shrinking set of **product exclusions** has protected some goods; the last 178 [expire Nov. 10, 2026](/articles/2026-10-12-section-301-china-exclusions-expire-nov-10/) unless USTR extends them.
-- **Forced-labor tariffs (since July 24, 2026).** An additional 10% or 12.5% on imports from 60 economies, depending on whether a country has a forced-labor import ban. Section 232 goods, USMCA-qualifying goods and inputs used in U.S. manufacturing are among the exemptions. See [what buyers are paying](/articles/2026-10-12-section-301-forced-labor-tariffs-what-buyers-pay/).
+- **Forced-labor tariffs (since July 24, 2026).** An additional 10% or 12.5% on imports from 60 economies, depending on whether a country has a forced-labor import ban. Section 232 goods, USMCA-qualifying goods and inputs used in U.S. manufacturing are among the exemptions. See [what importers are paying](/articles/2026-10-12-section-301-forced-labor-tariffs-what-buyers-pay/).
 
 ## What happened to IEEPA and Section 122
 
