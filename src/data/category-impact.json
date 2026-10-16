@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-15",
+  "asOf": "2026-10-16",
   "note": "Editorial file. 'now' must be factual and sourced; 'meaning' is Procurement Signal's analysis. Refresh each newsroom run when the cost monitor or category news changes. 'leverage' (1 = suppliers hold it, 5 = procurement holds it), 'risk', 'riskWhy', 'move' and 'when' are Procurement Signal's assessment, built from the cited sources.",
   "items": {
     "steel": {
@@ -115,6 +115,14 @@
           "url": "https://www.iea.org/reports/oil-market-report-october-2026"
         },
         {
+          "name": "The National — IEA boosts release of remaining stocks",
+          "url": "https://www.thenationalnews.com/business/energy/2026/10/15/iea-oil-supply-pledge-to-exceed-target-as-it-boosts-release-of-remaining-stocks/"
+        },
+        {
+          "name": "FreightWaves — Container ship attacks escalate in Strait of Hormuz",
+          "url": "https://www.freightwaves.com/news/container-ship-attacks-escalate-in-strait-of-hormuz"
+        },
+        {
           "name": "Procurement Signal: diesel at a record and fuel surcharges",
           "url": "/articles/2026-10-14-diesel-record-russia-deal-red-dye-order-fuel-surcharges/"
         },
@@ -129,7 +137,7 @@
       ],
       "leverage": 1,
       "risk": "high",
-      "riskWhy": "The IEA expects gasoil to stay tight well into 2027 and calls the Gulf supply recovery fragile; Houthi strikes hit Aramco's Dhahran headquarters on Oct. 13.",
+      "riskWhy": "The IEA expects gasoil to stay tight well into 2027 and calls the Gulf supply recovery fragile. On Oct. 15 it agreed to speed up the last ~100 million barrels of emergency stocks, including 20 million+ barrels of diesel, but Hormuz crossings fell to 131 in the week to Oct. 14 from 176 as attacks on ships escalated.",
       "move": "Keep fuel separate from linehaul in 2027 awards and tie every surcharge to the weekly DOE/EIA diesel index.",
       "when": "Before 2027 carrier awards",
       "label": "Diesel fuel"
