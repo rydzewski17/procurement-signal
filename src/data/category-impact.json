@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-15",
+  "asOf": "2026-10-16",
   "note": "Editorial file. 'now' must be factual and sourced; 'meaning' is Procurement Signal's analysis. Refresh each newsroom run when the cost monitor or category news changes. 'leverage' (1 = suppliers hold it, 5 = procurement holds it), 'risk', 'riskWhy', 'move' and 'when' are Procurement Signal's assessment, built from the cited sources.",
   "items": {
     "steel": {
@@ -43,9 +43,17 @@
       "label": "Aluminum"
     },
     "copper": {
-      "now": "Copper and brass mill shapes are at a 12-month high, up 20.9% on the year. Copper and derivatives are covered by the April 2026 Section 232 metals proclamation.",
-      "meaning": "Wire, cable and copper-intensive component suppliers face higher input and duty costs. Expect pass-through requests and check which parts are copper-heavy.",
+      "now": "Copper and brass mill shapes are at a 12-month high, up 20.9% on the year, and semi-finished copper carries a 50% Section 232 duty. Refined cathode is still exempt: a proposed 15% tariff from Jan. 1, 2027 has not been decided, U.S. stocks are about 1.6 million tons (Macquarie) and the COMEX premium over LME has fallen almost 90% from its 2025 peak.",
+      "meaning": "Domestic metal is plentiful and the U.S. premium is shrinking, so 2027 price letters should not pre-load a refined-copper tariff. Expect pass-through on semi-finished copper, but push for COMEX-linked prices to follow the narrowing premium.",
       "sources": [
+        {
+          "name": "Procurement Signal: U.S. copper stocks and the pending refined-copper tariff",
+          "url": "/articles/2026-10-16-us-copper-stockpile-1-6-million-tons-refined-tariff-decision-pending/"
+        },
+        {
+          "name": "ScrapMonster — U.S. copper stockpile hits 1.6M tons",
+          "url": "https://www.scrapmonster.com/news/copper/u.s.-copper-stockpile-hits-1.6m-tons-2026-10-15/100255"
+        },
         {
           "name": "Procurement Signal: input-cost pressure report",
           "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/"
@@ -55,17 +63,21 @@
           "url": "/articles/2026-10-01-ism-september-prices-index-77-9-supplier-lead-times/"
         }
       ],
-      "leverage": 2,
+      "leverage": 3,
       "risk": "elevated",
-      "riskWhy": "Mill shapes are at a 12-month high, and copper derivatives now fall under Section 232. Wire, cable and motor suppliers are passing costs through.",
-      "move": "Map copper-heavy parts and require a cost breakdown with every pass-through request.",
-      "when": "Before first-quarter price letters",
+      "riskWhy": "A refined-copper tariff decision could come at any time and would widen U.S. premiums again; semi-finished copper already pays 50% under Section 232.",
+      "move": "Reject pre-loaded tariff increases, split metal from conversion cost and agree a tariff trigger clause now.",
+      "when": "Before 2027 price letters and any Jan. 1 tariff decision",
       "label": "Copper and brass"
     },
     "resins": {
       "now": "Plastic resin prices have fallen 8.5% over three months and are among the categories that turned lower this year.",
       "meaning": "Input costs for packaging and molded-part suppliers are falling. Category managers have leverage to re-quote rather than accept increases set earlier in the year.",
       "sources": [
+        {
+          "name": "Procurement Signal: September producer prices",
+          "url": "/articles/2026-10-16-september-ppi-1-3-percent-energy-diesel-supplier-price-increases/"
+        },
         {
           "name": "Procurement Signal: input-cost pressure report",
           "url": "/articles/2026-10-12-cost-pressure-monitor-steel-freight-diesel-lead/"
@@ -77,7 +89,7 @@
       ],
       "leverage": 4,
       "risk": "low",
-      "riskWhy": "Producer prices fell 8.5% over three months through August and supply is available, although ISM respondents reported resin prices rising again in September.",
+      "riskWhy": "Producer prices fell 8.5% over three months through August, and BLS listed thermoplastic resins among the items that declined in September, although ISM respondents reported resin prices rising.",
       "move": "Re-bid packaging and molded parts, and ask for decreases tied to a resin index.",
       "when": "Next 60 days",
       "label": "Plastic resins"
@@ -103,9 +115,17 @@
       "label": "Industrial chemicals"
     },
     "diesel": {
-      "now": "Diesel jumped 17.7% in August and is up 77.8% on the year. The IEA says diesel hit records near $220 a barrel in September and the market will stay tight well into 2027, with stocks unlikely to rebuild before the second half of 2027.",
+      "now": "Producer prices for diesel fuel rose 21.0% in September at the intermediate stage, after a 17.7% jump in August. The IEA says diesel hit records near $220 a barrel in September and the market will stay tight well into 2027, with stocks unlikely to rebuild before the second half of 2027.",
       "meaning": "Plan for a long plateau, not a winter spike. Fuel surcharge tables in carrier and supplier contracts will matter for the whole 2027 contract term, and indexed fuel passes any relief back faster than fixed all-in rates.",
       "sources": [
+        {
+          "name": "Procurement Signal: September producer prices",
+          "url": "/articles/2026-10-16-september-ppi-1-3-percent-energy-diesel-supplier-price-increases/"
+        },
+        {
+          "name": "BLS — Producer Price Indexes, September 2026",
+          "url": "https://www.bls.gov/news.release/archives/ppi_10152026.htm"
+        },
         {
           "name": "Procurement Signal: IEA sees diesel tight into 2027",
           "url": "/articles/2026-10-15-diesel-tight-into-2027-iea-houthi-aramco-strikes/"
@@ -159,9 +179,13 @@
       "label": "Ocean freight"
     },
     "trucking": {
-      "now": "Government truck transportation prices have been flat for three months, but contract truckload rates hit a 52-week high in October as carriers exit the market faster than freight volumes fall.",
+      "now": "Transportation and warehousing producer prices rose 3.4% in September, and BLS cited higher truck freight prices. Contract truckload rates hit a 52-week high in October as carriers exit the market faster than freight volumes fall.",
       "meaning": "The official index lags the market. Expect 2027 freight bids to price higher; protect routing-guide compliance with realistic rates and shorter award terms on volatile lanes.",
       "sources": [
+        {
+          "name": "Procurement Signal: September producer prices",
+          "url": "/articles/2026-10-16-september-ppi-1-3-percent-energy-diesel-supplier-price-increases/"
+        },
         {
           "name": "Procurement Signal: truckload contract rates at a 52-week high",
           "url": "/articles/2026-10-14-truckload-contract-rates-52-week-high-bid-season/"
