@@ -2,7 +2,7 @@
   "title": "Tariff & Trade Deadline Tracker",
   "description": "Upcoming and recent U.S. tariff effective dates, expirations and phase-ins that change landed cost.",
   "intro": "Every date here changes what you pay for imported goods. We update this tracker with each newsroom run. Always confirm details with your customs broker and the official notice.",
-  "updated": "2026-10-15",
+  "updated": "2026-10-16",
   "columns": [
     "Date",
     "Action",
@@ -48,6 +48,15 @@
     },
     {
       "cells": [
+        "Jan. 1, 2027",
+        "Proposed refined-copper tariff start",
+        "Commerce previously recommended a 15% Section 232 tariff on refined copper cathode from Jan. 1, 2027, rising to 30% on Jan. 1, 2028; no implementing decision has been announced",
+        "Proposed, not decided"
+      ],
+      "source": "https://www.scrapmonster.com/news/copper/u.s.-copper-stockpile-hits-1.6m-tons-2026-10-15/100255"
+    },
+    {
+      "cells": [
         "Dec. 30, 2026",
         "EU Deforestation Regulation applies",
         "Medium and large companies must file due diligence statements for cattle, cocoa, coffee, palm oil, rubber, soy and wood products sold in the EU",
@@ -66,6 +75,15 @@
         "Soy",
         "Palm oil"
       ]
+    },
+    {
+      "cells": [
+        "Dec. 14, 2026",
+        "FMC Spain remedy comments due",
+        "Proposed $200,000 fee per U.S. port call by Spanish-flagged vessels and limits on Spanish imports in HTS chapters 15, 17, 33, 68 and 69 (docket FMC-2026-0463)",
+        "Proposed"
+      ],
+      "source": "https://www.federalregister.gov/documents/2026/10/15/2026-21067/investigation-into-conditions-affecting-shipping-in-the-foreign-trade-and-denial-of-entry-of-vessels"
     },
     {
       "cells": [

@@ -6,7 +6,6 @@ updated: 2026-10-16
 topic: commodities
 type: news
 signal: 5
-featured: true
 categories: ["energy", "freight", "contracts"]
 keyfacts:
   - value: "2H27"
