@@ -1,11 +1,251 @@
 {
- "updated": "2026-10-16T14:47:59.057Z",
+ "updated": "2026-10-17T13:41:51.481Z",
  "items": [
+  {
+   "title": "Certain Steel Nails From Taiwan: Final Results of Antidumping Duty Administrative Review; 2024-2025",
+   "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21362/certain-steel-nails-from-taiwan-final-results-of-antidumping-duty-administrative-review-2024-2025",
+   "source": "Federal Register · Commerce Department",
+   "date": "2026-10-19T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs",
+    "metals"
+   ],
+   "official": true
+  },
+  {
+   "title": "Information Collection Requirement; Defense Federal Acquisition Regulation Supplement (DFARS) Parts 223 and 226, Occupational Safety and Drug-Free Work Force",
+   "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21330/information-collection-requirement-defense-federal-acquisition-regulation-supplement-dfars-parts-223",
+   "source": "Federal Register · Defense Department",
+   "date": "2026-10-19T12:00:00.000Z",
+   "topic": "proc-tech",
+   "categories": [
+    "proc-tech",
+    "public-sector",
+    "compliance",
+    "deals",
+    "healthcare"
+   ],
+   "official": true
+  },
+  {
+   "title": "Information Collection Requirement; Defense Federal Acquisition Regulation Supplement (DFARS); Inspection and Receiving Report",
+   "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21329/information-collection-requirement-defense-federal-acquisition-regulation-supplement-dfars",
+   "source": "Federal Register · Defense Department",
+   "date": "2026-10-19T12:00:00.000Z",
+   "topic": "proc-tech",
+   "categories": [
+    "freight",
+    "proc-tech",
+    "public-sector",
+    "compliance",
+    "deals"
+   ],
+   "official": true
+  },
+  {
+   "title": "Information Collection Requirement; Defense Federal Acquisition Regulation Supplement (DFARS) Part 215 Negotiation",
+   "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21327/information-collection-requirement-defense-federal-acquisition-regulation-supplement-dfars-part-215",
+   "source": "Federal Register · Defense Department",
+   "date": "2026-10-19T12:00:00.000Z",
+   "topic": "proc-tech",
+   "categories": [
+    "proc-tech",
+    "public-sector",
+    "compliance",
+    "deals"
+   ],
+   "official": true
+  },
+  {
+   "title": "Information Collection; General Services Administration Acquisition Regulation; Prohibition on Certain Supply Chain Services or Equipment Under Lease Acquisitions and Commercial Solution Openings",
+   "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21255/information-collection-general-services-administration-acquisition-regulation-prohibition-on-certain",
+   "source": "Federal Register · General Services Administration",
+   "date": "2026-10-19T12:00:00.000Z",
+   "topic": "proc-tech",
+   "categories": [
+    "proc-tech",
+    "public-sector",
+    "compliance",
+    "deals"
+   ],
+   "official": true
+  },
+  {
+   "title": "Marine Mammals; Incidental Take of Polar Bears and Pacific Walruses in the Beaufort Sea and North Slope of Alaska",
+   "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21371/marine-mammals-incidental-take-of-polar-bears-and-pacific-walruses-in-the-beaufort-sea-and-north",
+   "source": "Federal Register · Interior Department",
+   "date": "2026-10-19T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "freight",
+    "compliance"
+   ],
+   "official": true
+  },
+  {
+   "title": "BREAKING: Texas judge upholds nuclear verdict against C.H. Robinson",
+   "url": "https://www.freightwaves.com/news/breaking-texas-judge-upholds-nuclear-verdict-against-c-h-robinson",
+   "source": "FreightWaves",
+   "date": "2026-10-17T00:15:48.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Evos raises $9M to build AI operators for industrial businesses",
+   "url": "https://www.freightwaves.com/news/evos-raises-9m-to-build-ai-operators-for-industrial-businesses",
+   "source": "FreightWaves",
+   "date": "2026-10-16T19:55:52.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "freight",
+    "proc-tech",
+    "ai",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "Tesla staffs up Nevada Semi plant as fleet orders stack up",
+   "url": "https://www.freightwaves.com/news/tesla-semi-nevada-hiring",
+   "source": "FreightWaves",
+   "date": "2026-10-16T19:52:19.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Veteran trucker launches free parking, fuel-price platform for drivers",
+   "url": "https://www.freightwaves.com/news/veteran-trucker-launches-free-parking-fuel-price-platform-for-drivers",
+   "source": "FreightWaves",
+   "date": "2026-10-16T19:50:24.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight",
+    "energy",
+    "proc-tech"
+   ],
+   "official": false
+  },
+  {
+   "title": "Louisiana attorney, staged accident scammer, finally sentenced",
+   "url": "https://www.freightwaves.com/news/louisiana-attorney-staged-accident-scammer-finally-sentenced",
+   "source": "FreightWaves",
+   "date": "2026-10-16T19:26:51.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "25 charged after drug ring used unsuspecting truckers to haul cocaine from California to Florida",
+   "url": "https://www.freightwaves.com/news/25-charged-after-drug-ring-used-unsuspecting-truckers-to-haul-cocaine-from-california-to-florida",
+   "source": "FreightWaves",
+   "date": "2026-10-16T17:43:14.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "sourcing",
+    "healthcare"
+   ],
+   "official": false
+  },
+  {
+   "title": "ATRI gets a new head: TeamOne’s Siplon",
+   "url": "https://www.freightwaves.com/news/atri-gets-a-new-head-teamones-siplon",
+   "source": "FreightWaves",
+   "date": "2026-10-16T17:10:32.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Alcoa plans to sell part of its Massena East site for $315M",
+   "url": "https://www.manufacturingdive.com/news/alcoa-sell-massena-east-assets-315-m-q3-2026-south32-progress/833226/",
+   "source": "Manufacturing Dive",
+   "date": "2026-10-16T16:27:00.000Z",
+   "topic": "commodities",
+   "categories": [
+    "metals",
+    "proc-tech",
+    "deals",
+    "food-ag"
+   ],
+   "official": false
+  },
+  {
+   "title": "Carrier Logistics, LSP44 announce partnership to automate LTL shipment identification",
+   "url": "https://www.freightwaves.com/news/carrier-logistics-lsp44-announce-partnership-to-automate-ltl-shipment-identification",
+   "source": "FreightWaves",
+   "date": "2026-10-16T16:08:59.000Z",
+   "topic": "proc-tech",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Manufacturing tech orders hit 3rd-highest monthly total: AMT",
+   "url": "https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/",
+   "source": "Manufacturing Dive",
+   "date": "2026-10-16T15:00:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "manufacturing",
+    "talent",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "Larger UPS air hub in Philippines boosts Asia service levels",
+   "url": "https://www.freightwaves.com/news/larger-ups-air-hub-in-philippines-boosts-asia-service-levels",
+   "source": "FreightWaves",
+   "date": "2026-10-16T14:52:48.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Container ship attacks escalate in Strait of Hormuz",
+   "url": "https://www.freightwaves.com/news/container-ship-attacks-escalate-in-strait-of-hormuz",
+   "source": "FreightWaves",
+   "date": "2026-10-16T14:51:24.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "supplier-risk",
+    "contracts"
+   ],
+   "official": false
+  },
   {
    "title": "From library to logistics: Cathy Morrow Roberson shares career insights",
    "url": "https://www.supplychaindive.com/news/from-library-to-logistics-cathy-morrow-roberson-shares-career-insights/833023/",
    "source": "Supply Chain Dive",
    "date": "2026-10-16T14:34:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Intermodal rail better by 10% in latest count",
+   "url": "https://www.freightwaves.com/news/intermodal-rail-better-by-10-in-latest-count",
+   "source": "FreightWaves",
+   "date": "2026-10-16T14:31:00.000Z",
    "topic": "supplier-risk",
    "categories": [
     "freight"
@@ -498,235 +738,6 @@
    "categories": [
     "freight",
     "supplier-risk"
-   ],
-   "official": false
-  },
-  {
-   "title": "Houthi attacks add new geopolitical risk to softening container rates",
-   "url": "https://www.freightwaves.com/news/houthi-attacks-add-new-geopolitical-risk-to-softening-container-rates",
-   "source": "FreightWaves",
-   "date": "2026-10-14T17:46:53.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "supplier-risk",
-    "contracts"
-   ],
-   "official": false
-  },
-  {
-   "title": "Volvo takes aim at vocational trucks with 540-hp VNX launch",
-   "url": "https://www.freightwaves.com/news/volvo-vnx-vocational-truck-launch",
-   "source": "FreightWaves",
-   "date": "2026-10-14T17:30:00.000Z",
-   "topic": "proc-tech",
-   "categories": [
-    "freight",
-    "proc-tech",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Freight broker alleges customer theft, kickbacks in lawsuit against rival",
-   "url": "https://www.freightwaves.com/news/freight-broker-alleges-customer-theft-kickbacks-in-lawsuit-against-rival",
-   "source": "FreightWaves",
-   "date": "2026-10-14T17:09:49.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "UPS’ Happy Returns comes to TikTok Shop",
-   "url": "https://www.supplychaindive.com/news/ups-happy-returns-comes-to-tiktok-shop/832990/",
-   "source": "Supply Chain Dive",
-   "date": "2026-10-14T15:40:17.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "warehousing"
-   ],
-   "official": false
-  },
-  {
-   "title": "Micron pledges $50M to support DOE’s Genesis Mission",
-   "url": "https://www.manufacturingdive.com/news/micron-doe-genesis-mission-graduate-fellowship-pilot-program/832895/",
-   "source": "Manufacturing Dive",
-   "date": "2026-10-14T14:52:34.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "freight",
-    "spend",
-    "ai",
-    "semis"
-   ],
-   "official": false
-  },
-  {
-   "title": "Best Buy pilots battery-powered vehicles at California distribution sites",
-   "url": "https://www.supplychaindive.com/news/best-buy-pilots-battery-powered-vehicles-at-california-distribution-sites/832802/",
-   "source": "Supply Chain Dive",
-   "date": "2026-10-14T14:32:12.000Z",
-   "topic": "esg-regulation",
-   "categories": [
-    "sustainability"
-   ],
-   "official": false
-  },
-  {
-   "title": "Is UPS parcel pivot a strategic winner or a ‘Trojan horse’?",
-   "url": "https://www.freightwaves.com/news/is-ups-parcel-pivot-a-strategic-winner-or-a-trojan-horse",
-   "source": "FreightWaves",
-   "date": "2026-10-14T13:23:59.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "supplier-risk"
-   ],
-   "official": false
-  },
-  {
-   "title": "Nebraska deputies recover $250K stolen copper load 50 miles past Iowa destination",
-   "url": "https://www.freightwaves.com/news/nebraska-deputies-recover-250k-stolen-copper-load-50-miles-past-iowa-destination",
-   "source": "FreightWaves",
-   "date": "2026-10-14T13:20:34.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight",
-    "metals",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "LTL rates hit new high in Q3, moving higher in Q4",
-   "url": "https://www.freightwaves.com/news/ltl-rates-hit-new-high-in-q3-moving-higher-in-q4",
-   "source": "FreightWaves",
-   "date": "2026-10-14T13:20:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Parcel shipping costs approach record high as extra charges stack up",
-   "url": "https://www.freightwaves.com/news/parcel-shipping-costs-approach-record-high-as-extra-charges-stack-up",
-   "source": "FreightWaves",
-   "date": "2026-10-14T12:33:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "contracts"
-   ],
-   "official": false
-  },
-  {
-   "title": "Certain Vertical Power Delivery Systems, Components Thereof, and Computing Systems Containing the Same; Notice of Institution of Investigation",
-   "url": "https://www.federalregister.gov/documents/2026/10/14/2026-20993/certain-vertical-power-delivery-systems-components-thereof-and-computing-systems-containing-the-same",
-   "source": "Federal Register · International Trade Commission",
-   "date": "2026-10-14T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs",
-    "freight",
-    "deals"
-   ],
-   "official": true
-  },
-  {
-   "title": "Trichloroethylene (TCE); Regulation Under the Toxic Substances Control Act (TSCA); Compliance Date Extensions",
-   "url": "https://www.federalregister.gov/documents/2026/10/14/2026-20964/trichloroethylene-tce-regulation-under-the-toxic-substances-control-act-tsca-compliance-date",
-   "source": "Federal Register · Environmental Protection Agency",
-   "date": "2026-10-14T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs",
-    "compliance"
-   ],
-   "official": true
-  },
-  {
-   "title": "Notice of Receipt of Complaint; Solicitation of Comments Relating to the Public Interest",
-   "url": "https://www.federalregister.gov/documents/2026/10/14/2026-20932/notice-of-receipt-of-complaint-solicitation-of-comments-relating-to-the-public-interest",
-   "source": "Federal Register · International Trade Commission",
-   "date": "2026-10-14T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs"
-   ],
-   "official": true
-  },
-  {
-   "title": "Certain Corrosion-Resistant Steel Products From Taiwan: Preliminary Results and Rescission, in Part, of Antidumping Duty Administrative Review; 2024-2025",
-   "url": "https://www.federalregister.gov/documents/2026/10/14/2026-20897/certain-corrosion-resistant-steel-products-from-taiwan-preliminary-results-and-rescission-in-part-of",
-   "source": "Federal Register · Commerce Department",
-   "date": "2026-10-14T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs",
-    "metals"
-   ],
-   "official": true
-  },
-  {
-   "title": "Imposition and Collection of Civil Penalties for Certain Immigration-Related Violations",
-   "url": "https://www.federalregister.gov/documents/2026/10/14/2026-21024/imposition-and-collection-of-civil-penalties-for-certain-immigration-related-violations",
-   "source": "Federal Register · Homeland Security Department",
-   "date": "2026-10-14T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "freight",
-    "compliance"
-   ],
-   "official": true
-  },
-  {
-   "title": "Pilot, Tesla open first Megacharger site, 12 more underway",
-   "url": "https://www.freightwaves.com/news/pilot-tesla-megacharger-site-opens",
-   "source": "FreightWaves",
-   "date": "2026-10-14T11:30:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs",
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "New chief for DP World Americas",
-   "url": "https://www.freightwaves.com/news/new-chief-for-dp-world-americas",
-   "source": "FreightWaves",
-   "date": "2026-10-14T10:26:00.000Z",
-   "topic": "people-moves",
-   "categories": [
-    "freight",
-    "talent"
-   ],
-   "official": false
-  },
-  {
-   "title": "Philadelphia ports sets $837 million expansion, first new berth in 50 years",
-   "url": "https://www.freightwaves.com/news/philadelphia-ports-sets-837-million-expansion-first-new-berth-in-50-years",
-   "source": "FreightWaves",
-   "date": "2026-10-14T10:05:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "manufacturing",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Top 5 ways to improve relationships with suppliers",
-   "url": "https://cpostrategy.media/blog/2026/10/14/top-5-ways-to-improve-relationships-with-suppliers/",
-   "source": "CPO Strategy",
-   "date": "2026-10-14T09:00:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "sourcing"
    ],
    "official": false
   }
