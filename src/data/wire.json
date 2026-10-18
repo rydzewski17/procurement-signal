@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T13:41:51.481Z",
+ "updated": "2026-10-18T13:58:28.152Z",
  "items": [
   {
    "title": "Certain Steel Nails From Taiwan: Final Results of Antidumping Duty Administrative Review; 2024-2025",
@@ -84,7 +84,45 @@
    "official": true
   },
   {
-   "title": "BREAKING: Texas judge upholds nuclear verdict against C.H. Robinson",
+   "title": "Borderlands Mexico: US trucking crackdown raises concerns over freight disruptions",
+   "url": "https://www.freightwaves.com/news/borderlands-mexico-us-trucking-crackdown-raises-concerns-over-freight-disruptions",
+   "source": "FreightWaves",
+   "date": "2026-10-18T11:00:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "supplier-risk",
+    "proc-tech",
+    "warehousing"
+   ],
+   "official": false
+  },
+  {
+   "title": "No signs of truckload capacity recovering",
+   "url": "https://www.freightwaves.com/news/no-signs-of-truckload-capacity-recovering",
+   "source": "FreightWaves",
+   "date": "2026-10-18T00:30:00.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight",
+    "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "What Daimler’s Finance And Global Chiefs Revealed About Diesel, Driverless Trucks, And The Future Of The Industry",
+   "url": "https://www.freightwaves.com/news/what-daimlers-finance-and-global-chiefs-revealed-about-diesel-driverless-trucks-and-the-future-of-the-industry",
+   "source": "FreightWaves",
+   "date": "2026-10-17T17:32:16.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "freight",
+    "energy"
+   ],
+   "official": false
+  },
+  {
+   "title": "Texas judge upholds nuclear verdict against C.H. Robinson",
    "url": "https://www.freightwaves.com/news/breaking-texas-judge-upholds-nuclear-verdict-against-c-h-robinson",
    "source": "FreightWaves",
    "date": "2026-10-17T00:15:48.000Z",
@@ -702,42 +740,6 @@
    "categories": [
     "freight",
     "energy"
-   ],
-   "official": false
-  },
-  {
-   "title": "Why Rail Is Booming: Intermodal & Carload Growth Explained",
-   "url": "https://www.freightwaves.com/news/why-rail-is-booming-intermodal-carload-growth-explained",
-   "source": "FreightWaves",
-   "date": "2026-10-14T18:59:14.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight",
-    "energy",
-    "manufacturing"
-   ],
-   "official": false
-  },
-  {
-   "title": "Democratizing Trucking Tech: What Small Fleets NEED to Know",
-   "url": "https://www.freightwaves.com/news/democratizing-trucking-tech-what-small-fleets-need-to-know",
-   "source": "FreightWaves",
-   "date": "2026-10-14T18:58:14.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Freight Market Alert: Why October’s Tender Rejections Hit 14% Unexpectedly",
-   "url": "https://www.freightwaves.com/news/freight-market-alert-why-octobers-tender-rejections-hit-14-unexpectedly",
-   "source": "FreightWaves",
-   "date": "2026-10-14T18:57:25.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "supplier-risk"
    ],
    "official": false
   }
