@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15",
+  "updated": "2026-10-16",
   "events": [
     {
       "date": "2026-09-29",
@@ -12,6 +12,11 @@
       "href": "/articles/2026-10-15-saudi-air-cargo-capacity-riyadh-airport-closure-houthi-strikes/"
     },
     {
+      "date": "2026-10-19",
+      "label": "LME Week opens in London",
+      "href": "/articles/2026-10-16-us-copper-stockpile-1-6-million-tons-refined-tariff-decision-pending/"
+    },
+    {
       "date": "2026-11-10",
       "label": "Section 301 China exclusions expire",
       "href": "/articles/2026-10-12-section-301-china-exclusions-expire-nov-10/"
@@ -22,6 +27,11 @@
       "href": "/articles/2026-10-15-china-rare-earth-export-pause-expires-nov-10-magnets/"
     },
     {
+      "date": "2026-11-13",
+      "label": "October producer price data (PPI)",
+      "href": "/articles/2026-10-16-september-ppi-1-3-percent-energy-diesel-supplier-price-increases/"
+    },
+    {
       "date": "2026-11-18",
       "label": "UP–NS merger comments due at STB",
       "href": "/articles/2026-09-01-union-pacific-norfolk-southern-merger-stb-schedule-shippers/"
@@ -30,6 +40,11 @@
       "date": "2026-12-07",
       "label": "CBP low-value shipment rule comments due",
       "href": "/articles/2026-10-15-cbp-low-value-shipments-bond-rule-2500-informal-entry/"
+    },
+    {
+      "date": "2026-12-14",
+      "label": "FMC Spain shipping remedy comments due",
+      "href": "/articles/2026-10-16-fmc-spain-200000-vessel-fee-olive-oil-tile-import-limits/"
     },
     {
       "date": "2026-12-30",
