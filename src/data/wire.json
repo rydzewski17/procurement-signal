@@ -1,6 +1,327 @@
 {
- "updated": "2026-10-20T15:00:36.892Z",
+ "updated": "2026-10-21T15:10:51.399Z",
  "items": [
+  {
+   "title": "Apple expands US supplier network for iPhone materials, components",
+   "url": "https://www.supplychaindive.com/news/apple-expands-us-supplier-network-for-iphone-materials-components/833496/",
+   "source": "Supply Chain Dive",
+   "date": "2026-10-21T15:05:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "sourcing",
+    "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Union Pacific CFO to retire",
+   "url": "https://www.freightwaves.com/news/union-pacific-cfo-to-retire",
+   "source": "FreightWaves",
+   "date": "2026-10-21T14:18:45.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "CSX eliminates more than 100 management positions",
+   "url": "https://www.freightwaves.com/news/csx-eliminates-more-than-100-management-positions",
+   "source": "FreightWaves",
+   "date": "2026-10-21T13:41:19.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "Stord acquires e-commerce competitor AMS Fulfillment in large deal",
+   "url": "https://www.freightwaves.com/news/stord-acquires-e-commerce-competitor-ams-fulfillment-in-large-deal",
+   "source": "FreightWaves",
+   "date": "2026-10-21T12:59:08.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "freight",
+    "proc-tech",
+    "warehousing",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "From Freight Management to Self-Improving Networks",
+   "url": "https://www.freightwaves.com/news/from-freight-management-to-self-improving-networks",
+   "source": "FreightWaves",
+   "date": "2026-10-21T12:00:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Implementing the Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
+   "url": "https://www.federalregister.gov/documents/2026/10/21/2026-21599/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026",
+   "source": "Federal Register · Executive Office of the President",
+   "date": "2026-10-21T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs",
+    "compliance"
+   ],
+   "official": true
+  },
+  {
+   "title": "Primo Brands opens first new factory post merger",
+   "url": "https://www.supplychaindive.com/news/primo-brands-opens-first-new-factory-post-merger/833375/",
+   "source": "Supply Chain Dive",
+   "date": "2026-10-21T11:15:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "manufacturing",
+    "deals",
+    "food-ag"
+   ],
+   "official": false
+  },
+  {
+   "title": "Highway pitches shared standards as freight fraud shifts",
+   "url": "https://www.freightwaves.com/news/highway-shared-standards-freight-fraud",
+   "source": "FreightWaves",
+   "date": "2026-10-21T11:00:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "sourcing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Vertice announces launch of P2P",
+   "url": "https://cpostrategy.media/blog/2026/10/21/vertice-announces-launch-of-p2p/",
+   "source": "CPO Strategy",
+   "date": "2026-10-21T08:05:00.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "proc-tech",
+    "ai"
+   ],
+   "official": false
+  },
+  {
+   "title": "Nearly $1M in Pokémon and sports cards vanish from FedEx truck, driver discovers missing lock",
+   "url": "https://www.freightwaves.com/news/nearly-1m-in-pokemon-and-sports-cards-vanish-from-fedex-truck-driver-discovers-missing-lock",
+   "source": "FreightWaves",
+   "date": "2026-10-21T01:08:08.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "A. Duie Pyle expands LTL network with new Ohio, Pennsylvania facilities",
+   "url": "https://www.freightwaves.com/news/a-duie-pyle-expands-ltl-network-with-new-ohio-pennsylvania-facilities",
+   "source": "FreightWaves",
+   "date": "2026-10-20T20:39:23.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "manufacturing",
+    "warehousing"
+   ],
+   "official": false
+  },
+  {
+   "title": "PACCAR builds a fleet app platform into Kenworth, Peterbilt",
+   "url": "https://www.freightwaves.com/news/paccar-connect-kenworth-peterbilt-launch",
+   "source": "FreightWaves",
+   "date": "2026-10-20T20:35:38.000Z",
+   "topic": "proc-tech",
+   "categories": [
+    "freight",
+    "proc-tech",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "Lawsuit accuses Essity, Edgewell, J&J of violating PFAS ban in California",
+   "url": "https://www.manufacturingdive.com/news/carefree-edgewell-essity-jj-gelsons-lawsuit-pfoa-pfas-california/833296/",
+   "source": "Manufacturing Dive",
+   "date": "2026-10-20T19:31:01.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Napa Auto Parts revs up fulfillment efficiency with automation",
+   "url": "https://www.supplychaindive.com/news/napa-auto-parts-revs-up-fulfillment-efficiency-with-automation/833383/",
+   "source": "Supply Chain Dive",
+   "date": "2026-10-20T19:09:00.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "freight",
+    "ai",
+    "warehousing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Partner of Choice: Why the Best Shipper-Carrier Relationships Now Go Beyond Shipper of Choice",
+   "url": "https://www.freightwaves.com/news/partner-of-choice-why-the-best-shipper-carrier-relationships-now-go-beyond-shipper-of-choice",
+   "source": "FreightWaves",
+   "date": "2026-10-20T18:53:46.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "contracts"
+   ],
+   "official": false
+  },
+  {
+   "title": "Trump’s 50% Canada tariffs challenged in court",
+   "url": "https://www.supplychaindive.com/news/trumps-50-canada-tariffs-challenged-in-court/833495/",
+   "source": "Supply Chain Dive",
+   "date": "2026-10-20T18:18:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs",
+    "public-sector"
+   ],
+   "official": false
+  },
+  {
+   "title": "Reefer Truckload Rejections Soar: 1 in 5 Loads Rejected Nationally",
+   "url": "https://www.freightwaves.com/news/reefer-truckload-rejections-soar-1-in-5-loads-rejected-nationally",
+   "source": "FreightWaves",
+   "date": "2026-10-20T17:56:29.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight",
+    "energy",
+    "contracts"
+   ],
+   "official": false
+  },
+  {
+   "title": "Bot Auto’s Secret to an Affordable Future",
+   "url": "https://www.freightwaves.com/news/bot-autos-secret-to-an-affordable-future",
+   "source": "FreightWaves",
+   "date": "2026-10-20T17:55:18.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "freight",
+    "ai"
+   ],
+   "official": false
+  },
+  {
+   "title": "Diesel Prices: Up, Down, or Stuck?",
+   "url": "https://www.freightwaves.com/news/diesel-prices-up-down-or-stuck",
+   "source": "FreightWaves",
+   "date": "2026-10-20T17:53:35.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight",
+    "energy"
+   ],
+   "official": false
+  },
+  {
+   "title": "Time-definite ocean delivery? Container ship completes new Arctic route trial",
+   "url": "https://www.freightwaves.com/news/time-definite-ocean-delivery-container-ship-completes-new-arctic-route-trial",
+   "source": "FreightWaves",
+   "date": "2026-10-20T17:00:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "US semiconductor supply chain relies on vulnerable, hidden inputs",
+   "url": "https://www.supplychaindive.com/news/us-semiconductor-supply-chain-relies-on-vulnerable-hidden-inputs/833485/",
+   "source": "Supply Chain Dive",
+   "date": "2026-10-20T16:55:46.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "supplier-risk",
+    "sourcing",
+    "semis",
+    "public-sector"
+   ],
+   "official": false
+  },
+  {
+   "title": "Heartland Express sees earnings turnaround in Q3",
+   "url": "https://www.freightwaves.com/news/heartland-express-sees-earnings-turnaround-in-q3",
+   "source": "FreightWaves",
+   "date": "2026-10-20T16:32:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "World’s first ammonia-powered dry bulk ship completes sea trials",
+   "url": "https://www.freightwaves.com/news/worlds-first-ammonia-powered-dry-bulk-ship-completes-sea-trials",
+   "source": "FreightWaves",
+   "date": "2026-10-20T16:30:00.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight",
+    "energy"
+   ],
+   "official": false
+  },
+  {
+   "title": "Benchmark diesel price up as market takes a short breather",
+   "url": "https://www.freightwaves.com/news/benchmark-diesel-price-up-as-market-takes-a-short-breather",
+   "source": "FreightWaves",
+   "date": "2026-10-20T16:10:29.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight",
+    "energy",
+    "contracts"
+   ],
+   "official": false
+  },
+  {
+   "title": "Cleveland-Cliffs posts ‘strongest’ quarter in three years: CFO",
+   "url": "https://www.manufacturingdive.com/news/cleveland-cliffs-posts-strongest-quarter-three-years-cfo-says-q3-2026/833456/",
+   "source": "Manufacturing Dive",
+   "date": "2026-10-20T15:53:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs",
+    "freight",
+    "metals",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "How new capacity is raising rates in chaotic ocean market",
+   "url": "https://www.freightwaves.com/news/how-new-capacity-is-raising-rates-in-chaotic-ocean-market",
+   "source": "FreightWaves",
+   "date": "2026-10-20T14:58:59.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "manufacturing"
+   ],
+   "official": false
+  },
   {
    "title": "Texas sues Nestlé’s Gerber over alleged heavy metals in baby food",
    "url": "https://www.supplychaindive.com/news/texas-sues-nestles-gerber-over-alleged-heavy-metals-in-baby-food/833374/",
@@ -59,6 +380,18 @@
    "topic": "supplier-risk",
    "categories": [
     "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Bluffworks targets lower fulfillment costs after provider switch",
+   "url": "https://www.supplychaindive.com/news/bluffworks-targets-lower-fulfillment-costs-after-provider-switch/833337/",
+   "source": "Supply Chain Dive",
+   "date": "2026-10-20T13:57:02.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "warehousing",
+    "talent"
    ],
    "official": false
   },
@@ -235,6 +568,20 @@
    "official": false
   },
   {
+   "title": "US semiconductor supply chain relies on vulnerable, hidden inputs: SIA",
+   "url": "https://www.manufacturingdive.com/news/us-semiconductor-supply-chain-vulnerable-hidden-inputs-sia/833388/",
+   "source": "Manufacturing Dive",
+   "date": "2026-10-19T19:08:43.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "supplier-risk",
+    "sourcing",
+    "semis",
+    "public-sector"
+   ],
+   "official": false
+  },
+  {
    "title": "Pump price is trucking’s #1 concern: ATRI survey",
    "url": "https://www.freightwaves.com/news/pump-price-is-truckings-1-concern-atri-survey",
    "source": "FreightWaves",
@@ -331,17 +678,6 @@
    "official": false
   },
   {
-   "title": "Cutter & Buck eyes fulfillment boost with second automated distribution center",
-   "url": "https://www.supplychaindive.com/news/cutter-buck-eyes-fulfillment-boost-with-second-automated-distribution-cen/833237/",
-   "source": "Supply Chain Dive",
-   "date": "2026-10-19T14:59:49.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "warehousing"
-   ],
-   "official": false
-  },
-  {
    "title": "Werner Enterprises issues Q3 profit warning",
    "url": "https://www.freightwaves.com/news/werner-enterprises-issues-q3-profit-warning",
    "source": "FreightWaves",
@@ -355,28 +691,6 @@
    "official": false
   },
   {
-   "title": "Few major apparel brands pay garment workers a living wage: report",
-   "url": "https://www.supplychaindive.com/news/few-major-apparel-brands-pay-garment-workers-a-living-wage-report/833275/",
-   "source": "Supply Chain Dive",
-   "date": "2026-10-19T14:02:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Walmart approves 8 more parcel carriers for seller-fulfilled shipping",
-   "url": "https://www.supplychaindive.com/news/walmart-approves-8-more-parcel-carriers-for-seller-fulfilled-shipping/833259/",
-   "source": "Supply Chain Dive",
-   "date": "2026-10-19T14:01:24.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
    "title": "DHL Group boosts guidance on expectations for strong peak season",
    "url": "https://www.freightwaves.com/news/dhl-group-boosts-guidance-on-expectations-for-strong-peak-season",
    "source": "FreightWaves",
@@ -385,17 +699,6 @@
    "categories": [
     "freight",
     "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Port of Savannah to build 3.5M TEU container terminal",
-   "url": "https://www.supplychaindive.com/news/port-of-savannah-to-build-35m-teu-container-terminal/833246/",
-   "source": "Supply Chain Dive",
-   "date": "2026-10-19T13:55:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
    ],
    "official": false
   },
@@ -433,307 +736,6 @@
     "metals"
    ],
    "official": true
-  },
-  {
-   "title": "Information Collection Requirement; Defense Federal Acquisition Regulation Supplement (DFARS) Parts 223 and 226, Occupational Safety and Drug-Free Work Force",
-   "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21330/information-collection-requirement-defense-federal-acquisition-regulation-supplement-dfars-parts-223",
-   "source": "Federal Register · Defense Department",
-   "date": "2026-10-19T12:00:00.000Z",
-   "topic": "proc-tech",
-   "categories": [
-    "proc-tech",
-    "public-sector",
-    "compliance",
-    "deals",
-    "healthcare"
-   ],
-   "official": true
-  },
-  {
-   "title": "Information Collection Requirement; Defense Federal Acquisition Regulation Supplement (DFARS); Inspection and Receiving Report",
-   "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21329/information-collection-requirement-defense-federal-acquisition-regulation-supplement-dfars",
-   "source": "Federal Register · Defense Department",
-   "date": "2026-10-19T12:00:00.000Z",
-   "topic": "proc-tech",
-   "categories": [
-    "freight",
-    "proc-tech",
-    "public-sector",
-    "compliance",
-    "deals"
-   ],
-   "official": true
-  },
-  {
-   "title": "Information Collection Requirement; Defense Federal Acquisition Regulation Supplement (DFARS) Part 215 Negotiation",
-   "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21327/information-collection-requirement-defense-federal-acquisition-regulation-supplement-dfars-part-215",
-   "source": "Federal Register · Defense Department",
-   "date": "2026-10-19T12:00:00.000Z",
-   "topic": "proc-tech",
-   "categories": [
-    "proc-tech",
-    "public-sector",
-    "compliance",
-    "deals"
-   ],
-   "official": true
-  },
-  {
-   "title": "Information Collection; General Services Administration Acquisition Regulation; Prohibition on Certain Supply Chain Services or Equipment Under Lease Acquisitions and Commercial Solution Openings",
-   "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21255/information-collection-general-services-administration-acquisition-regulation-prohibition-on-certain",
-   "source": "Federal Register · General Services Administration",
-   "date": "2026-10-19T12:00:00.000Z",
-   "topic": "proc-tech",
-   "categories": [
-    "proc-tech",
-    "public-sector",
-    "compliance",
-    "deals"
-   ],
-   "official": true
-  },
-  {
-   "title": "Marine Mammals; Incidental Take of Polar Bears and Pacific Walruses in the Beaufort Sea and North Slope of Alaska",
-   "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21371/marine-mammals-incidental-take-of-polar-bears-and-pacific-walruses-in-the-beaufort-sea-and-north",
-   "source": "Federal Register · Interior Department",
-   "date": "2026-10-19T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "freight",
-    "compliance"
-   ],
-   "official": true
-  },
-  {
-   "title": "Unlocking the autonomous supply chain: Why execution data has to feed the plan",
-   "url": "https://www.supplychaindive.com/spons/unlocking-the-autonomous-supply-chain-why-execution-data-has-to-feed-the-p/833263/",
-   "source": "Supply Chain Dive",
-   "date": "2026-10-19T09:00:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "industry"
-   ],
-   "official": false
-  },
-  {
-   "title": "The biggest risk in agentic commerce isn’t easy to see. It’s invisibility.",
-   "url": "https://www.supplychaindive.com/spons/the-biggest-risk-in-agentic-commerce-isnt-easy-to-see-its-invisibility/832344/",
-   "source": "Supply Chain Dive",
-   "date": "2026-10-19T09:00:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "supplier-risk",
-    "ai"
-   ],
-   "official": false
-  },
-  {
-   "title": "How AI, digital twins and real-time simulation are accelerating manufacturing innovation",
-   "url": "https://www.manufacturingdive.com/spons/how-ai-digital-twins-and-real-time-simulation-are-accelerating-manufacturi/833255/",
-   "source": "Manufacturing Dive",
-   "date": "2026-10-19T09:00:00.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "ai",
-    "manufacturing"
-   ],
-   "official": false
-  },
-  {
-   "title": "The Shift From Owning Trucks To Subscribing To Them, And What It Means For Fleet Finance",
-   "url": "https://www.freightwaves.com/news/the-shift-from-owning-trucks-to-subscribing-to-them-and-what-it-means-for-fleet-finance",
-   "source": "FreightWaves",
-   "date": "2026-10-18T18:07:23.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "California trucking owner pleads guilty in $2.1M identity theft scheme",
-   "url": "https://www.freightwaves.com/news/california-trucking-owner-pleads-guilty-in-2-1m-identity-theft-scheme",
-   "source": "FreightWaves",
-   "date": "2026-10-18T17:37:19.000Z",
-   "topic": "public-sector",
-   "categories": [
-    "freight",
-    "public-sector",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Borderlands Mexico: US trucking crackdown raises concerns over freight disruptions",
-   "url": "https://www.freightwaves.com/news/borderlands-mexico-us-trucking-crackdown-raises-concerns-over-freight-disruptions",
-   "source": "FreightWaves",
-   "date": "2026-10-18T11:00:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "supplier-risk",
-    "proc-tech",
-    "warehousing"
-   ],
-   "official": false
-  },
-  {
-   "title": "No signs of truckload capacity recovering",
-   "url": "https://www.freightwaves.com/news/no-signs-of-truckload-capacity-recovering",
-   "source": "FreightWaves",
-   "date": "2026-10-18T00:30:00.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight",
-    "manufacturing"
-   ],
-   "official": false
-  },
-  {
-   "title": "What Daimler’s Finance And Global Chiefs Revealed About Diesel, Driverless Trucks, And The Future Of The Industry",
-   "url": "https://www.freightwaves.com/news/what-daimlers-finance-and-global-chiefs-revealed-about-diesel-driverless-trucks-and-the-future-of-the-industry",
-   "source": "FreightWaves",
-   "date": "2026-10-17T17:32:16.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "freight",
-    "energy"
-   ],
-   "official": false
-  },
-  {
-   "title": "Texas judge upholds nuclear verdict against C.H. Robinson",
-   "url": "https://www.freightwaves.com/news/breaking-texas-judge-upholds-nuclear-verdict-against-c-h-robinson",
-   "source": "FreightWaves",
-   "date": "2026-10-17T00:15:48.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Evos raises $9M to build AI operators for industrial businesses",
-   "url": "https://www.freightwaves.com/news/evos-raises-9m-to-build-ai-operators-for-industrial-businesses",
-   "source": "FreightWaves",
-   "date": "2026-10-16T19:55:52.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "freight",
-    "proc-tech",
-    "ai",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Tesla staffs up Nevada Semi plant as fleet orders stack up",
-   "url": "https://www.freightwaves.com/news/tesla-semi-nevada-hiring",
-   "source": "FreightWaves",
-   "date": "2026-10-16T19:52:19.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "manufacturing"
-   ],
-   "official": false
-  },
-  {
-   "title": "Veteran trucker launches free parking, fuel-price platform for drivers",
-   "url": "https://www.freightwaves.com/news/veteran-trucker-launches-free-parking-fuel-price-platform-for-drivers",
-   "source": "FreightWaves",
-   "date": "2026-10-16T19:50:24.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight",
-    "energy",
-    "proc-tech"
-   ],
-   "official": false
-  },
-  {
-   "title": "Louisiana attorney, staged accident scammer, finally sentenced",
-   "url": "https://www.freightwaves.com/news/louisiana-attorney-staged-accident-scammer-finally-sentenced",
-   "source": "FreightWaves",
-   "date": "2026-10-16T19:26:51.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "25 charged after drug ring used unsuspecting truckers to haul cocaine from California to Florida",
-   "url": "https://www.freightwaves.com/news/25-charged-after-drug-ring-used-unsuspecting-truckers-to-haul-cocaine-from-california-to-florida",
-   "source": "FreightWaves",
-   "date": "2026-10-16T17:43:14.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "sourcing",
-    "healthcare"
-   ],
-   "official": false
-  },
-  {
-   "title": "ATRI gets a new head: TeamOne’s Siplon",
-   "url": "https://www.freightwaves.com/news/atri-gets-a-new-head-teamones-siplon",
-   "source": "FreightWaves",
-   "date": "2026-10-16T17:10:32.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Alcoa plans to sell part of its Massena East site for $315M",
-   "url": "https://www.manufacturingdive.com/news/alcoa-sell-massena-east-assets-315-m-q3-2026-south32-progress/833226/",
-   "source": "Manufacturing Dive",
-   "date": "2026-10-16T16:27:00.000Z",
-   "topic": "commodities",
-   "categories": [
-    "metals",
-    "proc-tech",
-    "deals",
-    "food-ag"
-   ],
-   "official": false
-  },
-  {
-   "title": "Carrier Logistics, LSP44 announce partnership to automate LTL shipment identification",
-   "url": "https://www.freightwaves.com/news/carrier-logistics-lsp44-announce-partnership-to-automate-ltl-shipment-identification",
-   "source": "FreightWaves",
-   "date": "2026-10-16T16:08:59.000Z",
-   "topic": "proc-tech",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Manufacturing tech orders hit 3rd-highest monthly total: AMT",
-   "url": "https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/",
-   "source": "Manufacturing Dive",
-   "date": "2026-10-16T15:00:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "manufacturing",
-    "talent",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Larger UPS air hub in Philippines boosts Asia service levels",
-   "url": "https://www.freightwaves.com/news/larger-ups-air-hub-in-philippines-boosts-asia-service-levels",
-   "source": "FreightWaves",
-   "date": "2026-10-16T14:52:48.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
   }
  ]
 }
