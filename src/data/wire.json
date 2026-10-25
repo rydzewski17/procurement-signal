@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T13:59:22.424Z",
+ "updated": "2026-10-25T14:20:07.487Z",
  "items": [
   {
    "title": "Request for Comments on Further Suspension of Section 301 Action: China's Targeting of the Maritime, Logistics, and Shipbuilding Sectors for Dominance",
@@ -12,6 +12,29 @@
     "freight"
    ],
    "official": true
+  },
+  {
+   "title": "Borderlands Mexico: Avocado imports generate $641M for US trucking, warehousing",
+   "url": "https://www.freightwaves.com/news/borderlands-mexico-avocado-imports-generate-641m-for-us-trucking-warehousing",
+   "source": "FreightWaves",
+   "date": "2026-10-25T11:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Truckload contract rate increases riding steady above 10%",
+   "url": "https://www.freightwaves.com/news/truckload-contract-rate-increases-riding-steady-above-10",
+   "source": "FreightWaves",
+   "date": "2026-10-25T00:30:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "contracts"
+   ],
+   "official": false
   },
   {
    "title": "New Drewry data shows import demand boosting trans-Pacific rates",
@@ -275,7 +298,7 @@
    "official": false
   },
   {
-   "title": "Daimler Truck sues former fleet manager over alleged $3.8M embezzlement",
+   "title": "UPDATE: Daimler Truck sues former fleet manager over alleged $3.8M embezzlement",
    "url": "https://www.freightwaves.com/news/daimler-truck-sues-former-fleet-manager-over-alleged-3-8m-embezzlement",
    "source": "FreightWaves",
    "date": "2026-10-22T20:59:41.000Z",
@@ -727,32 +750,6 @@
     "freight",
     "manufacturing",
     "food-ag"
-   ],
-   "official": false
-  },
-  {
-   "title": "Cybersecurity after October: the Golden Quarter is procurement’s real test",
-   "url": "https://cpostrategy.media/blog/2026/10/22/cybersecurity-after-october-the-golden-quarter-is-procurements-real-test/",
-   "source": "CPO Strategy",
-   "date": "2026-10-22T10:05:40.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "freight",
-    "talent"
-   ],
-   "official": false
-  },
-  {
-   "title": "CSX profit jumps on volume and revenue growth",
-   "url": "https://www.freightwaves.com/news/csx-profit-jumps-on-volume-and-revenue-growth",
-   "source": "FreightWaves",
-   "date": "2026-10-22T10:00:00.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight",
-    "energy",
-    "contracts",
-    "deals"
    ],
    "official": false
   }
