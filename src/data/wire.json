@@ -1,6 +1,126 @@
 {
- "updated": "2026-10-25T14:20:07.487Z",
+ "updated": "2026-10-26T16:46:29.547Z",
  "items": [
+  {
+   "title": "How Chinese OEMs are reshaping European automotive supply chains, and how Europe must adapt",
+   "url": "https://cpostrategy.media/blog/2026/10/26/how-chinese-oems-are-reshaping-european-automotive-supply-chains-and-how-europe-must-adapt/",
+   "source": "CPO Strategy",
+   "date": "2026-10-26T16:20:08.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "sourcing",
+    "manufacturing",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "Trucking Needs More Than a Choice Between Diesel and EV Trucks",
+   "url": "https://www.freightwaves.com/news/trucking-needs-more-than-a-choice-between-diesel-and-ev-trucks",
+   "source": "FreightWaves",
+   "date": "2026-10-26T15:30:00.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight",
+    "energy"
+   ],
+   "official": false
+  },
+  {
+   "title": "AI air freight drives Kuehne+Nagel profit increase",
+   "url": "https://www.freightwaves.com/news/ai-air-freight-drives-kuehnenagel-profit-increase",
+   "source": "FreightWaves",
+   "date": "2026-10-26T15:26:44.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "freight",
+    "ai"
+   ],
+   "official": false
+  },
+  {
+   "title": "FCC grants Intel 1-year waiver to permit use of foreign-made robots",
+   "url": "https://www.manufacturingdive.com/news/fcc-grants-intel-1-year-waiver-permit-use-foreign-produced-robots/872745/",
+   "source": "Manufacturing Dive",
+   "date": "2026-10-26T15:24:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "supplier-risk",
+    "semis",
+    "public-sector"
+   ],
+   "official": false
+  },
+  {
+   "title": "Inside FedEx’s Network 2.0 overhaul",
+   "url": "https://www.supplychaindive.com/news/inside-fedexs-network-20-overhaul/833618/",
+   "source": "Supply Chain Dive",
+   "date": "2026-10-26T15:20:25.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "UPS plans 5.9% rate increase on Dec. 21",
+   "url": "https://www.supplychaindive.com/news/ups-plans-59-rate-increase-on-dec-21/872751/",
+   "source": "Supply Chain Dive",
+   "date": "2026-10-26T15:10:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "DSV 3Q profit rises 19.5% as Schenker integration lifts earnings",
+   "url": "https://www.freightwaves.com/news/dsv-3q-profit-rises-19-5-as-schenker-integration-lifts-earnings",
+   "source": "FreightWaves",
+   "date": "2026-10-26T14:41:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "spend",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "CSX sees rail conversion opportunities from battered trucking market",
+   "url": "https://www.supplychaindive.com/news/csx-sees-rail-conversion-opportunities-from-battered-trucking-market/833858/",
+   "source": "Supply Chain Dive",
+   "date": "2026-10-26T14:40:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "FedEx taps AutoZone executive to be finance chief",
+   "url": "https://www.freightwaves.com/news/fedex-taps-autozone-executive-to-be-finance-chief",
+   "source": "FreightWaves",
+   "date": "2026-10-26T13:49:09.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "Completing the Capacity Stack",
+   "url": "https://www.freightwaves.com/news/completing-the-capacity-stack",
+   "source": "FreightWaves",
+   "date": "2026-10-26T13:05:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "manufacturing"
+   ],
+   "official": false
+  },
   {
    "title": "Request for Comments on Further Suspension of Section 301 Action: China's Targeting of the Maritime, Logistics, and Shipbuilding Sectors for Dominance",
    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21755/request-for-comments-on-further-suspension-of-section-301-action-chinas-targeting-of-the-maritime",
@@ -12,6 +132,104 @@
     "freight"
    ],
    "official": true
+  },
+  {
+   "title": "New ‘conundrum’: Asia-US, Europe ocean rates diverge",
+   "url": "https://www.freightwaves.com/news/new-conundrum-asia-us-europe-ocean-rates-diverge",
+   "source": "FreightWaves",
+   "date": "2026-10-26T11:59:46.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "PepsiCo shutters Tennessee bottling plant amid soda slump",
+   "url": "https://www.supplychaindive.com/news/pepsico-shutters-tennessee-bottling-plant-amid-soda-slump/833586/",
+   "source": "Supply Chain Dive",
+   "date": "2026-10-26T11:27:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "supplier-risk",
+    "manufacturing",
+    "talent",
+    "food-ag"
+   ],
+   "official": false
+  },
+  {
+   "title": "Australia Post CEO to retire as financial challenges continue",
+   "url": "https://www.freightwaves.com/news/australia-post-ceo-to-retire-as-financial-challenges-continue",
+   "source": "FreightWaves",
+   "date": "2026-10-26T11:15:35.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "How Shaw backhauls turn old carpet tile into new opportunity",
+   "url": "https://www.freightwaves.com/news/shaw-carpet-tile-reverse-logistics-backhaul",
+   "source": "FreightWaves",
+   "date": "2026-10-26T11:00:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "contracts"
+   ],
+   "official": false
+  },
+  {
+   "title": "Canada port reaches new longshore union labor deal",
+   "url": "https://www.freightwaves.com/news/canada-port-reaches-new-longshore-union-labor-deal",
+   "source": "FreightWaves",
+   "date": "2026-10-26T10:02:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "contracts"
+   ],
+   "official": false
+  },
+  {
+   "title": "Promises vs. reality: Closing the AI adoption gap in transportation",
+   "url": "https://www.supplychaindive.com/spons/promises-vs-reality-closing-the-ai-adoption-gap-in-transportation/833070/",
+   "source": "Supply Chain Dive",
+   "date": "2026-10-26T09:00:00.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "freight",
+    "supplier-risk",
+    "ai"
+   ],
+   "official": false
+  },
+  {
+   "title": "How shoppers define delivery success – and what they’ll do if you fall short",
+   "url": "https://www.supplychaindive.com/spons/how-shoppers-define-delivery-success-and-what-theyll-do-if-you-fall-shor/833675/",
+   "source": "Supply Chain Dive",
+   "date": "2026-10-26T09:00:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "The next manufacturing AI challenge isn’t adoption. It’s scale.",
+   "url": "https://www.manufacturingdive.com/spons/the-next-manufacturing-ai-challenge-isnt-adoption-its-scale/833752/",
+   "source": "Manufacturing Dive",
+   "date": "2026-10-26T09:00:00.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "freight",
+    "ai",
+    "manufacturing"
+   ],
+   "official": false
   },
   {
    "title": "Borderlands Mexico: Avocado imports generate $641M for US trucking, warehousing",
@@ -243,21 +461,6 @@
    "official": false
   },
   {
-   "title": "Medtech execs share secrets to building resilient supply chains",
-   "url": "https://www.supplychaindive.com/news/medtech-execs-share-secrets-to-building-resilient-supply-chains/833585/",
-   "source": "Supply Chain Dive",
-   "date": "2026-10-23T11:17:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "supplier-risk",
-    "sourcing",
-    "semis",
-    "warehousing",
-    "deals"
-   ],
-   "official": false
-  },
-  {
    "title": "Workforce gaps keep supply chain AI stuck in pilot mode",
    "url": "https://www.freightwaves.com/news/ascm-dsci-supply-chain-ai-workforce-readiness",
    "source": "FreightWaves",
@@ -405,17 +608,6 @@
    "official": false
   },
   {
-   "title": "Ikea accused of harmful wood sourcing in Europe’s forests",
-   "url": "https://www.supplychaindive.com/news/ikea-accused-of-harmful-wood-sourcing-in-europes-forests/833625/",
-   "source": "Supply Chain Dive",
-   "date": "2026-10-22T17:56:03.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "sourcing"
-   ],
-   "official": false
-  },
-  {
    "title": "Safety Should Be Provable, Not Just Compliant",
    "url": "https://www.freightwaves.com/news/safety-should-be-provable-not-just-compliant",
    "source": "FreightWaves",
@@ -513,19 +705,6 @@
    "official": false
   },
   {
-   "title": "Nestlé to close Ohio factory by end of 2027",
-   "url": "https://www.supplychaindive.com/news/nestle-to-close-ohio-factory-by-end-of-2027/833587/",
-   "source": "Supply Chain Dive",
-   "date": "2026-10-22T14:21:00.000Z",
-   "topic": "esg-regulation",
-   "categories": [
-    "manufacturing",
-    "sustainability",
-    "food-ag"
-   ],
-   "official": false
-  },
-  {
    "title": "First look: Norfolk Southern earnings",
    "url": "https://www.freightwaves.com/news/first-look-norfolk-southern-earnings-4",
    "source": "FreightWaves",
@@ -535,19 +714,6 @@
     "freight",
     "energy",
     "contracts",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Stord expands network with AMS Fulfillment purchase",
-   "url": "https://www.supplychaindive.com/news/stord-expands-network-with-ams-fulfillment-purchase/833617/",
-   "source": "Supply Chain Dive",
-   "date": "2026-10-22T14:00:28.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "proc-tech",
-    "warehousing",
     "deals"
    ],
    "official": false
@@ -573,183 +739,6 @@
    "categories": [
     "freight",
     "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Knight-Swift again eyes big rate increases as new bid season nears",
-   "url": "https://www.freightwaves.com/news/knight-swift-again-eyes-big-rate-increases-as-new-bid-season-nears",
-   "source": "FreightWaves",
-   "date": "2026-10-22T13:31:37.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Hydro Flask maker aims tariff refunds at inventory, packaging",
-   "url": "https://www.supplychaindive.com/news/hydro-flask-maker-aims-tariff-refunds-at-inventory-packaging/833631/",
-   "source": "Supply Chain Dive",
-   "date": "2026-10-22T12:09:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs",
-    "freight",
-    "spend",
-    "warehousing"
-   ],
-   "official": false
-  },
-  {
-   "title": "Einride’s autonomous trucks to learn from Nvidia’s Alpamayo",
-   "url": "https://www.freightwaves.com/news/einride-nvidia-alpamayo-autonomous-trucks",
-   "source": "FreightWaves",
-   "date": "2026-10-22T12:00:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Modification of the Test of the New Electronic Informal Entry Process for Mail",
-   "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21570/modification-of-the-test-of-the-new-electronic-informal-entry-process-for-mail",
-   "source": "Federal Register · Homeland Security Department",
-   "date": "2026-10-22T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs",
-    "semis"
-   ],
-   "official": true
-  },
-  {
-   "title": "Foreign-Trade Zone (FTZ) 186, Notification of Proposed Production Activity; Pratt & Whitney, a Division of RTX Corporation; (Aircraft Engines, Engine Modules, and Parts); North Berwick, Maine",
-   "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21561/foreign-trade-zone-ftz-186-notification-of-proposed-production-activity-pratt-and-whitney-a-division",
-   "source": "Federal Register · Commerce Department",
-   "date": "2026-10-22T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs"
-   ],
-   "official": true
-  },
-  {
-   "title": "Foreign-Trade Zone (FTZ) 123, Notification of Proposed Production Activity; Metal Container (MCC) LP; (Beverage Containers); Windsor, Colorado",
-   "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21555/foreign-trade-zone-ftz-123-notification-of-proposed-production-activity-metal-container-mcc-lp",
-   "source": "Federal Register · Commerce Department",
-   "date": "2026-10-22T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs",
-    "freight",
-    "metals",
-    "food-ag"
-   ],
-   "official": true
-  },
-  {
-   "title": "Foreign-Trade Zone (FTZ) 71, Notification of Proposed Production Activity; Pratt & Whitney, a Division of RTX Corporation; (Aircraft Engines, Engine Modules, and Parts); Middletown, Connecticut",
-   "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21552/foreign-trade-zone-ftz-71-notification-of-proposed-production-activity-pratt-and-whitney-a-division",
-   "source": "Federal Register · Commerce Department",
-   "date": "2026-10-22T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs"
-   ],
-   "official": true
-  },
-  {
-   "title": "Foreign-Trade Zone (FTZ) 64, Notification of Proposed Production Activity; Metal Container (MCC) LP; (Beverage Containers); Jacksonville, Florida",
-   "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21548/foreign-trade-zone-ftz-64-notification-of-proposed-production-activity-metal-container-mcc-lp",
-   "source": "Federal Register · Commerce Department",
-   "date": "2026-10-22T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs",
-    "freight",
-    "metals",
-    "food-ag"
-   ],
-   "official": true
-  },
-  {
-   "title": "Foreign-Trade Zone (FTZ) 106, Notification of Proposed Production Activity; Metal Container (MCC) LP; (Beverage Containers); Oklahoma City, Oklahoma",
-   "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21543/foreign-trade-zone-ftz-106-notification-of-proposed-production-activity-metal-container-mcc-lp",
-   "source": "Federal Register · Commerce Department",
-   "date": "2026-10-22T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs",
-    "freight",
-    "metals",
-    "food-ag"
-   ],
-   "official": true
-  },
-  {
-   "title": "Foreign-Trade Zone (FTZ) 26, Notification of Proposed Production Activity; Pratt & Whitney, a Division of RTX Corporation; (Aircraft Engines, Engine Modules, and Parts); Midland, Georgia",
-   "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21542/foreign-trade-zone-ftz-26-notification-of-proposed-production-activity-pratt-and-whitney-a-division",
-   "source": "Federal Register · Commerce Department",
-   "date": "2026-10-22T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs"
-   ],
-   "official": true
-  },
-  {
-   "title": "Foreign-Trade Zone (FTZ) 37, Notification of Proposed Production Activity; Metal Container (MCC) LP; (Beverage Containers); New Windsor, New York",
-   "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21537/foreign-trade-zone-ftz-37-notification-of-proposed-production-activity-metal-container-mcc-lp",
-   "source": "Federal Register · Commerce Department",
-   "date": "2026-10-22T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs",
-    "freight",
-    "metals",
-    "food-ag"
-   ],
-   "official": true
-  },
-  {
-   "title": "Foreign-Trade Zone (FTZ) 244, Notification of Proposed Production Activity; Metal Container (MCC) LP; (Beverage Containers); Riverside and Jurupa Valley, California",
-   "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21534/foreign-trade-zone-ftz-244-notification-of-proposed-production-activity-metal-container-mcc-lp",
-   "source": "Federal Register · Commerce Department",
-   "date": "2026-10-22T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs",
-    "freight",
-    "metals",
-    "food-ag"
-   ],
-   "official": true
-  },
-  {
-   "title": "Motive launches AI Agents as fleets weigh how to prevent problems",
-   "url": "https://www.freightwaves.com/news/motive-launches-ai-agents-fleets",
-   "source": "FreightWaves",
-   "date": "2026-10-22T11:00:00.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "freight",
-    "proc-tech",
-    "ai"
-   ],
-   "official": false
-  },
-  {
-   "title": "Late, short deliveries cost food and CPG makers $100 billion",
-   "url": "https://www.freightwaves.com/news/cleo-otif-failures-cost-cpg-100-billion",
-   "source": "FreightWaves",
-   "date": "2026-10-22T11:00:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "manufacturing",
-    "food-ag"
    ],
    "official": false
   }
