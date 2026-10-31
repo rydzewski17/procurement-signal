@@ -1,6 +1,181 @@
 {
- "updated": "2026-10-30T16:41:10.059Z",
+ "updated": "2026-10-31T15:42:34.805Z",
  "items": [
+  {
+   "title": "Delegation of Authority Under Section 8335 of the National Defense Authorization Act for Fiscal Year 2026",
+   "url": "https://www.federalregister.gov/documents/2026/11/02/2026-22386/delegation-of-authority-under-section-8335-of-the-national-defense-authorization-act-for-fiscal-year",
+   "source": "Federal Register · Executive Office of the President",
+   "date": "2026-11-02T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs"
+   ],
+   "official": true
+  },
+  {
+   "title": "Adjusting Imports of Robotics, Industrial Machinery, and Their Parts and Components Into the United States",
+   "url": "https://www.federalregister.gov/documents/2026/11/02/2026-22385/adjusting-imports-of-robotics-industrial-machinery-and-their-parts-and-components-into-the-united",
+   "source": "Federal Register · Executive Office of the President",
+   "date": "2026-11-02T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs",
+    "freight"
+   ],
+   "official": true
+  },
+  {
+   "title": "Foreign-Trade Zone (FTZ) 17, Notification of Proposed Production Activity; Honeywell Aerospace US LLC; (Aircraft Components); Olathe, Kansas",
+   "url": "https://www.federalregister.gov/documents/2026/11/02/2026-22302/foreign-trade-zone-ftz-17-notification-of-proposed-production-activity-honeywell-aerospace-us-llc",
+   "source": "Federal Register · Commerce Department",
+   "date": "2026-11-02T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs"
+   ],
+   "official": true
+  },
+  {
+   "title": "Certain Wi-Fi Routers, Wi-Fi Devices, Mesh Wi-Fi Network Devices and Components Thereof; Notice of a Commission Determination To Review-in-Part a Final Initial Determination Finding a Violation; Extension of the Target Date for Completion of the Investigation; Request for Written Submissions on the Issues Under Review and on Remedy, the Public Interest, and Bonding",
+   "url": "https://www.federalregister.gov/documents/2026/11/02/2026-22280/certain-wi-fi-routers-wi-fi-devices-mesh-wi-fi-network-devices-and-components-thereof-notice-of-a",
+   "source": "Federal Register · International Trade Commission",
+   "date": "2026-11-02T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs",
+    "deals"
+   ],
+   "official": true
+  },
+  {
+   "title": "Improving Transparency Into Pharmacy Benefit Manager Fee Disclosure",
+   "url": "https://www.federalregister.gov/documents/2026/11/02/2026-22306/improving-transparency-into-pharmacy-benefit-manager-fee-disclosure",
+   "source": "Federal Register · Labor Department",
+   "date": "2026-11-02T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "freight",
+    "supplier-risk",
+    "compliance",
+    "healthcare"
+   ],
+   "official": true
+  },
+  {
+   "title": "Rail Rivalry: Schneider’s Bold Move to Norfolk Southern from CSX",
+   "url": "https://www.freightwaves.com/news/rail-rivalry-schneiders-bold-move-to-norfolk-southern-from-csx",
+   "source": "FreightWaves",
+   "date": "2026-10-30T18:42:39.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Unexpected Boom: Trailer Leasing Demand Hits Record Highs",
+   "url": "https://www.freightwaves.com/news/unexpected-boom-trailer-leasing-demand-hits-record-highs",
+   "source": "FreightWaves",
+   "date": "2026-10-30T18:40:16.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "SAIA’s Record $982.5M Q3 Revenue | What’s Next?",
+   "url": "https://www.freightwaves.com/news/saias-record-982-5m-q3-revenue-whats-next",
+   "source": "FreightWaves",
+   "date": "2026-10-30T18:37:16.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "talent",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "TFI chief Bedard rips into its US LTL operations, promises change",
+   "url": "https://www.freightwaves.com/news/tfi-chief-bedard-rips-into-its-us-ltl-operations-promises-change",
+   "source": "FreightWaves",
+   "date": "2026-10-30T18:31:44.000Z",
+   "topic": "proc-tech",
+   "categories": [
+    "freight",
+    "proc-tech",
+    "public-sector",
+    "talent",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "Beverage Distribution: Why Your SKU Count is Crushing Productivity",
+   "url": "https://www.freightwaves.com/news/beverage-distribution-why-your-sku-count-is-crushing-productivity",
+   "source": "FreightWaves",
+   "date": "2026-10-30T18:30:22.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "ai",
+    "talent",
+    "food-ag"
+   ],
+   "official": false
+  },
+  {
+   "title": "Arkansas truck blitz nets 183 English violations, 44 arrests in 48 hours",
+   "url": "https://www.freightwaves.com/news/arkansas-truck-blitz-nets-183-english-violations-44-arrests-in-48-hours",
+   "source": "FreightWaves",
+   "date": "2026-10-30T18:06:57.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "European postal operators gear up for surge in holiday volume",
+   "url": "https://www.freightwaves.com/news/european-postal-operators-gear-up-for-surge-in-holiday-volume",
+   "source": "FreightWaves",
+   "date": "2026-10-30T17:44:55.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Covenant Logistics CEO expects double-digit truckload rate hikes in 2027",
+   "url": "https://www.freightwaves.com/news/covenant-logistics-ceo-expects-double-digit-truckload-rate-hikes-in-2027",
+   "source": "FreightWaves",
+   "date": "2026-10-30T17:32:06.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "contracts",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "GM confirms Lansing Delta Township plant will produce hybrid vehicles",
+   "url": "https://www.manufacturingdive.com/news/gm-confirms-lansing-delta-township-plant-will-produce-hybrid-vehicles/873348/",
+   "source": "Manufacturing Dive",
+   "date": "2026-10-30T17:17:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "manufacturing",
+    "deals",
+    "food-ag"
+   ],
+   "official": false
+  },
   {
    "title": "How to make factory space for workers with disabilities",
    "url": "https://www.manufacturingdive.com/news/manufacturing-institute-timken-building-disability-friendly-careers-2026/833511/",
@@ -14,13 +189,12 @@
    "official": false
   },
   {
-   "title": "North American robot orders grew nearly 25% in Q3: report",
+   "title": "North American robot orders grew nearly 25% in Q3",
    "url": "https://www.manufacturingdive.com/news/north-american-robot-orders-grew-nearly-25-percent-q3-2026-a3/873300/",
    "source": "Manufacturing Dive",
    "date": "2026-10-30T16:30:00.000Z",
    "topic": "supplier-risk",
    "categories": [
-    "freight",
     "ai",
     "semis",
     "healthcare"
@@ -151,6 +325,18 @@
    "categories": [
     "freight",
     "proc-tech"
+   ],
+   "official": false
+  },
+  {
+   "title": "CN 3Q profit rises 6% as freight revenue climbs",
+   "url": "https://www.freightwaves.com/news/cn-3q-profit-rises-6-as-freight-revenue-climbs",
+   "source": "FreightWaves",
+   "date": "2026-10-30T13:22:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "deals"
    ],
    "official": false
   },
@@ -547,187 +733,6 @@
    "categories": [
     "freight",
     "contracts"
-   ],
-   "official": false
-  },
-  {
-   "title": "Certain Frozen Warmwater Shrimp From the People's Republic of China: Rescission of Antidumping Duty Administrative Review; 2025-2026",
-   "url": "https://www.federalregister.gov/documents/2026/10/29/2026-22032/certain-frozen-warmwater-shrimp-from-the-peoples-republic-of-china-rescission-of-antidumping-duty",
-   "source": "Federal Register · Commerce Department",
-   "date": "2026-10-29T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs"
-   ],
-   "official": true
-  },
-  {
-   "title": "Notice Regarding the Uyghur Forced Labor Prevention Act Entity List",
-   "url": "https://www.federalregister.gov/documents/2026/10/29/2026-22094/notice-regarding-the-uyghur-forced-labor-prevention-act-entity-list",
-   "source": "Federal Register · Homeland Security Department",
-   "date": "2026-10-29T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "freight",
-    "compliance"
-   ],
-   "official": true
-  },
-  {
-   "title": "Procurement in 2027: Fewer agents, more skills and one platform to govern them",
-   "url": "https://cpostrategy.media/blog/2026/10/29/procurement-in-2027-fewer-agents-more-skills-and-one-platform-to-govern-them/",
-   "source": "CPO Strategy",
-   "date": "2026-10-29T11:16:25.000Z",
-   "topic": "proc-tech",
-   "categories": [
-    "proc-tech",
-    "talent"
-   ],
-   "official": false
-  },
-  {
-   "title": "43% of shoppers plan to spend more this peak, Kenco finds",
-   "url": "https://www.freightwaves.com/news/kenco-survey-shoppers-plan-more-peak-spending",
-   "source": "FreightWaves",
-   "date": "2026-10-29T11:00:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "spend",
-    "warehousing"
-   ],
-   "official": false
-  },
-  {
-   "title": "CPKC reports record revenue on strength of grain and intermodal traffic",
-   "url": "https://www.freightwaves.com/news/cpkc-reports-record-revenue-on-strength-of-grain-and-intermodal-traffic",
-   "source": "FreightWaves",
-   "date": "2026-10-29T10:03:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "AI in Logistics: The End of Bad Truckload Routes?",
-   "url": "https://www.freightwaves.com/news/ai-in-logistics-the-end-of-bad-truckload-routes",
-   "source": "FreightWaves",
-   "date": "2026-10-29T03:45:36.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "supplier-risk",
-    "proc-tech",
-    "ai",
-    "talent"
-   ],
-   "official": false
-  },
-  {
-   "title": "AI ROI: Why 90% Satisfaction Still Means Leaders Want MORE!",
-   "url": "https://www.freightwaves.com/news/ai-roi-why-90-satisfaction-still-means-leaders-want-more",
-   "source": "FreightWaves",
-   "date": "2026-10-29T03:41:55.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "freight",
-    "sourcing",
-    "proc-tech",
-    "ai",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Scan Global Logistics to acquire Oregon-based OIA Global",
-   "url": "https://www.freightwaves.com/news/scan-global-logistics-to-acquire-oregon-based-oia-global",
-   "source": "FreightWaves",
-   "date": "2026-10-29T00:07:26.000Z",
-   "topic": "proc-tech",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Aurora adds 500-truck Charger MOU toward 30,000-truck goal",
-   "url": "https://www.freightwaves.com/news/aurora-charger-logistics-500-driverless-trucks-mou",
-   "source": "FreightWaves",
-   "date": "2026-10-28T21:50:06.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "C.H Robinson and Landstar stock prices slammed; insurance a factor",
-   "url": "https://www.freightwaves.com/news/c-h-robinson-and-landstar-stock-prices-slammed-insurance-costs-a-factor",
-   "source": "FreightWaves",
-   "date": "2026-10-28T21:40:55.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "How One Trucker Turned One Video A Day Into Billions Of Views, And What It Cost Him",
-   "url": "https://www.freightwaves.com/news/how-one-trucker-turned-one-video-a-day-into-billions-of-views-and-what-it-cost-him",
-   "source": "FreightWaves",
-   "date": "2026-10-28T18:44:02.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Old Dominion’s tonnage turns positive; recovery needs demand inflection",
-   "url": "https://www.freightwaves.com/news/old-dominions-tonnage-turns-positive-recovery-needs-demand-inflection",
-   "source": "FreightWaves",
-   "date": "2026-10-28T17:22:04.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Anduril, Qualcomm partner on BlueChip computer hardware line",
-   "url": "https://www.manufacturingdive.com/news/anduril-qualcomm-blue-chip-tsmc-snapdragon-reshoring-computer-hardware/872925/",
-   "source": "Manufacturing Dive",
-   "date": "2026-10-28T16:26:03.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "semis",
-    "manufacturing"
-   ],
-   "official": false
-  },
-  {
-   "title": "First look: CPKC earnings",
-   "url": "https://www.freightwaves.com/news/first-look-cpkc-earnings-2",
-   "source": "FreightWaves",
-   "date": "2026-10-28T15:32:00.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight",
-    "energy",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "F3: FreightWaves announces Shipper of Choice winners",
-   "url": "https://www.freightwaves.com/news/f3-freightwaves-announces-shipper-of-choice-winners",
-   "source": "FreightWaves",
-   "date": "2026-10-28T15:31:42.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
    ],
    "official": false
   }
