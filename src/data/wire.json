@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T15:42:34.805Z",
+ "updated": "2026-11-01T16:47:52.799Z",
  "items": [
   {
    "title": "Delegation of Authority Under Section 8335 of the National Defense Authorization Act for Fiscal Year 2026",
@@ -60,6 +60,29 @@
     "healthcare"
    ],
    "official": true
+  },
+  {
+   "title": "Borderlands Mexico: Cabotage enforcements threatening cross-border trucking",
+   "url": "https://www.freightwaves.com/news/borderlands-mexico-cabotage-enforcements-threatening-cross-border-trucking",
+   "source": "FreightWaves",
+   "date": "2026-11-01T12:00:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "warehousing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Freight cycles are anything but regular",
+   "url": "https://www.freightwaves.com/news/freight-cycles-are-anything-but-regular",
+   "source": "FreightWaves",
+   "date": "2026-11-01T00:30:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
   },
   {
    "title": "Rail Rivalry: Schneider’s Bold Move to Norfolk Southern from CSX",
@@ -435,17 +458,6 @@
    "official": false
   },
   {
-   "title": "AI is transforming procurement. Who will lead it next?",
-   "url": "https://cpostrategy.media/blog/2026/10/30/ai-is-transforming-procurement-who-will-lead-it-next/",
-   "source": "CPO Strategy",
-   "date": "2026-10-30T09:30:00.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "ai"
-   ],
-   "official": false
-  },
-  {
    "title": "FedEx Freight sees volumes stabilize, eyes Q4 margin improvement",
    "url": "https://www.freightwaves.com/news/fedex-freight-sees-volumes-stabilize-eyes-q4-margin-improvement",
    "source": "FreightWaves",
@@ -649,17 +661,6 @@
    "categories": [
     "freight",
     "contracts"
-   ],
-   "official": false
-  },
-  {
-   "title": "Issue 78 of CPOstrategy is live!",
-   "url": "https://cpostrategy.media/blog/2026/10/29/issue-78-of-cpostrategy-is-live/",
-   "source": "CPO Strategy",
-   "date": "2026-10-29T14:30:08.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "sourcing"
    ],
    "official": false
   },
