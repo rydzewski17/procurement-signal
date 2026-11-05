@@ -1,6 +1,337 @@
 {
- "updated": "2026-11-04T17:57:52.092Z",
+ "updated": "2026-11-05T17:58:27.874Z",
  "items": [
+  {
+   "title": "Over 6,000 manufacturing layoffs announced in October",
+   "url": "https://www.manufacturingdive.com/news/3m-intel-lear-buitoni-layoffs-closures-warn-act-notices-october-2026/873819/",
+   "source": "Manufacturing Dive",
+   "date": "2026-11-05T17:30:22.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "manufacturing",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "Humble Robotics raises $51M for cabless hauler pilots",
+   "url": "https://www.freightwaves.com/news/humble-robotics-51m-series-a-cabless-hauler",
+   "source": "FreightWaves",
+   "date": "2026-11-05T17:05:13.000Z",
+   "topic": "proc-tech",
+   "categories": [
+    "freight",
+    "proc-tech",
+    "manufacturing",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "US Steel’s profit doubled over previous quarter as market prices surge",
+   "url": "https://www.manufacturingdive.com/news/us-steel-nippon-profits-doubled-q2-2026-market-prices-surge/873854/",
+   "source": "Manufacturing Dive",
+   "date": "2026-11-05T16:30:00.000Z",
+   "topic": "commodities",
+   "categories": [
+    "metals",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "Schneider National says rail partner shift offers network boost",
+   "url": "https://www.supplychaindive.com/news/schneider-national-says-rail-partner-shift-offers-network-boost/873847/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-05T15:08:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "US Army enlists FedEx to modernize logistics at depots",
+   "url": "https://www.freightwaves.com/news/us-army-enlists-fedex-to-modernize-logistics-at-depots",
+   "source": "FreightWaves",
+   "date": "2026-11-05T15:03:33.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Urban Outfitters seeks material cost visibility from expanded technology suite",
+   "url": "https://www.supplychaindive.com/news/urban-outfitters-seeks-material-cost-visibility-from-expanded-technology-su/873642/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-05T15:00:00.000Z",
+   "topic": "proc-tech",
+   "categories": [
+    "proc-tech"
+   ],
+   "official": false
+  },
+  {
+   "title": "EBay trims Depop shipping rates, bolsters delivery features",
+   "url": "https://www.supplychaindive.com/news/ebay-trims-depop-shipping-rates-bolsters-delivery-features/873710/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-05T14:38:18.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "freight",
+    "ai",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "Buying Trucks in a Buyer’s Market: What Owner-Operators Are Weighing Right Now",
+   "url": "https://www.freightwaves.com/news/buying-trucks-in-a-buyers-market-what-owner-operators-are-weighing-right-now",
+   "source": "FreightWaves",
+   "date": "2026-11-05T14:00:00.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight",
+    "contracts"
+   ],
+   "official": false
+  },
+  {
+   "title": "Maersk raises profit outlook as earnings surge, but shares slide on expectations miss",
+   "url": "https://www.freightwaves.com/news/maersk-raises-profit-outlook-as-earnings-surge-but-shares-slide-on-expectations-miss",
+   "source": "FreightWaves",
+   "date": "2026-11-05T13:58:32.000Z",
+   "topic": "proc-tech",
+   "categories": [
+    "freight",
+    "proc-tech",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "Americold raises full-year outlook as warehouse performance improves",
+   "url": "https://www.freightwaves.com/news/americold-raises-full-year-outlook-as-warehouse-performance-improves",
+   "source": "FreightWaves",
+   "date": "2026-11-05T13:00:00.000Z",
+   "topic": "proc-tech",
+   "categories": [
+    "freight",
+    "proc-tech",
+    "warehousing",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "Foreign-Trade Zone (FTZ) 70, Notification of Proposed Production Activity; Heidtman Tubular Products, LLC; (Galvanized Tubing); Erie, Michigan",
+   "url": "https://www.federalregister.gov/documents/2026/11/05/2026-22620/foreign-trade-zone-ftz-70-notification-of-proposed-production-activity-heidtman-tubular-products-llc",
+   "source": "Federal Register · Commerce Department",
+   "date": "2026-11-05T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs"
+   ],
+   "official": true
+  },
+  {
+   "title": "Initiation of Antidumping and Countervailing Duty Administrative Reviews",
+   "url": "https://www.federalregister.gov/documents/2026/11/05/2026-22629/initiation-of-antidumping-and-countervailing-duty-administrative-reviews",
+   "source": "Federal Register · Commerce Department",
+   "date": "2026-11-05T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs"
+   ],
+   "official": true
+  },
+  {
+   "title": "Common Alloy Aluminum Sheet From the People's Republic of China: Preliminary Results of Antidumping Duty Administrative Review; 2025-2026",
+   "url": "https://www.federalregister.gov/documents/2026/11/05/2026-22624/common-alloy-aluminum-sheet-from-the-peoples-republic-of-china-preliminary-results-of-antidumping",
+   "source": "Federal Register · Commerce Department",
+   "date": "2026-11-05T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs",
+    "metals"
+   ],
+   "official": true
+  },
+  {
+   "title": "Deepwater Port Application Processing and Licensing",
+   "url": "https://www.federalregister.gov/documents/2026/11/05/2026-22617/deepwater-port-application-processing-and-licensing",
+   "source": "Federal Register · Transportation Department",
+   "date": "2026-11-05T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs",
+    "freight"
+   ],
+   "official": true
+  },
+  {
+   "title": "Port strike delayed again at Los Angeles, Long Beach ports",
+   "url": "https://www.freightwaves.com/news/port-strike-delayed-again-at-los-angeles-long-beach-ports",
+   "source": "FreightWaves",
+   "date": "2026-11-05T11:00:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "supplier-risk",
+    "contracts"
+   ],
+   "official": false
+  },
+  {
+   "title": "You can’t build your AI house on sand",
+   "url": "https://cpostrategy.media/blog/2026/11/05/you-cant-build-your-ai-house-on-sand/",
+   "source": "CPO Strategy",
+   "date": "2026-11-05T09:30:00.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "ai"
+   ],
+   "official": false
+  },
+  {
+   "title": "33,000 truckers sidelined over violations as highway blitzes hit Arkansas, Virginia",
+   "url": "https://www.freightwaves.com/news/33000-truckers-sidelined-over-violations-as-highway-blitzes-hit-arkansas-virginia",
+   "source": "FreightWaves",
+   "date": "2026-11-05T00:37:57.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Transportation committee in House set for overhaul post-election",
+   "url": "https://www.freightwaves.com/news/transportation-committee-in-house-set-for-overhaul-post-election",
+   "source": "FreightWaves",
+   "date": "2026-11-05T00:29:00.000Z",
+   "topic": "public-sector",
+   "categories": [
+    "freight",
+    "public-sector",
+    "compliance"
+   ],
+   "official": false
+  },
+  {
+   "title": "Class 8 truck orders plunge 36% as EPA uncertainty rattles fleets",
+   "url": "https://www.freightwaves.com/news/class-8-truck-orders-plunge-36-as-epa-uncertainty-rattles-fleets",
+   "source": "FreightWaves",
+   "date": "2026-11-04T22:05:33.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "spend",
+    "compliance"
+   ],
+   "official": false
+  },
+  {
+   "title": "The Hidden Data Challenges for Autonomous Trucking Safety",
+   "url": "https://www.freightwaves.com/news/the-hidden-data-challenges-for-autonomous-trucking-safety",
+   "source": "FreightWaves",
+   "date": "2026-11-04T21:18:12.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "8 Inches of Rain Shut Down Busiest US Rail Line for 60 Hours",
+   "url": "https://www.freightwaves.com/news/8-inches-of-rain-shut-down-busiest-us-rail-line-for-60-hours",
+   "source": "FreightWaves",
+   "date": "2026-11-04T21:16:33.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "supplier-risk",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "Dry Van & Reefer: Market Signals You Can’t Ignore",
+   "url": "https://www.freightwaves.com/news/dry-van-reefer-market-signals-you-cant-ignore",
+   "source": "FreightWaves",
+   "date": "2026-11-04T20:58:05.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "manufacturing",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "GXO’s contract wins surge 34%, but growth comes amid cost pressures",
+   "url": "https://www.freightwaves.com/news/gxos-contract-wins-surge-34-but-growth-comes-amid-cost-pressures",
+   "source": "FreightWaves",
+   "date": "2026-11-04T20:47:48.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "contracts",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "USTR urged to permanently suspend China-linked ship fees",
+   "url": "https://www.supplychaindive.com/news/ustr-urged-to-permanently-suspend-china-linked-ship-fees/873618/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-04T19:58:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "supplier-risk",
+    "spend"
+   ],
+   "official": false
+  },
+  {
+   "title": "Emirates rolls out enhanced air cargo service for data center operators",
+   "url": "https://www.freightwaves.com/news/emirates-rolls-out-enhanced-air-cargo-service-for-data-center-operators",
+   "source": "FreightWaves",
+   "date": "2026-11-04T19:41:24.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "sourcing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Intermodal leads weekly gains as US rail traffic rises 3.5%, says AAR",
+   "url": "https://www.freightwaves.com/news/intermodal-leads-weekly-gains-as-us-rail-traffic-rises-3-5-says-aar",
+   "source": "FreightWaves",
+   "date": "2026-11-04T18:52:17.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Stronger revenue at Uber Freight, but profits still elusive",
+   "url": "https://www.freightwaves.com/news/stronger-revenue-at-uber-freight-but-profits-still-elusive",
+   "source": "FreightWaves",
+   "date": "2026-11-04T18:42:16.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "talent",
+    "deals"
+   ],
+   "official": false
+  },
   {
    "title": "Asia-US container rates hold as carriers seek $3,000 November rate hikes",
    "url": "https://www.freightwaves.com/news/asia-us-container-rates-hold-as-carriers-seek-3000-november-rate-hikes",
@@ -82,6 +413,29 @@
     "freight",
     "energy",
     "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "Can ‘BattMan’ secure the US battery manufacturing supply chain?",
+   "url": "https://www.supplychaindive.com/news/can-battman-secure-the-us-battery-manufacturing-supply-chain/873699/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-04T12:54:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Defense tech company aims to build US supply chain for new laptop line",
+   "url": "https://www.supplychaindive.com/news/defense-tech-company-aims-to-build-us-supply-chain-for-new-laptop-line/873658/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-04T12:32:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "sourcing",
+    "semis"
    ],
    "official": false
   },
@@ -331,19 +685,6 @@
    "official": false
   },
   {
-   "title": "Coty upgrades warehouse lighting to slash emissions",
-   "url": "https://www.supplychaindive.com/news/coty-upgrades-warehouse-lighting-to-slash-emissions/872961/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-03T15:05:00.000Z",
-   "topic": "esg-regulation",
-   "categories": [
-    "manufacturing",
-    "warehousing",
-    "sustainability"
-   ],
-   "official": false
-  },
-  {
    "title": "New survey finds AI rush isn’t boosting ports earnings",
    "url": "https://www.freightwaves.com/news/new-survey-finds-ai-rush-isnt-boosting-ports-earnings",
    "source": "FreightWaves",
@@ -372,18 +713,6 @@
    "official": false
   },
   {
-   "title": "Is warehouse demand shifting toward inland markets?",
-   "url": "https://www.supplychaindive.com/news/is-warehouse-demand-shifting-toward-inland-markets/872921/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-03T12:35:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "warehousing"
-   ],
-   "official": false
-  },
-  {
    "title": "Delivery AI should earn its authority one segment at a time",
    "url": "https://www.freightwaves.com/news/burq-earned-autonomy-delivery-ai",
    "source": "FreightWaves",
@@ -406,337 +735,6 @@
    "categories": [
     "tariffs",
     "energy"
-   ],
-   "official": true
-  },
-  {
-   "title": "Notice of Receipt of Complaint; Solicitation of Comments Relating to the Public Interest",
-   "url": "https://www.federalregister.gov/documents/2026/11/03/2026-22378/notice-of-receipt-of-complaint-solicitation-of-comments-relating-to-the-public-interest",
-   "source": "Federal Register · International Trade Commission",
-   "date": "2026-11-03T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs"
-   ],
-   "official": true
-  },
-  {
-   "title": "Certain Extrusion-Coated Magnet Wire; Notice of Institution of Investigation",
-   "url": "https://www.federalregister.gov/documents/2026/11/03/2026-22372/certain-extrusion-coated-magnet-wire-notice-of-institution-of-investigation",
-   "source": "Federal Register · International Trade Commission",
-   "date": "2026-11-03T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs",
-    "deals"
-   ],
-   "official": true
-  },
-  {
-   "title": "Kodiact raises $2.5M to help manufacturers get ahead of raw-material volatility",
-   "url": "https://cpostrategy.media/blog/2026/11/03/kodiact-raises-2-5m-to-help-manufacturers-get-ahead-of-raw-material-volatility/",
-   "source": "CPO Strategy",
-   "date": "2026-11-03T10:19:06.000Z",
-   "topic": "proc-tech",
-   "categories": [
-    "proc-tech",
-    "manufacturing",
-    "deals",
-    "food-ag"
-   ],
-   "official": false
-  },
-  {
-   "title": "230-plus immigrants arrested in crackdown targeting unauthorized CDL holders",
-   "url": "https://www.freightwaves.com/news/230-plus-immigrants-arrested-in-crackdown-targeting-unauthorized-cdl-holders",
-   "source": "FreightWaves",
-   "date": "2026-11-03T02:49:17.000Z",
-   "topic": "public-sector",
-   "categories": [
-    "freight",
-    "public-sector"
-   ],
-   "official": false
-  },
-  {
-   "title": "Pamt Corp. reports Q3 net loss, books 109.1% truckload OR",
-   "url": "https://www.freightwaves.com/news/pamt-corp-sees-q3-net-loss-books-109-1-truckload-or",
-   "source": "FreightWaves",
-   "date": "2026-11-03T00:16:26.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight",
-    "energy"
-   ],
-   "official": false
-  },
-  {
-   "title": "Waiting on EPA ‘27 rule, Rush says it might not be soon",
-   "url": "https://www.freightwaves.com/news/waiting-on-epa-27-rule-rush-says-it-might-not-be-soon",
-   "source": "FreightWaves",
-   "date": "2026-11-02T21:24:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "public-sector",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "SONAR SCI: Custom Insights Now Includes Conversion Optimization: Shows Shippers Where to Switch Modes and What They Can Save",
-   "url": "https://www.freightwaves.com/news/sonar-sci-custom-insights-now-includes-conversion-optimization-shows-shippers-where-to-switch-modes-and-what-they-can-save",
-   "source": "FreightWaves",
-   "date": "2026-11-02T20:14:17.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "contracts"
-   ],
-   "official": false
-  },
-  {
-   "title": "Amazon, retailers paid more for freight in 3Q",
-   "url": "https://www.freightwaves.com/news/amazon-retailers-paid-more-for-freight-in-3q",
-   "source": "FreightWaves",
-   "date": "2026-11-02T19:30:09.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight",
-    "supplier-risk",
-    "warehousing"
-   ],
-   "official": false
-  },
-  {
-   "title": "Electric Trucking: Why 2,500 Tesla Semis Will Transform Freight",
-   "url": "https://www.freightwaves.com/news/electric-trucking-why-2500-tesla-semis-will-transform-freight",
-   "source": "FreightWaves",
-   "date": "2026-11-02T18:52:21.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight",
-    "energy",
-    "sustainability",
-    "food-ag"
-   ],
-   "official": false
-  },
-  {
-   "title": "LTL vs. Truckload: Who emerged stronger from Q3 earnings reports?",
-   "url": "https://www.freightwaves.com/news/ltl-vs-truckload-who-emerged-stronger-from-q3-earnings-reports",
-   "source": "FreightWaves",
-   "date": "2026-11-02T18:50:43.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "contracts",
-    "manufacturing",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "WARNING: Don’t Expect This Freight Cycle to End Soon",
-   "url": "https://www.freightwaves.com/news/warning-dont-expect-this-freight-cycle-to-end-soon",
-   "source": "FreightWaves",
-   "date": "2026-11-02T18:50:04.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Parcel shipping demand to increase 4% during holidays, ShipMatrix says",
-   "url": "https://www.freightwaves.com/news/parcel-shipping-demand-to-increase-4-during-holidays-shipmatrix-says",
-   "source": "FreightWaves",
-   "date": "2026-11-02T18:19:56.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Manufacturing expands for 10th straight month, but Iran war weighs heavily",
-   "url": "https://www.supplychaindive.com/news/manufacturing-expands-for-10th-straight-month-but-iran-war-weighs-heavily/873468/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-02T17:41:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs",
-    "manufacturing"
-   ],
-   "official": false
-  },
-  {
-   "title": "Grow Your Brokerage. Keep Profitability in Focus.",
-   "url": "https://www.freightwaves.com/news/grow-your-brokerage-keep-profitability-in-focus",
-   "source": "FreightWaves",
-   "date": "2026-11-02T16:43:38.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "October’s 55.5 manufacturing PMI beats expectations",
-   "url": "https://www.freightwaves.com/news/octobers-55-5-manufacturing-pmi-beats-expectations",
-   "source": "FreightWaves",
-   "date": "2026-11-02T16:41:27.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "manufacturing"
-   ],
-   "official": false
-  },
-  {
-   "title": "Deere calls back hundreds of Midwest workers ahead of labor talks",
-   "url": "https://www.manufacturingdive.com/news/deere-calls-back-hires-workers-labor-negotiations-ahead-uaw/873430/",
-   "source": "Manufacturing Dive",
-   "date": "2026-11-02T16:39:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "contracts"
-   ],
-   "official": false
-  },
-  {
-   "title": "TrashLab raises $12M to automate waste haulers’ back offices",
-   "url": "https://www.freightwaves.com/news/trashlab-raises-12m-ai-waste-haulers",
-   "source": "FreightWaves",
-   "date": "2026-11-02T16:11:32.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "freight",
-    "proc-tech",
-    "ai",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Mexico destroys 52 tons of avocados after pest discovery raises export concerns",
-   "url": "https://www.freightwaves.com/news/mexico-destroys-52-tons-of-avocados-after-pest-discovery-raises-export-concerns",
-   "source": "FreightWaves",
-   "date": "2026-11-02T16:04:02.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "freight",
-    "proc-tech",
-    "food-ag"
-   ],
-   "official": false
-  },
-  {
-   "title": "Reshoring and foreign direct investment added 247K manufacturing jobs in 2025",
-   "url": "https://www.supplychaindive.com/news/reshoring-foreign-direct-investment-247k-jobs-2025-report-reshoring-initiative/873433/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-02T15:35:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "sourcing",
-    "manufacturing",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Boeing secures lessor order for 767 passenger-to-freighter conversion",
-   "url": "https://www.freightwaves.com/news/boeing-secures-lessor-order-for-767-passenger-to-freighter-conversion",
-   "source": "FreightWaves",
-   "date": "2026-11-02T15:30:16.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Norfolk Southern, Schneider National team to scale East Coast intermodal reach",
-   "url": "https://www.supplychaindive.com/news/norfolk-southern-schneider-national-team-to-scale-east-coast-intermodal-re/873340/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-02T15:11:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "talent",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Walmart commits $6B to up distribution center automation with Symbotic",
-   "url": "https://www.supplychaindive.com/news/walmart-commits-6b-to-up-distribution-center-automation-with-symbotic/873356/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-02T15:07:07.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "ai",
-    "warehousing"
-   ],
-   "official": false
-  },
-  {
-   "title": "Strike at busiest US port just days away as talks continue",
-   "url": "https://www.freightwaves.com/news/strike-at-busiest-us-port-just-days-away-as-talks-continue",
-   "source": "FreightWaves",
-   "date": "2026-11-02T13:48:55.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "supplier-risk",
-    "contracts"
-   ],
-   "official": false
-  },
-  {
-   "title": "Mitsubishi, Hanwha ink agreements to expand foreign investment in US",
-   "url": "https://www.manufacturingdive.com/news/hanwha-defense-shipbuilding-totes-mitsubishi-power-denmark-finland-mou/873413/",
-   "source": "Manufacturing Dive",
-   "date": "2026-11-02T13:11:43.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Flexport forwarding volumes up 40% as headcount grows only 5%",
-   "url": "https://www.freightwaves.com/news/flexport-volumes-up-40-ai-headcount",
-   "source": "FreightWaves",
-   "date": "2026-11-02T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "freight",
-    "ai",
-    "talent"
-   ],
-   "official": false
-  },
-  {
-   "title": "Delegation of Authority Under Section 8335 of the National Defense Authorization Act for Fiscal Year 2026",
-   "url": "https://www.federalregister.gov/documents/2026/11/02/2026-22386/delegation-of-authority-under-section-8335-of-the-national-defense-authorization-act-for-fiscal-year",
-   "source": "Federal Register · Executive Office of the President",
-   "date": "2026-11-02T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs"
-   ],
-   "official": true
-  },
-  {
-   "title": "Adjusting Imports of Robotics, Industrial Machinery, and Their Parts and Components Into the United States",
-   "url": "https://www.federalregister.gov/documents/2026/11/02/2026-22385/adjusting-imports-of-robotics-industrial-machinery-and-their-parts-and-components-into-the-united",
-   "source": "Federal Register · Executive Office of the President",
-   "date": "2026-11-02T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs",
-    "freight"
    ],
    "official": true
   }
