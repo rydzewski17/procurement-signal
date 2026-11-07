@@ -1,6 +1,168 @@
 {
- "updated": "2026-11-06T17:27:15.824Z",
+ "updated": "2026-11-07T16:23:25.156Z",
  "items": [
+  {
+   "title": "Big carriers keep FMCSA’s crackdown alive, Fuller says",
+   "url": "https://www.freightwaves.com/news/fuller-big-carriers-fmcsa-crackdown-permanent",
+   "source": "FreightWaves",
+   "date": "2026-11-07T13:00:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "Compromised communications linked to 40% of stolen loads in Highway fraud report",
+   "url": "https://www.freightwaves.com/news/compromised-communications-linked-to-40-of-stolen-loads-in-highway-fraud-report",
+   "source": "FreightWaves",
+   "date": "2026-11-07T12:16:29.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Why Aviation Automation Still Hasn’t Reached Small Planes",
+   "url": "https://www.freightwaves.com/news/why-aviation-automation-still-hasnt-reached-small-planes",
+   "source": "FreightWaves",
+   "date": "2026-11-06T20:01:15.000Z",
+   "topic": "proc-tech",
+   "categories": [
+    "freight",
+    "ai",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "UP CEO’s rate threat adds wrinkle to Norfolk Southern merger process",
+   "url": "https://www.supplychaindive.com/news/up-ceos-rate-threat-adds-wrinkle-to-norfolk-southern-merger-process/874006/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-06T19:49:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "talent",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "PS Logistics expands Tennessee flatbed presence with Roane acquisition",
+   "url": "https://www.freightwaves.com/news/ps-logistics-expands-tennessee-flatbed-presence-with-roane-acquisition",
+   "source": "FreightWaves",
+   "date": "2026-11-06T18:21:58.000Z",
+   "topic": "proc-tech",
+   "categories": [
+    "freight",
+    "proc-tech",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "CBP seizes 1,000-plus pounds of meth in produce truck at Texas border",
+   "url": "https://www.freightwaves.com/news/cbp-seizes-1000-plus-pounds-of-meth-in-produce-truck-at-texas-border",
+   "source": "FreightWaves",
+   "date": "2026-11-06T18:12:59.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs",
+    "freight",
+    "food-ag"
+   ],
+   "official": false
+  },
+  {
+   "title": "Fleetworthy launches RADAR, new AI fleet management technology",
+   "url": "https://www.freightwaves.com/news/fleetworthy-launches-radar-new-ai-fleet-management-technology",
+   "source": "FreightWaves",
+   "date": "2026-11-06T17:55:09.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "freight",
+    "spend",
+    "ai"
+   ],
+   "official": false
+  },
+  {
+   "title": "Drone Wars & Pilot Skills: Is US Military Training Outdated?",
+   "url": "https://www.freightwaves.com/news/drone-wars-pilot-skills-is-us-military-training-outdated",
+   "source": "FreightWaves",
+   "date": "2026-11-06T17:54:06.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Flying Cars Are HERE: Joby Aviation on eVTOL Revolution [2025 Outlook]",
+   "url": "https://www.freightwaves.com/news/flying-cars-are-here-joby-aviation-on-evtol-revolution-2025-outlook",
+   "source": "FreightWaves",
+   "date": "2026-11-06T17:52:05.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "manufacturing",
+    "compliance",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "Electric ‘Flying Boat’ Lands $5 Billion in Orders",
+   "url": "https://www.freightwaves.com/news/electric-flying-boat-lands-5-billion-in-orders",
+   "source": "FreightWaves",
+   "date": "2026-11-06T17:51:28.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "talent",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "Florida’s Space Race: 95% Cost Drop Fuels Private Sector Boom",
+   "url": "https://www.freightwaves.com/news/floridas-space-race-95-cost-drop-fuels-private-sector-boom",
+   "source": "FreightWaves",
+   "date": "2026-11-06T17:50:49.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight",
+    "energy"
+   ],
+   "official": false
+  },
+  {
+   "title": "Flying Taxis & Cargo: Electric Aviation’s Future Takes Off",
+   "url": "https://www.freightwaves.com/news/flying-taxis-cargo-electric-aviations-future-takes-off",
+   "source": "FreightWaves",
+   "date": "2026-11-06T17:50:15.000Z",
+   "topic": "esg-regulation",
+   "categories": [
+    "freight",
+    "semis",
+    "sustainability"
+   ],
+   "official": false
+  },
+  {
+   "title": "STB signals broader protection for rail-served projects against state and local restrictions",
+   "url": "https://www.freightwaves.com/news/stb-signals-broader-protection-for-rail-served-projects-against-state-and-local-restrictions",
+   "source": "FreightWaves",
+   "date": "2026-11-06T17:25:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
   {
    "title": "Manufacturing industry added 19K jobs in October",
    "url": "https://www.manufacturingdive.com/news/bls-manufacturing-employment-situation-october-jolts-september-2026/873897/",
@@ -135,6 +297,19 @@
    "categories": [
     "ai",
     "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Apple boosts purchase commitments by $33B amid memory crunch",
+   "url": "https://www.supplychaindive.com/news/apple-boosts-purchase-commitments-by-33b-amid-memory-crunch/873936/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-06T13:51:00.000Z",
+   "topic": "commodities",
+   "categories": [
+    "contracts",
+    "semis",
+    "warehousing"
    ],
    "official": false
   },
@@ -567,178 +742,6 @@
     "freight",
     "public-sector",
     "compliance"
-   ],
-   "official": false
-  },
-  {
-   "title": "Class 8 truck orders plunge 36% as EPA uncertainty rattles fleets",
-   "url": "https://www.freightwaves.com/news/class-8-truck-orders-plunge-36-as-epa-uncertainty-rattles-fleets",
-   "source": "FreightWaves",
-   "date": "2026-11-04T22:05:33.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "spend",
-    "compliance"
-   ],
-   "official": false
-  },
-  {
-   "title": "The Hidden Data Challenges for Autonomous Trucking Safety",
-   "url": "https://www.freightwaves.com/news/the-hidden-data-challenges-for-autonomous-trucking-safety",
-   "source": "FreightWaves",
-   "date": "2026-11-04T21:18:12.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "8 Inches of Rain Shut Down Busiest US Rail Line for 60 Hours",
-   "url": "https://www.freightwaves.com/news/8-inches-of-rain-shut-down-busiest-us-rail-line-for-60-hours",
-   "source": "FreightWaves",
-   "date": "2026-11-04T21:16:33.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "supplier-risk",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Dry Van & Reefer: Market Signals You Can’t Ignore",
-   "url": "https://www.freightwaves.com/news/dry-van-reefer-market-signals-you-cant-ignore",
-   "source": "FreightWaves",
-   "date": "2026-11-04T20:58:05.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "manufacturing",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "GXO’s contract wins surge 34%, but growth comes amid cost pressures",
-   "url": "https://www.freightwaves.com/news/gxos-contract-wins-surge-34-but-growth-comes-amid-cost-pressures",
-   "source": "FreightWaves",
-   "date": "2026-11-04T20:47:48.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "contracts",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "USTR urged to permanently suspend China-linked ship fees",
-   "url": "https://www.supplychaindive.com/news/ustr-urged-to-permanently-suspend-china-linked-ship-fees/873618/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-04T19:58:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "supplier-risk",
-    "spend"
-   ],
-   "official": false
-  },
-  {
-   "title": "Emirates rolls out enhanced air cargo service for data center operators",
-   "url": "https://www.freightwaves.com/news/emirates-rolls-out-enhanced-air-cargo-service-for-data-center-operators",
-   "source": "FreightWaves",
-   "date": "2026-11-04T19:41:24.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "sourcing"
-   ],
-   "official": false
-  },
-  {
-   "title": "Intermodal leads weekly gains as US rail traffic rises 3.5%, says AAR",
-   "url": "https://www.freightwaves.com/news/intermodal-leads-weekly-gains-as-us-rail-traffic-rises-3-5-says-aar",
-   "source": "FreightWaves",
-   "date": "2026-11-04T18:52:17.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Stronger revenue at Uber Freight, but profits still elusive",
-   "url": "https://www.freightwaves.com/news/stronger-revenue-at-uber-freight-but-profits-still-elusive",
-   "source": "FreightWaves",
-   "date": "2026-11-04T18:42:16.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "talent",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Asia-US container rates hold as carriers seek $3,000 November rate hikes",
-   "url": "https://www.freightwaves.com/news/asia-us-container-rates-hold-as-carriers-seek-3000-november-rate-hikes",
-   "source": "FreightWaves",
-   "date": "2026-11-04T17:39:26.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight",
-    "supplier-risk",
-    "contracts"
-   ],
-   "official": false
-  },
-  {
-   "title": "Cleveland-Cliffs confirms compliance with Stelco labor commitments",
-   "url": "https://www.manufacturingdive.com/news/cleveland-cliffs-confirms-compliance-stelco-amid-canada-dispute/873709/",
-   "source": "Manufacturing Dive",
-   "date": "2026-11-04T16:10:00.000Z",
-   "topic": "commodities",
-   "categories": [
-    "metals",
-    "compliance"
-   ],
-   "official": false
-  },
-  {
-   "title": "Trimble cuts growth outlook as European freight market slows",
-   "url": "https://www.freightwaves.com/news/trimble-cuts-growth-outlook-as-european-freight-market-slows",
-   "source": "FreightWaves",
-   "date": "2026-11-04T15:28:49.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Amazon deploys thousands of smart glasses to delivery drivers",
-   "url": "https://www.supplychaindive.com/news/amazon-deploys-thousands-of-smart-glasses-to-delivery-drivers/873620/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-04T14:47:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "ONE lifts profit forecast to $2 billion as earnings surge",
-   "url": "https://www.freightwaves.com/news/one-lifts-profit-forecast-to-2-billion-as-earnings-surge",
-   "source": "FreightWaves",
-   "date": "2026-11-04T14:43:57.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight",
-    "deals"
    ],
    "official": false
   }
