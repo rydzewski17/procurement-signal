@@ -2,7 +2,7 @@
 title: "USMCA wasn't renewed at its first review. Here's what annual reviews through 2036 mean for North American sourcing"
 dek: "The U.S. declined to extend the agreement on July 1, so the three countries now review it every year. The pact stays in force until 2036, but auto rules of origin, steel and aluminum are open for negotiation."
 date: 2026-09-10
-updated: 2026-10-15
+updated: 2026-10-16
 topic: tariffs-trade
 type: analysis
 signal: 4
@@ -28,6 +28,10 @@ sources:
     url: "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/ustr-seeks-public-comment-2027-joint-review-usmca"
   - name: "IISD \u2014 United States declines to renew USMCA at first joint review, triggering annual reviews"
     url: "https://www.iisd.org/itn/2026/09/09/united-states-declines-to-renew-usmca-at-first-joint-review-triggering-annual-reviews/"
+  - name: "Reuters via Freedom 96.9 — Progress toward a US-Mexico tariff deal has stalled, WSJ reports (Oct. 15, 2026)"
+    url: "https://www.freedom969.com/business/progress-toward-a-us-mexico-tariff-deal-has-stalled-wsj-reports"
+  - name: "Newsquawk — Lutnick objects to significant reductions in tariffs on Mexican steel, aluminum and autos, per WSJ"
+    url: "https://www.newsquawk.com/headlines/us-commerce-secretary-lutnick-throws-future-of-us-mexico-trade-talks-into-further-doubt-as-he-has-objected-to-significant-reductions-in-tariffs-on-mexican-steel-aluminum-and-automobiles-according-to-wsj"
   - name: "White & Case \u2014 USMCA 2026 joint review: United States declines to extend agreement"
     url: "https://www.whitecase.com/insight-alert/usmca-2026-joint-review-united-states-declines-extend-agreement-triggering-annual"
 faqs:
@@ -41,6 +45,8 @@ faqs:
     a: "The parties review the agreement every year after the U.S. declined to confirm an extension on July 1, 2026. The next joint review falls on July 1, 2027, and an extension can be agreed at any review."
   - q: "Do USMCA preferences still apply after the U.S. declined to renew?"
     a: "Yes. Preferential tariffs, rules of origin, investment protections and dispute settlement all stay in force while the agreement is reviewed annually through 2036."
+  - q: "Are the U.S. and Mexico close to a deal on steel, aluminum and auto tariffs?"
+    a: "Talks stalled in mid-October. The Wall Street Journal reported that Commerce Secretary Howard Lutnick opposed significant cuts to the 25% U.S. tariff on Mexican autos and the 50% tariff on steel and aluminum, while Mexico's deputy trade minister said negotiations are making progress."
 ---
 
 ## Why it matters
@@ -48,6 +54,8 @@ faqs:
 Nearshoring to Mexico rests on USMCA. The agreement hasn't ended, but it is no longer a settled 16-year framework. Annual reviews and bilateral talks mean rules of origin, metals measures and other terms could change before 2036, and procurement plans built on Mexican or Canadian supply should account for that.
 
 ## The details
+
+**Update, Oct. 16: U.S.–Mexico tariff talks stall.** Progress toward a U.S.–Mexico deal that would lower U.S. tariffs on steel, aluminum and automobiles in exchange for Mexican concessions has stalled, the Wall Street Journal reported on Oct. 15, citing people familiar with the talks (as relayed by Reuters). Commerce Secretary Howard Lutnick has opposed significant cuts to the 25% tariff on Mexican autos and the 50% tariff on Mexican steel and aluminum, and objected to lowering duties on finished steel and aluminum products. Mexico's deputy trade minister, Luis Rosendo Gutiérrez, told the Journal the negotiations are making progress, and a Commerce spokesperson said the department is in "constant dialogue with Mexico on trade." For sourcing teams, our read is that relief on Mexican metals and vehicles should not be assumed in 2027 budgets.
 
 The USMCA Free Trade Commission held the agreement's first six-year joint review on July 1, 2026. U.S. Trade Representative Jamieson Greer said the United States "did not agree to renew the USMCA in its current form." Mexico and Canada both supported a 16-year extension.
 
@@ -127,6 +135,7 @@ USMCA preference means qualifying goods enter duty-free. A part that no longer q
 
 ## What to watch next
 
+- **Whether U.S.–Mexico talks restart on metals and autos.** A deal cutting the 50% steel and aluminum and 25% auto tariffs would change landed cost on Mexican supply; for now, Commerce opposition has stalled it.
 - **The fourth U.S.–Mexico round** and any agreed changes to auto rules of origin.
 - **U.S.–Canada talks**, which had not formally started by late July.
 - **Jan. 12, 2027 comment deadline.** USTR opened public comments on the operation of the agreement ahead of the 2027 joint review (Federal Register document 2026-20341, docket USTR-2026-0595). Comments and requests to testify at a public hearing are due by 11:59 p.m. EST on Jan. 12, 2027; USTR will post the hearing date on its website. Companies with North American supply chains can put their rules-of-origin and cost data on the record.

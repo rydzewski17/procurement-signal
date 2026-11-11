@@ -62,6 +62,10 @@ const RULES: [string, string][] = [
   ['(?:pharmaceutical|pharma) tariffs?', A('2026-10-12-section-232-pharma-tariff-now-applies-all-importers')],
   ['tariff refunds?', A('2026-10-14-tariff-refunds-levis-80m-how-companies-reinvest')],
   ['GSK', A('2026-10-14-gsk-800m-pennsylvania-biologics-hub-pharma-reshoring')],
+  ['Federal Maritime Commission', A('2026-10-16-fmc-spain-200000-vessel-fee-olive-oil-tile-import-limits')],
+  ['olive oil|ceramic tiles?', A('2026-10-16-fmc-spain-200000-vessel-fee-olive-oil-tile-import-limits')],
+  ['refined copper|copper cathode|COMEX', A('2026-10-16-us-copper-stockpile-1-6-million-tons-refined-tariff-decision-pending')],
+  ['producer prices', A('2026-10-16-september-ppi-1-3-percent-energy-diesel-supplier-price-increases')],
   ['FAR Overhaul|Federal Acquisition Regulation', A('2026-09-25-far-overhaul-second-proposed-rules-federal-contractors')],
   // Guides
   ['Section 232', G('section-232-tariffs-explained-steel-aluminum-copper-pharma-semiconductors-wood')],
