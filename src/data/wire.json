@@ -1,6 +1,190 @@
 {
- "updated": "2026-11-13T17:40:43.444Z",
+ "updated": "2026-11-14T16:34:53.732Z",
  "items": [
+  {
+   "title": "Certain Aluminum Foil From the Republic of Türkiye: Final Results of Antidumping Duty Administrative Review; 2023-2024",
+   "url": "https://www.federalregister.gov/documents/2026/11/16/2026-23267/certain-aluminum-foil-from-the-republic-of-trkiye-final-results-of-antidumping-duty-administrative",
+   "source": "Federal Register · Commerce Department",
+   "date": "2026-11-16T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs",
+    "metals"
+   ],
+   "official": true
+  },
+  {
+   "title": "Certain Spectral Flow Cytometry Systems and Components Thereof; Notice of Institution of Investigation",
+   "url": "https://www.federalregister.gov/documents/2026/11/16/2026-23254/certain-spectral-flow-cytometry-systems-and-components-thereof-notice-of-institution-of",
+   "source": "Federal Register · International Trade Commission",
+   "date": "2026-11-16T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs",
+    "deals"
+   ],
+   "official": true
+  },
+  {
+   "title": "Denial of funds to NY over non domiciled CDLs overturned: appellate court",
+   "url": "https://www.freightwaves.com/news/denial-of-funds-to-ny-over-non-domiciled-cdls-overturned-appellate-court",
+   "source": "FreightWaves",
+   "date": "2026-11-13T22:27:15.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "semis"
+   ],
+   "official": false
+  },
+  {
+   "title": "Tanker strikes cruise riverboat in New Orleans",
+   "url": "https://www.freightwaves.com/news/tanker-strikes-cruise-riverboat-in-new-orleans",
+   "source": "FreightWaves",
+   "date": "2026-11-13T21:25:44.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "supplier-risk"
+   ],
+   "official": false
+  },
+  {
+   "title": "AI cargo thefts top $150 million from June 2025 to June 2026",
+   "url": "https://www.freightwaves.com/news/ai-cargo-thefts-top-150-million-from-june-2025-to-june-2026",
+   "source": "FreightWaves",
+   "date": "2026-11-13T21:11:42.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "freight",
+    "ai"
+   ],
+   "official": false
+  },
+  {
+   "title": "Trailer Flexibility Is Becoming a Growth Strategy for Carriers",
+   "url": "https://www.freightwaves.com/news/trailer-flexibility-is-becoming-a-growth-strategy-for-carriers",
+   "source": "FreightWaves",
+   "date": "2026-11-13T20:18:31.000Z",
+   "topic": "proc-tech",
+   "categories": [
+    "freight",
+    "proc-tech",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "Trucking Recession Continues: Why Carriers Face Layoffs and Bankruptcies",
+   "url": "https://www.freightwaves.com/news/trucking-recession-continues-why-carriers-face-layoffs-and-bankruptcies",
+   "source": "FreightWaves",
+   "date": "2026-11-13T19:48:58.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "supplier-risk",
+    "contracts",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "Freightos’ founder accuses company of ‘rigging’ proxy vote as company opposes his proposals",
+   "url": "https://www.freightwaves.com/news/freightos-founder-accuses-company-of-rigging-proxy-vote-as-company-opposes-his-proposals",
+   "source": "FreightWaves",
+   "date": "2026-11-13T19:48:52.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "RICO Case Against TQL, CH Robinson: What’s At Stake for Brokers?",
+   "url": "https://www.freightwaves.com/news/rico-case-against-tql-ch-robinson-whats-at-stake-for-brokers",
+   "source": "FreightWaves",
+   "date": "2026-11-13T19:48:35.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Uninsured? What Mexican Border Freight Risks You’re Missing",
+   "url": "https://www.freightwaves.com/news/uninsured-what-mexican-border-freight-risks-youre-missing",
+   "source": "FreightWaves",
+   "date": "2026-11-13T19:48:06.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "supplier-risk"
+   ],
+   "official": false
+  },
+  {
+   "title": "Humble Robotics: $51M Fuels Autonomous Electric Freight Future",
+   "url": "https://www.freightwaves.com/news/humble-robotics-51m-fuels-autonomous-electric-freight-future",
+   "source": "FreightWaves",
+   "date": "2026-11-13T19:45:23.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight",
+    "energy",
+    "proc-tech",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "CMA CGM triples profit as Q3 freight rates and cargo volumes rise",
+   "url": "https://www.freightwaves.com/news/cma-cgm-triples-profit-as-q3-freight-rates-and-cargo-volumes-rise",
+   "source": "FreightWaves",
+   "date": "2026-11-13T19:19:11.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "USPS to add 11% permanent fuel surcharge along with parcel rate hike",
+   "url": "https://www.freightwaves.com/news/usps-to-add-11-permanent-fuel-surcharge-along-with-parcel-rate-hike",
+   "source": "FreightWaves",
+   "date": "2026-11-13T19:00:38.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight",
+    "energy",
+    "contracts",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "Amazon-focused bill likely to pass in NYC but only after changes",
+   "url": "https://www.freightwaves.com/news/amazon-focused-bill-likely-to-pass-in-nyc-but-only-after-changes",
+   "source": "FreightWaves",
+   "date": "2026-11-13T17:56:15.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Truckers Die at 61? The Health Crisis We Ignore",
+   "url": "https://www.freightwaves.com/news/truckers-die-at-61-the-health-crisis-we-ignore",
+   "source": "FreightWaves",
+   "date": "2026-11-13T17:41:28.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
   {
    "title": "Suspect in $100M Brink’s jewelry theft agrees to plead guilty in related cargo robbery case",
    "url": "https://www.freightwaves.com/news/suspect-in-100m-brinks-jewelry-theft-agrees-to-plead-guilty-in-related-cargo-robbery-case",
@@ -533,198 +717,6 @@
     "freight",
     "supplier-risk",
     "talent"
-   ],
-   "official": false
-  },
-  {
-   "title": "Spot Rates Up 50%, Rail Volumes at Highs",
-   "url": "https://www.freightwaves.com/news/spot-rates-up-50-rail-volumes-at-highs",
-   "source": "FreightWaves",
-   "date": "2026-11-11T19:42:05.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "freight",
-    "contracts",
-    "spend",
-    "ai",
-    "manufacturing"
-   ],
-   "official": false
-  },
-  {
-   "title": "Intermodal Booms: Best 3 Months EVER for Rail Freight",
-   "url": "https://www.freightwaves.com/news/intermodal-booms-best-3-months-ever-for-rail-freight",
-   "source": "FreightWaves",
-   "date": "2026-11-11T19:38:58.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "AI in Logistics: How Radar is Revolutionizing Fleet Data Analysis",
-   "url": "https://www.freightwaves.com/news/ai-in-logistics-how-radar-is-revolutionizing-fleet-data-analysis",
-   "source": "FreightWaves",
-   "date": "2026-11-11T19:38:13.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "freight",
-    "spend",
-    "ai",
-    "compliance"
-   ],
-   "official": false
-  },
-  {
-   "title": "Fura Freight: Next Year, Our AI Agent Will Book 90% of Loads",
-   "url": "https://www.freightwaves.com/news/fura-freight-next-year-our-ai-agent-will-book-90-of-loads",
-   "source": "FreightWaves",
-   "date": "2026-11-11T19:37:41.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "freight",
-    "proc-tech",
-    "ai",
-    "manufacturing",
-    "talent",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Air cargo’s hopes for end-of-year volume surge dwindle",
-   "url": "https://www.supplychaindive.com/news/air-cargos-hopes-for-end-of-year-volume-surge-dwindle/874430/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-11T18:55:52.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "manufacturing"
-   ],
-   "official": false
-  },
-  {
-   "title": "BMW announces new battery supply deals for the US, Europe",
-   "url": "https://www.supplychaindive.com/news/bmw-announces-new-battery-supply-deals-for-the-us-europe/874409/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-11T17:15:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "contracts",
-    "manufacturing",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Latam Cargo to increase flower exports with Bogota terminal expansion",
-   "url": "https://www.freightwaves.com/news/latam-cargo-to-increase-flower-exports-with-bogota-terminal-expansion",
-   "source": "FreightWaves",
-   "date": "2026-11-11T17:09:37.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "freight",
-    "manufacturing"
-   ],
-   "official": false
-  },
-  {
-   "title": "US postpones ‘million-dollar’ China ship tax until January",
-   "url": "https://www.freightwaves.com/news/us-postpones-million-dollar-china-ship-tax-until-january",
-   "source": "FreightWaves",
-   "date": "2026-11-11T16:02:32.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "supplier-risk",
-    "spend"
-   ],
-   "official": false
-  },
-  {
-   "title": "Mars to invest $1.4B in US manufacturing, operations in 2027",
-   "url": "https://www.manufacturingdive.com/news/mars-invest-us-manufacturing-operations-snacking-kellanova-acquisition/874403/",
-   "source": "Manufacturing Dive",
-   "date": "2026-11-11T16:00:00.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "freight",
-    "proc-tech",
-    "manufacturing",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Texas trucking owner indicted in scheme involving 57 unauthorized drivers",
-   "url": "https://www.freightwaves.com/news/texas-trucking-owner-indicted-in-scheme-involving-57-unauthorized-drivers",
-   "source": "FreightWaves",
-   "date": "2026-11-11T15:04:26.000Z",
-   "topic": "public-sector",
-   "categories": [
-    "freight",
-    "public-sector"
-   ],
-   "official": false
-  },
-  {
-   "title": "US rail traffic hits intermodal record as October freight gains signal economic resilience, says AAR",
-   "url": "https://www.freightwaves.com/news/us-rail-traffic-hits-intermodal-record-as-october-freight-gains-signal-economic-resilience-says-aar",
-   "source": "FreightWaves",
-   "date": "2026-11-11T14:39:03.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "supplier-risk"
-   ],
-   "official": false
-  },
-  {
-   "title": "US Postal Service reduces annual operating loss by 12.7%",
-   "url": "https://www.freightwaves.com/news/us-postal-service-reduces-annual-operating-loss-by-12-7",
-   "source": "FreightWaves",
-   "date": "2026-11-11T14:29:21.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "High Diesel Prices Put Fleet Efficiency Under the Microscope",
-   "url": "https://www.freightwaves.com/news/high-diesel-prices-put-fleet-efficiency-under-the-microscope",
-   "source": "FreightWaves",
-   "date": "2026-11-11T14:00:00.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight",
-    "energy",
-    "compliance"
-   ],
-   "official": false
-  },
-  {
-   "title": "Shippers running 2022-era bid playbooks face a tighter peak",
-   "url": "https://www.freightwaves.com/news/a-duie-pyle-peak-season-shipper-bids",
-   "source": "FreightWaves",
-   "date": "2026-11-11T13:00:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Hydrogen trucks’ fuel cell is ready. Europe’s pumps aren’t",
-   "url": "https://www.freightwaves.com/news/cellcentric-fuel-cell-hydrogen-stations-europe",
-   "source": "FreightWaves",
-   "date": "2026-11-11T12:30:00.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight",
-    "energy",
-    "manufacturing"
    ],
    "official": false
   }
