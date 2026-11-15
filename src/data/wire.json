@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T16:34:53.732Z",
+ "updated": "2026-11-15T17:01:47.079Z",
  "items": [
   {
    "title": "Certain Aluminum Foil From the Republic of Türkiye: Final Results of Antidumping Duty Administrative Review; 2023-2024",
@@ -24,6 +24,31 @@
     "deals"
    ],
    "official": true
+  },
+  {
+   "title": "Borderlands Mexico: Texas cross-border traffic rises by 400 trucks through Saturday pilot",
+   "url": "https://www.freightwaves.com/news/borderlands-mexico-texas-cross-border-traffic-rises-by-400-trucks-through-saturday-pilot",
+   "source": "FreightWaves",
+   "date": "2026-11-15T12:00:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "manufacturing",
+    "deals",
+    "healthcare"
+   ],
+   "official": false
+  },
+  {
+   "title": "Spot rates jump ahead of holidays",
+   "url": "https://www.freightwaves.com/news/spot-rates-jump-ahead-of-holidays",
+   "source": "FreightWaves",
+   "date": "2026-11-15T01:30:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
   },
   {
    "title": "Denial of funds to NY over non domiciled CDLs overturned: appellate court",
@@ -692,31 +717,6 @@
    "topic": "supplier-risk",
    "categories": [
     "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Why Owner-Operators Are Leaving The Small-Fleet Tier, And Where Their Trucks Go Next",
-   "url": "https://www.freightwaves.com/news/why-owner-operators-are-leaving-the-small-fleet-tier-and-where-their-trucks-go-next",
-   "source": "FreightWaves",
-   "date": "2026-11-11T22:48:14.000Z",
-   "topic": "public-sector",
-   "categories": [
-    "freight",
-    "public-sector"
-   ],
-   "official": false
-  },
-  {
-   "title": "Freight distress persists as logistics layoffs top 1,000, bankruptcies mount",
-   "url": "https://www.freightwaves.com/news/freight-distress-persists-as-logistics-layoffs-top-1000-bankruptcies-mount",
-   "source": "FreightWaves",
-   "date": "2026-11-11T22:20:40.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "supplier-risk",
-    "talent"
    ],
    "official": false
   }
