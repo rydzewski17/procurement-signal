@@ -1,12 +1,298 @@
 {
- "updated": "2026-11-18T18:48:54.841Z",
+ "updated": "2026-11-19T18:58:05.617Z",
  "items": [
+  {
+   "title": "Supply chain software has an 18-month go-live problem",
+   "url": "https://www.freightwaves.com/news/vantage-9-supply-chain-software-go-live",
+   "source": "FreightWaves",
+   "date": "2026-11-19T18:06:55.000Z",
+   "topic": "proc-tech",
+   "categories": [
+    "freight",
+    "spend"
+   ],
+   "official": false
+  },
+  {
+   "title": "How smart manufacturing is shaping the automotive industry",
+   "url": "https://www.manufacturingdive.com/news/how-smart-manufacturing-reshapes-automotive-industry-rockwell-car/875181/",
+   "source": "Manufacturing Dive",
+   "date": "2026-11-19T16:54:00.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "ai",
+    "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Boston Dynamics, GlobalFoundries expand robotics collaboration",
+   "url": "https://www.manufacturingdive.com/news/boston-dynamics-globalfoundries-expand-robotics-collaboration-spot-atlas/875112/",
+   "source": "Manufacturing Dive",
+   "date": "2026-11-19T16:52:25.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Honda invests $462M in Alabama plant to boost production",
+   "url": "https://www.supplychaindive.com/news/honda-invests-462m-in-alabama-plant-to-boost-production/875189/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-19T16:33:34.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "manufacturing",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "How Home Depot built the missing logistics piece for its Pro business",
+   "url": "https://www.supplychaindive.com/news/how-home-depot-built-the-missing-logistics-piece-for-its-pro-business/874331/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-19T15:58:00.000Z",
+   "topic": "proc-tech",
+   "categories": [
+    "freight",
+    "contracts",
+    "proc-tech",
+    "warehousing",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "Sila, Panasonic sign projected $1B silicon-carbon anode supply contract",
+   "url": "https://www.manufacturingdive.com/news/sila-panasonic-energy-titan-silicon-si-c-battery-cells-supply-contract/875092/",
+   "source": "Manufacturing Dive",
+   "date": "2026-11-19T15:39:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "contracts",
+    "manufacturing",
+    "sustainability"
+   ],
+   "official": false
+  },
+  {
+   "title": "Ship pilot indicted after fatal Houston collision linked to cellphone distraction",
+   "url": "https://www.freightwaves.com/news/ship-pilot-indicted-after-fatal-houston-collision-linked-to-cellphone-distraction",
+   "source": "FreightWaves",
+   "date": "2026-11-19T15:16:34.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "How Brooks Running is using supplier data to address human rights risks",
+   "url": "https://www.supplychaindive.com/news/how-brooks-running-is-using-supplier-data-to-address-human-rights-risks/875090/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-19T15:07:46.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "supplier-risk",
+    "sourcing",
+    "compliance"
+   ],
+   "official": false
+  },
+  {
+   "title": "Expeditors enters new logistics frontier supporting Kennedy space missions",
+   "url": "https://www.freightwaves.com/news/expeditors-enters-new-logistics-frontier-supporting-kennedy-space-missions",
+   "source": "FreightWaves",
+   "date": "2026-11-19T14:50:51.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "SBIC License Issuance",
+   "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23596/sbic-license-issuance",
+   "source": "Federal Register · Small Business Administration",
+   "date": "2026-11-19T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs"
+   ],
+   "official": true
+  },
+  {
+   "title": "[Podcast] From Telemetry to Intelligence: The Data Layer for Industrial AI",
+   "url": "https://www.manufacturingdive.com/spons/podcast-from-telemetry-to-intelligence-the-data-layer-for-industrial-ai/833757/",
+   "source": "Manufacturing Dive",
+   "date": "2026-11-19T09:45:50.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "ai",
+    "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "LA-Long Beach port strike risk grows as employers say ILWU talks stalled",
+   "url": "https://www.freightwaves.com/news/la-long-beach-port-strike-risk-grows-as-employers-say-ilwu-talks-stalled",
+   "source": "FreightWaves",
+   "date": "2026-11-18T22:37:39.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "supplier-risk",
+    "contracts"
+   ],
+   "official": false
+  },
+  {
+   "title": "From more footage to more focus: Find your fleet’s videosafety stage",
+   "url": "https://www.freightwaves.com/news/from-more-footage-to-more-focus-find-your-fleets-videosafety-stage",
+   "source": "FreightWaves",
+   "date": "2026-11-18T20:02:46.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "Why Truckload Rates Feel Disappointing Despite Strong Numbers",
+   "url": "https://www.freightwaves.com/news/why-truckload-rates-feel-disappointing-despite-strong-numbers",
+   "source": "FreightWaves",
+   "date": "2026-11-18T19:50:07.000Z",
+   "topic": "people-moves",
+   "categories": [
+    "freight",
+    "contracts",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "Port of LA Crushes Records: 5M Containers in 5 Months!",
+   "url": "https://www.freightwaves.com/news/port-of-la-crushes-records-5m-containers-in-5-months",
+   "source": "FreightWaves",
+   "date": "2026-11-18T19:34:42.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs",
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "AI for Logistics: Why 81% of AI Projects Fail",
+   "url": "https://www.freightwaves.com/news/ai-for-logistics-why-81-of-ai-projects-fail",
+   "source": "FreightWaves",
+   "date": "2026-11-18T19:34:09.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "freight",
+    "ai",
+    "warehousing",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "ATA spells out short- and long-term solutions to halt ELD fraud",
+   "url": "https://www.freightwaves.com/news/ata-spells-out-short-and-long-term-solutions-to-halt-eld-fraud",
+   "source": "FreightWaves",
+   "date": "2026-11-18T19:12:53.000Z",
+   "topic": "public-sector",
+   "categories": [
+    "freight",
+    "supplier-risk",
+    "semis",
+    "public-sector"
+   ],
+   "official": false
+  },
+  {
+   "title": "Trucking Spot Rates Defy Fuel Costs: An Unexpected Market Move",
+   "url": "https://www.freightwaves.com/news/trucking-spot-rates-defy-fuel-costs-an-unexpected-market-move",
+   "source": "FreightWaves",
+   "date": "2026-11-18T19:10:17.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight",
+    "energy"
+   ],
+   "official": false
+  },
+  {
+   "title": "Rail Freight Fraud: Organized Crime’s New Tactic?",
+   "url": "https://www.freightwaves.com/news/rail-freight-fraud-organized-crimes-new-tactic",
+   "source": "FreightWaves",
+   "date": "2026-11-18T19:09:49.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "contracts",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "Trucking Economy in 2024: A K-Shape Threatens Consumer Demand",
+   "url": "https://www.freightwaves.com/news/trucking-economy-in-2024-a-k-shape-threatens-consumer-demand",
+   "source": "FreightWaves",
+   "date": "2026-11-18T18:58:39.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "freight",
+    "ai",
+    "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Diesel: Are Sky-High Prices Finally Over?",
+   "url": "https://www.freightwaves.com/news/diesel-are-sky-high-prices-finally-over",
+   "source": "FreightWaves",
+   "date": "2026-11-18T18:52:43.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight",
+    "energy",
+    "food-ag"
+   ],
+   "official": false
+  },
+  {
+   "title": "ABF Freight workers uncover $1.5M drug shipment headed to Ohio",
+   "url": "https://www.freightwaves.com/news/abf-freight-workers-uncover-1-5m-drug-shipment-headed-to-ohio",
+   "source": "FreightWaves",
+   "date": "2026-11-18T18:51:32.000Z",
+   "topic": "public-sector",
+   "categories": [
+    "freight",
+    "public-sector",
+    "healthcare"
+   ],
+   "official": false
+  },
   {
    "title": "DHL Forwarding launches first-ever dedicated freighter service for India",
    "url": "https://www.freightwaves.com/news/dhl-forwarding-launches-first-ever-dedicated-freighter-service-for-india",
    "source": "FreightWaves",
    "date": "2026-11-18T17:37:49.000Z",
    "topic": "proc-tech",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Amazon’s first Puerto Rico delivery station speeds up shipping",
+   "url": "https://www.supplychaindive.com/news/amazons-first-puerto-rico-delivery-station-speeds-up-shipping/874996/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-18T17:35:00.000Z",
+   "topic": "supplier-risk",
    "categories": [
     "freight"
    ],
@@ -31,18 +317,6 @@
    "topic": "supplier-risk",
    "categories": [
     "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "The Trump Crackdown Aims At The Driver, However The Same Government Keeps Clearing The Company Behind Him",
-   "url": "https://www.freightwaves.com/news/the-trump-crackdown-aims-at-the-driver-however-the-same-government-keeps-clearing-the-company-behind-him",
-   "source": "FreightWaves",
-   "date": "2026-11-18T16:51:46.000Z",
-   "topic": "public-sector",
-   "categories": [
-    "freight",
-    "public-sector"
    ],
    "official": false
   },
@@ -82,140 +356,6 @@
    "official": false
   },
   {
-   "title": "Green Cabbage: Procurement was promised strategic work; now it has to define it",
-   "url": "https://cpostrategy.media/blog/2026/11/18/green-cabbage-procurement-was-promised-strategic-work-now-it-has-to-define-it/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:56:41.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "ai",
-    "talent"
-   ],
-   "official": false
-  },
-  {
-   "title": "‘Let go’ without losing control: FrieslandCampina’s approach to simpler procurement with Candex",
-   "url": "https://cpostrategy.media/blog/2026/11/18/let-go-without-losing-control-frieslandcampinas-approach-to-simpler-procurement-with-candex/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:55:21.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "spend"
-   ],
-   "official": false
-  },
-  {
-   "title": "Zip: Creating a change in the ecosystem",
-   "url": "https://cpostrategy.media/blog/2026/11/18/zip-creating-a-change-in-the-ecosystem/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:53:55.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "ai"
-   ],
-   "official": false
-  },
-  {
-   "title": "Tiger Tyagarajan: Seeing opportunity in volatility",
-   "url": "https://cpostrategy.media/blog/2026/11/18/tiger-tyagarajan-seeing-opportunity-in-volatility/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:52:49.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Breaking chains: How technology leadership separates the prepared from the exposed",
-   "url": "https://cpostrategy.media/blog/2026/11/18/breaking-chains-how-technology-leadership-separates-the-prepared-from-the-exposed/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:51:22.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "supplier-risk"
-   ],
-   "official": false
-  },
-  {
-   "title": "DPW Amsterdam: Unleashing procurement’s great RECODE",
-   "url": "https://cpostrategy.media/blog/2026/11/18/dpw-amsterdam-unleashing-procurements-great-recode/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:49:40.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "industry"
-   ],
-   "official": false
-  },
-  {
-   "title": "DPW Amsterdam: Time to RECODE procurement",
-   "url": "https://cpostrategy.media/blog/2026/11/18/dpw-amsterdam-time-to-recode-procurement/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:48:14.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "ai"
-   ],
-   "official": false
-  },
-  {
-   "title": "DPW Amsterdam: Unlocking procurement",
-   "url": "https://cpostrategy.media/blog/2026/11/18/dpw-amsterdam-unlocking-procurement/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:46:35.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "industry"
-   ],
-   "official": false
-  },
-  {
-   "title": "Köse Advisory: Unlocking procurement’s new KPIs",
-   "url": "https://cpostrategy.media/blog/2026/11/18/kose-advisory-unlocking-procurements-new-kpis/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:45:11.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "spend"
-   ],
-   "official": false
-  },
-  {
-   "title": "Valdera: Powering Procurement Intelligence",
-   "url": "https://cpostrategy.media/blog/2026/11/18/valdera-powering-procurement-intelligence/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:43:44.000Z",
-   "topic": "people-moves",
-   "categories": [
-    "talent"
-   ],
-   "official": false
-  },
-  {
-   "title": "Unite: Reinventing indirect procurement",
-   "url": "https://cpostrategy.media/blog/2026/11/18/unite-reinventing-indirect-procurement/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:41:48.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "ai"
-   ],
-   "official": false
-  },
-  {
-   "title": "Scientist.com: Harnessing real business value in procurement",
-   "url": "https://cpostrategy.media/blog/2026/11/18/scientist-com-harnessing-real-business-value-in-procurement/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:39:40.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "freight",
-    "ai"
-   ],
-   "official": false
-  },
-  {
    "title": "Starbucks inventory availability at ‘all-time high’ with daily deliveries, CEO says",
    "url": "https://www.supplychaindive.com/news/starbucks-inventory-availability-at-all-time-high-with-daily-deliveries/874923/",
    "source": "Supply Chain Dive",
@@ -224,122 +364,6 @@
    "categories": [
     "warehousing",
     "talent"
-   ],
-   "official": false
-  },
-  {
-   "title": "Axiom: Why procurement transformation must start with the problem, not the platform",
-   "url": "https://cpostrategy.media/blog/2026/11/18/axiom-why-procurement-transformation-must-start-with-the-problem-not-the-platform/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:35:51.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "proc-tech",
-    "ai"
-   ],
-   "official": false
-  },
-  {
-   "title": "Beroe: Reshaping procurement",
-   "url": "https://cpostrategy.media/blog/2026/11/18/beroe-reshaping-procurement/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:32:38.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "talent"
-   ],
-   "official": false
-  },
-  {
-   "title": "True ValueHub: Unlocking visibility in manufacturing",
-   "url": "https://cpostrategy.media/blog/2026/11/18/true-valuehub-unlocking-visibility-in-manufacturing/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:30:01.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "manufacturing",
-    "talent"
-   ],
-   "official": false
-  },
-  {
-   "title": "Nomia: Putting the code behind tail spend",
-   "url": "https://cpostrategy.media/blog/2026/11/18/nomia-putting-the-code-behind-tail-spend/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:27:27.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "spend",
-    "talent"
-   ],
-   "official": false
-  },
-  {
-   "title": "Vertice: Adding boundless value to partnerships",
-   "url": "https://cpostrategy.media/blog/2026/11/18/vertice-adding-boundless-value-to-partnerships/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:26:07.000Z",
-   "topic": "proc-tech",
-   "categories": [
-    "proc-tech"
-   ],
-   "official": false
-  },
-  {
-   "title": "Adyen: Embracing the agentic age with Omnea",
-   "url": "https://cpostrategy.media/blog/2026/11/18/adyen-embracing-the-agentic-age-with-omnea/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:24:29.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "sourcing",
-    "ai"
-   ],
-   "official": false
-  },
-  {
-   "title": "SpendHQ: Building AI that understands procurement",
-   "url": "https://cpostrategy.media/blog/2026/11/18/spendhq-building-ai-that-understands-procurement/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:22:33.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "spend",
-    "ai"
-   ],
-   "official": false
-  },
-  {
-   "title": "ORO Labs: Breaking down barriers using human leadership and advanced technology",
-   "url": "https://cpostrategy.media/blog/2026/11/18/oro-labs-breaking-down-barriers-using-human-leadership-and-advanced-technology/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:21:47.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "proc-tech",
-    "ai"
-   ],
-   "official": false
-  },
-  {
-   "title": "Keelvar: Setting an example within procurement",
-   "url": "https://cpostrategy.media/blog/2026/11/18/keelvar-setting-an-example-within-procurement/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:20:37.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "talent"
-   ],
-   "official": false
-  },
-  {
-   "title": "Issue 79 of CPOstrategy is live!",
-   "url": "https://cpostrategy.media/blog/2026/11/18/issue-79-of-cpostrategy-is-live/",
-   "source": "CPO Strategy",
-   "date": "2026-11-18T15:18:45.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "industry"
    ],
    "official": false
   },
@@ -405,6 +429,18 @@
    "topic": "supplier-risk",
    "categories": [
     "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "PepsiCo improves deforestation-free sourcing for key commodities",
+   "url": "https://www.supplychaindive.com/news/pepsico-improves-deforestation-free-sourcing-for-key-commodities/874963/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-18T12:59:00.000Z",
+   "topic": "commodities",
+   "categories": [
+    "metals",
+    "sourcing"
    ],
    "official": false
   },
@@ -534,18 +570,6 @@
    "official": false
   },
   {
-   "title": "Beyond automation: How AI can help manufacturers get ahead of change",
-   "url": "https://cpostrategy.media/blog/2026/11/17/beyond-automation-how-ai-can-help-manufacturers-get-ahead-of-change/",
-   "source": "CPO Strategy",
-   "date": "2026-11-17T16:40:27.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "ai",
-    "manufacturing"
-   ],
-   "official": false
-  },
-  {
    "title": "How an engineering firm advises DOD on designing energetics facilities",
    "url": "https://www.manufacturingdive.com/news/burns-mcdonnell-engineering-energetics-ammunition-plant-missouri/874658/",
    "source": "Manufacturing Dive",
@@ -636,33 +660,6 @@
    "official": false
   },
   {
-   "title": "Wrangler parent company plans to beef up inventory spending",
-   "url": "https://www.supplychaindive.com/news/wrangler-parent-company-plans-to-beef-up-inventory-spending/874783/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-17T15:08:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "spend",
-    "warehousing",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Amazon to expand fuel and logistics surcharge to more services",
-   "url": "https://www.supplychaindive.com/news/amazon-to-expand-fuel-and-logistics-surcharge-to-more-services/874693/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-17T14:36:17.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight",
-    "energy",
-    "contracts",
-    "warehousing"
-   ],
-   "official": false
-  },
-  {
    "title": "Truck Parking Club hands CPC 7 drop yards in two months",
    "url": "https://www.freightwaves.com/news/truck-parking-club-cpc-drop-yards",
    "source": "FreightWaves",
@@ -716,6 +713,29 @@
     "tariffs"
    ],
    "official": true
+  },
+  {
+   "title": "Police recover $4.5 million in stolen vehicles bound for West Africa, arrest 12",
+   "url": "https://www.freightwaves.com/news/police-recover-4-5-million-in-stolen-vehicles-bound-for-west-africa-arrest-12",
+   "source": "FreightWaves",
+   "date": "2026-11-16T22:46:26.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "food-ag"
+   ],
+   "official": false
+  },
+  {
+   "title": "Meta pays Nevoya to put 25 electric trucks on I-10",
+   "url": "https://www.freightwaves.com/news/meta-nevoya-electric-trucks-i-10",
+   "source": "FreightWaves",
+   "date": "2026-11-16T22:04:10.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
   }
  ]
 }
