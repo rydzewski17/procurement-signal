@@ -1,6 +1,218 @@
 {
- "updated": "2026-11-22T17:46:57.455Z",
+ "updated": "2026-11-23T22:00:39.197Z",
  "items": [
+  {
+   "title": "Why AI Is Paramount to Optimizing Air Cargo",
+   "url": "https://www.freightwaves.com/news/why-ai-is-paramount-to-optimizing-air-cargo",
+   "source": "FreightWaves",
+   "date": "2026-11-23T19:22:28.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "supplier-risk",
+    "ai",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "Bank challenges trucking CEO’s $8.5M Florida estate amid bankruptcy",
+   "url": "https://www.freightwaves.com/news/bank-challenges-trucking-ceos-8-5m-florida-estate-amid-bankruptcy",
+   "source": "FreightWaves",
+   "date": "2026-11-23T18:16:37.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "supplier-risk",
+    "public-sector",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "Lufthansa Cargo to buy out 2nd ground agent at Frankfurt airport",
+   "url": "https://www.freightwaves.com/news/lufthansa-cargo-to-buy-out-2nd-ground-agent-at-frankfurt-airport",
+   "source": "FreightWaves",
+   "date": "2026-11-23T17:32:21.000Z",
+   "topic": "proc-tech",
+   "categories": [
+    "freight",
+    "proc-tech",
+    "manufacturing",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "Savannah handles 565,366 TEUs in October, up 25% year-over-year on strong import demand",
+   "url": "https://www.freightwaves.com/news/savannah-handles-565366-teus-in-october-up-25-year-over-year-on-strong-import-demand",
+   "source": "FreightWaves",
+   "date": "2026-11-23T17:12:43.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "freight",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "AI Should Make Dispatchers Better, Not Replace Them, Says PCS Software’s Villegas",
+   "url": "https://www.freightwaves.com/news/ai-should-make-dispatchers-better-not-replace-them-says-pcs-softwares-villegas",
+   "source": "FreightWaves",
+   "date": "2026-11-23T16:49:43.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "freight",
+    "ai"
+   ],
+   "official": false
+  },
+  {
+   "title": "House likely to pass permitting bill with minimal changes: NAM",
+   "url": "https://www.manufacturingdive.com/news/house-passage-permitting-bill-likely-minimal-changes-nam/875349/",
+   "source": "Manufacturing Dive",
+   "date": "2026-11-23T16:37:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Cargo Thieves Are Chasing AI Hardware Down the Dirt Road to the Data Center",
+   "url": "https://www.freightwaves.com/news/cargo-thieves-are-chasing-ai-hardware-down-the-dirt-road-to-the-data-center",
+   "source": "FreightWaves",
+   "date": "2026-11-23T16:25:44.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "freight",
+    "spend",
+    "ai",
+    "semis"
+   ],
+   "official": false
+  },
+  {
+   "title": "Best Buy taps AI platform for supplier insights",
+   "url": "https://www.supplychaindive.com/news/best-buy-taps-ai-platform-for-supplier-insights/875211/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-23T16:05:59.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "sourcing",
+    "proc-tech",
+    "ai"
+   ],
+   "official": false
+  },
+  {
+   "title": "Prosecutors uncover trucking playbook in multimillion-dollar port smuggling scheme",
+   "url": "https://www.freightwaves.com/news/prosecutors-uncover-trucking-playbook-in-multimillion-dollar-port-smuggling-scheme",
+   "source": "FreightWaves",
+   "date": "2026-11-23T15:22:50.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs",
+    "freight",
+    "public-sector",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "Walgreens scales micro-fulfillment strategy with Pennsylvania site",
+   "url": "https://www.supplychaindive.com/news/walgreens-scales-micro-fulfillment-strategy-with-pennsylvania-site/875245/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-23T15:19:16.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "manufacturing",
+    "warehousing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Tractor Supply boosts same-day delivery options",
+   "url": "https://www.supplychaindive.com/news/tractor-supply-boosts-same-day-delivery-options/875304/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-23T15:06:22.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "C.H. Robinson: no evidence of racketeering, wants RICO case moved",
+   "url": "https://www.freightwaves.com/news/c-h-robinson-no-evidence-of-racketeering-wants-rico-case-moved",
+   "source": "FreightWaves",
+   "date": "2026-11-23T14:47:38.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Asia–US East Coast ocean freight rates top $10,000, up 300% from a year ago",
+   "url": "https://www.freightwaves.com/news/asia-us-east-coast-ocean-freight-rates-top-10000-up-300-from-a-year-ago",
+   "source": "FreightWaves",
+   "date": "2026-11-23T14:35:03.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "How Lego is leveraging automation with its latest Portugal factory",
+   "url": "https://www.manufacturingdive.com/news/lego-group-coo-carsten-rasmussen-manufacturing-portugal-virginia/875444/",
+   "source": "Manufacturing Dive",
+   "date": "2026-11-23T13:20:07.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "ai",
+    "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Fresh food is growing and rearranging itself. Blue Book is betting 125 years of payment history is what holds it together",
+   "url": "https://www.freightwaves.com/news/blue-book-guinane-fresh-food-trading-partner-data",
+   "source": "FreightWaves",
+   "date": "2026-11-23T13:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs",
+    "freight",
+    "food-ag",
+    "healthcare"
+   ],
+   "official": false
+  },
+  {
+   "title": "FedEx-led consortium finalizes $9.2B deal for Polish delivery company",
+   "url": "https://www.freightwaves.com/news/fedex-led-consortium-finalizes-9-2b-deal-for-polish-delivery-company",
+   "source": "FreightWaves",
+   "date": "2026-11-23T12:30:30.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Final mile delivery prices climb 10.5% in Q3, GEODIS says",
+   "url": "https://www.freightwaves.com/news/geodis-final-mile-index-delivery-prices",
+   "source": "FreightWaves",
+   "date": "2026-11-23T12:30:00.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
   {
    "title": "Foreign-Trade Zone (FTZ) 7, Notification of Proposed Production Activity; Hindustan Platinum Puerto Rico; (Electrical Contacts); Humacao, Puerto Rico",
    "url": "https://www.federalregister.gov/documents/2026/11/23/2026-23807/foreign-trade-zone-ftz-7-notification-of-proposed-production-activity-hindustan-platinum-puerto-rico",
@@ -56,6 +268,50 @@
     "tariffs"
    ],
    "official": true
+  },
+  {
+   "title": "Taking the busywork out of business buying",
+   "url": "https://www.supplychaindive.com/spons/taking-the-busywork-out-of-business-buying/874853/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-23T10:00:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "warehousing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Peak season optimization is out, year-round optimization is in",
+   "url": "https://www.supplychaindive.com/spons/peak-season-optimization-is-out-year-round-optimization-is-in/875297/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-23T10:00:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "industry"
+   ],
+   "official": false
+  },
+  {
+   "title": "Agility, quality, repeatability: How integrated solutions help equipment manufacturers deliver faster",
+   "url": "https://www.manufacturingdive.com/spons/agility-quality-repeatability-how-integrated-solutions-help-equipment-ma/874854/",
+   "source": "Manufacturing Dive",
+   "date": "2026-11-23T10:00:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Top 5 procurement trends for 2027",
+   "url": "https://cpostrategy.media/blog/2026/11/23/top-5-procurement-trends-for-2027/",
+   "source": "CPO Strategy",
+   "date": "2026-11-23T09:00:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "industry"
+   ],
+   "official": false
   },
   {
    "title": "Borderlands Mexico: Truckers secure 29 agreements on highway safety after nationwide strike",
@@ -380,6 +636,19 @@
    "official": false
   },
   {
+   "title": "Procurement’s next AI decision isn’t about capability, it’s about autonomy",
+   "url": "https://cpostrategy.media/blog/2026/11/20/procurements-next-ai-decision-isnt-about-capability-its-about-autonomy/",
+   "source": "CPO Strategy",
+   "date": "2026-11-20T09:00:00.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "spend",
+    "proc-tech",
+    "ai"
+   ],
+   "official": false
+  },
+  {
    "title": "DOL sticks with independent contractor proposal, trucking applauds",
    "url": "https://www.freightwaves.com/news/dol-sticks-with-independent-contractor-proposal-trucking-applauds",
    "source": "FreightWaves",
@@ -459,281 +728,6 @@
    "categories": [
     "freight",
     "spend"
-   ],
-   "official": false
-  },
-  {
-   "title": "Meta strikes deals to boost low-carbon materials production",
-   "url": "https://www.supplychaindive.com/news/meta-strikes-deals-to-boost-low-carbon-materials-production/875095/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-19T17:30:00.000Z",
-   "topic": "commodities",
-   "categories": [
-    "metals",
-    "supplier-risk",
-    "sustainability"
-   ],
-   "official": false
-  },
-  {
-   "title": "How smart manufacturing is shaping the automotive industry",
-   "url": "https://www.manufacturingdive.com/news/how-smart-manufacturing-reshapes-automotive-industry-rockwell-car/875181/",
-   "source": "Manufacturing Dive",
-   "date": "2026-11-19T16:54:00.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "ai",
-    "manufacturing"
-   ],
-   "official": false
-  },
-  {
-   "title": "Boston Dynamics, GlobalFoundries expand robotics collaboration",
-   "url": "https://www.manufacturingdive.com/news/boston-dynamics-globalfoundries-expand-robotics-collaboration-spot-atlas/875112/",
-   "source": "Manufacturing Dive",
-   "date": "2026-11-19T16:52:25.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "manufacturing"
-   ],
-   "official": false
-  },
-  {
-   "title": "Honda invests $462M in Alabama plant to boost production",
-   "url": "https://www.supplychaindive.com/news/honda-invests-462m-in-alabama-plant-to-boost-production/875189/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-19T16:33:34.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "manufacturing",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "How Home Depot built the missing logistics piece for its Pro business",
-   "url": "https://www.supplychaindive.com/news/how-home-depot-built-the-missing-logistics-piece-for-its-pro-business/874331/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-19T15:58:00.000Z",
-   "topic": "proc-tech",
-   "categories": [
-    "freight",
-    "contracts",
-    "proc-tech",
-    "warehousing",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Sila, Panasonic sign projected $1B silicon-carbon anode supply contract",
-   "url": "https://www.manufacturingdive.com/news/sila-panasonic-energy-titan-silicon-si-c-battery-cells-supply-contract/875092/",
-   "source": "Manufacturing Dive",
-   "date": "2026-11-19T15:39:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "contracts",
-    "manufacturing",
-    "sustainability"
-   ],
-   "official": false
-  },
-  {
-   "title": "Ship pilot indicted after fatal Houston collision linked to cellphone distraction",
-   "url": "https://www.freightwaves.com/news/ship-pilot-indicted-after-fatal-houston-collision-linked-to-cellphone-distraction",
-   "source": "FreightWaves",
-   "date": "2026-11-19T15:16:34.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "How Brooks Running is using supplier data to address human rights risks",
-   "url": "https://www.supplychaindive.com/news/how-brooks-running-is-using-supplier-data-to-address-human-rights-risks/875090/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-19T15:07:46.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "supplier-risk",
-    "sourcing",
-    "compliance"
-   ],
-   "official": false
-  },
-  {
-   "title": "Expeditors enters new logistics frontier supporting Kennedy space missions",
-   "url": "https://www.freightwaves.com/news/expeditors-enters-new-logistics-frontier-supporting-kennedy-space-missions",
-   "source": "FreightWaves",
-   "date": "2026-11-19T14:50:51.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "SBIC License Issuance",
-   "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23596/sbic-license-issuance",
-   "source": "Federal Register · Small Business Administration",
-   "date": "2026-11-19T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs"
-   ],
-   "official": true
-  },
-  {
-   "title": "[Podcast] From Telemetry to Intelligence: The Data Layer for Industrial AI",
-   "url": "https://www.manufacturingdive.com/spons/podcast-from-telemetry-to-intelligence-the-data-layer-for-industrial-ai/833757/",
-   "source": "Manufacturing Dive",
-   "date": "2026-11-19T09:45:50.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "ai",
-    "manufacturing"
-   ],
-   "official": false
-  },
-  {
-   "title": "LA-Long Beach port strike risk grows as employers say ILWU talks stalled",
-   "url": "https://www.freightwaves.com/news/la-long-beach-port-strike-risk-grows-as-employers-say-ilwu-talks-stalled",
-   "source": "FreightWaves",
-   "date": "2026-11-18T22:37:39.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "supplier-risk",
-    "contracts"
-   ],
-   "official": false
-  },
-  {
-   "title": "From more footage to more focus: Find your fleet’s video safety stage",
-   "url": "https://www.freightwaves.com/news/from-more-footage-to-more-focus-find-your-fleets-videosafety-stage",
-   "source": "FreightWaves",
-   "date": "2026-11-18T20:02:46.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Why Truckload Rates Feel Disappointing Despite Strong Numbers",
-   "url": "https://www.freightwaves.com/news/why-truckload-rates-feel-disappointing-despite-strong-numbers",
-   "source": "FreightWaves",
-   "date": "2026-11-18T19:50:07.000Z",
-   "topic": "people-moves",
-   "categories": [
-    "freight",
-    "contracts",
-    "talent"
-   ],
-   "official": false
-  },
-  {
-   "title": "Port of LA Crushes Records: 5M Containers in 5 Months!",
-   "url": "https://www.freightwaves.com/news/port-of-la-crushes-records-5m-containers-in-5-months",
-   "source": "FreightWaves",
-   "date": "2026-11-18T19:34:42.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs",
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "AI for Logistics: Why 81% of AI Projects Fail",
-   "url": "https://www.freightwaves.com/news/ai-for-logistics-why-81-of-ai-projects-fail",
-   "source": "FreightWaves",
-   "date": "2026-11-18T19:34:09.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "freight",
-    "ai",
-    "warehousing",
-    "talent"
-   ],
-   "official": false
-  },
-  {
-   "title": "ATA spells out short- and long-term solutions to halt ELD fraud",
-   "url": "https://www.freightwaves.com/news/ata-spells-out-short-and-long-term-solutions-to-halt-eld-fraud",
-   "source": "FreightWaves",
-   "date": "2026-11-18T19:12:53.000Z",
-   "topic": "public-sector",
-   "categories": [
-    "freight",
-    "supplier-risk",
-    "semis",
-    "public-sector"
-   ],
-   "official": false
-  },
-  {
-   "title": "Trucking Spot Rates Defy Fuel Costs: An Unexpected Market Move",
-   "url": "https://www.freightwaves.com/news/trucking-spot-rates-defy-fuel-costs-an-unexpected-market-move",
-   "source": "FreightWaves",
-   "date": "2026-11-18T19:10:17.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight",
-    "energy"
-   ],
-   "official": false
-  },
-  {
-   "title": "Rail Freight Fraud: Organized Crime’s New Tactic?",
-   "url": "https://www.freightwaves.com/news/rail-freight-fraud-organized-crimes-new-tactic",
-   "source": "FreightWaves",
-   "date": "2026-11-18T19:09:49.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "contracts",
-    "talent"
-   ],
-   "official": false
-  },
-  {
-   "title": "Trucking Economy in 2024: A K-Shape Threatens Consumer Demand",
-   "url": "https://www.freightwaves.com/news/trucking-economy-in-2024-a-k-shape-threatens-consumer-demand",
-   "source": "FreightWaves",
-   "date": "2026-11-18T18:58:39.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "freight",
-    "ai",
-    "manufacturing"
-   ],
-   "official": false
-  },
-  {
-   "title": "Diesel: Are Sky-High Prices Finally Over?",
-   "url": "https://www.freightwaves.com/news/diesel-are-sky-high-prices-finally-over",
-   "source": "FreightWaves",
-   "date": "2026-11-18T18:52:43.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight",
-    "energy",
-    "food-ag"
-   ],
-   "official": false
-  },
-  {
-   "title": "ABF Freight workers uncover $1.5M drug shipment headed to Ohio",
-   "url": "https://www.freightwaves.com/news/abf-freight-workers-uncover-1-5m-drug-shipment-headed-to-ohio",
-   "source": "FreightWaves",
-   "date": "2026-11-18T18:51:32.000Z",
-   "topic": "public-sector",
-   "categories": [
-    "freight",
-    "public-sector",
-    "healthcare"
    ],
    "official": false
   }
