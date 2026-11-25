@@ -1,6 +1,232 @@
 {
- "updated": "2026-11-24T20:38:12.327Z",
+ "updated": "2026-11-25T19:53:29.397Z",
  "items": [
+  {
+   "title": "Molson Coors, Primo Brands use fuel hedging to tackle logistics costs",
+   "url": "https://www.supplychaindive.com/news/molson-coors-primo-brands-use-fuel-hedging-to-tackle-logistics-costs/875552/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-25T18:41:00.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight",
+    "energy"
+   ],
+   "official": false
+  },
+  {
+   "title": "Qnity to pay $840M for adhesive maker’s electronics segment",
+   "url": "https://www.manufacturingdive.com/news/qnity-meridian-adhesives-group-electronics-business-semiconductor/875685/",
+   "source": "Manufacturing Dive",
+   "date": "2026-11-25T17:28:53.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "ai",
+    "semis",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "Asia-US West Coast container spot rates fall below $8,000 as US avoids LA-Long Beach port strike",
+   "url": "https://www.freightwaves.com/news/asia-us-west-coast-container-spot-rates-fall-below-8000-as-us-avoids-la-long-beach-port-strike",
+   "source": "FreightWaves",
+   "date": "2026-11-25T17:18:32.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "freight",
+    "supplier-risk",
+    "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "US readies tariffs over manufacturing capacity, production concerns",
+   "url": "https://www.manufacturingdive.com/news/us-readies-tariffs-manufacturing-capacity-production-concerns-china/875784/",
+   "source": "Manufacturing Dive",
+   "date": "2026-11-25T16:54:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs",
+    "manufacturing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Shein feels impact of EU import fees as revenue slides 6%",
+   "url": "https://www.freightwaves.com/news/shein-feels-impact-of-eu-import-fees-as-revenue-slides-6",
+   "source": "FreightWaves",
+   "date": "2026-11-25T16:22:36.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "freight",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "PETA alleges animal abuse in PepsiCo’s supply chain",
+   "url": "https://www.supplychaindive.com/news/peta-alleges-animal-abuse-in-pepsicos-supply-chain/875654/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-25T16:17:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "supplier-risk",
+    "sourcing"
+   ],
+   "official": false
+  },
+  {
+   "title": "Freight Volatility Moved to the P&L. Is Your2027 Budget Ready?",
+   "url": "https://www.freightwaves.com/news/freight-volatility-moved-to-the-pl-is-your2027-budget-ready",
+   "source": "FreightWaves",
+   "date": "2026-11-25T16:09:32.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "spend"
+   ],
+   "official": false
+  },
+  {
+   "title": "TSMC proposes $22.6B advanced wafer facility in Texas",
+   "url": "https://www.manufacturingdive.com/news/tsmc-proposes-226b-advanced-wafer-fab-texas-AI-semiconductors/875671/",
+   "source": "Manufacturing Dive",
+   "date": "2026-11-25T15:48:41.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "ai",
+    "semis",
+    "manufacturing",
+    "food-ag"
+   ],
+   "official": false
+  },
+  {
+   "title": "REAL CREDENTIALS, WRONG HANDS",
+   "url": "https://www.freightwaves.com/news/real-credentials-wrong-hands",
+   "source": "FreightWaves",
+   "date": "2026-11-25T14:43:59.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "Descartes says new platform can quote 90% of freight requests within 30 seconds",
+   "url": "https://www.freightwaves.com/news/descartes-says-new-platform-can-quote-90-of-freight-requests-within-30-seconds",
+   "source": "FreightWaves",
+   "date": "2026-11-25T14:26:51.000Z",
+   "topic": "proc-tech",
+   "categories": [
+    "freight",
+    "contracts",
+    "proc-tech"
+   ],
+   "official": false
+  },
+  {
+   "title": "S&P upgrades CPKC to A- on diversified growth, Mexico-US corridor",
+   "url": "https://www.freightwaves.com/news/sp-upgrades-cpkc-to-a-on-diversified-growth-mexico-us-corridor",
+   "source": "FreightWaves",
+   "date": "2026-11-25T14:01:48.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "deals"
+   ],
+   "official": false
+  },
+  {
+   "title": "USPS to upgrade 16 sites just before peak season rush",
+   "url": "https://www.supplychaindive.com/news/usps-to-upgrade-16-sites-just-before-peak-season-rush/875592/",
+   "source": "Supply Chain Dive",
+   "date": "2026-11-25T13:57:27.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "public-sector"
+   ],
+   "official": false
+  },
+  {
+   "title": "Fewer crashes in 2026 won’t necessarily make December any safer",
+   "url": "https://www.freightwaves.com/news/fewer-crashes-in-2026-wont-necessarily-make-december-any-safer",
+   "source": "FreightWaves",
+   "date": "2026-11-25T13:38:23.000Z",
+   "topic": "public-sector",
+   "categories": [
+    "freight",
+    "supplier-risk",
+    "spend",
+    "public-sector"
+   ],
+   "official": false
+  },
+  {
+   "title": "THE RESILIENT CONSUMER: WHY REAL RETAIL SALES KEEP RISING IN 2026",
+   "url": "https://www.freightwaves.com/news/the-resilient-consumer-why-real-retail-sales-keep-rising-in-2026",
+   "source": "FreightWaves",
+   "date": "2026-11-25T13:36:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "supplier-risk",
+    "food-ag"
+   ],
+   "official": false
+  },
+  {
+   "title": "Pre-holiday layoffs hit over 7,600 workers in trucking, logistics, manufacturing",
+   "url": "https://www.freightwaves.com/news/pre-holiday-layoffs-hit-over-7600-workers-in-trucking-logistics-manufacturing",
+   "source": "FreightWaves",
+   "date": "2026-11-25T13:00:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "contracts",
+    "manufacturing",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "Request for Comments Regarding International Trade Commission's Economic Analysis",
+   "url": "https://www.federalregister.gov/documents/2026/11/25/2026-23981/request-for-comments-regarding-international-trade-commissions-economic-analysis",
+   "source": "Federal Register · International Trade Commission",
+   "date": "2026-11-25T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs"
+   ],
+   "official": true
+  },
+  {
+   "title": "You can outsource the talent. You can’t outsource the risk",
+   "url": "https://cpostrategy.media/blog/2026/11/25/you-can-outsource-the-talent-you-cant-outsource-the-risk/",
+   "source": "CPO Strategy",
+   "date": "2026-11-25T09:30:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "supplier-risk",
+    "sourcing",
+    "compliance",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "Diesel price declines picking up pace",
+   "url": "https://www.freightwaves.com/news/diesel-price-declines-picking-up-pace",
+   "source": "FreightWaves",
+   "date": "2026-11-24T21:49:41.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight",
+    "energy",
+    "contracts"
+   ],
+   "official": false
+  },
   {
    "title": "RICO Lawsuit: Are Major Freight Brokers Manipulating the Market?",
    "url": "https://www.freightwaves.com/news/rico-lawsuit-are-major-freight-brokers-manipulating-the-market",
@@ -378,29 +604,6 @@
    "official": false
   },
   {
-   "title": "Walgreens scales micro-fulfillment strategy with Pennsylvania site",
-   "url": "https://www.supplychaindive.com/news/walgreens-scales-micro-fulfillment-strategy-with-pennsylvania-site/875245/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-23T15:19:16.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "manufacturing",
-    "warehousing"
-   ],
-   "official": false
-  },
-  {
-   "title": "Tractor Supply boosts same-day delivery options",
-   "url": "https://www.supplychaindive.com/news/tractor-supply-boosts-same-day-delivery-options/875304/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-23T15:06:22.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
    "title": "C.H. Robinson: no evidence of racketeering, wants RICO case moved",
    "url": "https://www.freightwaves.com/news/c-h-robinson-no-evidence-of-racketeering-wants-rico-case-moved",
    "source": "FreightWaves",
@@ -528,39 +731,6 @@
    "official": true
   },
   {
-   "title": "Taking the busywork out of business buying",
-   "url": "https://www.supplychaindive.com/spons/taking-the-busywork-out-of-business-buying/874853/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-23T10:00:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "warehousing"
-   ],
-   "official": false
-  },
-  {
-   "title": "Peak season optimization is out, year-round optimization is in",
-   "url": "https://www.supplychaindive.com/spons/peak-season-optimization-is-out-year-round-optimization-is-in/875297/",
-   "source": "Supply Chain Dive",
-   "date": "2026-11-23T10:00:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "industry"
-   ],
-   "official": false
-  },
-  {
-   "title": "Agility, quality, repeatability: How integrated solutions help equipment manufacturers deliver faster",
-   "url": "https://www.manufacturingdive.com/spons/agility-quality-repeatability-how-integrated-solutions-help-equipment-ma/874854/",
-   "source": "Manufacturing Dive",
-   "date": "2026-11-23T10:00:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "manufacturing"
-   ],
-   "official": false
-  },
-  {
    "title": "Top 5 procurement trends for 2027",
    "url": "https://cpostrategy.media/blog/2026/11/23/top-5-procurement-trends-for-2027/",
    "source": "CPO Strategy",
@@ -581,165 +751,6 @@
     "freight",
     "supplier-risk",
     "public-sector"
-   ],
-   "official": false
-  },
-  {
-   "title": "Shippers’ backup plan is getting more expensive",
-   "url": "https://www.freightwaves.com/news/shippers-backup-plan-is-getting-more-expensive",
-   "source": "FreightWaves",
-   "date": "2026-11-22T01:30:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Tentative union deal averts strike at Port of LA-Long Beach",
-   "url": "https://www.freightwaves.com/news/tentative-union-deal-averts-strike-at-port-of-la-long-beach",
-   "source": "FreightWaves",
-   "date": "2026-11-21T14:57:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "supplier-risk",
-    "public-sector"
-   ],
-   "official": false
-  },
-  {
-   "title": "DHL Express makes customs clearance easier for small cross-border shippers",
-   "url": "https://www.freightwaves.com/news/dhl-express-makes-customs-clearance-easier-for-small-cross-border-shippers",
-   "source": "FreightWaves",
-   "date": "2026-11-21T13:38:56.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs",
-    "freight",
-    "ai"
-   ],
-   "official": false
-  },
-  {
-   "title": "J.B. Hunt broker liability case proceeding after split decision",
-   "url": "https://www.freightwaves.com/news/j-b-hunt-broker-liability-case-proceeding-after-split-decision",
-   "source": "FreightWaves",
-   "date": "2026-11-20T22:09:00.000Z",
-   "topic": "public-sector",
-   "categories": [
-    "freight",
-    "public-sector"
-   ],
-   "official": false
-  },
-  {
-   "title": "Groundtruth launches AI platform to automate freight billing with J.B. Hunt partnership",
-   "url": "https://www.freightwaves.com/news/groundtruth-launches-ai-platform-to-automate-freight-billing-with-j-b-hunt-partnership",
-   "source": "FreightWaves",
-   "date": "2026-11-20T17:41:03.000Z",
-   "topic": "ai-procurement",
-   "categories": [
-    "freight",
-    "proc-tech",
-    "ai"
-   ],
-   "official": false
-  },
-  {
-   "title": "Trucking Rejection Rates: Why Holiday Shipping Gets SPICY",
-   "url": "https://www.freightwaves.com/news/trucking-rejection-rates-why-holiday-shipping-gets-spicy",
-   "source": "FreightWaves",
-   "date": "2026-11-20T17:30:03.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "supplier-risk",
-    "manufacturing",
-    "warehousing"
-   ],
-   "official": false
-  },
-  {
-   "title": "Q3 Shipping Costs Down 3.3% – Where Did The Savings Go?",
-   "url": "https://www.freightwaves.com/news/q3-shipping-costs-down-3-3-where-did-the-savings-go",
-   "source": "FreightWaves",
-   "date": "2026-11-20T17:29:13.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "spend"
-   ],
-   "official": false
-  },
-  {
-   "title": "Industrial Demand Is Broadening. So Is Competition for Space",
-   "url": "https://www.freightwaves.com/news/industrial-demand-is-broadening-so-is-competition-for-space",
-   "source": "FreightWaves",
-   "date": "2026-11-20T17:03:11.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Mexico tightens trucking oversight with new digital compliance rules",
-   "url": "https://www.freightwaves.com/news/mexico-tightens-trucking-oversight-with-new-digital-compliance-rules",
-   "source": "FreightWaves",
-   "date": "2026-11-20T16:37:12.000Z",
-   "topic": "proc-tech",
-   "categories": [
-    "freight",
-    "compliance"
-   ],
-   "official": false
-  },
-  {
-   "title": "Zim Q3 profit surges to $830 million as freight rates jump 55%",
-   "url": "https://www.freightwaves.com/news/zim-q3-profit-surges-to-830-million-as-freight-rates-jump-55",
-   "source": "FreightWaves",
-   "date": "2026-11-20T16:26:00.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "US Steel, United Steelworkers reach 4-year labor deal, up for vote",
-   "url": "https://www.manufacturingdive.com/news/us-steel-4-year-labor-deal-usw-vote-cleveland-cliffs/875315/",
-   "source": "Manufacturing Dive",
-   "date": "2026-11-20T16:26:00.000Z",
-   "topic": "commodities",
-   "categories": [
-    "metals",
-    "healthcare"
-   ],
-   "official": false
-  },
-  {
-   "title": "Union Pacific–Norfolk Southern merger draws labor support, shipper concerns",
-   "url": "https://www.freightwaves.com/news/union-pacific-norfolk-southern-merger-draws-labor-support-shipper-concerns",
-   "source": "FreightWaves",
-   "date": "2026-11-20T16:10:31.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "compliance",
-    "deals"
-   ],
-   "official": false
-  },
-  {
-   "title": "Good Carriers, Wrong Drivers: Why Cargo Theft Is Moving Past Carrier Vetting",
-   "url": "https://www.freightwaves.com/news/good-carriers-wrong-drivers-why-cargo-theft-is-moving-past-carrier-vetting",
-   "source": "FreightWaves",
-   "date": "2026-11-20T16:00:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
    ],
    "official": false
   }
