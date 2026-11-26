@@ -1,6 +1,53 @@
 {
- "updated": "2026-11-25T19:53:29.397Z",
+ "updated": "2026-11-26T19:34:24.270Z",
  "items": [
+  {
+   "title": "Extending Deadlines for Submissions by Importers of Automobiles Qualifying for Preferential Tariff Treatment Under the USMCA To Determine U.S. Content",
+   "url": "https://www.federalregister.gov/documents/2026/11/27/2026-24076/extending-deadlines-for-submissions-by-importers-of-automobiles-qualifying-for-preferential-tariff",
+   "source": "Federal Register · Commerce Department",
+   "date": "2026-11-27T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs",
+    "freight"
+   ],
+   "official": true
+  },
+  {
+   "title": "Déjà vu in Miami as FedEx MD-11 freighter overshoots runway",
+   "url": "https://www.freightwaves.com/news/deja-vu-in-miami-as-fedex-md-11-freighter-overshoots-runway",
+   "source": "FreightWaves",
+   "date": "2026-11-26T15:36:05.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
+  {
+   "title": "5 non-domiciled drivers want CDLs reinstated as battle separately moves through courts",
+   "url": "https://www.freightwaves.com/news/5-non-domiciled-drivers-want-cdls-reinstated-as-battle-separately-moves-through-courts",
+   "source": "FreightWaves",
+   "date": "2026-11-26T15:28:28.000Z",
+   "topic": "public-sector",
+   "categories": [
+    "freight",
+    "public-sector"
+   ],
+   "official": false
+  },
+  {
+   "title": "Ocean rates still double last year as congestion idles 3.6 million TEUs",
+   "url": "https://www.freightwaves.com/news/ocean-rates-still-double-last-year-as-congestion-idles-3-6-million-teus",
+   "source": "FreightWaves",
+   "date": "2026-11-26T12:00:00.000Z",
+   "topic": "commodities",
+   "categories": [
+    "freight",
+    "supplier-risk"
+   ],
+   "official": false
+  },
   {
    "title": "Molson Coors, Primo Brands use fuel hedging to tackle logistics costs",
    "url": "https://www.supplychaindive.com/news/molson-coors-primo-brands-use-fuel-hedging-to-tackle-logistics-costs/875552/",
@@ -199,20 +246,6 @@
     "tariffs"
    ],
    "official": true
-  },
-  {
-   "title": "You can outsource the talent. You can’t outsource the risk",
-   "url": "https://cpostrategy.media/blog/2026/11/25/you-can-outsource-the-talent-you-cant-outsource-the-risk/",
-   "source": "CPO Strategy",
-   "date": "2026-11-25T09:30:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "supplier-risk",
-    "sourcing",
-    "compliance",
-    "talent"
-   ],
-   "official": false
   },
   {
    "title": "Diesel price declines picking up pace",
@@ -718,41 +751,6 @@
     "tariffs"
    ],
    "official": true
-  },
-  {
-   "title": "Notice of Receipt of Complaint; Solicitation of Comments Relating to the Public Interest",
-   "url": "https://www.federalregister.gov/documents/2026/11/23/2026-23816/notice-of-receipt-of-complaint-solicitation-of-comments-relating-to-the-public-interest",
-   "source": "Federal Register · International Trade Commission",
-   "date": "2026-11-23T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs"
-   ],
-   "official": true
-  },
-  {
-   "title": "Top 5 procurement trends for 2027",
-   "url": "https://cpostrategy.media/blog/2026/11/23/top-5-procurement-trends-for-2027/",
-   "source": "CPO Strategy",
-   "date": "2026-11-23T09:00:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "industry"
-   ],
-   "official": false
-  },
-  {
-   "title": "Borderlands Mexico: Truckers secure 29 agreements on highway safety after nationwide strike",
-   "url": "https://www.freightwaves.com/news/borderlands-mexico-truckers-secure-29-agreements-on-highway-safety-after-nationwide-strike",
-   "source": "FreightWaves",
-   "date": "2026-11-22T12:00:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight",
-    "supplier-risk",
-    "public-sector"
-   ],
-   "official": false
   }
  ]
 }
