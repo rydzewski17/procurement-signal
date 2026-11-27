@@ -1,6 +1,31 @@
 {
- "updated": "2026-11-26T19:34:24.270Z",
+ "updated": "2026-11-27T19:26:32.028Z",
  "items": [
+  {
+   "title": "Which AI projects will survive the 2027 budget round?",
+   "url": "https://cpostrategy.media/blog/2026/11/27/which-ai-projects-will-survive-the-2027-budget-round/",
+   "source": "CPO Strategy",
+   "date": "2026-11-27T16:08:40.000Z",
+   "topic": "ai-procurement",
+   "categories": [
+    "spend",
+    "ai",
+    "warehousing",
+    "talent"
+   ],
+   "official": false
+  },
+  {
+   "title": "Weekly US rail freight climbs 4.7% as intermodal surges 8.3%",
+   "url": "https://www.freightwaves.com/news/weekly-us-rail-freight-climbs-4-7-as-intermodal-surges-8-3",
+   "source": "FreightWaves",
+   "date": "2026-11-27T14:45:31.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight"
+   ],
+   "official": false
+  },
   {
    "title": "Extending Deadlines for Submissions by Importers of Automobiles Qualifying for Preferential Tariff Treatment Under the USMCA To Determine U.S. Content",
    "url": "https://www.federalregister.gov/documents/2026/11/27/2026-24076/extending-deadlines-for-submissions-by-importers-of-automobiles-qualifying-for-preferential-tariff",
@@ -246,6 +271,20 @@
     "tariffs"
    ],
    "official": true
+  },
+  {
+   "title": "You can outsource the talent. You can’t outsource the risk",
+   "url": "https://cpostrategy.media/blog/2026/11/25/you-can-outsource-the-talent-you-cant-outsource-the-risk/",
+   "source": "CPO Strategy",
+   "date": "2026-11-25T09:30:00.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "supplier-risk",
+    "sourcing",
+    "compliance",
+    "talent"
+   ],
+   "official": false
   },
   {
    "title": "Diesel price declines picking up pace",
@@ -711,40 +750,6 @@
    "title": "Foreign-Trade Zone (FTZ) 7, Notification of Proposed Production Activity; Hindustan Platinum Puerto Rico; (Electrical Contacts); Humacao, Puerto Rico",
    "url": "https://www.federalregister.gov/documents/2026/11/23/2026-23807/foreign-trade-zone-ftz-7-notification-of-proposed-production-activity-hindustan-platinum-puerto-rico",
    "source": "Federal Register · Commerce Department",
-   "date": "2026-11-23T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs"
-   ],
-   "official": true
-  },
-  {
-   "title": "Foreign-Trade Zone (FTZ) 19, Notification of Proposed Production Activity; CLAAS Omaha, Inc.; (Combine Harvesters and Adapters); Omaha, Nebraska",
-   "url": "https://www.federalregister.gov/documents/2026/11/23/2026-23806/foreign-trade-zone-ftz-19-notification-of-proposed-production-activity-claas-omaha-inc-combine",
-   "source": "Federal Register · Commerce Department",
-   "date": "2026-11-23T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs"
-   ],
-   "official": true
-  },
-  {
-   "title": "Foreign-Trade Zone (FTZ) 204, Notification of Proposed Production Activity; Primester GP; (Nonplasticized Cellulose Acetate Flakes); Kingsport, Tennessee",
-   "url": "https://www.federalregister.gov/documents/2026/11/23/2026-23805/foreign-trade-zone-ftz-204-notification-of-proposed-production-activity-primester-gp-nonplasticized",
-   "source": "Federal Register · Commerce Department",
-   "date": "2026-11-23T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs",
-    "freight"
-   ],
-   "official": true
-  },
-  {
-   "title": "EPA Response to State Initial Designations for the 2024 Revised Secondary Annual Sulfur Dioxide National Ambient Air Quality Standard: Notice of Availability and Public Comment Period",
-   "url": "https://www.federalregister.gov/documents/2026/11/23/2026-23791/epa-response-to-state-initial-designations-for-the-2024-revised-secondary-annual-sulfur-dioxide",
-   "source": "Federal Register · Environmental Protection Agency",
    "date": "2026-11-23T12:00:00.000Z",
    "topic": "tariffs-trade",
    "categories": [
