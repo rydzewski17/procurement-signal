@@ -1,17 +1,68 @@
 {
- "updated": "2026-11-27T19:26:32.028Z",
+ "updated": "2026-11-28T18:12:16.847Z",
  "items": [
   {
-   "title": "Which AI projects will survive the 2027 budget round?",
-   "url": "https://cpostrategy.media/blog/2026/11/27/which-ai-projects-will-survive-the-2027-budget-round/",
-   "source": "CPO Strategy",
-   "date": "2026-11-27T16:08:40.000Z",
-   "topic": "ai-procurement",
+   "title": "Request for Comments Concerning Proposed Modification of Section 301 Action on Brazil's Acts, Policies, and Practices Related to Digital Trade and Electronic Payment Services; Unfair, Preferential Tariffs; Anti-Corruption Enforcement; Intellectual Property Protection; Ethanol Market Access; and Illegal Deforestation",
+   "url": "https://www.federalregister.gov/documents/2026/11/30/2026-24231/request-for-comments-concerning-proposed-modification-of-section-301-action-on-brazils-acts-policies",
+   "source": "Federal Register · Trade Representative, Office of United States",
+   "date": "2026-11-30T12:00:00.000Z",
+   "topic": "tariffs-trade",
    "categories": [
+    "tariffs",
+    "semis",
+    "compliance"
+   ],
+   "official": true
+  },
+  {
+   "title": "Agency Information Collection Activities; Submission for Office of Management and Budget Review; Comment Request; Food Canning Establishment Registration, Process Filing, and Recordkeeping for Acidified Foods and Thermally Processed Low-Acid Foods in Hermetically Sealed Containers",
+   "url": "https://www.federalregister.gov/documents/2026/11/30/2026-24168/agency-information-collection-activities-submission-for-office-of-management-and-budget-review",
+   "source": "Federal Register · Health and Human Services Department",
+   "date": "2026-11-30T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs",
+    "freight",
     "spend",
-    "ai",
-    "warehousing",
-    "talent"
+    "public-sector",
+    "food-ag"
+   ],
+   "official": true
+  },
+  {
+   "title": "Notice of Receipt of Complaint; Solicitation of Comments Relating to the Public Interest",
+   "url": "https://www.federalregister.gov/documents/2026/11/30/2026-24265/notice-of-receipt-of-complaint-solicitation-of-comments-relating-to-the-public-interest",
+   "source": "Federal Register · International Trade Commission",
+   "date": "2026-11-30T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs"
+   ],
+   "official": true
+  },
+  {
+   "title": "Certain Mobile Electronic Devices; Notice of the Commission's Final Determination Finding a Violation of Section 337; Issuance of a Limited Exclusion Order and a Cease and Desist Order; Termination of the Investigation",
+   "url": "https://www.federalregister.gov/documents/2026/11/30/2026-24208/certain-mobile-electronic-devices-notice-of-the-commissions-final-determination-finding-a-violation",
+   "source": "Federal Register · International Trade Commission",
+   "date": "2026-11-30T12:00:00.000Z",
+   "topic": "tariffs-trade",
+   "categories": [
+    "tariffs",
+    "semis",
+    "deals"
+   ],
+   "official": true
+  },
+  {
+   "title": "Been a long time: Expeditors meets analysts, discloses revenue shares",
+   "url": "https://www.freightwaves.com/news/been-a-long-time-expeditors-meets-analysts-discloses-revenue-shares",
+   "source": "FreightWaves",
+   "date": "2026-11-27T20:38:15.000Z",
+   "topic": "supplier-risk",
+   "categories": [
+    "freight",
+    "talent",
+    "deals"
    ],
    "official": false
   },
@@ -271,20 +322,6 @@
     "tariffs"
    ],
    "official": true
-  },
-  {
-   "title": "You can outsource the talent. You can’t outsource the risk",
-   "url": "https://cpostrategy.media/blog/2026/11/25/you-can-outsource-the-talent-you-cant-outsource-the-risk/",
-   "source": "CPO Strategy",
-   "date": "2026-11-25T09:30:00.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "supplier-risk",
-    "sourcing",
-    "compliance",
-    "talent"
-   ],
-   "official": false
   },
   {
    "title": "Diesel price declines picking up pace",
@@ -723,39 +760,6 @@
     "healthcare"
    ],
    "official": false
-  },
-  {
-   "title": "FedEx-led consortium finalizes $9.2B deal for Polish delivery company",
-   "url": "https://www.freightwaves.com/news/fedex-led-consortium-finalizes-9-2b-deal-for-polish-delivery-company",
-   "source": "FreightWaves",
-   "date": "2026-11-23T12:30:30.000Z",
-   "topic": "supplier-risk",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Final mile delivery prices climb 10.5% in Q3, GEODIS says",
-   "url": "https://www.freightwaves.com/news/geodis-final-mile-index-delivery-prices",
-   "source": "FreightWaves",
-   "date": "2026-11-23T12:30:00.000Z",
-   "topic": "commodities",
-   "categories": [
-    "freight"
-   ],
-   "official": false
-  },
-  {
-   "title": "Foreign-Trade Zone (FTZ) 7, Notification of Proposed Production Activity; Hindustan Platinum Puerto Rico; (Electrical Contacts); Humacao, Puerto Rico",
-   "url": "https://www.federalregister.gov/documents/2026/11/23/2026-23807/foreign-trade-zone-ftz-7-notification-of-proposed-production-activity-hindustan-platinum-puerto-rico",
-   "source": "Federal Register · Commerce Department",
-   "date": "2026-11-23T12:00:00.000Z",
-   "topic": "tariffs-trade",
-   "categories": [
-    "tariffs"
-   ],
-   "official": true
   }
  ]
 }
